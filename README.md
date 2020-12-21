@@ -12,6 +12,7 @@ This website uses the following projects:
 * [H5BP](https://html5boilerplate.com/) - as boilerplate code
 * [EditorConfig](https://editorconfig.org/) - for editor consistency
 * [ParselJS](https://parceljs.org/) - to build and run the website in a dev environment
+* [RealFaviconGenerator](https://realfavicongenerator.net) - to generate the favicon
 
 ## Bugs and Issues
 
