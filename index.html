@@ -23,6 +23,10 @@
   <meta property="og:url" content="https://seium.org">
   <meta property="og:image" content="https://seium.org/thumbnail.png">
 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/landing.css">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,12 +35,38 @@
   <meta name="msapplication-TileColor" content="#5d79d5">
   <meta name="theme-color" content="#5d79d5">
 
+  <!-- This website uses fontawesome icons. See license here: https://fontawesome.com/license -->
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <div id="background">
+    <div id=container>
+      <img id="logo" src="img/logo.png" alt="SEI Logo">
+      <div class="title">
+        <h1>Semana da Engenharia <span class="emph">Informática</span></h1>
+        <h3>Universidade do Minho</h3>
+      </div>
+      <div class="date emph">
+        <h2>23 a 28 de fevereiro de 2021</h2>
+      </div>
+      <div id=social>
+        <a class="item" href="https://www.facebook.com/SEI.UMinho" target="_blank">
+          <h3>Facebook</h3>
+        </a>
+        <a class="item" href="https://www.instagram.com/sei.uminho/" target="_blank">
+          <h3>Instagram</h3>
+        </a>
+      </div>
+      <div>
+        <a href="https://2019.seium.org" target="_blank">
+          edição anterior
+        </a>
+      </div>
+    </div>
+  </div>
+
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
