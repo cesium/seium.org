@@ -1,8 +1,9 @@
 @font-face {
   font-family: 'Coolvetica';
-  src: url('/assets/fonts/coolvetica.woff2') format('woff2'),
-       url('/assets/fonts/coolvetica.woff') format('woff'),
-       url('/assets/fonts/coolvetica.ttf')  format('truetype');
+  src:
+    url('/assets/fonts/coolvetica.woff2') format('woff2'),
+    url('/assets/fonts/coolvetica.woff') format('woff'),
+    url('/assets/fonts/coolvetica.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,6 +17,8 @@
   --sei-dark-blue: #263D92;
   --sei-black-blue: #080E20;
   font-family: 'Coolvetica', sans-serif;
+  font-weight: normal;
+  font-style: normal;
   color: var(--sei-white);
   text-align: center;
   line-height: 1;
