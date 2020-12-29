@@ -3,6 +3,7 @@ module.exports = {
     'nextjs',
     'airbnb',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
   rules: {
@@ -13,12 +14,14 @@ module.exports = {
     'no-underscore-dangle': 0,
     'no-console': 0,
     'func-names': 0,
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
     'react/forbid-prop-types': 0,
     'react/jsx-filename-extension': 0,
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-wrap-multilines': 0,
-    'react/react-in-jsx-scope': 0,
     'react/no-unescaped-entities': 0,
+    'react/react-in-jsx-scope': 0,
     'react/require-default-props': 0,
   },
 };
