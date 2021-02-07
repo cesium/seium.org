@@ -1,0 +1,192 @@
+.title{
+    h2{
+        padding-bottom: 49px;
+    }
+    .categories{
+        @include flex(center,center);
+        .nav-bar-link{
+            font-size: 20px;
+            width: 210px;
+            color: white;
+            border-bottom: 10px solid grey;
+            text-align: center;
+            padding-bottom: 20px;
+            &.selected{
+                border-bottom: white solid 10px;
+            }
+            @include for-size(desktop-down){
+                font-size: $font-size-re;
+                border-bottom: 8px solid grey;
+                padding-bottom: 16px;
+                &.selected{
+                    border-bottom: white solid 8px;
+                }
+            }
+            @include for-size(tablet-landscape-down){
+                font-size: $font-size-re;
+            }
+            @include for-size(tablet-portrait-down){
+                font-size: $font-size-sm;
+                border-bottom: 6px solid grey;
+                padding-bottom: 12px;
+                &.selected{
+                    border-bottom: white solid 6px;
+                }
+            }
+            @include for-size(phone-only){
+                font-size: $font-size-sm;
+            }
+        }
+    }
+    margin-bottom: 58px
+}
+.brands{
+    @include flex(space-between,stretch);
+    .separator{
+        width: 1px;
+        height: 240px;
+        border-left: 1px white solid;
+        align-self: flex-end;
+        opacity: 0.3;
+    }
+    .exlusive-or-silver, .gold-or-bronze{
+       width: 50%;
+       height: 100%;
+       padding-left: 10%;
+       padding-right: 10%;
+        @include flex(center,center);
+        flex-direction: column;
+        h6{
+            margin-bottom: 50px
+        }
+        .logos{
+            @include flex(space-between,center);
+            flex-wrap: wrap;
+            img{
+                width: 40%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.register{
+    margin-top: 80px;
+    h1{
+        font-size: 64px;
+        max-width: 840px;
+        position: relative;
+        .span{
+            .button{
+                margin-right: 20px;
+            }
+            .people{
+                font-family: $font-primary-regular;
+            }
+            @include flex(space-between,center);
+            position: absolute;
+            right: 0;
+            bottom: 0
+        }
+    }
+    @include for-size(desktop-down){
+        h1{
+            .span{
+                .button{
+                    padding: 11px 26px;
+                    margin-right: 12px;
+                }
+                .people{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    @include for-size(tablet-landscape-down){
+        h1{
+            max-width: 700px;
+            font-size: 54px;
+            .span{
+                .button{
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    @include for-size(tablet-portrait-down){
+        display: none
+    }
+}
+
+@include for-size(desktop-down){
+    .title{
+        h2{
+            padding-bottom: 49px;
+        }
+        .categories{
+            @include flex(center,center);
+        }
+        margin-bottom: 58px
+    }
+    .brands{
+        .separator{
+            height: 190px;
+        }
+        .exlusive-or-silver, .gold-or-bronze{
+            h6{
+                margin-bottom: 40px
+            }
+            .logos{
+                img{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@include for-size(tablet-landscape-down){
+    .brands{
+        .separator{
+            height: 176px;
+        }
+    }
+}
+
+@include for-size(tablet-portrait-down){}
+
+@include for-size(phone-only){
+    .brands{
+        @include flex(space-between,stretch);
+        flex-direction: column;
+        .separator{
+            display: none;
+        }
+        .exlusive-or-silver, .gold-or-bronze{
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            @include flex(center,center);
+            
+            flex-direction: column;
+            h6{
+                margin-bottom: 30px
+            }
+            .logos{
+                @include flex(center,center);
+                flex-wrap: wrap;
+                img{
+                    width: 50%;
+                    &:nth-child(even){
+                        margin-left: 20%;
+                    }
+                    margin-bottom: 15px;
+                    width: 40%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    
+
+}

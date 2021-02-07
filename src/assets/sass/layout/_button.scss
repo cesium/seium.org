@@ -1,0 +1,11 @@
+.button {
+	font-family:  $font-primary-regular;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: 0.72px;
+	text-align: center;
+	color: $white;
+	@include ripple-effect(white);
+}

@@ -1,0 +1,134 @@
+// Media Query
+@mixin for-size($size) {
+	@if $size == phone-only {
+		@media (max-width: $breakpoint-sm) {
+			@content;
+		}
+	} @else if $size == tablet-portrait-down {
+		@media (max-width: $breakpoint-md) {
+			@content;
+		}
+	} @else if $size == tablet-landscape-down {
+		@media (max-width: $breakpoint-lg) {
+			@content;
+		}
+	} @else if $size == desktop-down {
+		@media (max-width: $breakpoint-xl) {
+			@content;
+		}
+	} @else if $size == desktop-up {
+		@media (min-width: $breakpoint-xl) {
+			@content;
+		}
+	}
+}
+
+// Ripple effect for buttons
+@mixin ripple-effect($background) {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-color: $background;
+		padding: 50%;
+		border-radius: 50%;
+		left: 50%;
+		top: 50%;
+		// Detect clicked poinnt with js
+		// left: calc(100% * var(--ripple-x));
+		// top: calc(100% * var(--ripple-y));
+		transform: translate(-50%, -50%) scale(2);
+		opacity: 0;
+		transition: transform 700ms, opacity 700ms;
+		pointer-events: none;
+	}
+	&:active::before {
+		transition: 0s;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+// Flexbox
+@mixin flex($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin padding-h($padding) {
+	padding-left: $padding;
+	padding-right: $padding;
+}
+
+@mixin padding-v($padding) {
+	padding-top: $padding;
+	padding-bottom: $padding;
+}
+
+// Set Font
+@mixin font-source-sans($font: false, $size: false, $color: false, $weight: false, $lh: false) {
+	@if $font {
+		font-family: $font;
+	}
+	@if $size {
+		font-size: $size;
+	}
+	@if $color {
+		color: $color;
+	}
+	@if $weight {
+		font-weight: $weight;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+}
+
+// Placeholder styling
+@mixin input-placeholder {
+	&.placeholder {
+		@content;
+	}
+	&::placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+// Import fonts
+@mixin font-face($family, $ttf-path) {
+	@font-face {
+		font-family: $family;
+		src: url($ttf-path) format("truetype");
+	}
+}
+
+// Show and hide an element
+@mixin fade($type) {
+	@if $type== "hide" {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 1s, opacity 1s;
+		pointer-events: none;
+	} @else if $type== "show" {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 1s, opacity 1s;
+		pointer-events: all;
+	}
+}

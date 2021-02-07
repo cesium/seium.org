@@ -6,62 +6,39 @@
 SEI, our Software Engineering Week is an eventful week, fully organized by
 students for students.
 
-## :rocket: Getting Started
+## Available Scripts
 
-These instructions will get you a copy of the project up and running on your
-local machine for development and testing purposes.
+In the project directory, you can run:
 
-### :inbox_tray: Prerequisites
+### `yarn start`
 
-The following software is required to be installed on your system:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- [Node.js 14.15.3](https://nodejs.org/en/download/)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Install all dependencies using `npm install`.
+### `yarn test`
 
-### :hammer: Development
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Starting the development server.
+### `yarn build`
 
-```
-npm run develop
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Lint your code.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-npm run lint
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Format your code.
+### `yarn eject`
 
-```
-npm run format
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Thanks to [husky](https://github.com/typicode/husky), the `lint` and `format`
-script will run every time you make a commit. If you receive any warnings or
-your code isn't properly formatted, you should update your commit before pushing
-your code.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### :package: Deployment
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Bundling the app into static files for production.
-
-```
-npm run build
-```
-
-### :link: References
-
-You can use this resources to learn more about the tecnologies this project
-uses.
-
-- [Getting Started with React](https://reactjs.org/docs/getting-started.html)
-- [Learn Next.js](https://nextjs.org/learn).
-
-## :handshake: Contributing
-
-Please read [CONTRIBUTING][contributing] and [CODE_OF_CONDUCT][code_of_conduct]
-for details on our code of conduct and the process for submitting pull requests
-to us.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.

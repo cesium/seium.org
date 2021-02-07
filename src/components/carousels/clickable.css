@@ -1,0 +1,20 @@
+.prev{
+    background: no-repeat;
+    margin-right: 15px;
+}
+.next{
+    background: no-repeat;
+    margin-left: 15px;
+}
+.clickable{
+    cursor: pointer;
+    margin-top:'5%';
+    width: 44px;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+}
+
+.clickable:focus{
+    outline: 0;
+}

@@ -1,0 +1,629 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  font-weight: 700;
+}
+
+i {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+svg path {
+  -webkit-transition: stroke 300ms ease-in-out, fill 300ms ease-in-out;
+  transition: stroke 300ms ease-in-out, fill 300ms ease-in-out;
+}
+
+svg:hover path {
+  -webkit-transition: stroke 300ms ease-in-out, fill 300ms ease-in-out;
+  transition: stroke 300ms ease-in-out, fill 300ms ease-in-out;
+}
+
+input,
+textarea:focus {
+  outline: 0;
+}
+
+button:focus {
+  cursor: pointer;
+  outline: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+/**
+* Remove most spacing between table cells.
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/*=== Import Fonts ===*/
+@font-face {
+  font-family: "Inter Regular";
+  src: url("../fonts/Inter/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter Black";
+  src: url("../fonts/Inter/Inter-Black.ttf") format("truetype");
+}
+
+/*=== Typography Styling ===*/
+body {
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Inter Black";
+  font-size: 92px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-family: "Inter Black";
+  font-size: 56px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 992px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+h2 {
+  font-family: "Inter Black";
+  font-size: 56px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+h5 {
+  font-family: "Inter Black";
+  font-size: 36px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+h4 {
+  font-family: "Inter Black";
+  font-size: 36px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+h6 {
+  font-family: "Inter Black";
+  font-size: 30px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+p.x-large-1 {
+  font-family: "Inter Black";
+  font-size: 28px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4ca9ff;
+}
+
+@media (max-width: 1200px) {
+  p.x-large-1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  p.x-large-1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  p.x-large-1 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  p.x-large-1 {
+    font-size: 12px;
+  }
+}
+
+p.x-large {
+  font-family: "Inter Black";
+  font-size: 24px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ffb7;
+}
+
+p.large {
+  font-family: "Inter Regular";
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fefcfb;
+}
+
+p.parag {
+  font-family: "Inter Regular";
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  p.parag {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  p.parag {
+    font-size: 12px;
+  }
+}
+
+p.medium-4 {
+  font-family: "Inter Black";
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #181818;
+}
+
+p.medium-3 {
+  font-family: "Inter Black";
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  p.medium-3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  p.medium-3 {
+    font-size: 9px;
+  }
+}
+
+p.medium-2 {
+  font-family: "Inter Regular";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #181818;
+}
+
+@media (max-width: 992px) {
+  p.medium-2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  p.medium-2 {
+    font-size: 12px;
+  }
+}
+
+p.medium {
+  font-family: "Inter Regular";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+p.meduim-5 {
+  font-family: "Inter Black";
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0.32px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 992px) {
+  p.meduim-5 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  p.meduim-5 {
+    font-size: 12px;
+  }
+}
+
+p.small {
+  font-family: "Inter Regular";
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+p.x-small {
+  font-family: "Inter Black";
+  font-size: 12px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: right;
+  color: #ffffff;
+}
+
+p.x_small2 {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  p.x_small2 {
+    font-size: 10px;
+  }
+}
+
+p.x-small3 {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(0, 255, 183, 0.5);
+}
+
+.nav-bar-link {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .nav-bar-link {
+    font-size: 10px;
+  }
+}
+
+button {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  button {
+    font-size: 10px;
+  }
+}
+
+.speaker .description {
+  margin-top: 8px;
+}
+
+.speaker:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.speaker:nth-child(even) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.speaker .text {
+  font-family: "Inter Regular";
+  font-weight: normal;
+  margin-top: 2px;
+}
+/*# sourceMappingURL=speaker.css.map */

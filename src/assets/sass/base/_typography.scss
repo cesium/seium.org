@@ -1,0 +1,380 @@
+/*=== Import Fonts ===*/
+@include font-face($font-primary-regular, $font-primary-regular-path);
+@include font-face($font-primary-black, $font-primary-black-path);
+
+/*=== Typography Styling ===*/
+body {
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+a {
+    // &:link {
+    //  text-decoration: none;
+    // }
+    &:visited {
+        text-decoration: none;
+    }
+    // &:hover {
+    //  text-decoration: none;
+    // }
+    // &:active {
+    //  text-decoration: none;
+    // }
+}
+h1 {
+    font-family: $font-primary-black;
+    font-size: 92px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: $white;
+    @include for-size(desktop-down){
+        font-size: 70px;
+    }
+    @include for-size(tablet-landscape-down){
+        font-size: $font-size-xl;
+    }
+    @include for-size(tablet-portrait-down){
+        font-size: $font-size-lg;
+    }
+    @include for-size(phone-only){
+        font-size: $font-size-md;
+    }
+}
+h3 {
+    font-family: $font-primary-black;
+    font-size: $font-size-xl;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: $white;
+    @include for-size(desktop-down){
+        font-size: $font-size-lg;
+    }
+    @include for-size(tablet-landscape-down){
+        font-size: $font-size-md;
+    }
+    @include for-size(tablet-portrait-down){
+        font-size: $font-size-re;
+    }
+    @include for-size(phone-only){
+        font-size: $font-size-sm;
+    }
+}
+h2 {
+    font-family: $font-primary-black;
+    font-size: $font-size-xl;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: $white;
+	@include for-size(desktop-down){
+        font-size: $font-size-lg;
+    }
+    @include for-size(tablet-landscape-down){
+        font-size: $font-size-md;
+    }
+    @include for-size(tablet-portrait-down){
+        font-size: $font-size-re;
+    }
+    
+}
+h5 {
+    font-family: $font-primary-black;
+    font-size: $font-size-lg;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: left;
+    color: $white;
+}
+h4 {
+    font-family: $font-primary-black;
+    font-size: $font-size-lg;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: $white;
+}
+h6 {
+    font-family: $font-primary-black;
+    font-size: 30px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: $white;
+	@include for-size(desktop-down){
+        font-size: $font-size-md;
+    }
+    @include for-size(tablet-landscape-down){
+        font-size: $font-size-md;
+    }
+    @include for-size(tablet-portrait-down){
+        font-size: $font-size-re;
+    }
+    @include for-size(phone-only){
+        font-size: $font-size-sm;
+    }
+}
+p{
+    &.x-large-1 {
+        font-family: $font-primary-black;
+        font-size: 28px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: left;
+        color: $blue-update;
+        @include for-size(desktop-down){
+            font-size: $font-size-md;
+        }
+        @include for-size(tablet-landscape-down){
+            font-size: $font-size-re;
+        }
+        @include for-size(tablet-portrait-down){
+            font-size: $font-size-sm;
+        }
+        @include for-size(phone-only){
+            font-size: $font-size-xs;
+        }
+    }
+    &.x-large {
+        font-family: $font-primary-black;
+        font-size: $font-size-md;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: left;
+        color: $mint;
+    }
+    &.large {
+        font-family: $font-primary-regular;
+        font-size: $font-size-re;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fefcfb;
+    }
+    &.parag {
+        font-family: $font-primary-regular;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        @include for-size(desktop-down){
+            font-size: $font-size-sm;
+        }
+        @include for-size(tablet-landscape-down){
+            font-size: $font-size-xs;
+        }
+      }
+    &.medium-4 {
+        font-family: $font-primary-black;
+        font-size: $font-size-sm;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: left;
+        color: $dark-grey;
+    }
+    &.medium-3 {
+        font-family: $font-primary-black;
+        font-size: $font-size-sm;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: left;
+        color: $white;
+        @include for-size(tablet-landscape-down){
+            font-size: 14px;
+        }
+        @include for-size(phone-only){
+            font-size: 9px;
+        }
+    }
+    &.medium-2 {
+        font-family: $font-primary-regular;
+        font-size: $font-size-sm;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: left;
+        color: $dark-grey;
+        @include for-size(tablet-landscape-down){
+            font-size: 14px;
+        }
+        @include for-size(phone-only){
+            font-size: $font-size-xs;
+        }
+    }
+    &.medium {
+        font-family: $font-primary-regular;
+        font-size: $font-size-sm;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: left;
+        color: $white;
+    }
+    &.meduim-5 {
+        font-family: $font-primary-black;
+        font-size: $font-size-sm;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: 0.32px;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.4);
+        @include for-size(tablet-landscape-down){
+            font-size: 14px;
+        }
+        @include for-size(phone-only){
+            font-size: $font-size-xs;
+        }
+      }
+    &.small {
+        font-family:  $font-primary-regular;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2;
+        letter-spacing: normal;
+        text-align: left;
+        color: $white;
+    }
+    &.x-small {
+        font-family: $font-primary-black;
+        font-size: $font-size-xs;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: right;
+        color: $white;
+        
+    }
+    &.x_small2 {
+        font-family: $font-primary-regular;
+        font-size: $font-size-xs;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        @include for-size(phone-only){
+            font-size: 10px;
+        }
+    }
+    &.x-small3 {
+        font-family: $font-primary-regular;
+        font-size: $font-size-xs;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(0, 255, 183, 0.5);
+    }
+}
+.medium-3 {
+    font-family: $font-primary-black;
+    font-size: $font-size-sm;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: left;
+    color: $white;
+    @include for-size(tablet-landscape-down){
+        font-size: 14px;
+    }
+    @include for-size(phone-only){
+        font-size: 9px;
+    }
+}
+.nav-bar-link {
+    font-family:  $font-primary-regular;
+    font-size: $font-size-xs;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: left;
+    color: $white;
+    @include for-size(phone-only){
+        font-size: 10px;
+    }
+}
+button {
+    font-family:  $font-primary-regular;
+    font-size: $font-size-xs;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0.72px;
+    text-align: center;
+    color: $white;
+    @include for-size(desktop-down){
+        font-size: 10px;
+    }
+}
+// How typogrraphy should looks like on mobile version
+@include for-size(desktop-down){
+            
+}
+@include for-size(tablet-landscape-down){
+    
+}
+@include for-size(tablet-portrait-down){
+    
+}
+@include for-size(phone-only){
+    
+}
