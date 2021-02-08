@@ -187,7 +187,7 @@ function AgendaCarousel(props) {
     function Header(props) {
         return(
             <div style={headerStyle().headerContainer}>
-                <p className='x-large-1' style={headerStyle().date}>23 Feb</p>
+                <p className='x-large-1' style={headerStyle().date}>{23 + increment} Feb</p>
                 <div style={headerStyle().navigation}>
                     <Clickable
                     onClick={()=>{

@@ -214,7 +214,7 @@ a:visited {
   text-decoration: none;
 }
 
-h1 {
+h1.title {
   font-family: "Inter Black";
   font-size: 92px;
   font-weight: 900;
@@ -227,26 +227,26 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  h1 {
+  h1.title {
     font-size: 70px;
   }
 }
 
 @media (max-width: 992px) {
-  h1 {
+  h1.title {
     font-size: 56px;
   }
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 36px;
+  h1.title {
+    font-size: 62px;
   }
 }
 
 @media (max-width: 576px) {
-  h1 {
-    font-size: 24px;
+  h1.title {
+    font-size: 50px;
   }
 }
 
@@ -670,8 +670,21 @@ button {
   }
 }
 
-.home {
+.intro-bg {
+  /* The image used */
+  background-image: url("../../components/images/lines.svg") !important;
   background: #181818;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -687,17 +700,26 @@ button {
   padding-right: 55px;
 }
 
+.home .landing {
+  padding-top: 1%;
+  padding-bottom: 5%;
+  width: 100%;
+  padding-left: 55px;
+  padding-right: 55px;
+  min-height: 100vh;
+}
+
 .home .container .description {
   max-width: 792px;
   margin-bottom: 4%;
+  height: 60vh;
 }
 
-.home .container .description h1 {
+/* .home .container .description h1 {
   margin-top: 1%;
-}
+} */
 
 .home .container .infos {
-  margin-top: 6%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -785,12 +807,12 @@ button {
   .home .container .description {
     max-width: 603px;
   }
-  .home .container .description p {
+  /* .home .container .description p {
     font-size: 18px;
-  }
-  .home .container .description h1 {
+  } */
+  /* .home .container .description h1 {
     font-size: 70px;
-  }
+  } */
   .home .container .details .expect {
     max-width: 246px;
   }
@@ -820,12 +842,12 @@ button {
   .home .container .description {
     max-width: 583px;
   }
-  .home .container .description p {
+  /* .home .container .description p {
     font-size: 16px;
-  }
-  .home .container .description h1 {
+  } */
+  /* .home .container .description h1 {
     font-size: 65px;
-  }
+  } */
   .home .container .details .expect {
     max-width: 246px;
   }
@@ -849,12 +871,12 @@ button {
   .home .container .description {
     max-width: 436px;
   }
-  .home .container .description p {
+  /* .home .container .description p {
     font-size: 18px;
-  }
-  .home .container .description h1 {
+  } */
+  /* .home .container .description h1 {
     font-size: 50px;
-  }
+  } */
   .home .container .details .expect {
     max-width: 150px;
   }
@@ -884,12 +906,11 @@ button {
     margin-bottom: 70px;
   }
   .home .container .description h1 {
-    font-size: 34px;
     margin-top: 2%;
   }
-  .home .container .description p {
+  /* .home .container .description p {
     font-size: 14px;
-  }
+  } */
   .home .container .infos {
     width: 100%;
     display: flex;

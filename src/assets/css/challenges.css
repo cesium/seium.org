@@ -609,7 +609,6 @@ button {
 }
 
 .challenges {
-  background: #142a3e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -771,3 +770,17 @@ button {
   border-bottom: 1px solid #00ffb7;
 }
 /*# sourceMappingURL=challenges.css.map */
+
+.challenges-bg {
+  /* The image used */
+  background-image: url("../../components/images/lines.svg") !important;
+  background: #142a3e;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}

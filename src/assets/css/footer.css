@@ -609,6 +609,7 @@ button {
 }
 
 .footer {
+  padding-top: 20px;
   background-color: #181818;
   display: -webkit-box;
   display: -ms-flexbox;

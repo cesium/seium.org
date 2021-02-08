@@ -686,7 +686,7 @@ button {
 }
 
 .navbar {
-  margin-bottom: 100px;
+  padding: 10px 5% 0 5%;
   -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
   transition: -webkit-box-shadow 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out;
@@ -715,7 +715,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 5%;
+  padding-top: 30px;
 }
 
 .navbar .container-nav .nav-content .nav-item {
@@ -726,6 +726,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+
+  padding-top: 18px;
+  padding-right: 20px;
 }
 
 .navbar .container-nav .nav-content .nav-item .nav-link {
@@ -751,7 +754,8 @@ button {
 
 @media (max-width: 768px) {
   .navbar {
-    margin-bottom: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .navbar .container-nav {
     position: relative;

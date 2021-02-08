@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 0;
   vertical-align: baseline;
 }
@@ -622,11 +622,10 @@ button {
 
 .memberTeam:nth-child(even) {
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 .memberTeam .text {
   font-family: "Inter Regular";
   font-weight: normal;
 }
-/*# sourceMappingURL=memberTeam.css.map */

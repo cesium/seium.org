@@ -609,7 +609,6 @@ button {
 }
 
 .speakers {
-  background: #0e1d2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,6 +618,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
+  padding-top: 3%;
 }
 
 .speakers .container {
@@ -692,3 +693,17 @@ button {
   }
 }
 /*# sourceMappingURL=speakers.css.map */
+
+.speakers-bg {
+  /* The image used */
+  background-image: url("../../components/images/lines.svg") !important;
+  background: #0E1D2A;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
