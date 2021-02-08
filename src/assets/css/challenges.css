@@ -772,6 +772,8 @@ button {
 /*# sourceMappingURL=challenges.css.map */
 
 .challenges-bg {
+  padding: 0 5% 0 5%;
+
   /* The image used */
   background-image: url("../../components/images/lines.svg") !important;
   background: #142a3e;

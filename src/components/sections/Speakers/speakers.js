@@ -13,30 +13,34 @@ function Speakers() {
     paddingRight: "0",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   };
 
   return (
-    <div className="speakers-bg">
-      <NavBar />
-      <div>
-        <div style={styling}>
-          <Container>
-            <SectionDescription
-              middleTitle="Speakers"
-              title="A crazy cool selection of speakers."
-              style={{
-                maxWidth: "70%",
-                marginBottom: "150px",
-                marginTop: "10px",
-              }}
-            ></SectionDescription>
-            <SpeakersCarousel style={{ paddingLef: "0px" }}></SpeakersCarousel>
-          </Container>
+    <>
+      <div className="speakers-bg">
+        <NavBar />
+        <div>
+          <div style={styling}>
+            <Container>
+              <SectionDescription
+                middleTitle="Speakers"
+                title="A crazy cool selection of speakers."
+                style={{
+                  maxWidth: "70%",
+                  marginBottom: "150px",
+                  marginTop: "10px",
+                }}
+              ></SectionDescription>
+              <SpeakersCarousel
+                style={{ paddingLef: "0px" }}
+              ></SpeakersCarousel>
+            </Container>
+          </div>
         </div>
-        <Footer>Yep. That’s the end of it. Bye now. 👋</Footer>
       </div>
-    </div>
+      <Footer>Yep. That’s the end of it. Bye now. 👋</Footer>
+    </>
   );
 }
 

@@ -200,37 +200,38 @@ function Challenges() {
   }, [data]);
 
   return (
-    <div className="challenges-bg">
-      <NavBar />
-      <div className="challenges">
-        <Container>
-          <p className="x-large-1 chall-title">Challenges</p>
-          <div className="headerChallenge">
-            <h1 className="chall-desc">
-              Participate in new challenges every{" "}
-              <span className="spanChall">
-                {" "}
-                day
-                <div className="cardContainer">
-                  <Card
-                    img={HeaderIcon}
-                    alt="HeaderIcon"
-                    style={{ alignItems: "flex-end" }}
-                  >
-                    You can also win awards every day. But that’s highly
-                    unlikely I would say...
-                  </Card>
-                </div>
-              </span>
-              .
-            </h1>
-          </div>
+    <>
+      <div className="challenges-bg">
+        <NavBar />
+        <div className="challenges">
+          <Container>
+            <p className="x-large-1 chall-title">Challenges</p>
+            <div className="headerChallenge">
+              <h1 className="chall-desc">
+                Participate in new challenges every{" "}
+                <span className="spanChall">
+                  {" "}
+                  day
+                  <div className="cardContainer">
+                    <Card
+                      img={HeaderIcon}
+                      alt="HeaderIcon"
+                      style={{ alignItems: "flex-end" }}
+                    >
+                      You can also win awards every day. But that’s highly
+                      unlikely I would say...
+                    </Card>
+                  </div>
+                </span>
+                .
+              </h1>
+            </div>
 
-          <div className="element">
-            {NavChallenge()}
-            {challenge}
-          </div>
-          {/* <div className="element">
+            <div className="element">
+              {NavChallenge()}
+              {challenge}
+            </div>
+            {/* <div className="element">
                     <NavChallenge />
                     <Challenge title='CV Challenge'
                                 parag='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis erat in tellus porta, ut suscipit arcu iaculis. Sed tempor massa ipsum, et ornare dui dignissim vitae. Maecenas erat felis, laoreet sit amet felis quis, molestie pellentesque purus. Nam a euismod ante, a tincidunt elit.'
@@ -250,10 +251,11 @@ function Challenges() {
                                 parag='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis erat in tellus porta, ut suscipit arcu iaculis. Sed tempor massa ipsum, et ornare dui dignissim vitae. Maecenas erat felis, laoreet sit amet felis quis, molestie pellentesque purus. Nam a euismod ante, a tincidunt elit.'
                     />
                 </div> */}
-        </Container>
+          </Container>
+        </div>
       </div>
       <Footer>You wanted even more? 😲</Footer>
-    </div>
+    </>
   );
 }
 

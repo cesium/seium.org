@@ -17,16 +17,18 @@ function Agenda() {
   };
 
   return (
-    <div className="agenda-bg">
-      <NavBar />
-      <div style={styling}>
-        <Container>
-          <SectionDescription middleTitle="Agenda"></SectionDescription>
-          <Carousel />
-        </Container>
+    <>
+      <div className="agenda-bg">
+        <NavBar />
+        <div style={styling}>
+          <Container>
+            <SectionDescription middleTitle="Agenda"></SectionDescription>
+            <Carousel />
+          </Container>
+        </div>
       </div>
       <Footer>Yep. That’s the end of it. Bye now. 👋</Footer>
-    </div>
+    </>
   );
 }
 

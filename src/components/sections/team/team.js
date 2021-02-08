@@ -41,133 +41,47 @@ function Team() {
   };
 
   return (
-    <div className="team-bg">
-      <NavBar />
-      <div className="team">
-        <Container>
-          <p className="x-large-1 team-title">Team</p>
-          <h1 className="team-desc">
-            CeSIUM has teamed up with the best team possible.
-          </h1>
-          <div className="organization">
-            <p className="nav-bar-link orgTitle">Organization</p>
-            <a href="">
-              <div className="image"></div>
-            </a>
-          </div>
-          <div className="section">
-            <div className="team-compo">
-              <h3>Organization</h3>
-              <p className="parag">
-                They walk around, full of work, gathering speakers, attracting
-                partners and giving their imaginations wings, all for this to be
-                your favorite week.
-              </p>
+    <>
+      <div className="team-bg">
+        <NavBar />
+        <div className="team">
+          <Container>
+            <p className="x-large-1 team-title">Team</p>
+            <h1 className="team-desc">
+              CeSIUM has teamed up with the best team possible.
+            </h1>
+            <div className="organization">
+              <p className="nav-bar-link orgTitle">Organization</p>
+              <a href="">
+                <div className="image"></div>
+              </a>
             </div>
-            <div className="images">
-              <MemberTeam
-                memberTeam={Member2}
-                alt="member2"
-                name="Francisco Lira"
-                icon1={GitHub}
-                icon2={Twitter}
-                icon3={Linkedin}
-              />
-              <MemberTeam
-                memberTeam={Member1}
-                alt="member1"
-                name="Sérgio Costa"
-                icon1={GitHub}
-                icon2={Twitter}
-                icon3={Linkedin}
-              />
-              <MemberTeam
-                memberTeam={Member4}
-                alt="member4"
-                name="Francisco Costa"
-                icon1={GitHub}
-                icon2={Twitter}
-                icon3={Linkedin}
-              />
-              <MemberTeam
-                memberTeam={Member3}
-                alt="member3"
-                name="Nelson Estevão"
-                icon1={Chrome}
-                icon2={GitHub}
-                icon3={GitLab}
-                icon4={Linkedin}
-              />
-            </div>
-          </div>
-          <div className="section">
-            <div className="images">
-              <MemberTeam
-                memberTeam={Member4}
-                alt="member4"
-                name="Francisco Costa"
-                icon1={GitHub}
-                icon2={Twitter}
-              />
-              <MemberTeam
-                memberTeam={Member3}
-                alt="member3"
-                name="Nelson Estevão"
-                icon1={Chrome}
-                icon2={GitHub}
-                icon3={GitLab}
-                icon4={Linkedin}
-                icon5={Twitter}
-              />
-              <MemberTeam
-                memberTeam={Member4}
-                alt="member4"
-                name="Francisco Costa"
-                icon1={GitHub}
-                icon2={Twitter}
-                icon3={Linkedin}
-              />
-              <MemberTeam
-                memberTeam={Member3}
-                alt="member3"
-                name="Nelson Estevão"
-                icon1={Chrome}
-                icon2={GitHub}
-                icon3={GitLab}
-                icon4={Linkedin}
-                icon5={Twitter}
-              />
-              <MemberTeam
-                memberTeam={Member4}
-                alt="member4"
-                name="Francisco Costa"
-                icon1={GitHub}
-                icon2={Twitter}
-                icon3={Linkedin}
-              />
-              <MemberTeam
-                memberTeam={Member3}
-                alt="member3"
-                name="Nelson Estevão"
-                icon1={Chrome}
-                icon2={GitHub}
-                icon3={GitLab}
-              />
-            </div>
-            <div className="firstPlace">
-              <div
-                className="cardTeam"
-                style={{
-                  height: cardTeamStyle().h,
-                  marginBottom: cardTeamStyle().mrB,
-                }}
-              >
-                <Card img={TeamImg}>
-                  I am also very important to the team. Actually I should be in
-                  first place.
-                </Card>
+            <div className="section">
+              <div className="team-compo">
+                <h3>Organization</h3>
+                <p className="parag">
+                  They walk around, full of work, gathering speakers, attracting
+                  partners and giving their imaginations wings, all for this to
+                  be your favorite week.
+                </p>
               </div>
               <div className="images">
+                <MemberTeam
+                  memberTeam={Member2}
+                  alt="member2"
+                  name="Francisco Lira"
+                  icon1={GitHub}
+                  icon2={Twitter}
+                  icon3={Linkedin}
+                />
+                <MemberTeam
+                  memberTeam={Member1}
+                  alt="member1"
+                  name="Sérgio Costa"
+                  icon1={GitHub}
+                  icon2={Twitter}
+                  icon3={Linkedin}
+                />
                 <MemberTeam
                   memberTeam={Member4}
                   alt="member4"
@@ -182,6 +96,29 @@ function Team() {
                   name="Nelson Estevão"
                   icon1={Chrome}
                   icon2={GitHub}
+                  icon3={GitLab}
+                  icon4={Linkedin}
+                />
+              </div>
+            </div>
+            <div className="section">
+              <div className="images">
+                <MemberTeam
+                  memberTeam={Member4}
+                  alt="member4"
+                  name="Francisco Costa"
+                  icon1={GitHub}
+                  icon2={Twitter}
+                />
+                <MemberTeam
+                  memberTeam={Member3}
+                  alt="member3"
+                  name="Nelson Estevão"
+                  icon1={Chrome}
+                  icon2={GitHub}
+                  icon3={GitLab}
+                  icon4={Linkedin}
+                  icon5={Twitter}
                 />
                 <MemberTeam
                   memberTeam={Member4}
@@ -201,42 +138,110 @@ function Team() {
                   icon4={Linkedin}
                   icon5={Twitter}
                 />
+                <MemberTeam
+                  memberTeam={Member4}
+                  alt="member4"
+                  name="Francisco Costa"
+                  icon1={GitHub}
+                  icon2={Twitter}
+                  icon3={Linkedin}
+                />
+                <MemberTeam
+                  memberTeam={Member3}
+                  alt="member3"
+                  name="Nelson Estevão"
+                  icon1={Chrome}
+                  icon2={GitHub}
+                  icon3={GitLab}
+                />
+              </div>
+              <div className="firstPlace">
+                <div
+                  className="cardTeam"
+                  style={{
+                    height: cardTeamStyle().h,
+                    marginBottom: cardTeamStyle().mrB,
+                  }}
+                >
+                  <Card img={TeamImg}>
+                    I am also very important to the team. Actually I should be
+                    in first place.
+                  </Card>
+                </div>
+                <div className="images">
+                  <MemberTeam
+                    memberTeam={Member4}
+                    alt="member4"
+                    name="Francisco Costa"
+                    icon1={GitHub}
+                    icon2={Twitter}
+                    icon3={Linkedin}
+                  />
+                  <MemberTeam
+                    memberTeam={Member3}
+                    alt="member3"
+                    name="Nelson Estevão"
+                    icon1={Chrome}
+                    icon2={GitHub}
+                  />
+                  <MemberTeam
+                    memberTeam={Member4}
+                    alt="member4"
+                    name="Francisco Costa"
+                    icon1={GitHub}
+                    icon2={Twitter}
+                    icon3={Linkedin}
+                  />
+                  <MemberTeam
+                    memberTeam={Member3}
+                    alt="member3"
+                    name="Nelson Estevão"
+                    icon1={Chrome}
+                    icon2={GitHub}
+                    icon3={GitLab}
+                    icon4={Linkedin}
+                    icon5={Twitter}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="section lastSection">
-            <div className="team-compo">
-              <h3>How to find us</h3>
-              <p className="parag paragTeam">
-                The SEI is free for participants and is organized by volunteers
-                from CeSIUM.
-              </p>
-              <p className="meduim-5 contact">
-                Centro de Estudantes de Engenharia Informática
-              </p>
-              <ul>
-                <li>
-                  {" "}
-                  <p className="medium-2 contact">
-                    E-mail: cesium@di.uminho.pt
-                  </p>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <p className="medium-2 contact" style={{ color: "#ffffff" }}>
-                    Phone: +351 253 604 448
-                  </p>{" "}
-                </li>
-              </ul>
+            <div className="section lastSection">
+              <div className="team-compo">
+                <h3>How to find us</h3>
+                <p className="parag paragTeam">
+                  The SEI is free for participants and is organized by
+                  volunteers from CeSIUM.
+                </p>
+                <p className="meduim-5 contact">
+                  Centro de Estudantes de Engenharia Informática
+                </p>
+                <ul>
+                  <li>
+                    {" "}
+                    <p className="medium-2 contact">
+                      E-mail: cesium@di.uminho.pt
+                    </p>{" "}
+                  </li>
+                  <li>
+                    {" "}
+                    <p
+                      className="medium-2 contact"
+                      style={{ color: "#ffffff" }}
+                    >
+                      Phone: +351 253 604 448
+                    </p>{" "}
+                  </li>
+                </ul>
+              </div>
+              <div className="map">
+                <img src={Map} alt="map" />
+              </div>
             </div>
-            <div className="map">
-              <img src={Map} alt="map" />
-            </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </div>
       <Footer>Just really useful links here. Bye now. 👋</Footer>
-    </div>
+    </>
   );
 }
 export default Team;

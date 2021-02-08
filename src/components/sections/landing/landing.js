@@ -11,7 +11,7 @@ function Home() {
       <Carousel style={{ background: "#181818" }} />
       <Speakers style={{ background: "rgb(20, 42, 62)" }} />
       <Footer style={{ background: "#0e1d2a" }}>
-        Yep. That’s the end of it. Bye now. 👋
+        Psst. Have you checked the <a href="/challenges">challenges</a>? Just saying.
       </Footer>
     </div>
   );
