@@ -63,7 +63,7 @@ let headerStyle = () => {
                 fontSize: '50px',
             },
             container:{
-                
+
             },
             navigation:{
                 display: 'flex',
@@ -92,7 +92,7 @@ let headerStyle = () => {
                 fontSize: '40px',
             },
             container:{
-                
+
             },
             navigation:{
                 display: 'flex',
@@ -164,7 +164,7 @@ function Header(props) {
                 <Button className='button'>Talks</Button>
                 <Button className='button'>Pitch</Button>
                 <Button className='button'>Workshops</Button>
-                <Button className='button'>Hackatons</Button>
+                <Button className='button'>Hackathons</Button>
                 <Button className='button'>Breaks</Button>
             </div>
             </div>

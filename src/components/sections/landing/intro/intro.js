@@ -105,7 +105,7 @@ class Intro extends React.Component {
                 <h5>What you can expect:</h5>
                 <ul>
                   <li>
-                    <a href="">Hackatons</a>
+                    <a href="">Hackathons</a>
                   </li>
                   <li>
                     <a href="">Talks</a>

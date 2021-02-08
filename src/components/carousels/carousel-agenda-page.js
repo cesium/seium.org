@@ -33,7 +33,7 @@ let headerStyle = () => {
             day:{
 
             },
-            container:{ 
+            container:{
 
             },
             navigation:{
@@ -63,7 +63,7 @@ let headerStyle = () => {
                 fontSize: '50px',
             },
             container:{
-                
+
             },
             navigation:{
                 display: 'flex',
@@ -92,7 +92,7 @@ let headerStyle = () => {
                 fontSize: '40px',
             },
             container:{
-                
+
             },
             navigation:{
                 display: 'flex',
@@ -171,7 +171,7 @@ function CarouselAgendaPage(props) {
     }
     let [increment, setIcrement] = React.useState(0)
     function navigate(param) {
-        if ((param == 'next' && increment < carouselPages.length - 1))  
+        if ((param == 'next' && increment < carouselPages.length - 1))
             setIcrement((next)=> next + 1);
         else if ((param == 'prev' && increment > 0))
             setIcrement((prev)=> prev - 1);
@@ -187,7 +187,7 @@ function CarouselAgendaPage(props) {
                     <Clickable
                     onClick={()=>{
                         navigate('prev');
-                    }} 
+                    }}
                     className='clickable prev' style={{...headerStyle().button, ...{backgroundImage: `url(${prev})`,}}}></Clickable>
                     <h1 style={headerStyle().day}>Today</h1>
                     <Clickable
@@ -202,7 +202,7 @@ function CarouselAgendaPage(props) {
                     <Button className='button'>Talks</Button>
                     <Button className='button'>Pitch</Button>
                     <Button className='button'>Workshops</Button>
-                    <Button className='button'>Hackatons</Button>
+                    <Button className='button'>Hackathons</Button>
                     <Button className='button'>Breaks</Button>
                 </div>
                 </div>
@@ -267,7 +267,7 @@ function CarouselAgendaPage(props) {
         next = NextClicked
         if (increment === 0)
             prev = PrevNotClicked;
-            
+
         if (increment === carouselPages.length - 1)
             next = NextNotClicked;
     }
@@ -280,4 +280,4 @@ function CarouselAgendaPage(props) {
     )
 }
 
-export default CarouselAgendaPage; 
+export default CarouselAgendaPage;
