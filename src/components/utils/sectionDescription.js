@@ -5,7 +5,7 @@ function SectionDescription(props) {
   return (
     <div
       className="description"
-      style={{ paddingLeft: "55px", paddingRight: "55px" }}
+      style={{ paddingLeft: "5vw", paddingRight: "5vw" }}
     >
       <p className="x-large-1">{props.middleTitle}</p>
       {!props.title ? (

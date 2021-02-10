@@ -5,8 +5,8 @@ const containerStyle = {
   maxWidth: "1440px",
   paddingTop: "1%",
   paddingBottom: "5%",
-  paddingLeft: "50px",
-  paddingRight: "50px"
+  paddingLeft: "5vw",
+  paddingRight: "5vw",
 };
 
 function Container(props) {

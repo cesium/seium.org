@@ -9,7 +9,7 @@ class Sponsors extends React.Component {
     return (
       <Container
         style={{
-          ...{ backgroundColor: "#142A3E", padding: "55px" },
+          ...{ backgroundColor: "#142A3E", padding: "5vw" },
           ...this.props.style,
         }}
       >

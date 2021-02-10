@@ -250,7 +250,7 @@ h1 {
 
 @media (max-width: 576px) {
   h1 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -274,7 +274,7 @@ h3 {
 
 @media (max-width: 992px) {
   h3 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -352,7 +352,7 @@ p.x-large-1 {
 
 @media (max-width: 1200px) {
   p.x-large-1 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -376,7 +376,7 @@ p.x-large-1 {
 
 p.x-large {
   font-family: "Inter Black";
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
@@ -687,6 +687,7 @@ button {
 
 .navbar {
   height: 20vh;
+  width: 90%;
   padding: 10px 0 0 0;
   -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
   transition: -webkit-box-shadow 300ms ease-in-out;

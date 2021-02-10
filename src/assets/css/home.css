@@ -246,7 +246,13 @@ h1.title {
 
 @media (max-width: 576px) {
   h1.title {
-    font-size: 50px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 340px) {
+  h1.title {
+    font-size: 30px;
   }
 }
 
@@ -277,7 +283,7 @@ h3 {
 
 @media (max-width: 992px) {
   h3 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -313,7 +319,7 @@ h2 {
 
 @media (max-width: 992px) {
   h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -361,13 +367,13 @@ h6 {
 
 @media (max-width: 1200px) {
   h6 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 992px) {
   h6 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -397,7 +403,7 @@ p.x-large-1 {
 
 @media (max-width: 1200px) {
   p.x-large-1 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -421,7 +427,7 @@ p.x-large-1 {
 
 p.x-large {
   font-family: "Inter Black";
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
@@ -704,8 +710,8 @@ button {
   max-width: 87%;
   width: 100%;
   max-width: 1440px;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .home .landing {
@@ -714,15 +720,14 @@ button {
   padding-top: 1%;
   padding-bottom: 5%;
   width: 100%;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 5vw;
+  padding-right: 5vw;
   min-height: 80vh;
 }
 
 .home .container .description {
   margin-top: auto;
   max-width: 792px;
-  margin-bottom: 4%;
   height: 60vh;
 }
 
@@ -860,13 +865,13 @@ button {
     max-width: 246px;
   }
   .home .container .details .expect h5 {
-    font-size: 24px;
+    font-size: 32px;
   }
   .home .container .details .quote {
     max-width: 282px;
   }
   .home .container .details .quote h4 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -980,3 +985,13 @@ button {
 }
 
 /*# sourceMappingURL=home.css.map */
+
+@media(max-width: 650px) {
+  .cardContainer {
+    display: none !important;
+  }
+
+  .spanChall {
+    border: 0 !important;
+  }
+}

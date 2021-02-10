@@ -149,8 +149,8 @@ function AgendaCarousel(props) {
       flexDirection: "row",
       justifyContent: "space-between",
       // alignItems: 'center',
-      paddingLeft: "55px",
-      paddingRight: "55px",
+      paddingLeft: "5vw",
+      paddingRight: "5vw",
     },
     ...headerStyle().container,
   };
