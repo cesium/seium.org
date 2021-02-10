@@ -7,7 +7,7 @@ h1.error {
   line-height: 1;
   letter-spacing: normal;
   text-align: left;
-  color: rgb(79, 177, 255)
+  color: rgb(79, 177, 255);
 }
 
 .mascote {
@@ -38,11 +38,11 @@ h1.error {
     height: 350px;
     width: 500px;
     left: 50%;
-    -ms-transform: translate(-50%,0%);
-    -moz-transform: translate(-50%,0%);
-    -o-transform: translate(-50%,0%);
-    -webkit-transform: translate(-50%,0%);
-    transform: translate(-50%,0%);
+    -ms-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
   }
 }
 
@@ -53,11 +53,11 @@ h1.error {
   .mascote {
     height: 250px;
     width: 250px;
-    -ms-transform: translate(-50%,0%);
-    -moz-transform: translate(-50%,0%);
-    -o-transform: translate(-50%,0%);
-    -webkit-transform: translate(-50%,0%);
-    transform: translate(-50%,0%);
+    -ms-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
   }
 }
 

@@ -5,7 +5,7 @@ import Agenda from "./components/sections/agendaPage/agenda";
 import Speakers from "./components/sections/Speakers/speakers";
 import Challenges from "./components/sections/challenges/challenges";
 import Team from "./components/sections/team/team";
-import Error from './components/sections/error';
+import Error from "./components/sections/error";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div>
         <Switch>
-        <Route path="/" exact>
+          <Route path="/" exact>
             <Home />
           </Route>
           <Route path="/agenda">

@@ -6,7 +6,7 @@ import FooterIcon from "../images/Footer.svg";
 import "../../assets/css/intro.css";
 import "../../assets/css/home.css";
 import "../../assets/css/error.css";
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 class Error extends React.Component {
   redirect() {
@@ -15,7 +15,7 @@ class Error extends React.Component {
 
   render() {
     return (
-      <div className="intro-bg" style = {{ height: "100vh", overflow: "hidden"}} >
+      <div className="intro-bg" style={{ height: "100vh", overflow: "hidden" }}>
         <NavBar />
         <div
           className="home"
@@ -25,12 +25,14 @@ class Error extends React.Component {
           }}
         >
           <div className="landing container">
-            <div className="description" style = {{ display: "inline-block"}}>
+            <div className="description" style={{ display: "inline-block" }}>
               <h1 className="error">404</h1>
               <h1 className="title">You're in the wrong line of code, pal.</h1>
-              <Button background="#1d1d1d" onClick={this.redirect.bind(this)}>BACK TO HOMEPAGE</Button>
+              <Button background="#1d1d1d" onClick={this.redirect.bind(this)}>
+                BACK TO HOMEPAGE
+              </Button>
             </div>
-              <img className="mascote" src={FooterIcon} alt="mascote" />
+            <img className="mascote" src={FooterIcon} alt="mascote" />
           </div>
         </div>
       </div>
