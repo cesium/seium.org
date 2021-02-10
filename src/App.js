@@ -14,9 +14,6 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/error">
-            <Error />
-          </Route>
           <Route path="/agenda">
             <Agenda />
           </Route>
@@ -28,6 +25,9 @@ function App() {
           </Route>
           <Route path="/team">
             <Team />
+          </Route>
+          <Route path="/404">
+            <Error />
           </Route>
           <Route path="/">
             <Home />
