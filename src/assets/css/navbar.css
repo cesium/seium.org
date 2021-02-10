@@ -687,7 +687,6 @@ button {
 
 .navbar {
   height: 20vh;
-  width: 90%;
   -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
   transition: -webkit-box-shadow 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out;
@@ -756,6 +755,7 @@ button {
 
 @media (max-width: 768px) {
   .navbar {
+    width: 90%;
     padding-top: 20px;
     padding-bottom: 20px;
   }
