@@ -680,10 +680,9 @@ button {
   /* Full height */
   height: 100%;
 
-  /* Center and scale the image nicely */
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .home {
@@ -735,7 +734,9 @@ button {
   align-items: center;
 }
 
-.home .container .infos .contact .icons .facebook, .home .container .infos .contact .icons .github, .home .container .infos .contact .icons .twitter {
+.home .container .infos .contact .icons .facebook,
+.home .container .infos .contact .icons .github,
+.home .container .infos .contact .icons .twitter {
   background-size: 100%;
   width: 20px;
   height: 20px;
@@ -762,7 +763,6 @@ button {
 }
 
 .home .container .details {
-  margin-top: 8%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -785,7 +785,7 @@ button {
   position: relative;
   display: inline-block;
   left: 0;
-  content: '';
+  content: "";
   border: white 1px solid;
   width: 5px;
   height: 5px;

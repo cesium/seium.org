@@ -32,10 +32,7 @@ function NavBar() {
             <a className="nav-link nav-bar-link nav_link-s" href="/agenda">
               Agenda{" "}
             </a>
-            <a
-              className="nav-link nav-bar-link nav_link-s"
-              href="/challenges"
-            >
+            <a className="nav-link nav-bar-link nav_link-s" href="/challenges">
               Challenges{" "}
             </a>
           </div>

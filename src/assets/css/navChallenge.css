@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 0;
   vertical-align: baseline;
 }
@@ -610,7 +610,7 @@ button {
 
 .navChallenge .title-nav {
   display: block;
-  background-color: #142a3e;
+  background-color: transparent;
   padding-bottom: 25px;
 }
 
@@ -636,8 +636,8 @@ button {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .navChallenge .chall-three .winner:link {

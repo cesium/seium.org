@@ -27,7 +27,12 @@ function Speakers(props) {
             <h3 className="speaker-title">
               Here’s a selection of this year’s speakers
             </h3>
-            <Button background="#102333" width="169px" padd="18px" style={{marginTop: "15px"}}>
+            <Button
+              background="#102333"
+              width="169px"
+              padd="18px"
+              style={{ marginTop: "15px" }}
+            >
               Explore
             </Button>
           </div>

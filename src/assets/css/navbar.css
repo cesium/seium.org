@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 0;
   vertical-align: baseline;
 }
@@ -625,9 +625,9 @@ button {
   top: -18px;
   left: -18px;
   -webkit-transform: scale(0.07);
-          transform: scale(0.07);
+  transform: scale(0.07);
   -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 .menu-icon-wrapper svg path {
@@ -682,7 +682,7 @@ button {
 
 .menu-icon-wrapper .menu-icon-trigger:focus {
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .navbar {
@@ -698,13 +698,13 @@ button {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .navbar .container-nav .brand {
@@ -724,8 +724,8 @@ button {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
   padding-top: 18px;
   padding-right: 20px;
@@ -735,7 +735,8 @@ button {
   padding: 16px;
 }
 
-.navbar .container-nav .nav-content .nav-item .nav-link:hover, .navbar .container-nav .nav-content .nav-item .nav-link.active {
+.navbar .container-nav .nav-content .nav-item .nav-link:hover,
+.navbar .container-nav .nav-content .nav-item .nav-link.active {
   color: #fff;
 }
 
@@ -780,14 +781,14 @@ button {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-transition: right 400ms ease-in;
     transition: right 400ms ease-in;
     z-index: 3;
@@ -803,8 +804,8 @@ button {
   }
   .navbar .container-nav .nav-content .nav-link {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
   .navbar .container-nav .nav-content .nav_link-s {
     font-family: "Inter Black";

@@ -36,7 +36,9 @@ class Intro extends React.Component {
 
     if (width < 865) {
       title = (
-        <h1 className="title">The software engineering week is back, let’s just SEI that.</h1>
+        <h1 className="title">
+          The software engineering week is back, let’s just SEI that.
+        </h1>
       );
     } else {
       title = (

@@ -745,7 +745,8 @@ button {
   opacity: 0.3;
 }
 
-.brands .exlusive-or-silver, .brands .gold-or-bronze {
+.brands .exlusive-or-silver,
+.brands .gold-or-bronze {
   width: 50%;
   height: 100%;
   padding-left: 10%;
@@ -756,24 +757,27 @@ button {
   flex-direction: column;
 }
 
-.brands .exlusive-or-silver h6, .brands .gold-or-bronze h6 {
+.brands .exlusive-or-silver h6,
+.brands .gold-or-bronze h6 {
   margin-bottom: 50px;
 }
 
-.brands .exlusive-or-silver .logos, .brands .gold-or-bronze .logos {
+.brands .exlusive-or-silver .logos,
+.brands .gold-or-bronze .logos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.brands .exlusive-or-silver .logos img, .brands .gold-or-bronze .logos img {
+.brands .exlusive-or-silver .logos img,
+.brands .gold-or-bronze .logos img {
   width: 40%;
   margin-bottom: 30px;
 }
 
 .register {
-  margin-top: 80px;
+  margin-top: 10%;
 }
 
 .register h1 {
@@ -840,10 +844,12 @@ button {
   .brands .separator {
     height: 190px;
   }
-  .brands .exlusive-or-silver h6, .brands .gold-or-bronze h6 {
+  .brands .exlusive-or-silver h6,
+  .brands .gold-or-bronze h6 {
     margin-bottom: 40px;
   }
-  .brands .exlusive-or-silver .logos img, .brands .gold-or-bronze .logos img {
+  .brands .exlusive-or-silver .logos img,
+  .brands .gold-or-bronze .logos img {
     margin-bottom: 30px;
   }
 }
@@ -864,7 +870,8 @@ button {
   .brands .separator {
     display: none;
   }
-  .brands .exlusive-or-silver, .brands .gold-or-bronze {
+  .brands .exlusive-or-silver,
+  .brands .gold-or-bronze {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -873,22 +880,26 @@ button {
     align-items: center;
     flex-direction: column;
   }
-  .brands .exlusive-or-silver h6, .brands .gold-or-bronze h6 {
+  .brands .exlusive-or-silver h6,
+  .brands .gold-or-bronze h6 {
     margin-bottom: 30px;
   }
-  .brands .exlusive-or-silver .logos, .brands .gold-or-bronze .logos {
+  .brands .exlusive-or-silver .logos,
+  .brands .gold-or-bronze .logos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .brands .exlusive-or-silver .logos img, .brands .gold-or-bronze .logos img {
+  .brands .exlusive-or-silver .logos img,
+  .brands .gold-or-bronze .logos img {
     width: 50%;
     margin-bottom: 15px;
     width: 40%;
     margin-bottom: 30px;
   }
-  .brands .exlusive-or-silver .logos img:nth-child(even), .brands .gold-or-bronze .logos img:nth-child(even) {
+  .brands .exlusive-or-silver .logos img:nth-child(even),
+  .brands .gold-or-bronze .logos img:nth-child(even) {
     margin-left: 20%;
   }
 }

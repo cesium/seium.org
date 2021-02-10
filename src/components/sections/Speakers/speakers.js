@@ -14,6 +14,7 @@ function Speakers() {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "transparent",
   };
 
   return (

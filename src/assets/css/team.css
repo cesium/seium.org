@@ -869,8 +869,7 @@ button {
   /* Full height */
   height: 100%;
 
-  /* Center and scale the image nicely */
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
 }

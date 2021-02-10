@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 0;
   vertical-align: baseline;
 }
@@ -613,8 +613,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 @media (max-width: 768px) {
@@ -630,7 +630,7 @@ button {
   padding: 10px;
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
   background-color: #ffffff;
 }
 

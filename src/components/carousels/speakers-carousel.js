@@ -3,11 +3,15 @@ import { Clickable } from "react-clickable";
 
 import windowDimensions from "../utils/windowDimensions";
 import Container from "../container/container";
+import Activity from "./activity";
+import Button from "../../components/buttons/button";
+import FiltredActivity from "./FiltredActivity";
 import SpeakerEvent from "./speakerEvent";
 import PrevNotClicked from "../images/prev-not-clicked.svg";
 import NextNotClicked from "../images/next-not-clicked.svg";
 import PrevClicked from "../images/prev-clicked.svg";
 import NextClicked from "../images/next-clicked.svg";
+import Profile from "./speakerProfile";
 import martinho from "../images/martinho.svg";
 import bruno from "../images/bruno.svg";
 import david from "../images/david.svg";
@@ -141,9 +145,12 @@ let headerStyle = () => {
 };
 
 function FiltredCarousel(props) {
+  const entryStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+  };
   let containerStyle = {
     ...{
-      backgroundColor: "#0e1d2a",
       width: "100%",
       display: "flex",
       flexDirection: "row",
