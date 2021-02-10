@@ -1,0 +1,80 @@
+import Activity from "../../carousels/activity";
+import CoffeeBreak from "../../carousels/coffeeBreak";
+
+let contentStyle = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
+  maxWidth: "450px",
+};
+
+function Day25() {
+  return (
+    <div style={contentStyle}>
+      <Activity
+        start="9:30"
+        end="11:30"
+        bigTitle="Workshop"
+        title="Workshop"
+        animator="Critical Software"
+      />
+      <Activity
+        start="9:30"
+        end="11:30"
+        bigTitle="Workshop"
+        title="Workshop"
+        animator="Primavera"
+      />
+      <CoffeeBreak name="Coffee Break" />
+      <Activity
+        main="yes"
+        bigTitle="Talk"
+        title="Talk"
+        start="12:00"
+        end="13:00"
+        animator="Speaker"
+      />
+      <CoffeeBreak name="Lunch Break" />
+      <Activity
+        main="yes"
+        bigTitle="Talk"
+        title="Talk"
+        start="14:00"
+        end="15:00"
+        animator="Speaker"
+      />
+      <Activity
+        main="yes"
+        bigTitle="Developing software remotely and asynchronously"
+        title="Talk"
+        start="15:00"
+        end="16:00"
+        animator="Gonçalo Silva (Doist)"
+      />
+      <CoffeeBreak name="Coffee Break" />
+      <Activity
+        main="yes"
+        bigTitle="BNP Paribas"
+        title="Pitch"
+        start="16:30"
+        end="16:45"
+      />
+      <Activity
+        main="yes"
+        bigTitle="OutSystems"
+        title="Pitch"
+        start="16:45"
+        end="17:00"
+      />
+      <Activity
+        main="yes"
+        bigTitle="Google Hashcode"
+        start="17:30"
+        end="22:00"
+      />
+    </div>
+  );
+}
+
+export default Day25;
