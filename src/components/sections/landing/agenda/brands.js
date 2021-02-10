@@ -119,7 +119,7 @@ class Brands extends React.Component {
         </div>
         <div className="brands">
           <div className="exclusive-or-silver">
-            <h6>Exclusive</h6>
+            <h6>{this.state.type === "high" ? "Exclusive" : "Silver"}</h6>
             <ImgList
               className={this.state.type === "low" ? "logos" : ""}
               list={column1}
@@ -127,7 +127,7 @@ class Brands extends React.Component {
           </div>
           <div className="separator"></div>
           <div className="gold-or-bronze">
-            <h6>Gold</h6>
+            <h6>{this.state.type === "high" ? "Gold" : "Bronze"}</h6>
             <ImgList className="logos" list={column2} />
           </div>
         </div>

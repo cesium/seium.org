@@ -734,16 +734,12 @@ button {
   align-items: center;
 }
 
-.home .container .infos .contact .icons .facebook,
+.home .container .infos .contact .icons .social,
 .home .container .infos .contact .icons .github,
 .home .container .infos .contact .icons .twitter {
   background-size: 100%;
   width: 20px;
   height: 20px;
-}
-
-.home .container .infos .contact .icons .facebook {
-  background: url("../../components/images/Facebook.svg");
 }
 
 .home .container .infos .contact .icons .github {
@@ -969,4 +965,9 @@ button {
     margin-bottom: 7%;
   }
 }
+
+.nav-bar-link, button, a {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=home.css.map */

@@ -2,7 +2,7 @@ import React from "react";
 import "../../../../assets/css/sponsors.css";
 import Container from "../../../container/container";
 import Button from "../../../buttons/button";
-import Brands from "./brands"
+import Brands from "./brands";
 
 class Sponsors extends React.Component {
   render() {
@@ -13,7 +13,6 @@ class Sponsors extends React.Component {
           ...this.props.style,
         }}
       >
-
         <Brands />
 
         <div className="register">
@@ -21,9 +20,12 @@ class Sponsors extends React.Component {
           <h1>
             Create products, train skills and learn new technologies.
             <span className="span">
-              <Button background="#173149" className="button">
-                Register your team
-              </Button>
+              <a target="_blank" href="https://forms.gle/wLdyCmaGaqKko1Jd9">
+                <Button background="#173149" className="button">
+                  Register your team
+                </Button>
+              </a>
+
               <p
                 style={{ fontSize: "14px", opacity: "0.6" }}
                 className="people"

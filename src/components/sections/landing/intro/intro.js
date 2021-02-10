@@ -4,6 +4,7 @@ import Button from "../../../buttons/button";
 import NavBar from "../../../../components/nav/nav";
 import Card from "../../../utils/cardCompo";
 import HeaderIcon from "../../../images/Header.svg";
+import Media from "../../../utils/media";
 import "../../../../assets/css/intro.css";
 import "../../../../assets/css/home.css";
 
@@ -80,22 +81,12 @@ class Intro extends React.Component {
             </div>
             <div className="infos">
               <div className="contact">
-                <p className="nav-bar-link">Follow us on</p>
-                <div className="icons">
-                  <a href="">
-                    <div className="facebook"></div>
-                  </a>
-                  <a href="">
-                    <div className="github"></div>
-                  </a>
-                  <a href="">
-                    <div className="twitter"></div>
-                  </a>
-                </div>
+                <p className="nav-bar-link">Find us on</p>
+                <Media />
               </div>
               <div className="organization">
                 <p className="nav-bar-link">Organization</p>
-                <a href="">
+                <a target="_blank" href="https://cesium.di.uminho.pt/">
                   <div className="image"></div>
                 </a>
               </div>
@@ -128,7 +119,9 @@ class Intro extends React.Component {
                   We gather speakers, attract partners and give our imagination
                   wings, all for this to be your favorite week.
                 </h4>
-                <Button background="#1d1d1d">KNOW THE TEAM</Button>
+                <a href="/team">
+                  <Button background="#1d1d1d">MEET THE TEAM</Button>
+                </a>
               </div>
             </div>
           </div>

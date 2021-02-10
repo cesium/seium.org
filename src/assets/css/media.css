@@ -627,7 +627,7 @@ button {
   }
 }
 
-.icons .facebook,
+.icons .social,
 .icons .github,
 .icons .twitter {
   width: 20px;
@@ -635,7 +635,7 @@ button {
 }
 
 @media (max-width: 768px) {
-  .icons .facebook,
+  .icons .social,
   .icons .github,
   .icons .twitter {
     width: 15px;
@@ -643,9 +643,8 @@ button {
   }
 }
 
-.icons .facebook {
-  background: url("../../components/images/Facebook.svg");
-  background-size: 100%;
+.icons .social {
+  color: #ffffff;
 }
 
 .icons .github {

@@ -30,7 +30,9 @@ function Footer(props) {
         </div>
         <div className="footer-info">
           <div className="parag1">
-            <p className="nav-bar-link responsive"> Previous Edition </p>
+            <a href="https://2019.seium.org/">
+              <p className="nav-bar-link responsive">Previous Edition </p>
+            </a>
             <p className="nav-bar-link responsive"> Code of Conduct </p>
           </div>
           <div className="parag2">

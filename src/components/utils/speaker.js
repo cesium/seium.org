@@ -35,7 +35,7 @@ export default function Speaker(props) {
       <div className="description">
         <p className="medium-3">{props.name}</p>
         <p className="medium-3 text">{props.job}</p>
-        <p className="medium-3 text">{props.desc}</p>
+        <p className="medium-3 text">({props.desc})</p>
       </div>
     </div>
   );

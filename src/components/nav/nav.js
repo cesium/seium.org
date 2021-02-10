@@ -54,7 +54,7 @@ function NavBar() {
             </a>
           </div>
           <div className="join-us">
-            <a href="#">
+            <a target="_blank" href="http://seium21.eventbrite.pt/">
               <img src={NavIcon} alt="join us" />
             </a>
           </div>
