@@ -15,9 +15,9 @@ function Day26() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="TBD"
+        bigTitle="Bosch"
         title="Workshop"
-        animator="TBD"
+        animator="Bosch"
       />
       <Activity
         start="9:30"
