@@ -15,7 +15,7 @@ function Day25() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="Critical Software"
+        bigTitle="DevOps: The Next Generation!"
         title="Workshop"
         animator="Critical Software"
       />

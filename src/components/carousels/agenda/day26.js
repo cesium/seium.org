@@ -15,7 +15,7 @@ function Day26() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="Bosch"
+        bigTitle="Sensores e Algoritmos para Navegação Autónoma."
         title="Workshop"
         animator="Bosch"
       />
