@@ -10,7 +10,7 @@ function NavBar() {
     document.querySelector(".menu-icon-wrapper").classList.toggle("open");
     document.querySelector(".nav-content").classList.toggle("is-active");
     //document.querySelector(".pt-icon").classList.toggle("is-show");
-    document.querySelector(".lang").classList.toggle("is-hidden");
+    //document.querySelector(".lang").classList.toggle("is-hidden");
     document.querySelector(".logo").classList.toggle("is-logo");
     document.querySelector(".join-us").classList.toggle("is-hidden");
 
