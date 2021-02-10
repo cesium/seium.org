@@ -60,3 +60,9 @@ h1.error {
     transform: translate(-50%,0%);
   }
 }
+
+@media (max-width: 375px) {
+  h1.error {
+    font-size: 25px;
+  }
+}

@@ -250,6 +250,13 @@ h1.title {
   }
 }
 
+@media (max-width: 375px) {
+  h1.title {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+}
+
 h3 {
   font-family: "Inter Black";
   font-size: 56px;
