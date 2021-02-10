@@ -754,9 +754,9 @@ button {
   margin-top: 6%;
   background: url("../../components/images/cesium.png") no-repeat;
   filter: invert(1) brightness(200%) sepia(100%) saturate(10%);
-  background-size: 100%;
-  width: 132px;
-  height: 44px;
+  background-size: 120px 38px;
+  width: 120px;
+  height: 38px;
 }
 
 .home .container .details {
@@ -806,10 +806,8 @@ button {
   .home .container .description {
     max-width: 603px;
   }
-  /* .home .container .description p {
-    font-size: 18px;
-  } */
-  /* .home .container .description h1 {
+  /* .home .container .des
+cription h1 {
     font-size: 70px;
   } */
   .home .container .details .expect {
@@ -863,9 +861,9 @@ button {
 
 @media (max-width: 768px) {
   .home .container .infos .organization .image {
-    background-size: 120px 36px;
+    background-size: 120px 38px;
     width: 120px;
-    height: 36px;
+    height: 38px;
   }
   .home .container .description {
     max-width: 436px;
@@ -899,6 +897,7 @@ button {
   }
 }
 
+
 @media (max-width: 576px) {
   .home .container .description {
     max-width: 330px;
@@ -921,9 +920,6 @@ button {
   }
   .home .container .infos .organization {
     margin-top: 25px;
-  }
-  .home .container .infos .organization .image {
-    margin-top: 8%;
   }
   .home .container .details {
     margin-top: 70px;

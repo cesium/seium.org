@@ -44,7 +44,7 @@ function Challenges() {
             <p className="x-large-1 chall-title">Challenges</p>
             <div className="headerChallenge">
               <h1 className="chall-desc">
-                Participate in new challenges every{" "}
+                Participate in new awesome challenges single{" "}
                 <span className="spanChall">
                   {" "}
                   day
@@ -54,8 +54,7 @@ function Challenges() {
                       alt="HeaderIcon"
                       style={{ alignItems: "flex-end" }}
                     >
-                      You can also win awards every day. But that’s highly
-                      unlikely I would say...
+                      You can also win awards every day. But that’s highly unlikely I would say...
                     </Card>
                   </div>
                 </span>
@@ -73,8 +72,13 @@ function Challenges() {
                 height: cardTeamStyle().h,
               }}
             >
-              <Card img={TeamImg} big={true} style={{ borderBottom: "2px solid white" }}>
-                Psssst... There are even more prizes, check my app the after Opening Ceremony!
+              <Card
+                img={TeamImg}
+                big={true}
+                style={{ borderBottom: "2px solid white" }}
+              >
+                Psssst... There are even more prizes, check my app the after
+                Opening Ceremony!
               </Card>
             </div>
           </Container>
