@@ -10,7 +10,7 @@ function Contests() {
       title="CV Contest"
       parag=""
       buttonText={
-        <a target="_blank" href="https://forms.gle/wLdyCmaGaqKko1Jd9">
+        <a target="_blank" href="mailto:cv@seium.org">
           <Button className="button">Send yours</Button>
         </a>
       }
