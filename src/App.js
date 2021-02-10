@@ -14,6 +14,9 @@ function App() {
     <Router>
       <div>
         <Switch>
+        <Route path="/" exact>
+            <Home />
+          </Route>
           <Route path="/agenda">
             <Agenda />
           </Route>
@@ -29,9 +32,7 @@ function App() {
           <Route path="/404">
             <Error />
           </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route component={Error} />
         </Switch>
       </div>
     </Router>
