@@ -702,15 +702,18 @@ button {
 }
 
 .home .landing {
+  display: flex;
+  flex-direction: column;
   padding-top: 1%;
   padding-bottom: 5%;
   width: 100%;
   padding-left: 55px;
   padding-right: 55px;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .home .container .description {
+  margin-top: auto;
   max-width: 792px;
   margin-bottom: 4%;
   height: 60vh;

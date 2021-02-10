@@ -686,6 +686,7 @@ button {
 }
 
 .navbar {
+  height: 20vh;
   padding: 10px 0 0 0;
   -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
   transition: -webkit-box-shadow 300ms ease-in-out;
