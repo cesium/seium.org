@@ -752,7 +752,8 @@ button {
 
 .home .container .infos .organization .image {
   margin-top: 6%;
-  background: url("../../components/images/cesium.svg") no-repeat;
+  background: url("../../components/images/cesium.png") no-repeat;
+  filter: invert(1) brightness(200%) sepia(100%) saturate(10%);
   background-size: 100%;
   width: 132px;
   height: 44px;
