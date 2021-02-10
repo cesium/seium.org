@@ -3,7 +3,7 @@ import "../../assets/css/button.css";
 import windowDimensions from "../utils/windowDimensions";
 
 const Button = (props) => {
-  let { width, height } = windowDimensions();
+  let { width } = windowDimensions();
 
   let [content, setContent] = useState(props.children);
   let buttonProps = () => {
@@ -47,7 +47,7 @@ const Button = (props) => {
         };
   if (props.children === "+") {
     return (
-      <a
+      <div
         onClick={() => {
           if (content === "+") setContent("-");
           else setContent("+");
@@ -56,18 +56,18 @@ const Button = (props) => {
         style={{ ...buttonStyle, ...props.style }}
       >
         {content}
-      </a>
+      </div>
     );
   }
 
   return (
-    <a
+    <div
       onClick={props.onClick}
       className="button"
       style={{ ...buttonStyle, ...props.style }}
     >
       {props.children}
-    </a>
+    </div>
   );
 };
 

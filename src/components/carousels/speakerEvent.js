@@ -1,17 +1,12 @@
-import ActivityFooter from "../carousels/activityFooter";
 import React, { useState } from "react";
 import windowDimensions from "../utils/windowDimensions";
-import picture from "../images/martinho.svg";
-import Facebook from "../images/Facebook.svg";
-import Twitter from "../images/Twitter.svg";
-import GitHub from "../images/GitHub.svg";
-import ProfileFooter from "./profileFooter";
 import "../../assets/css/profile.css";
 import Profile from "./speakerProfile";
 
 function SpeakerBio(props) {
-  const listItems = props.bio.map((s) => (
+  const listItems = props.bio.map((s, i) => (
     <p
+        key={i}
         className="medium"
         style={props.style}
       >{s}</p>
@@ -21,7 +16,7 @@ function SpeakerBio(props) {
 }
 
 function ActivityFiltred(props) {
-  let { width, height } = windowDimensions();
+  let { width } = windowDimensions();
   let ActivityStyle = () => {
     if (width >= 1200) {
       return {

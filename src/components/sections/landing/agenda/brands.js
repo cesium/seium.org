@@ -56,8 +56,8 @@ function ImgList(props) {
   const list = props.list;
   const className = props.className;
 
-  const listItems = list.map((c) => (
-    <a target="_blank" href={c[1]}>
+  const listItems = list.map((c, i) => (
+    <a key={i} target="_blank" href={c[1]}>
       <img src={c[0]} alt={c[1]} />
     </a>
   ));

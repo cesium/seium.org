@@ -4,8 +4,8 @@ import "../../assets/css/challenge.css";
 function PrizeList(props) {
   const list = props.list;
 
-  const listItems = list.map((c) => (
-    <p className="x-small5 place">{c}</p>
+  const listItems = list.map((c, i) => (
+    <p key={i} className="x-small5 place">{c}</p>
   ));
 
   return <div>{listItems}</div>;

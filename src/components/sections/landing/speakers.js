@@ -38,8 +38,9 @@ const speakers = [
 ];
 
 function SpeakerList() {
-  const listItems = speakers.map((s) => (
+  const listItems = speakers.map((s, i) => (
     <Speaker
+      key={i}
       speaker={s.img}
       alt={s.name}
       name={s.name}
