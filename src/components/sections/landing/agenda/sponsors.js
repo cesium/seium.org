@@ -16,7 +16,7 @@ class Sponsors extends React.Component {
         <Brands />
 
         <div className="register">
-          <p className="x-large">Hackathon 2020</p>
+          <p className="x-large">Hackathon 2021</p>
           <h1>
             Create products, train skills and learn new technologies.
             <span className="span">

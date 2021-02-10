@@ -804,8 +804,7 @@ button {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  margin-top: 20px;
 }
 
 .register h1 .span .button {
@@ -837,8 +836,8 @@ button {
 }
 
 @media (max-width: 768px) {
-  .register {
-    display: none;
+  .register h1 {
+    font-size: 34px;
   }
 }
 
