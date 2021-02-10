@@ -670,18 +670,11 @@ button {
   }
 }
 
-.title {
-  margin-bottom: 58px;
-}
-
-.title h2 {
-  padding-bottom: 49px;
-}
-
 .title .categories {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .title .categories .nav-bar-link {
@@ -737,7 +730,8 @@ button {
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: stretch;
-	align-content: stretch;
+  align-content: stretch;
+  margin-top: 50px;
 }
 
 .brands .separator {
@@ -848,9 +842,6 @@ button {
 }
 
 @media (max-width: 1200px) {
-  .title {
-    margin-bottom: 58px;
-  }
   .title h2 {
     padding-bottom: 49px;
     font-size: 36px;

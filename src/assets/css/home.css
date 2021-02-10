@@ -250,19 +250,6 @@ h1.title {
   }
 }
 
-@media (max-width: 340px) {
-  h1.title {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 375px) {
-  h1.title {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-}
-
 h3 {
   font-family: "Inter Black";
   font-size: 56px;
@@ -720,8 +707,6 @@ button {
   padding-top: 1%;
   padding-bottom: 5%;
   width: 100%;
-  padding-left: 5vw;
-  padding-right: 5vw;
   min-height: 80vh;
 }
 

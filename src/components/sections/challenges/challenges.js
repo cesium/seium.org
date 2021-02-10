@@ -17,7 +17,7 @@ function Challenges() {
 
   const cardTeamStyle = () => {
     if (width >= 992) {
-      return { w: "210px", h: "210px" };
+      return { w: "210px", h: "110px" };
     } else if (width >= 768) {
       return { w: "139px", h: "139px" };
     } else if (width >= 540) {

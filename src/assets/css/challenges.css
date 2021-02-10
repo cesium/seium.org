@@ -647,7 +647,6 @@ button {
 }
 
 .challenges .headerChallenge .chall-desc {
-  max-width: 60%;
   padding-bottom: 18px;
 }
 
@@ -655,12 +654,6 @@ button {
   .challenges .headerChallenge .chall-desc {
     max-width: 100%;
     padding-bottom: 11px;
-  }
-}
-
-@media (max-width: 454px) {
-  .challenges .headerChallenge .chall-desc {
-    max-width: 60%;
   }
 }
 

@@ -28,7 +28,6 @@ function Speakers() {
                 middleTitle="Speakers"
                 title="A crazy cool selection of speakers."
                 style={{
-                  maxWidth: "70%",
                   marginBottom: "150px",
                   marginTop: "10px",
                 }}

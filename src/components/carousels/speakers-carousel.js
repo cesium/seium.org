@@ -165,7 +165,6 @@ function FiltredCarousel(props) {
       setIcrement((next) => next + 1);
     else if (param == "prev" && increment > 0) setIcrement((prev) => prev - 1);
 
-    console.log(increment);
     return 1;
   }
 

@@ -10,8 +10,6 @@ function parseTime(s, e) {
 
   const minutes = Math.round(difference / 60000) * 3;
 
-  console.log(s, e, minutes);
-
   return Math.max(60, Math.min(150, minutes));
 }
 

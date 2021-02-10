@@ -26,12 +26,6 @@
   }
 }
 
-@media (max-width: 454px) {
-  .headerChallengeHome .chall-desc-home {
-    max-width: 70%;
-  }
-}
-
 .headerChallengeHome .chall-desc-home .spanChallHome {
   border-bottom: 11px solid #fff;
   position: relative;
