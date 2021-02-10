@@ -93,7 +93,7 @@ function Profile(props) {
         <ProfileFooter
           advanced={true}
           label={props.label}
-          goto="Go to event"
+          //goto="Go to event"
           style={{ paddingTop: "8%" }}
         />
       </div>

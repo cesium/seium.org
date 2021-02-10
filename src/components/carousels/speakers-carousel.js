@@ -3,19 +3,15 @@ import { Clickable } from "react-clickable";
 
 import windowDimensions from "../utils/windowDimensions";
 import Container from "../container/container";
-import Activity from "./activity";
-import Button from "../../components/buttons/button";
-import FiltredActivity from "./FiltredActivity";
 import SpeakerEvent from "./speakerEvent";
 import PrevNotClicked from "../images/prev-not-clicked.svg";
 import NextNotClicked from "../images/next-not-clicked.svg";
 import PrevClicked from "../images/prev-clicked.svg";
 import NextClicked from "../images/next-clicked.svg";
-import Profile from "./speakerProfile";
-import martinho from "../images/martinho.svg";
-import bruno from "../images/bruno.svg";
-import david from "../images/david.svg";
-import andre from "../images/andre.svg";
+import joaooliveira from "../images/speakers/joaooliveira.jpg";
+import tiagocarcao from "../images/speakers/tiagocarcao.png";
+import andrelago from "../images/speakers/andrelago.jpg";
+import goncalosilva from "../images/speakers/goncalosilva.jpg";
 
 import "./clickable.css";
 import "../../assets/css/agenda.css";
@@ -145,10 +141,6 @@ let headerStyle = () => {
 };
 
 function FiltredCarousel(props) {
-  const entryStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-  };
   let containerStyle = {
     ...{
       width: "100%",
@@ -176,145 +168,63 @@ function FiltredCarousel(props) {
     console.log(increment);
     return 1;
   }
+
   let carouselPages = [
     <div style={contentStyle}>
       <SpeakerEvent
         toggle={true}
         label="Talk. 14h"
-        name="Celso Martinho"
-        job="CEO and Founder"
-        description="Bright Pixel"
-        picture={martinho}
-        advanced="yes"
-        start="10:00"
-        end="10:30"
-        title="Opening session"
-        animator="Sérgio Gaio, Accenture"
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      />
-      <SpeakerEvent
-        label="Talk. 14h"
-        picture={bruno}
-        name="Bruno Ribeiro"
-        job="Gamification Designer"
-        description="Fractal Mind"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
-      <SpeakerEvent
-        label="Talk. 14h"
-        picture={david}
-        name="David Amador"
-        job="¯\_(ツ)_/¯"
-        description="Upfall Studios"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
-      <SpeakerEvent
-        label="Talk. 14h"
-        picture={andre}
-        name="André Pimenta"
-        job="CEO and Founder"
-        description="Performatic"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
-    </div>,
-    <div style={contentStyle}>
-      <SpeakerEvent
-        label="Talk. 14h"
-        picture={andre}
-        name="André Pimenta"
-        job="CEO and Founder"
-        description="Performatic"
-        style={{ width: "100%" }}
-        paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem"
-      ></SpeakerEvent>
-      <SpeakerEvent
-        label="Talk. 14h"
-        picture={bruno}
-        name="Bruno Ribeiro"
-        job="Gamification Designer"
-        description="Fractal Mind"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
-      <SpeakerEvent
-        label="Talk. 14h"
-        picture={david}
-        name="David Amador"
-        job="¯\_(ツ)_/¯"
-        description="Upfall Studios"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
-      <SpeakerEvent
-        toggle={true}
-        label="Talk. 14h"
-        name="Oussama Zakkare"
-        job="CEO and Founder"
-        description="Bright Pixel"
-        picture={martinho}
-        advanced="yes"
-        start="10:00"
-        end="10:30"
-        title="Opening session"
-        animator="Sérgio Gaio, Accenture"
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+        name="João Oliveira"
+        job="Chief Technical Officer"
+        description="TonicApp SA"
+        picture={joaooliveira}
+        bio={[
+          "Aos 14 anos de idade João vendeu o seu primeiro software por 30 “contos”, aos 17 foi finalista das Olimpíadas de Informática, aos 26 co-fundou a empresa que lançou o primeiro ERP português disponível como Software as a Service, software distinguido, 2 anos depois, com o prémio “Inovação Tecnológica em PME” promovido pela Oracle e Intel.",
+          "João Oliveira é licenciado pela Universidade do Minho, tem um trajeto profissional diversificado, no setor público e privado, co-fundou uma startup onde foi Chief Technical Officer e Arquitecto de Software, e nos últimos anos passou por multinacionais da área das telecomunicações (Wedo Technologies) e da indústria de moda de luxo (Farfetch). Desde o início de 2020 é Chief Technical Officer na TonicApp SA, empresa que desenvolve uma plataforma digital de saúde desenvolvida para apoiar a comunidade médica a diagnosticar e a tratar os doentes, empresa que está presente em Portugal, Espanha, França e Itália."
+        ]}
       />
     </div>,
     <div style={contentStyle}>
       <SpeakerEvent
         toggle={true}
         label="Talk. 14h"
-        name="Souad maniani"
-        job="CEO and Founder"
-        description="Bright Pixel"
-        picture={martinho}
-        advanced="yes"
-        start="10:00"
-        end="10:30"
-        title="Opening session"
-        animator="Sérgio Gaio, Accenture"
-        paragraph="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,"
+        name="Tiago Carção"
+        job="Software Engineer and Tech Lead"
+        description="Glovo"
+        picture={tiagocarcao}
+        bio={[
+          "Sou o Tiago Carção e fiz a graduação em Engenharia Informática na Universidade do Minho. Desde sempre, o impacto que a tecnologia consegue trazer às nossas vidas todos os dias e em tudo o que fazemos, é algo que me fascina!",
+          "Fui cofundador de duas startups (uma ainda em execução e em total força yay!), trabalhei na Farfetch (e-commerce), Revolut (fintech) e, atualmente, trabalho na Glovo (on-demand courier service). Por isso, compreendo os problemas inerentes de uma startup que está a crescer e, por outro lado, as questões que uma grande empresa enfrenta.",
+          "Pessoalmente, gosto de trabalhar em sistemas distribuídos com grande escala. Problemas reais e que precisam de decisões rápidas e não comprometedoras. É difícil manter-me motivado, pois preciso de me sentir desafiado todos os dias! Amo trabalhar num ambiente de equipa altamente motivado a aprender e a evoluir alinhado a um bom desafio tecnológico.",
+          "Acredito que só em equipa aprendendo uns com os outros podemos, realmente, crescer pessoalmente e profissionalmente. Sobretudo na área da tecnologia a partilha de conhecimento em equipa faz sentido: aprender e partilhar, tomar decisões bem ponderadas e baseadas em bons princípios! Além da tecnologia (que ocupa grande parte da minha vida :p) gosto de acompanhar muitos desportos, mais especificamente futebol (global), NBA, NFL, cinema e de ler."
+        ]}
       />
+    </div>,
+    <div style={contentStyle}>
       <SpeakerEvent
+        toggle={true}
         label="Talk. 14h"
-        picture={david}
-        name="David Amador"
-        job="¯\_(ツ)_/¯"
-        description="Upfall Studios"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                    Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
+        name="Gonçalo Silva"
+        job="Chief Technical Officer"
+        description="Doist"
+        picture={goncalosilva}
+        bio={[
+          "Gonçalo is the CTO at Doist, creators of Todoist and Twist. He's been working remotely for over a decade, and managing remote teams for most of that time. He loves long-term ambition, asynchronous communication, and programming."
+        ]}
+      />
+    </div>,
+    <div style={contentStyle}>
       <SpeakerEvent
+        toggle={true}
         label="Talk. 14h"
-        picture={andre}
-        name="André Pimenta"
-        job="CEO and Founder"
-        description="Performatic"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                    Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
-      <SpeakerEvent
-        label="Talk. 14h"
-        picture={bruno}
-        name="Bruno Ribeiro"
-        job="Gamification Designer"
-        description="Fractal Mind"
-        style={{ width: "100%" }}
-        paragraph="Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries.
-                    Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
-      ></SpeakerEvent>
+        name="André Lago"
+        job="Software Engineer and Tech Lead"
+        description="Google"
+        picture={andrelago}
+        bio={[
+          "O André é Software Engineer e Tech Lead na Google, em Munique na Alemanha. A equipa do André desenvolve produtos externos de privacidade essenciais na Google, que todos os dias ajudam milhões de utilizadores a gerir a sua privacidade online.", "O André é apaixonado por tecnologia desde criança e adora aprender coisas novas por conta própria. Desde que começou a estudar na Universidade do Porto, ele trabalhou em projetos diversos, desde assistentes inteligentes para gerir sistemas IoT a jogos 3D. O André também participou em vários projetos não técnicos, tais como ser o CEO de uma empresa de 50 estudantes e ser o Conference Chair de uma conferência com mais de 500 participantes.", "Para além de tecnologia, o André gosta de música, basquetebol e surf."
+        ]}
+      />
     </div>,
   ];
 

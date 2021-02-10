@@ -9,6 +9,17 @@ import ProfileFooter from "./profileFooter";
 import "../../assets/css/profile.css";
 import Profile from "./speakerProfile";
 
+function SpeakerBio(props) {
+  const listItems = props.bio.map((s) => (
+    <p
+        className="medium"
+        style={props.style}
+      >{s}</p>
+  ));
+
+  return <div>{listItems}</div>;
+}
+
 function ActivityFiltred(props) {
   let { width, height } = windowDimensions();
   let ActivityStyle = () => {
@@ -64,8 +75,8 @@ function ActivityFiltred(props) {
   let [toggle, setToggle] = useState(false);
   let [temp, setTemp] = useState(
     props.toggle ? (
-      <p
-        className="medium"
+      <SpeakerBio
+        bio={props.bio}
         style={{
           ...ActivityStyle().name,
           ...{
@@ -75,9 +86,7 @@ function ActivityFiltred(props) {
             paddingBottom: "10px",
           },
         }}
-      >
-        {props.paragraph}
-      </p>
+      />
     ) : (
       ""
     )
@@ -100,8 +109,8 @@ function ActivityFiltred(props) {
         ></Profile>
       </a>
       {toggle ? (
-        <p
-          className="medium"
+        <SpeakerBio
+          bio={props.bio}
           style={{
             ...ActivityStyle().name,
             ...{
@@ -111,9 +120,7 @@ function ActivityFiltred(props) {
               paddingBottom: "10px",
             },
           }}
-        >
-          {props.paragraph}
-        </p>
+        />
       ) : (
         ""
       )}
