@@ -2,6 +2,19 @@ import ActivityFooter from "../carousels/activityFooter";
 import React from "react";
 import windowDimensions from "../utils/windowDimensions";
 
+function parseTime(s, e) {
+  const startTime = new Date("2020/01/01 " + s);
+  const endTime = new Date("2020/01/01 " + e);
+
+  const difference = endTime.getTime() - startTime.getTime();
+
+  const minutes = Math.round(difference / 60000) * 3;
+
+  console.log(s, e, minutes);
+
+  return Math.max(60, Math.min(150, minutes));
+}
+
 function Activity(props) {
   let { width, height } = windowDimensions();
   let ActivityStyle = () => {
@@ -14,7 +27,7 @@ function Activity(props) {
           padding: "10px 13px 10px 10px",
           position: "relative",
           height: "0",
-          paddingBottom: "48%",
+          paddingBottom: parseTime(props.start, props.end) + "px"
         },
         timing: {},
         bigTitle: {
@@ -31,7 +44,7 @@ function Activity(props) {
           padding: "10px 13px 10px 10px",
           position: "relative",
           height: "0",
-          paddingBottom: "48%",
+          paddingBottom: parseTime(props.start, props.end) + "px"
         },
         timing: {
           fontSize: "14px",
@@ -51,7 +64,7 @@ function Activity(props) {
           padding: "10px 13px 10px 10px",
           position: "relative",
           height: "0",
-          paddingBottom: "48%",
+          paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {
           fontSize: "12px",

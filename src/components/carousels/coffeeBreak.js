@@ -20,7 +20,7 @@ let CoffeeStyle = () => {
     };
   }
 };
-function CoffeeBreak() {
+function CoffeeBreak(props) {
   let container = {
     borderTop: "1px solid white",
     padding: "10px 13px",
@@ -31,7 +31,7 @@ function CoffeeBreak() {
   return (
     <div style={container}>
       <p className="medium-3" style={CoffeeStyle().text}>
-        Coffee Break
+        {props.name}
       </p>
       <img src={Coffee} alt="" />
     </div>

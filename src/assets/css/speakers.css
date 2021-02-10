@@ -609,6 +609,7 @@ button {
 }
 
 .speakers {
+  background: #0E1D2A;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;

@@ -9,13 +9,18 @@ function Home() {
     <div>
       <Intro />
       <Carousel
-        style={{ background: "#181818", paddingLeft: "5%", paddingRight: "5%" }}
+        style={{
+          background: "#142A3E",
+          paddingLeft: "5%",
+          paddingRight: "5%"
+        }}
       />
       <Speakers
         style={{
-          background: "rgb(20, 42, 62)",
+          background: "#0E1D2A",
+          paddingTop: "5%",
           paddingLeft: "5%",
-          paddingRight: "5%",
+          paddingRight: "5%"
         }}
       />
       <Footer style={{ background: "#0e1d2a" }}>

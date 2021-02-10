@@ -3,13 +3,17 @@ import { Clickable } from "react-clickable";
 
 import windowDimensions from "../utils/windowDimensions";
 import Container from "../container/container";
-import Activity from "../carousels/activity";
-import CoffeeBreak from "../carousels/coffeeBreak";
 import PrevNotClicked from "../images/prev-not-clicked.svg";
 import NextNotClicked from "../images/next-not-clicked.svg";
 import PrevClicked from "../images/prev-clicked.svg";
 import NextClicked from "../images/next-clicked.svg";
 import "./clickable.css";
+import Day23 from "./agenda/day23";
+import Day24 from "./agenda/day24";
+import Day25 from "./agenda/day25";
+import Day26 from "./agenda/day26";
+import Day27 from "./agenda/day27";
+import Day28 from "./agenda/day28";
 
 let next = NextClicked;
 let prev = PrevNotClicked;
@@ -204,129 +208,12 @@ function AgendaCarousel(props) {
   }
 
   let carouselPages = [
-    <div style={contentStyle}>
-      <Activity start="10:00" end="10:30" title="Challenges Presentation" />
-      <Activity start="10:30" end="11:00" title="Opening session" />
-      <CoffeeBreak />
-      <Activity
-        main="yes"
-        join="yes"
-        title="Blip presentation"
-        bigTitle="Workshop"
-        start="12:00"
-        end="13:00"
-        animator="Ricardo Soares"
-      />
-      <Activity
-        advanced={true}
-        start="14:00"
-        end="15:00"
-        bigTitle="Talk"
-        title="Accenture Technology Vision: Intelligent Enterprise Unleashead"
-      />
-      <Activity
-        start="15:00"
-        end="16:00"
-        bigTitle="Talk"
-        title="Analysing a Cross-platform Game Engine"
-      />
-      <CoffeeBreak />
-      <Activity
-        start="16:30"
-        end="16:45"
-        bigTitle="Talk"
-        title="Mutation Testing — Let’s Kill Some Mutants"
-      />
-      <Activity
-        start="16:45"
-        end="18:00"
-        bigTitle="Podcast"
-        title="Remote Work"
-        animator="Job van der Voort / Marcelo Lebre"
-      />
-    </div>,
-    <div style={contentStyle}>
-      <Activity start="10:00" end="10:30" title="Opening session" />
-      <Activity start="10:30" end="11:00" title="Challenges Presentation" />
-      <CoffeeBreak />
-      <Activity
-        main="yes"
-        join="yes"
-        title="Mutation Testing — Let’s Kill Some Mutants"
-        bigTitle="Workshop"
-        start="12:00"
-        end="13:00"
-        animator="Ricardo Soares"
-      />
-      <Activity
-        advanced={true}
-        start="14:00"
-        end="15:00"
-        bigTitle="Talk"
-        title="Analysing a Cross-platform Game Engine"
-      />
-      <Activity
-        start="15:00"
-        end="16:00"
-        bigTitle="Talk"
-        title="Accenture Technology Vision: Intelligent Enterprise Unleashead"
-      />
-      <CoffeeBreak />
-      <Activity
-        start="16:30"
-        end="16:45"
-        bigTitle="Talk"
-        title="Blip presentation"
-      />
-      <Activity
-        start="16:45"
-        end="18:00"
-        bigTitle="Podcast"
-        title="Remote Work"
-        animator="Job van der Voort / Marcelo Lebre"
-      />
-    </div>,
-    <div style={contentStyle}>
-      <Activity start="10:00" end="10:30" title="Opening session" />
-      <Activity start="10:30" end="11:00" title="Challenges Presentation" />
-      <CoffeeBreak />
-      <Activity
-        main="yes"
-        join="yes"
-        title="Mutation Testing — Let’s Kill Some Mutants"
-        bigTitle="Workshop"
-        start="12:00"
-        end="13:00"
-        animator="Ricardo Soares"
-      />
-      <Activity
-        advanced={true}
-        start="14:00"
-        end="15:00"
-        bigTitle="Talk"
-        title="Accenture Technology Vision: Intelligent Enterprise Unleashead"
-      />
-      <Activity
-        start="15:00"
-        end="16:00"
-        bigTitle="Talk"
-        title="Analysing a Cross-platform Game Engine"
-      />
-      <CoffeeBreak />
-      <Activity
-        start="16:30"
-        end="16:45"
-        bigTitle="Talk"
-        title="Blip presentation"
-      />
-      <Activity
-        start="16:45"
-        end="18:00"
-        bigTitle="Podcast"
-        title="Remote Work"
-        animator="Job van der Voort / Marcelo Lebre"
-      />
-    </div>,
+    <Day23 />,
+    <Day24 />,
+    <Day25 />,
+    <Day26 />,
+    <Day27 />,
+    <Day28 />
   ];
 
   let manageNavigation = () => {
