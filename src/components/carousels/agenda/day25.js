@@ -15,34 +15,34 @@ function Day25() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="Workshop"
+        bigTitle="Critical Software"
         title="Workshop"
         animator="Critical Software"
       />
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="Workshop"
+        bigTitle="Primavera"
         title="Workshop"
         animator="Primavera"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="Talk"
+        bigTitle="TBD"
         title="Talk"
         start="12:00"
         end="13:00"
-        animator="Speaker"
+        animator="TBD"
       />
       <CoffeeBreak name="Lunch Break" />
       <Activity
         main="yes"
-        bigTitle="Talk"
+        bigTitle="TBD"
         title="Talk"
         start="14:00"
         end="15:00"
-        animator="Speaker"
+        animator="TBD"
       />
       <Activity
         main="yes"
@@ -69,7 +69,7 @@ function Day25() {
       />
       <Activity
         main="yes"
-        bigTitle="Google Hashcode"
+        bigTitle="Google HashCode"
         start="17:30"
         end="22:00"
       />

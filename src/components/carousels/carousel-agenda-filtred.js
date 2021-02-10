@@ -140,14 +140,14 @@ function Header(props) {
   return (
     <div style={headerStyle().headerContainer}>
       <p className="x-large-1" style={headerStyle().date}>
-        23 Feb
+        {/* {23 + increment} Feb */}
       </p>
       <div style={headerStyle().navigation}>
         <Clickable
           className="clickable prev"
           style={headerStyle().button}
         ></Clickable>
-        <h1 style={headerStyle().day}>Today</h1>
+        <h1 style={headerStyle().day}>{23 + increment} Feb</h1>
         <Clickable className="clickable next" style={headerStyle().button}>
           {" "}
         </Clickable>

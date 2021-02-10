@@ -119,9 +119,9 @@ class Intro extends React.Component {
                   We gather speakers, attract partners and give our imagination
                   wings, all for this to be your favorite week.
                 </h4>
-                <a href="/team">
+                {/* <a href="/team">
                   <Button background="#1d1d1d">MEET THE TEAM</Button>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

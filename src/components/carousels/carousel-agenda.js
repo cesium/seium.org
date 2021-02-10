@@ -168,7 +168,6 @@ function AgendaCarousel(props) {
       setIcrement((next) => next + 1);
     else if (param == "prev" && increment > 0) setIcrement((prev) => prev - 1);
 
-    console.log(increment);
     return 1;
   }
 
@@ -176,7 +175,7 @@ function AgendaCarousel(props) {
     return (
       <div style={headerStyle().headerContainer}>
         <p className="x-large-1" style={headerStyle().date}>
-          {23 + increment} Feb
+          {/* {23 + increment} Feb */}
         </p>
         <div style={headerStyle().navigation}>
           <Clickable
@@ -189,7 +188,7 @@ function AgendaCarousel(props) {
               ...{ backgroundImage: `url(${prev})` },
             }}
           ></Clickable>
-          <h1 style={headerStyle().day}>Today</h1>
+          <h1 style={headerStyle().day}>{23 + increment} Feb</h1>
           <Clickable
             onClick={() => {
               navigate("next");

@@ -2,7 +2,7 @@ import React from "react";
 
 import Container from "../../container/container";
 import SectionDescription from "../../utils/sectionDescription";
-import Carousel from "../../carousels/carousel-agenda-page";
+import Carousel from "../../carousels/carousel-agenda";
 import Footer from "../footer";
 import NavBar from "../../../components/nav/nav";
 import "../../../assets/css/navChallenge.css";

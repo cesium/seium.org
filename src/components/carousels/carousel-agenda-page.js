@@ -166,7 +166,7 @@ function CarouselAgendaPage(props) {
     return (
       <div style={headerStyle().headerContainer}>
         <p className="x-large-1" style={headerStyle().date}>
-          {23 + increment} Feb
+          {/* {23 + increment} Feb */}
         </p>
         <div style={headerStyle().navigation}>
           <Clickable
@@ -179,7 +179,9 @@ function CarouselAgendaPage(props) {
               ...{ backgroundImage: `url(${prev})` },
             }}
           ></Clickable>
-          <h1 style={headerStyle().day}>Today</h1>
+          <h1 style={headerStyle().day}>
+            <h1 style={headerStyle().day}>{23 + increment} Feb</h1>
+          </h1>
           <Clickable
             onClick={() => {
               navigate("next");

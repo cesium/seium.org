@@ -494,7 +494,7 @@ p.medium {
   color: #ffffff;
 }
 
-p.meduim-5 {
+p.medium-5 {
   font-family: "Inter Black";
   font-size: 16px;
   font-weight: 900;
@@ -507,13 +507,13 @@ p.meduim-5 {
 }
 
 @media (max-width: 992px) {
-  p.meduim-5 {
+  p.medium-5 {
     font-size: 14px;
   }
 }
 
 @media (max-width: 576px) {
-  p.meduim-5 {
+  p.medium-5 {
     font-size: 12px;
   }
 }

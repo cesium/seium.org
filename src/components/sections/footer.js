@@ -37,9 +37,13 @@ function Footer(props) {
           </div>
           <div className="parag2">
             <div className="card-footer">
-              <Card img={FooterIcon} alt="FooterIcon">
-                {props.children}
-              </Card>
+              {props.children ? (
+                <Card img={FooterIcon} alt="FooterIcon">
+                  {props.children}
+                </Card>
+              ) : (
+                ""
+              )}
             </div>
             <div className="responsive">
               <Media />

@@ -5,7 +5,7 @@ const Card = (props) => {
   return (
     <div className="card" style={{ ...props.style }}>
       <img src={props.img} alt="props.alt" className="imgCard" />
-      <p className="medium-2 reminder"> {props.children}</p>
+      <p className="medium-2 reminder" style={props.big ? {width: "auto"} : {}}> {props.children}</p>
     </div>
   );
 };

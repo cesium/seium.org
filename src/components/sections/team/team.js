@@ -212,7 +212,7 @@ function Team() {
                   The SEI is free for participants and is organized by
                   volunteers from CeSIUM.
                 </p>
-                <p className="meduim-5 contact">
+                <p className="medium-5 contact">
                   Centro de Estudantes de Engenharia Informática
                 </p>
                 <ul>

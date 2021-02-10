@@ -1,42 +1,25 @@
 import React from "react";
-import Button from "../buttons/button";
 import "../../assets/css/challenge.css";
-function Challenge(props) {
-  // let buttonStyle = (props.buttonText === '') ? {display: 'none'} : {}
 
+function PrizeList(props) {
+  const list = props.list;
+
+  const listItems = list.map((c) => (
+    <p className="x-small5 place">{c}</p>
+  ));
+
+  return <div>{listItems}</div>;
+}
+
+function Challenge(props) {
   return (
     <div className="challenge-compo">
       <h3>{props.title}</h3>
       <p className="parag">{props.parag}</p>
-      {/* y9dar width dyal had button ykoun 0 */}
-      <Button className="button" type="file">
-        {props.buttonText}
-      </Button>
+      {props.buttonText}
       <p className="medium-3 winner-text"> Awards 🏆</p>
-      <div>
-        <p className="x-small3 place">
-          {" "}
-          1.º Place —{" "}
-          <a href="#" className="winner">
-            Alcatel One Touch
-          </a>{" "}
-        </p>
-        <p className="x-small3 place">
-          {" "}
-          2.º Place —{" "}
-          <a href="#" className="winner">
-            Chromecast
-          </a>{" "}
-        </p>
-        <p className="x-small3 place">
-          {" "}
-          3.º Place —{" "}
-          <a href="#" className="winner">
-            Arduino Lisbon Makefair
-          </a>{" "}
-        </p>
-      </div>
-      <Button>READ THE RULES</Button>
+      <PrizeList list={props.prizes}/>
+      {/* <Button>READ THE RULES</Button> */}
     </div>
   );
 }

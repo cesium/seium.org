@@ -37,7 +37,14 @@ function NavBar() {
             </a>
           </div>
           <div className="nav-item">
-            <a className="nav-link nav-bar-link nav_link-s" href="#">
+            {/* <a className="nav-link nav-bar-link nav_link-s" href="#">
+              Hackathon{" "}
+            </a> */}
+            <a
+              className="nav-link nav-bar-link nav_link-s"
+              target="_blank"
+              href="https://forms.gle/wLdyCmaGaqKko1Jd9"
+            >
               Hackathon{" "}
             </a>
             <a className="nav-link nav-bar-link nav_link-s" href="/speakers">
@@ -45,13 +52,13 @@ function NavBar() {
             </a>
           </div>
           <div className="nav-item">
-            <a className="nav-link nav-bar-link nav_link-s" href="/team">
+            {/* <a className="nav-link nav-bar-link nav_link-s" href="/team">
               Team{" "}
-            </a>
-            <a className="nav-link nav-bar-link lang" href="#">
+            </a> */}
+            {/* <a className="nav-link nav-bar-link lang" href="#">
               {" "}
               EN <span className="pt">PT</span>{" "}
-            </a>
+            </a> */}
           </div>
           <div className="join-us">
             <a target="_blank" href="http://seium21.eventbrite.pt/">
