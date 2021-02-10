@@ -753,6 +753,7 @@ button {
 
 .brands .exclusive-or-silver h6,
 .brands .gold-or-bronze h6 {
+  color: #4ca9ff;
   margin-bottom: 50px;
 }
 
@@ -761,7 +762,7 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	align-content: center;
   width: 100%;
