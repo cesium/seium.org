@@ -250,6 +250,13 @@ h1.title {
   }
 }
 
+@media (max-width: 375px) {
+  h1.title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
 h3 {
   font-family: "Inter Black";
   font-size: 56px;
@@ -904,7 +911,6 @@ button {
 @media (max-width: 576px) {
   .home .container .description {
     max-width: 330px;
-    margin-bottom: 70px;
   }
   .home .container .description h1 {
     margin-top: 2%;

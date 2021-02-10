@@ -5,6 +5,7 @@ import Agenda from "./components/sections/agendaPage/agenda";
 import Speakers from "./components/sections/Speakers/speakers";
 import Challenges from "./components/sections/challenges/challenges";
 import Team from "./components/sections/team/team";
+import Error from "./components/sections/error";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -13,6 +14,9 @@ function App() {
     <Router>
       <div>
         <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
           <Route path="/agenda">
             <Agenda />
           </Route>
@@ -25,9 +29,10 @@ function App() {
           <Route path="/team">
             <Team />
           </Route>
-          <Route path="/">
-            <Home />
+          <Route path="/404">
+            <Error />
           </Route>
+          <Route component={Error} />
         </Switch>
       </div>
     </Router>

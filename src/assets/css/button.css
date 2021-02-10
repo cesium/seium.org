@@ -682,6 +682,7 @@ button {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .button::before {
