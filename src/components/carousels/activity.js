@@ -8,9 +8,9 @@ function parseTime(s, e) {
 
   const difference = endTime.getTime() - startTime.getTime();
 
-  const minutes = Math.round(difference / 60000) * 3;
+  const minutes = Math.round(difference / 60000);
 
-  return Math.max(80, Math.min(80, minutes));
+  return Math.min(200, Math.max(85, minutes));
 }
 
 function Activity(props) {
