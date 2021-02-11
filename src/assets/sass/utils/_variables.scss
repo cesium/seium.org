@@ -1,0 +1,43 @@
+$padding-horizontal: 210px;
+
+// Primary Color
+$blue-update: #4ca9ff;
+$dark-grey:  #181818;
+$orange: #ff6c26;
+$mint: #00ffb7;
+
+//Shadow
+$shadow-1: 0px 10px 50px 0px rgba(77,86,106, 0.73);
+
+//Font sizes
+$font-size-xs: 12px;
+$font-size-sm: 16px;
+$font-size-re: 20px;
+$font-size-md: 24px;
+$font-size-lg: 36px;
+$font-size-xl: 56px;
+
+// Font Names
+$font-primary: "Inter";
+
+//==================================//
+// Don't miss with those variabeles //
+//==================================//
+
+// Breakpoint
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Black & White
+$black: #000000;
+$white: #ffffff;
+
+//Font Path
+$font-primary-regular-path: "../fonts/" + $font-primary + "/" + $font-primary + "-Regular.ttf";
+$font-primary-black-path: "../fonts/" + $font-primary + "/" + $font-primary + "-Black.ttf";
+
+//Font Family
+$font-primary-regular: $font-primary + " Regular";
+$font-primary-black: $font-primary + " Black";

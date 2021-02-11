@@ -1,4 +1,0 @@
-{
-  "extends": ["stylelint-config-standard", "stylelint-config-css-modules"],
-  "ignoreFiles": ["**/*.js", "**/*.json"]
-}

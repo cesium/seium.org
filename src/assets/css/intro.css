@@ -1,0 +1,91 @@
+.headerChallengeHome {
+  margin-bottom: 254px;
+}
+
+@media (max-width: 576px) {
+  .headerChallengeHome {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerChallengeHome {
+    margin-bottom: 100px;
+  }
+}
+
+.headerChallengeHome .chall-desc-home {
+  max-width: 100%;
+  padding-bottom: 18px;
+}
+
+@media (max-width: 576px) {
+  .headerChallengeHome .chall-desc-home {
+    max-width: 100%;
+    padding-bottom: 11px;
+  }
+}
+
+.headerChallengeHome .chall-desc-home .spanChallHome {
+  border-bottom: 11px solid #fff;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .headerChallengeHome .chall-desc-home .spanChallHome {
+    border-bottom: 7px solid #fff;
+  }
+}
+
+@media (max-width: 576px) {
+  .headerChallengeHome .chall-desc-home .spanChallHome {
+    border-bottom: 4px solid #fff;
+  }
+}
+
+.headerChallengeHome .cardContainerHome {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 122px;
+  left: 41px;
+}
+
+@media (max-width: 1200px) {
+  .headerChallengeHome .cardContainerHome {
+    top: 96px;
+    left: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .headerChallengeHome .cardContainerHome {
+    top: 79px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerChallengeHome .cardContainerHome {
+    top: 51px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headerChallengeHome .cardContainerHome {
+    top: 33px;
+    left: -2px;
+  }
+}
+
+@media (max-width: 454px) {
+  .headerChallengeHome .cardContainerHome {
+    top: 33px;
+    left: -2px;
+  }
+}

@@ -1,0 +1,68 @@
+h1.error {
+  font-family: "Inter Black";
+  font-size: 92px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgb(79, 177, 255);
+}
+
+.mascote {
+  position: fixed;
+  bottom: 0px;
+  height: 600px;
+  width: 600px;
+  left: 50%;
+}
+
+@media (max-width: 1200px) {
+  h1.error {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1.error {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1.error {
+    font-size: 62px;
+  }
+  .mascote {
+    height: 350px;
+    width: 500px;
+    left: 50%;
+    -ms-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+  }
+}
+
+@media (max-width: 576px) {
+  h1.error {
+    font-size: 50px;
+  }
+  .mascote {
+    height: 250px;
+    width: 250px;
+    -ms-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+  }
+}
+
+@media (max-width: 375px) {
+  h1.error {
+    font-size: 25px;
+  }
+}

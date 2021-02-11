@@ -1,0 +1,27 @@
+.profile{
+    width: 100%;
+    @include flex(space-between,flex-start);
+    img{
+        width: 25%;
+    }
+    position: relative;
+    .left-side{
+        width: 73%;
+        display: flex;
+        flex-direction: column;
+        .infos{
+            @include flex(space-between,flex-start);
+            .about{
+                width: 60%;
+            }
+            .contacts{
+                width:30%;
+                @include flex(space-between,flex-start);
+                img{    
+                    width: 20px;
+                }
+            }
+        }
+    }
+    
+}
