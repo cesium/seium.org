@@ -41,8 +41,7 @@ function Contests() {
           <Button className="button">Sign up now</Button>
         </a>
       }
-      prizes={["Winners — Gift Cards (total = 200€)"]}
-    />
+      prizes={["Winner — Gift Card (200€) per team"]}    />
   );
   let challenge4 = (
     <Challenge

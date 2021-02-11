@@ -13,9 +13,9 @@ function Hackathon() {
         </a>
       }
       prizes={[
-        "1.º Place — 450€/team",
-        "2.º Place — 250€/team",
-        "3.º Place — 100€/team",
+        "1.º Place — Gift Card (450€) per team",
+        "2.º Place — Gift Card (250€) per team",
+        "3.º Place — Gift Card (100€) per team",
       ]}
     />
   );

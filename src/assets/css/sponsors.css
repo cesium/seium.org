@@ -790,7 +790,7 @@ button {
 }
 
 .register {
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .register h1 {
@@ -862,12 +862,6 @@ button {
   .brands .exclusive-or-silver .logos img,
   .brands .gold-or-bronze .logos img {
     margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 992px) {
-  .brands .separator {
-    height: 176px;
   }
 }
 

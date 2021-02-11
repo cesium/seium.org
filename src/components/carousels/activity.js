@@ -10,7 +10,7 @@ function parseTime(s, e) {
 
   const minutes = Math.round(difference / 60000) * 3;
 
-  return Math.max(60, Math.min(150, minutes));
+  return Math.max(80, Math.min(80, minutes));
 }
 
 function Activity(props) {
