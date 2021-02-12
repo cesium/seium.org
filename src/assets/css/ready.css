@@ -93,7 +93,7 @@
 }
 
 @media (max-width: 1200px) {
-  ..ready-register h1 .span .button {
+  .ready-register h1 .span .button {
     padding: 11px 26px;
     margin-right: 12px;
   }
