@@ -1,15 +1,11 @@
 import React from "react";
 
-import Container from "../../container/container";
 import "../../../assets/css/ready.css";
-
 import Button from "../../buttons/button";
-import Card from "../../utils/cardCompo";
-import TeamImg from "../../../components/images/Team.svg";
 
 function Ready(props) {
   return (
-    <div className="hackathon-bg">
+    <div className="ready-bg">
       <div
         className="ready"
         style={{
@@ -31,7 +27,7 @@ function Ready(props) {
                       href="https://forms.gle/wLdyCmaGaqKko1Jd9"
                     >
                       <Button background="#102333" className="button">
-                        REGISTER YOUR TEAM
+                        Register your team
                       </Button>
                     </a>
 

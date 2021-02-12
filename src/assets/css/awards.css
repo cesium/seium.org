@@ -8,7 +8,6 @@
 }
 
 @media (max-width: 768px) {
-  /*breakpoint*/
   .places {
     flex-direction: column;
   }

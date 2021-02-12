@@ -45,10 +45,9 @@ class Intro extends React.Component {
                         style={{ color: "black", background: "#ffffff" }}
                         className="button"
                       >
-                        REGISTER YOUR TEAM
+                        Register your team
                       </Button>
                     </a>
-
                     <p
                       style={{ fontSize: "14px", opacity: "0.6" }}
                       className="people"
@@ -65,7 +64,7 @@ class Intro extends React.Component {
               </div>
               <div className="organization">
                 <p className="nav-bar-link">Powered by</p>
-                <a target="_blank" href="https://cesium.di.uminho.pt/">
+                <a target="_blank" href="https://subvisual.com/">
                   <div className="image"></div>
                 </a>
               </div>
@@ -75,13 +74,13 @@ class Intro extends React.Component {
             <div className="details">
               <div className="expect">
                 <h4>How does this thing really work?</h4>
-                <Button
+                {/*<Button
                   background="#173149"
-                  style={{ "margin-top": "25px", "margin-bottom": "25px" }}
+                  style={{ "margin-top": "25px" }}
                   className="button"
                 >
-                  READ THE RULES
-                </Button>
+                  Read the rules
+                </Button>*/}
                 <p className="medium-5">Timeline:</p>
                 <ul>
                   <li>Opening & introduction</li>
@@ -92,6 +91,15 @@ class Intro extends React.Component {
               </div>
               <div className="quote">
                 <h5>Hackathon 2021</h5>
+                <p className="resume">
+                  Terá início no fim do dia 𝟮𝟲 de fevereiro e decorrerá até ao
+                  fim da tarde do dia 𝟮𝟴. São 𝗺𝗮𝗶𝘀 𝗱𝗲 𝟰𝟬 𝗵𝗼𝗿𝗮𝘀 para te
+                  divertires a programar! E, se precisares, podes sempre contar
+                  com a ajuda dos nossos mentores. Cada equipa poderá ter entre
+                  𝟯 𝗮 𝟱 𝗲𝗹𝗲𝗺𝗲𝗻𝘁𝗼𝘀. Se não conseguires completar equipa, podes
+                  sempre inscrever-te individualmente ou em dupla, e nós
+                  tentaremos agrupar-te a outros participantes.
+                </p>
               </div>
             </div>
           </div>
