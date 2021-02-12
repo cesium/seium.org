@@ -608,7 +608,6 @@ button {
   }
 }
 
-
 .speaker {
   max-width: 50%;
   padding-left: 2%;
@@ -631,4 +630,19 @@ button {
   font-weight: normal;
   margin-top: 2px;
 }
+
+.wrapper:hover img {
+  filter: hue-rotate(160deg);
+}
+
+.wrapper .overlay {
+  position: absolute;
+  opacity: 0;
+}
+
+.wrapper:hover .overlay {
+  opacity: 0.5;
+  background-color: #4ca9ff;
+}
+
 /*# sourceMappingURL=speaker.css.map */

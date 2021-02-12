@@ -26,12 +26,22 @@ export default function Speaker(props) {
   };
   return (
     <div className="speaker" style={{ marginBottom: imgStyle().mrB }}>
-      <img
-        src={props.speaker}
-        alt={props.alt}
-        width={imgStyle().w}
-        height={imgStyle().h}
-      />
+      <div
+        className="wrapper"
+        style={{ width: imgStyle().w, height: imgStyle().h }}
+      >
+        <img src={props.speaker} alt={props.alt} width="100%" height="100%" />
+        <div
+          className="overlay"
+          style={{
+            position: "relative",
+            top: -imgStyle().h,
+            width: imgStyle().w,
+            height: imgStyle().h,
+          }}
+        />
+      </div>
+
       <div className="description">
         <p className="medium-3">{props.name}</p>
         <p className="medium-3 text">{props.job}</p>
