@@ -34,11 +34,6 @@
 }
 
 @media (max-width: 768px) {
-  .ready .container .infos .organization .image {
-    background-size: 120px 38px;
-    width: 120px;
-    height: 38px;
-  }
   .ready .container .description {
     max-width: 436px;
   }
@@ -65,12 +60,6 @@
     margin-top: 40px;
     max-width: 100%;
   }
-}
-
-.nav-bar-link,
-button,
-a {
-  cursor: pointer;
 }
 
 .ready-register h1 {
