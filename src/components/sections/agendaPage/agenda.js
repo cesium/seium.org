@@ -1,8 +1,9 @@
 import React from "react";
 
 import Container from "../../container/container";
-import SectionDescription from "../../utils/sectionDescription";
 import Carousel from "../../carousels/carousel-agenda";
+import Card from "../../utils/cardCompo";
+import HeaderIcon from "../../images/Header.svg";
 import Footer from "../footer";
 import NavBar from "../../../components/nav/nav";
 import "../../../assets/css/navChallenge.css";
@@ -22,7 +23,25 @@ function Agenda() {
         <NavBar />
         <div style={styling}>
           <Container>
-            <SectionDescription middleTitle="Agenda"></SectionDescription>
+            <div className="headerChallenge">
+              <h1 className="chall-desc">
+                Five awesome days of learning, sharing and{" "}
+                <span className="spanChall">
+                  {" "}
+                  winning
+                  <div className="cardContainer">
+                    <Card
+                      img={HeaderIcon}
+                      alt="HeaderIcon"
+                      style={{ alignItems: "flex-end" }}
+                    >
+                      Or maybe losing. This one is kind of optional.
+                    </Card>
+                  </div>
+                </span>
+                .
+              </h1>
+            </div>
             <Carousel />
           </Container>
         </div>
