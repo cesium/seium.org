@@ -786,7 +786,7 @@ button {
   max-height: 4em;
   width: auto !important;
 
-  filter: invert(1) brightness(200%) sepia(100%) saturate(10%);
+  filter: invert(0.8) brightness(200%) sepia(100%) saturate(10%);
 }
 
 .register {
