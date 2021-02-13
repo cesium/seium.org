@@ -716,10 +716,6 @@ button {
   height: 60vh;
 }
 
-/* .home .container .description h1 {
-  margin-top: 1%;
-} */
-
 .home .container .infos {
   width: 100%;
   display: flex;
@@ -794,6 +790,11 @@ button {
   margin-bottom: 9px;
 }
 
+.home .container .details .expect ul li {
+  color: white;
+  font-family: "Inter Regular";
+}
+
 .home .container .details .quote {
   max-width: 438px;
 }
@@ -822,6 +823,9 @@ button {
   }
   .home .container .details .expect ul li:not(:last-child) {
     margin-bottom: 6px;
+  }
+  .home .container .details .expect ul li {
+    font-size: 12px;
   }
   .home .container .details .quote {
     max-width: 321px;
@@ -867,6 +871,9 @@ button {
   .home .container .details .expect ul li a {
     font-size: 10px;
   }
+  .home .container .details .expect ul li {
+    font-size: 10px;
+  }
   .home .container .details .expect ul li:before {
     margin-right: 12px;
   }
@@ -888,9 +895,6 @@ button {
   .home .container .description h1 {
     margin-top: 2%;
   }
-  /* .home .container .description p {
-    font-size: 14px;
-  } */
   .home .container .infos {
     width: 100%;
     display: flex;
@@ -951,9 +955,7 @@ a {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=home.css.map */
-
-@media (max-width: 650px) {
+@media(max-width: 650px) {
   .cardContainer {
     display: none !important;
   }
