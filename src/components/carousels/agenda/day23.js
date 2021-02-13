@@ -68,8 +68,13 @@ function Day23() {
         end="18:00"
       />
       <Activity
-        main="yes"
-        bigTitle="TBD"
+        bigTitle="CS:GO Tournament"
+        title="Activity"
+        start="21:00"
+        end="23:00"
+      />
+      <Activity
+        bigTitle="Chess Tournament"
         title="Activity"
         start="21:00"
         end="23:00"
