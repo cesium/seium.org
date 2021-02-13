@@ -716,10 +716,6 @@ button {
   height: 60vh;
 }
 
-/* .home .container .description h1 {
-  margin-top: 1%;
-} */
-
 .home .container .infos {
   width: 100%;
   display: flex;
@@ -794,6 +790,11 @@ button {
   margin-bottom: 9px;
 }
 
+.home .container .details .expect ul li {
+  color: white;
+  font-family: "Inter Regular";
+}
+
 .home .container .details .quote {
   max-width: 438px;
 }
@@ -806,10 +807,6 @@ button {
   .home .container .description {
     max-width: 603px;
   }
-  /* .home .container .des
-cription h1 {
-    font-size: 70px;
-  } */
   .home .container .details .expect {
     max-width: 246px;
   }
@@ -827,6 +824,9 @@ cription h1 {
   .home .container .details .expect ul li:not(:last-child) {
     margin-bottom: 6px;
   }
+  .home .container .details .expect ul li {
+    font-size: 12px;
+  }
   .home .container .details .quote {
     max-width: 321px;
   }
@@ -839,12 +839,6 @@ cription h1 {
   .home .container .description {
     max-width: 583px;
   }
-  /* .home .container .description p {
-    font-size: 16px;
-  } */
-  /* .home .container .description h1 {
-    font-size: 65px;
-  } */
   .home .container .details .expect {
     max-width: 246px;
   }
@@ -868,12 +862,6 @@ cription h1 {
   .home .container .description {
     max-width: 436px;
   }
-  /* .home .container .description p {
-    font-size: 18px;
-  } */
-  /* .home .container .description h1 {
-    font-size: 50px;
-  } */
   .home .container .details .expect {
     max-width: 150px;
   }
@@ -881,6 +869,9 @@ cription h1 {
     font-size: 20px;
   }
   .home .container .details .expect ul li a {
+    font-size: 10px;
+  }
+  .home .container .details .expect ul li {
     font-size: 10px;
   }
   .home .container .details .expect ul li:before {
@@ -905,9 +896,6 @@ cription h1 {
   .home .container .description h1 {
     margin-top: 2%;
   }
-  /* .home .container .description p {
-    font-size: 14px;
-  } */
   .home .container .infos {
     width: 100%;
     display: flex;
@@ -965,8 +953,6 @@ cription h1 {
 .nav-bar-link, button, a {
   cursor: pointer;
 }
-
-/*# sourceMappingURL=home.css.map */
 
 @media(max-width: 650px) {
   .cardContainer {
