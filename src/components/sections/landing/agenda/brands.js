@@ -6,6 +6,7 @@ import accenture from "../../../images/sponsors/accenture.svg";
 // Gold
 import kpmg from "../../../images/sponsors/kpmg.svg";
 import everis from "../../../images/sponsors/everis.png";
+import subvisual from "../../../images/sponsors/subvisual.png";
 
 // Silver
 import capgemini from "../../../images/sponsors/capgemini.svg";
@@ -24,11 +25,15 @@ import ey from "../../../images/sponsors/ey.svg";
 import retail from "../../../images/sponsors/retail.svg";
 import inovaria from "../../../images/sponsors/inovaria.png";
 import alten from "../../../images/sponsors/alten.svg";
+import farfetch from "../../../images/sponsors/farfetch.png";
+import konk from "../../../images/sponsors/konk.png";
+import glintt from "../../../images/sponsors/glintt.png";
 
 const exclusive = [[accenture, "https://www.accenture.com/pt-pt"]];
 const gold = [
   [kpmg, "https://home.kpmg/pt/pt/home.html"],
   [everis, "https://www.everis.com/portugal/pt-pt/home-pt"],
+  [subvisual, "https://subvisual.com/"]
 ];
 const silver = [
   [capgemini, "https://www.capgemini.com/"],
@@ -39,10 +44,10 @@ const silver = [
   [critical, "https://www.criticalsoftware.com/"],
   [
     teleperformance,
-    "https://jobs.teleperformance.pt/working-in-portugal/en/working-in-portugal/",
+    "https://jobs.teleperformance.pt/working-in-portugal/en/working-in-portugal/"
   ],
   [bnpParibas, "https://www.bnpparibas.pt/en/"],
-  [primavera, "https://pt.primaverabss.com/pt/"],
+  [primavera, "https://pt.primaverabss.com/pt/"]
 ];
 const bronze = [
   [seegno, "https://seegno.com/"],
@@ -50,6 +55,9 @@ const bronze = [
   [retail, "https://www.retail-consult.com/"],
   [inovaria, "http://www.inova-ria.pt/"],
   [alten, "https://www.alten.pt/pt-pt/"],
+  [farfetch, "https://www.farfetch.com/pt/"],
+  [konk, "http://www.konkconsulting.com/PT/"],
+  [glintt, "https://www.glintt.com"]
 ];
 
 function ImgList(props) {
