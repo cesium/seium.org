@@ -29,7 +29,7 @@ function SectionDescription(props) {
           </h1>
         </div>
       ) : (
-        <h1 style={props.style}>{props.title}</h1>
+        <h1>{props.title}</h1>
       )}
     </div>
   );
