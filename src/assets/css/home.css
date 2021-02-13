@@ -897,7 +897,6 @@ cription h1 {
   }
 }
 
-
 @media (max-width: 576px) {
   .home .container .description {
     max-width: 330px;
@@ -962,13 +961,15 @@ cription h1 {
   }
 }
 
-.nav-bar-link, button, a {
+.nav-bar-link,
+button,
+a {
   cursor: pointer;
 }
 
 /*# sourceMappingURL=home.css.map */
 
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   .cardContainer {
     display: none !important;
   }
@@ -976,4 +977,31 @@ cription h1 {
   .spanChall {
     border: 0 !important;
   }
+}
+
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.sponsor {
+  margin: 30px 100px 30px 100px;
+}
+
+.sponsor.grayscale img {
+  width: 150px;
+  filter: grayscale(1);
+}
+
+.sponsor.invert img {
+  width: 150px;
+  filter: invert(1);
 }
