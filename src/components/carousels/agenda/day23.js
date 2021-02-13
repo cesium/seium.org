@@ -44,6 +44,8 @@ function Day23() {
         start="15:00"
         end="16:00"
         animator="João Oliveira (Tonic App)"
+        day={0}
+        speakerID="joaooliveira"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity

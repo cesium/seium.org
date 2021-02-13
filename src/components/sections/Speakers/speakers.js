@@ -6,8 +6,10 @@ import Container from "../../container/container";
 import Footer from "../footer";
 import NavBar from "../../../components/nav/nav";
 import "../../../assets/css/speakers.css";
+import { withRouter } from "react-router-dom";
+import queryString from "query-string";
 
-function Speakers() {
+function Speakers(props) {
   let styling = {
     paddingLeft: "0",
     paddingRight: "0",
@@ -16,6 +18,8 @@ function Speakers() {
     justifyContent: "center",
     backgroundColor: "transparent",
   };
+
+  const queryParams = queryString.parse(props.location.search);
 
   return (
     <>
@@ -34,6 +38,7 @@ function Speakers() {
               ></SectionDescription>
               <SpeakersCarousel
                 style={{ paddingLef: "0px" }}
+                initialDay={queryParams.day ? parseInt(queryParams.day) : 0}
               ></SpeakersCarousel>
             </Container>
           </div>
@@ -44,4 +49,4 @@ function Speakers() {
   );
 }
 
-export default Speakers;
+export default withRouter(Speakers);

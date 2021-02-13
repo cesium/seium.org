@@ -51,6 +51,8 @@ function Day24() {
         start="15:00"
         end="16:00"
         animator="Tiago Carção (Glovo)"
+        day={1}
+        speakerID="tiagocarcao"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity

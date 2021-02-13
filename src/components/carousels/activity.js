@@ -25,7 +25,7 @@ function Activity(props) {
           padding: "10px 13px 10px 10px",
           position: "relative",
           height: "0",
-          paddingBottom: parseTime(props.start, props.end) + "px"
+          paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {},
         bigTitle: {
@@ -42,7 +42,7 @@ function Activity(props) {
           padding: "10px 13px 10px 10px",
           position: "relative",
           height: "0",
-          paddingBottom: parseTime(props.start, props.end) + "px"
+          paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {
           fontSize: "14px",
@@ -84,9 +84,11 @@ function Activity(props) {
   ) : (
     ""
   );
+
   let eventStyle = props.main
     ? { ...ActivityStyle().event, ...{ width: "100%", marginRight: "0" } }
     : ActivityStyle().event;
+
   return (
     <div style={{ ...eventStyle, ...props.style }}>
       <p className="medium-3" style={ActivityStyle().timing}>
@@ -113,11 +115,16 @@ function Activity(props) {
           join={props.join}
         />
       </div>
-      <p
-        className="nav-bar-link"
-        style={{ opacity: "0.5", marginTop: "5px", fontSize: "10px" }}
-      >
-        {props.animator}
+      <p style={{ opacity: "0.5", marginTop: "5px", fontSize: "14px" }}>
+        <a
+          href={
+            (props.day ? "/speakers?day=" + props.day : "/speakers") +
+            (props.speakerID ? `#${props.speakerID}` : "")
+          }
+          style={{ color: "white", textDecoration: "none" }}
+        >
+          {props.animator}
+        </a>
       </p>
     </div>
   );

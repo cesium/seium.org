@@ -11,6 +11,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "jquery": "^3.5.1",
+    "query-string": "^6.14.0",
     "react": "^17.0.1",
     "react-clickable": "^1.1.0",
     "react-cool-inview": "^1.2.0",

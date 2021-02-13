@@ -5,11 +5,9 @@ import Profile from "./speakerProfile";
 
 function SpeakerBio(props) {
   const listItems = props.bio.map((s, i) => (
-    <p
-        key={i}
-        className="medium"
-        style={props.style}
-      >{s}</p>
+    <p key={i} className="medium" style={props.style}>
+      {s}
+    </p>
   ));
 
   return <div>{listItems}</div>;
@@ -87,7 +85,7 @@ function ActivityFiltred(props) {
     )
   );
   return (
-    <div style={{ ...props.style, ...{ width: "100%" } }}>
+    <div id={props.speakerID} style={{ ...props.style, ...{ width: "100%" } }}>
       <a
         onClick={() => {
           setTemp("");

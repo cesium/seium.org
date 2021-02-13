@@ -51,6 +51,8 @@ function Day25() {
         start="15:00"
         end="16:00"
         animator="Gonçalo Silva (Doist)"
+        day={2}
+        speakerID="goncalosilva"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity

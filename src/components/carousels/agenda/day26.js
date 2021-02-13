@@ -51,6 +51,8 @@ function Day26() {
         start="15:00"
         end="16:00"
         animator="André Lago (Google)"
+        day={3}
+        speakerID="andrelago"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
