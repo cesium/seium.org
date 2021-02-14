@@ -45,6 +45,7 @@ function Day23() {
         end="16:00"
         animator="João Oliveira (Tonic App)"
         day={0}
+        activityID="wecandoit"
         speakerID="joaooliveira"
         description="asdf asdfasdfa asdf asdf asdfas dfasdf asdf asdf asdf asdfasdfas dfasd fasdf asdf asdf asdfas dfasdf as sadfasdfasdf dsf asdf asdfasdfa asdf asdf asdfas dfasdf asdf asdf asdf asdfasdfas dfasd fasdf asdf asdf asdfas dfasdf as sadfasdfasdf dsf asdf asdfasdfa asdf asdf asdfas dfasdf asdf asdf asdf asdfasdfas dfasd fasdf asdf asdf asdfas dfasdf as sadfasdfasdf dsf"
       />

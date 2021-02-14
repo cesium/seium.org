@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ActivityFooter from "../carousels/activityFooter";
 import windowDimensions from "../utils/windowDimensions";
 import Fade from "react-reveal/Fade";
 import Button from "../buttons/button";
+import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function parseTime(s, e) {
   const startTime = new Date("2020/01/01 " + s);
@@ -17,6 +19,13 @@ function parseTime(s, e) {
 
 function Activity(props) {
   const [expand, setExpand] = useState(false);
+  const history = useHistory();
+  const isAgendaPage = props.location.pathname === "/agenda";
+
+  useEffect(() => {
+    const location_hash = props.location.hash;
+    setExpand(location_hash === `#${props.activityID}`);
+  }, []);
 
   let { width } = windowDimensions();
 
@@ -27,10 +36,10 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 15px 25px 15px",
+          padding: "10px 15px 30px 15px",
           position: "relative",
           //height: "0",
-          paddingBottom: parseTime(props.start, props.end) + "px",
+          //paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {},
         bigTitle: {
@@ -44,10 +53,10 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 15px 25px 15px",
+          padding: "10px 15px 30px 15px",
           position: "relative",
           //height: "0",
-          paddingBottom: parseTime(props.start, props.end) + "px",
+          //paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {
           fontSize: "14px",
@@ -64,10 +73,10 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 15px 25px 15px",
+          padding: "10px 15px 30px 15px",
           position: "relative",
           //height: "0",
-          paddingBottom: parseTime(props.start, props.end) + "px",
+          //paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {
           fontSize: "12px",
@@ -94,11 +103,17 @@ function Activity(props) {
     ? { ...ActivityStyle().event, ...{ width: "100%", marginRight: "0" } }
     : ActivityStyle().event;
 
-  console.log(expand);
   console.log(props);
 
+  const handleActivityClick = () => {
+    const path =
+      (props.day ? "?day=" + props.day : "") +
+      (props.activityID ? `#${props.activityID}` : "");
+    history.push("/agenda" + path);
+  };
+
   return (
-    <div style={{ ...eventStyle, ...props.style }}>
+    <div id={props.activityID} style={{ ...eventStyle, ...props.style }}>
       <div style={{ display: "flex" }}>
         <div style={{ flexGrow: 1 }}>
           <p className="medium-3" style={ActivityStyle().timing}>
@@ -107,7 +122,7 @@ function Activity(props) {
             {props.end}
           </p>
         </div>
-        {props.description && (
+        {props.description && isAgendaPage && (
           <Button onClick={() => setExpand(!expand)}>
             {expand ? "-" : "+"}
           </Button>
@@ -115,7 +130,17 @@ function Activity(props) {
       </div>
 
       <p className="medium" style={ActivityStyle().bigTitle}>
-        {bigTitle} {props.title}
+        {!isAgendaPage ? (
+          <span
+            onClick={() => handleActivityClick()}
+            style={{ cursor: "pointer" }}
+          >
+            {bigTitle}
+          </span>
+        ) : (
+          <span>{bigTitle}</span>
+        )}{" "}
+        {props.title}
       </p>
 
       <div
@@ -161,4 +186,4 @@ function Activity(props) {
   );
 }
 
-export default Activity;
+export default withRouter(Activity);
