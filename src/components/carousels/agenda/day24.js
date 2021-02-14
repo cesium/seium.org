@@ -52,7 +52,9 @@ function Day24() {
         end="16:00"
         animator="Tiago Carção (Glovo)"
         day={1}
+        activityID="sistemaslargaescala"
         speakerID="tiagocarcao"
+        description="asdfasd fasd fasd fas dfasdf asd f"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
