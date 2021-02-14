@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ActivityFooter from "../carousels/activityFooter";
 import windowDimensions from "../utils/windowDimensions";
 import Fade from "react-reveal/Fade";
+import Button from "../buttons/button";
 
 function parseTime(s, e) {
   const startTime = new Date("2020/01/01 " + s);
@@ -17,11 +18,7 @@ function parseTime(s, e) {
 function Activity(props) {
   const [expand, setExpand] = useState(false);
 
-  const toggleExpand = () => {
-    setExpand(!expand);
-  };
-
-  let { width, height } = windowDimensions();
+  let { width } = windowDimensions();
 
   let ActivityStyle = () => {
     if (width >= 1200) {
@@ -110,7 +107,11 @@ function Activity(props) {
             {props.end}
           </p>
         </div>
-        <button onClick={() => setExpand(!expand)}>{expand ? "-" : "+"}</button>
+        {props.description && (
+          <Button onClick={() => setExpand(!expand)}>
+            {expand ? "-" : "+"}
+          </Button>
+        )}
       </div>
 
       <p className="medium" style={ActivityStyle().bigTitle}>
@@ -148,7 +149,7 @@ function Activity(props) {
             style={{
               color: "white",
               opacity: "0.8",
-              marginTop: "5px",
+              marginTop: "16px",
               fontSize: "14px",
             }}
           >
