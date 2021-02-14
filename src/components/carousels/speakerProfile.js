@@ -92,7 +92,7 @@ function Profile(props) {
               </a>
             ) : null}
             {props.github ? (
-              <a target="_blank" href={props.gitHub}>
+              <a target="_blank" href={props.github}>
                 <img src={GitHub} alt="" />
               </a>
             ) : null}
