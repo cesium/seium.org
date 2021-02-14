@@ -83,7 +83,7 @@ class Intro extends React.Component {
                 >
                   Read the rules
                 </Button>*/}
-                <p className="medium-5">Timeline:</p>
+                <p className="timeline">Timeline:</p>
                 <ul>
                   <li>Opening & introduction</li>
                   <li>Development</li>

@@ -285,7 +285,7 @@
   }
 }
 
-p.medium-5 {
+p.timeline {
   font-family: "Inter Black";
   font-size: 16px;
   font-weight: 900;
@@ -300,13 +300,13 @@ p.medium-5 {
 }
 
 @media (max-width: 992px) {
-  p.medium-5 {
+  p.timeline {
     font-size: 14px;
   }
 }
 
 @media (max-width: 576px) {
-  p.medium-5 {
+  p.timeline {
     font-size: 12px;
   }
 }
