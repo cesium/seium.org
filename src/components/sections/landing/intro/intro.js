@@ -98,21 +98,21 @@ class Intro extends React.Component {
             <div className="details">
               <div className="expect">
                 <h5>What you can expect:</h5>
-                <ul>
+                <ul class="grid-list">
                   <li>
-                    <a href="">Hackathons</a>
+                    <a href="/hackathon">Hackathon 💻</a>
                   </li>
                   <li>
-                    <a href="">Talks</a>
+                    Talks
                   </li>
                   <li>
-                    <a href="">Workshops</a>
+                    Workshops
                   </li>
                   <li>
-                    <a href="">Challenges</a>
+                    <a href="/challenges">Challenges 🕹</a>
                   </li>
                   <li>
-                    <a href="">Contests</a>
+                    Contests
                   </li>
                 </ul>
               </div>
