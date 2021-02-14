@@ -5,11 +5,9 @@ import Profile from "./speakerProfile";
 
 function SpeakerBio(props) {
   const listItems = props.bio.map((s, i) => (
-    <p
-        key={i}
-        className="medium"
-        style={props.style}
-      >{s}</p>
+    <p key={i} className="medium" style={props.style}>
+      {s}
+    </p>
   ));
 
   return <div>{listItems}</div>;
@@ -100,6 +98,10 @@ function ActivityFiltred(props) {
           name={props.name}
           job={props.job}
           description={props.description}
+          twitter={props.twitter}
+          github={props.github}
+          facebook={props.facebook}
+          linkedin={props.linkedin}
           style={{ width: "100%" }}
         ></Profile>
       </a>
