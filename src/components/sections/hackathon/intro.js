@@ -31,8 +31,8 @@ class Intro extends React.Component {
               </h1>
               <div className="registration">
                 <h1>
-                  <div class="box-hackathon">
-                    <div id="mascote">
+                  <div className="box-hackathon">
+                    <div id="reverse-mascote">
                       <Card img={TeamImg} big={false}>
                         Click just in case of true faith at winning.
                       </Card>

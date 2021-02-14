@@ -322,7 +322,7 @@ p.timeline {
   overflow: hidden;
 }
 
-#mascote {
+#reverse-mascote {
   margin: auto;
   position: relative;
   bottom: -300px;
@@ -330,7 +330,7 @@ p.timeline {
   transition: bottom 1s;
 }
 
-.registration:hover #mascote {
+.registration:hover #reverse-mascote {
   bottom: -2px;
 }
 
