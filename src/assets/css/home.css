@@ -806,10 +806,6 @@ button {
   .home .container .description {
     max-width: 603px;
   }
-  /* .home .container .des
-cription h1 {
-    font-size: 70px;
-  } */
   .home .container .details .expect {
     max-width: 246px;
   }
@@ -839,12 +835,6 @@ cription h1 {
   .home .container .description {
     max-width: 583px;
   }
-  /* .home .container .description p {
-    font-size: 16px;
-  } */
-  /* .home .container .description h1 {
-    font-size: 65px;
-  } */
   .home .container .details .expect {
     max-width: 246px;
   }
@@ -868,12 +858,6 @@ cription h1 {
   .home .container .description {
     max-width: 436px;
   }
-  /* .home .container .description p {
-    font-size: 18px;
-  } */
-  /* .home .container .description h1 {
-    font-size: 50px;
-  } */
   .home .container .details .expect {
     max-width: 150px;
   }
@@ -1010,4 +994,54 @@ a {
 
 .sponsor.big img {
   width: 150px;
+}
+
+.box-home {
+  margin: auto;
+  overflow: hidden;
+  width: 300px;
+  position: absolute;
+  top: 122px;
+  left: 35px;
+}
+
+#mascote {
+  margin: auto;
+  position: relative;
+  top: -200px;
+  transition: top 1s;
+}
+
+.spanChallHome:hover #mascote {
+  top: 0px;
+}
+
+@media (max-width: 1200px) {
+  .box-home {
+    top: 96px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-home {
+    top: 79px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  .box-home {
+    top: 51px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .box-home {
+    overflow: hidden;
+  }
+  #mascote {
+    display: none;
+  }
 }
