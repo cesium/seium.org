@@ -27,16 +27,17 @@ function Agenda() {
               <h1 className="chall-desc">
                 Five awesome days of learning, sharing and{" "}
                 <span className="spanChall">
-                  {" "}
                   winning
-                  <div className="cardContainer">
-                    <Card
-                      img={HeaderIcon}
-                      alt="HeaderIcon"
-                      style={{ alignItems: "flex-end" }}
-                    >
-                      Or maybe losing. This one is kind of optional.
-                    </Card>
+                  <div className="box">
+                    <div id="mascote">
+                      <Card
+                        img={HeaderIcon}
+                        alt="HeaderIcon"
+                        style={{ alignItems: "flex-end" }}
+                      >
+                        Or maybe losing. This one is kind of optional.
+                      </Card>
+                    </div>
                   </div>
                 </span>
                 .

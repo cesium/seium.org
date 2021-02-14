@@ -47,17 +47,19 @@ class Intro extends React.Component {
           <h1 className="title chall-desc-home">
             The software engineering week is back, let’s just{" "}
             <span className="spanChallHome">
-              SEI{" "}
-              <div className="cardContainerHome">
-                <Card
-                  img={HeaderIcon}
-                  alt="HeaderIcon"
-                  style={{ alignItems: "flex-end" }}
-                >
-                  Did you see what I did there?
-                </Card>
+              SEI
+              <div className="box">
+                <div id="mascote">
+                  <Card
+                    img={HeaderIcon}
+                    alt="HeaderIcon"
+                    style={{ alignItems: "flex-end" }}
+                  >
+                    Did you see what I did there?
+                  </Card>
+                </div>
               </div>
-            </span>
+            </span>{" "}
             that.
           </h1>
         </div>

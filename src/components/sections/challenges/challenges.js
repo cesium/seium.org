@@ -46,16 +46,18 @@ function Challenges() {
               <h1 className="chall-desc">
                 Participate in new awesome challenges single{" "}
                 <span className="spanChall">
-                  {" "}
                   day
-                  <div className="cardContainer">
-                    <Card
-                      img={HeaderIcon}
-                      alt="HeaderIcon"
-                      style={{ alignItems: "flex-end" }}
-                    >
-                      You can also win awards every day. But that’s highly unlikely I would say...
-                    </Card>
+                  <div className="box">
+                    <div id="mascote">
+                      <Card
+                        img={HeaderIcon}
+                        alt="HeaderIcon"
+                        style={{ alignItems: "flex-end" }}
+                      >
+                        You can also win awards every day. But that’s highly
+                        unlikely I would say...
+                      </Card>
+                    </div>
                   </div>
                 </span>
                 .

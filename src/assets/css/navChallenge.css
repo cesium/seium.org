@@ -647,4 +647,23 @@ button {
 .navChallenge .chall-three .closed {
   margin-left: 7px;
 }
-/*# sourceMappingURL=navChallenge.css.map */
+
+.box {
+  margin: auto;
+  overflow: hidden;
+  width: 300px;
+  position: absolute;
+  top: 122px;
+  left: 35px;
+}
+
+#mascote {
+  margin: auto;
+  position: relative;
+  top: -200px;
+  transition: top 1s;
+}
+
+.spanChallHome:hover #mascote {
+  top: 0px;
+}

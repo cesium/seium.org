@@ -43,16 +43,24 @@
   }
 }
 
-.headerChallengeHome .cardContainerHome {
+.box {
+  margin: auto;
+  overflow: hidden;
+  width: 300px;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   top: 122px;
-  left: 41px;
+  left: 35px;
+}
+
+#mascote {
+  margin: auto;
+  position: relative;
+  top: -200px;
+  transition: top 1s;
+}
+
+.spanChallHome:hover #mascote {
+  top: 0px;
 }
 
 @media (max-width: 1200px) {
