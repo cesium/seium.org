@@ -231,7 +231,7 @@
 }
 
 .registration {
-  margin-top: 5%;
+  margin-top: 1%;
 }
 
 .registration h1 {
@@ -315,4 +315,27 @@ p.medium-5 {
   margin-top: 40px;
   color: white;
   font-family: "Inter Regular";
+}
+
+.box-hackathon {
+  margin: auto;
+  overflow: hidden;
+}
+
+#mascote {
+  margin: auto;
+  position: relative;
+  bottom: -300px;
+  left: 10px;
+  transition: bottom 1s;
+}
+
+.registration:hover #mascote {
+  bottom: -2px;
+}
+
+@media (max-width: 650px) {
+  #mascote {
+    display: none;
+  }
 }

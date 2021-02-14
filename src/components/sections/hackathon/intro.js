@@ -31,10 +31,12 @@ class Intro extends React.Component {
               </h1>
               <div className="registration">
                 <h1>
-                  <div className="cardTeam">
-                    <Card img={TeamImg} big={false}>
-                      Click just in case of true faith at winning.
-                    </Card>
+                  <div class="box-hackathon">
+                    <div id="mascote">
+                      <Card img={TeamImg} big={false}>
+                        Click just in case of true faith at winning.
+                      </Card>
+                    </div>
                   </div>
                   <span className="span">
                     <a
