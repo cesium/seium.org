@@ -716,10 +716,6 @@ button {
   height: 60vh;
 }
 
-/* .home .container .description h1 {
-  margin-top: 1%;
-} */
-
 .home .container .infos {
   width: 100%;
   display: flex;
@@ -794,6 +790,11 @@ button {
   margin-bottom: 9px;
 }
 
+.home .container .details .expect ul li {
+  color: white;
+  font-family: "Inter Regular";
+}
+
 .home .container .details .quote {
   max-width: 438px;
 }
@@ -815,13 +816,8 @@ button {
   .home .container .details .expect ul li a {
     font-size: 12px;
   }
-  .home .container .details .expect ul li:before {
-    width: 4px;
-    height: 4px;
-    margin-right: 15px;
-  }
-  .home .container .details .expect ul li:not(:last-child) {
-    margin-bottom: 6px;
+  .home .container .details .expect ul li {
+    font-size: 12px;
   }
   .home .container .details .quote {
     max-width: 321px;
@@ -829,6 +825,11 @@ button {
   .home .container .details .quote h4 {
     font-size: 26px;
   }
+  .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+  }  
 }
 
 @media (max-width: 992px) {
@@ -847,6 +848,10 @@ button {
   .home .container .details .quote h4 {
     font-size: 32px;
   }
+  .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }  
 }
 
 @media (max-width: 768px) {
@@ -867,11 +872,8 @@ button {
   .home .container .details .expect ul li a {
     font-size: 10px;
   }
-  .home .container .details .expect ul li:before {
-    margin-right: 12px;
-  }
-  .home .container .details .expect ul li:not(:last-child) {
-    margin-bottom: 4px;
+  .home .container .details .expect ul li {
+    font-size: 10px;
   }
   .home .container .details .quote {
     max-width: 245px;
@@ -879,6 +881,10 @@ button {
   .home .container .details .quote h4 {
     font-size: 20px;
   }
+  .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }  
 }
 
 @media (max-width: 576px) {
@@ -888,9 +894,6 @@ button {
   .home .container .description h1 {
     margin-top: 2%;
   }
-  /* .home .container .description p {
-    font-size: 14px;
-  } */
   .home .container .infos {
     width: 100%;
     display: flex;
@@ -919,22 +922,6 @@ button {
     font-size: 16px;
     margin-bottom: 10px;
   }
-  .home .container .details .expect ul {
-    max-width: 250px;
-    flex-wrap: wrap;
-    display: flex;
-  }
-  .home .container .details .expect ul li:before {
-    width: 3px;
-    height: 3px;
-    margin-right: 10px;
-  }
-  .home .container .details .expect ul li:not(:last-child) {
-    margin-bottom: 12px;
-  }
-  .home .container .details .expect ul li:nth-child(even) {
-    margin-left: 80px;
-  }
   .home .container .details .quote {
     margin-top: 40px;
     max-width: 100%;
@@ -951,9 +938,7 @@ a {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=home.css.map */
-
-@media (max-width: 650px) {
+@media(max-width: 650px) {
   .cardContainer {
     display: none !important;
   }
