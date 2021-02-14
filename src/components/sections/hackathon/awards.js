@@ -10,15 +10,15 @@ function Awards(props) {
       <div class="places">
         <div className="section">
           <h6>1.º Place</h6>
-          <p className="place">🏆 450€ em cartão presente</p>
+          <p className="place">🏆 450€in gift card</p>
         </div>
         <div className="section">
           <h6>2.º Place</h6>
-          <p className="place">🏆 250€ em cartão presente</p>
+          <p className="place">🏆 250€ in gift card</p>
         </div>
         <div className="section">
           <h6>3.º Place</h6>
-          <p className="place">🏆 100€ em cartão presente</p>
+          <p className="place">🏆 100€ in gift card</p>
         </div>
       </div>
     </div>

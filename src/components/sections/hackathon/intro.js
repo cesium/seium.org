@@ -92,13 +92,13 @@ class Intro extends React.Component {
               <div className="quote">
                 <h5>Hackathon 2021</h5>
                 <p className="resume">
-                  Terá início no fim do dia 𝟮𝟲 de fevereiro e decorrerá até ao
-                  fim da tarde do dia 𝟮𝟴. São 𝗺𝗮𝗶𝘀 𝗱𝗲 𝟰𝟬 𝗵𝗼𝗿𝗮𝘀 para te
-                  divertires a programar! E, se precisares, podes sempre contar
-                  com a ajuda dos nossos mentores. Cada equipa poderá ter entre
-                  𝟯 𝗮 𝟱 𝗲𝗹𝗲𝗺𝗲𝗻𝘁𝗼𝘀. Se não conseguires completar equipa, podes
-                  sempre inscrever-te individualmente ou em dupla, e nós
-                  tentaremos agrupar-te a outros participantes.
+                  It will start at the end of the 26th of February and will run
+                  until the end of the afternoon of the 28th. There are more
+                  than 40 hours to have fun programming! And, if you need to,
+                  you can always count on the help of our mentors. Each team may
+                  have between 3 and 5 elements. If you are unable to complete a
+                  team, you can always register individually or in pairs, and we
+                  will try to group you with other participants.
                 </p>
               </div>
             </div>
