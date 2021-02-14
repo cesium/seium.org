@@ -996,12 +996,18 @@ a {
   margin: 30px 100px 30px 100px;
 }
 
+.sponsor img {
+  width: 100px;
+}
+
 .sponsor.grayscale img {
-  width: 150px;
   filter: grayscale(1);
 }
 
 .sponsor.invert img {
-  width: 150px;
   filter: invert(1);
+}
+
+.sponsor.big img {
+  width: 150px;
 }

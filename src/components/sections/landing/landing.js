@@ -6,6 +6,7 @@ import Speakers from "./speakers";
 
 import ipdj from "../../images/partners/ipdj.png";
 import onda from "../../images/partners/onda.png";
+import uminhoon from "../../images/partners/uminhoon.png";
 
 function Home() {
   return (
@@ -51,6 +52,13 @@ function Home() {
             href="https://ondastudio.co/"
           >
             <img src={onda} alt="Onda Design" />
+          </a>
+          <a
+            className="sponsor big"
+            target="_blank"
+            href="http://aaum.pt/"
+          >
+            <img src={uminhoon} alt="UMinho ON" />
           </a>
         </div>
       </div>
