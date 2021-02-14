@@ -1,6 +1,7 @@
+import React, { useState } from "react";
 import ActivityFooter from "../carousels/activityFooter";
-import React from "react";
 import windowDimensions from "../utils/windowDimensions";
+import Fade from "react-reveal/Fade";
 
 function parseTime(s, e) {
   const startTime = new Date("2020/01/01 " + s);
@@ -14,7 +15,14 @@ function parseTime(s, e) {
 }
 
 function Activity(props) {
+  const [expand, setExpand] = useState(false);
+
+  const toggleExpand = () => {
+    setExpand(!expand);
+  };
+
   let { width, height } = windowDimensions();
+
   let ActivityStyle = () => {
     if (width >= 1200) {
       return {
@@ -22,9 +30,9 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 13px 10px 10px",
+          padding: "10px 15px 25px 15px",
           position: "relative",
-          height: "0",
+          //height: "0",
           paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {},
@@ -39,9 +47,9 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 13px 10px 10px",
+          padding: "10px 15px 25px 15px",
           position: "relative",
-          height: "0",
+          //height: "0",
           paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {
@@ -59,9 +67,9 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 13px 10px 10px",
+          padding: "10px 15px 25px 15px",
           position: "relative",
-          height: "0",
+          //height: "0",
           paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {
@@ -89,13 +97,21 @@ function Activity(props) {
     ? { ...ActivityStyle().event, ...{ width: "100%", marginRight: "0" } }
     : ActivityStyle().event;
 
+  console.log(expand);
+  console.log(props);
+
   return (
     <div style={{ ...eventStyle, ...props.style }}>
-      <p className="medium-3" style={ActivityStyle().timing}>
-        {props.start}
-        {props.start ? "—" : ""}
-        {props.end}
-      </p>
+      <div style={{ display: "flex" }}>
+        <div style={{ flexGrow: 1 }}>
+          <p className="medium-3" style={ActivityStyle().timing}>
+            {props.start}
+            {props.start ? "—" : ""}
+            {props.end}
+          </p>
+        </div>
+        <button onClick={() => setExpand(!expand)}>{expand ? "-" : "+"}</button>
+      </div>
 
       <p className="medium" style={ActivityStyle().bigTitle}>
         {bigTitle} {props.title}
@@ -126,6 +142,20 @@ function Activity(props) {
           {props.animator}
         </a>
       </p>
+      {expand && (
+        <Fade>
+          <p
+            style={{
+              color: "white",
+              opacity: "0.8",
+              marginTop: "5px",
+              fontSize: "14px",
+            }}
+          >
+            {props.description}
+          </p>
+        </Fade>
+      )}
     </div>
   );
 }

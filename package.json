@@ -19,6 +19,7 @@
     "react-hook-inview": "^4.3.7",
     "react-inview": "^0.0.8",
     "react-native": "^0.63.4",
+    "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-zoom-pan-pinch": "^1.6.1",
