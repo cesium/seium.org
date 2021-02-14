@@ -47,7 +47,7 @@ function Challenges() {
                 Participate in new awesome challenges single{" "}
                 <span className="spanChall">
                   day
-                  <div className="box">
+                  <div className="box-challange">
                     <div id="mascote">
                       <Card
                         img={HeaderIcon}

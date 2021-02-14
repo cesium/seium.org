@@ -43,26 +43,6 @@
   }
 }
 
-.box {
-  margin: auto;
-  overflow: hidden;
-  width: 300px;
-  position: absolute;
-  top: 122px;
-  left: 35px;
-}
-
-#mascote {
-  margin: auto;
-  position: relative;
-  top: -200px;
-  transition: top 1s;
-}
-
-.spanChallHome:hover #mascote {
-  top: 0px;
-}
-
 @media (max-width: 1200px) {
   .headerChallengeHome .cardContainerHome {
     top: 96px;
@@ -70,7 +50,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 929px) {
   .headerChallengeHome .cardContainerHome {
     top: 79px;
     left: 15px;

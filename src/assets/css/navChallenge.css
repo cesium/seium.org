@@ -648,7 +648,7 @@ button {
   margin-left: 7px;
 }
 
-.box {
+.box-agenda {
   margin: auto;
   overflow: hidden;
   width: 300px;
@@ -666,4 +666,37 @@ button {
 
 .spanChallHome:hover #mascote {
   top: 0px;
+}
+
+@media (max-width: 1200px) {
+  .box-agenda {
+    top: 96px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-agenda {
+    top: 79px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  .box-agenda {
+    top: 51px;
+    left: 8px;
+  }
+  .box-challange {
+    width: 250px;
+  }
+}
+
+@media (max-width: 650px) {
+  .box-agenda {
+    overflow: hidden;
+  }
+  #mascote {
+    display: none;
+  }
 }

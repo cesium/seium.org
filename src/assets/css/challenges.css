@@ -779,7 +779,7 @@ button {
   background-position: top right;
 }
 
-.box {
+.box-challange {
   margin: auto;
   overflow: hidden;
   width: 350px;
@@ -797,4 +797,38 @@ button {
 
 .spanChall:hover #mascote {
   top: 0px;
+}
+
+@media (max-width: 1200px) {
+  .box-challange {
+    top: 96px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-challange {
+    top: 79px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  .box-challange {
+    top: 51px;
+    left: 8px;
+  }
+  .box-challange {
+    width: 250px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .box-challange {
+    overflow: hidden;
+  }
+  #mascote {
+    display: none;
+  }
 }

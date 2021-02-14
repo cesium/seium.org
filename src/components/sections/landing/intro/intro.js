@@ -48,7 +48,7 @@ class Intro extends React.Component {
             The software engineering week is back, let’s just{" "}
             <span className="spanChallHome">
               SEI
-              <div className="box">
+              <div className="box-home">
                 <div id="mascote">
                   <Card
                     img={HeaderIcon}
