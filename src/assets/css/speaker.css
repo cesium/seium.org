@@ -647,8 +647,12 @@ button {
   background-color: #4ca9ff;
 }
 
-.wrapper:hover .overlay {
-  opacity: 0.3;
+.speaker:hover .overlay {
+  opacity: 0.4;
 }
 
+.speaker:hover p.medium-3 {
+  transition: 0.5s ease;
+  color: #4ca9ff;
+}
 /*# sourceMappingURL=speaker.css.map */
