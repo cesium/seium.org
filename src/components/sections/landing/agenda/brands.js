@@ -33,7 +33,7 @@ const exclusive = [[accenture, "https://www.accenture.com/pt-pt"]];
 const gold = [
   [kpmg, "https://home.kpmg/pt/pt/home.html"],
   [everis, "https://www.everis.com/portugal/pt-pt/home-pt"],
-  [subvisual, "https://subvisual.com/"]
+  [subvisual, "https://subvisual.com/"],
 ];
 const silver = [
   [capgemini, "https://www.capgemini.com/"],
@@ -44,10 +44,10 @@ const silver = [
   [critical, "https://www.criticalsoftware.com/"],
   [
     teleperformance,
-    "https://jobs.teleperformance.pt/working-in-portugal/en/working-in-portugal/"
+    "https://jobs.teleperformance.pt/working-in-portugal/en/working-in-portugal/",
   ],
   [bnpParibas, "https://www.bnpparibas.pt/en/"],
-  [primavera, "https://pt.primaverabss.com/pt/"]
+  [primavera, "https://pt.primaverabss.com/pt/"],
 ];
 const bronze = [
   [seegno, "https://seegno.com/"],
@@ -57,7 +57,7 @@ const bronze = [
   [alten, "https://www.alten.pt/pt-pt/"],
   [farfetch, "https://www.farfetch.com/pt/"],
   [konk, "http://www.konkconsulting.com/PT/"],
-  [glintt, "https://www.glintt.com"]
+  [glintt, "https://www.glintt.com"],
 ];
 
 function ImgList(props) {

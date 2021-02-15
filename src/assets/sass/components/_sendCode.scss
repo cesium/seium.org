@@ -1,0 +1,22 @@
+.sendCode{
+    background-color: transparent;
+    width: 256px;
+    @include flex(space-between,center);
+    border: 1px solid $mint;
+    border-radius: 40px;
+    @include for-size (phone-only) {
+        width: 236px;
+     }
+    input{
+        width: 130px;
+        padding-left: 23px;
+        text-align: left;
+    }
+    .buttonText {
+        @include for-size (phone-only) {
+           padding-top: 16px;
+            padding-bottom: 16px;
+            width: 94px !important;
+        }
+    }
+}

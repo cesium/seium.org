@@ -1,0 +1,19 @@
+.winner{
+    @include flex(space-between,center);
+    &:not(:last-child){
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    padding: 19px 3px;
+    .timing{
+        color: $mint;
+        flex: 1;
+    }
+    .winnerName{
+        flex: 1;
+        text-align: left;
+    }
+    .award{
+        flex: 1;
+        text-align: left;
+    }
+}

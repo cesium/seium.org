@@ -142,7 +142,7 @@ function CarouselAgendaPage(props) {
       flexDirection: "row",
       justifyContent: "space-between",
       paddingLeft: "5vw",
-      paddingRight: "5vw"
+      paddingRight: "5vw",
     },
     ...headerStyle().container,
   };

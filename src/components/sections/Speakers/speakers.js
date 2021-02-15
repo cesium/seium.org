@@ -24,7 +24,10 @@ function Speakers() {
           <div style={styling}>
             <Container>
               <p className="x-large-1 chall-title">Speakers</p>
-              <div className="headerChallenge" style={{marginBottom: "100px"}}>
+              <div
+                className="headerChallenge"
+                style={{ marginBottom: "100px" }}
+              >
                 <h1 className="chall-desc">
                   A crazy cool selection of the best speakers
                 </h1>

@@ -829,7 +829,7 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 50px;
-  }  
+  }
 }
 
 @media (max-width: 992px) {
@@ -851,7 +851,7 @@ button {
   .grid-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }  
+  }
 }
 
 @media (max-width: 768px) {
@@ -884,7 +884,7 @@ button {
   .grid-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }  
+  }
 }
 
 @media (max-width: 576px) {
@@ -938,7 +938,7 @@ a {
   cursor: pointer;
 }
 
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   .cardContainer {
     display: none !important;
   }
