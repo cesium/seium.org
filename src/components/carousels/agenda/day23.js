@@ -47,7 +47,7 @@ function Day23() {
         day={0}
         activityID="wecandoit"
         speakerID="joaooliveira"
-        description="asdf asdfasdfa asdf asdf asdfas dfasdf asdf asdf asdf asdfasdfas dfasd fasdf asdf asdf asdfas dfasdf as sadfasdfasdf dsf asdf asdfasdfa asdf asdf asdfas dfasdf asdf asdf asdf asdfasdfas dfasd fasdf asdf asdf asdfas dfasdf as sadfasdfasdf dsf asdf asdfasdfa asdf asdf asdfas dfasdf asdf asdf asdf asdfasdfas dfasd fasdf asdf asdf asdfas dfasdf as sadfasdfasdf dsf"
+        description="Numa indústria até há uns anos enormemente desproporcional no rácio de profissionais por género, o papel das mulheres na indústria de tecnologia e software é cada vez mais relevante e prometedor em economias que as tecnologias são parte da visão estratégica e aposta no futuro de um país."
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity

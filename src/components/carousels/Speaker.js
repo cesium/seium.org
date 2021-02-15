@@ -3,6 +3,11 @@ import React from "react";
 import { Clickable } from "react-clickable";
 import Button from "../buttons/button";
 
+import Facebook from "../images/Facebook.svg";
+import Twitter from "../images/Twitter.svg";
+import GitHub from "../images/GitHub.svg";
+import LinkedIn from "../images/Linkedin.svg";
+
 function SpeakerBio(props) {
   const listItems = props.bio.map((s, i) => (
     <p key={i} className="medium" style={props.style}>
@@ -186,7 +191,7 @@ class Speaker extends React.Component {
           <img src={this.props.picture} alt="" />
           <div className="left-side">
             <div className="infos">
-              <div className="about">
+              <div className="about" onClick={this.changeStatus}>
                 <p className="medium-3" style={ActivityStyle().name}>
                   {this.props.name}
                 </p>
@@ -195,6 +200,28 @@ class Speaker extends React.Component {
                   <br />
                   {this.props.description}
                 </p>
+              </div>
+              <div className="contacts">
+                {this.props.twitter ? (
+                  <a target="_blank" href={this.props.twitter}>
+                    <img src={Twitter} alt="" />
+                  </a>
+                ) : null}
+                {this.props.github ? (
+                  <a target="_blank" href={this.props.github}>
+                    <img src={GitHub} alt="" />
+                  </a>
+                ) : null}
+                {this.props.facebook ? (
+                  <a target="_blank" href={this.props.facebook}>
+                    <img src={Facebook} alt="" />
+                  </a>
+                ) : null}
+                {this.props.linkedin ? (
+                  <a target="_blank" href={this.props.linkedin}>
+                    <img src={LinkedIn} alt="" />
+                  </a>
+                ) : null}
               </div>
             </div>
             <div style={{ ...footerStyle().headerStyle, ...this.props.style }}>
