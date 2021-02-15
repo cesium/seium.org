@@ -25,10 +25,7 @@ function Hackathon() {
 
     return (
       <div className="navChallenge">
-        <button
-          className="title-nav"
-          style={{ paddingLeft: style.paddL }}
-        >
+        <button className="title-nav" style={{ paddingLeft: style.paddL }}>
           <p className="medium-5" style={{ color: style.clr }}>
             Hackathon
           </p>

@@ -609,13 +609,13 @@ button {
 }
 
 .speakers {
-  background: #0E1D2A;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: stretch;
-	align-content: stretch;
+  background: #0e1d2a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
 
   padding-top: 3%;
 }

@@ -1,0 +1,33 @@
+.achiev-section {
+    width: 50%;
+    @include flex(flex-start,flex-start);
+    flex-direction: column;
+    @include for-size(desktop-down) {
+        width: 90%;
+    }
+    .achiev-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        width: 100%;
+    }
+    .achiev-desc {
+        margin-top: 16px;
+        max-width: 369px;
+        // border: 1px solid;
+        @include for-size(phone-only) {
+            margin-top: 14px;
+            max-width: 334px;
+        }
+        h4 {
+            @include for-size(phone-only) {
+                font-size: 14px;
+                line-height: 1.2;
+            }
+        }
+    }
+    h3 {
+        padding-top: 12px;
+    }
+}

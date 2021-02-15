@@ -1,0 +1,20 @@
+.header-section{
+    // background-color: aquamarine;
+    // max-width: 441px;
+    @media (max-width: 766px) {
+        // max-width: 441px;
+    }
+    h1 {
+        text-align: left;
+        margin-bottom: 7px;
+        @media (max-width: 766px) {
+            font-size: 27px;
+            margin-bottom: 4px;
+        }
+    }
+    h4 {
+        @media (max-width: 766px) {
+            font-size: 14px;
+        }
+    }
+}

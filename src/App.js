@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./components/sections/landing/landing";
 import Agenda from "./components/sections/agendaPage/agenda";
@@ -7,8 +8,8 @@ import Challenges from "./components/sections/challenges/challenges";
 import Team from "./components/sections/team/team";
 import Error from "./components/sections/error";
 import Hackathon from "./components/sections/hackathon/hackathon";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Register from "./pages/Register";
+import SideBar from "./components/moonstone/sideBar";
 
 function App() {
   return (
@@ -32,6 +33,12 @@ function App() {
           </Route>
           <Route path="/hackathon">
             <Hackathon />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/profile">
+            <SideBar />
           </Route>
           <Route path="/404">
             <Error />

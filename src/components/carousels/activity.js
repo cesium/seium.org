@@ -25,7 +25,7 @@ function Activity(props) {
           padding: "10px 13px 10px 10px",
           position: "relative",
           height: "0",
-          paddingBottom: parseTime(props.start, props.end) + "px"
+          paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {},
         bigTitle: {
@@ -42,7 +42,7 @@ function Activity(props) {
           padding: "10px 13px 10px 10px",
           position: "relative",
           height: "0",
-          paddingBottom: parseTime(props.start, props.end) + "px"
+          paddingBottom: parseTime(props.start, props.end) + "px",
         },
         timing: {
           fontSize: "14px",

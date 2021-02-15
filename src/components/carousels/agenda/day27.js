@@ -18,7 +18,7 @@ function Day27() {
         start="00:00"
         end="13:00"
       />
-      <CoffeeBreak name="Lunch Break"/>
+      <CoffeeBreak name="Lunch Break" />
       <Activity
         main="yes"
         bigTitle="Hackathon (42 hours)"

@@ -53,11 +53,7 @@ function Home() {
           >
             <img src={onda} alt="Onda Design" />
           </a>
-          <a
-            className="sponsor big"
-            target="_blank"
-            href="http://aaum.pt/"
-          >
+          <a className="sponsor big" target="_blank" href="http://aaum.pt/">
             <img src={uminhoon} alt="UMinho ON" />
           </a>
         </div>
