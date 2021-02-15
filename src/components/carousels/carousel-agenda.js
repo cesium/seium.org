@@ -212,7 +212,7 @@ function AgendaCarousel(props) {
     <Day25 />,
     <Day26 />,
     <Day27 />,
-    <Day28 />
+    <Day28 />,
   ];
 
   let manageNavigation = () => {

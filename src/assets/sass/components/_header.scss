@@ -1,0 +1,23 @@
+.header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+    margin-bottom: 37px;
+    align-items: flex-end;
+    align-self: flex-start;
+
+    @include for-size(phone-only) {
+        padding-bottom: 12px;
+    }
+    h3{
+        margin-right: 5px;
+        @include for-size(phone-only) {
+            font-size: 14px;
+        } 
+    }
+
+}

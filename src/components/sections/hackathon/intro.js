@@ -43,10 +43,7 @@ class Intro extends React.Component {
                       target="_blank"
                       href="https://forms.gle/wLdyCmaGaqKko1Jd9"
                     >
-                      <Button
-                        background="#102333"
-                        className="button"
-                      >
+                      <Button background="#102333" className="button">
                         Register your team
                       </Button>
                     </a>

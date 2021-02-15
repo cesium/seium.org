@@ -1,0 +1,29 @@
+.achievement {
+    display: flex;
+    padding-right: 20px;
+    // margin-bottom: 19px;
+    
+    .header-achiev {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 21px;
+    }
+    @include for-size(desktop-up){
+        .achievements {
+            padding-top: 8px;
+            font-size: 12px;
+        }
+    }
+    @include for-size(desktop-down) {
+        .achievements {
+            padding-top: 8px;
+            font-size: 12px;
+            margin-bottom: 0px !important;
+        }
+    }
+    @include for-size(tablet-landscape-down){
+        .achievements{
+            padding-top: 0 !important;;
+        }
+    }
+
+}

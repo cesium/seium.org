@@ -102,18 +102,12 @@ class Intro extends React.Component {
                   <li>
                     <a href="/hackathon">Hackathon 💻</a>
                   </li>
-                  <li>
-                    Talks
-                  </li>
-                  <li>
-                    Workshops
-                  </li>
+                  <li>Talks</li>
+                  <li>Workshops</li>
                   <li>
                     <a href="/challenges">Challenges 🕹</a>
                   </li>
-                  <li>
-                    Contests
-                  </li>
+                  <li>Contests</li>
                 </ul>
               </div>
               <div className="quote">
