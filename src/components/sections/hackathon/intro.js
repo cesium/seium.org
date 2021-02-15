@@ -44,7 +44,7 @@ class Intro extends React.Component {
                       href="https://forms.gle/wLdyCmaGaqKko1Jd9"
                     >
                       <Button
-                        style={{ color: "black", background: "#ffffff" }}
+                        background="#102333"
                         className="button"
                       >
                         Register your team
