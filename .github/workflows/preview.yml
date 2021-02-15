@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 15.7.0
       - name: Build website
-        run: npm install && CI='' npm run build
+        run: yarn && CI='' yarn build
       - name: Upload to netlify
         uses: netlify/actions/cli@master
         with:
