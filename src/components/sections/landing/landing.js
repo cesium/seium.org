@@ -4,6 +4,10 @@ import Carousel from "./agenda/carousel-home";
 import Footer from "../footer";
 import Speakers from "./speakers";
 
+import ipdj from "../../images/partners/ipdj.png";
+import onda from "../../images/partners/onda.png";
+import uminhoon from "../../images/partners/uminhoon.png";
+
 function Home() {
   return (
     <div>
@@ -12,7 +16,7 @@ function Home() {
         style={{
           background: "#142A3E",
           paddingLeft: "5%",
-          paddingRight: "5%"
+          paddingRight: "5%",
         }}
       />
       <Speakers
@@ -20,9 +24,44 @@ function Home() {
           background: "#0E1D2A",
           paddingTop: "5%",
           paddingLeft: "5%",
-          paddingRight: "5%"
+          paddingRight: "5%",
         }}
       />
+      <div
+        style={{
+          background: "#142A3E",
+          paddingTop: "5%",
+          paddingLeft: "10%",
+          paddingRight: "10%",
+        }}
+      >
+        <div className="title">
+          <h2>Partners who helped us make it possible</h2>
+        </div>
+        <div className="sponsors">
+          <a
+            className="sponsor grayscale"
+            target="_blank"
+            href="https://ipdj.gov.pt/"
+          >
+            <img src={ipdj} alt="IPDJ" />
+          </a>
+          <a
+            className="sponsor invert"
+            target="_blank"
+            href="https://ondastudio.co/"
+          >
+            <img src={onda} alt="Onda Design" />
+          </a>
+          <a
+            className="sponsor big"
+            target="_blank"
+            href="http://aaum.pt/"
+          >
+            <img src={uminhoon} alt="UMinho ON" />
+          </a>
+        </div>
+      </div>
       <Footer style={{ background: "#0e1d2a" }}>
         Psst. Have you checked the <a href="/challenges">challenges</a>? Just
         saying.

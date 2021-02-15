@@ -15,34 +15,34 @@ function Day24() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Workshop"
-        animator="TBD"
+        animator="TBA"
       />
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Workshop"
-        animator="TBD"
+        animator="TBA"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Talk"
         start="12:00"
         end="13:00"
-        animator="TBD"
+        animator="TBA"
       />
       <CoffeeBreak name="Lunch Break" />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Talk"
         start="14:00"
         end="15:00"
-        animator="TBD"
+        animator="TBA"
       />
       <Activity
         main="yes"
@@ -62,21 +62,21 @@ function Day24() {
       />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Pitch"
         start="16:45"
         end="17:00"
       />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Tertulia"
         start="17:00"
         end="18:00"
       />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="Discord Master Race"
         title="Activity"
         start="21:00"
         end="23:00"

@@ -45,7 +45,7 @@ const Button = (props) => {
           paddingRight: buttonProps().horizontal,
           fontSize: buttonProps().size,
         };
-  if (props.children === "+") {
+  if (props.children === "+" && !props.clickDisabled) {
     return (
       <div
         onClick={() => {

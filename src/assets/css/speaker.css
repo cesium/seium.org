@@ -619,6 +619,7 @@ button {
 .speaker img {
   width: 100%;
   max-width: 100%;
+  filter: grayscale(100%);
 }
 
 .speaker .description {
