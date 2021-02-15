@@ -54,7 +54,7 @@ class Intro extends React.Component {
                       style={{ fontSize: "14px", opacity: "0.6" }}
                       className="people"
                     >
-                      2-5 people
+                      3-5 people
                     </p>
                   </span>
                 </h1>
