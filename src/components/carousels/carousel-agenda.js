@@ -1,6 +1,6 @@
 import React from "react";
 import { Clickable } from "react-clickable";
-
+import PropTypes from "prop-types";
 import windowDimensions from "../utils/windowDimensions";
 import Container from "../container/container";
 import PrevNotClicked from "../images/prev-not-clicked.svg";
@@ -161,12 +161,12 @@ function AgendaCarousel(props) {
     flexWrap: "wrap",
     maxWidth: "450px",
   };
-
-  let [increment, setIcrement] = React.useState(0);
+  let [increment, setIncrement] = React.useState(props.initialDay);
   function navigate(param) {
-    if (param == "next" && increment < carouselPages.length - 1)
-      setIcrement((next) => next + 1);
-    else if (param == "prev" && increment > 0) setIcrement((prev) => prev - 1);
+    if (param === "next" && increment < carouselPages.length - 1)
+      setIncrement((next) => next + 1);
+    else if (param === "prev" && increment > 0)
+      setIncrement((prev) => prev - 1);
 
     return 1;
   }
@@ -231,5 +231,13 @@ function AgendaCarousel(props) {
     </Container>
   );
 }
+
+AgendaCarousel.propTypes = {
+  initialDay: PropTypes.number,
+};
+
+AgendaCarousel.defaultProps = {
+  initialDay: 0,
+};
 
 export default AgendaCarousel;

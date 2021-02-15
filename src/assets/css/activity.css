@@ -1,0 +1,11 @@
+.activity:hover {
+  background-color: #4ca9ff;
+}
+
+.activity:hover .medium-3 {
+  color: #181818;
+}
+
+.activity:hover .medium {
+  color: #181818;
+}

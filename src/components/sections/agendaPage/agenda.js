@@ -7,8 +7,11 @@ import HeaderIcon from "../../images/Header.svg";
 import Footer from "../footer";
 import NavBar from "../../../components/nav/nav";
 import "../../../assets/css/navChallenge.css";
+import { withRouter } from "react-router-dom";
+import queryString from "query-string";
+import SectionDescription from "../../utils/sectionDescription";
 
-function Agenda() {
+function Agenda(props) {
   let styling = {
     paddingLeft: "0",
     paddingRight: "0",
@@ -16,6 +19,8 @@ function Agenda() {
     alignItems: "center",
     justifyContent: "center",
   };
+
+  const queryParams = queryString.parse(props.location.search);
 
   return (
     <>
@@ -43,7 +48,9 @@ function Agenda() {
                 .
               </h1>
             </div>
-            <Carousel />
+            <Carousel
+              initialDay={queryParams.day ? parseInt(queryParams.day) : 0}
+            />
           </Container>
         </div>
       </div>
@@ -52,4 +59,4 @@ function Agenda() {
   );
 }
 
-export default Agenda;
+export default withRouter(Agenda);

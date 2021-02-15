@@ -85,7 +85,7 @@ function ActivityFiltred(props) {
     )
   );
   return (
-    <div style={{ ...props.style, ...{ width: "100%" } }}>
+    <div id={props.speakerID} style={{ ...props.style, ...{ width: "100%" } }}>
       <a
         onClick={() => {
           setTemp("");

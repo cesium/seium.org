@@ -183,8 +183,12 @@ class Speaker extends React.Component {
 
     return (
       <>
-        <div className="profile" style={{ ...eventStyle, ...this.props.style }}>
-          <img src={this.props.picture} alt="" onClick={this.changeStatus} />
+        <div
+          id={this.props.speakerID}
+          className="profile"
+          style={{ ...eventStyle, ...this.props.style }}
+        >
+          <img src={this.props.picture} alt="" />
           <div className="left-side">
             <div className="infos">
               <div className="about" onClick={this.changeStatus}>
@@ -232,7 +236,6 @@ class Speaker extends React.Component {
                 </Clickable>
                 <Button
                   onClick={this.changeStatus}
-                  clickDisabled={true}
                   background={"#173149"}
                   style={footerStyle().buttonStyle}
                 >

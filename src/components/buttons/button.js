@@ -5,7 +5,7 @@ import windowDimensions from "../utils/windowDimensions";
 const Button = (props) => {
   let { width } = windowDimensions();
 
-  let [content, setContent] = useState(props.children);
+  // let [content, setContent] = useState(props.children);
   let buttonProps = () => {
     if (width >= 1200) {
       return { horizontal: "55px", vertical: "17px", size: "12px" };
@@ -45,20 +45,21 @@ const Button = (props) => {
           paddingRight: buttonProps().horizontal,
           fontSize: buttonProps().size,
         };
-  if (props.children === "+" && !props.clickDisabled) {
-    return (
-      <div
-        onClick={() => {
-          if (content === "+") setContent("-");
-          else setContent("+");
-        }}
-        className="button"
-        style={{ ...buttonStyle, ...props.style }}
-      >
-        {content}
-      </div>
-    );
-  }
+
+  // if (props.children === "+" && !props.clickDisabled) {
+  //   return (
+  //     <div
+  //       onClick={() => {
+  //         if (content === "+") setContent("-");
+  //         else setContent("+");
+  //       }}
+  //       className="button"
+  //       style={{ ...buttonStyle, ...props.style }}
+  //     >
+  //       {content}
+  //     </div>
+  //   );
+  // }
 
   return (
     <div

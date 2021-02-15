@@ -3,8 +3,8 @@ import { Clickable } from "react-clickable";
 
 import windowDimensions from "../utils/windowDimensions";
 import Container from "../container/container";
-import SpeakerEvent from "./speakerEvent";
 import Speaker from "./Speaker";
+import SpeakerEvent from "./speakerEvent";
 import PrevNotClicked from "../images/prev-not-clicked.svg";
 import NextNotClicked from "../images/next-not-clicked.svg";
 import PrevClicked from "../images/prev-clicked.svg";
@@ -21,7 +21,7 @@ let next = NextClicked;
 let prev = PrevNotClicked;
 
 let headerStyle = () => {
-  let { width, height } = windowDimensions();
+  let { width } = windowDimensions();
   if (width >= 1200) {
     return {
       button: {
@@ -141,7 +141,7 @@ let headerStyle = () => {
   }
 };
 
-function FiltredCarousel(props) {
+function FilteredCarousel(props) {
   let containerStyle = {
     ...{
       width: "100%",
@@ -160,11 +160,12 @@ function FiltredCarousel(props) {
     flexWrap: "wrap",
     maxWidth: "450px",
   };
-  let [increment, setIcrement] = React.useState(0);
+  let [increment, setIncrement] = React.useState(props.initialDay);
   function navigate(param) {
-    if (param == "next" && increment < carouselPages.length - 1)
-      setIcrement((next) => next + 1);
-    else if (param == "prev" && increment > 0) setIcrement((prev) => prev - 1);
+    if (param === "next" && increment < carouselPages.length - 1)
+      setIncrement((next) => next + 1);
+    else if (param === "prev" && increment > 0)
+      setIncrement((prev) => prev - 1);
 
     return 1;
   }
@@ -172,6 +173,7 @@ function FiltredCarousel(props) {
   let carouselPages = [
     <div style={contentStyle}>
       <Speaker
+        speakerID="joaooliveira"
         initStatus={"show"}
         label="Talk. 14h"
         name="João Oliveira"
@@ -187,7 +189,8 @@ function FiltredCarousel(props) {
     </div>,
     <div style={contentStyle}>
       <Speaker
-        initStatus={"show"}
+        speakerID="tiagocarcao"
+        initStatus={"hide"}
         label="Talk. 14h"
         name="Tiago Carção"
         job="Software Engineer and Tech Lead"
@@ -204,6 +207,7 @@ function FiltredCarousel(props) {
     </div>,
     <div style={contentStyle}>
       <Speaker
+        speakerID="goncalosilva"
         initStatus={"show"}
         label="Talk. 14h"
         name="Gonçalo Silva"
@@ -218,6 +222,7 @@ function FiltredCarousel(props) {
     </div>,
     <div style={contentStyle}>
       <Speaker
+        speakerID="andrelago"
         initStatus={"show"}
         label="Talk. 14h"
         name="André Lago"
@@ -300,4 +305,8 @@ function FiltredCarousel(props) {
   );
 }
 
-export default FiltredCarousel;
+FilteredCarousel.defaultProps = {
+  initialDay: 0,
+};
+
+export default FilteredCarousel;
