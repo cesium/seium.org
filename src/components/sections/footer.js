@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../images/logo.svg";
 import FooterIcon from "../images/Footer.svg";
 import Media from "../utils/media";
@@ -6,10 +6,17 @@ import "../../assets/css/footer.css";
 import Container from "../container/container";
 import Card from "../utils/cardCompo";
 import useInView from "react-cool-inview";
+import Fade from "react-reveal/Fade";
 
 function Footer(props) {
+  const [animation, setAnimation] = useState(false);
   const { ref, inView } = useInView({
-    unobserveOnEnter: true,
+    onEnter: () => {
+      setAnimation(true);
+    },
+    onLeave: () => {
+      setAnimation(false);
+    },
   });
 
   let color = inView
@@ -17,7 +24,11 @@ function Footer(props) {
     : "";
 
   return (
-    <div ref={ref} className="footer" style={{ ...props.style, ...color }}>
+    <div
+      ref={ref}
+      className="footer"
+      style={{ ...props.style, ...color, overflowY: "hidden" }}
+    >
       <Container style={{ paddingBottom: "0%" }}>
         <div className="logo-footer responsive">
           <img src={Logo} alt="logo" className="logo" />
@@ -36,15 +47,19 @@ function Footer(props) {
             <p className="nav-bar-link responsive"> Code of Conduct </p>
           </div>
           <div className="parag2">
-            <div className="card-footer">
-              {props.children ? (
-                <Card img={FooterIcon} alt="FooterIcon">
-                  {props.children}
-                </Card>
-              ) : (
-                ""
-              )}
-            </div>
+            {animation && (
+              <Fade bottom>
+                <div className="card-footer">
+                  {props.children ? (
+                    <Card img={FooterIcon} alt="FooterIcon">
+                      {props.children}
+                    </Card>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </Fade>
+            )}
             <div className="responsive">
               <Media />
             </div>
