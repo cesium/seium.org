@@ -655,4 +655,8 @@ button {
   transition: 0.5s ease;
   color: #4ca9ff;
 }
+
+.speaker:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=speaker.css.map */
