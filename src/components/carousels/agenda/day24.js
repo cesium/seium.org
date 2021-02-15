@@ -80,7 +80,7 @@ function Day24() {
       />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="Discord Master Race"
         title="Activity"
         start="21:00"
         end="23:00"

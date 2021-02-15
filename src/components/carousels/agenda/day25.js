@@ -75,6 +75,13 @@ function Day25() {
         start="17:30"
         end="22:00"
       />
+      <Activity
+        main="yes"
+        bigTitle="Discord Social Meeting"
+        title="Activity"
+        start="22:00"
+        end="23:00"
+      />
     </div>
   );
 }

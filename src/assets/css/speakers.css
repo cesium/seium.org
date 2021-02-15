@@ -701,6 +701,7 @@ button {
 
   /* Full height */
   height: 100%;
+  min-height: 100vh;
 
   background-size: 100% 50%;
   background-repeat: no-repeat;

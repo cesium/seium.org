@@ -3,6 +3,7 @@ import { Clickable } from "react-clickable";
 
 import windowDimensions from "../utils/windowDimensions";
 import Container from "../container/container";
+import Speaker from "./Speaker";
 import SpeakerEvent from "./speakerEvent";
 import PrevNotClicked from "../images/prev-not-clicked.svg";
 import NextNotClicked from "../images/next-not-clicked.svg";
@@ -20,7 +21,7 @@ let next = NextClicked;
 let prev = PrevNotClicked;
 
 let headerStyle = () => {
-  let { width, height } = windowDimensions();
+  let { width } = windowDimensions();
   if (width >= 1200) {
     return {
       button: {
@@ -161,18 +162,19 @@ function FilteredCarousel(props) {
   };
   let [increment, setIncrement] = React.useState(props.initialDay);
   function navigate(param) {
-    if (param == "next" && increment < carouselPages.length - 1)
+    if (param === "next" && increment < carouselPages.length - 1)
       setIncrement((next) => next + 1);
-    else if (param == "prev" && increment > 0) setIncrement((prev) => prev - 1);
+    else if (param === "prev" && increment > 0)
+      setIncrement((prev) => prev - 1);
 
     return 1;
   }
 
   let carouselPages = [
     <div style={contentStyle}>
-      <SpeakerEvent
+      <Speaker
         speakerID="joaooliveira"
-        toggle={true}
+        initStatus={"show"}
         label="Talk. 14h"
         name="João Oliveira"
         job="Chief Technical Officer"
@@ -185,9 +187,9 @@ function FilteredCarousel(props) {
       />
     </div>,
     <div style={contentStyle}>
-      <SpeakerEvent
+      <Speaker
         speakerID="tiagocarcao"
-        toggle={true}
+        initStatus={"hide"}
         label="Talk. 14h"
         name="Tiago Carção"
         job="Software Engineer and Tech Lead"
@@ -202,9 +204,9 @@ function FilteredCarousel(props) {
       />
     </div>,
     <div style={contentStyle}>
-      <SpeakerEvent
+      <Speaker
         speakerID="goncalosilva"
-        toggle={true}
+        initStatus={"show"}
         label="Talk. 14h"
         name="Gonçalo Silva"
         job="Chief Technical Officer"
@@ -216,9 +218,9 @@ function FilteredCarousel(props) {
       />
     </div>,
     <div style={contentStyle}>
-      <SpeakerEvent
+      <Speaker
         speakerID="andrelago"
-        toggle={true}
+        initStatus={"show"}
         label="Talk. 14h"
         name="André Lago"
         job="Software Engineer and Tech Lead"

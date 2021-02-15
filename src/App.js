@@ -6,6 +6,7 @@ import Speakers from "./components/sections/Speakers/speakers";
 import Challenges from "./components/sections/challenges/challenges";
 import Team from "./components/sections/team/team";
 import Error from "./components/sections/error";
+import Hackathon from "./components/sections/hackathon/hackathon";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/team">
             <Team />
+          </Route>
+          <Route path="/hackathon">
+            <Hackathon />
           </Route>
           <Route path="/404">
             <Error />

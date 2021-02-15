@@ -1,0 +1,114 @@
+.info .container {
+  padding-top: 3%;
+  padding-bottom: 5%;
+  max-width: 87%;
+  width: 100%;
+  max-width: 1440px;
+}
+
+@media (max-width: 679px) {
+  .info .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.info .container .desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .info .container .desc {
+    max-width: 37%;
+  }
+}
+
+@media (max-width: 576px) {
+  .info .container .desc {
+    max-width: 100%;
+  }
+}
+
+.info .container .desc .expect {
+  max-width: 430px;
+  margin-bottom: 22px;
+}
+
+.info .container .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 442px;
+  max-width: 100%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .info .container .images {
+    width: 342px;
+  }
+}
+
+@media (max-width: 576px) {
+  .info .container .images {
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 48px;
+  }
+}
+/*# sourceMappingURL=info.css.map */
+
+.info-bg {
+  padding: 0 5% 0 5%;
+
+  /* The image used */
+  background-image: url("../../components/images/lines2.svg") !important;
+  background: #0e1d2a;
+
+  /* Full height */
+  height: 100%;
+
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.info .container .desc .expect {
+  max-width: 246px;
+}
+
+.info .container .desc .expect h5 {
+  font-size: 26px;
+}
+
+.info .container .desc .expect ul li a {
+  font-size: 12px;
+}
+
+.info .container .desc .expect ul li:before {
+  width: 4px;
+  height: 4px;
+  margin-right: 15px;
+}
+
+.info .container .decs .expect ul li:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.info .container .decs .quote {
+  max-width: 321px;
+}
+
+.info .container .decs .quote h4 {
+  font-size: 26px;
+}

@@ -43,18 +43,6 @@
   }
 }
 
-.headerChallengeHome .cardContainerHome {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  top: 122px;
-  left: 41px;
-}
-
 @media (max-width: 1200px) {
   .headerChallengeHome .cardContainerHome {
     top: 96px;
@@ -62,7 +50,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 929px) {
   .headerChallengeHome .cardContainerHome {
     top: 79px;
     left: 15px;

@@ -47,17 +47,19 @@ class Intro extends React.Component {
           <h1 className="title chall-desc-home">
             The software engineering week is back, let’s just{" "}
             <span className="spanChallHome">
-              SEI{" "}
-              <div className="cardContainerHome">
-                <Card
-                  img={HeaderIcon}
-                  alt="HeaderIcon"
-                  style={{ alignItems: "flex-end" }}
-                >
-                  Did you see what I did there?
-                </Card>
+              SEI
+              <div className="box-home">
+                <div id="mascote">
+                  <Card
+                    img={HeaderIcon}
+                    alt="HeaderIcon"
+                    style={{ alignItems: "flex-end" }}
+                  >
+                    Did you see what I did there?
+                  </Card>
+                </div>
               </div>
-            </span>
+            </span>{" "}
             that.
           </h1>
         </div>
@@ -96,21 +98,21 @@ class Intro extends React.Component {
             <div className="details">
               <div className="expect">
                 <h5>What you can expect:</h5>
-                <ul>
+                <ul class="grid-list">
                   <li>
-                    <a href="">Hackathons</a>
+                    <a href="/hackathon">Hackathon 💻</a>
                   </li>
                   <li>
-                    <a href="">Talks</a>
+                    Talks
                   </li>
                   <li>
-                    <a href="">Workshops</a>
+                    Workshops
                   </li>
                   <li>
-                    <a href="">Challenges</a>
+                    <a href="/challenges">Challenges 🕹</a>
                   </li>
                   <li>
-                    <a href="">Contests</a>
+                    Contests
                   </li>
                 </ul>
               </div>

@@ -46,7 +46,7 @@ const Button = (props) => {
           fontSize: buttonProps().size,
         };
 
-  // if (props.children === "+") {
+  // if (props.children === "+" && !props.clickDisabled) {
   //   return (
   //     <div
   //       onClick={() => {
