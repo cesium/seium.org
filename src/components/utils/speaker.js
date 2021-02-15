@@ -1,9 +1,11 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "../../assets/css/speaker.css";
 import windowDimensions from "../utils/windowDimensions";
 
 export default function Speaker(props) {
   let { width, height } = windowDimensions();
+  const history = useHistory();
 
   let imgStyle = () => {
     if (width >= 992) {
@@ -24,13 +26,23 @@ export default function Speaker(props) {
       return { w: "100px", h: "100px", mrB: "15px" };
     }
   };
+
+  const handleSpeakerClick = () => {
+    history.push(
+      (props.day ? "/speakers?day=" + props.day : "/speakers") +
+        (props.speakerID ? `#${props.speakerID}` : "")
+    );
+  };
+
   return (
     <div
+      id={props.speakerID}
       className="speaker"
       style={{
         marginBottom: imgStyle().mrB,
         width: imgStyle().w,
       }}
+      onClick={() => handleSpeakerClick()}
     >
       <div className="wrapper">
         <img

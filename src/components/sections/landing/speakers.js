@@ -16,24 +16,32 @@ const speakers = [
     job: "Software Engineer and Tech Lead",
     desc: "Google",
     img: andrelago,
+    speakerID: "andrelago",
+    day: 3,
   },
   {
     name: "Gonçalo Silva",
     job: "Chief Technical Officer",
     desc: "Doist",
     img: goncalosilva,
+    speakerID: "goncalosilva",
+    day: 2,
   },
   {
     name: "João Oliveira",
     job: "Chief Technical Officer",
     desc: "TonicApp SA",
     img: joaooliveira,
+    speakerID: "joaooliveira",
+    day: 0,
   },
   {
     name: "Tiago Carção",
     job: "Software Engineer and Tech Lead",
     desc: "Glovo",
     img: tiagocarcao,
+    speakerID: "tiagocarcao",
+    day: 1,
   },
 ];
 
@@ -46,6 +54,8 @@ function SpeakerList() {
       name={s.name}
       job={s.job}
       desc={s.desc}
+      speakerID={s.speakerID}
+      day={s.day}
     />
   ));
 
