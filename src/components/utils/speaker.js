@@ -7,7 +7,7 @@ export default function Speaker(props) {
 
   let imgStyle = () => {
     if (width >= 992) {
-      return { w: "210px", h: "210px", mrB: "56px" };
+      return { w: "210px", h: "210px", mrB: "15px" };
     } else if (width >= 768) {
       return { w: "161px", h: "161px", mrB: "15px" };
     } else if (width >= 540) {
@@ -25,21 +25,21 @@ export default function Speaker(props) {
     }
   };
   return (
-    <div className="speaker" style={{ marginBottom: imgStyle().mrB }}>
-      <div
-        className="wrapper"
-        style={{ width: imgStyle().w, height: imgStyle().h }}
-      >
-        <img src={props.speaker} alt={props.alt} width="100%" height="100%" />
-        <div
-          className="overlay"
-          style={{
-            position: "relative",
-            top: -imgStyle().h,
-            width: imgStyle().w,
-            height: imgStyle().h,
-          }}
+    <div
+      className="speaker"
+      style={{
+        marginBottom: imgStyle().mrB,
+        width: imgStyle().w,
+      }}
+    >
+      <div className="wrapper">
+        <img
+          src={props.speaker}
+          alt={props.alt}
+          width={imgStyle().w}
+          height={imgStyle().h}
         />
+        <div className="overlay" style={{ height: imgStyle().h }} />
       </div>
 
       <div className="description">

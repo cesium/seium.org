@@ -610,9 +610,8 @@ button {
 
 .speaker {
   max-width: 50%;
-  padding-left: 2%;
-  padding-right: 2%;
   display: flex;
+  padding: 6px;
   flex-direction: column;
 }
 
@@ -632,18 +631,24 @@ button {
   margin-top: 2px;
 }
 
-.wrapper:hover img {
-  filter: hue-rotate(160deg);
+.wrapper {
+  position: relative;
 }
 
-.wrapper .overlay {
+.overlay {
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   opacity: 0;
+  transition: 0.5s ease;
+  background-color: #4ca9ff;
 }
 
 .wrapper:hover .overlay {
-  opacity: 0.5;
-  background-color: #4ca9ff;
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=speaker.css.map */
