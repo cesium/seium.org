@@ -53,6 +53,7 @@ function Day25() {
         animator="Gonçalo Silva (Doist)"
         day={2}
         speakerID="goncalosilva"
+        description="Remote is here to stay. Increasingly, more companies realize it's the future of work. But with it, many best practices break down. Communicating and working synchronously is tricky when your team is distributed across the globe. Chit-chat is hard, pair programming is harder, mob programming is impossible. So, how exactly do you collaborate effectively? How do you raise the quality bar as a team? How do you share knowledge, and keep others in the loop? Are there established approaches from which we can draw inspiration?"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity

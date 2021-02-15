@@ -53,6 +53,7 @@ function Day26() {
         animator="André Lago (Google)"
         day={3}
         speakerID="andrelago"
+        description="Se alguma vez sonhaste em trabalhar numa grande empresa como a Google, nesta talk vais descobrir como podes concretizar esse sonho! Vem aprender como te podes preparar para os processos de candidatura de empresas como a Google e descobre como é a sensação de trabalhar neste tipo de empresas. Depois desta talk, deverás ter tudo o que precisas para começar o teu caminho em direção ao emprego que sempre quiseste!"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
