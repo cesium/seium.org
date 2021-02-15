@@ -187,7 +187,7 @@ function FiltredCarousel(props) {
     </div>,
     <div style={contentStyle}>
       <Speaker
-        initStatus={"hide"}
+        initStatus={"show"}
         label="Talk. 14h"
         name="Tiago Carção"
         job="Software Engineer and Tech Lead"
