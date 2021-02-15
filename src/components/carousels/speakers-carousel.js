@@ -182,6 +182,7 @@ function FiltredCarousel(props) {
           "Aos 14 anos de idade João vendeu o seu primeiro software por 30 “contos”, aos 17 foi finalista das Olimpíadas de Informática, aos 26 co-fundou a empresa que lançou o primeiro ERP português disponível como Software as a Service, software distinguido, 2 anos depois, com o prémio “Inovação Tecnológica em PME” promovido pela Oracle e Intel.",
           "João Oliveira é licenciado pela Universidade do Minho, tem um trajeto profissional diversificado, no setor público e privado, co-fundou uma startup onde foi Chief Technical Officer e Arquitecto de Software, e nos últimos anos passou por multinacionais da área das telecomunicações (Wedo Technologies) e da indústria de moda de luxo (Farfetch). Desde o início de 2020 é Chief Technical Officer na TonicApp SA, empresa que desenvolve uma plataforma digital de saúde desenvolvida para apoiar a comunidade médica a diagnosticar e a tratar os doentes, empresa que está presente em Portugal, Espanha, França e Itália.",
         ]}
+        linkedin="http://linkedin.com/in/joaooliveira"
       />
     </div>,
     <div style={contentStyle}>
@@ -198,6 +199,7 @@ function FiltredCarousel(props) {
           "Pessoalmente, gosto de trabalhar em sistemas distribuídos com grande escala. Problemas reais e que precisam de decisões rápidas e não comprometedoras. É difícil manter-me motivado, pois preciso de me sentir desafiado todos os dias! Amo trabalhar num ambiente de equipa altamente motivado a aprender e a evoluir alinhado a um bom desafio tecnológico.",
           "Acredito que só em equipa aprendendo uns com os outros podemos, realmente, crescer pessoalmente e profissionalmente. Sobretudo na área da tecnologia a partilha de conhecimento em equipa faz sentido: aprender e partilhar, tomar decisões bem ponderadas e baseadas em bons princípios! Além da tecnologia (que ocupa grande parte da minha vida :p) gosto de acompanhar muitos desportos, mais especificamente futebol (global), NBA, NFL, cinema e de ler.",
         ]}
+        linkedin="https://www.linkedin.com/in/tiagocarcao/"
       />
     </div>,
     <div style={contentStyle}>
@@ -211,6 +213,7 @@ function FiltredCarousel(props) {
         bio={[
           "Gonçalo is the CTO at Doist, creators of Todoist and Twist. He's been working remotely for over a decade, and managing remote teams for most of that time. He loves long-term ambition, asynchronous communication, and programming.",
         ]}
+        linkedin="https://www.linkedin.com/in/goncalossilva/"
       />
     </div>,
     <div style={contentStyle}>
@@ -226,6 +229,9 @@ function FiltredCarousel(props) {
           "O André é apaixonado por tecnologia desde criança e adora aprender coisas novas por conta própria. Desde que começou a estudar na Universidade do Porto, ele trabalhou em projetos diversos, desde assistentes inteligentes para gerir sistemas IoT a jogos 3D. O André também participou em vários projetos não técnicos, tais como ser o CEO de uma empresa de 50 estudantes e ser o Conference Chair de uma conferência com mais de 500 participantes.",
           "Para além de tecnologia, o André gosta de música, basquetebol e surf.",
         ]}
+        twitter="https://twitter.com/andrelago13"
+        github="https://github.com/andrelago13"
+        linkedin="http://linkedin.com/in/andre-lago/"
       />
     </div>,
   ];
