@@ -45,20 +45,20 @@ const Button = (props) => {
           paddingRight: buttonProps().horizontal,
           fontSize: buttonProps().size,
         };
-  if (props.children === "+") {
-    return (
-      <div
-        onClick={() => {
-          if (content === "+") setContent("-");
-          else setContent("+");
-        }}
-        className="button"
-        style={{ ...buttonStyle, ...props.style }}
-      >
-        {content}
-      </div>
-    );
-  }
+  // if (props.children === "+" && !props.clickDisabled) {
+  //   return (
+  //     <div
+  //       onClick={() => {
+  //         if (content === "+") setContent("-");
+  //         else setContent("+");
+  //       }}
+  //       className="button"
+  //       style={{ ...buttonStyle, ...props.style }}
+  //     >
+  //       {content}
+  //     </div>
+  //   );
+  // }
 
   return (
     <div

@@ -13,23 +13,24 @@ function SectionDescription(props) {
           <h1 className="chall-desc">
             Five awesome days of learning, sharing and{" "}
             <span className="spanChall">
-              {" "}
               winning
-              <div className="cardContainer">
-                <Card
-                  img={HeaderIcon}
-                  alt="HeaderIcon"
-                  style={{ alignItems: "flex-end" }}
-                >
-                  Or maybe losing. This one is kind of optional.
-                </Card>
+              <div className="box">
+                <div id="mascote">
+                  <Card
+                    img={HeaderIcon}
+                    alt="HeaderIcon"
+                    style={{ alignItems: "flex-end" }}
+                  >
+                    Or maybe losing. This one is kind of optional.
+                  </Card>
+                </div>
               </div>
             </span>
             .
           </h1>
         </div>
       ) : (
-        <h1 style={props.style}>{props.title}</h1>
+        <h1>{props.title}</h1>
       )}
     </div>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 
 import SpeakersCarousel from "../../carousels/speakers-carousel";
-import SectionDescription from "../../utils/sectionDescription";
 import Container from "../../container/container";
 import Footer from "../footer";
 import NavBar from "../../../components/nav/nav";
@@ -28,14 +27,15 @@ function Speakers(props) {
         <div>
           <div style={styling}>
             <Container>
-              <SectionDescription
-                middleTitle="Speakers"
-                title="A crazy cool selection of speakers."
-                style={{
-                  marginBottom: "150px",
-                  marginTop: "10px",
-                }}
-              ></SectionDescription>
+              <p className="x-large-1 chall-title">Speakers</p>
+              <div
+                className="headerChallenge"
+                style={{ marginBottom: "100px" }}
+              >
+                <h1 className="chall-desc">
+                  A crazy cool selection of the best speakers
+                </h1>
+              </div>
               <SpeakersCarousel
                 style={{ paddingLef: "0px" }}
                 initialDay={queryParams.day ? parseInt(queryParams.day) : 0}

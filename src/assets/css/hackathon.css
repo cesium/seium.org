@@ -1,0 +1,341 @@
+.hackathon-bg {
+  padding: 0 5% 0 5%;
+  background-image: url("../../components/images/lines.svg") !important;
+  background: #0e1d2a;
+  height: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.hackathon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hackathon .container {
+  padding-top: 10%;
+  padding-bottom: 5%;
+  max-width: 87%;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.hackathon .landing {
+  width: 100%;
+  max-width: 1440px;
+  padding: 1% 5vw 5%;
+}
+
+.hackathon .container .description {
+  margin-top: auto;
+  max-width: 792px;
+  height: 60vh;
+}
+
+.hackathon .container .infos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hackathon .container .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hackathon .container .details .expect {
+  max-width: 355px;
+}
+
+.hackathon .container .details .expect h5 {
+  margin-bottom: 12%;
+}
+
+.hackathon .container .details .expect ul li {
+  color: white;
+  font-family: "Inter Regular";
+}
+
+.hackathon .container .details .expect ul li:before {
+  position: relative;
+  display: inline-block;
+  left: 0;
+  content: "";
+  border: white 1px solid;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.hackathon .container .details .expect ul li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.hackathon .container .details .quote {
+  max-width: 438px;
+}
+
+.hackathon .container .details .quote h4 {
+  margin-bottom: 7%;
+}
+
+.hackathon .container .infos .organization .image {
+  margin-top: 6%;
+  background: url("../../components/images/subvisual.png") no-repeat;
+  filter: invert(1) brightness(200%) sepia(100%) saturate(10%);
+  background-size: 145px 38px;
+  width: 120px;
+  height: 38px;
+}
+
+@media (max-width: 1200px) {
+  .hackathon .container .description {
+    max-width: 603px;
+  }
+  .hackathon .container .details .expect {
+    max-width: 355px;
+  }
+  .hackathon .container .details .expect h5 {
+    font-size: 26px;
+  }
+  .hackathon .container .details .expect ul li {
+    font-size: 12px;
+  }
+  .hackathon .container .details .expect ul li:before {
+    width: 4px;
+    height: 4px;
+    margin-right: 15px;
+  }
+  .hackathon .container .details .expect ul li:not(:last-child) {
+    margin-bottom: 6px;
+  }
+  .hackathon .container .details .quote {
+    max-width: 321px;
+  }
+  .hackathon .container .details .quote h4 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hackathon .container .description {
+    max-width: 583px;
+  }
+  .hackathon .container .details .expect {
+    max-width: 246px;
+  }
+  .hackathon .container .details .expect h5 {
+    font-size: 32px;
+  }
+  .hackathon .container .details .quote {
+    max-width: 282px;
+  }
+  .hackathon .container .details .quote h4 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hackathon .container .infos .organization .image {
+    background-size: 120px 38px;
+    width: 120px;
+    height: 38px;
+  }
+  .hackathon .container .description {
+    max-width: 436px;
+  }
+  .hackathon .container .details .expect {
+    max-width: 150px;
+  }
+  .hackathon .container .details .expect h5 {
+    font-size: 20px;
+  }
+  .hackathon .container .details .expect ul li {
+    font-size: 10px;
+  }
+  .hackathon .container .details .expect ul li:before {
+    margin-right: 12px;
+  }
+  .hackathon .container .details .expect ul li:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .hackathon .container .details .quote {
+    max-width: 245px;
+  }
+  .hackathon .container .details .quote h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hackathon .container .description {
+    max-width: 330px;
+  }
+  .hackathon .container .description h1 {
+    margin-top: 2%;
+  }
+  .hackathon .container .infos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hackathon .container .infos .contact .icons {
+    margin-top: 10%;
+  }
+  .hackathon .container .infos .organization {
+    margin-top: 25px;
+  }
+  .hackathon .container .infos .organization .image {
+    margin-top: 8%;
+  }
+  .hackathon .container .details {
+    margin-top: 70px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .hackathon .container .details .expect {
+    max-width: 100%;
+  }
+  .hackathon .container .details .expect h5 {
+    max-width: 130px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .hackathon .container .details .expect ul li:before {
+    width: 3px;
+    height: 3px;
+    margin-right: 10px;
+  }
+  .hackathon .container .details .expect ul li:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .hackathon .container .details .quote {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+  .hackathon .container .details .quote h4 {
+    font-size: 27px;
+    margin-bottom: 7%;
+  }
+}
+
+.registration {
+  margin-top: 1%;
+}
+
+.registration h1 {
+  font-size: 56px;
+  max-width: 840px;
+  position: relative;
+}
+
+.registration h1 .cardTeam {
+  margin-left: 10px;
+}
+
+.registration h1 .span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.registration h1 .span .button {
+  margin-right: 20px;
+}
+
+.registration h1 .span .people {
+  font-family: "Inter Regular";
+}
+
+@media (max-width: 1200px) {
+  .registration h1 .span .button {
+    padding: 11px 26px;
+    margin-right: 12px;
+  }
+  .registration h1 .span .people {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .registration h1 {
+    max-width: 700px;
+    font-size: 40px;
+  }
+  .registration h1 .span .button {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration h1 {
+    font-size: 34px;
+  }
+}
+
+p.timeline {
+  font-family: "Inter Black";
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0.32px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  p.timeline {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  p.timeline {
+    font-size: 12px;
+  }
+}
+
+.resume {
+  margin-top: 40px;
+  color: white;
+  font-family: "Inter Regular";
+}
+
+.box-hackathon {
+  margin: auto;
+  overflow: hidden;
+}
+
+#reverse-mascote {
+  margin: auto;
+  position: relative;
+  bottom: -300px;
+  left: 10px;
+  transition: bottom 1s;
+}
+
+.registration:hover #reverse-mascote {
+  bottom: -2px;
+}
+
+@media (max-width: 650px) {
+  #mascote {
+    display: none;
+  }
+}

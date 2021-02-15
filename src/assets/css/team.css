@@ -646,7 +646,7 @@ button {
 .team .organization .image {
   margin-top: 6px;
   background: url("../../components/images/cesium.png") no-repeat;
-  filter: invert(1) brightness(200%) sepia(100%) saturate(10%);
+  filter: grayscale(100%);
   background-size: 100%;
 }
 

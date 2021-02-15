@@ -1,0 +1,39 @@
+.places {
+  display: flex;
+}
+
+.section {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .places {
+    flex-direction: column;
+  }
+}
+
+h3.section-title {
+  color: #181818;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+h6 {
+  color: #181818;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.place {
+  font-family: "Inter Black";
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  color: #181818;
+  text-align: center;
+  margin-bottom: 10px;
+}

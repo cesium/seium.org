@@ -40,11 +40,7 @@ function NavBar() {
             {/* <a className="nav-link nav-bar-link nav_link-s" href="#">
               Hackathon{" "}
             </a> */}
-            <a
-              className="nav-link nav-bar-link nav_link-s"
-              target="_blank"
-              href="https://forms.gle/wLdyCmaGaqKko1Jd9"
-            >
+            <a className="nav-link nav-bar-link nav_link-s" href="/hackathon">
               Hackathon{" "}
             </a>
             <a className="nav-link nav-bar-link nav_link-s" href="/speakers">
