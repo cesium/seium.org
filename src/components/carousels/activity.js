@@ -165,7 +165,7 @@ function Activity(props) {
           join={props.join}
         />
       </div>
-      <p style={{ opacity: "0.5", marginTop: "5px", fontSize: "14px" }}>
+      <p style={{ opacity: "0.8", marginTop: "5px", fontSize: "14px" }}>
         <a
           href={
             (props.day ? "/speakers?day=" + props.day : "/speakers") +
