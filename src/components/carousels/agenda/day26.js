@@ -22,27 +22,27 @@ function Day26() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Workshop"
-        animator="TBD"
+        animator="TBA"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Talk"
         start="12:00"
         end="13:00"
-        animator="TBD"
+        animator="TBA"
       />
       <CoffeeBreak name="Lunch Break" />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Talk"
         start="14:00"
         end="15:00"
-        animator="TBD"
+        animator="TBA"
       />
       <Activity
         main="yes"
@@ -57,7 +57,7 @@ function Day26() {
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Pitch"
         start="16:30"
         end="16:45"

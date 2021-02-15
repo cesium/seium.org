@@ -699,13 +699,13 @@ button {
 }
 
 .profile .left-side .infos .contacts {
-  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 .profile .left-side .infos .contacts img {
-  width: 20px;
+  width: 25px;
+  padding-left: 20%;
 }
 /*# sourceMappingURL=profile.css.map */

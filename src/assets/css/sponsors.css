@@ -725,11 +725,11 @@ button {
 }
 
 .brands {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
   align-content: stretch;
   margin-top: 50px;
 }
@@ -762,9 +762,9 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
   width: 100%;
 }
 

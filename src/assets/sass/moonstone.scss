@@ -1,0 +1,29 @@
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/helpers";
+
+// 3 - Base;
+@import "base/reset";
+@import "base/typography";
+
+// 4 - Components;
+@import "components/buttons";
+@import "components/inputs";
+@import "components/Header";
+@import "components/sectionHeader";
+@import "components/card";
+@import "components/winner";
+@import "components/latestWins";
+@import "components/sendCode";
+@import "components/barItem";
+@import "components/sideBar";
+@import "components/achievement";
+@import "components/achievements";
+@import "components/editProfile";
+@import "components/spinningWheel";
+
+// 5 - Layout;
+@import "layout/main";
+@import "layout/register";
+@import "layout/profile";

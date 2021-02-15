@@ -64,6 +64,17 @@ function Contests() {
   );
   let challenge6 = (
     <Challenge
+      title="CS:GO Tournament"
+      buttonText={
+        <a target="_blank" href="https://forms.gle/TqhNS5Sww279iMDW8">
+          <Button className="button">Register now</Button>
+        </a>
+      }
+      prizes={["TBA"]}
+    />
+  );
+  let challenge7 = (
+    <Challenge
       title="Instagram Giveaway"
       parag=""
       buttonText=""
@@ -80,6 +91,7 @@ function Contests() {
     const [myStyle4, setMyStyle4] = useState({});
     const [myStyle5, setMyStyle5] = useState({});
     const [myStyle6, setMyStyle6] = useState({});
+    const [myStyle7, setMyStyle7] = useState({});
 
     let changeStyle1 = () => {
       setdata(1);
@@ -90,6 +102,7 @@ function Contests() {
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle2 = () => {
       setdata(2);
@@ -100,6 +113,7 @@ function Contests() {
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle3 = () => {
       setdata(3);
@@ -109,6 +123,7 @@ function Contests() {
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle1({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle4 = () => {
@@ -120,6 +135,7 @@ function Contests() {
       setMyStyle3({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle5 = () => {
       setdata(5);
@@ -130,6 +146,7 @@ function Contests() {
       setMyStyle3({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle6 = () => {
       setdata(6);
@@ -140,6 +157,18 @@ function Contests() {
       setMyStyle3({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+    };
+    let changeStyle7 = () => {
+      setdata(7);
+      setMyStyle7({ paddL: "15px", clr: "#fff" });
+
+      setMyStyle1({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle2({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle3({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
 
     return (
@@ -196,6 +225,15 @@ function Contests() {
           style={{ paddingLeft: myStyle6.paddL, textColor: myStyle6.clr }}
         >
           <p className="medium-5" style={{ color: myStyle6.clr }}>
+            CS:GO Tournament
+          </p>
+        </button>
+        <button
+          className="title-nav"
+          onClick={() => changeStyle7(7)}
+          style={{ paddingLeft: myStyle7.paddL, textColor: myStyle7.clr }}
+        >
+          <p className="medium-5" style={{ color: myStyle7.clr }}>
             <strike>Instagram Giveaway</strike> (Closed)
           </p>
         </button>
@@ -210,6 +248,7 @@ function Contests() {
     else if (data === 4) setchallenge(challenge4);
     else if (data === 5) setchallenge(challenge5);
     else if (data === 6) setchallenge(challenge6);
+    else if (data === 7) setchallenge(challenge7);
   }, [data]);
 
   return (

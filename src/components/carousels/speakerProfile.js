@@ -4,6 +4,7 @@ import windowDimensions from "../utils/windowDimensions";
 import Facebook from "../images/Facebook.svg";
 import Twitter from "../images/Twitter.svg";
 import GitHub from "../images/GitHub.svg";
+import LinkedIn from "../images/Linkedin.svg";
 import ProfileFooter from "./profileFooter";
 import "../../assets/css/profile.css";
 
@@ -85,9 +86,26 @@ function Profile(props) {
             </p>
           </div>
           <div className="contacts">
-            <img src={Twitter} alt="" />
-            <img src={GitHub} alt="" />
-            <img src={Facebook} alt="" />
+            {props.twitter ? (
+              <a target="_blank" href={props.twitter}>
+                <img src={Twitter} alt="" />
+              </a>
+            ) : null}
+            {props.github ? (
+              <a target="_blank" href={props.github}>
+                <img src={GitHub} alt="" />
+              </a>
+            ) : null}
+            {props.facebook ? (
+              <a target="_blank" href={props.facebook}>
+                <img src={Facebook} alt="" />
+              </a>
+            ) : null}
+            {props.linkedin ? (
+              <a target="_blank" href={props.linkedin}>
+                <img src={LinkedIn} alt="" />
+              </a>
+            ) : null}
           </div>
         </div>
         <ProfileFooter

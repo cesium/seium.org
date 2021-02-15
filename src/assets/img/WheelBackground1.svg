@@ -1,0 +1,25 @@
+<svg width="284" height="284" viewBox="0 0 284 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="1440" height="800" transform="translate(-462 -330)" fill="#181818"/>
+<path d="M-149 -290C-149 -312.091 -131.091 -330 -109 -330H978V472H-109C-131.091 472 -149 454.091 -149 432V-290Z" fill="white"/>
+<circle cx="141.899" cy="142.01" r="142" transform="rotate(-11.6638 141.899 142.01)" fill="url(#paint0_angular)"/>
+<circle cx="141.899" cy="142.01" r="141.5" transform="rotate(-11.6638 141.899 142.01)" stroke="black" stroke-opacity="0.1"/>
+<line x1="2.93212" y1="171.208" x2="281.068" y2="113.792" stroke="white"/>
+<line x1="113.883" y1="3.82079" x2="171.299" y2="281.956" stroke="white"/>
+<line x1="23.7406" y1="64.5358" x2="261.011" y2="220.608" stroke="white"/>
+<line x1="220.555" y1="24.629" x2="64.483" y2="261.9" stroke="white"/>
+<line x1="2.8511" y1="115.173" x2="281.543" y2="169.824" stroke="white"/>
+<line x1="169.917" y1="3.73977" x2="115.266" y2="282.432" stroke="white"/>
+<line x1="63.3056" y1="24.8559" x2="221.726" y2="260.565" stroke="white"/>
+<line x1="260.234" y1="64.1942" x2="24.5248" y2="222.615" stroke="white"/>
+</g>
+<defs>
+<radialGradient id="paint0_angular" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(141.899 142.01) rotate(90) scale(142)">
+<stop stop-color="#00FFB7"/>
+<stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0">
+<rect width="1440" height="800" fill="white" transform="translate(-462 -330)"/>
+</clipPath>
+</defs>
+</svg>

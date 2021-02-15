@@ -98,6 +98,10 @@ function ActivityFiltred(props) {
           name={props.name}
           job={props.job}
           description={props.description}
+          twitter={props.twitter}
+          github={props.github}
+          facebook={props.facebook}
+          linkedin={props.linkedin}
           style={{ width: "100%" }}
         ></Profile>
       </a>
