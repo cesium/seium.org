@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import Button from "../buttons/button";
 import { withRouter } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import "../../assets/css/activity.css";
 
 function parseTime(s, e) {
   const startTime = new Date("2020/01/01 " + s);
@@ -113,7 +114,14 @@ function Activity(props) {
   };
 
   return (
-    <div id={props.activityID} style={{ ...eventStyle, ...props.style }}>
+    <div
+      id={props.activityID}
+      style={{
+        ...eventStyle,
+        ...props.style,
+      }}
+      className="activity"
+    >
       <div style={{ display: "flex" }}>
         <div style={{ flexGrow: 1 }}>
           <p className="medium-3" style={ActivityStyle().timing}>
