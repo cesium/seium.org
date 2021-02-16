@@ -51,6 +51,12 @@ function Day24() {
         start="15:00"
         end="16:00"
         animator="Tiago Carção (Glovo)"
+        day={1}
+        activityID="sistemaslargaescala"
+        speakerID="tiagocarcao"
+        description="Hoje em dia vivemos numa sociedade global, altamente conectada, always-on, com uma grande pegada digital. Estas características fazem de grande parte das aplicações e serviços que utilizamos hoje, sistemas que recebem um grande volume de tráfego e devem ser capazes de reagir às diferentes flutuações de horário, hábitos e gostos.
+        Este é o panorama que encontramos quando entramos na indústria, e é com este contexto que temos que lidar pondo em prática os conceitos que aprendemos e muitos mais que vamos adquirindo de uma área em constante evolução.
+        Com esta palestra, e explorando as minhas diferentes experiências e desafios em diferentes áreas, produtos, equipas e empresas, bem como alguns conceitos importantes para enfrentar estes desafios, gostava de clarificar possíveis dúvidas e oferecer alguma visão em primeira mão de como é trabalhar nesta indústria."
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity

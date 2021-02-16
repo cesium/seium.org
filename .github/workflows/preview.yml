@@ -1,0 +1,33 @@
+name: Preview on merge request
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 15.7.0
+      - name: Build website
+        run: yarn && CI='' yarn build
+      - name: Upload to netlify
+        uses: netlify/actions/cli@master
+        id: deploy-netlify
+        with:
+            args: deploy
+        env:
+            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      - name: Netlify Preview URL
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT: "This pull request is being automatically deployed to Netlify.\n\n🔍 Inspect: ${{ steps.deploy-netlify.outputs.NETLIFY_LOGS_URL }}\n✅ Preview: ${{ steps.deploy-netlify.outputs.NETLIFY_URL }}"
+        with:
+          msg: ${{ env.OUTPUT }}
+          check_for_duplicate_msg: false
