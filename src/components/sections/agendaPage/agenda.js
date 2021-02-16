@@ -52,7 +52,9 @@ function Agenda(props) {
                 .
               </h1>
             </div>
-            <Carousel />
+            <Carousel
+              initialDay={queryParams.day ? parseInt(queryParams.day) : 0}
+            />
           </Container>
         </div>
       </div>

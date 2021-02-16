@@ -15,34 +15,34 @@ function Day24() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Workshop"
-        animator="TBD"
+        animator="TBA"
       />
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Workshop"
-        animator="TBD"
+        animator="TBA"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Talk"
         start="12:00"
         end="13:00"
-        animator="TBD"
+        animator="TBA"
       />
       <CoffeeBreak name="Lunch Break" />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Talk"
         start="14:00"
         end="15:00"
-        animator="TBD"
+        animator="TBA"
       />
       <Activity
         main="yes"
@@ -52,7 +52,11 @@ function Day24() {
         end="16:00"
         animator="Tiago Carção (Glovo)"
         day={1}
+        activityID="sistemaslargaescala"
         speakerID="tiagocarcao"
+        description="Hoje em dia vivemos numa sociedade global, altamente conectada, always-on, com uma grande pegada digital. Estas características fazem de grande parte das aplicações e serviços que utilizamos hoje, sistemas que recebem um grande volume de tráfego e devem ser capazes de reagir às diferentes flutuações de horário, hábitos e gostos.
+        Este é o panorama que encontramos quando entramos na indústria, e é com este contexto que temos que lidar pondo em prática os conceitos que aprendemos e muitos mais que vamos adquirindo de uma área em constante evolução.
+        Com esta palestra, e explorando as minhas diferentes experiências e desafios em diferentes áreas, produtos, equipas e empresas, bem como alguns conceitos importantes para enfrentar estes desafios, gostava de clarificar possíveis dúvidas e oferecer alguma visão em primeira mão de como é trabalhar nesta indústria."
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
@@ -64,14 +68,14 @@ function Day24() {
       />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Pitch"
         start="16:45"
         end="17:00"
       />
       <Activity
         main="yes"
-        bigTitle="TBD"
+        bigTitle="TBA"
         title="Tertulia"
         start="17:00"
         end="18:00"

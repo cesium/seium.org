@@ -584,12 +584,11 @@ p.x-small5 {
   color: rgba(0, 255, 183, 0.5);
 }
 
-@media(max-width: 750px) {
+@media (max-width: 750px) {
   p.x-small5 {
     font-size: 10px;
   }
 }
-
 
 .nav-bar-link {
   font-family: "Inter Regular";

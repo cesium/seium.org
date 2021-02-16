@@ -1,0 +1,88 @@
+.containerregister {
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+    @media (max-width: $breakpoint-xl) {
+        @include flex(center, center);
+        flex-direction: column;
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+        padding-top: 32px  !important;
+    }
+    .form-container {
+        margin: auto;
+        @include flex(center, center);
+        flex-direction: column;
+        .logo {
+            @media (max-width: 766px) {
+                width: 196px;
+                height: 77px; 
+            }
+        }
+        .sign-up {
+            color: $white;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            @media (max-width: 766px) {
+                font-size: 27px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        .login {
+            color: $mint;
+            border-bottom: 1px solid $mint;
+        }
+        .login-here {
+            margin-bottom: 26px;
+            margin-top: 13px;
+            @media (max-width: 766px) {
+                margin-top: 8px;
+                font-size: 10px;
+                line-height: 1;
+            }
+        }
+        .button-reg {
+            margin-top: 26px;
+            .buttonText {
+                @media (max-width: 766px) {
+                    width: 250px !important;
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    text-align: center;
+                }
+            }
+            @media (max-width: 766px) {
+                margin-top: 10px;
+            }
+            
+        }
+    }
+    .card-reg{
+        // align-self: flex-end;
+        position: absolute;
+        right: 40px;
+        bottom: 0;
+        @media (max-width:$breakpoint-xl) {
+            position: relative;
+            right: 0px;
+            // align-self: flex-start
+        }
+    }
+    .back {
+        color: $mint;
+        align-self: flex-start;
+        // padding-top: 40px;
+        @media (max-width: 766px) {
+            // padding-top: 32px;
+            font-size: 10px;
+            line-height: 1;
+        }
+    }
+}
+
+.bigContainer {
+    @media (max-height: 667px) {
+        height: 100% !important;
+    }
+}

@@ -1,0 +1,9 @@
+.buttonText {
+    background-color: $mint;
+    @include ripple-effect($white);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 40px;
+    cursor: pointer;
+    //exmple ghi dyal button lli f sign up
+}

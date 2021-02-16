@@ -1,0 +1,49 @@
+.spinningWheel{
+    width: 50%;
+    @include flex(center,center);
+    flex-direction: column;
+    position: relative;
+    margin-right: 18px;
+    margin-bottom: 50px;
+    @include for-size(desktop-down) {
+        width: 90%;
+    }
+    .wheel{
+        width: 284px;
+        height: 284px;
+        border-radius: 50%;
+        background: url('../img/Wh.png') center no-repeat;
+        @include for-size(phone-only) {
+            width: 200px;
+            height: 200px;
+        }
+
+    }
+    .union{
+        width: 16px;
+        height: 28px;
+        background: url('../img/Union.svg') center no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 48%;
+        left: 49%;
+
+        @include for-size(tablet-landscape-down) {
+            top: 47%;
+            left: 49%;
+        }
+        
+        @include for-size(phone-only) {
+            top: 47%;
+            left: 47%;
+        }
+    }
+    .buttonText {
+        @include for-size(phone-only) {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            width: 188px;
+        }
+       
+    }
+}

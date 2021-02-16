@@ -1,0 +1,23 @@
+.barItem{
+    cursor: pointer;
+    padding: 23px 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    .selected{
+        color: $mint;
+    }
+    background-color: 'transparent';
+    &.selected{
+        background-color: #1D1D1D;
+    }
+    @include for-size(tablet-portrait-down){
+        border: 0;
+        .label{
+            font-family: $font-primary-black;
+            font-size: 30px;
+            text-align: center;
+        }
+        &.selected{
+            background-color: transparent;
+        }
+    }
+}
