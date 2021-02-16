@@ -710,6 +710,15 @@ button {
   min-height: 80vh;
 }
 
+.home .landing .bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
 .home .container .description {
   margin-top: auto;
   max-width: 792px;

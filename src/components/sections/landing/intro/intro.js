@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../../../buttons/button";
+import NavIcon from "../../../images/nav-icon.svg";
 import NavBar from "../../../../components/nav/nav";
 import Card from "../../../utils/cardCompo";
 import HeaderIcon from "../../../images/Header.svg";
@@ -81,17 +81,28 @@ class Intro extends React.Component {
               <p className="x-large-1">23 - 28 February 2021</p>
               {title}
             </div>
-            <div className="infos">
-              <div className="contact">
-                <p className="nav-bar-link">Find us on</p>
-                <Media />
+            <div className="bottom">
+              <div className="infos">
+                <div className="contact">
+                  <p className="nav-bar-link">Find us on</p>
+                  <Media />
+                </div>
+                <div className="organization">
+                  <p className="nav-bar-link">Organization</p>
+                  <a target="_blank" href="https://cesium.di.uminho.pt/">
+                    <div className="image"></div>
+                  </a>
+                </div>
               </div>
-              <div className="organization">
-                <p className="nav-bar-link">Organization</p>
-                <a target="_blank" href="https://cesium.di.uminho.pt/">
-                  <div className="image"></div>
-                </a>
-              </div>
+              {window.innerWidth <= 768 ? (
+                <div className="join-us">
+                  <a target="_blank" href="http://seium21.eventbrite.pt/">
+                    <img src={NavIcon} alt="join us" />
+                  </a>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
           <div className="container">
