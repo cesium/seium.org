@@ -111,12 +111,12 @@ class Intro extends React.Component {
                 <h5>What you can expect:</h5>
                 <ul class="grid-list">
                   <li>
-                    <a href="/hackathon">Hackathon 💻</a>
+                    <a href="/hackathon">Hackathon</a> 💻
                   </li>
                   <li>Talks</li>
                   <li>Workshops</li>
                   <li>
-                    <a href="/challenges">Challenges 🕹</a>
+                    <a href="/challenges">Challenges</a> 🕹
                   </li>
                   <li>Contests</li>
                 </ul>

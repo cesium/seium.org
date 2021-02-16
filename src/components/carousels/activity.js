@@ -171,7 +171,7 @@ function Activity(props) {
             (props.day ? "/speakers?day=" + props.day : "/speakers") +
             (props.speakerID ? `#${props.speakerID}` : "")
           }
-          style={{ color: "white", textDecoration: "none" }}
+          className="agenda-link"
         >
           {props.animator}
         </a>

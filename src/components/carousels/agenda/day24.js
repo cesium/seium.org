@@ -76,7 +76,7 @@ function Day24() {
       <Activity
         main="yes"
         bigTitle="TBA"
-        title="Tertulia"
+        title="Talk"
         start="17:00"
         end="18:00"
       />

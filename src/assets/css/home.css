@@ -783,6 +783,10 @@ button {
   font-family: "Inter Regular";
 }
 
+.home .container .details .expect ul li a:hover {
+  text-decoration: underline;
+}
+
 .home .container .details .expect ul li:before {
   position: relative;
   display: inline-block;
