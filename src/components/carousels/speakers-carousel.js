@@ -174,7 +174,7 @@ function FilteredCarousel(props) {
     <div style={contentStyle}>
       <Speaker
         speakerID="joaooliveira"
-        initStatus={"show"}
+        initStatus={"hide"}
         label="Talk. 14h"
         name="João Oliveira"
         job="Chief Technical Officer"
@@ -212,7 +212,7 @@ function FilteredCarousel(props) {
     <div style={contentStyle}>
       <Speaker
         speakerID="goncalosilva"
-        initStatus={"show"}
+        initStatus={"hide"}
         label="Talk. 14h"
         name="Gonçalo Silva"
         job="Chief Technical Officer"
@@ -229,7 +229,7 @@ function FilteredCarousel(props) {
     <div style={contentStyle}>
       <Speaker
         speakerID="andrelago"
-        initStatus={"show"}
+        initStatus={"hide"}
         label="Talk. 14h"
         name="André Lago"
         job="Software Engineer and Tech Lead"
