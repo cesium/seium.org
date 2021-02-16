@@ -7,6 +7,7 @@ import Facebook from "../images/Facebook.svg";
 import Twitter from "../images/Twitter.svg";
 import GitHub from "../images/GitHub.svg";
 import LinkedIn from "../images/Linkedin.svg";
+import { withRouter } from "react-router-dom";
 
 function SpeakerBio(props) {
   const listItems = props.bio.map((s, i) => (
@@ -32,6 +33,11 @@ class Speaker extends React.Component {
     } else {
       this.setState({ status: "show" });
     }
+  }
+
+  componentDidMount() {
+    if (this.props.location.hash === `#${this.props.speakerID}`)
+      this.setState({ status: "show" });
   }
 
   render() {
@@ -266,4 +272,4 @@ class Speaker extends React.Component {
   }
 }
 
-export default Speaker;
+export default withRouter(Speaker);

@@ -610,9 +610,8 @@ button {
 
 .speaker {
   max-width: 50%;
-  padding-left: 2%;
-  padding-right: 2%;
   display: flex;
+  padding: 6px;
   flex-direction: column;
 }
 
@@ -630,5 +629,34 @@ button {
   font-family: "Inter Regular";
   font-weight: normal;
   margin-top: 2px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #4ca9ff;
+}
+
+.speaker:hover .overlay {
+  opacity: 0.4;
+}
+
+.speaker:hover p.medium-3 {
+  transition: 0.5s ease;
+  color: #4ca9ff;
+}
+
+.speaker:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=speaker.css.map */
