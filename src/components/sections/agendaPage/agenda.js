@@ -28,6 +28,10 @@ function Agenda(props) {
         <NavBar />
         <div style={styling}>
           <Container>
+            <SectionDescription middleTitle="Agenda"></SectionDescription>
+            <Carousel
+              initialDay={queryParams.day ? parseInt(queryParams.day) : 0}
+            />
             <div className="headerChallenge">
               <h1 className="chall-desc">
                 Five awesome days of learning, sharing and{" "}

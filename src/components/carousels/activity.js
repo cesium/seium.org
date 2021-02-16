@@ -104,8 +104,6 @@ function Activity(props) {
     ? { ...ActivityStyle().event, ...{ width: "100%", marginRight: "0" } }
     : ActivityStyle().event;
 
-  console.log(props);
-
   const handleActivityClick = () => {
     const path =
       (props.day ? "?day=" + props.day : "") +
