@@ -1,34 +1,57 @@
 [contributing]: CONTRIBUTING.md
 [code_of_conduct]: CODE_OF_CONDUCT.md
+[figma]: https://www.figma.com/file/1phER5eukGFC5p9tFGnfk7/SEI
+[netlify-badge]: https://api.netlify.com/api/v1/badges/ed584f7f-e3cd-47a3-b00e-c07faa722ce1/deploy-status
 
 # SEI - Semana da Engenharia Informática da UMinho
 
-SEI, our Software Engineering Week is an eventful week, fully organized by
-students for students.
+[![Netlify Status][netlify-badge]](https://app.netlify.com/sites/seium/deploys)
+[![Design](https://img.shields.io/badge/-figma-s?style=flat&logo=figma&color=black)][figma]
 
-## Available Scripts
+## :rocket: Getting Started
 
-In the project directory, you can run:
+These instructions will get you a copy of the project up and running on your
+local machine for development and testing purposes.
 
-### `yarn start`
+### :inbox_tray: Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The following software is required to be installed on your system:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Node.js 15.7.0](https://nodejs.org/en/download/)
 
-### `yarn test`
+Install all dependencies using `yarn install`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### :hammer: Development
 
-### `yarn build`
+Starting the development server.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Format your code.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn pretty
+```
+
+### :package: Deployment
+
+Bundling the app into static files for production.
+
+```
+yarn build
+```
+
+### :link: References
+
+You can use this resources to learn more about the tecnologies this project
+uses.
+
+- [Getting Started with React](https://reactjs.org/docs/getting-started.html)
+
+## :handshake: Contributing
+
+Please read [CONTRIBUTING][contributing] and [CODE_OF_CONDUCT][code_of_conduct]
+for details on our code of conduct and the process for submitting pull requests
+to us.
