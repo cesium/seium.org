@@ -817,6 +817,9 @@ button {
   .navbar .container-nav .nav-content .lang {
     display: none;
   }
+  .navbar .container-nav .nav-content .join-us {
+    display: none;
+  }
   .navbar .container-nav .menu-icon-wrapper {
     display: block !important;
     position: absolute;
