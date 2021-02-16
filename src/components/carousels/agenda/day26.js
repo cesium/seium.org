@@ -70,11 +70,12 @@ function Day26() {
         start="16:45"
         end="17:00"
       />
+      <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
         bigTitle="Closing Session and Prize Announcement"
-        start="17:00"
-        end="18:00"
+        start="17:30"
+        end="18:30"
       />
       <Activity
         main="yes"
