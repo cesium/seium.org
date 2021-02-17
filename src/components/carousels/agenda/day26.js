@@ -15,9 +15,13 @@ function Day26() {
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="Sensores e Algoritmos para Navegação Autónoma."
-        title="Workshop"
-        animator="Bosch"
+        bigTitle="Sensores e Algoritmos para Navegação Autónoma"
+        title="Workshop Bosch"
+        animator="João Andrade & João Ribeiro & Luciano Sousa"
+        day={3}
+        activityID="sensores"
+        speakerID=""
+        description="A Condução autónoma será a força motriz da evolução tecnológica nos tempos vindouros. A Participação da Bosch neste sector é muito variada, com grande ênfase na sensorização e Percepção baseada nos dados recebidos. Neste workshop iremos dar uma vista alargada sobre os sensores existentes, intuição acerca das vantagens/desvantagens de cada um, como fundir os dados de sensores diferentes e que ferramentas são necessárias para quem gostaria de trabalhar neste tópico."
       />
       <Activity
         start="9:30"
@@ -50,8 +54,9 @@ function Day26() {
         title="Talk"
         start="15:00"
         end="16:00"
-        animator="André Lago (Google)"
+        animator="André Lago, Google"
         day={3}
+        activityID="google"
         speakerID="andrelago"
         description="Se alguma vez sonhaste em trabalhar numa grande empresa como a Google, nesta talk vais descobrir como podes concretizar esse sonho! Vem aprender como te podes preparar para os processos de candidatura de empresas como a Google e descobre como é a sensação de trabalhar neste tipo de empresas. Depois desta talk, deverás ter tudo o que precisas para começar o teu caminho em direção ao emprego que sempre quiseste!"
       />

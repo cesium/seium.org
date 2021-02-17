@@ -33,6 +33,23 @@
       ],
       "day": 1,
       "linkedin": "https://www.linkedin.com/in/tiagocarcao/"
+    },
+    {
+      "speakerID": "julianacarvalho",
+      "initStatus": "hide",
+      "label": "Talk. 17h30",
+      "name": "Juliana Carvalho",
+      "job": "Trainer and Project Manager",
+      "description": "Unlimited Future",
+      "picture": "../images/speakers/julianacarvalho.png",
+      "bio": [
+        "Fiz todo o percurso académico na Faculdade de Letras da Universidade do Porto, onde me especializei em Sociologia. Desde os tempos da faculdade sempre achei importante ter a minha independência e conhecer o mercado de trabalho, por isso tive o meu primeiro emprego enquanto ainda estava a estudar. Para além disso, fui completando a minha experiência com alguns projetos de voluntariado, especialmente com crianças e jovens.",
+        "Em 2015, integrei a equipa do projeto Inspiring Future, para alargar as atividades para a zona norte do país, através do qual me tornei formadora e exerci funções como coordenadora da equipa norte que percorre mais de uma centena de escolas secundárias. Através da organização da feira de instituições de ensino superior, workshops e sessões sobre o acesso ao ensino superior, ajudamos os alunos do 12º ano a fazer a transição para o ensino superior ou para o mercado de trabalho. O nosso objetivo é trabalhar algumas competências que consideramos fundamentais nesta fase, ao mesmo tempo que auxiliamos os alunos a tomarem decisões mais conscientes e informadas acerca do seu futuro académico e/ou profissional. Atualmente, integro o projeto Unlimited Future, onde tenho vindo a alargar a minha atuação ao nível da formação com alunos do ensino superior e profissional, tendo em vista a preparação dos jovens para o mercado de trabalho."
+      ],
+      "day": 1,
+      "twitter": "",
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/juliana-viegas-carvalho/"
     }
   ],
   "2": [
@@ -51,6 +68,38 @@
       "twitter": "https://twitter.com/goncalossilva",
       "github": "https://github.com/goncalossilva",
       "linkedin": "https://www.linkedin.com/in/goncalossilva/"
+    },
+    {
+      "speakerID": "nunosantos",
+      "initStatus": "hide",
+      "label": "Workshop Primavera. 9h30",
+      "name": "Nuno Santos",
+      "job": "Software Engineer",
+      "description": "Primavera",
+      "picture": "../images/speakers/nunosantos.jpg",
+      "bio": [
+        "Formado em Engenharia Informática pela Faculdade de Engenharia da Universidade do Porto, conta já com 6 anos de experiência como Software Engineer na PRIMAVERA BSS, trabalhando no produto Jasmin, desde o seu nascimento, há 4 anos."
+       ],
+      "day": 2,
+      "twitter": "",
+      "github": "",
+      "linkedin": ""
+    },
+    {
+      "speakerID": "jorgeribeiro",
+      "initStatus": "hide",
+      "label": "Workshop Primavera. 9h30",
+      "name": "Jorge Ribeiro",
+      "job": "Team Leader",
+      "description": "Primavera",
+      "picture": "../images/speakers/jorgeribeiro.jpg",
+      "bio": [
+        "Formado em Engenharia Informática pela Universidade do Minho, conta já com 16 anos de experiência na área de desenvolvimento de software. Na PRIMAVERA BSS começou como Software Engineer, tornou-se Technical Lead de uma equipa de tecnologia, e há 2 anos lidera a equipa do Jasmin, o primeiro ERP 100% cloud da PRIMAVERA."
+      ],
+      "day": 2,
+      "twitter": "",
+      "github": "",
+      "linkedin": ""
     }
   ],
   "3": [
@@ -71,6 +120,48 @@
       "twitter": "https://twitter.com/andrelago13",
       "github": "https://github.com/andrelago13",
       "linkedin": "http://linkedin.com/in/andre-lago/"
+    },
+    {
+      "speakerID": "joaoandrade",
+      "initStatus": "hide",
+      "label": "Workshop Bosch. 9h30",
+      "name": "João Andrade",
+      "job": "Scrum Master",
+      "description": "Bosch",
+      "picture": "../images/speakers/joaoandrade.jpg",
+      "bio": [],
+      "day": 3,
+      "twitter": "",
+      "github": "",
+      "linkedin": ""
+    },
+    {
+      "speakerID": "joaoribeiro",
+      "initStatus": "hide",
+      "label": "Workshop Bosch. 9h30",
+      "name": "João Ribeiro",
+      "job": "Perception Architect",
+      "description": "Bosch",
+      "picture": "../images/speakers/joaoribeiro.jpg",
+      "bio": [],
+      "day": 3,
+      "twitter": "",
+      "github": "",
+      "linkedin": ""
+    }
+    ,{
+      "speakerID": "lucianosousa",
+      "initStatus": "hide",
+      "label": "Workshop Bosch. 9h30",
+      "name": "Luciano Sousa",
+      "job": "Product Owner",
+      "description": "Bosch",
+      "picture": "../images/speakers/lucianosousa.png",
+      "bio": [],
+      "day": 3,
+      "twitter": "",
+      "github": "",
+      "linkedin": ""
     }
   ]
 }

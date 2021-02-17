@@ -50,7 +50,7 @@ function Day24() {
         title="Talk"
         start="15:00"
         end="16:00"
-        animator="Tiago Carção (Glovo)"
+        animator="Tiago Carção, Glovo"
         day={1}
         activityID="sistemaslargaescala"
         speakerID="tiagocarcao"
@@ -68,17 +68,23 @@ function Day24() {
       />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="Vilt"
         title="Pitch"
         start="16:45"
         end="17:00"
       />
+      <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="CV - Check Up"
         title="Talk"
-        start="17:00"
-        end="18:00"
+        start="17:30"
+        end="18:30"
+        animator="Juliana Carvalho, Unlimited Future"
+        day={1}
+        activityID="cv"
+        speakerID="julianacarvalho"
+        description="O CV sempre desempenhou um papel importante no processo de recrutamento, e é uma das ferramentas tradicionais do mercado de trabalho que funciona como um cartão de visita. Nesta talk, vamos dar-te algumas dicas sobre a maneira mais eficaz de apresentar a história da tua vida!"
       />
       <Activity
         main="yes"

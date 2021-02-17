@@ -16,15 +16,24 @@ function Day25() {
         start="9:30"
         end="11:30"
         bigTitle="DevOps: The Next Generation!"
-        title="Workshop"
-        animator="Critical Software"
+        title="Workshop Critical Software"
+        animator="Eduardo Ribeiro & Filipe Valpereiro"
+        day={2}
+        activityID="devops"
+        speakerID=""
+        description=""
       />
       <Activity
         start="9:30"
         end="11:30"
-        bigTitle="Primavera"
-        title="Workshop"
-        animator="Primavera"
+        bigTitle="Sabes que começou na API, I-I-I"
+        title="Workshop Primavera"
+        animator="Jorge Ribeiro & Nuno Santos"
+        day={2}
+        activityID="api"
+        speakerID="nunosantos"
+        speakerID="jorgeribeiro"
+        description="Sabes o que é uma Web API? Quer saibas ou não, junta-te a nós e aceita o desafio de fazer a tua primeira integração com o Jasmin. Há prémio para o(s) vencedor(es)!"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
@@ -50,8 +59,9 @@ function Day25() {
         title="Talk"
         start="15:00"
         end="16:00"
-        animator="Gonçalo Silva (Doist)"
+        animator="Gonçalo Silva, Doist"
         day={2}
+        activityID="remote"
         speakerID="goncalosilva"
         description="Remote is here to stay. Increasingly, more companies realize it's the future of work. But with it, many best practices break down. Communicating and working synchronously is tricky when your team is distributed across the globe. Chit-chat is hard, pair programming is harder, mob programming is impossible. So, how exactly do you collaborate effectively? How do you raise the quality bar as a team? How do you share knowledge, and keep others in the loop? Are there established approaches from which we can draw inspiration?"
       />

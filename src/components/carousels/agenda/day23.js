@@ -43,7 +43,7 @@ function Day23() {
         title="Talk"
         start="15:00"
         end="16:00"
-        animator="João Oliveira (Tonic App)"
+        animator="João Oliveira, Tonic App"
         day={0}
         activityID="wecandoit"
         speakerID="joaooliveira"
