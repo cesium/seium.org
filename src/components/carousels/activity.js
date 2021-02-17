@@ -85,17 +85,15 @@ function Activity(props) {
         bigTitle: {
           paddingTop: "6px",
           width: "90%",
-          fontSize: "10px",
-          lineHeight: "11px",
+          fontSize: "14px",
+          lineHeight: "14px",
         },
       };
     }
   };
 
   let bigTitle = props.bigTitle ? (
-    <span style={ActivityStyle().bigTitle}>
-      {props.bigTitle}
-    </span>
+    <span style={ActivityStyle().bigTitle}>{props.bigTitle}</span>
   ) : (
     ""
   );
@@ -122,7 +120,7 @@ function Activity(props) {
     >
       <div style={{ display: "flex" }}>
         <div style={{ flexGrow: 1 }}>
-          <p className="medium-3" style={ActivityStyle().timing}>
+          <p className="activity-type" style={ActivityStyle().timing}>
             {props.start}
             {props.start ? "—" : ""}
             {props.end}
@@ -130,10 +128,8 @@ function Activity(props) {
         </div>
       </div>
 
-      <p className="medium" style={ActivityStyle().bigTitle}>
-        <span className="medium-3">
-          {props.title}{" "}
-        </span>
+      <p className="activity" style={ActivityStyle().bigTitle}>
+        <span className="activity-type">{props.title} </span>
         {!isAgendaPage ? (
           <span
             onClick={() => handleActivityClick()}
@@ -160,16 +156,40 @@ function Activity(props) {
           join={props.join}
         />
       </div>
-      <p style={{ opacity: "0.8", marginTop: "5px", fontSize: "14px" }}>
-        <a
-          href={
-            (props.day ? "/speakers?day=" + props.day : "/speakers") +
-            (props.speakerID ? `#${props.speakerID}` : "")
-          }
-          className="agenda-link"
-        >
-          {props.animator}
-        </a>
+      <p style={{ opacity: "0.8", marginTop: "5px", fontSize: "14px", display: "block" }}>
+        {props.speaker1ID ? (
+          <a
+            href={
+              (props.day ? "/speakers?day=" + props.day : "/speakers") +
+              (props.speaker1ID ? `#${props.speaker1ID}` : "")
+            }
+            className="agenda-link"
+          >
+            {props.animator1}
+          </a>
+        ) : null}
+        {props.speaker2ID ? (
+          <a
+            href={
+              (props.day ? "/speakers?day=" + props.day : "/speakers") +
+              (props.speaker2ID ? `#${props.speaker2ID}` : "")
+            }
+            className="agenda-link"
+          >
+            {props.animator2}
+          </a>
+        ) : null}
+        {props.speaker3ID ? (
+          <a
+            href={
+              (props.day ? "/speakers?day=" + props.day : "/speakers") +
+              (props.speaker3ID ? `#${props.speaker3ID}` : "")
+            }
+            className="agenda-link"
+          >
+            {props.animator3}
+          </a>
+        ) : null}
       </p>
       {expand && (
         <Fade>
@@ -179,7 +199,7 @@ function Activity(props) {
               opacity: "0.8",
               marginTop: "16px",
               fontSize: "14px",
-              fontFamily: "Inter Regular"
+              fontFamily: "Inter Regular",
             }}
           >
             {props.description}
@@ -187,13 +207,20 @@ function Activity(props) {
         </Fade>
       )}
       {props.description && isAgendaPage && (
-        <div style={{position: "absolute", right: "0", bottom: "0", marginBottom: "10px", marginRight: "10px"}}>
+        <div
+          style={{
+            position: "absolute",
+            right: "0",
+            bottom: "0",
+            marginBottom: "10px",
+            marginRight: "10px",
+          }}
+        >
           <Button onClick={() => setExpand(!expand)}>
             {expand ? "-" : "+"}
           </Button>
-          </div>
-        )}
-
+        </div>
+      )}
     </div>
   );
 }
