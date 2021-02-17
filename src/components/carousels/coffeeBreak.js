@@ -6,16 +6,10 @@ let CoffeeStyle = () => {
     return {
       text: {},
     };
-  } else if (width >= 768) {
-    return {
-      text: {
-        fontSize: "14px",
-      },
-    };
   } else {
     return {
       text: {
-        fontSize: "12px",
+        fontSize: "14px",
       },
     };
   }

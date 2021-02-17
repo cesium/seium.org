@@ -37,7 +37,7 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 15px 30px 15px",
+          padding: "10px 15px 60px 15px",
           position: "relative",
           //height: "0",
           //paddingBottom: parseTime(props.start, props.end) + "px",
@@ -54,7 +54,7 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 15px 30px 15px",
+          padding: "10px 15px 60px 15px",
           position: "relative",
           //height: "0",
           //paddingBottom: parseTime(props.start, props.end) + "px",
@@ -74,7 +74,7 @@ function Activity(props) {
           // marginRight: '8px',
           width: "47%",
           borderTop: "1px solid white",
-          padding: "10px 15px 30px 15px",
+          padding: "10px 15px 60px 15px",
           position: "relative",
           //height: "0",
           //paddingBottom: parseTime(props.start, props.end) + "px",
@@ -85,17 +85,15 @@ function Activity(props) {
         bigTitle: {
           paddingTop: "6px",
           width: "90%",
-          fontSize: "10px",
-          lineHeight: "11px",
+          fontSize: "14px",
+          lineHeight: "16px",
         },
       };
     }
   };
 
   let bigTitle = props.bigTitle ? (
-    <span className="medium-3" style={ActivityStyle().bigTitle}>
-      {props.bigTitle}
-    </span>
+    <span style={ActivityStyle().bigTitle}>{props.bigTitle}</span>
   ) : (
     ""
   );
@@ -122,20 +120,16 @@ function Activity(props) {
     >
       <div style={{ display: "flex" }}>
         <div style={{ flexGrow: 1 }}>
-          <p className="medium-3" style={ActivityStyle().timing}>
+          <p className="activity-type" style={ActivityStyle().timing}>
             {props.start}
             {props.start ? "—" : ""}
             {props.end}
           </p>
         </div>
-        {props.description && isAgendaPage && (
-          <Button onClick={() => setExpand(!expand)}>
-            {expand ? "-" : "+"}
-          </Button>
-        )}
       </div>
 
-      <p className="medium" style={ActivityStyle().bigTitle}>
+      <p className="activity" style={ActivityStyle().bigTitle}>
+        <span className="activity-type">{props.title} </span>
         {!isAgendaPage ? (
           <span
             onClick={() => handleActivityClick()}
@@ -145,8 +139,7 @@ function Activity(props) {
           </span>
         ) : (
           <span>{bigTitle}</span>
-        )}{" "}
-        {props.title}
+        )}
       </p>
 
       <div
@@ -163,16 +156,49 @@ function Activity(props) {
           join={props.join}
         />
       </div>
-      <p style={{ opacity: "0.8", marginTop: "5px", fontSize: "14px" }}>
-        <a
-          href={
-            (props.day ? "/speakers?day=" + props.day : "/speakers") +
-            (props.speakerID ? `#${props.speakerID}` : "")
-          }
-          className="agenda-link"
-        >
-          {props.animator}
-        </a>
+      <p
+        style={{
+          opacity: "0.8",
+          marginTop: "5px",
+          fontSize: "14px",
+          display: "block",
+        }}
+      >
+        {props.speaker1ID ? (
+          <a
+            href={
+              (props.day ? "/speakers?day=" + props.day : "/speakers") +
+              (props.speaker1ID ? `#${props.speaker1ID}` : "")
+            }
+            className="agenda-link"
+          >
+            {props.animator1}
+          </a>
+        ) : null}
+        {props.speaker2ID ? (
+          <a
+            style = {{ marginTop: "5px"}}
+            href={
+              (props.day ? "/speakers?day=" + props.day : "/speakers") +
+              (props.speaker2ID ? `#${props.speaker2ID}` : "")
+            }
+            className="agenda-link"
+          >
+            {props.animator2}
+          </a>
+        ) : null}
+        {props.speaker3ID ? (
+          <a
+            style = {{ marginTop: "5px"}}
+            href={
+              (props.day ? "/speakers?day=" + props.day : "/speakers") +
+              (props.speaker3ID ? `#${props.speaker3ID}` : "")
+            }
+            className="agenda-link"
+          >
+            {props.animator3}
+          </a>
+        ) : null}
       </p>
       {expand && (
         <Fade>
@@ -182,11 +208,27 @@ function Activity(props) {
               opacity: "0.8",
               marginTop: "16px",
               fontSize: "14px",
+              fontFamily: "Inter Regular",
             }}
           >
             {props.description}
           </p>
         </Fade>
+      )}
+      {props.description && isAgendaPage && (
+        <div
+          style={{
+            position: "absolute",
+            right: "0",
+            bottom: "0",
+            marginBottom: "10px",
+            marginRight: "10px",
+          }}
+        >
+          <Button onClick={() => setExpand(!expand)}>
+            {expand ? "-" : "+"}
+          </Button>
+        </div>
       )}
     </div>
   );

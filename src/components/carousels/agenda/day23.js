@@ -43,10 +43,10 @@ function Day23() {
         title="Talk"
         start="15:00"
         end="16:00"
-        animator="João Oliveira (Tonic App)"
+        animator1="João Oliveira, Tonic App"
         day={0}
         activityID="wecandoit"
-        speakerID="joaooliveira"
+        speaker1ID="joaooliveira"
         description="Numa indústria até há uns anos enormemente desproporcional no rácio de profissionais por género, o papel das mulheres na indústria de tecnologia e software é cada vez mais relevante e prometedor em economias que as tecnologias são parte da visão estratégica e aposta no futuro de um país."
       />
       <CoffeeBreak name="Coffee Break" />
@@ -59,7 +59,7 @@ function Day23() {
       />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="Capgemini"
         title="Pitch"
         start="16:45"
         end="17:00"
