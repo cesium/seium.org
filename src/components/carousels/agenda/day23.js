@@ -59,7 +59,7 @@ function Day23() {
       />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="Capgemini"
         title="Pitch"
         start="16:45"
         end="17:00"

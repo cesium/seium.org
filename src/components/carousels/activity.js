@@ -86,7 +86,7 @@ function Activity(props) {
           paddingTop: "6px",
           width: "90%",
           fontSize: "14px",
-          lineHeight: "14px",
+          lineHeight: "1px",
         },
       };
     }
@@ -156,7 +156,14 @@ function Activity(props) {
           join={props.join}
         />
       </div>
-      <p style={{ opacity: "0.8", marginTop: "5px", fontSize: "14px", display: "block" }}>
+      <p
+        style={{
+          opacity: "0.8",
+          marginTop: "5px",
+          fontSize: "14px",
+          display: "block",
+        }}
+      >
         {props.speaker1ID ? (
           <a
             href={

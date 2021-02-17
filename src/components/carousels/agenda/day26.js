@@ -67,7 +67,7 @@ function Day26() {
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="KPMG"
         title="Pitch"
         start="16:30"
         end="16:45"
