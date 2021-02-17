@@ -86,7 +86,7 @@ function Activity(props) {
           paddingTop: "6px",
           width: "90%",
           fontSize: "14px",
-          lineHeight: "1px",
+          lineHeight: "16px",
         },
       };
     }
@@ -177,6 +177,7 @@ function Activity(props) {
         ) : null}
         {props.speaker2ID ? (
           <a
+            style = {{ marginTop: "5px"}}
             href={
               (props.day ? "/speakers?day=" + props.day : "/speakers") +
               (props.speaker2ID ? `#${props.speaker2ID}` : "")
@@ -188,6 +189,7 @@ function Activity(props) {
         ) : null}
         {props.speaker3ID ? (
           <a
+            style = {{ marginTop: "5px"}}
             href={
               (props.day ? "/speakers?day=" + props.day : "/speakers") +
               (props.speaker3ID ? `#${props.speaker3ID}` : "")
