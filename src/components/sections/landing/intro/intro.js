@@ -84,11 +84,11 @@ class Intro extends React.Component {
             <div className="bottom">
               <div className="infos">
                 <div className="contact">
-                  <p className="nav-bar-link">Find us on</p>
+                  <p className="find">Find us on</p>
                   <Media />
                 </div>
                 <div className="organization">
-                  <p className="nav-bar-link">Organization</p>
+                  <p className="find">Organization</p>
                   <a target="_blank" href="https://cesium.di.uminho.pt/">
                     <div className="image"></div>
                   </a>
