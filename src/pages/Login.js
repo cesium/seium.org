@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import API from "../utils/api";
 import { useHistory } from "react-router-dom";
 import Logo from "../assets/img/logo/moonstoneLogo.svg";
 import Button from "../components/moonstone/Button";
@@ -34,26 +35,14 @@ const Login = () => {
       isSubmitting: true,
       errorMessage: null,
     });
-    fetch("https://sei21-staging.herokuapp.com/api/auth/sign_in", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: data.email,
-        password: data.password,
-      }),
+    API.post("/auth/sign_in", {
+      email: data.email,
+      password: data.password,
     })
       .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        throw res;
-      })
-      .then((resJson) => {
         dispatch({
           type: "LOGIN",
-          payload: resJson,
+          payload: res.data,
         });
         setData({
           ...data,
@@ -63,10 +52,23 @@ const Login = () => {
         history.replace("/profile");
       })
       .catch((error) => {
+        console.log(error.response);
+        let errorMessage = null;
+        if (error.response) {
+          errorMessage = error.response.statusText;
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          errorMessage = "The server did not respond. Bad server!";
+        } else {
+          errorMessage =
+            "Something happened and we don't know what. Reload and try again?";
+        }
         setData({
           ...data,
           isSubmitting: false,
-          errorMessage: error.message || error.statusText,
+          errorMessage,
         });
       });
   };
