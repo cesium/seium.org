@@ -993,6 +993,20 @@ label {
   }
 }
 
+.containerregister .form-container .login-error {
+  margin-bottom: 26px;
+  margin-top: 13px;
+  color: #ff4444;
+}
+
+@media (max-width: 766px) {
+  .containerregister .form-container .login-error {
+    margin-top: 8px;
+    font-size: 10px;
+    line-height: 1;
+  }
+}
+
 .containerregister .form-container .button-reg {
   margin-top: 26px;
 }
