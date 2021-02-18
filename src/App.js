@@ -17,8 +17,6 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import SideBar from "./components/moonstone/sideBar";
 
-require("dotenv").config();
-
 export const GlobalContext = createContext();
 
 const initialState = {
@@ -51,7 +49,9 @@ const reducer = (state, action) => {
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
   const { state: authState } = useContext(GlobalContext);
-  console.log(authState);
+  if (!authState.isAuthenticated) {
+    //também há authState.token para o jwt
+  }
   return (
     <Route
       {...rest}

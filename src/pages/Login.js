@@ -35,7 +35,7 @@ const Login = () => {
       isSubmitting: true,
       errorMessage: null,
     });
-    API.post("/auth/sign_in", {
+    API.post(process.env.REACT_APP_API_AUTH_SIGN_IN, {
       email: data.email,
       password: data.password,
     })

@@ -7,7 +7,7 @@ if (!/^https?:\/\//i.test(APP_URL)) {
 }
 
 const API = axios.create({
-  baseURL: `${APP_URL}/api`,
+  baseURL: `${APP_URL}`,
   responseType: "json",
   headers: {
     "Content-Type": "application/json",
