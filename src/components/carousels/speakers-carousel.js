@@ -39,8 +39,16 @@ let headerStyle = () => {
       },
       headerContainer: {
         display: "flex",
+        flexDirection: "column",
+      },
+      wrapper: {
+        display: "flex",
         alignItems: "flex-start",
         flexDirection: "column",
+        position: "sticky",
+        top: 0,
+        paddingTop: "1rem",
+        marginTop: "-1rem",
       },
     };
   } else if (width >= 823) {
@@ -65,8 +73,16 @@ let headerStyle = () => {
       },
       headerContainer: {
         display: "flex",
+        flexDirection: "column",
+      },
+      wrapper: {
+        display: "flex",
         alignItems: "flex-start",
         flexDirection: "column",
+        position: "sticky",
+        top: 0,
+        paddingTop: "1rem",
+        marginTop: "-1rem",
       },
     };
   } else if (width >= 768) {
@@ -93,8 +109,16 @@ let headerStyle = () => {
       },
       headerContainer: {
         display: "flex",
+        flexDirection: "column",
+      },
+      wrapper: {
+        display: "flex",
         alignItems: "flex-start",
         flexDirection: "column",
+        position: "sticky",
+        top: 0,
+        paddingTop: "1rem",
+        marginTop: "-1rem",
       },
     };
   } else {
@@ -135,6 +159,7 @@ let headerStyle = () => {
         flexDirection: "column",
         marginBottom: "30px",
       },
+      wrapper: {},
     };
   }
 };
@@ -178,41 +203,43 @@ function FilteredCarousel(props) {
 
   const Header = () => (
     <div style={headerStyle().headerContainer}>
-      <p className="x-large-1" style={headerStyle().date}>
-        Happening on
-      </p>
-      <div style={headerStyle().navigation}>
-        <Clickable
-          onClick={() => {
-            navigate("prev");
-          }}
-          className="clickable prev"
-          style={{
-            ...headerStyle().button,
-            ...{ backgroundImage: `url(${prev})` },
-          }}
-        ></Clickable>
-        <h1 style={headerStyle().day}>{23 + increment} Fev</h1>
-        <Clickable
-          onClick={() => {
-            navigate("next");
-          }}
-          className="clickable next"
-          style={{
-            ...headerStyle().button,
-            ...{ backgroundImage: `url(${next})` },
-          }}
-        >
-          {" "}
-        </Clickable>
-      </div>
-      <div className="headerButtons">
-        <p className="small" style={{ width: "68%", lineHeight: "1.2" }}>
-          During this week, you have the opportunity to interact with many
-          recognized speakers, national, international and notorious companies!
-          You can get to know them better here.
+      <div style={headerStyle().wrapper}>
+        <p className="x-large-1" style={headerStyle().date}>
+          Happening on
         </p>
-        <div className="agenda-buttons"></div>
+        <div style={headerStyle().navigation}>
+          <Clickable
+            onClick={() => {
+              navigate("prev");
+            }}
+            className="clickable prev"
+            style={{
+              ...headerStyle().button,
+              ...{ backgroundImage: `url(${prev})` },
+            }}
+          ></Clickable>
+          <h1 style={headerStyle().day}>{23 + increment} Fev</h1>
+          <Clickable
+            onClick={() => {
+              navigate("next");
+            }}
+            className="clickable next"
+            style={{
+              ...headerStyle().button,
+              ...{ backgroundImage: `url(${next})` },
+            }}
+          >
+            {" "}
+          </Clickable>
+        </div>
+        <div className="headerButtons">
+          <p className="small" style={{ width: "68%", lineHeight: "1.2" }}>
+            During this week, you have the opportunity to interact with many
+            recognized speakers, national, international and notorious
+            companies! You can get to know them better here.
+          </p>
+          <div className="agenda-buttons"></div>
+        </div>
       </div>
     </div>
   );
