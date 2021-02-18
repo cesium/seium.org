@@ -1,5 +1,5 @@
 import Logo from "../assets/img/logo/moonstoneLogo.svg";
-import Form from "../components/moonstone/form";
+import { FormSignup } from "../components/moonstone/form";
 import Button from "../components/moonstone/Button";
 import Card from "../components/moonstone/Card";
 import Robot from "../assets/img/robot/Robot.svg";
@@ -18,13 +18,13 @@ const Register = () => {
           <img src={Logo} alt="logo" className="logo" />
         </a>
         <h1 className="sign-up">Sign up</h1>
-        <Form />
+        <FormSignup />
         <div className="button-reg">
           <Button width="340px"> LET'S GO!</Button>
         </div>
         <div className="label login-here">
           Already have an account?{" "}
-          <a href="#" className="login">
+          <a href="/login" className="login">
             Login here
           </a>
         </div>
