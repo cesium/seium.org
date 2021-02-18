@@ -785,3 +785,25 @@ button {
     height: 40vh;
   }
 }
+
+@media (max-width: 992px) {
+  .about p.medium {
+    font-size: 12px;
+  }
+  .about p.medium-3 {
+    font-size: 12px !important;
+    padding: 3px 0px 3px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  p.medium {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerButtons p.small {
+    width: 100% !important;
+  }
+}

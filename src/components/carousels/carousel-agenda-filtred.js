@@ -183,7 +183,7 @@ function FiltredCarousel(props) {
     flexDirection: "row",
     justifyContent: "space-between",
     flexWrap: "wrap",
-    maxWidth: "450px",
+    maxWidth: "450px"
   };
   return (
     <Container style={{ ...containerStyle, ...props.style }}>

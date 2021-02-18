@@ -8,6 +8,7 @@ import Twitter from "../images/Twitter.svg";
 import GitHub from "../images/GitHub.svg";
 import LinkedIn from "../images/Linkedin.svg";
 import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function SpeakerBio(props) {
   const listItems = props.bio.map((s, i) => (
@@ -43,6 +44,14 @@ class Speaker extends React.Component {
   render() {
     const width = window.innerWidth;
 
+    const handleActivityClick = () => {
+      const path =
+        (this.props.day ? "?day=" + this.props.day : "") +
+        (this.props.activityID ? `#${this.props.activityID}` : "");
+      console.log(path);
+      this.props.history.push("/agenda" + path);
+    };
+
     let ActivityStyle = () => {
       if (width >= 1200) {
         return {
@@ -55,6 +64,7 @@ class Speaker extends React.Component {
           name: {
             paddingTop: "6px",
             width: "90%",
+            fontSize: "14px",
           },
         };
       } else if (width >= 768) {
@@ -70,7 +80,7 @@ class Speaker extends React.Component {
           name: {
             paddingTop: "6px",
             width: "90%",
-            fontSize: "14px",
+            fontSize: "12px",
           },
         };
       } else {
@@ -86,7 +96,7 @@ class Speaker extends React.Component {
           name: {
             paddingTop: "6px",
             width: "90%",
-            fontSize: "10px",
+            fontSize: "12px",
             lineHeight: "11px",
           },
         };
@@ -100,12 +110,23 @@ class Speaker extends React.Component {
         position: "relative",
         paddingBottom: "10px",
         backgroundColor: "transparent",
+        maxHeight: "130px",
+        minHeight: "105px",
       },
     };
     let footerStyle = () => {
       if (width >= 1200) {
         return {
           labelStyle: {
+            fontFamily: "Inter Regular",
+            fontSize: "12px",
+            fontWeight: "normal",
+            fontStretch: "normal",
+            fontStyle: "normal",
+            lineHeight: "1.1",
+            letterSpacing: "normal",
+            textAlign: "left",
+            color: "#ffffff",
             width: "55%",
             whiteSpace: "nowrap",
             opacity: "0.5",
@@ -115,12 +136,14 @@ class Speaker extends React.Component {
             flexDirection: "row",
           },
           containerStyle: {
-            width: "100%",
+            width: "70%",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             paddingRight: "10px",
             minHeight: "23px",
+            position: "absolute",
+            bottom: "10px",
           },
           buttonStyle: {},
           gotoStyle: {
@@ -131,6 +154,15 @@ class Speaker extends React.Component {
       } else if (width >= 768) {
         return {
           labelStyle: {
+            fontFamily: "Inter Regular",
+            fontSize: "12px",
+            fontWeight: "normal",
+            fontStretch: "normal",
+            fontStyle: "normal",
+            lineHeight: "1.1",
+            letterSpacing: "normal",
+            textAlign: "left",
+            color: "#ffffff",
             width: "55%",
             whiteSpace: "nowrap",
             opacity: "0.5",
@@ -141,12 +173,14 @@ class Speaker extends React.Component {
             flexDirection: "row",
           },
           containerStyle: {
-            width: "100%",
+            width: "70%",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             paddingRight: "10px",
             minHeight: "23px",
+            position: "absolute",
+            bottom: "10px",
           },
           buttonStyle: {
             padding: "0px 12px 3px",
@@ -159,6 +193,15 @@ class Speaker extends React.Component {
       } else {
         return {
           labelStyle: {
+            fontFamily: "Inter Regular",
+            fontSize: "12px",
+            fontWeight: "normal",
+            fontStretch: "normal",
+            fontStyle: "normal",
+            lineHeight: "1.1",
+            letterSpacing: "normal",
+            textAlign: "left",
+            color: "#ffffff",
             width: "55%",
             whiteSpace: "nowrap",
             opacity: "0.5",
@@ -169,12 +212,14 @@ class Speaker extends React.Component {
             flexDirection: "row",
           },
           containerStyle: {
-            width: "100%",
+            width: "75%",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             paddingRight: "10px",
             minHeight: "23px",
+            position: "absolute",
+            bottom: "5px",
           },
           buttonStyle: {
             padding: "0px 12px 3px",
@@ -230,24 +275,23 @@ class Speaker extends React.Component {
                 ) : null}
               </div>
             </div>
-            <div style={{ ...footerStyle().headerStyle, ...this.props.style }}>
-              <div style={footerStyle().containerStyle}>
-                <p style={footerStyle().labelStyle} className="nav-bar-link">
-                  {this.props.label}
-                </p>
-                <Clickable>
-                  <p style={footerStyle().gotoStyle} className="x-large">
-                    {this.props.goto}
-                  </p>
-                </Clickable>
-                <Button
-                  onClick={this.changeStatus}
-                  background={"#173149"}
-                  style={footerStyle().buttonStyle}
-                >
-                  {this.state.status === "show" ? "-" : "+"}
-                </Button>
-              </div>
+            <div style={footerStyle().containerStyle}>
+              <p style={footerStyle().labelStyle}>{this.props.label}</p>
+              <p style={footerStyle().gotoStyle} className="x-large">
+                  <span
+                    onClick={() => handleActivityClick()}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Go to event
+                  </span>
+              </p>
+              <Button
+                onClick={this.changeStatus}
+                background={"#173149"}
+                style={footerStyle().buttonStyle}
+              >
+                {this.state.status === "show" ? "-" : "+"}
+              </Button>
             </div>
           </div>
         </div>
@@ -258,7 +302,6 @@ class Speaker extends React.Component {
               ...ActivityStyle().name,
               ...{
                 width: "100%",
-                fontSize: "14px",
                 lineHeight: "1.3",
                 padding: "10px",
               },
