@@ -39,6 +39,11 @@ let headerStyle = () => {
         display: "flex",
         alignItems: "center",
         flexDirection: "row",
+        position: "sticky",
+        top: 0,
+        paddingBottom: "4rem",
+        paddingTop: "1rem",
+        marginTop: "-1rem",
       },
       headerContainer: {
         display: "flex",
@@ -65,6 +70,11 @@ let headerStyle = () => {
         display: "flex",
         alignItems: "center",
         flexDirection: "row",
+        position: "sticky",
+        top: 0,
+        paddingBottom: "4rem",
+        paddingTop: "1rem",
+        marginTop: "-1rem",
       },
       headerContainer: {
         display: "flex",
@@ -91,6 +101,11 @@ let headerStyle = () => {
         display: "flex",
         alignItems: "center",
         flexDirection: "row",
+        position: "sticky",
+        top: 0,
+        paddingBottom: "4rem",
+        paddingTop: "1rem",
+        marginTop: "-1rem",
       },
       headerContainer: {
         display: "flex",
@@ -174,9 +189,6 @@ function AgendaCarousel(props) {
   function Header(props) {
     return (
       <div style={headerStyle().headerContainer}>
-        <p className="x-large-1" style={headerStyle().date}>
-          {/* {23 + increment} Feb */}
-        </p>
         <div style={headerStyle().navigation}>
           <Clickable
             onClick={() => {
