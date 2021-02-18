@@ -11,6 +11,8 @@ import Hackathon from "./components/sections/hackathon/hackathon";
 import Register from "./pages/Register";
 import SideBar from "./components/moonstone/sideBar";
 
+require("dotenv").config();
+
 function App() {
   return (
     <Router>
