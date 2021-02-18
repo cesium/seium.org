@@ -181,7 +181,7 @@ function FilteredCarousel(props) {
     flexDirection: "row",
     justifyContent: "space-between",
     flexWrap: "wrap",
-    maxWidth: "450px"
+    maxWidth: "450px",
   };
   let [increment, setIncrement] = React.useState(props.initialDay);
   function navigate(param) {

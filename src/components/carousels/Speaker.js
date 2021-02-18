@@ -278,12 +278,12 @@ class Speaker extends React.Component {
             <div style={footerStyle().containerStyle}>
               <p style={footerStyle().labelStyle}>{this.props.label}</p>
               <p style={footerStyle().gotoStyle} className="x-large">
-                  <span
-                    onClick={() => handleActivityClick()}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Go to event
-                  </span>
+                <span
+                  onClick={() => handleActivityClick()}
+                  style={{ cursor: "pointer" }}
+                >
+                  Go to event
+                </span>
               </p>
               <Button
                 onClick={this.changeStatus}
