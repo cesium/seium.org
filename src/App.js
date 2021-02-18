@@ -5,6 +5,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import { UserContextProvider } from "./components/moonstone/context/user";
+import API from "./utils/api";
 
 import Home from "./components/sections/landing/landing";
 import Agenda from "./components/sections/agendaPage/agenda";
@@ -28,6 +30,9 @@ const reducer = (state, action) => {
     case "LOGIN":
       localStorage.clear();
       localStorage.setItem("token", action.payload.jwt);
+      API.defaults.headers.common[
+        "Authorization"
+      ] = `Bearer ${action.payload.jwt}`;
       return {
         ...state,
         isAuthenticated: true,
@@ -35,6 +40,7 @@ const reducer = (state, action) => {
       };
     case "LOGOUT":
       localStorage.clear();
+      delete API.defaults.headers.common["Authorization"];
       return {
         ...state,
         isAuthenticated: false,
@@ -75,43 +81,45 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <GlobalContext.Provider value={{ state, dispatch }}>
-      <Router>
-        <div>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/agenda">
-              <Agenda />
-            </Route>
-            <Route path="/speakers">
-              <Speakers />
-            </Route>
-            <Route path="/challenges">
-              <Challenges />
-            </Route>
-            <Route path="/team">
-              <Team />
-            </Route>
-            <Route path="/hackathon">
-              <Hackathon />
-            </Route>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <PrivateRoute path="/profile">
-              <SideBar />
-            </PrivateRoute>
-            <Route path="/404">
-              <Error />
-            </Route>
-            <Route component={Error} />
-          </Switch>
-        </div>
-      </Router>
+      <UserContextProvider>
+        <Router>
+          <div>
+            <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+              <Route path="/agenda">
+                <Agenda />
+              </Route>
+              <Route path="/speakers">
+                <Speakers />
+              </Route>
+              <Route path="/challenges">
+                <Challenges />
+              </Route>
+              <Route path="/team">
+                <Team />
+              </Route>
+              <Route path="/hackathon">
+                <Hackathon />
+              </Route>
+              <Route path="/register">
+                <Register />
+              </Route>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <PrivateRoute path="/profile">
+                <SideBar />
+              </PrivateRoute>
+              <Route path="/404">
+                <Error />
+              </Route>
+              <Route component={Error} />
+            </Switch>
+          </div>
+        </Router>
+      </UserContextProvider>
     </GlobalContext.Provider>
   );
 }

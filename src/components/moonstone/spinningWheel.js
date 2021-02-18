@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Button from "./Button";
-import Achievement from "./achievements/Achievement";
+import Achievement from "./Achievement";
 
 function getrotateDegree(min, max) {
   return Math.random() * (max - min) + min;

@@ -1,23 +1,33 @@
-// import SideBar from '../components/moonstone/sideBar'
+import React, { useEffect } from "react";
+import { useUser } from "../components/moonstone/context/user";
 import SectionHeader from "../components/moonstone/SectionHeader";
-import EditProfile from "../components/moonstone/EditProfile";
-import Achievements from "../components/moonstone/achievements/";
+import UserInfo from "../components/moonstone/User/UserInfo";
+import UserAchievements from "../components/moonstone/User/UserAchievements";
+
+import API from "../utils/api";
 
 import "../assets/css/moonstone.css";
 
-export default function Profile(props) {
+function Profile() {
+  const { user, dispatch } = useUser();
+
+  useEffect(async () => {
+    const { data: user } = await API.get("/api/v1/attendee");
+    dispatch({ type: "INIT", user: user });
+  }, []);
+
   return (
-    // <SideBar className='profile' style={{maxWidth: '100%'}}>
     <div className="userProfile">
       <SectionHeader
         title="User Profile"
-        subtitle="Hi John, welcome yo tour profile"
-      ></SectionHeader>
+        subtitle={`Hi ${user.name}, welcome yo tour profile`}
+      />
       <div className="main">
-        <EditProfile></EditProfile>
-        <Achievements></Achievements>
+        <UserInfo />
+        <UserAchievements />
       </div>
     </div>
-    // </SideBar>
   );
 }
+
+export default Profile;

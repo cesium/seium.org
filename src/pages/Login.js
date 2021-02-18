@@ -13,6 +13,7 @@ import { GlobalContext } from "../App";
 
 const Login = () => {
   let history = useHistory();
+
   const { dispatch } = useContext(GlobalContext);
   const initialState = {
     email: "",
