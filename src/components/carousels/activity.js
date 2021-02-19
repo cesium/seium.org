@@ -177,7 +177,7 @@ function Activity(props) {
         ) : null}
         {props.speaker2ID ? (
           <a
-            style = {{ marginTop: "5px"}}
+            style={{ marginTop: "5px" }}
             href={
               (props.day ? "/speakers?day=" + props.day : "/speakers") +
               (props.speaker2ID ? `#${props.speaker2ID}` : "")
@@ -189,7 +189,7 @@ function Activity(props) {
         ) : null}
         {props.speaker3ID ? (
           <a
-            style = {{ marginTop: "5px"}}
+            style={{ marginTop: "5px" }}
             href={
               (props.day ? "/speakers?day=" + props.day : "/speakers") +
               (props.speaker3ID ? `#${props.speaker3ID}` : "")

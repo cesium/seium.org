@@ -5,6 +5,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import { MoonstoneContextProvider } from "./components/moonstone/context";
+import { useAuth } from "./components/moonstone/context/auth";
 
 import Home from "./components/sections/landing/landing";
 import Agenda from "./components/sections/agendaPage/agenda";
@@ -17,46 +19,18 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import SideBar from "./components/moonstone/sideBar";
 
-export const GlobalContext = createContext();
-
-const initialState = {
-  isAuthenticated: false,
-  token: null,
-};
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "LOGIN":
-      localStorage.clear();
-      localStorage.setItem("token", action.payload.jwt);
-      return {
-        ...state,
-        isAuthenticated: true,
-        token: action.payload.jwt,
-      };
-    case "LOGOUT":
-      localStorage.clear();
-      return {
-        ...state,
-        isAuthenticated: false,
-        token: null,
-      };
-    default:
-      return state;
-  }
-};
-
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
-  const { state: authState } = useContext(GlobalContext);
-  if (!authState.isAuthenticated) {
+  const { auth } = useAuth();
+  if (!auth.isAuthenticated) {
     //também há authState.token para o jwt
   }
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        authState.isAuthenticated ? (
+        auth.isAuthenticated ? (
           children
         ) : (
           <Redirect
@@ -72,9 +46,8 @@ function PrivateRoute({ children, ...rest }) {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <GlobalContext.Provider value={{ state, dispatch }}>
+    <MoonstoneContextProvider>
       <Router>
         <div>
           <Switch>
@@ -112,7 +85,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </GlobalContext.Provider>
+    </MoonstoneContextProvider>
   );
 }
 

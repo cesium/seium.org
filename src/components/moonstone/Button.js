@@ -5,7 +5,7 @@ export default function Button(props) {
     display: "block",
     width: props.width,
   };
-  console.log(props.width);
+
   return (
     <a
       onClick={props.onClick}
