@@ -64,7 +64,7 @@ function UserProfile() {
     <div className="editProfile">
       <Header
         style={{ flexWrap: "no-wrap", width: "100%" }}
-        title="User Profile"
+        title="Your Profile"
       >
         <Button
           isEditing
