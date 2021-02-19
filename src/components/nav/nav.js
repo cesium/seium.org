@@ -24,10 +24,10 @@ function NavBar() {
   return (
     <nav className="navbar fixed-top">
       <div className="container-nav">
-        <a className="brand logo" href="/">
+        <a style={{ zIndex:100}} className="brand logo" href="/">
           <img src={Logo} alt="Sei Logo" />
         </a>
-        <div className="nav-content">
+        <div style={{ zIndex:100}} className="nav-content">
           <div className="nav-item">
             <a className="nav-link nav-bar-link nav_link-s" href="/agenda">
               Agenda{" "}

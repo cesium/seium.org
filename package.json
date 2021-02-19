@@ -20,6 +20,8 @@
     "react-hook-inview": "^4.3.7",
     "react-inview": "^0.0.8",
     "react-native": "^0.63.4",
+    "react-p5": "^1.3.8",
+    "react-p5-wrapper": "^2.3.0",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",

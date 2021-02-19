@@ -2574,6 +2574,11 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
+"@types/p5@^0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-0.9.1.tgz#920c6cd6ee30b5d9e5cc04cb9b11bb762c333bc5"
+  integrity sha512-4glOKdqdBiRWDFZwi/MjHudPV2U4t2L4fTTSacGapfFxyNXzZcAshAjqmrJkCIZcFlhRBEAL7AM95xRDMfrIwg==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -9503,6 +9508,11 @@ open@^7.0.2:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
+opencollective-postinstall@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
+  integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
+
 opn@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/opn/-/opn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
@@ -9656,6 +9666,11 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
+
+p5@^1.1.9:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-1.2.0.tgz#8495f926494bde7408b77701f0f30703f9c8a6c7"
+  integrity sha512-om9CSZXjw+BdC/u474nUtrVXAqeSRHNBDteDpIhQqgypziE+hh9BUc/YNl3RT5rX3kNtQlLes2S2sRqFU+S+JA==
 
 pako@~1.0.5:
   version "1.0.11"
@@ -11013,6 +11028,20 @@ react-native@^0.63.4:
     stacktrace-parser "^0.1.3"
     use-subscription "^1.0.0"
     whatwg-fetch "^3.0.0"
+
+react-p5-wrapper@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-p5-wrapper/-/react-p5-wrapper-2.3.0.tgz#4a59d15aa07538170e98d48a983e51329d66f9d3"
+  integrity sha512-zwEIcGca3qPt6vsxGfwQchbkDjlbeK/KuGFLQoHjl7OSjD3A/FQqzE5RS6Y596ZYVydk9wMoPkAqVcLxkFbfJg==
+
+react-p5@^1.3.8:
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/react-p5/-/react-p5-1.3.8.tgz#8669c299e8f8fa3ba2c78293926e2658ed5ef151"
+  integrity sha512-o+wicr4uyedYFIMZOISfCWaSAYLwwTGmhkIUV7aI3tjhe/CfsvK9M20ykWDQOdeEYqgjHze53GEA4DWa24X6gA==
+  dependencies:
+    "@types/p5" "^0.9.1"
+    opencollective-postinstall "^2.0.2"
+    p5 "^1.1.9"
 
 react-refresh@^0.4.0:
   version "0.4.3"

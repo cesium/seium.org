@@ -7,7 +7,8 @@ import HeaderIcon from "../../../images/Header.svg";
 import Media from "../../../utils/media";
 import "../../../../assets/css/intro.css";
 import "../../../../assets/css/home.css";
-
+import P5Wrapper from "react-p5-wrapper";
+import backgroundAnimation from "../../../../assets/animations/backgroundAnimation";
 //#181818
 
 class Intro extends React.Component {
@@ -68,6 +69,7 @@ class Intro extends React.Component {
 
     return (
       <div className="intro-bg">
+        {window.innerWidth > 768 && <P5Wrapper sketch={backgroundAnimation} />}
         <NavBar />
         <div
           className="home"
@@ -76,7 +78,7 @@ class Intro extends React.Component {
             ...this.props.style,
           }}
         >
-          <div className="landing container">
+          <div style={{ zIndex:100}} className="landing container">
             <div className="description">
               <p className="x-large-1">23 - 28 February 2021</p>
               {title}
@@ -105,7 +107,7 @@ class Intro extends React.Component {
               )}
             </div>
           </div>
-          <div className="container">
+          <div style={{ zIndex:100}} className="container">
             <div className="details">
               <div className="expect">
                 <h5>What you can expect:</h5>
