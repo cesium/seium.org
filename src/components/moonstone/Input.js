@@ -1,26 +1,38 @@
 // import  "../assets/css/style.css";
 
-const Input = (props) => {
+const Input = ({
+  label,
+  label2,
+  type,
+  name,
+  placeholder,
+  value,
+  handleChange,
+  error,
+  input2,
+  isDisabled = false,
+}) => {
   return (
     <div className="input-container">
       <label>
-        <p className="label" style={{ ...props.label2 }}>
+        <p className="label" style={{ ...label2 }}>
           {" "}
-          {props.label}{" "}
+          {label}{" "}
         </p>
         <input
-          type={props.type}
-          name={props.name}
-          placeholder={props.placeholder}
-          value={props.value}
-          onChange={props.handleChange}
+          type={type}
+          name={name}
+          placeholder={placeholder}
+          value={value}
+          onChange={handleChange}
+          {...(isDisabled ? { readonly: "readonly" } : undefined)}
           style={{
-            backgroundColor: props.error ? "rgba(255, 68, 68, 0.08)" : "",
-            ...props.input2,
+            backgroundColor: error ? "rgba(255, 68, 68, 0.08)" : "",
+            ...input2,
           }}
         />
       </label>
-      <p className="textError"> {props.error ? props.error : ""}</p>
+      <p className="textError"> {error ? error : ""}</p>
     </div>
   );
 };

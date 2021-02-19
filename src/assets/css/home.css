@@ -646,6 +646,18 @@ p.x-small3 {
   color: #ffffff;
 }
 
+.find {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
 @media (max-width: 576px) {
   .nav-bar-link {
     font-size: 10px;

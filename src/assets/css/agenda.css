@@ -726,16 +726,91 @@ button {
 
 /*# sourceMappingURL=agenda.css.map */
 
-.agenda-bg {
+.agendainto-bg {
   padding: 0 5% 0 5%;
   /* The image used */
-  background-image: url("../../components/images/lines2.svg") !important;
+  background-image: url("../../components/images/lines4.svg") !important;
   background: #142a3e;
 
   /* Full height */
   height: 100%;
 
-  background-size: 100% 50%;
+  background-size: 100% 750px;
   background-repeat: no-repeat;
   background-position: top right;
+}
+
+.agendainto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agendainto .container {
+  padding-top: 10%;
+  padding-bottom: 5%;
+  max-width: 87%;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.agendainto .landing {
+  width: 100%;
+  max-width: 1440px;
+  padding: 1% 5vw 5%;
+}
+
+.agendainto .container .description {
+  margin-top: auto;
+  max-width: 795px;
+  height: 60vh;
+}
+
+.agenda-bg {
+  padding: 0 5% 0 5%;
+  /* The image used */
+  background: #142a3e;
+
+  /* Full height */
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .agendainto .container .description {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 992px) {
+  .agendainto-bg {
+    background-size: cover;
+  }
+  .agendainto .container .description {
+    max-width: 560px;
+    height: 50vh;
+  }
+  .about p.medium {
+    font-size: 12px;
+  }
+  .about p.medium-3 {
+    font-size: 12px !important;
+    padding: 3px 0px 3px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .agendainto-bg {
+    background-size: cover;
+  }
+  .agendainto .container .description {
+    height: 40vh;
+  }
+  p.medium {
+    font-size: 12px;
+  }
+  .headerButtons p.small {
+    width: 100% !important;
+  }
 }

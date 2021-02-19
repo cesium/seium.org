@@ -62,7 +62,7 @@ class Intro extends React.Component {
                 <p className="nav-bar-link"></p>
               </div>
               <div className="organization">
-                <p className="nav-bar-link">Powered by</p>
+                <p className="find">Powered by</p>
                 <a target="_blank" href="https://subvisual.com/">
                   <div className="image"></div>
                 </a>
