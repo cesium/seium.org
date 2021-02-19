@@ -10,7 +10,7 @@ const pluralize = (word, number) => (number !== 1 ? `${word}s` : word);
 
 const UserAchievements = () => {
   const { user } = useUser();
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState({ badge_count: "?", token_balance: "?" });
 
   const { badge_count, token_balance } = info;
 

@@ -5,8 +5,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { UserContextProvider } from "./components/moonstone/context/user";
-import API from "./utils/api";
+import { MoonstoneContextProvider } from "./components/moonstone/context";
+import { useAuth } from "./components/moonstone/context/auth";
 
 import Home from "./components/sections/landing/landing";
 import Agenda from "./components/sections/agendaPage/agenda";
@@ -19,50 +19,18 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import SideBar from "./components/moonstone/sideBar";
 
-export const GlobalContext = createContext();
-
-const initialState = {
-  isAuthenticated: false,
-  token: null,
-};
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "LOGIN":
-      localStorage.clear();
-      localStorage.setItem("token", action.payload.jwt);
-      API.defaults.headers.common[
-        "Authorization"
-      ] = `Bearer ${action.payload.jwt}`;
-      return {
-        ...state,
-        isAuthenticated: true,
-        token: action.payload.jwt,
-      };
-    case "LOGOUT":
-      localStorage.clear();
-      delete API.defaults.headers.common["Authorization"];
-      return {
-        ...state,
-        isAuthenticated: false,
-        token: null,
-      };
-    default:
-      return state;
-  }
-};
-
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
-  const { state: authState } = useContext(GlobalContext);
-  if (!authState.isAuthenticated) {
+  const { auth } = useAuth();
+  if (!auth.isAuthenticated) {
     //também há authState.token para o jwt
   }
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        authState.isAuthenticated ? (
+        auth.isAuthenticated ? (
           children
         ) : (
           <Redirect
@@ -78,49 +46,46 @@ function PrivateRoute({ children, ...rest }) {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <GlobalContext.Provider value={{ state, dispatch }}>
-      <UserContextProvider>
-        <Router>
-          <div>
-            <Switch>
-              <Route path="/" exact>
-                <Home />
-              </Route>
-              <Route path="/agenda">
-                <Agenda />
-              </Route>
-              <Route path="/speakers">
-                <Speakers />
-              </Route>
-              <Route path="/challenges">
-                <Challenges />
-              </Route>
-              <Route path="/team">
-                <Team />
-              </Route>
-              <Route path="/hackathon">
-                <Hackathon />
-              </Route>
-              <Route path="/register">
-                <Register />
-              </Route>
-              <Route path="/login">
-                <Login />
-              </Route>
-              <PrivateRoute path="/profile">
-                <SideBar />
-              </PrivateRoute>
-              <Route path="/404">
-                <Error />
-              </Route>
-              <Route component={Error} />
-            </Switch>
-          </div>
-        </Router>
-      </UserContextProvider>
-    </GlobalContext.Provider>
+    <MoonstoneContextProvider>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/agenda">
+              <Agenda />
+            </Route>
+            <Route path="/speakers">
+              <Speakers />
+            </Route>
+            <Route path="/challenges">
+              <Challenges />
+            </Route>
+            <Route path="/team">
+              <Team />
+            </Route>
+            <Route path="/hackathon">
+              <Hackathon />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <PrivateRoute path="/profile">
+              <SideBar />
+            </PrivateRoute>
+            <Route path="/404">
+              <Error />
+            </Route>
+            <Route component={Error} />
+          </Switch>
+        </div>
+      </Router>
+    </MoonstoneContextProvider>
   );
 }
 

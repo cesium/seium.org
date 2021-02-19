@@ -1,25 +1,11 @@
-import React, { createContext, useState, useContext } from "react";
+import React from "react";
+import { AuthContextProvider } from "./auth";
+import { UserContextProvider } from "./user";
 
-export const UserContext = createContext();
-
-export const AdminContextProvider = ({ children, initialState }) => {
-  const [links, dispatch] = useAsyncReducer(reducer, initialState);
-
+export const MoonstoneContextProvider = ({ children }) => {
   return (
-    <UserContext.Provider value={{ links, dispatch }}>
-      {children}
-    </UserContext.Provider>
-  );
-};
-
-export const useLinks = () => useContext(LinksContext);
-
-export const MoonstoneContextProvider = ({ children, initialState }) => {
-  const [links, dispatch] = useAsyncReducer(reducer, initialState);
-
-  return (
-    <UserContext.Provider value={{ links, dispatch }}>
-      {children}
-    </UserContext.Provider>
+    <AuthContextProvider>
+      <UserContextProvider>{children}</UserContextProvider>
+    </AuthContextProvider>
   );
 };
