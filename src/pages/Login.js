@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import API from "../utils/api";
+import { useAuth } from "../components/moonstone/context/auth";
 import { useHistory } from "react-router-dom";
 import Logo from "../assets/img/logo/moonstoneLogo.svg";
 import Button from "../components/moonstone/Button";
@@ -8,12 +8,13 @@ import Robot from "../assets/img/robot/Robot.svg";
 import Container from "../components/moonstone/Container";
 import Input from "../components/moonstone/Input";
 
+import API from "../utils/api";
+
 import "../assets/css/moonstone.css";
-import { GlobalContext } from "../App";
 
 const Login = () => {
   let history = useHistory();
-  const { dispatch } = useContext(GlobalContext);
+  const { dispatch } = useAuth();
   const initialState = {
     email: "",
     password: "",
@@ -82,7 +83,7 @@ const Login = () => {
         <a href="#">
           <img src={Logo} alt="logo" className="logo" />
         </a>
-        <h1 className="sign-up">Log in</h1>
+        <h1 className="sign-up header-1">Log in</h1>
         <div>
           <Input
             type="text"

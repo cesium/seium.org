@@ -79,7 +79,7 @@
       "picture": "../images/speakers/nunosantos.jpg",
       "bio": [
         "Formado em Engenharia Informática pela Faculdade de Engenharia da Universidade do Porto, conta já com 6 anos de experiência como Software Engineer na PRIMAVERA BSS, trabalhando no produto Jasmin, desde o seu nascimento, há 4 anos."
-       ],
+      ],
       "day": 2,
       "twitter": "",
       "github": "",
@@ -148,8 +148,8 @@
       "twitter": "",
       "github": "",
       "linkedin": ""
-    }
-    ,{
+    },
+    {
       "speakerID": "lucianosousa",
       "initStatus": "hide",
       "label": "Workshop Bosch. 9h30",
