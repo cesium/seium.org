@@ -102,6 +102,8 @@ function ActivityFiltred(props) {
           github={props.github}
           facebook={props.facebook}
           linkedin={props.linkedin}
+          day={props.day}
+          goto={props.activityID}
           style={{ width: "100%" }}
         ></Profile>
       </a>

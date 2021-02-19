@@ -22,26 +22,28 @@ function Speakers(props) {
 
   return (
     <>
-      <div className="speakers-bg">
+      <div className="speakersinto-bg">
         <NavBar />
-        <div>
-          <div style={styling}>
-            <Container>
-              <p className="x-large-1 chall-title">Speakers</p>
-              <div
-                className="headerChallenge"
-                style={{ marginBottom: "100px" }}
-              >
-                <h1 className="chall-desc">
-                  A crazy cool selection of the best speakers
-                </h1>
-              </div>
-              <SpeakersCarousel
-                style={{ paddingLef: "0px" }}
-                initialDay={queryParams.day ? parseInt(queryParams.day) : 0}
-              ></SpeakersCarousel>
-            </Container>
+        <div className="speakersinto">
+          <div className="landing container">
+            <div className="description">
+              <p className="x-large-1">Speakers</p>
+              <h1 className="title">
+                A crazy cool selection of the best speakers
+              </h1>
+            </div>
           </div>
+        </div>
+        <div></div>
+      </div>
+      <div className="speakers-bg">
+        <div style={styling}>
+          <Container>
+            <SpeakersCarousel
+              style={{ paddingLef: "0px" }}
+              initialDay={queryParams.day ? parseInt(queryParams.day) : 0}
+            ></SpeakersCarousel>
+          </Container>
         </div>
       </div>
       <Footer>Yep. That’s the end of it. Bye now. 👋</Footer>
