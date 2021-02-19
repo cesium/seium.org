@@ -29,7 +29,7 @@ function Agenda(props) {
             <div className="description">
               <p className="x-large-1 chall-title">Agenda</p>
               <div className="headerChallenge">
-                <h1 className="chall-desc">
+                <h1 className="title chall-desc">
                   Five awesome days of learning, sharing and{" "}
                   <span className="spanChall">
                     winning

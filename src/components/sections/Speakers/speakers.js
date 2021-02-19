@@ -7,7 +7,6 @@ import NavBar from "../../../components/nav/nav";
 import "../../../assets/css/speakers.css";
 import { withRouter } from "react-router-dom";
 import queryString from "query-string";
-import "../../../assets/css/hackathon.css";
 
 function Speakers(props) {
   let styling = {

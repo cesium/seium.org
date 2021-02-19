@@ -777,16 +777,20 @@ button {
   height: 100%;
 }
 
-@media (max-width: 768px) {
-  .agendainto-bg {
-    background-size: cover;
-  }
+@media (max-width: 1200px) {
   .agendainto .container .description {
-    height: 40vh;
+    max-width: 700px;
   }
 }
 
 @media (max-width: 992px) {
+  .agendainto-bg {
+    background-size: cover;
+  }
+  .agendainto .container .description {
+    max-width: 560px;
+    height: 50vh;
+  }
   .about p.medium {
     font-size: 12px;
   }
@@ -797,12 +801,15 @@ button {
 }
 
 @media (max-width: 768px) {
+  .agendainto-bg {
+    background-size: cover;
+  }
+  .agendainto .container .description {
+    height: 40vh;
+  }
   p.medium {
     font-size: 12px;
   }
-}
-
-@media (max-width: 768px) {
   .headerButtons p.small {
     width: 100% !important;
   }
