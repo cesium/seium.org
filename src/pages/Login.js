@@ -83,7 +83,7 @@ const Login = () => {
         <a href="#">
           <img src={Logo} alt="logo" className="logo" />
         </a>
-        <h1 className="sign-up">Log in</h1>
+        <h1 className="sign-up header-1">Log in</h1>
         <div>
           <Input
             type="text"

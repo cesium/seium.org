@@ -816,6 +816,20 @@ label {
   padding-top: 12px;
 }
 
+.fileContainer {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.fileContainer .chooseFileButton {
+  color: #181818 !important;
+  background: #00ffb7 !important;
+}
+
+.fileContainer .deleteImage {
+  background: #181818 !important;
+}
+
 .editProfile {
   width: 50%;
   display: flex;

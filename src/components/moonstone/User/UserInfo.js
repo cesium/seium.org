@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import FormData from "form-data";
+import ImageUploader from "react-images-upload";
 import { useUser } from "../context/user";
 import Input from "../Input";
 import Header from "../Header";
@@ -8,7 +10,11 @@ import API from "../../../utils/api";
 function UserProfile() {
   const { user, dispatch } = useUser();
   const [isEditing, setIsEditing] = useState(false);
-  const [data, setData] = useState({ nickname: null, errors: null });
+  const [data, setData] = useState({
+    nickname: null,
+    picture: null,
+    errors: null,
+  });
 
   useEffect(() => {
     setData({ nickname: user.nickname });
@@ -34,9 +40,17 @@ function UserProfile() {
   const onSave = async () => {
     if (!isEditing) setIsEditing(!isEditing);
 
-    API.put(`/api/v1/attendees/${user.id}`, {
-      attendee: { ...data },
-    })
+    const form = new FormData();
+
+    if (data.picture) {
+      form.append("attendee[avatar]", data.picture);
+    }
+
+    if (data.nickname) {
+      form.append("attendee[nickname]", data.nickname);
+    }
+
+    await API.put(`/api/v1/attendees/${user.id}`, form)
       .then((response) => {
         dispatch({ type: "UPDATE", user: response.data.data });
         setIsEditing(!isEditing);
@@ -61,7 +75,20 @@ function UserProfile() {
           {!isEditing ? "EDIT" : "SAVE"}
         </Button>
       </Header>
-      <img className="profilePicture" src={user.avatar} />
+      {isEditing ? (
+        <ImageUploader
+          withPreview
+          onChange={(pictures) => setData({ ...data, picture: pictures[0] })}
+          withIcon={false}
+          singleImage
+          label=""
+          buttonText="Upload new profile picture"
+          imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+          maxFileSize={1048576}
+        />
+      ) : (
+        <img className="profilePicture" src={user.avatar} />
+      )}
       <Input
         label="NAME"
         placeholder="Mascote SenSEI"
