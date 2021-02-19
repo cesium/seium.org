@@ -90,14 +90,6 @@ function UserProfile() {
         value={user.email}
         isDisabled
       />
-      {/* <Input
-        label="PASSWORD"
-        placeholder="*******"
-        type="password"
-        label2={label2Style}
-        input2={input2Style}
-        isDisabled
-      /> */}
       <a className="small reset" href="/reset">
         Reset password
       </a>

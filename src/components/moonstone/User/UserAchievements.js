@@ -25,7 +25,13 @@ const UserAchievements = () => {
 
   return (
     <div
-      className="achiev-section" /*style={{ justifyContent:'center', alignItems:'center', display:'flex', flexDirection:'column'}}*/
+      className="achiev-section"
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
       <Header title="Achievements" style={{ width: "100%" }} />
       <div className="achiev-container">
@@ -34,26 +40,17 @@ const UserAchievements = () => {
             text={`💰 ${token_balance} ${pluralize("Token", token_balance)}`}
             style={{ marginBottom: "20px", paddingTop: "0" }}
           />
-          {/* <Achievement
-            text="🏆 16 Entries Final Draw"
-            style={{ marginBottom: "20px", paddingTop: "0" }}
-          /> */}
         </div>
         <div>
           <Achievement
             text={`🥇 ${badge_count} ${pluralize("Badge", badge_count)}`}
             style={{ marginBottom: "20px", paddingTop: "0" }}
           />
-          {/* <Achievement
-            text="🏁 Level 3 Checkpoint"
-            style={{ marginBottom: "20px", paddingTop: "0" }}
-          /> */}
         </div>
       </div>
       <div className="achiev-desc">
-        <h4>
-          You just need 4 more badges to go to Level 4 (and win 10+ entries to
-          the final draw). Hurry!
+        <h4 className="header-4">
+          Keep collecting tokens. It's never too late. Hurry up!
         </h4>
       </div>
       <SendCode></SendCode>
