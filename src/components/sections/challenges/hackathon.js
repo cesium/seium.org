@@ -6,9 +6,10 @@ function Hackathon() {
   const challenge = (
     <Challenge
       title="Hackathon"
-      parag="Whether you are a veteran programmer or a newbie who has never built a web app, this Hackathon is for you! Our motto is ‘Learn by Doing’, so why don’t you take advantage of our mentors to work on your idea and try to win one of our awesome prices? You’ll learn a ton by doing it! Get yourself a team of 3 to 5 people and sign up!
-      (If you don’t have a team or if it’s only you and a friend, sign up anyway. We’ll try to join you with other people with incomplete teams!)
-      "
+      parags={[
+        "Whether you are a veteran programmer or a newbie who has never built a web app, this Hackathon is for you! Our motto is ‘Learn by Doing’, so why don’t you take advantage of our mentors to work on your idea and try to win one of our awesome prices? You’ll learn a ton by doing it! Get yourself a team of 3 to 5 people and sign up!",
+        "(If you don’t have a team or if it’s only you and a friend, sign up anyway. We’ll try to join you with other people with incomplete teams!)",
+      ]}
       buttonText={
         <a target="_blank" href="https://forms.gle/wLdyCmaGaqKko1Jd9">
           <Button className="button">Register your team</Button>

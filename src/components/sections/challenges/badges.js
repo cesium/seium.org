@@ -7,9 +7,10 @@ function Badges() {
   let challenge1 = (
     <Challenge
       title="Final Badge Draw Prizes"
-      parag="You go to talks and workshops, you talk with every company you can and participate in every tournament. Now you are left with a bunch of badges, what do you do?!
-      Every badge comes with a set of entries to the Final Badge Draw! On the last day of SEI, we will select three winning entries and their owners will be the lucky recipients of an amazing selection of prizes! The more badges you have, the more likely you are to win!
-      "
+      parags={[
+        "You go to talks and workshops, you talk with every company you can and participate in every tournament. Now you are left with a bunch of badges, what do you do?!",
+        "Every badge comes with a set of entries to the Final Badge Draw! On the last day of SEI, we will select three winning entries and their owners will be the lucky recipients of an amazing selection of prizes! The more badges you have, the more likely you are to win!",
+      ]}
       buttonText=""
       prizes={[
         "1.º Place — PS5 - Digital Edition",
@@ -21,7 +22,9 @@ function Badges() {
   let challenge2 = (
     <Challenge
       title="1st Day Badges"
-      parag="This one is easy. The winners are the three people with the most badges won on the first day! If there is a tie, the participant with the most tokens wins! If there’s still a tie after that, we’ll toss a coin! Badges you win before SEI starts will be counted on this day."
+      parags={[
+        "This one is easy. The winners are the three people with the most badges won on the first day! If there is a tie, the participant with the most tokens wins! If there’s still a tie after that, we’ll toss a coin! Badges you win before SEI starts will be counted on this day.",
+      ]}
       buttonText=""
       prizes={[
         "1.º Place — Trotinete Elétrica XIAOMI MI ESSENTIAL	",
@@ -33,7 +36,9 @@ function Badges() {
   let challenge3 = (
     <Challenge
       title="2nd Day Badges"
-      parag="The same rules as in day one. The difference is that only the badges you win on the second day count towards this price."
+      parags={[
+        "The same rules as in day one. The difference is that only the badges you win on the second day count towards this price.",
+      ]}
       buttonText=""
       prizes={[
         "1.º Place — Apple Watch SE",
@@ -45,7 +50,9 @@ function Badges() {
   let challenge4 = (
     <Challenge
       title="3rd Day Badges"
-      parag="The same rules as in day one (again). The difference is that only the badges you win on the third day count towards this price."
+      parags={[
+        "The same rules as in day one (again). The difference is that only the badges you win on the third day count towards this price.",
+      ]}
       buttonText=""
       prizes={[
         "1.º Place — Xbox Series S",
@@ -57,7 +64,9 @@ function Badges() {
   let challenge5 = (
     <Challenge
       title="4th Day Badges"
-      parag="This is getting a little repetitive… The same rules as in day one (again). The difference is that only the badges you win on the forth day count towards this price."
+      parags={[
+        "This is getting a little repetitive… The same rules as in day one (again). The difference is that only the badges you win on the forth day count towards this price.",
+      ]}
       buttonText=""
       prizes={[
         "1.º Place — Nintendo Switch",
