@@ -41,11 +41,15 @@ function Day25() {
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="O ecossistema tecnológico da mobilidade sustentável"
         title="Talk"
         start="12:00"
         end="13:00"
-        animator1="TBA"
+        animator1="André Gomes, GoWithFlow"
+        day={2}
+        activityID="mobilidade"
+        speaker1ID="andregomes"
+        description="A transição para uma mobilidade cada vez mais sustentável é acompanhada e acelerada pela introdução de vários paradigmas tecnológicos como IoT, Big Data ou Inteligência Artificial num ecossistema tecnológico complexo, mas com múltiplas oportunidades de novos serviços cada vez mais inteligentes e conectados."
       />
       <CoffeeBreak name="Lunch Break" />
       <Activity
