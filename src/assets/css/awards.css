@@ -37,3 +37,115 @@ h6 {
   text-align: center;
   margin-bottom: 10px;
 }
+
+.containerprofile .userProfile .main.awards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+
+.awardsList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: stretch;
+}
+
+.awardItem {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+
+@media (max-width: 1200px) {
+  .awardItem {
+    margin-right: 25px;
+  }
+}
+
+.awardItem img {
+  height: 142px;
+}
+
+@media (max-width: 1200px) {
+  .awardItem {
+    width: 45%;
+  }
+}
+
+.fixedWheel .wheel {
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  background: url("../img/Wh.png") center no-repeat;
+}
+
+.fixedWheel .union {
+  width: 8px;
+  height: 14px;
+  background: url("../img/Union.svg") center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 28%;
+  left: 48.5%;
+}
+
+@media (max-width: 992px) {
+  .fixedWheel .union {
+    top: 28%;
+    left: 48.5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .fixedWheel .union {
+    top: 30%;
+    left: 47.5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .awardItem .buttonText {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 96px;
+  }
+}
+
+.stock {
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.limit {
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.awardItem[disabled]
+{
+  pointer-events: none;
+  opacity: 0.7;
+}
