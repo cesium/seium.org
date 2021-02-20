@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { MoonstoneContextProvider } from "./components/moonstone/context";
 import { useAuth } from "./components/moonstone/context/auth";
+import API from "./utils/api";
 
 import Home from "./components/sections/landing/landing";
 import Agenda from "./components/sections/agendaPage/agenda";
@@ -22,25 +23,49 @@ import SideBar from "./components/moonstone/sideBar";
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
-  const { auth } = useAuth();
-  if (!auth.isAuthenticated) {
-    //também há authState.token para o jwt
-  }
+  const { auth, dispatch: dispatchAuth } = useAuth();
+  const [isFirstRender, setIsFirstRender] = useState(true);
+  const [isTokenValid, setIsTokenValid] = useState(true);
+  const [isCheckingToken, setIsCheckingToken] = useState(false);
+
+  useLayoutEffect(() => {
+    if (!auth.isAuthenticated) {
+      let token = localStorage.getItem("token");
+      if (token !== null) {
+        setIsCheckingToken(true);
+        dispatchAuth({ type: "LOGIN", payload: { jwt: token } });
+        API.get("/api/v1/user")
+          .catch((error) => {
+            setIsTokenValid(false);
+            console.log(error.response);
+          })
+          .finally(() => {
+            setIsCheckingToken(false);
+          });
+      }
+    }
+    setIsFirstRender(false);
+  }, []);
+
+  if (isFirstRender) return null;
+  if (isCheckingToken) return null;
   return (
     <Route
       {...rest}
-      render={({ location }) =>
-        auth.isAuthenticated ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: location },
-            }}
-          />
-        )
-      }
+      render={({ location }) => {
+        if (auth.isAuthenticated && isTokenValid && !isCheckingToken) {
+          return children;
+        } else {
+          return (
+            <Redirect
+              to={{
+                pathname: "/login",
+                state: { from: location },
+              }}
+            />
+          );
+        }
+      }}
     />
   );
 }
