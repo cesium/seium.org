@@ -26,7 +26,7 @@ function Day23() {
         title="Talk"
         start="12:00"
         end="13:00"
-        animator1="Paulo Dimas"
+        animator1="Paulo Dimas, Unbabel"
         day={0}
         activityID="ai"
         speaker1ID="paulodimas"
