@@ -7,6 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: staging
 
     steps:
       - uses: actions/checkout@v1
@@ -15,14 +16,17 @@ jobs:
           node-version: 15.7.0
       - name: Build website
         run: yarn && CI='' yarn build
+        env:
+          REACT_APP_SAFIRA_ENDPOINT: ${{ secrets.REACT_APP_SAFIRA_ENDPOINT }}
       - name: Upload to netlify
         uses: netlify/actions/cli@master
         id: deploy-netlify
         with:
-            args: deploy
+          args: deploy
         env:
-            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
       - name: Netlify Preview URL
         uses: unsplash/comment-on-pr@master
         env:
