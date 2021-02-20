@@ -680,6 +680,7 @@ button {
 
 .profile img {
   width: 25%;
+  filter: grayscale(100%);
 }
 
 .profile .left-side {

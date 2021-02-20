@@ -1,6 +1,22 @@
 {
   "0": [
     {
+      "speakerID": "paulodimas",
+      "initStatus": "hide",
+      "label": "Talk. 12h",
+      "name": "Paulo Dimas",
+      "job": "Vice President of Product Inovation",
+      "description": "Unbabel",
+      "picture": "../images/speakers/paulodimas.jpg",
+      "bio": [
+        "Paulo Dimas é o Vice President of Product Inovation da Unbabel, a plataforma de operações linguísticas que ajuda as empresas a fornecer soluções multilíngue de forma rápida e simples ao combinar inteligência artificial com traduções humanas em tempo real. Lidera a Unbabel Labs, a equipa que inventa o futuro da Unbabel.",
+        "Desenvolveu o seu primeiro produto aos 14 anos, mas foi dois anos mais tarde, após ingressar no centro de pesquisa INESC, que começou a sua carreira assente na paixão por inovação. Desde então, Paulo Dimas, foi co-fundador de duas startups de tecnologia, criou patentes em tecnologia de geolocalização e desenvolveu projetos premiados para grandes empresas nos setores dos media e das telecomunicações."
+      ],
+      "activityID": "ai",
+      "day": 0,
+      "linkedin": ""
+    },
+    {
       "speakerID": "joaooliveira",
       "initStatus": "hide",
       "label": "Talk. 15h",
@@ -15,9 +31,95 @@
       "activityID": "wecandoit",
       "day": 0,
       "linkedin": "http://linkedin.com/in/joaooliveira"
+    },
+    {
+      "speakerID": "joaodias",
+      "initStatus": "hide",
+      "label": "Talk. 17h",
+      "name": "João Dias",
+      "job": "",
+      "description": "Tasker",
+      "picture": "../images/speakers/joaodias.jpeg",
+      "bio": [
+        "Aos 14 anos de idade João vendeu o seu primeiro software por 30 “contos”, aos 17 foi finalista das Olimpíadas de Informática, aos 26 co-fundou a empresa que lançou o primeiro ERP português disponível como Software as a Service, software distinguido, 2 anos depois, com o prémio “Inovação Tecnológica em PME” promovido pela Oracle e Intel.",
+        "João Oliveira é licenciado pela Universidade do Minho, tem um trajeto profissional diversificado, no setor público e privado, co-fundou uma startup onde foi Chief Technical Officer e Arquitecto de Software, e nos últimos anos passou por multinacionais da área das telecomunicações (Wedo Technologies) e da indústria de moda de luxo (Farfetch). Desde o início de 2020 é Chief Technical Officer na TonicApp SA, empresa que desenvolve uma plataforma digital de saúde desenvolvida para apoiar a comunidade médica a diagnosticar e a tratar os doentes, empresa que está presente em Portugal, Espanha, França e Itália."
+      ],
+      "activityID": "developer",
+      "day": 0,
+      "linkedin": ""
     }
   ],
   "1": [
+    {
+      "speakerID": "mauroalmeida",
+      "initStatus": "hide",
+      "label": "Workshop. 9h30",
+      "name": "Mauro Almeida",
+      "job": "Information Security & Cybersecurity Manager",
+      "description": "Everis",
+      "picture": "../images/speakers/mauroalmeida.jpg",
+      "bio": [""],
+      "activityID": "cybersecurity",
+      "day": 1,
+      "linkedin": "https://www.linkedin.com/in/almeidamauro"
+    },
+    {
+      "speakerID": "ricardogomes",
+      "initStatus": "hide",
+      "label": "Workshop. 9h30",
+      "name": "Ricardo Gomes",
+      "job": "Cybersecurity Lead Architect ",
+      "description": "Everis",
+      "picture": "../images/speakers/ricardogomes.jpg",
+      "bio": [""],
+      "activityID": "cybersecurity",
+      "day": 1,
+      "linkedin": "https://www.linkedin.com/in/ricardoseabra"
+    },
+    {
+      "speakerID": "pedrocosta",
+      "initStatus": "hide",
+      "label": "Workshop. 9h30",
+      "name": "Ricardo Gomes",
+      "job": "Full-Stack Developer",
+      "description": "Subvisual",
+      "picture": "../images/speakers/pedrocosta.jpg",
+      "bio": ["Full-Stack Developer na Subvisual. Actualmente Tech Lead na Medify. Às vezes terapeuta de CTOs com relativo sucesso. Encontrado em salas de servidores à procura de cabos. Não fui eu, mas ajudo a arranjar."],
+      "activityID": "testes",
+      "day": 1,
+      "github": "https://github.com/pfac",
+      "twitter": "https://twitter.com/iampfac"
+    },
+    {
+      "speakerID": "miguelpalhas",
+      "initStatus": "hide",
+      "label": "Talk. 12h",
+      "name": "Miguel Palhas",
+      "job": "Professional Over-engineer",
+      "description": "Subvisual",
+      "picture": "../images/speakers/miguelpalhas.png",
+      "bio": [
+        "elixir / ruby / rust / nonsense",
+        "Above-average chess player"
+      ],
+      "activityID": "vim",
+      "day": 1,
+      "github": "https://github.com/naps62",
+      "twitter": "https://twitter.com/naps62"
+    },
+    {
+      "speakerID": "alexandrebrito",
+      "initStatus": "hide",
+      "label": "Talk. 14h",
+      "name": "Alexandre Brito",
+      "job": "Manager of Braga Delivery Center",
+      "description": "Accenture",
+      "picture": "../images/speakers/alexandrebrito.jpg",
+      "bio": [""],
+      "activityID": "vim",
+      "day": 1,
+      "linkdin": "https://www.linkedin.com/in/alexandrecbrito/"
+    },
     {
       "speakerID": "tiagocarcao",
       "initStatus": "hide",
@@ -91,6 +193,56 @@
       "linkedin": ""
     },
     {
+      "speakerID": "eduardoribeiro",
+      "initStatus": "hide",
+      "label": "Workshop. 9h30",
+      "name": "Eduardo Ribeiro",
+      "job": "Enterprise Agile Coach",
+      "description": "Critical Software",
+      "picture": "../images/speakers/eduardoribeiro.png",
+      "bio": [
+        "O Eduardo Ribeiro é Enterprise Agile Coach na Critical Software. E a sua paixão é ajudar as pessoas, equipas e organizações a promover uma cultura de melhoria contínua, onde a experimentação e a abertura à mudança se tornam parte do seu ADN."
+      ],
+      "activityID": "devops",
+      "day": 2,
+      "twitter": "",
+      "github": "",
+      "linkedin": ""
+    },
+    {
+      "speakerID": "filipevalpereiro",
+      "initStatus": "hide",
+      "label": "Workshop. 9h30",
+      "name": "Filipe Valpereiro",
+      "job": "TechOps Team Senior Engineer",
+      "description": "Critical Software",
+      "picture": "../images/speakers/filipevalpereiro.jpg",
+      "bio": [
+        "O Filipe Valpereiro é Senior Engineer na equipa de TechOps da Critical Software.  Criativo e empreendedor, com background em Engenharia de Redes e Tecnologias de Informação, procura manter o work-life balance de modo a poder aprender e criar. "
+      ],
+      "activityID": "devops",
+      "day": 2,
+      "twitter": "",
+      "github": "",
+      "linkedin": ""
+    },
+    {
+      "speakerID": "andredias",
+      "initStatus": "hide",
+      "label": "Talk. 12h",
+      "name": "André Dias",
+      "job": "CTO e Fundador",
+      "description": "GoWithFlow",
+      "picture": "../images/speakers/andredias.jpg",
+      "bio": [
+        "A desempenhar funções de CTO na GoWithFlow, André Dias define a visão tecnológica e trabalha em estreita proximidade com os clientes no sentido de desenvolver soluções de mobilidade sustentável que irão ajudar a otimizar o investimento em frotas elétricas e infraestrutura de suporte.",
+        "Antes de fundar a Flow em agosto de 2019, André Dias desempenhou funções de responsável pela Unidade de Sistemas Inteligentes da CEiiA, Centro de Excelência para a Inovação da Indústria Automóvel de Portugal. Nesta última liderou a equipa de desenvolvimento, responsável pelo desenho da estrutura tecnológica que se veio a tornar na solução de Gestão de Mobilidade Sustentável da Flow.",
+        "A sua experiência anterior inclui cargos de gestão de projeto na INTELI, um laboratório de ideias de referência em Portugal, com foco na mobilidade, e posições de investigador na UCLA em Los Angeles e na Airbus Space em França."
+      ],
+      "activityID": "mobilidade",
+      "day": 2
+    },
+    {
       "speakerID": "goncalosilva",
       "initStatus": "hide",
       "label": "Talk. 15h",
@@ -153,6 +305,45 @@
       "twitter": "",
       "github": "",
       "linkedin": ""
+    },
+    {
+      "speakerID": "ricardovillasboas",
+      "initStatus": "hide",
+      "label": "Workshop. 9h30",
+      "name": "Ricardo Villas-Boas",
+      "job": "Delivery Center Manager",
+      "description": "Accenture",
+      "picture": "../images/speakers/ricardovillasboas.png",
+      "bio": [],
+      "activityID": "deepdive",
+      "day": 3,
+      "linkedin": "https://www.linkedin.com/in/ricardo-vilas-boas-80072136/"
+    },
+    {
+      "speakerID": "maurorosa",
+      "initStatus": "hide",
+      "label": "Workshop. 9h30",
+      "name": "Mauro Rosa",
+      "job": "Delivert Center Senior Manager",
+      "description": "Accenture",
+      "picture": "../images/speakers/maurorosa.png",
+      "bio": [],
+      "activityID": "deepdive",
+      "day": 3,
+      "linkedin": "https://www.linkedin.com/in/mauro-rosa-20a07630"
+    },
+    {
+      "speakerID": "ruigoncalo",
+      "initStatus": "hide",
+      "label": "Talk. 12h",
+      "name": "Rui Gonçalo",
+      "job": "Partner, IT Advisory",
+      "description": "KPMG",
+      "picture": "../images/speakers/ruigoncalves.jpg",
+      "bio": [],
+      "activityID": "kpmg",
+      "day": 3,
+      "linkedin": "https://www.linkedin.com/in/ruirosadogoncalves/"
     },
     {
       "speakerID": "andrelago",
