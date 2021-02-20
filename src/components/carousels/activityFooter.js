@@ -23,7 +23,7 @@ function ActivityFooter(props) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingRight: "85px",
+          paddingRight: "200px",
           minHeight: "23px",
         },
         buttonStyle: {},
@@ -50,7 +50,7 @@ function ActivityFooter(props) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingRight: "85px",
+          paddingRight: "150px",
           minHeight: "23px",
         },
         buttonStyle: {
@@ -79,7 +79,7 @@ function ActivityFooter(props) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingRight: "85px",
+          paddingRight: "140px",
           minHeight: "23px",
         },
         buttonStyle: {
