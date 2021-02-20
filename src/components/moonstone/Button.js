@@ -4,6 +4,7 @@ export default function Button(props) {
   const buttonStyle = {
     display: "block",
     width: props.width,
+    backgroundColor: props.noBack ? "#ffffff" : "#00ffb7",
   };
 
   return (

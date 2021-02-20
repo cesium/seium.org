@@ -390,7 +390,7 @@ label {
 }
 
 .buttonText {
-  background-color: #00ffb7;
+  /* background-color: #00ffb7; */
   display: inline-block;
   position: relative;
   overflow: hidden;
