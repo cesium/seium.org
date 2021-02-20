@@ -18,6 +18,11 @@
   color: #00ffb7;
 }
 
+.badge .big {
+  height: 350px;
+  width: 350px;
+}
+
 .badge .owned {
   height: 150px;
   width: 150px;

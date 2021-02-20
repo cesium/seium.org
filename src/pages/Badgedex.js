@@ -5,10 +5,14 @@ import { useEffect, useState } from "react";
 import { useUser } from "../components/moonstone/context/user";
 import Button from "../components/moonstone/Button";
 import API from "../utils/api";
+import BadgePage from "./Badge";
 
-const Badge = ({ badge, is_owned, grid }) => {
+const Badge = ({ badge, is_owned, grid, handleClick }) => {
   return (
-    <div className={`badge ${is_owned && "owned"} ${grid}`}>
+    <div
+      className={`badge ${is_owned && "owned"} ${grid}`}
+      onClick={handleClick}
+    >
       <div class="center-image">
         <img
           src={badge.avatar}
@@ -57,6 +61,7 @@ export default function Badgedex(params) {
   const [owned_badges, setOwnedBadges] = useState([]);
   const [filtered_badges, setFilteredBadges] = useState([]);
   const [filtered_owned_badges, setFilteredOwnedBagdes] = useState([]);
+  const [badge_selected, setBadgeSelected] = useState(false);
 
   useEffect(() => {
     const fetchBadges = async () => {
@@ -115,7 +120,11 @@ export default function Badgedex(params) {
   //   }
   // };
 
-  return (
+  const handleBadgeReset = () => {
+    setBadgeSelected(false);
+  };
+
+  return !badge_selected ? (
     <div className="userProfile">
       <SectionHeader
         title="Badgedex"
@@ -136,7 +145,8 @@ export default function Badgedex(params) {
               <Badge
                 key={b.id}
                 badge={b}
-                is_owned={true}
+                is_owned
+                handleClick={() => setBadgeSelected(b)}
                 grid="col-xs-6 col-md-4 col-lg-3 col-xl-2"
               ></Badge>
             ))}
@@ -146,12 +156,17 @@ export default function Badgedex(params) {
               <Badge
                 key={b.id}
                 badge={b}
-                is_owned={false}
+                onClick={() => setBadgeSelected(b)}
                 grid="col-xs-6 col-md-4 col-lg-3 col-xl-2"
               ></Badge>
             ))}
         </div>
       </div>
     </div>
+  ) : (
+    <BadgePage
+      badge_info={badge_selected}
+      resetBadge={handleBadgeReset}
+    ></BadgePage>
   );
 }
