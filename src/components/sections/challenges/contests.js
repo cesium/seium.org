@@ -10,6 +10,7 @@ function Contests() {
       title="CV Contest"
       parags={[
         "Our sponsors want your CV. You want them to have it. And why not try to win a PS5 while you’re at it? Submit your CV to cv@seium.org and be automatically entered into a contest to win a PS5! It goes without saying that by sending us your CV, you give us consent to share it with our Silver, Gold and Exclusive sponsors.",
+        "In order to enter the contest, you have to submit your CV until Friday, the 26th, at 17h.",
       ]}
       buttonText={
         <a target="_blank" href="mailto:cv@seium.org">
