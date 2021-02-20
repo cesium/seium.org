@@ -20,6 +20,7 @@ function Day25() {
         animator1="Eduardo Ribeiro"
         animator2="Filipe Valpereiro"
         day={2}
+        join="https://www.eventbrite.pt/e/142306567775"
         activityID="devops"
         speaker1ID="eduardoribeiro"
         speaker2ID="filipevalpereiro"
@@ -33,6 +34,7 @@ function Day25() {
         animator1="Nuno Santos"
         animator2="Jorge Ribeiro"
         day={2}
+        join="https://www.eventbrite.pt/e/142306096365"
         activityID="api"
         speaker1ID="nunosantos"
         speaker2ID="jorgeribeiro"
