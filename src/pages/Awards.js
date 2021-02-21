@@ -45,8 +45,8 @@ const Awards = (props) => {
   }, [user.id, info.state]);
 
   const incrementState = () => {
-    setInfo({ awards: info.awards, state: info.state + 1});
-  }
+    setInfo({ awards: info.awards, state: info.state + 1 });
+  };
 
   return (
     <div className="userProfile">
