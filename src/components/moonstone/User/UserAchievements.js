@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useUser } from "../context/user";
 import Header from "../Header";
-import SendCode from "../SendCode";
+import RedeemBadge from "../RedeemBadge";
 
 import API from "../../../utils/api";
 import UserAchievementsItems from "./UserAchievementsItems";
@@ -31,14 +31,16 @@ const UserAchievements = () => {
     >
       <Header title="Achievements" style={{ width: "100%" }} />
       <div className="achiev-container">
-        <UserAchievementsItems customStyle={{ marginBottom: "20px", paddingTop: "0" }}/>
+        <UserAchievementsItems
+          customStyle={{ marginBottom: "20px", paddingTop: "0" }}
+        />
       </div>
       <div className="achiev-desc">
         <h4 className="header-4">
           Keep collecting tokens. It's never too late. Hurry up!
         </h4>
       </div>
-      <SendCode></SendCode>
+      <RedeemBadge />
     </div>
   );
 };
