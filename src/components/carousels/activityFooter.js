@@ -23,12 +23,11 @@ function ActivityFooter(props) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingRight: "10px",
+          paddingRight: "200px",
           minHeight: "23px",
         },
         buttonStyle: {},
         joinStyle: {
-          marginRight: "5px",
           fontSize: "12px",
         },
       };
@@ -51,14 +50,13 @@ function ActivityFooter(props) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingRight: "10px",
+          paddingRight: "150px",
           minHeight: "23px",
         },
         buttonStyle: {
           padding: "0px 12px 3px",
         },
         joinStyle: {
-          marginRight: "5px",
           fontSize: "10px",
         },
       };
@@ -81,14 +79,13 @@ function ActivityFooter(props) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingRight: "10px",
+          paddingRight: "140px",
           minHeight: "23px",
         },
         buttonStyle: {
           padding: "0px 12px 3px",
         },
         joinStyle: {
-          marginRight: "5px",
           fontSize: "10px",
         },
       };
@@ -107,11 +104,13 @@ function ActivityFooter(props) {
         <p style={footerStyle().labelStyle} className="nav-bar-link">
           {props.label}
         </p>
-        <Clickable>
-          <p style={footerStyle().joinStyle} className="x-large">
-            {props.join ? "Join" : ""}
-          </p>
-        </Clickable>
+        {props.join ? (
+          <a className="x-large" target="_blank" href={props.join}>
+            Join
+          </a>
+        ) : (
+          ""
+        )}
         {button}
       </div>
     </div>

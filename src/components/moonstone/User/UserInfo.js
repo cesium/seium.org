@@ -38,7 +38,10 @@ function UserProfile() {
   };
 
   const onSave = async () => {
-    if (!isEditing) setIsEditing(!isEditing);
+    if (!isEditing || (!data.nickname && !data.picture)) {
+      setIsEditing(!isEditing);
+      return;
+    }
 
     const form = new FormData();
 

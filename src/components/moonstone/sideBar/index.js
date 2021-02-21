@@ -8,6 +8,10 @@ import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
 import Leaderboard from "../../../pages/Leaderboard";
+import Awards from "../../../pages/Awards";
+import { NotificationContainer } from "react-notifications";
+
+import "react-notifications/lib/notifications.css";
 
 export default function SideBar(props) {
   const { width, height } = Window();
@@ -42,6 +46,11 @@ export default function SideBar(props) {
     setZindex((curr) => 0);
     setToggleButton(true);
   };
+
+  const goToWheel = () => {
+    handleOnClick(1, "wheel");
+  };
+
   function PagesLink(props) {
     return (
       <div className="pagesLink" style={props.style}>
@@ -119,6 +128,25 @@ export default function SideBar(props) {
     setOpacity((curr) => (curr === 0 ? 1 : 0));
   };
 
+  const renderActivePage = (page) => {
+    console.log(page);
+    switch (page) {
+      case "profile":
+        return <Profile></Profile>;
+      case "wheel":
+        return <Wheel></Wheel>;
+      case "stream":
+        return <Profile></Profile>;
+      case "badgedex":
+        return <Profile></Profile>;
+      case "leaderboard":
+        return <Profile></Profile>;
+      case "awards":
+        return <Awards goToWheel={goToWheel} />;
+      default:
+        return <Profile></Profile>;
+    }
+  };
   const mainSlide = (
     <Slide className="containerprofile" bottom when={toggleButton}>
       {renderActivePage(link)}
@@ -160,6 +188,7 @@ export default function SideBar(props) {
         </a>
       </div>
       {main}
+      <NotificationContainer />
     </Container>
   );
 }

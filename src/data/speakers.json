@@ -37,13 +37,10 @@
       "initStatus": "hide",
       "label": "Talk. 17h",
       "name": "João Dias",
-      "job": "",
-      "description": "Tasker",
+      "job": "Tasker developer",
+      "description": "",
       "picture": "../images/speakers/joaodias.jpeg",
-      "bio": [
-        "Aos 14 anos de idade João vendeu o seu primeiro software por 30 “contos”, aos 17 foi finalista das Olimpíadas de Informática, aos 26 co-fundou a empresa que lançou o primeiro ERP português disponível como Software as a Service, software distinguido, 2 anos depois, com o prémio “Inovação Tecnológica em PME” promovido pela Oracle e Intel.",
-        "João Oliveira é licenciado pela Universidade do Minho, tem um trajeto profissional diversificado, no setor público e privado, co-fundou uma startup onde foi Chief Technical Officer e Arquitecto de Software, e nos últimos anos passou por multinacionais da área das telecomunicações (Wedo Technologies) e da indústria de moda de luxo (Farfetch). Desde o início de 2020 é Chief Technical Officer na TonicApp SA, empresa que desenvolve uma plataforma digital de saúde desenvolvida para apoiar a comunidade médica a diagnosticar e a tratar os doentes, empresa que está presente em Portugal, Espanha, França e Itália."
-      ],
+      "bio": [],
       "activityID": "developer",
       "day": 0,
       "linkedin": ""
@@ -84,7 +81,9 @@
       "job": "Full-Stack Developer",
       "description": "Subvisual",
       "picture": "../images/speakers/pedrocosta.jpg",
-      "bio": ["Full-Stack Developer na Subvisual. Actualmente Tech Lead na Medify. Às vezes terapeuta de CTOs com relativo sucesso. Encontrado em salas de servidores à procura de cabos. Não fui eu, mas ajudo a arranjar."],
+      "bio": [
+        "Full-Stack Developer na Subvisual. Actualmente Tech Lead na Medify. Às vezes terapeuta de CTOs com relativo sucesso. Encontrado em salas de servidores à procura de cabos. Não fui eu, mas ajudo a arranjar."
+      ],
       "activityID": "testes",
       "day": 1,
       "github": "https://github.com/pfac",
@@ -98,10 +97,7 @@
       "job": "Professional Over-engineer",
       "description": "Subvisual",
       "picture": "../images/speakers/miguelpalhas.png",
-      "bio": [
-        "elixir / ruby / rust / nonsense",
-        "Above-average chess player"
-      ],
+      "bio": ["elixir / ruby / rust / nonsense", "Above-average chess player"],
       "activityID": "vim",
       "day": 1,
       "github": "https://github.com/naps62",
