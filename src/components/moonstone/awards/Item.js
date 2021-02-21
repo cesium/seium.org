@@ -3,8 +3,6 @@ import Button from "../Button";
 import API from "../../../utils/api";
 import { NotificationManager } from "react-notifications";
 
-import image from "../../images/awards/award1.png";
-
 const parseError = (error) => {
   let r = "";
 
@@ -69,7 +67,7 @@ const Item = (props) => {
 
   return (
     <div className="awardItem" disabled={isOutOfStockOrLimit()}>
-      <img src={image} alt="Award 1" />
+      <img src={props.img} alt="Award 1" />
       <Button
         onClick={buyItems}
         style={{ margin: "20px 0 10px 0", padding: "10px 0 10px 0" }}
