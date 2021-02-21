@@ -11,6 +11,7 @@ import Achievement from "../components/moonstone/Achievement";
 
 function Badge({ badge_info, resetBadge }) {
   const [badge, setBadge] = useState(badge_info);
+  const [is_loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchBadge = async () => {
@@ -18,9 +19,19 @@ function Badge({ badge_info, resetBadge }) {
       const badge = data.data;
 
       setBadge(badge);
+      setLoading(false);
     };
     fetchBadge();
   }, [badge_info]);
+
+  const badge_types = {
+    4: "Companies",
+    6: "Talks",
+    7: "Workshops",
+    2: "Challenges",
+    3: "Days",
+    8: "Others",
+  };
 
   return (
     <div className="userProfile">
@@ -46,8 +57,8 @@ function Badge({ badge_info, resetBadge }) {
         <div className="spinningWheel">
           <div className="badge-info" style={{ width: "100%" }}>
             <Header
-              style={{ width: "100%", padding: "14px 0 20px 0" }}
-              title="Badge"
+              style={{ width: "100%", padding: "11px 0 20px 0" }}
+              title={badge_types[badge.type]}
             >
               <div
                 style={{
@@ -63,7 +74,7 @@ function Badge({ badge_info, resetBadge }) {
             {/* <div className="desc">{badge.description}</div> */}
           </div>
         </div>
-        <Owners owners={badge.attendees}></Owners>
+        {!is_loading && <Owners owners={badge.attendees}></Owners>}
       </div>
     </div>
   );

@@ -754,14 +754,14 @@ label {
 @media (min-width: 1200px) {
   .achievement .achievements {
     padding-top: 8px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 1200px) {
   .achievement .achievements {
     padding-top: 8px;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0px !important;
   }
 }
@@ -1163,4 +1163,23 @@ label {
     top: 12%;
   }
 }
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /*# sourceMappingURL=style.css.map */

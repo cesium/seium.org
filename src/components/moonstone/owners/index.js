@@ -12,11 +12,14 @@ export default function Owners(props) {
       {props.owners && props.owners.length !== 0 ? (
         <div className="owners">
           {props.owners.map((item) => (
-            <Owner key={item.id} user={item.nickname}></Owner>
+            <Owner
+              key={item.id}
+              user={item.nickname ? item.nickname : item.name}
+            ></Owner>
           ))}
         </div>
       ) : (
-        <div>Noone redeemed this badge.</div>
+        <div className="header-4">Noone redeemed this badge.</div>
       )}
     </div>
   );

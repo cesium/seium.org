@@ -28,13 +28,13 @@ const Badge = ({ badge, is_owned, grid, handleClick }) => {
 
 const Filters = ({ show_all, onShowChange, category, onCategoryChange }) => {
   const badge_types = [
-    { type: -1, text: "Todos" },
-    { type: 4, text: "Empresas" },
+    { type: -1, text: "All" },
+    { type: 4, text: "Companies" },
     { type: 6, text: "Talks" },
     { type: 7, text: "Workshops" },
-    { type: 2, text: "Desafios" },
-    { type: 3, text: "Dias" },
-    { type: 8, text: "Outros" },
+    { type: 2, text: "Challenges" },
+    { type: 3, text: "Days" },
+    { type: 8, text: "Others" },
   ];
 
   return (
