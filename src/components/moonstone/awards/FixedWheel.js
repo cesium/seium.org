@@ -15,7 +15,7 @@ class FixedWheel extends Component {
         <div className="union"></div>
         <Button
           onClick={() => this.props.goToWheel()}
-          style={{ marginTop: "20px" }}
+          style={{ margin: "20px 0 10px 0", padding: "10px 0 10px 0" }}
           width="208px"
           inner="15 tokens 💰"
         >

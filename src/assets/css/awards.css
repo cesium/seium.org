@@ -64,53 +64,53 @@ h6 {
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-top: 50px;
   margin-bottom: 50px;
-  margin-right: 50px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .awardItem {
     margin-right: 25px;
   }
 }
 
 .awardItem img {
-  height: 142px;
+  height: 250px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .awardItem {
     width: 45%;
   }
 }
 
 .fixedWheel .wheel {
-  width: 142px;
-  height: 142px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background: url("../img/Wh.png") center no-repeat;
 }
 
 .fixedWheel .union {
-  width: 8px;
-  height: 14px;
+  width: 12px;
+  height: 20px;
   background: url("../img/Union.svg") center no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 28%;
+  top: 35%;
   left: 48.5%;
 }
 
 @media (max-width: 992px) {
   .fixedWheel .union {
-    top: 28%;
-    left: 48.5%;
+    top: 34%;
+    left: 48%;
   }
 }
 
 @media (max-width: 576px) {
   .fixedWheel .union {
-    top: 30%;
+    top: 33%;
     left: 47.5%;
   }
 }
@@ -124,7 +124,7 @@ h6 {
 }
 
 .stock {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 12px;
   font-style: normal;
   font-weight: 900;
@@ -135,7 +135,7 @@ h6 {
 }
 
 .limit {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -147,5 +147,5 @@ h6 {
 .awardItem[disabled]
 {
   pointer-events: none;
-  opacity: 0.7;
+  opacity: 0.5;
 }
