@@ -86,12 +86,41 @@
   text-align: left;
 }
 
+.rankPlace .ownerplaceName {
+  flex: 1;
+  text-align: left;
+}
+
 .rankPlace .place {
   flex: 1;
   text-align: left;
 }
 
+.rankPlace .ownerplace {
+  color: #00ffb7;
+  flex: 1;
+  text-align: left;
+}
+
+.ownerplaceName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Inter Black";
+  font-size: 12px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ffb7;
+}
+
 .placeName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-family: "Inter Black";
   font-size: 12px;
   font-weight: 900;
@@ -107,6 +136,18 @@
   font-family: "Inter Regular";
   font-size: 12px;
   font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.ownerplace {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: 900;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.1;
