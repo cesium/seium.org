@@ -1163,4 +1163,9 @@ label {
     top: 12%;
   }
 }
+
+.notification {
+  border-radius: 15px !important;
+}
+
 /*# sourceMappingURL=style.css.map */
