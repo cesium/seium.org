@@ -86,7 +86,6 @@ export default function SideBar(props) {
   }
 
   const renderActivePage = (page) => {
-    console.log(page);
     switch (page) {
       case "profile":
         return <Profile></Profile>;

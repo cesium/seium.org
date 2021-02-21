@@ -7,9 +7,19 @@ import NextNotClicked from "../../images/next-not-clicked-green.svg";
 import PrevClicked from "../../images/prev-clicked-green.svg";
 import NextClicked from "../../images/next-clicked-green.svg";
 import "./clickable.css";
+import Rank from "./index";
 
 let next = NextClicked;
 let prev = PrevNotClicked;
+
+const winners = [
+  { rank: "1", username: "usernameX", badges: "43" },
+  { rank: "2", username: "john-robert", badges: "23" },
+  { rank: "3", username: "usernameX", badges: "45" },
+  { rank: "4", username: "john-robert", badges: "23" },
+  { rank: "5", username: "usernameX", badges: "45" },
+  { rank: "6", username: "john-robert", badges: "45" },
+];
 
 let headerStyle = () => {
   let { width, height } = windowDimensions();
@@ -182,8 +192,11 @@ function RankCarousel(props) {
   }
 
   return (
-    <div className="rankcarousel">
-      <Header></Header>
+    <div className="main">
+      <div className="rankcarousel">
+        <Header></Header>
+      </div>
+      <Rank winners={winners} day={23 + increment}></Rank>
       {manageNavigation()}
     </div>
   );
