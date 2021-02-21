@@ -79,6 +79,25 @@
   overflow-y: scroll;
 }
 
+/* SCROLLBAR */
+.owners::-webkit-scrollbar {
+  width: 10px;
+}
+
+.owners::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.owners::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.owners::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/**/
+
 .owner {
   display: flex;
   grid-column: span 6;
@@ -95,6 +114,12 @@
   margin-top: 37px;
   width: 100%;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
 }
 
 .filters .bold {
