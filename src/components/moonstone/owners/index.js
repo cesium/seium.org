@@ -2,6 +2,12 @@ import Owner from "./Owner";
 import Header from "../Header";
 
 export default function Owners(props) {
+  const cutString = (string) => {
+    console.log(string);
+    if (string.length >= 24) return string.substr(0, 21) + "...";
+    else return string;
+  };
+
   return (
     <div className="latestWins">
       <Header
@@ -14,7 +20,13 @@ export default function Owners(props) {
           {props.owners.map((item) => (
             <Owner
               key={item.id}
-              user={item.nickname ? item.nickname : item.name}
+              user={
+                item.nickname
+                  ? cutString(item.nickname)
+                  : item.name
+                  ? cutString(item.name)
+                  : ""
+              }
             ></Owner>
           ))}
         </div>

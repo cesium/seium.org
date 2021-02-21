@@ -8,6 +8,11 @@ import API from "../utils/api";
 import BadgePage from "./Badge";
 
 const Badge = ({ badge, is_owned, grid, handleClick }) => {
+  const cutString = (string) => {
+    if (string.length >= 13) return string.substr(0, 10) + "...";
+    else return string;
+  };
+
   return (
     <div
       className={`badge ${is_owned && "owned"} ${grid}`}
@@ -20,8 +25,8 @@ const Badge = ({ badge, is_owned, grid, handleClick }) => {
           alt="Error"
         ></img>
       </div>
-      <div className="name">{badge.name}</div>
-      <div className="id">#{badge.id}</div>
+      <div className="name">{cutString(badge.name)}</div>
+      <div className="id">{`${badge.tokens} 💰 `}</div>
     </div>
   );
 };
