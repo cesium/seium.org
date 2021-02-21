@@ -10,14 +10,14 @@ function Hackathon() {
   return (
     <div>
       <Intro />
-      {/*<Mentors
+      <Mentors
         style={{
           background: "#0E1D2A",
           paddingTop: "5%",
           paddingLeft: "5%",
           paddingRight: "5%",
         }}
-      />*/}
+      />
       <Awards
         style={{
           background: "#4CA9FF",
@@ -27,14 +27,14 @@ function Hackathon() {
           paddingBottom: "5%",
         }}
       />
-      {/*<Jury
+      <Jury
         style={{
           background: "#0E1D2A",
           paddingTop: "5%",
           paddingLeft: "5%",
           paddingRight: "5%",
         }}
-      />*/}
+      />
       <Ready
         style={{
           background: "#0E1D2A",

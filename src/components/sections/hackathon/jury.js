@@ -6,10 +6,11 @@ import "../../../assets/css/juries.css";
 import HeaderIcon from "../../../components/images/Header.svg";
 import Card from "../../../components/utils/cardCompo";
 
-const speakers = [];
+import hackathon from "../../../data/hackathon.json";
 
 function SpeakerList() {
-  const listItems = speakers.map((s, i) => (
+
+  const listItems = hackathon.juris.map((s, i) => (
     <Speaker
       key={i}
       speaker={s.img}

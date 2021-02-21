@@ -4,10 +4,11 @@ import Speaker from "../../utils/speaker";
 import Container from "../../container/container";
 import "../../../assets/css/mentors.css";
 
-const speakers = [];
+import hackathon from "../../../data/hackathon.json";
 
 function SpeakerList() {
-  const listItems = speakers.map((s, i) => (
+
+  const listItems = hackathon.mentores.map((s, i) => (
     <Speaker
       key={i}
       speaker={s.img}
