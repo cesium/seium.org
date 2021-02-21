@@ -84,7 +84,9 @@
       "job": "Full-Stack Developer",
       "description": "Subvisual",
       "picture": "../images/speakers/pedrocosta.jpg",
-      "bio": ["Full-Stack Developer na Subvisual. Actualmente Tech Lead na Medify. Às vezes terapeuta de CTOs com relativo sucesso. Encontrado em salas de servidores à procura de cabos. Não fui eu, mas ajudo a arranjar."],
+      "bio": [
+        "Full-Stack Developer na Subvisual. Actualmente Tech Lead na Medify. Às vezes terapeuta de CTOs com relativo sucesso. Encontrado em salas de servidores à procura de cabos. Não fui eu, mas ajudo a arranjar."
+      ],
       "activityID": "testes",
       "day": 1,
       "github": "https://github.com/pfac",
@@ -98,10 +100,7 @@
       "job": "Professional Over-engineer",
       "description": "Subvisual",
       "picture": "../images/speakers/miguelpalhas.png",
-      "bio": [
-        "elixir / ruby / rust / nonsense",
-        "Above-average chess player"
-      ],
+      "bio": ["elixir / ruby / rust / nonsense", "Above-average chess player"],
       "activityID": "vim",
       "day": 1,
       "github": "https://github.com/naps62",
