@@ -79,7 +79,7 @@ function Challenges() {
                 big={true}
                 style={{ borderBottom: "2px solid white" }}
               >
-                Psssst... There are even more prizes, check my app the after
+                Psssst... There are even more prizes, check my app after the
                 Opening Ceremony!
               </Card>
             </div>

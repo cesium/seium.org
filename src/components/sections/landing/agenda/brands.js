@@ -21,7 +21,7 @@ import primavera from "../../../images/sponsors/primavera.png";
 
 // Bronze
 import seegno from "../../../images/sponsors/seegno.jpeg";
-import ey from "../../../images/sponsors/ey.svg";
+import ey from "../../../images/sponsors/ey.png";
 import retail from "../../../images/sponsors/retail.svg";
 import inovaria from "../../../images/sponsors/inovaria.png";
 import alten from "../../../images/sponsors/alten.svg";

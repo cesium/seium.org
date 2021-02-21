@@ -20,6 +20,7 @@ function Day24() {
         animator1="Mauro Almeida"
         animator2="Ricardo Gomes"
         day={1}
+        join="https://www.eventbrite.pt/e/142305384235"
         activityID="cybersecurity"
         speaker1ID="mauroalmeida"
         speaker2ID="ricardogomes"
@@ -32,6 +33,7 @@ function Day24() {
         title="Workshop Subvisual"
         animator1="Pedro Costa"
         day={1}
+        join="https://www.eventbrite.pt/e/142305783429"
         activityID="testes"
         speaker1ID="pedrocosta"
         description="Testes são a base da engenharia aplicada à criação de software. Neste workshop iremos analisar e experimentar diferentes tipos de testes e o seu papel na produção de produtos digitais de qualidade. Usaremos JavaScript e várias ferramentas do respectivo ecossistema.

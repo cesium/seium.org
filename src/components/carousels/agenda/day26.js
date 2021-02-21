@@ -21,6 +21,7 @@ function Day26() {
         animator2="João Ribeiro"
         animator3="Luciano Sousa"
         day={3}
+        join="https://www.eventbrite.pt/e/142306200677"
         activityID="sensores"
         speaker1ID="joaoandrade"
         speaker2ID="joaoribeiro"
@@ -35,6 +36,7 @@ function Day26() {
         animator1="Ricardo Villas-Boas"
         animator2="Mauro Rosa"
         day={3}
+        join="https://www.eventbrite.pt/e/142306300977"
         activityID="deepdive"
         speaker1ID="ricardovillasboas"
         speaker2ID="maurorosa"

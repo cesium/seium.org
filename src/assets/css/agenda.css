@@ -814,3 +814,15 @@ button {
     width: 100% !important;
   }
 }
+
+a.x-large {
+  font-family: "Inter Black";
+  font-size: 12px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ffb7;
+}
