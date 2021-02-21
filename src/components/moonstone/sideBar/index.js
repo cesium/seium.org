@@ -8,6 +8,10 @@ import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
 import Badgedex from "../../../pages/Badgedex";
+import Awards from "../../../pages/Awards";
+import { NotificationContainer } from "react-notifications";
+
+import "react-notifications/lib/notifications.css";
 
 export default function SideBar(props) {
   const { width, height } = Window();
@@ -42,6 +46,11 @@ export default function SideBar(props) {
     setZindex((curr) => 0);
     setToggleButton(true);
   };
+
+  const goToWheel = () => {
+    handleOnClick(1, "wheel");
+  };
+
   function PagesLink(props) {
     return (
       <div className="pagesLink" style={props.style}>
@@ -108,13 +117,13 @@ export default function SideBar(props) {
       case "wheel":
         return <Wheel></Wheel>;
       case "stream":
-        return <Wheel></Wheel>;
+        return <Profile></Profile>;
       case "badgedex":
         return <Badgedex></Badgedex>;
       case "leaderboard":
-        return <Wheel></Wheel>;
+        return <Profile></Profile>;
       case "awards":
-        return <Wheel></Wheel>;
+        return <Awards goToWheel={goToWheel} />;
       default:
         return <Profile></Profile>;
     }
@@ -160,6 +169,7 @@ export default function SideBar(props) {
         </a>
       </div>
       {main}
+      <NotificationContainer />
     </Container>
   );
 }

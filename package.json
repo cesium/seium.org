@@ -22,6 +22,7 @@
     "react-images-upload": "^1.2.8",
     "react-inview": "^0.0.8",
     "react-native": "^0.63.4",
+    "react-notifications": "^1.7.2",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
