@@ -12,15 +12,6 @@ import Rank from "./index";
 let next = NextClicked;
 let prev = PrevNotClicked;
 
-const winners = [
-  { rank: "1", username: "usernameX", badges: "43" },
-  { rank: "2", username: "john-robert", badges: "23" },
-  { rank: "3", username: "usernameX", badges: "45" },
-  { rank: "4", username: "john-robert", badges: "23" },
-  { rank: "5", username: "usernameX", badges: "45" },
-  { rank: "6", username: "john-robert", badges: "45" },
-];
-
 let headerStyle = () => {
   let { width, height } = windowDimensions();
   if (width >= 1200) {
@@ -196,7 +187,7 @@ function RankCarousel(props) {
       <div className="rankcarousel">
         <Header></Header>
       </div>
-      <Rank winners={winners} day={23 + increment}></Rank>
+      <Rank day={23 + increment}></Rank>
       {manageNavigation()}
     </div>
   );

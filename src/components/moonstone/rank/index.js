@@ -87,7 +87,7 @@ export default function Index(props) {
           Badges
         </p>
       </div>
-      {props.winners
+      {rank8
         ? rank8.map((item, index) => (
             <RankPlaces
               rank={
