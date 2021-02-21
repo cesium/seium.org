@@ -1,0 +1,129 @@
+
+.buttonBoard {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.2;
+}
+
+.buttonBoard {
+  background-color: #FFFFFF;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.buttonBoard.activate {
+  background-color: #00ffb7;
+  color: #000000;
+  opacity: 1;
+}
+
+.buttonBoard::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  padding: 50%;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0;
+  transition: transform 700ms, opacity 700ms;
+  pointer-events: none;
+}
+
+.buttonBoard:active::before {
+  transition: 0s;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+
+.rank {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .rank {
+    width: 90%;
+  }
+}
+
+.rankPlace {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 3px;
+}
+
+.rankPlace:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rankPlace .badge {
+  color: #00ffb7;
+  flex: 1;
+}
+
+.rankPlace .placeName {
+  flex: 1;
+  text-align: left;
+}
+
+.rankPlace .place {
+  flex: 1;
+  text-align: left;
+}
+
+.placeName {
+  font-family: "Inter Black";
+  font-size: 12px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.place {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+
+.badge {
+  font-family: "Inter Black";
+  font-size: 12px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: right;
+  color: var(--mint);
+}

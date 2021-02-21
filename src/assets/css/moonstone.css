@@ -389,56 +389,6 @@ label {
   color: #ff4444;
 }
 
-.buttonBoard {
-  font-family: "Inter Regular";
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.1;
-  letter-spacing: 0.72px;
-  text-align: center;
-  color: #000000;
-  opacity: 0.2;
-}
-
-.buttonBoard {
-  background-color: #FFFFFF;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.buttonBoard.activate {
-  background-color: #00ffb7;
-  color: #000000;
-  opacity: 1;
-}
-
-.buttonBoard::before {
-  content: "";
-  position: absolute;
-  background-color: #ffffff;
-  padding: 50%;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(2);
-  opacity: 0;
-  transition: transform 700ms, opacity 700ms;
-  pointer-events: none;
-}
-
-.buttonBoard:active::before {
-  transition: 0s;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(0);
-}
-
 .buttonText {
   background-color: #00ffb7;
   display: inline-block;
@@ -1214,3 +1164,18 @@ label {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+.rankcarousel {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+@media (max-width: 1200px) {
+  .rankcarousel {
+    width: 90%;
+  }
+}

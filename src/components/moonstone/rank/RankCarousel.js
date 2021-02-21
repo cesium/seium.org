@@ -7,7 +7,6 @@ import NextNotClicked from "../../images/next-not-clicked-green.svg";
 import PrevClicked from "../../images/prev-clicked-green.svg";
 import NextClicked from "../../images/next-clicked-green.svg";
 import "./clickable.css";
-import Rank from "/home/jessica/Documents/seium.org/src/components/moonstone/rank/index";
 
 let next = NextClicked;
 let prev = PrevNotClicked;
@@ -26,9 +25,8 @@ let headerStyle = () => {
         marginBottom: "7px",
       },
       day: {
-        color: "#00FFB7"
+        color: "#00FFB7",
       },
-      container: {},
       navigation: {
         display: "flex",
         alignItems: "center",
@@ -41,8 +39,6 @@ let headerStyle = () => {
       },
       headerContainer: {
         display: "flex",
-        alignItems: "flex-start",
-        flexDirection: "column",
       },
     };
   } else if (width >= 823) {
@@ -58,9 +54,8 @@ let headerStyle = () => {
       },
       day: {
         fontSize: "50px",
-        color: "#00FFB7"
+        color: "#00FFB7",
       },
-      container: {},
       navigation: {
         display: "flex",
         alignItems: "center",
@@ -73,8 +68,6 @@ let headerStyle = () => {
       },
       headerContainer: {
         display: "flex",
-        alignItems: "flex-start",
-        flexDirection: "column",
       },
     };
   } else if (width >= 768) {
@@ -90,12 +83,7 @@ let headerStyle = () => {
       },
       day: {
         fontSize: "40px",
-        color: "#00FFB7"
-      },
-      container: {
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
+        color: "#00FFB7",
       },
       navigation: {
         display: "flex",
@@ -109,8 +97,6 @@ let headerStyle = () => {
       },
       headerContainer: {
         display: "flex",
-        alignItems: "flex-start",
-        flexDirection: "column",
       },
     };
   } else {
@@ -126,14 +112,7 @@ let headerStyle = () => {
       },
       day: {
         fontSize: "40px",
-        color: "#00FFB7"
-      },
-      container: {
-        flexDirection: "column",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        color: "#00FFB7",
       },
       navigation: {
         width: "100%",
@@ -143,37 +122,24 @@ let headerStyle = () => {
         height: "50px",
       },
       headerContainer: {
-        width: "100%",
-        maxWidth: "450px",
         display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        marginBottom: "30px",
       },
     };
   }
 };
 
-const winners = [
-  { rank: "1", username: "usernameX", badges: "43" },
-  { rank: "2", username: "john-robert", badges: "23" },
-  { rank: "3", username: "usernameX", badges: "45" },
-  { rank: "4", username: "john-robert", badges: "23" },
-  { rank: "5", username: "usernameX", badges: "45" },
-  { rank: "6", username: "john-robert", badges: "45" },
-];
-
 function RankCarousel(props) {
-  let containerStyle = {
-    ...{
-      width: "100%",
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-    },
-    ...headerStyle().container,
-  };
   let [increment, setIncrement] = React.useState(props.initialDay);
+  let carouselPages = [23, 24, 25, 26];
+
+  let manageNavigation = () => {
+    prev = PrevClicked;
+    next = NextClicked;
+    if (increment === 0) prev = PrevNotClicked;
+
+    if (increment === carouselPages.length - 1) next = NextNotClicked;
+  };
+
   function navigate(param) {
     if (param === "next" && increment < carouselPages.length - 1)
       setIncrement((next) => next + 1);
@@ -215,21 +181,10 @@ function RankCarousel(props) {
     );
   }
 
-  let carouselPages = [ 23, 24, 25, 26];
-
-  let manageNavigation = () => {
-    prev = PrevClicked;
-    next = NextClicked;
-    if (increment === 0) prev = PrevNotClicked;
-
-    if (increment === carouselPages.length - 1) next = NextNotClicked;
-  };
-
   return (
-    <div style={{ ...containerStyle, ...props.style }}>
+    <div className="rankcarousel">
       <Header></Header>
       {manageNavigation()}
-      <Rank winners={winners}></Rank>
     </div>
   );
 }
