@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - uses: actions/checkout@v1
@@ -16,6 +17,9 @@ jobs:
           node-version: 15.7.0
       - name: Build website
         run: yarn && CI='' yarn build
+        env:
+          REACT_APP_SAFIRA_ENDPOINT: ${{ secrets.REACT_APP_SAFIRA_ENDPOINT }}
+          REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
       - name: Upload to netlify
         uses: netlify/actions/cli@master
         id: deploy-netlify
