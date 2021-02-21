@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Button from "../Button";
 import API from "../../../utils/api";
+import { NotificationManager } from "react-notifications";
 
-import image from "../../images/awards/award1.png"
+import image from "../../images/awards/award1.png";
 
 const parseError = (error) => {
   let r = "";
@@ -35,7 +36,7 @@ const Item = (props) => {
       },
     })
       .then((res) => {
-        alert(res.data.Redeemable);
+        NotificationManager.success(res.data.Redeemable, "Success", 3000);
 
         props.incrementState();
 
@@ -56,7 +57,7 @@ const Item = (props) => {
             "Something happened and we don't know what. Reload and try again?";
         }
 
-        alert(errorMessage);
+        NotificationManager.error(errorMessage, "Error", 3000);
 
         setData({
           ...data,

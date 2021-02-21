@@ -8,6 +8,9 @@ import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
 import Awards from "../../../pages/Awards";
+import { NotificationContainer } from "react-notifications";
+
+import "react-notifications/lib/notifications.css";
 
 export default function SideBar(props) {
   const { width, height } = Window();
@@ -165,6 +168,7 @@ export default function SideBar(props) {
         </a>
       </div>
       {main}
+      <NotificationContainer />
     </Container>
   );
 }
