@@ -94,25 +94,6 @@ export default function SideBar(props) {
     );
   }
 
-  const renderActivePage = (page) => {
-    switch (page) {
-      case "profile":
-        return <Profile></Profile>;
-      case "wheel":
-        return <Wheel></Wheel>;
-      case "stream":
-        return <Wheel></Wheel>;
-      case "badgedex":
-        return <Wheel></Wheel>;
-      case "leaderboard":
-        return <Leaderboard></Leaderboard>;
-      case "awards":
-        return <Wheel></Wheel>;
-      default:
-        return <Profile></Profile>;
-    }
-  };
-
   const handleIconMenu = () => {
     setToggleButton((curr) => !curr);
     setMenu(
@@ -140,7 +121,7 @@ export default function SideBar(props) {
       case "badgedex":
         return <Profile></Profile>;
       case "leaderboard":
-        return <Profile></Profile>;
+        return <Leaderboard></Leaderboard>;
       case "awards":
         return <Awards goToWheel={goToWheel} />;
       default:
