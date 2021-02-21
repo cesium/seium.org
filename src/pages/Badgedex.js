@@ -26,13 +26,31 @@ const Badge = ({ badge, is_owned, grid, handleClick }) => {
   );
 };
 
-const Filters = ({ show_all, onShowChange /*category, onCategoryChange*/ }) => {
+const Filters = ({ show_all, onShowChange, category, onCategoryChange }) => {
+  const badge_types = [
+    { type: -1, text: "Todos" },
+    { type: 4, text: "Empresas" },
+    { type: 6, text: "Talks" },
+    { type: 7, text: "Workshops" },
+    { type: 2, text: "Desafios" },
+    { type: 3, text: "Dias" },
+    { type: 8, text: "Outros" },
+  ];
+
   return (
     <div className="filters">
-      {/* <div className="flex">
-        <span class="bold">Filter by</span>
-        <option>XXX</option>
-      </div> */}
+      <div className="flex">
+        <span className="bold">Filter by</span>
+        <select
+          value={category}
+          onChange={onCategoryChange}
+          className="dropdown"
+        >
+          {badge_types.map((b) => (
+            <option value={b.type}>{b.text}</option>
+          ))}
+        </select>
+      </div>
       <div className="flex">
         <span className="bold">Show</span>
         <Button
@@ -93,32 +111,30 @@ export default function Badgedex(params) {
   }, [user.id]);
 
   const [show_all, setShowAll] = useState(true);
-  // const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(-1);
 
   const handleShowAllChange = (show) => {
     setShowAll(show);
   };
 
-  // const handleCategoryChange = (category) => {
-  //   setCategory(category);
-  //   if (category !== "") {
-  //     const filtered_owned = owned_badges.filter(
-  //       (b) => b.type.toUpperCase() === category.toUpperCase()
-  //     );
-  //     setFilteredOwnedBagdes(filtered_owned);
+  const handleCategoryChange = (category) => {
+    const cat = parseInt(category.target.value);
+    setCategory(cat);
 
-  //     const filtered = badges.filter(
-  //       (b) => b.type.toUpperCase() === category.toUpperCase()
-  //     );
-  //     setFilteredBadges(filtered);
-  //   } else {
-  //     setFilteredOwnedBagdes(owned_badges);
-  //     const filtered_badges = badges.filter(
-  //       (badge) => !owned_badges.some((b) => b.id === badge.id)
-  //     );
-  //     setFilteredBadges(filtered_badges);
-  //   }
-  // };
+    if (cat !== -1) {
+      const filtered_owned = owned_badges.filter((b) => b.type === cat);
+      setFilteredOwnedBagdes(filtered_owned);
+
+      const filtered = badges.filter((b) => b.type === cat);
+      setFilteredBadges(filtered);
+    } else {
+      setFilteredOwnedBagdes(owned_badges);
+      const filtered_badges = badges.filter(
+        (badge) => !owned_badges.some((b) => b.id === badge.id)
+      );
+      setFilteredBadges(filtered_badges);
+    }
+  };
 
   const handleBadgeReset = () => {
     setBadgeSelected(false);
@@ -133,9 +149,9 @@ export default function Badgedex(params) {
 
       <Filters
         show_all={show_all}
-        // category={category}
+        category={category}
         onShowChange={handleShowAllChange}
-        // onCategoryChange={handleCategoryChange}
+        onCategoryChange={handleCategoryChange}
       ></Filters>
 
       <div className="main">
@@ -156,7 +172,7 @@ export default function Badgedex(params) {
               <Badge
                 key={b.id}
                 badge={b}
-                onClick={() => setBadgeSelected(b)}
+                handleClick={() => setBadgeSelected(b)}
                 grid="col-xs-6 col-md-4 col-lg-3 col-xl-2"
               ></Badge>
             ))}
