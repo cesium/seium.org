@@ -1,3 +1,7 @@
+/*
+Base work from https://github.com/shekharramola/react-wheel-of-prizes
+*/
+
 import React, { useEffect, useState } from "react";
 
 import Button from "../Button";
