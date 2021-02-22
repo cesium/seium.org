@@ -100,6 +100,15 @@ function Day25() {
       />
       <Activity
         main="yes"
+        bigTitle="Eurotux"
+        title="Pitch"
+        start="17:00"
+        end="17:15"
+        join="https://zoom.us/j/97273566550"
+      />
+      <CoffeeBreak name="Coffee Break" />
+      <Activity
+        main="yes"
         bigTitle="Google HashCode"
         start="17:30"
         end="22:00"
