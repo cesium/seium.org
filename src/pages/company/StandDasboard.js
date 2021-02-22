@@ -16,7 +16,7 @@ function StandDashboard() {
 
   useEffect(() => {
     axios
-      .get(`http://46.101.159.178/voice/${user.name}`, {
+      .get(`${process.env.REACT_APP_BOT_DOMAIN}/voice/${user.name}`, {
         headers: {
           Authorization: `${process.env.REACT_APP_BOT_API_KEY}`,
           "Content-Type": "application/json",
