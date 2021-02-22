@@ -150,6 +150,7 @@ function Activity(props) {
         }}
       >
         <ActivityFooter
+          type={props.title}
           advanced={props.advanced}
           label={props.label}
           join={props.join}
