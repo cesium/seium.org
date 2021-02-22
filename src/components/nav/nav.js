@@ -46,6 +46,9 @@ function NavBar() {
             <a className="nav-link nav-bar-link nav_link-s" href="/speakers">
               Speakers{" "}
             </a>
+            <a className="nav-link nav-bar-link nav_link-s" href="/login">
+              Login{" "}
+            </a>
           </div>
           <div className="nav-item">
             {/* <a className="nav-link nav-bar-link nav_link-s" href="/team">
