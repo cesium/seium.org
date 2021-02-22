@@ -8,7 +8,7 @@ function Badges() {
     <Challenge
       title="Final Badge Draw Prizes"
       parags={[
-        "You go to talks and workshops, you talk with every company you can and participate in every tournament. Now you are left with a bunch of badges, what do you do?!",
+        "You participate in talks and workshops, you talk with every company you can and participate in every tournament. Now you are left with a bunch of badges, what do you do?!",
         "Every badge comes with a set of entries to the Final Badge Draw! On the last day of SEI, we will select three winning entries and their owners will be the lucky recipients of an amazing selection of prizes! The more badges you have, the more likely you are to win!",
       ]}
       buttonText=""
@@ -23,7 +23,7 @@ function Badges() {
     <Challenge
       title="1st Day Badges"
       parags={[
-        "This one is easy. The winners are the three people with the most badges won on the first day! If there is a tie, the participant with the most tokens wins! If there’s still a tie after that, we’ll toss a coin! Badges you win before SEI starts will be counted on this day.",
+        "This one is easy. The winners are the three people with the most badges won on the first day! If there is a tie, the participant with the most tokens wins! If there’s still a tie after that, we’ll toss a coin! The badges you win before SEI starts will be counted on this day.",
       ]}
       buttonText=""
       prizes={[
@@ -37,7 +37,7 @@ function Badges() {
     <Challenge
       title="2nd Day Badges"
       parags={[
-        "The same rules as in day one. The difference is that only the badges you win on the second day count towards this price.",
+        "The same rules as day one apply. However  only the badges you win on the second day count towards this prize.",
       ]}
       buttonText=""
       prizes={[
@@ -51,7 +51,7 @@ function Badges() {
     <Challenge
       title="3rd Day Badges"
       parags={[
-        "The same rules as in day one (again). The difference is that only the badges you win on the third day count towards this price.",
+        "The same rules as day one (again). However  only the badges you win on the third day count towards this prize.",
       ]}
       buttonText=""
       prizes={[
@@ -65,7 +65,7 @@ function Badges() {
     <Challenge
       title="4th Day Badges"
       parags={[
-        "This is getting a little repetitive… The same rules as in day one (again). The difference is that only the badges you win on the forth day count towards this price.",
+        "This is getting a little repetitive… The same rules as day one (again). The difference is that only the badges you win on the fourth day count towards this prize.",
       ]}
       buttonText=""
       prizes={[

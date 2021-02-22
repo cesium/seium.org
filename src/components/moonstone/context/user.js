@@ -4,8 +4,12 @@ export const UserContext = createContext();
 
 const reducerUser = (user, action) => {
   switch (action.type) {
-    case "INIT":
-      return action.user;
+    case "INIT_ATTENDEE":
+      return { ...action.user, type: "attendee" };
+    case "INIT_COMPANY":
+      return { ...action.user, type: "company" };
+    case "INIT_MANAGER":
+      return { ...action.user, type: "manager" };
     case "UPDATE":
       return { ...user, ...action.user };
     default:

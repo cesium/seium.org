@@ -732,12 +732,14 @@ button {
 }
 
 .navbar .container-nav .nav-content .nav-item .nav-link {
-  padding: 16px;
+  padding: 10px 25px 10px 25px;
+  opacity: 0.4;
 }
 
 .navbar .container-nav .nav-content .nav-item .nav-link:hover,
 .navbar .container-nav .nav-content .nav-item .nav-link.active {
   color: #fff;
+  opacity: 1;
 }
 
 .navbar .container-nav .nav-content .nav-item .nav-link .pt {
@@ -825,6 +827,10 @@ button {
     position: absolute;
     top: -4px;
     left: 97%;
+  }
+  .navbar .container-nav .nav-content .nav-item .nav-link {
+    padding: 16px;
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=navbar.css.map */
