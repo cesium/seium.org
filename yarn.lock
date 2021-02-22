@@ -11198,6 +11198,11 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-wheel-of-prizes@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-wheel-of-prizes/-/react-wheel-of-prizes-1.0.6.tgz#dff30132b64bdee7bc21d1d4400a1e77e4d36ecf"
+  integrity sha512-MmYgI28b27WiS5UgcEsWc5SlSYVZywH53Vn/oDSWWCmaGNWxaiNZjGktarhRqq2Qo4BTkKX30QmkbZaMphQ7Hw==
+
 react-zoom-pan-pinch@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/react-zoom-pan-pinch/-/react-zoom-pan-pinch-1.6.1.tgz#da16267c258ab37e8ebcdc7c252794a9633e91ec"
