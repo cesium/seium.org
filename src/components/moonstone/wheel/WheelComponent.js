@@ -2,11 +2,27 @@
 Base work from https://github.com/shekharramola/react-wheel-of-prizes
 */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import Button from "../Button";
 import API from "../../../utils/api";
 import { NotificationManager } from "react-notifications";
+
+import Confetti from "react-dom-confetti";
+
+const config = {
+  angle: 90,
+  spread: 360,
+  startVelocity: 40,
+  elementCount: "200",
+  dragFriction: 0.12,
+  duration: 5000,
+  stagger: 3,
+  width: "10px",
+  height: "10px",
+  perspective: "500px",
+  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+};
 
 const parseError = (error) => {
   let r = "";
@@ -27,12 +43,13 @@ const WheelComponent = ({
   buttonText,
   isOnlyOnce,
   disabled,
-  setRolling
+  setRolling,
 }) => {
+  let reward;
   let currentSegment = "";
   let isStarted = false;
   const [isFinished, setFinished] = useState(true);
-  //const [winningSegment, setWinningSegment] = useState("");
+  const [win, setWin] = useState(false);
   let winningSegment = "";
   let timerHandle = 0;
   const timerDelay = segments.length;
@@ -125,7 +142,7 @@ const WheelComponent = ({
     frames++;
     draw();
     let finished = false;
-    let top = 0.9;
+    let top = 0.2;
 
     if (winningSegment) {
       if (speed < top) {
@@ -162,6 +179,13 @@ const WheelComponent = ({
 
       if (entries !== "") {
         NotificationManager.success(`You won ${entries} entries`, "Yay!", 3000);
+      }
+
+      if (winningSegment !== "Nada") {
+        setWin(true);
+        setWin(false);
+      } else {
+        setWin(false);
       }
 
       setFinished(true);
@@ -282,6 +306,7 @@ const WheelComponent = ({
   };
   return (
     <>
+      <Confetti active={ win } config={ config }/>
       <div id="wheel" disabled={disabled}>
         <canvas
           id="canvas"
