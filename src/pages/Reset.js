@@ -7,7 +7,7 @@ import Container from "../components/moonstone/Container";
 
 import "../assets/css/moonstone.css";
 
-const Register = () => {
+const Reset = () => {
   return (
     <Container className="register">
       <a className="small back" href="/">
@@ -17,7 +17,7 @@ const Register = () => {
         <a href="#">
           <img src={Logo} alt="logo" className="logo" />
         </a>
-        <h1 className="sign-up header-1">Sign up</h1>
+        <h1 className="sign-up header-1">Password Reset</h1>
         <FormSignup />
         <div className="button-reg">
           <Button width="340px"> LET'S GO!</Button>
@@ -39,4 +39,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Reset;
