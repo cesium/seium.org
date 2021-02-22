@@ -142,7 +142,7 @@ const WheelComponent = ({
     frames++;
     draw();
     let finished = false;
-    let top = 0.2;
+    let top = 0.9;
 
     if (winningSegment) {
       if (speed < top) {
