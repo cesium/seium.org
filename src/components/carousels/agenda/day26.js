@@ -100,12 +100,20 @@ function Day26() {
         end="17:00"
         join="https://zoom.us/j/95954519444"
       />
+      <Activity
+        main="yes"
+        bigTitle="Eurotux"
+        title="Pitch"
+        start="17:00"
+        end="17:15"
+        join="https://zoom.us/j/97273566550"
+      />
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
         bigTitle="Closing Session and Prize Announcement"
-        start="17:30"
-        end="18:30"
+        start="18:00"
+        end="19:00"
         join="https://zoom.us/j/96671922749"
       />
       <Activity
