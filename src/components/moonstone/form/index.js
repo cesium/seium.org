@@ -1,11 +1,11 @@
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import Input from "../Input";
 
 const FormSignup = (props) => {
+  // const resetID = window.location.;
   return (
     <div>
-      <Input type="text" label="Name" placeholder="John Robert" />
-      <Input type="email" label="EMAIL" placeholder="johnrobert@email.com" />
-      <Input type="text" label="USERNAME" placeholder="username" />
       <Input type="password" label="PASSWORD" placeholder="**********" />
       <Input
         type="password"
@@ -23,5 +23,7 @@ const FormLogin = (props) => {
     </div>
   );
 };
+
+FormSignup.getInitialProps = ({ query }) => ({ query });
 
 export { FormLogin, FormSignup };
