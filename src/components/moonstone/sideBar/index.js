@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useAuth } from "../context/auth";
+import { NotificationContainer } from "react-notifications";
 import BarItem from "./BarItem";
 import Container from "../Container";
 import Profile from "../../../pages/Profile";
@@ -7,9 +9,13 @@ import Slide from "react-reveal/Slide";
 import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
+import Awards from "../../../pages/Awards";
+
+import "react-notifications/lib/notifications.css";
 
 export default function SideBar(props) {
-  const { width, height } = Window();
+  const { width } = Window();
+  const { dispatch: dispatchAuth } = useAuth();
   const [selected, setselected] = useState([
     true,
     false,
@@ -41,6 +47,11 @@ export default function SideBar(props) {
     setZindex((curr) => 0);
     setToggleButton(true);
   };
+
+  const goToWheel = () => {
+    handleOnClick(1, "wheel");
+  };
+
   function PagesLink(props) {
     return (
       <div className="pagesLink" style={props.style}>
@@ -99,12 +110,31 @@ export default function SideBar(props) {
     setOpacity((curr) => (curr === 0 ? 1 : 0));
   };
 
+  const renderActivePage = (page) => {
+    console.log(page);
+    switch (page) {
+      case "profile":
+        return <Profile></Profile>;
+      case "wheel":
+        return <Wheel></Wheel>;
+      case "stream":
+        return <Profile></Profile>;
+      case "badgedex":
+        return <Profile></Profile>;
+      case "leaderboard":
+        return <Profile></Profile>;
+      case "awards":
+        return <Awards goToWheel={goToWheel} />;
+      default:
+        return <Profile></Profile>;
+    }
+  };
   const mainSlide = (
     <Slide className="containerprofile" bottom when={toggleButton}>
-      {link === "profile" ? <Profile></Profile> : <Wheel></Wheel>}
+      {renderActivePage(link)}
     </Slide>
   );
-  const mainNormal = link === "profile" ? <Profile></Profile> : <Wheel></Wheel>;
+  const mainNormal = renderActivePage(link);
   const main = width <= 768 ? mainSlide : mainNormal;
   return (
     <Container
@@ -135,11 +165,15 @@ export default function SideBar(props) {
           <div className="logo"></div>
           <PagesLink style={{ marginBottom: "137px" }}></PagesLink>
         </div>
-        <a className="small logout" href="">
+        <a
+          className="small logout"
+          onClick={() => dispatchAuth({ type: "LOGOUT" })}
+        >
           Log out 👋
         </a>
       </div>
       {main}
+      <NotificationContainer />
     </Container>
   );
 }

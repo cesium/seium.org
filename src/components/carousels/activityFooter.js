@@ -1,5 +1,4 @@
 import Button from "../buttons/button";
-import { Clickable } from "react-clickable";
 import windowDimensions from "../utils/windowDimensions";
 
 function ActivityFooter(props) {
@@ -17,18 +16,10 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          position: "absolute",
-          bottom: "5px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingRight: "10px",
-          minHeight: "23px",
+          minHeight: "25px"
         },
         buttonStyle: {},
         joinStyle: {
-          marginRight: "5px",
           fontSize: "12px",
         },
       };
@@ -45,20 +36,12 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          position: "absolute",
-          bottom: "5px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingRight: "10px",
-          minHeight: "23px",
+          minHeight: "25px"
         },
         buttonStyle: {
           padding: "0px 12px 3px",
         },
         joinStyle: {
-          marginRight: "5px",
           fontSize: "10px",
         },
       };
@@ -75,20 +58,12 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          position: "absolute",
-          bottom: "5px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingRight: "10px",
-          minHeight: "23px",
+          minHeight: "25px"
         },
         buttonStyle: {
           padding: "0px 12px 3px",
         },
         joinStyle: {
-          marginRight: "5px",
           fontSize: "10px",
         },
       };
@@ -107,11 +82,13 @@ function ActivityFooter(props) {
         <p style={footerStyle().labelStyle} className="nav-bar-link">
           {props.label}
         </p>
-        <Clickable>
-          <p style={footerStyle().joinStyle} className="x-large">
-            {props.join ? "Join" : ""}
-          </p>
-        </Clickable>
+        {props.join ? (
+          <a className="x-large" target="_blank" href={props.join}>
+            Join
+          </a>
+        ) : (
+          ""
+        )}
         {button}
       </div>
     </div>

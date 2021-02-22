@@ -1,15 +1,21 @@
+import React from "react";
+import Sketch from "react-p5";
+
 let basePos1 = [];
 let basePos2 = [];
 let basePos3 = [];
 let currPos = [];
 
-const backgroundAnimation = (p) => {
-  p.setup = () => {
+const BackgroundAnimation = () => {
+
+  const setup = (p) => {
     let canvas = p.createCanvas(window.innerWidth, window.innerHeight);
     canvas.position(0, 0);
     canvas.style('z-index','10');
+
     p.noFill();
     p.stroke(76, 169, 255);
+
 
     for (let i = 0; i < 10; i++) {
       basePos1.push({ x: 0, y: (p.height / 20) * i });
@@ -28,7 +34,13 @@ const backgroundAnimation = (p) => {
     }
   };
 
-  p.draw = () => {
+  const windowResized = (p) => {
+    console.log("OKOKOK")
+    console.log(window.innerWidth, window.innerHeight)
+    p.resizeCanvas(window.innerWidth, window.innerHeight);
+  }
+
+  const draw = (p) => {
     p.background(24);
 
     for (let i = 0; i < currPos.length; i++) {
@@ -52,6 +64,8 @@ const backgroundAnimation = (p) => {
       p.endShape();
     }
   };
+
+  return <Sketch setup={setup} draw={draw} windowResized={windowResized} />;
 };
 
-export default backgroundAnimation;
+export default BackgroundAnimation;

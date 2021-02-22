@@ -13,7 +13,7 @@ function Profile() {
 
   useEffect(async () => {
     const { data: user } = await API.get("/api/v1/attendee");
-    dispatch({ type: "INIT", user: user });
+    dispatch({ type: "INIT_ATTENDEE", user: user });
   }, []);
 
   return (

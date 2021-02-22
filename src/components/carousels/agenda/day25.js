@@ -20,6 +20,7 @@ function Day25() {
         animator1="Eduardo Ribeiro"
         animator2="Filipe Valpereiro"
         day={2}
+        join="https://www.eventbrite.pt/e/142306567775"
         activityID="devops"
         speaker1ID="eduardoribeiro"
         speaker2ID="filipevalpereiro"
@@ -33,6 +34,7 @@ function Day25() {
         animator1="Nuno Santos"
         animator2="Jorge Ribeiro"
         day={2}
+        join="https://www.eventbrite.pt/e/142306096365"
         activityID="api"
         speaker1ID="nunosantos"
         speaker2ID="jorgeribeiro"
@@ -41,20 +43,30 @@ function Day25() {
       <CoffeeBreak name="Coffee Break" />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="O ecossistema tecnológico da mobilidade sustentável"
         title="Talk"
         start="12:00"
         end="13:00"
-        animator1="TBA"
+        animator1="André Dias, GoWithFlow"
+        day={2}
+        join="https://zoom.us/j/92963044285"
+        activityID="mobilidade"
+        speaker1ID="andredias"
+        description="A transição para uma mobilidade cada vez mais sustentável é acompanhada e acelerada pela introdução de vários paradigmas tecnológicos como IoT, Big Data ou Inteligência Artificial num ecossistema tecnológico complexo, mas com múltiplas oportunidades de novos serviços cada vez mais inteligentes e conectados."
       />
       <CoffeeBreak name="Lunch Break" />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="STAYAWAY COVID - uma ferramenta de combate à pandemia"
         title="Talk"
         start="14:00"
         end="15:00"
-        animator1="TBA"
+        animator1="Francisco Maia, Keyruptive"
+        day={2}
+        join="https://zoom.us/j/92815361928"
+        activityID="stayaway"
+        speaker1ID="franciscomaia"
+        description="A STAYAWAY COVID é a aplicação de rastreio de contactos digital para Portugal. O seu desenho e aplicação foi alvo de imensas opiniões, críticas e elogios. Aproveitando a SEI como evento de diálogo tecnológico, olharemos para as decisões de desenho da STAYAWAY COVID e os desafios associados a lançar uma aplicação que ultrapassou os 3 Milhões de downloads."
       />
       <Activity
         main="yes"
@@ -64,6 +76,7 @@ function Day25() {
         end="16:00"
         animator1="Gonçalo Silva, Doist"
         day={2}
+        join="https://zoom.us/j/96091573369"
         activityID="remote"
         speaker1ID="goncalosilva"
         description="Remote is here to stay. Increasingly, more companies realize it's the future of work. But with it, many best practices break down. Communicating and working synchronously is tricky when your team is distributed across the globe. Chit-chat is hard, pair programming is harder, mob programming is impossible. So, how exactly do you collaborate effectively? How do you raise the quality bar as a team? How do you share knowledge, and keep others in the loop? Are there established approaches from which we can draw inspiration?"
@@ -75,6 +88,7 @@ function Day25() {
         title="Pitch"
         start="16:30"
         end="16:45"
+        join="https://zoom.us/j/95558350771"
       />
       <Activity
         main="yes"
@@ -82,6 +96,7 @@ function Day25() {
         title="Pitch"
         start="16:45"
         end="17:00"
+        join="https://zoom.us/j/99813190619"
       />
       <Activity
         main="yes"

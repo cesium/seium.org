@@ -4,7 +4,7 @@ import Carousel from "./agenda/carousel-home";
 import Footer from "../footer";
 import Speakers from "./speakers";
 import ipdj from "../../images/partners/ipdj.png";
-import onda from "../../images/partners/onda.png";
+import onda from "../../images/partners/onda.svg";
 import uminhoon from "../../images/partners/uminhoon.png";
 
 function Home() {
@@ -45,11 +45,7 @@ function Home() {
           >
             <img src={ipdj} alt="IPDJ" />
           </a>
-          <a
-            className="sponsor invert"
-            target="_blank"
-            href="https://ondastudio.co/"
-          >
+          <a className="sponsor" target="_blank" href="https://ondastudio.co/">
             <img src={onda} alt="Onda Design" />
           </a>
           <a className="sponsor big" target="_blank" href="http://aaum.pt/">

@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react";
 import { useUser } from "../context/user";
-import Achievement from "../Achievement";
 import Header from "../Header";
-import SendCode from "../SendCode";
+import RedeemBadge from "../RedeemBadge";
 
 import API from "../../../utils/api";
-
-const pluralize = (word, number) => (number !== 1 ? `${word}s` : word);
+import UserAchievementsItems from "./UserAchievementsItems";
 
 const UserAchievements = () => {
   const { user } = useUser();
   const [info, setInfo] = useState({ badge_count: "?", token_balance: "?" });
-
-  const { badge_count, token_balance } = info;
 
   useEffect(async () => {
     if (user?.id) {
@@ -35,25 +31,16 @@ const UserAchievements = () => {
     >
       <Header title="Achievements" style={{ width: "100%" }} />
       <div className="achiev-container">
-        <div>
-          <Achievement
-            text={`💰 ${token_balance} ${pluralize("Token", token_balance)}`}
-            style={{ marginBottom: "20px", paddingTop: "0" }}
-          />
-        </div>
-        <div>
-          <Achievement
-            text={`🥇 ${badge_count} ${pluralize("Badge", badge_count)}`}
-            style={{ marginBottom: "20px", paddingTop: "0" }}
-          />
-        </div>
+        <UserAchievementsItems
+          customStyle={{ marginBottom: "20px", paddingTop: "0" }}
+        />
       </div>
       <div className="achiev-desc">
         <h4 className="header-4">
           Keep collecting tokens. It's never too late. Hurry up!
         </h4>
       </div>
-      <SendCode></SendCode>
+      <RedeemBadge />
     </div>
   );
 };

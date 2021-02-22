@@ -141,7 +141,6 @@ function Activity(props) {
           <span>{bigTitle}</span>
         )}
       </p>
-
       <div
         style={{
           position: "absolute",

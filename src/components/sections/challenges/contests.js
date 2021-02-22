@@ -8,7 +8,10 @@ function Contests() {
   let challenge1 = (
     <Challenge
       title="CV Contest"
-      parag=""
+      parags={[
+        "Our sponsors want your CV. You want them to have it. And why not try to win a PS5 while you’re at it? Submit your CV to cv@seium.org and be automatically entered into a contest to win a PS5! It goes without saying that by sending us your CV, you give us consent to share it with our Silver, Gold and Exclusive sponsors.",
+        "In order to enter the contest, you have to submit your CV until Friday, the 26th, at 17h.",
+      ]}
       buttonText={
         <a target="_blank" href="mailto:cv@seium.org">
           <Button className="button">Send yours</Button>
@@ -20,7 +23,9 @@ function Contests() {
   let challenge2 = (
     <Challenge
       title="CTF"
-      parag=""
+      parags={[
+        "Self explanatory, right? Test you security and general skills and find those pesky flags in our CTF! Be on of the first three to submit all the flags and win an awesome Raspberry Pi 4!",
+      ]}
       buttonText=""
       prizes={[
         "1.º Place — Raspberry Pi 4 8gb + caixa + charger	",
@@ -32,7 +37,10 @@ function Contests() {
   let challenge3 = (
     <Challenge
       title="Google HashCode"
-      parag=""
+      parags={[
+        "If you don’t know what the Google Hash Code is, here’s an explanation I copied from their website: ‘Hash Code is a team programming competition, organized by Google, for students and professionals around the world. You pick your team and programming language and we pick an engineering problem for you to solve. This year’s contest kicks off with an Online Qualifications, where your team can compete virtually from wherever you’d like, alongside your virtual Hub. Top teams will then be invited to compete from our virtual World Finals.’",
+        "Sounds good? Then make a team, sign up on our Hub (CeSIUM Hub – SEI'21), be the best team on our Hub and win a 200€ prize (divided between the team)!",
+      ]}
       buttonText={
         <a
           target="_blank"
@@ -47,6 +55,10 @@ function Contests() {
   let challenge4 = (
     <Challenge
       title="Photography Contest"
+      parags={[
+        "Take a cool pic related to say, share it in your stories and tag @sei.uminho, the take a screenshot and send it to us! You’ll be entered in a draw to win a fantastic Polaroid camera! (Bonus points if your profile is public so we can share your story. Ok, the aren’t really bonus points, but we’d be happy :D )",
+        "This contest starts after the Opening Ceremony on Tuesday.",
+      ]}
       buttonText=""
       prizes={["Winner — Polaroid One Step 2"]}
     />
@@ -54,6 +66,9 @@ function Contests() {
   let challenge5 = (
     <Challenge
       title="Chess Tournament"
+      parags={[
+        "Big brain? Then come and show it off! If you can manage to win, we have a very nice, wood chess set to give you!",
+      ]}
       buttonText={
         <a target="_blank" href="https://forms.gle/rR5CVhSzo1X3rYqw7">
           <Button className="button">Register now</Button>
@@ -65,6 +80,9 @@ function Contests() {
   let challenge6 = (
     <Challenge
       title="CS:GO Tournament"
+      parags={[
+        "Make a team and come and show off your talent in you CS:GO tournament! We have an 8 team limit, so make sure you move fast!",
+      ]}
       buttonText={
         <a target="_blank" href="https://forms.gle/TqhNS5Sww279iMDW8">
           <Button className="button">Register now</Button>
@@ -76,7 +94,7 @@ function Contests() {
   let challenge7 = (
     <Challenge
       title="Instagram Giveaway"
-      parag=""
+      parags={[""]}
       buttonText=""
       prizes={["Winner — Apple Airpods"]}
     />

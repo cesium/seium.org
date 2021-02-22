@@ -646,6 +646,18 @@ p.x-small3 {
   color: #ffffff;
 }
 
+.find {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
 @media (max-width: 576px) {
   .nav-bar-link {
     font-size: 10px;
@@ -758,6 +770,13 @@ button {
   background-size: 100%;
   width: 20px;
   height: 20px;
+  opacity: 0.4;
+}
+
+.home .container .infos .contact .icons .social:hover,
+.home .container .infos .contact .icons .github:hover,
+.home .container .infos .contact .icons .twitter:hover {
+  opacity: 1;
 }
 
 .home .container .infos .contact .icons .github {
@@ -911,6 +930,11 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .home .container .infos .contact .icons .social,
+  .home .container .infos .contact .icons .github,
+  .home .container .infos .contact .icons .twitter {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 576px) {
@@ -955,6 +979,11 @@ button {
   .home .container .details .quote h4 {
     font-size: 27px;
     margin-bottom: 7%;
+  }
+  .home .container .infos .contact .icons .social,
+  .home .container .infos .contact .icons .github,
+  .home .container .infos .contact .icons .twitter {
+    opacity: 1;
   }
 }
 
