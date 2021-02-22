@@ -796,7 +796,7 @@ label {
 
 .achiev-section .achiev-desc {
   margin-top: 16px;
-  max-width: 369px;
+  max-width: 569px;
 }
 
 @media (max-width: 576px) {
@@ -908,7 +908,6 @@ label {
   pointer-events: none;
   opacity: 0.5;
 }
-
 
 .spinningWheel #wheel[disabled] {
   width: 360px;
