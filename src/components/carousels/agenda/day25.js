@@ -47,11 +47,11 @@ function Day25() {
         title="Talk"
         start="12:00"
         end="13:00"
-        animator1="André Gomes, GoWithFlow"
+        animator1="André Dias, GoWithFlow"
         day={2}
         join="https://zoom.us/j/92963044285"
         activityID="mobilidade"
-        speaker1ID="andregomes"
+        speaker1ID="andredias"
         description="A transição para uma mobilidade cada vez mais sustentável é acompanhada e acelerada pela introdução de vários paradigmas tecnológicos como IoT, Big Data ou Inteligência Artificial num ecossistema tecnológico complexo, mas com múltiplas oportunidades de novos serviços cada vez mais inteligentes e conectados."
       />
       <CoffeeBreak name="Lunch Break" />

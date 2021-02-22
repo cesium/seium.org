@@ -44,11 +44,16 @@ function Day23() {
       <CoffeeBreak name="Lunch Break" />
       <Activity
         main="yes"
-        bigTitle="TBA"
+        bigTitle="Como escolher o primeiro emprego?"
         title="Talk"
         start="14:00"
         end="15:00"
-        animator1="TBA"
+        animator1="Tiago Santos, Everis"
+        day={0}
+        join="https://zoom.us/j/99899332240"
+        activityID="primeiroemprego"
+        speaker1ID="tiagosantos"
+        description="Manager da área de Seguros na everis, Tiago Palas Santos, irá realizar uma apresentação sobre a empresa, bem como partilhar o seu percurso e desafios profissionais. Neste contexto, iremos também mencionar alguns projetos que desenvolvemos para que nos possam conhecer melhor."
       />
       <Activity
         main="yes"

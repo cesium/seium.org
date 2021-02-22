@@ -17,6 +17,19 @@
       "linkedin": ""
     },
     {
+      "speakerID": "tiagosantos",
+      "initStatus": "hide",
+      "label": "Talk. 14h",
+      "name": "Tiago Santos",
+      "job": "Insurance Manager",
+      "description": "Everis",
+      "picture": "../images/speakers/tiagosantos.jpg",
+      "bio": [""],
+      "activityID": "primeiroemprego",
+      "day": 0,
+      "linkedin": "https://www.linkedin.com/in/tiagopalasantos/"
+    },
+    {
       "speakerID": "joaooliveira",
       "initStatus": "hide",
       "label": "Talk. 15h",
