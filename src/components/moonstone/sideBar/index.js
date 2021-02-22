@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useAuth } from "../context/auth";
+import { NotificationContainer } from "react-notifications";
 import BarItem from "./BarItem";
 import Container from "../Container";
 import Profile from "../../../pages/Profile";
@@ -9,12 +11,12 @@ import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
 import Leaderboard from "../../../pages/Leaderboard";
 import Awards from "../../../pages/Awards";
-import { NotificationContainer } from "react-notifications";
 
 import "react-notifications/lib/notifications.css";
 
 export default function SideBar(props) {
-  const { width, height } = Window();
+  const { width } = Window();
+  const { dispatch: dispatchAuth } = useAuth();
   const [selected, setselected] = useState([
     true,
     false,
@@ -164,7 +166,10 @@ export default function SideBar(props) {
           <div className="logo"></div>
           <PagesLink style={{ marginBottom: "137px" }}></PagesLink>
         </div>
-        <a className="small logout" href="">
+        <a
+          className="small logout"
+          onClick={() => dispatchAuth({ type: "LOGOUT" })}
+        >
           Log out 👋
         </a>
       </div>
