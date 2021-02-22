@@ -31,7 +31,9 @@ const UserAchievements = () => {
     >
       <Header title="Achievements" style={{ width: "100%" }} />
       <div className="achiev-container">
-        <UserAchievementsItems customStyle={{ marginBottom: "20px", paddingTop: "0" }}/>
+        <UserAchievementsItems
+          customStyle={{ marginBottom: "20px", paddingTop: "0" }}
+        />
       </div>
       <div className="achiev-desc">
         <h4 className="header-4">
