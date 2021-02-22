@@ -17,6 +17,19 @@
       "linkedin": ""
     },
     {
+      "speakerID": "tiagosantos",
+      "initStatus": "hide",
+      "label": "Talk. 14h",
+      "name": "Tiago Santos",
+      "job": "Insurance Manager",
+      "description": "Everis",
+      "picture": "../images/speakers/tiagosantos.jpg",
+      "bio": [""],
+      "activityID": "primeiroemprego",
+      "day": 0,
+      "linkedin": "https://www.linkedin.com/in/tiagopalasantos/"
+    },
+    {
       "speakerID": "joaooliveira",
       "initStatus": "hide",
       "label": "Talk. 15h",
@@ -239,6 +252,20 @@
       "day": 2
     },
     {
+      "speakerID": "franciscomaia",
+      "initStatus": "hide",
+      "label": "Talk. 12h",
+      "name": "Francisco Maia",
+      "job": "CEO",
+      "description": "Keyruptive",
+      "picture": "../images/speakers/franciscomaia.jpeg",
+      "bio": [
+        "Doutorado em Ciências da Computação em 2015 no contexto do programa MAP-i das Universidades do Minho, Aveiro e Porto com um trabalho em sistemas distribuídos de muito larga escala. Autor de mais de 20 artigos em conferências internacionais de relevo e parte da equipa líder de inúmeros projetos nacionais e internacionais no INESC TEC e na Universidade do Minho de onde se destaca o projeto H2020 SafeCloud. Co-Fundador e Diretor Executivo da Keyruptive, que tem como principal objetivo desenvolver tecnologia segura de gestão de informação digital sensível. A Keyruptive foi também a responsável pelo desenvolvimento das aplicações móveis para o sistema STAYAWAY COVID."
+      ],
+      "activityID": "stayaway",
+      "day": 2
+    },
+    {
       "speakerID": "goncalosilva",
       "initStatus": "hide",
       "label": "Talk. 15h",
@@ -340,6 +367,20 @@
       "activityID": "kpmg",
       "day": 3,
       "linkedin": "https://www.linkedin.com/in/ruirosadogoncalves/"
+    },
+    {
+      "speakerID": "miguelregedor",
+      "initStatus": "hide",
+      "label": "Talk. 12h",
+      "name": "Miguel Regedor",
+      "job": "Software Architect",
+      "description": "Freeletics",
+      "picture": "../images/speakers/miguelregedor.jpg",
+      "bio": [
+        "Miguel Regedor, formado pela Universidade do Minho, foi pioneiro a utilizar a Ruby on Rails profissionalmente em Portugal em 2007. Envolvido em diversos projectos com a Universidade Aberta, FEUP, UMinho, Sapo, agências de software do Reino Unido e estações de televisão alemãs, foi também co-fundador da Group Buddies, empresa conhecida como Subvisual. Atualmente o Miguel está encarregue da arquitectura técnica e visão tecnológica da Freeletics (+50M utilizadores) e também a construir um novo produto chamado Wellbeing Warrior."
+      ],
+      "activityID": "conselhos",
+      "day": 3
     },
     {
       "speakerID": "andrelago",

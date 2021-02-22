@@ -1,5 +1,4 @@
 import Button from "../buttons/button";
-import { Clickable } from "react-clickable";
 import windowDimensions from "../utils/windowDimensions";
 
 function ActivityFooter(props) {
@@ -17,14 +16,7 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          position: "absolute",
-          bottom: "5px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingRight: "200px",
-          minHeight: "23px",
+          minHeight: "25px"
         },
         buttonStyle: {},
         joinStyle: {
@@ -44,14 +36,7 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          position: "absolute",
-          bottom: "5px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingRight: "150px",
-          minHeight: "23px",
+          minHeight: "25px"
         },
         buttonStyle: {
           padding: "0px 12px 3px",
@@ -73,14 +58,7 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          position: "absolute",
-          bottom: "5px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingRight: "140px",
-          minHeight: "23px",
+          minHeight: "25px"
         },
         buttonStyle: {
           padding: "0px 12px 3px",
