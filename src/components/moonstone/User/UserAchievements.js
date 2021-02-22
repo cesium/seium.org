@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useUser } from "../context/user";
 import Header from "../Header";
-import SendCode from "../SendCode";
+import RedeemBadge from "../RedeemBadge";
 
 import API from "../../../utils/api";
 import UserAchievementsItems from "./UserAchievementsItems";
@@ -40,7 +40,7 @@ const UserAchievements = () => {
           Keep collecting tokens. It's never too late. Hurry up!
         </h4>
       </div>
-      <SendCode></SendCode>
+      <RedeemBadge />
     </div>
   );
 };
