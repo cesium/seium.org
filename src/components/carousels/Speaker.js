@@ -48,7 +48,6 @@ class Speaker extends React.Component {
       const path =
         (this.props.day ? "?day=" + this.props.day : "") +
         (this.props.activityID ? `#${this.props.activityID}` : "");
-      console.log(path);
       this.props.history.push("/agenda" + path);
     };
 

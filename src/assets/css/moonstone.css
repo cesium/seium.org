@@ -1250,3 +1250,18 @@ label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.rankcarousel {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+@media (max-width: 1200px) {
+  .rankcarousel {
+    width: 90%;
+  }
+}

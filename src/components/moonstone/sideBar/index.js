@@ -9,6 +9,7 @@ import Slide from "react-reveal/Slide";
 import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
+import Leaderboard from "../../../pages/Leaderboard";
 import Awards from "../../../pages/Awards";
 
 import "react-notifications/lib/notifications.css";
@@ -122,7 +123,7 @@ export default function SideBar(props) {
       case "badgedex":
         return <Profile></Profile>;
       case "leaderboard":
-        return <Profile></Profile>;
+        return <Leaderboard></Leaderboard>;
       case "awards":
         return <Awards goToWheel={goToWheel} />;
       default:
