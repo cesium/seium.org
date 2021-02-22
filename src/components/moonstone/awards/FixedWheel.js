@@ -17,7 +17,7 @@ class FixedWheel extends Component {
           onClick={() => this.props.goToWheel()}
           style={{ margin: "20px 0 10px 0", padding: "10px 0 10px 0" }}
           width="208px"
-          inner="15 tokens 💰"
+          inner="30 tokens 💰"
         >
           SPIN THE WHEEL
         </Button>

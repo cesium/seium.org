@@ -46,11 +46,7 @@ function Home() {
           >
             <img src={ipdj} alt="IPDJ" />
           </a>
-          <a
-            className="sponsor"
-            target="_blank"
-            href="https://ondastudio.co/"
-          >
+          <a className="sponsor" target="_blank" href="https://ondastudio.co/">
             <img src={onda} alt="Onda Design" />
           </a>
           <a className="sponsor big" target="_blank" href="http://aaum.pt/">

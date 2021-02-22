@@ -12,6 +12,7 @@ export default function Button(props) {
       href={props.href}
       className="buttonText"
       style={{ ...buttonStyle, ...props.style }}
+      disabled={props.disabled}
     >
       {props.children}
       {props.inner ? <p className="buttonInner">{props.inner}</p> : ""}
