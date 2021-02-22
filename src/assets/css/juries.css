@@ -91,66 +91,141 @@
   background-position: top right;
 }
 
-.juries .container .desc .jury-title .spanChall {
+.headerChallengeJury {
+  margin-bottom: 254px;
+}
+
+@media (max-width: 576px) {
+  .headerChallengeJury {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerChallengeJury {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+}
+
+.headerChallengeJury .chall-desc-jury {
+  max-width: 100%;
+  padding-bottom: 18px;
+}
+
+@media (max-width: 576px) {
+  .headerChallengeJury .chall-desc-jury {
+    max-width: 100%;
+    padding-bottom: 11px;
+  }
+}
+
+.headerChallengeJury .chall-desc-jury .spanChallJury {
   border-bottom: 11px solid #fff;
   position: relative;
 }
 
 @media (max-width: 768px) {
-  .juries .container .desc .jury-title .spanChall {
+  .headerChallengeJury .chall-desc-jury .spanChallJury {
     border-bottom: 7px solid #fff;
   }
 }
 
 @media (max-width: 576px) {
-  .juries .container .desc .jury-title .spanChall {
+  .headerChallengeJury .chall-desc-jury .spanChallJury {
     border-bottom: 4px solid #fff;
   }
 }
 
-.juries .container .desc .cardContainer {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  top: 79px;
-  left: 10px;
-}
-
 @media (max-width: 1200px) {
-  .juries .container .desc .cardContainer {
-    top: 55px;
+  .headerChallengeJury .cardContainerJury {
+    top: 96px;
     left: 24px;
   }
 }
 
-@media (max-width: 992px) {
-  .juries .container .desc .cardContainer {
-    top: 50px;
-    left: 10px;
+@media (max-width: 929px) {
+  .headerChallengeJury .cardContainerJury {
+    top: 79px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .spanChallJury {
+    border: 0 !important;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
-  .juries .container .desc .cardContainer {
-    top: 31px;
-    left: 5px;
+  .headerChallengeJury .cardContainerJury {
+    top: 51px;
+    left: 10px;
   }
 }
 
 @media (max-width: 576px) {
-  .juries .container .desc .cardContainer {
+  .headerChallengeJury .cardContainerJury {
     top: 33px;
     left: -2px;
   }
 }
 
 @media (max-width: 454px) {
-  .juries .container .desc .cardContainer {
+  .headerChallengeJury .cardContainerJury {
     top: 33px;
     left: -2px;
+  }
+}
+
+.box-jury {
+  margin: auto;
+  overflow: hidden;
+  width: 300px;
+  position: absolute;
+  top: 78px;
+  left: 0px;
+}
+
+#mascote {
+  margin: auto;
+  position: relative;
+  top: -200px;
+  transition: top 1s;
+}
+
+.spanChallJury:hover #mascote {
+  top: 0px;
+}
+
+@media (max-width: 1200px) {
+  .box-jury {
+    top: 54px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-jury {
+    top: 50px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 770px) {
+  .box-jury {
+    top: 31px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  .box-jury {
+    overflow: hidden;
+  }
+  #mascote {
+    display: none;
   }
 }

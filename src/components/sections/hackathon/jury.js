@@ -9,7 +9,6 @@ import Card from "../../../components/utils/cardCompo";
 import hackathon from "../../../data/hackathon.json";
 
 function SpeakerList() {
-
   const listItems = hackathon.juris.map((s, i) => (
     <Speaker
       key={i}
@@ -29,20 +28,20 @@ function Jury(props) {
     <div className="juries" style={{ ...props.style }}>
       <Container>
         <div className="container">
-          <div className="desc">
-            <h3 className="jury-title">
-              {" "}
-              <span className="spanChall">
-                {" "}
+          <div className="headerChallengeJury">
+            <h3 className="title chall-desc-jury">
+              <span className="spanChallJury">
                 The jury
-                <div className="cardContainer">
-                  <Card
-                    img={HeaderIcon}
-                    alt="HeaderIcon"
-                    style={{ alignItems: "flex-end" }}
-                  >
-                    These are the ones to fear. Just saying.
-                  </Card>
+                <div className="box-jury">
+                  <div id="mascote">
+                    <Card
+                      img={HeaderIcon}
+                      alt="HeaderIcon"
+                      style={{ alignItems: "flex-end" }}
+                    >
+                      These are the ones to fear. Just saying.
+                    </Card>
+                  </div>
                 </div>
               </span>
             </h3>
