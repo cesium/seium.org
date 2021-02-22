@@ -68,7 +68,7 @@ class Intro extends React.Component {
 
     return (
       <div className="intro-bg">
-        {width > 768 && <BackgroundAnimation />}
+        {this.state.width > 768 && <BackgroundAnimation />}
         <NavBar />
         <div
           className="home"
@@ -78,7 +78,7 @@ class Intro extends React.Component {
           }}
         >
           <div
-            style={{ zIndex: width > 768 && 100 }}
+            style={{ zIndex: this.state.width > 768 && 100 }}
             className="landing container"
           >
             <div className="description">
@@ -98,7 +98,7 @@ class Intro extends React.Component {
                   </a>
                 </div>
               </div>
-              {width <= 768 ? (
+              {this.state.width <= 768 ? (
                 <div className="join-us">
                   <a target="_blank" href="http://seium21.eventbrite.pt/">
                     <img src={NavIcon} alt="join us" />
@@ -109,7 +109,7 @@ class Intro extends React.Component {
               )}
             </div>
           </div>
-          <div style={{ zIndex: width > 768 && 100 }} className="container">
+          <div style={{ zIndex: this.state.width > 768 && 100 }} className="container">
             <div className="details">
               <div className="expect">
                 <h5>What you can expect:</h5>
