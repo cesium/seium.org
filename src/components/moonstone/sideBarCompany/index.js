@@ -1,36 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAuth } from "../context/auth";
+import { useUser } from "../context/user";
 import { NotificationContainer } from "react-notifications";
 import BarItem from "./BarItem";
 import Container from "../Container";
-import Profile from "../../../pages/Profile";
-import Wheel from "../../../pages/Wheel";
+import StandDashboard from "../../../pages/company/StandDasboard";
+import Spotlight from "../../../pages/company/Spotlight";
 import Slide from "react-reveal/Slide";
 import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
-import Badgedex from "../../../pages/Badgedex";
-import Leaderboard from "../../../pages/Leaderboard";
-import Awards from "../../../pages/Awards";
+
+import API from "../../../utils/api";
 
 import "react-notifications/lib/notifications.css";
 
 export default function SideBar(props) {
   const { width } = Window();
   const { dispatch: dispatchAuth } = useAuth();
-  const [selected, setselected] = useState([
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const { user, dispatch } = useUser();
+  const [selected, setselected] = useState([true, false]);
   const [link, setLink] = useState("profile");
   const [toggleButton, setToggleButton] = useState(true);
   const [Menu, setMenu] = useState(styled.a``);
   const [Zindex, setZindex] = useState(0);
   const [Opacity, setOpacity] = useState(0);
+
+  useEffect(async () => {
+    const { data: user } = await API.get("/api/v1/company");
+    dispatch({ type: "INIT_COMPANY", user: user });
+  }, []);
 
   function clickHandle(itemIndex) {
     let array = [];
@@ -59,39 +58,15 @@ export default function SideBar(props) {
       <div className="pagesLink" style={props.style}>
         <BarItem
           style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(0, "profile")}
+          onClick={() => handleOnClick(0, "discordStand")}
           selected={selected[0]}
-          page="PROFILE"
+          page="DASHBOARD"
         ></BarItem>
         <BarItem
           style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(1, "wheel")}
+          onClick={() => handleOnClick(1, "spotlight")}
           selected={selected[1]}
-          page="WHEEL"
-        ></BarItem>
-        <BarItem
-          style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(2, "stream")}
-          selected={selected[2]}
-          page="STREAM"
-        ></BarItem>
-        <BarItem
-          style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(3, "badgedex")}
-          selected={selected[3]}
-          page="BADGEDEX"
-        ></BarItem>
-        <BarItem
-          style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(4, "leaderboard")}
-          selected={selected[4]}
-          page="LEADERBOARD"
-        ></BarItem>
-        <BarItem
-          style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(5, "awards")}
-          selected={selected[5]}
-          page="AWARDS"
+          page="SPOTLIGHT"
         ></BarItem>
       </div>
     );
@@ -115,20 +90,12 @@ export default function SideBar(props) {
   const renderActivePage = (page) => {
     console.log(page);
     switch (page) {
-      case "profile":
-        return <Profile></Profile>;
-      case "wheel":
-        return <Wheel></Wheel>;
-      case "stream":
-        return <Profile></Profile>;
-      case "badgedex":
-        return <Badgedex></Badgedex>;
-      case "leaderboard":
-        return <Leaderboard></Leaderboard>;
-      case "awards":
-        return <Awards goToWheel={goToWheel} />;
+      case "discordStand":
+        return <StandDashboard />;
+      case "spotlight":
+        return <Spotlight goToWheel={goToWheel} />;
       default:
-        return <Profile></Profile>;
+        return <StandDashboard />;
     }
   };
   const mainSlide = (
@@ -164,7 +131,7 @@ export default function SideBar(props) {
               <Menu onClick={handleIconMenu} className="icon"></Menu>
             </div>
           </div>
-          <div className="logo"></div>
+          <div className="company_name">{user.name}</div>
           <PagesLink style={{ marginBottom: "137px" }}></PagesLink>
         </div>
         <a
