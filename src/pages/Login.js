@@ -116,8 +116,8 @@ const Login = () => {
         )}
         <div className="label login-here">
           Don't have an account?{" "}
-          <a href="/register" className="login">
-            Sign up here
+          <a href="#" className="login">
+            Check your inbox!
           </a>
         </div>
       </div>
