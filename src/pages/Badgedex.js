@@ -18,7 +18,7 @@ const Badge = ({ badge, is_owned, grid, handleClick }) => {
       className={`badge ${is_owned && "owned"} ${grid}`}
       onClick={handleClick}
     >
-      <div class="center-image">
+      <div className="center-image">
         <img
           src={badge.avatar}
           className={is_owned ? "owned" : "normal"}
@@ -34,12 +34,13 @@ const Badge = ({ badge, is_owned, grid, handleClick }) => {
 const Filters = ({ show_all, onShowChange, category, onCategoryChange }) => {
   const badge_types = [
     { type: -1, text: "All" },
-    { type: 4, text: "Companies" },
-    { type: 6, text: "Talks" },
-    { type: 7, text: "Workshops" },
-    { type: 2, text: "Challenges" },
-    { type: 3, text: "Days" },
-    { type: 8, text: "Others" },
+    { type: 2, text: "Activities & Challenges" },
+    { type: 3, text: "General" },
+    { type: 4, text: "Company" },
+    { type: 6, text: "Talk" },
+    { type: 7, text: "Workshop" },
+    { type: 8, text: "Discord" },
+    { type: 9, text: "Pitch" },
   ];
 
   return (

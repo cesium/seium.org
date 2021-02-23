@@ -25,12 +25,13 @@ function Badge({ badge_info, resetBadge }) {
   }, [badge_info]);
 
   const badge_types = {
-    4: "Companies",
-    6: "Talks",
-    7: "Workshops",
-    2: "Challenges",
-    3: "Days",
-    8: "Others",
+    2: "Activities & Challenges",
+    3: "General",
+    4: "Company",
+    6: "Talk",
+    7: "Workshop",
+    8: "Discord",
+    9: "Pitch",
   };
 
   return (
