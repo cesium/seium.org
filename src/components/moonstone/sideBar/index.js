@@ -18,14 +18,7 @@ import "react-notifications/lib/notifications.css";
 export default function SideBar(props) {
   const { width } = Window();
   const { dispatch: dispatchAuth } = useAuth();
-  const [selected, setselected] = useState([
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [selected, setselected] = useState([true, false, false, false, false]);
   const [link, setLink] = useState("profile");
   const [toggleButton, setToggleButton] = useState(true);
   const [Menu, setMenu] = useState(styled.a``);
@@ -113,8 +106,6 @@ export default function SideBar(props) {
         return <Profile></Profile>;
       case "wheel":
         return <Wheel></Wheel>;
-      case "stream":
-        return <Profile></Profile>;
       case "badgedex":
         return <Badgedex></Badgedex>;
       case "leaderboard":

@@ -90,7 +90,7 @@ function UserProfile() {
           maxFileSize={1048576}
         />
       ) : (
-        <img className="profilePicture" src={user.avatar} />
+        <img className="profilePicture" src={user.avatar}/>
       )}
       <Input
         label="NAME"

@@ -586,6 +586,15 @@ label {
   width: 50%;
 }
 
+.badge-owners {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  width: 50%;
+}
+
 .participant {
   display: flex;
   font-family: "Inter Regular";
@@ -833,6 +842,7 @@ label {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  font-family: "Inter Regular";
 }
 
 @media (max-width: 1200px) {

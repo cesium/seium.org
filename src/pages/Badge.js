@@ -68,7 +68,7 @@ function Badge({ badge_info, resetBadge }) {
                   // paddingTop: "7%",
                 }}
               >
-                <Achievement text={`💰 ${badge.tokens} Tokens `} />
+                <Achievement emoji="💰" quantity={badge.tokens} item="Token" />
               </div>
             </Header>
             <img src={badge.avatar} className="big" alt="Error"></img>
