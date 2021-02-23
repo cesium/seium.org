@@ -390,7 +390,7 @@ label {
 }
 
 .buttonText {
-  background-color: #00ffb7;
+  /* background-color: #00ffb7; */
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -809,14 +809,14 @@ label {
 @media (min-width: 1200px) {
   .achievement .achievements {
     padding-top: 8px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 1200px) {
   .achievement .achievements {
     padding-top: 8px;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0px !important;
   }
 }

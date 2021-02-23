@@ -9,6 +9,7 @@ import Slide from "react-reveal/Slide";
 import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
+import Badgedex from "../../../pages/Badgedex";
 import Leaderboard from "../../../pages/Leaderboard";
 import Awards from "../../../pages/Awards";
 
@@ -121,7 +122,7 @@ export default function SideBar(props) {
       case "stream":
         return <Profile></Profile>;
       case "badgedex":
-        return <Profile></Profile>;
+        return <Badgedex></Badgedex>;
       case "leaderboard":
         return <Leaderboard></Leaderboard>;
       case "awards":
