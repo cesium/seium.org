@@ -23,16 +23,16 @@ const UserAchievements = () => {
       />
       <div className="achiev">
         <p>
-          <b>Level 1</b> 5 companies ➔ +10 entries
+          <b>Level 1</b> 5 companies ➔ +30 entries
         </p>
         <p>
-          <b>Level 2</b> 10 companies ➔ +20 entries
+          <b>Level 2</b> 10 companies ➔ +60 entries
         </p>
         <p>
-          <b>Level 3</b> 15 companies ➔ +40 entries
+          <b>Level 3</b> 15 companies ➔ +100 entries
         </p>
         <p>
-          <b>Level 4</b> 20 empresas ➔ +100 entries
+          <b>Level 4</b> 20 empresas ➔ +150 entries
         </p>
       </div>
       <div className="achiev-desc">

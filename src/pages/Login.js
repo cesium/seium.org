@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useAuth } from "../components/moonstone/context/auth";
 import { useHistory } from "react-router-dom";
 import Logo from "../assets/img/logo/moonstoneLogo.svg";
@@ -49,18 +49,13 @@ const Login = () => {
           switch (user.data.type) {
             case "attendee":
               history.replace("/profile");
-              break;
+              return null;
             case "company":
               history.replace("/dashboard");
-              break;
+              return null;
             default:
               throw new Error(`Unknown type: ${user.data.type}`);
           }
-          setData({
-            ...data,
-            isSubmitting: false,
-            errorMessage: null,
-          });
         });
       })
       .catch((error) => {
@@ -88,12 +83,10 @@ const Login = () => {
   return (
     <Container className="register">
       <a className="small back" href="/">
-        {"<" + " Back to SEI website"}
+        {"< Back to SEI website"}
       </a>
       <div className="form-container">
-        <a href="#">
-          <img src={Logo} alt="logo" className="logo" />
-        </a>
+        <img src={Logo} alt="logo" className="logo" />
         <h1 className="sign-up header-1">Log in</h1>
         <div>
           <Input
