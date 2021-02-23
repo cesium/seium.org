@@ -1,46 +1,46 @@
-import { useEffect, useState } from "react";
-import { useUser } from "../context/user";
+import { useState } from "react";
 import Header from "../Header";
 import RedeemBadge from "../RedeemBadge";
 
-import API from "../../../utils/api";
 import UserAchievementsItems from "./UserAchievementsItems";
 
 const UserAchievements = () => {
-  const { user } = useUser();
-  const [info, setInfo] = useState({ badge_count: "?", token_balance: "?" });
+  const [state, setState] = useState(0);
 
-  useEffect(async () => {
-    if (user?.id) {
-      const {
-        data: { data: attendee },
-      } = await API.get(`/api/v1/attendees/${user.id}`);
-      setInfo(attendee);
-    }
-  }, [user.id]);
+  const incrementState = () => {
+    setState(state + 1);
+  };
 
   return (
-    <div
-      className="achiev-section"
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div className="achiev-section">
       <Header title="Achievements" style={{ width: "100%" }} />
-      <div className="achiev-container">
-        <UserAchievementsItems
-          customStyle={{ marginBottom: "20px", paddingTop: "0" }}
-        />
+      <div className="profile-achievs">
+        <UserAchievementsItems state={state} />
+      </div>
+      <Header
+        title="Checkpoints"
+        style={{ marginTop: "40px", width: "100%" }}
+      />
+      <div className="achiev">
+        <p>
+          <b>Level 1</b> 5 companies ➔ +30 entries
+        </p>
+        <p>
+          <b>Level 2</b> 10 companies ➔ +60 entries
+        </p>
+        <p>
+          <b>Level 3</b> 15 companies ➔ +100 entries
+        </p>
+        <p>
+          <b>Level 4</b> 20 empresas ➔ +150 entries
+        </p>
       </div>
       <div className="achiev-desc">
         <h4 className="header-4">
           Keep collecting tokens. It's never too late. Hurry up!
         </h4>
       </div>
-      <RedeemBadge />
+      <RedeemBadge incrementState={incrementState} />
     </div>
   );
 };

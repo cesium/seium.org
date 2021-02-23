@@ -9,6 +9,8 @@ import Slide from "react-reveal/Slide";
 import Window from "../../utils/windowDimensions";
 import styled from "styled-components";
 import Exit from "../../../assets/img/exitMenu.svg";
+import Badgedex from "../../../pages/Badgedex";
+import Leaderboard from "../../../pages/Leaderboard";
 import Awards from "../../../pages/Awards";
 
 import "react-notifications/lib/notifications.css";
@@ -16,14 +18,7 @@ import "react-notifications/lib/notifications.css";
 export default function SideBar(props) {
   const { width } = Window();
   const { dispatch: dispatchAuth } = useAuth();
-  const [selected, setselected] = useState([
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [selected, setselected] = useState([true, false, false, false, false]);
   const [link, setLink] = useState("profile");
   const [toggleButton, setToggleButton] = useState(true);
   const [Menu, setMenu] = useState(styled.a``);
@@ -69,12 +64,6 @@ export default function SideBar(props) {
         ></BarItem>
         <BarItem
           style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(2, "stream")}
-          selected={selected[2]}
-          page="STREAM"
-        ></BarItem>
-        <BarItem
-          style={{ position: "relative", zIndex: Zindex }}
           onClick={() => handleOnClick(3, "badgedex")}
           selected={selected[3]}
           page="BADGEDEX"
@@ -117,12 +106,10 @@ export default function SideBar(props) {
         return <Profile></Profile>;
       case "wheel":
         return <Wheel></Wheel>;
-      case "stream":
-        return <Profile></Profile>;
       case "badgedex":
-        return <Profile></Profile>;
+        return <Badgedex></Badgedex>;
       case "leaderboard":
-        return <Profile></Profile>;
+        return <Leaderboard></Leaderboard>;
       case "awards":
         return <Awards goToWheel={goToWheel} />;
       default:

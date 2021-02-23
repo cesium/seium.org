@@ -104,8 +104,8 @@ function Day26() {
       <Activity
         main="yes"
         bigTitle="Closing Session and Prize Announcement"
-        start="17:30"
-        end="18:30"
+        start="18:00"
+        end="19:00"
         join="https://zoom.us/j/96671922749"
       />
       <Activity

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useAuth } from "../components/moonstone/context/auth";
 import { useHistory } from "react-router-dom";
 import Logo from "../assets/img/logo/moonstoneLogo.svg";
@@ -45,24 +45,18 @@ const Login = () => {
           type: "LOGIN",
           payload: res.data,
         });
-        API.get("/api/v1/user")
-          .then((user) => {
-            switch (user.data.type){
-              case "attendee":
-                history.replace("/profile");
-                break;
-              case "company":
-                history.replace("/dashboard");
-                break;
-              default:
-                throw new Error(`Unknown type: ${user.data.type}`);
-            };
-            setData({
-              ...data,
-              isSubmitting: false,
-              errorMessage: null,
-            });
-          });
+        API.get("/api/v1/user").then((user) => {
+          switch (user.data.type) {
+            case "attendee":
+              history.replace("/profile");
+              return null;
+            case "company":
+              history.replace("/dashboard");
+              return null;
+            default:
+              throw new Error(`Unknown type: ${user.data.type}`);
+          }
+        });
       })
       .catch((error) => {
         console.log(error.response);
@@ -89,12 +83,10 @@ const Login = () => {
   return (
     <Container className="register">
       <a className="small back" href="/">
-        {"<" + " Back to SEI website"}
+        {"< Back to SEI website"}
       </a>
       <div className="form-container">
-        <a href="#">
-          <img src={Logo} alt="logo" className="logo" />
-        </a>
+        <img src={Logo} alt="logo" className="logo" />
         <h1 className="sign-up header-1">Log in</h1>
         <div>
           <Input
@@ -124,8 +116,8 @@ const Login = () => {
         )}
         <div className="label login-here">
           Don't have an account?{" "}
-          <a href="/register" className="login">
-            Sign up here
+          <a href="#" className="login">
+            Check your inbox!
           </a>
         </div>
       </div>
