@@ -1,15 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import Input from "../Input";
 
 const FormSignup = (props) => {
-  // const resetID = window.location.;
   return (
     <div>
-      <Input type="password" label="PASSWORD" placeholder="**********" />
+      <Input type="password" label="Password" placeholder="**********" />
       <Input
         type="password"
-        label="CONFIRM PASSWORD"
+        label="Confirm Password"
         placeholder="**********"
       />
     </div>
@@ -18,7 +16,7 @@ const FormSignup = (props) => {
 const FormLogin = (props) => {
   return (
     <div>
-      <Input type="text" label="EMAIL" placeholder="johnrobert@email.com" />
+      <Input type="email" label="EMAIL" placeholder="johnrobert@email.com" />
       <Input type="password" label="PASSWORD" placeholder="**********" />
     </div>
   );
