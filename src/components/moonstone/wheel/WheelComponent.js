@@ -306,7 +306,7 @@ const WheelComponent = ({
   };
   return (
     <>
-      <Confetti active={ win } config={ config }/>
+      <Confetti active={win} config={config} />
       <div id="wheel" disabled={disabled}>
         <canvas
           id="canvas"

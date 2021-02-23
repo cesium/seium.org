@@ -4,11 +4,12 @@ import Achievement from "../Achievement";
 
 import API from "../../../utils/api";
 
-const pluralize = (word, number) => (number !== 1 ? `${word}s` : word);
-
 const UserAchievementsItems = (props) => {
   const { user } = useUser();
-  const [info, setInfo] = useState({ badge_count: "?", token_balance: "?" });
+  const [info, setInfo] = useState({
+    badge_count: "?",
+    token_balance: "?",
+  });
 
   const { badge_count, token_balance } = info;
 
@@ -17,6 +18,7 @@ const UserAchievementsItems = (props) => {
       const {
         data: { data: attendee },
       } = await API.get(`/api/v1/attendees/${user.id}`);
+      console.log(attendee);
       setInfo(attendee);
     }
   }, [user.id, props.state]);
@@ -25,13 +27,17 @@ const UserAchievementsItems = (props) => {
     <>
       <div>
         <Achievement
-          text={`💰 ${token_balance} ${pluralize("Token", token_balance)}`}
+          emoji="💰"
+          quantity={token_balance}
+          item="Token"
           style={props.customStyle}
         />
       </div>
       <div>
         <Achievement
-          text={`🥇 ${badge_count} ${pluralize("Badge", badge_count)}`}
+          emoji="🥇"
+          quantity={badge_count}
+          item={"Badge"}
           style={props.customStyle}
         />
       </div>

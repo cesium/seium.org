@@ -64,7 +64,7 @@ const SpinningWheel = (props) => {
     setInfo({
       prizes: info.prizes,
       state: info.state + 1,
-      tokens: info.tokens
+      tokens: info.tokens,
     });
   };
 
