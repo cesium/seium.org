@@ -16,7 +16,7 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          minHeight: "25px"
+          minHeight: "25px",
         },
         buttonStyle: {},
         joinStyle: {
@@ -36,7 +36,7 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          minHeight: "25px"
+          minHeight: "25px",
         },
         buttonStyle: {
           padding: "0px 12px 3px",
@@ -58,7 +58,7 @@ function ActivityFooter(props) {
           flexDirection: "row",
         },
         containerStyle: {
-          minHeight: "25px"
+          minHeight: "25px",
         },
         buttonStyle: {
           padding: "0px 12px 3px",

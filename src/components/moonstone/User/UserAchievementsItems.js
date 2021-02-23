@@ -9,7 +9,7 @@ const UserAchievementsItems = (props) => {
   const [info, setInfo] = useState({
     badge_count: "?",
     token_balance: "?",
-    entries: "?"
+    entries: "?",
   });
 
   const { badge_count, token_balance, entries } = info;

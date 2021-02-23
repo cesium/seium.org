@@ -45,24 +45,23 @@ const Login = () => {
           type: "LOGIN",
           payload: res.data,
         });
-        API.get("/api/v1/user")
-          .then((user) => {
-            switch (user.data.type){
-              case "attendee":
-                history.replace("/profile");
-                break;
-              case "company":
-                history.replace("/dashboard");
-                break;
-              default:
-                throw new Error(`Unknown type: ${user.data.type}`);
-            };
-            setData({
-              ...data,
-              isSubmitting: false,
-              errorMessage: null,
-            });
+        API.get("/api/v1/user").then((user) => {
+          switch (user.data.type) {
+            case "attendee":
+              history.replace("/profile");
+              break;
+            case "company":
+              history.replace("/dashboard");
+              break;
+            default:
+              throw new Error(`Unknown type: ${user.data.type}`);
+          }
+          setData({
+            ...data,
+            isSubmitting: false,
+            errorMessage: null,
           });
+        });
       })
       .catch((error) => {
         console.log(error.response);

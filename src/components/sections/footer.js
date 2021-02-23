@@ -45,7 +45,7 @@ function Footer(props) {
               <p className="nav-bar-link responsive">Previous Edition </p>
             </a>
             <a target="_blank" href="/docs/RegulamentoGeral.pdf">
-            <p className="nav-bar-link responsive"> General Regulation </p>
+              <p className="nav-bar-link responsive"> General Regulation </p>
             </a>
           </div>
           <div className="parag2">
