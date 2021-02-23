@@ -19,7 +19,6 @@ const UserAchievementsItems = (props) => {
       const {
         data: { data: attendee },
       } = await API.get(`/api/v1/attendees/${user.id}`);
-      console.log(attendee);
       setInfo(attendee);
     }
   }, [user.id, props.state]);

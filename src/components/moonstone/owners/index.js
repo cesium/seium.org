@@ -9,7 +9,7 @@ export default function Owners(props) {
   };
 
   return (
-    <div className="latestWins">
+    <div className="badge-owners">
       <Header
         title={"Owners"}
         style={{ marginBottom: "20px", width: "100%" }}

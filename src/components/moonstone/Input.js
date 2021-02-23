@@ -25,7 +25,7 @@ const Input = ({
           placeholder={placeholder}
           value={value}
           onChange={handleChange}
-          {...(isDisabled ? { readonly: "readonly" } : undefined)}
+          {...(isDisabled ? { readOnly: "readonly" } : undefined)}
           style={{
             backgroundColor: error ? "rgba(255, 68, 68, 0.08)" : "",
             ...input2,

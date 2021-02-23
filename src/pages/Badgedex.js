@@ -93,7 +93,6 @@ export default function Badgedex(params) {
     const fetchBadges = async () => {
       const { data } = await API.get(`/api/v1/badges`);
       const all_badges = data.data;
-      console.log("BADGES:", all_badges);
 
       const filtered_badges = all_badges.filter(
         (badge) => !owned_badges.some((b) => b.id === badge.id)
