@@ -1,4 +1,4 @@
-.badge {
+.badge-card {
   padding: 10px;
   /* display: flex; */
   flex-direction: column;
@@ -9,7 +9,7 @@
   height: 100%;
 }
 
-.badge:hover {
+.badge-card:hover {
   background-color: rgba(1, 1, 1, 0.04);
   cursor: pointer;
 }
@@ -43,29 +43,29 @@
   margin: 20px auto;
 }
 
-.badge .owned {
+.badge-card .owned {
   height: 150px;
   width: 150px;
 }
 
-.badge .normal {
+.badge-card .normal {
   height: 150px;
   width: 150px;
   opacity: 0.2;
 }
 
-.badge .name {
+.badge-card .name {
   margin-top: 8px;
   font-size: 24px;
   font-family: "Inter Black";
 }
 
-.badge .id {
+.badge-card .id {
   font-size: 16px;
   font-family: "Inter Regular";
 }
 
-.badge .center-image {
+.badge-card .center-image {
   margin: auto;
 }
 

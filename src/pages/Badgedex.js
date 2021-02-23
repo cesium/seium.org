@@ -15,7 +15,7 @@ const Badge = ({ badge, is_owned, grid, handleClick }) => {
 
   return (
     <div
-      className={`badge ${is_owned && "owned"} ${grid}`}
+      className={`badge-card ${is_owned ? "owned" : ""} ${grid}`}
       onClick={handleClick}
     >
       <div className="center-image">
@@ -53,7 +53,9 @@ const Filters = ({ show_all, onShowChange, category, onCategoryChange }) => {
           className="dropdown"
         >
           {badge_types.map((b) => (
-            <option value={b.type}>{b.text}</option>
+            <option key={b.type} value={b.type}>
+              {b.text}
+            </option>
           ))}
         </select>
       </div>
