@@ -578,7 +578,7 @@ label {
 }
 
 .latestWins {
-  margin-top: 20px;
+  margin-top: 26.5px;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -1255,7 +1255,7 @@ label {
   width: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;;
+  align-items: center;
   flex-direction: column;
   margin-right: 8px;
 }
@@ -1264,4 +1264,22 @@ label {
   .rankcarousel {
     width: 90%;
   }
+}
+
+.containerprofile .userProfile .leaderboard.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+
+.profile-achievs {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
 }

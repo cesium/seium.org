@@ -183,7 +183,7 @@ function RankCarousel(props) {
   }
 
   return (
-    <div className="main">
+    <div className="leaderboard main">
       <div className="rankcarousel">
         <Header></Header>
       </div>

@@ -71,12 +71,6 @@ export default function SideBar(props) {
         ></BarItem>
         <BarItem
           style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(2, "stream")}
-          selected={selected[2]}
-          page="STREAM"
-        ></BarItem>
-        <BarItem
-          style={{ position: "relative", zIndex: Zindex }}
           onClick={() => handleOnClick(3, "badgedex")}
           selected={selected[3]}
           page="BADGEDEX"

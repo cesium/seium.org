@@ -4,7 +4,7 @@ import Button from "../Button";
 
 import API from "../../../utils/api";
 
-function RedeemBadge() {
+function RedeemBadge(props) {
   const [referral, setReferral] = useState("");
 
   const redeem = () => {
@@ -12,19 +12,10 @@ function RedeemBadge() {
       .then((response) => {
         setReferral("");
         NotificationManager.success(response.data.referral, "Success", 3000);
+        props.incrementState();
       })
       .catch((error) => {
-        console.log(error.response);
-        if (error.response.status === 400) {
-          NotificationManager.error("Invalid referral code", "Error", 3000);
-        } else {
-          NotificationManager.error(
-            error.response.data?.referral ||
-              error.response.data?.errors?.unique_attendee_badge[0],
-            "Error",
-            3000
-          );
-        }
+        NotificationManager.error("Invalid referral code", "Error", 3000);
       });
   };
 
