@@ -44,7 +44,9 @@ function Footer(props) {
             <a href="https://2019.seium.org/">
               <p className="nav-bar-link responsive">Previous Edition </p>
             </a>
-            <p className="nav-bar-link responsive"> Code of Conduct </p>
+            <a target="_blank" href="/docs/RegulamentoGeral.pdf">
+            <p className="nav-bar-link responsive"> General Regulation </p>
+            </a>
           </div>
           <div className="parag2">
             {animation && (

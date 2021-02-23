@@ -7,7 +7,7 @@ import HeaderIcon from "../../../images/Header.svg";
 import Media from "../../../utils/media";
 import "../../../../assets/css/intro.css";
 import "../../../../assets/css/home.css";
-
+import Button from "../../../buttons/button";
 //#181818
 
 class Intro extends React.Component {
@@ -126,9 +126,9 @@ class Intro extends React.Component {
                   We gather speakers, attract partners and give our imagination
                   wings, all for this to be your favorite week.
                 </h4>
-                {/* <a href="/team">
-                  <Button background="#1d1d1d">MEET THE TEAM</Button>
-                </a> */}
+                <a target="_blank" href="/docs/SurvivalGuide.pdf">
+                  <Button background="#1d1d1d">SURVIVAL GUIDE</Button>
+                </a>
               </div>
             </div>
           </div>
