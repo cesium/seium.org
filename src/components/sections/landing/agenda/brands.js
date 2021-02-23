@@ -18,6 +18,7 @@ import critical from "../../../images/sponsors/critical.png";
 import teleperformance from "../../../images/sponsors/teleperformance.svg";
 import bnpParibas from "../../../images/sponsors/bnp-paribas.png";
 import primavera from "../../../images/sponsors/primavera.png";
+import eurotux from "../../../images/sponsors/eurotux.png";
 
 // Bronze
 import seegno from "../../../images/sponsors/seegno.jpeg";
@@ -28,6 +29,9 @@ import alten from "../../../images/sponsors/alten.svg";
 import farfetch from "../../../images/sponsors/farfetch.png";
 import konk from "../../../images/sponsors/konk.png";
 import glintt from "../../../images/sponsors/glintt.png";
+import deloitte from "../../../images/sponsors/deloitte.png";
+import gowithflow from "../../../images/sponsors/gowithflow.png";
+import softingal from "../../../images/sponsors/softingal.png";
 
 const exclusive = [[accenture, "https://www.accenture.com/pt-pt"]];
 const gold = [
@@ -48,6 +52,7 @@ const silver = [
   ],
   [bnpParibas, "https://www.bnpparibas.pt/en/"],
   [primavera, "https://pt.primaverabss.com/pt/"],
+  [eurotux, "https://eurotux.com/"]
 ];
 const bronze = [
   [seegno, "https://seegno.com/"],
@@ -58,6 +63,9 @@ const bronze = [
   [farfetch, "https://www.farfetch.com/pt/"],
   [konk, "http://www.konkconsulting.com/PT/"],
   [glintt, "https://www.glintt.com"],
+  [deloitte, "https://www2.deloitte.com/"],
+  [gowithflow, "https://gowithflow.io/"],
+  [softingal, "https://www.softingal.com/"],
 ];
 
 function ImgList(props) {
