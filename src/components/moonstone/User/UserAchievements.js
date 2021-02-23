@@ -17,7 +17,10 @@ const UserAchievements = () => {
       <div className="profile-achievs">
         <UserAchievementsItems state={state} />
       </div>
-      <Header title="Checkpoints" style={{ marginTop: "40px", width: "100%" }} />
+      <Header
+        title="Checkpoints"
+        style={{ marginTop: "40px", width: "100%" }}
+      />
       <div className="achiev">
         <p>
           <b>Level 1</b> 5 companies ➔ +30 entries

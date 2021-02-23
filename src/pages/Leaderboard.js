@@ -11,7 +11,7 @@ export default function Leaderboard(params) {
         title="Leaderboard"
         subtitle="Check the users with the highest number of badges"
       ></SectionHeader>
-        <RankCarousel></RankCarousel>
+      <RankCarousel></RankCarousel>
     </div>
   );
 }
