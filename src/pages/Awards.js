@@ -12,14 +12,14 @@ import "../assets/css/awards.css";
 const getItems = (awards, incrementState) => {
   const items = [];
 
-  for (const { id, image, name, price, limit, stock } of awards) {
+  for (const { id, image, name, price, can_buy, stock } of awards) {
     items.push(
       <Item
         key={id}
         id={id}
         img={image}
         price={price}
-        limit={limit}
+        limit={can_buy}
         stock={stock}
         incrementState={incrementState}
       >

@@ -75,14 +75,14 @@ export default function Index(props) {
           class="buttonBoard activate"
           onClick={(handleFormSubmit(), learder)}
         >
-          LEADERBOARD
+          Daily Ranking
         </button>
         <button
           style={{ width: "140px" }}
           class="buttonBoard"
           onClick={(handleFormSubmit(), hall)}
         >
-          HALL OF FAME
+          Global Ranking
         </button>
       </div>
       <div className="rankPlace">

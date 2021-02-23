@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { useUser } from "../context/user";
+import { useState } from "react";
 import Header from "../Header";
 import RedeemBadge from "../RedeemBadge";
 
 import API from "../../../utils/api";
 import Achievement from "../Achievement";
+
+import UserAchievementsItems from "./UserAchievementsItems";
 
 const UserAchievements = () => {
   const { user } = useUser();
@@ -13,17 +14,11 @@ const UserAchievements = () => {
     token_balance: "?",
     entries: "?",
   });
+  const [state, setState] = useState(0);
 
-  const { badge_count, token_balance, entries } = info;
-
-  useEffect(async () => {
-    if (user?.id) {
-      const {
-        data: { data: attendee },
-      } = await API.get(`/api/v1/attendees/${user.id}`);
-      setInfo(attendee);
-    }
-  }, [user.id]);
+  const incrementState = () => {
+    setState(state + 1);
+  };
 
   return (
     <div className="achiev-section">
@@ -74,6 +69,8 @@ const UserAchievements = () => {
         </h4>
       </div>
       <RedeemBadge />
+      <UserAchievementsItems state={state} />
+      <RedeemBadge incrementState ={incrementState} />
     </div>
   );
 };
