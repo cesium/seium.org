@@ -20,6 +20,9 @@ jobs:
         env:
           REACT_APP_SAFIRA_ENDPOINT: ${{ secrets.REACT_APP_SAFIRA_ENDPOINT }}
           REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
+          REACT_APP_BOT_API_KEY: ${{ secrets.REACT_APP_BOT_API_KEY }}
+          REACT_APP_BOT_DOMAIN: ${{ secrets.REACT_APP_BOT_DOMAIN }}
+
       - name: Upload to netlify
         uses: netlify/actions/cli@master
         id: deploy-netlify
