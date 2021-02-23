@@ -9,9 +9,10 @@ const UserAchievementsItems = (props) => {
   const [info, setInfo] = useState({
     badge_count: "?",
     token_balance: "?",
+    entries: "?"
   });
 
-  const { badge_count, token_balance } = info;
+  const { badge_count, token_balance, entries } = info;
 
   useEffect(async () => {
     if (user?.id) {
@@ -30,6 +31,14 @@ const UserAchievementsItems = (props) => {
           emoji="💰"
           quantity={token_balance}
           item="Token"
+          style={props.customStyle}
+        />
+      </div>
+      <div>
+        <Achievement
+          emoji="🏆"
+          quantity={entries}
+          item={"Entries"}
           style={props.customStyle}
         />
       </div>

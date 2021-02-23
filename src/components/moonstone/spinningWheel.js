@@ -70,7 +70,7 @@ const SpinningWheel = (props) => {
 
   return (
     <div className="spinningWheel">
-      <Header style={{ width: "100%" }} title="Achievements">
+      <Header style={{ width: "100%" }} title="">
         <div
           style={{ display: "flex", whiteSpace: "nowrap", paddingTop: "7%" }}
         >
