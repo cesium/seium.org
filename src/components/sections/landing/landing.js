@@ -3,7 +3,6 @@ import Intro from "./intro/intro";
 import Carousel from "./agenda/carousel-home";
 import Footer from "../footer";
 import Speakers from "./speakers";
-
 import ipdj from "../../images/partners/ipdj.png";
 import onda from "../../images/partners/onda.svg";
 import uminhoon from "../../images/partners/uminhoon.png";

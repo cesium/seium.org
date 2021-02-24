@@ -682,19 +682,32 @@ button {
   }
 }
 
-.intro-bg {
-  padding: 0 5% 0 5%;
+@media (max-width: 768px) {
+  .intro-bg {
+    padding: 0 5% 0 5%;
 
-  /* The image used */
-  background-image: url("../../components/images/lines.svg") !important;
-  background: #181818;
+    /* The image used */
+    background-image: url("../../components/images/lines.svg") !important;
+    background: #181818;
 
-  /* Full height */
-  height: 100%;
+    /* Full height */
+    height: 100%;
 
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: top right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}
+
+@media (min-width: 769px) {
+  .intro-bg {
+    padding: 0 5% 0 5%;
+
+    background: #181818;
+
+    /* Full height */
+    height: 100%;
+  }
 }
 
 .home {

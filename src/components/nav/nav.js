@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../images/logo.svg";
 import "../../assets/css/navbar.css";
 import NavIcon from "../images/nav-icon.svg";
-import Pt from "../images/pt.svg";
 import $ from "jquery";
 
+
 function NavBar() {
+  const [width, setWidth] = useState(undefined);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleClick = () => {
     document.querySelector(".menu-icon-wrapper").classList.toggle("open");
     document.querySelector(".nav-content").classList.toggle("is-active");
@@ -24,10 +38,10 @@ function NavBar() {
   return (
     <nav className="navbar fixed-top">
       <div className="container-nav">
-        <a className="brand logo" href="/">
+        <a style={{ zIndex: width > 768 && 100 }} className="brand logo" href="/">
           <img src={Logo} alt="Sei Logo" />
         </a>
-        <div className="nav-content">
+        <div style={{ zIndex: width > 768 && 100 }} className="nav-content">
           <div className="nav-item">
             <a className="nav-link nav-bar-link nav_link-s" href="/agenda">
               Agenda{" "}
