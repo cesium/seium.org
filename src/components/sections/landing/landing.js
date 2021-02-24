@@ -6,6 +6,7 @@ import Speakers from "./speakers";
 import ipdj from "../../images/partners/ipdj.png";
 import onda from "../../images/partners/onda.svg";
 import uminhoon from "../../images/partners/uminhoon.png";
+import wumrm from "../../images/partners/wUMrm.png";
 
 function Home() {
   return (
@@ -41,15 +42,34 @@ function Home() {
           <a
             className="sponsor grayscale"
             target="_blank"
+            rel="noreferrer"
             href="https://ipdj.gov.pt/"
           >
             <img src={ipdj} alt="IPDJ" />
           </a>
-          <a className="sponsor" target="_blank" href="https://ondastudio.co/">
+          <a
+            className="sponsor"
+            target="_blank"
+            rel="noreferrer"
+            href="https://ondastudio.co/"
+          >
             <img src={onda} alt="Onda Design" />
           </a>
-          <a className="sponsor big" target="_blank" href="http://aaum.pt/">
+          <a
+            className="sponsor big"
+            target="_blank"
+            rel="noreferrer"
+            href="https://aaum.pt/"
+          >
             <img src={uminhoon} alt="UMinho ON" />
+          </a>
+          <a
+            className="sponsor"
+            target="_blank"
+            rel="noreferrer"
+            href="https://twitter.com/wumrm_"
+          >
+            <img src={wumrm} alt="wUMrm" />
           </a>
         </div>
       </div>
