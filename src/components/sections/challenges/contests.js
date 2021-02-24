@@ -24,7 +24,8 @@ function Contests() {
     <Challenge
       title="CTF"
       parags={[
-        "Self explanatory, right? Test you security and general skills and find those pesky flags in our CTF! Be one of the first three to submit all the flags and win an awesome Raspberry Pi 4!",
+        "Self explanatory, right? Test your security and general skills and find those pesky flags in our CTF! Be one of the first three to submit all the flags and win an awesome Raspberry Pi 4!",
+        "Made with the help of our friends over at wUMrm.",
       ]}
       buttonText=""
       prizes={[
