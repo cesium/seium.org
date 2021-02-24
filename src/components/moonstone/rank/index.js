@@ -100,7 +100,7 @@ export default function Index(props) {
                   ? rank.findIndex((x) => x.name === user.name) + 1
                   : index + 1
               }
-              owner={item.name === user.name ? "owner" : null}
+              owner={item.id === user.id ? "owner" : null}
               username={item.nickname ? item.nickname : item.name}
               badges={item.badges}
             ></RankPlaces>
