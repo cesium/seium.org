@@ -16,12 +16,18 @@ function StandDashboard() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BOT_DOMAIN}/voice/${user.name}`, {
-        headers: {
-          Authorization: `${process.env.REACT_APP_BOT_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-      })
+      .get(
+        `${process.env.REACT_APP_BOT_DOMAIN}/voice/${user.name.replace(
+          "/",
+          "-"
+        )}`,
+        {
+          headers: {
+            Authorization: `${process.env.REACT_APP_BOT_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         setUsers(res.data.users);
       })
