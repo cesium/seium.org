@@ -118,7 +118,7 @@ function Day24() {
         bigTitle="Discord Master Race"
         title="Activity"
         start="21:00"
-        end="23:00"
+        end="22:30"
       />
     </div>
   );
