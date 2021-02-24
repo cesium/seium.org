@@ -17,7 +17,7 @@ function StandDashboard() {
   useEffect(() => {
     axios
       .get(
-        `${process.env.REACT_APP_BOT_DOMAIN}/voice/${user.name.replace(
+        `${process.env.REACT_APP_BOT_DOMAIN}/voice/${user.name?.replace(
           "/",
           "-"
         )}`,
