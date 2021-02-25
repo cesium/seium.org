@@ -21,10 +21,9 @@ const getItems = (awards, incrementState) => {
         price={price}
         limit={can_buy}
         stock={stock}
+        name={name}
         incrementState={incrementState}
-      >
-        {name}
-      </Item>
+      />
     );
   }
 
