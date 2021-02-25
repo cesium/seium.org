@@ -48,14 +48,14 @@ export default function Wheel() {
         data: { data: winners },
       } = await API.get(`/api/v1/roulette/latestwins`);
       setInfo({ winners, rolling: info.rolling });
-    };
+    }
 
     if (!info.rolling) {
       fetchData();
     }
 
     const interval = setInterval(() => {
-      if(!info.rolling) {
+      if (!info.rolling) {
         fetchData();
       }
     }, 5000);
@@ -64,7 +64,7 @@ export default function Wheel() {
 
   const setRolling = (rolling) => {
     setInfo({ winners: info.winners, rolling: rolling });
-  }
+  };
 
   return (
     <div className="userProfile">

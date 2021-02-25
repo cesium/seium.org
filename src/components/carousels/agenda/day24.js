@@ -27,7 +27,7 @@ function Day24() {
         description="Neste workshop, será apresentada a área de segurança de informação e cibersegurança da everis Portugal, com breve descrição do que é trabalhar na área da cibersegurança em Portugal. De seguida, um dos nossos lead architects irá falar das top 10 vulnerabilidades da OWASP, demonstrando como estas vulnerabilidades podem ser exploradas e como os programadores podem prevenir este tipo de ataques."
       />
       <Activity
-        start="9:30"
+        start="10"
         end="11:30"
         bigTitle="Testes para Futuros Engenheiros de Software"
         title="Workshop Subvisual"
@@ -48,6 +48,7 @@ function Day24() {
         end="13:00"
         animator1="Miguel Palhas, Subvisual"
         day={1}
+        join="https://zoom.us/j/92009060946"
         activityID="vim"
         speaker1ID="miguelpalhas"
         description="A (mostly improvised) buffet of things you might be able to do to make your life easier when writing code. And to look like a real hacker while doing it."
@@ -61,6 +62,7 @@ function Day24() {
         end="15:00"
         animator1="Alexandre Brito, Accenture"
         day={1}
+        join="https://zoom.us/j/98778437905"
         activityID="iot"
         speaker1ID="alexandrebrito"
         description="Vem conhecer mais sobre Cloud, IoT, Machine Learning. Descobre que tipo de projectos e tecnologias implementamos nos nossos clientes."
@@ -73,6 +75,7 @@ function Day24() {
         end="16:00"
         animator1="Tiago Carção, Glovo"
         day={1}
+        join="https://zoom.us/j/94515931976"
         activityID="sistemaslargaescala"
         speaker1ID="tiagocarcao"
         description="Hoje em dia vivemos numa sociedade global, altamente conectada, always-on, com uma grande pegada digital. Estas características fazem de grande parte das aplicações e serviços que utilizamos hoje, sistemas que recebem um grande volume de tráfego e devem ser capazes de reagir às diferentes flutuações de horário, hábitos e gostos.
@@ -86,6 +89,7 @@ function Day24() {
         title="Pitch"
         start="16:30"
         end="16:45"
+        join="https://zoom.us/j/95635161884"
       />
       <Activity
         main="yes"
@@ -93,6 +97,7 @@ function Day24() {
         title="Pitch"
         start="16:45"
         end="17:00"
+        join="https://zoom.us/j/95854630311"
       />
       <CoffeeBreak name="Coffee Break" />
       <Activity
@@ -103,6 +108,7 @@ function Day24() {
         end="18:30"
         animator1="Juliana Carvalho, Unlimited Future"
         day={1}
+        join="https://zoom.us/j/93616962948"
         activityID="cv"
         speaker1ID="julianacarvalho"
         description="O CV sempre desempenhou um papel importante no processo de recrutamento, e é uma das ferramentas tradicionais do mercado de trabalho que funciona como um cartão de visita. Nesta talk, vamos dar-te algumas dicas sobre a maneira mais eficaz de apresentar a história da tua vida!"
@@ -112,7 +118,7 @@ function Day24() {
         bigTitle="Discord Master Race"
         title="Activity"
         start="21:00"
-        end="23:00"
+        end="22:30"
       />
     </div>
   );

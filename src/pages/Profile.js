@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useAuth } from "../components/moonstone/context/auth";
 import { useUser } from "../components/moonstone/context/user";
 import SectionHeader from "../components/moonstone/SectionHeader";
 import UserInfo from "../components/moonstone/User/UserInfo";
@@ -10,10 +11,14 @@ import "../assets/css/moonstone.css";
 
 function Profile() {
   const { user, dispatch } = useUser();
+  const { dispatch: dispatchAuth } = useAuth();
 
-  useEffect(async () => {
-    const { data: user } = await API.get("/api/v1/attendee");
-    dispatch({ type: "INIT", user: user });
+  useEffect(() => {
+    API.get("/api/v1/attendee")
+      .then((res) => {
+        dispatch({ type: "INIT_ATTENDEE", user: res.data });
+      })
+      .catch(() => dispatchAuth({ type: "LOGOUT" }));
   }, []);
 
   return (

@@ -9,7 +9,7 @@ function Contests() {
     <Challenge
       title="CV Contest"
       parags={[
-        "Our sponsors want your CV. You want them to have it. And why not try to win a PS5 while you’re at it? Submit your CV to cv@seium.org and be automatically entered into a contest to win a PS5! It goes without saying that by sending us your CV, you give us consent to share it with our Silver, Gold and Exclusive sponsors.",
+        "Our sponsors want your CV. You want them to have it. And why not try to win a PS5 while you’re at it? Submit your CV to cv@seium.org to enter the contest and  win a PS5! It goes without saying that by sending us your CV, you give us consent to share it with our Silver, Gold and Exclusive sponsors.",
         "In order to enter the contest, you have to submit your CV until Friday, the 26th, at 17h.",
       ]}
       buttonText={
@@ -24,9 +24,14 @@ function Contests() {
     <Challenge
       title="CTF"
       parags={[
-        "Self explanatory, right? Test you security and general skills and find those pesky flags in our CTF! Be on of the first three to submit all the flags and win an awesome Raspberry Pi 4!",
+        "Self explanatory, right? Test your security and general skills and find those pesky flags in our CTF! Be one of the first three to submit all the flags and win an awesome Raspberry Pi 4!",
+        "Made with the help of our friends over at wUMrm.",
       ]}
-      buttonText=""
+      buttonText={
+        <a target="_blank" href="https://sei21.ctfd.io/">
+          <Button className="button">Participate</Button>
+        </a>
+      }
       prizes={[
         "1.º Place — Raspberry Pi 4 8gb + caixa + charger	",
         "2.º Place — Raspberry Pi 4 4gb + charger",
@@ -38,7 +43,7 @@ function Contests() {
     <Challenge
       title="Google HashCode"
       parags={[
-        "If you don’t know what the Google Hash Code is, here’s an explanation I copied from their website: ‘Hash Code is a team programming competition, organized by Google, for students and professionals around the world. You pick your team and programming language and we pick an engineering problem for you to solve. This year’s contest kicks off with an Online Qualifications, where your team can compete virtually from wherever you’d like, alongside your virtual Hub. Top teams will then be invited to compete from our virtual World Finals.’",
+        "If you don’t know what the Google Hash Code is, here’s an explanation I copied from their website: ‘Hash Code is a team programming competition, organized by Google, for students and professionals around the world. You pick your team and programming language and we pick an engineering problem for you to solve. This year’s contest kicks off with an Online Qualifications, where your team can compete virtually from wherever you’d like, alongside your virtual Hub. Top teams will then be invited to compete from our virtual World Finals.",
         "Sounds good? Then make a team, sign up on our Hub (CeSIUM Hub – SEI'21), be the best team on our Hub and win a 200€ prize (divided between the team)!",
       ]}
       buttonText={
@@ -56,7 +61,7 @@ function Contests() {
     <Challenge
       title="Photography Contest"
       parags={[
-        "Take a cool pic related to say, share it in your stories and tag @sei.uminho, the take a screenshot and send it to us! You’ll be entered in a draw to win a fantastic Polaroid camera! (Bonus points if your profile is public so we can share your story. Ok, the aren’t really bonus points, but we’d be happy :D )",
+        "Take a cool pic related to SEI, share it in your instastories and tag @sei.uminho, then take a screenshot and send it to us! Your submission will count as an entry towards a prize draw in which you can win an amazing Polaroid camera! (Bonus points if your profile is public so we can share your story. Ok, these aren’t really bonus points, but we’d be happy :D)",
         "This contest starts after the Opening Ceremony on Tuesday.",
       ]}
       buttonText=""
@@ -81,17 +86,29 @@ function Contests() {
     <Challenge
       title="CS:GO Tournament"
       parags={[
-        "Make a team and come and show off your talent in you CS:GO tournament! We have an 8 team limit, so make sure you move fast!",
+        "Make a team and come show off your talent in our CS:GO tournament! We have a limit of 8 teams, so make sure you move fast!",
       ]}
       buttonText={
         <a target="_blank" href="https://forms.gle/TqhNS5Sww279iMDW8">
           <Button className="button">Register now</Button>
         </a>
       }
-      prizes={["TBA"]}
+      prizes={["Winner — 30€ per member of the winning team"]}
     />
   );
   let challenge7 = (
+    <Challenge
+      title="Discord Master Race"
+      parags={["Make a team of 4 elements and have fun!"]}
+      buttonText={
+        <a target="_blank" href="https://forms.gle/ydqm2nBzqP591oAX8 ">
+          <Button className="button">Register now</Button>
+        </a>
+      }
+      prizes={["TBA"]}
+    />
+  );
+  let challenge8 = (
     <Challenge
       title="Instagram Giveaway"
       parags={[""]}
@@ -110,6 +127,7 @@ function Contests() {
     const [myStyle5, setMyStyle5] = useState({});
     const [myStyle6, setMyStyle6] = useState({});
     const [myStyle7, setMyStyle7] = useState({});
+    const [myStyle8, setMyStyle8] = useState({});
 
     let changeStyle1 = () => {
       setdata(1);
@@ -121,6 +139,7 @@ function Contests() {
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle8({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle2 = () => {
       setdata(2);
@@ -132,6 +151,7 @@ function Contests() {
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle8({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle3 = () => {
       setdata(3);
@@ -142,6 +162,7 @@ function Contests() {
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle8({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle1({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle4 = () => {
@@ -154,6 +175,7 @@ function Contests() {
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle8({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle5 = () => {
       setdata(5);
@@ -165,6 +187,7 @@ function Contests() {
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle8({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle6 = () => {
       setdata(6);
@@ -176,6 +199,7 @@ function Contests() {
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle8({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
     let changeStyle7 = () => {
       setdata(7);
@@ -187,6 +211,19 @@ function Contests() {
       setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
       setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle8({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+    };
+    let changeStyle8 = () => {
+      setdata(8);
+      setMyStyle8({ paddL: "15px", clr: "#fff" });
+
+      setMyStyle1({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle2({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle3({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle4({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle5({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle6({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
+      setMyStyle7({ paddL: "0px", clr: "rgba(255, 255, 255, 0.4)" });
     };
 
     return (
@@ -252,6 +289,15 @@ function Contests() {
           style={{ paddingLeft: myStyle7.paddL, textColor: myStyle7.clr }}
         >
           <p className="medium-5" style={{ color: myStyle7.clr }}>
+            Discord Master Race
+          </p>
+        </button>
+        <button
+          className="title-nav"
+          onClick={() => changeStyle8(8)}
+          style={{ paddingLeft: myStyle8.paddL, textColor: myStyle8.clr }}
+        >
+          <p className="medium-5" style={{ color: myStyle8.clr }}>
             <strike>Instagram Giveaway</strike> (Closed)
           </p>
         </button>
@@ -267,6 +313,7 @@ function Contests() {
     else if (data === 5) setchallenge(challenge5);
     else if (data === 6) setchallenge(challenge6);
     else if (data === 7) setchallenge(challenge7);
+    else if (data === 8) setchallenge(challenge8);
   }, [data]);
 
   return (

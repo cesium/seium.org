@@ -682,19 +682,32 @@ button {
   }
 }
 
-.intro-bg {
-  padding: 0 5% 0 5%;
+@media (max-width: 768px) {
+  .intro-bg {
+    padding: 0 5% 0 5%;
 
-  /* The image used */
-  background-image: url("../../components/images/lines.svg") !important;
-  background: #181818;
+    /* The image used */
+    background-image: url("../../components/images/lines.svg") !important;
+    background: #181818;
 
-  /* Full height */
-  height: 100%;
+    /* Full height */
+    height: 100%;
 
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: top right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}
+
+@media (min-width: 769px) {
+  .intro-bg {
+    padding: 0 5% 0 5%;
+
+    background: #181818;
+
+    /* Full height */
+    height: 100%;
+  }
 }
 
 .home {
@@ -757,6 +770,13 @@ button {
   background-size: 100%;
   width: 20px;
   height: 20px;
+  opacity: 0.4;
+}
+
+.home .container .infos .contact .icons .social:hover,
+.home .container .infos .contact .icons .github:hover,
+.home .container .infos .contact .icons .twitter:hover {
+  opacity: 1;
 }
 
 .home .container .infos .contact .icons .github {
@@ -910,6 +930,11 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .home .container .infos .contact .icons .social,
+  .home .container .infos .contact .icons .github,
+  .home .container .infos .contact .icons .twitter {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 576px) {
@@ -954,6 +979,11 @@ button {
   .home .container .details .quote h4 {
     font-size: 27px;
     margin-bottom: 7%;
+  }
+  .home .container .infos .contact .icons .social,
+  .home .container .infos .contact .icons .github,
+  .home .container .infos .contact .icons .twitter {
+    opacity: 1;
   }
 }
 

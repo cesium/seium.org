@@ -390,7 +390,7 @@ label {
 }
 
 .buttonText {
-  background-color: #00ffb7;
+  /* background-color: #00ffb7; */
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -453,7 +453,7 @@ label {
 
 .input-container .textError {
   margin-left: 30.2px;
-  margin-top: 19px;
+  margin-bottom: 19px;
 }
 
 @media (max-width: 766px) {
@@ -578,6 +578,51 @@ label {
 }
 
 .latestWins {
+  margin-top: 26.5px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  width: 50%;
+}
+
+.badge-owners {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  width: 50%;
+}
+
+.participant {
+  display: flex;
+  font-family: "Inter Regular";
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 3px;
+  cursor: pointer;
+}
+
+.participant:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.participant:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.participant.selected {
+  background-color: #00ffb7;
+  cursor: initial;
+}
+
+.participant .participantName {
+  flex: 1;
+  text-align: left;
+}
+
+.participants {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -587,7 +632,7 @@ label {
 }
 
 @media (max-width: 1200px) {
-  .latestWins {
+  .participants {
     width: 90%;
   }
 }
@@ -700,12 +745,26 @@ label {
   height: 84px;
   background-size: 100%;
   margin-bottom: 59px;
-  cursor: pointer;
+}
+
+.sideBar .company_name {
+  font-family: "Inter Black";
+  font-size: 40px;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  /* width: 210px; */
+  min-height: 84px;
+  margin-top: 59px;
 }
 
 @media (max-width: 1200px) {
   .sideBar .logo {
     width: 160px;
+  }
+  .sideBar .company_name {
+    /* width: 160px; */
   }
 }
 
@@ -714,9 +773,14 @@ label {
     padding-top: 32px;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
   }
   .sideBar .logo {
     margin: auto;
+  }
+  .sideBar .company_name {
+    margin: auto;
+    text-align: center;
   }
   .sideBar .sideBarHeader a {
     width: 100%;
@@ -754,14 +818,14 @@ label {
 @media (min-width: 1200px) {
   .achievement .achievements {
     padding-top: 8px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 1200px) {
   .achievement .achievements {
     padding-top: 8px;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0px !important;
   }
 }
@@ -778,6 +842,7 @@ label {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  font-family: "Inter Regular";
 }
 
 @media (max-width: 1200px) {
@@ -796,7 +861,7 @@ label {
 
 .achiev-section .achiev-desc {
   margin-top: 16px;
-  max-width: 369px;
+  max-width: 569px;
 }
 
 @media (max-width: 576px) {
@@ -908,7 +973,6 @@ label {
   pointer-events: none;
   opacity: 0.5;
 }
-
 
 .spinningWheel #wheel[disabled] {
   width: 360px;
@@ -1049,7 +1113,7 @@ label {
 }
 
 .containerregister .form-container .button-reg {
-  margin-top: 26px;
+  margin-top: 10px;
 }
 
 @media (max-width: 766px) {
@@ -1196,3 +1260,36 @@ label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.rankcarousel {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+@media (max-width: 1200px) {
+  .rankcarousel {
+    width: 90%;
+  }
+}
+
+.containerprofile .userProfile .leaderboard.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+
+.profile-achievs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: stretch;
+}

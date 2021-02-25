@@ -7,6 +7,8 @@ import HeaderIcon from "../../../images/Header.svg";
 import Media from "../../../utils/media";
 import "../../../../assets/css/intro.css";
 import "../../../../assets/css/home.css";
+import BackgroundAnimation from "../../../../assets/animations/backgroundAnimation";
+import Button from "../../../buttons/button";
 
 //#181818
 
@@ -68,6 +70,7 @@ class Intro extends React.Component {
 
     return (
       <div className="intro-bg">
+        {this.state.width > 768 && <BackgroundAnimation />}
         <NavBar />
         <div
           className="home"
@@ -76,7 +79,10 @@ class Intro extends React.Component {
             ...this.props.style,
           }}
         >
-          <div className="landing container">
+          <div
+            style={{ zIndex: this.state.width > 768 && 100 }}
+            className="landing container"
+          >
             <div className="description">
               <p className="x-large-1">23 - 28 February 2021</p>
               {title}
@@ -94,7 +100,7 @@ class Intro extends React.Component {
                   </a>
                 </div>
               </div>
-              {window.innerWidth <= 768 ? (
+              {this.state.width <= 768 ? (
                 <div className="join-us">
                   <a target="_blank" href="http://seium21.eventbrite.pt/">
                     <img src={NavIcon} alt="join us" />
@@ -105,7 +111,7 @@ class Intro extends React.Component {
               )}
             </div>
           </div>
-          <div className="container">
+          <div style={{ zIndex: this.state.width > 768 && 100 }} className="container">
             <div className="details">
               <div className="expect">
                 <h5>What you can expect:</h5>
@@ -126,9 +132,9 @@ class Intro extends React.Component {
                   We gather speakers, attract partners and give our imagination
                   wings, all for this to be your favorite week.
                 </h4>
-                {/* <a href="/team">
-                  <Button background="#1d1d1d">MEET THE TEAM</Button>
-                </a> */}
+                <a target="_blank" href="/docs/SurvivalGuide.pdf">
+                  <Button background="#1d1d1d">SURVIVAL GUIDE</Button>
+                </a>
               </div>
             </div>
           </div>
