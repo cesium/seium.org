@@ -93,6 +93,7 @@
 
 .headerChallengeJury {
   margin-bottom: 254px;
+  max-width: 40%;
 }
 
 @media (max-width: 576px) {

@@ -45,6 +45,13 @@ function Jury(props) {
                 </div>
               </span>
             </h3>
+            <p className="resume">
+                Who will be the jurors? Can you guess? I bet you already
+                suspect… Yeah, once again we have members of Subvisual! They
+                will evaluate everything, including the technical component, so
+                you need to do your best throughout the entire project! Good
+                luck!
+              </p>
           </div>
           <SpeakerList />
         </div>
