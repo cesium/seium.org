@@ -20,7 +20,7 @@ export default function SideBar(props) {
   const { dispatch: dispatchAuth } = useAuth();
   const [selected, setselected] = useState([true, false, false, false, false]);
   const [link, setLink] = useState("profile");
-  const [toggleButton, setToggleButton] = useState(true);
+  const [toggleButton, setToggleButton] = useState(false);
   const [Menu, setMenu] = useState(styled.a``);
   const [Zindex, setZindex] = useState(0);
   const [Opacity, setOpacity] = useState(0);
@@ -37,10 +37,19 @@ export default function SideBar(props) {
     return array;
   }
   const handleOnClick = (index, linkName) => {
+    setToggleButton((_) => false);
     setselected((curr) => clickHandle(index));
     setLink((curr) => linkName);
     setZindex((curr) => 0);
-    setToggleButton(true);
+    setMenu(
+        !toggleButton
+          ? styled.a`
+              background: url(${Exit}) no-repeat center !important;
+            `
+          : styled.a`
+              background = url('../../assets/img/menIcon.svg') no-repeat center;
+          `
+      );
   };
 
   const goToWheel = () => {
@@ -64,20 +73,20 @@ export default function SideBar(props) {
         ></BarItem>
         <BarItem
           style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(3, "badgedex")}
-          selected={selected[3]}
+          onClick={() => handleOnClick(2, "badgedex")}
+          selected={selected[2]}
           page="BADGEDEX"
         ></BarItem>
         <BarItem
           style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(4, "leaderboard")}
-          selected={selected[4]}
+          onClick={() => handleOnClick(3, "leaderboard")}
+          selected={selected[3]}
           page="LEADERBOARD"
         ></BarItem>
         <BarItem
           style={{ position: "relative", zIndex: Zindex }}
-          onClick={() => handleOnClick(5, "awards")}
-          selected={selected[5]}
+          onClick={() => handleOnClick(4, "awards")}
+          selected={selected[4]}
           page="AWARDS"
         ></BarItem>
       </div>
@@ -85,9 +94,8 @@ export default function SideBar(props) {
   }
 
   const handleIconMenu = () => {
-    setToggleButton((curr) => !curr);
     setMenu(
-      toggleButton
+      !toggleButton
         ? styled.a`
             background: url(${Exit}) no-repeat center !important;
           `
@@ -97,6 +105,7 @@ export default function SideBar(props) {
     );
     setZindex((curr) => (curr === 0 ? 6 : 0));
     setOpacity((curr) => (curr === 0 ? 1 : 0));
+    setToggleButton((cur) => !cur);
   };
 
   const renderActivePage = (page) => {
@@ -117,7 +126,7 @@ export default function SideBar(props) {
     }
   };
   const mainSlide = (
-    <Slide className="containerprofile" bottom when={toggleButton}>
+    <Slide className="containerprofile" bottom when={!toggleButton}>
       {renderActivePage(link)}
     </Slide>
   );
