@@ -68,6 +68,17 @@ h6 {
   margin-bottom: 50px;
 }
 
+@font-face {
+  font-family: "Inter SemiBold";
+  src: url("../fonts/Inter/Inter-SemiBold.ttf") format("truetype");
+}
+
+.awardName {
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: "Inter SemiBold";
+}
+
 @media (max-width: 1600px) {
   .awardItem {
     margin-right: 35px;

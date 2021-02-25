@@ -68,9 +68,10 @@ const Item = (props) => {
   return (
     <div className="awardItem" disabled={isOutOfStockOrLimit()}>
       <img src={props.img} alt="Award 1" />
+      <p className="awardName">{props.name}</p>
       <Button
         onClick={buyItems}
-        style={{ margin: "20px 0 10px 0", padding: "10px 0 10px 0" }}
+        style={{ margin: "10px 0 10px 0", padding: "10px 0 10px 0" }}
         width="208px"
         inner={props.price + " tokens 💰"}
       >
