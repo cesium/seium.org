@@ -24,19 +24,12 @@ function Ready(props) {
                   <span className="span">
                     <a
                       target="_blank"
-                      href="https://forms.gle/wLdyCmaGaqKko1Jd9"
+                      href="/docs/RegulamentoHackathon.pdf"
                     >
                       <Button background="#102333" className="button">
-                        Register your team
+                        Read the rules
                       </Button>
                     </a>
-
-                    <p
-                      style={{ fontSize: "14px", opacity: "0.6" }}
-                      className="people"
-                    >
-                      3-5 people
-                    </p>
                   </span>
                 </h1>
               </div>
