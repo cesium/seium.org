@@ -42,7 +42,7 @@ export default function Speaker(props) {
         marginBottom: imgStyle().mrB,
         width: imgStyle().w,
       }}
-      onClick={() => handleSpeakerClick()}
+      onClick={props.speakerID ? () => handleSpeakerClick() : undefined}
     >
       <div className="wrapper">
         <img

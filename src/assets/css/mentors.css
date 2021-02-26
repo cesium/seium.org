@@ -39,11 +39,17 @@
   .mentors .container .desc {
     max-width: 37%;
   }
+  .mentors .container .desc .mentor-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 576px) {
   .mentors .container .desc {
     max-width: 100%;
+  }
+  .mentors .container .desc .mentor-title {
+    font-size: 32px;
   }
 }
 
