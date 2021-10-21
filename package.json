@@ -1,65 +1,20 @@
 {
-  "name": "moonstone",
-  "version": "2.0.0-beta",
+  "name": "my-app",
+  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "form-data": "^4.0.0",
-    "jquery": "^3.5.1",
-    "pluralize": "^8.0.0",
-    "query-string": "^6.14.0",
-    "react": "^17.0.1",
-    "react-clickable": "^1.1.0",
-    "react-cool-inview": "^1.2.0",
-    "react-dom": "^17.0.1",
-    "react-dom-confetti": "^0.2.0",
-    "react-hook-inview": "^4.3.7",
-    "react-images-upload": "^1.2.8",
-    "react-inview": "^0.0.8",
-    "react-native": "^0.63.4",
-    "react-notifications": "^1.7.2",
-    "react-p5": "1.3.0",
-    "react-reveal": "^1.2.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "react-wheel-of-prizes": "^1.0.6",
-    "react-zoom-pan-pinch": "^1.6.1",
-    "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json,css}\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
   }
 }
