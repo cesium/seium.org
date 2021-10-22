@@ -1,5 +1,5 @@
 import Activity from "../../Activity";
-//import CoffeeBreak from "../../carousels/coffeeBreak";
+import CoffeeBreak from "../../CoffeeBreak";
 
 let contentStyle = {
   display: "flex",

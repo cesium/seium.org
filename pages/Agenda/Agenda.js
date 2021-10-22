@@ -1,11 +1,11 @@
 import React from "react";
 
-import Carousel from "../components/carousels/CarouselAgenda";
-//import Card from "../../utils/cardCompo";
+import Carousel from "../../components/carousels/CarouselAgenda";
+import Card from "../../components/utils/CardCompo";
 import HeaderIcon from "../public/images/Header.svg";
-//import Footer from "../footer";
-//import NavBar from "../../../components/nav/nav";
-//import "../../../assets/css/navChallenge.css";
+import Footer from "../../components/Footer";
+import NavBar from "../../components/NavBar";
+import "./style.module.css";
 import { withRouter } from "react-router-dom";
 import queryString from "query-string";
 
@@ -22,18 +22,18 @@ function Agenda(props) {
 
   return (
     <>
-      <div className="agendainto-bg">
+      <div className={styles.agendainto-bg}>
         <NavBar />
-        <div className="agendainto">
-          <div className="landing container">
-            <div className="description">
-              <p className="x-large-1 chall-title">Agenda</p>
-              <div className="headerChallenge">
-                <h1 className="title chall-desc">
+        <div className={styles.agendainto}>
+          <div className={`${styles.landing} ${styles.container}`}>
+            <div className={styles.description}>
+              <p className={`${styles.x-large-1} ${styles.chall-title}`}>Agenda</p>
+              <div className={styles.headerChallenge}>
+                <h1 className={`${styles.title} ${styles.chall-desc}`}>
                   Five awesome days of learning, sharing and{" "}
-                  <span className="spanChall">
+                  <span className={styles.spanChall}>
                     winning
-                    <div className="box-agenda">
+                    <div className={styles.box-agenda}>
                       <div id="mascote">
                         <Card
                           img={HeaderIcon}
@@ -52,7 +52,7 @@ function Agenda(props) {
           </div>
         </div>
       </div>
-      <div className="agenda-bg">
+      <div className={styles.agenda-bg}>
         <div style={styling}>
           <Carousel
             initialDay={queryParams.day ? parseInt(queryParams.day) : 0}

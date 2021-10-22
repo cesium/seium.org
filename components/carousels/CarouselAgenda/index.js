@@ -1,19 +1,19 @@
 import React from "react";
 import { Clickable } from "react-clickable";
 import PropTypes from "prop-types";
-//import windowDimensions from "../utils/windowDimensions";
-//import Container from "../container/container";
+import windowDimensions from "../../utils/WindowDimensions";
+import Container from "../../Container";
 import PrevNotClicked from "../../../public/images/prev-not-clicked.svg";
 import NextNotClicked from "../../../public/images/next-not-clicked.svg";
 import PrevClicked from "../../../public/images/prev-clicked.svg";
 import NextClicked from "../../../images/next-clicked.svg";
-//import "./clickable.css";
+import styles from "./style.module.css";
 import Day23 from "../agenda/Day23";
-//import Day24 from "./agenda/day24";
-//import Day25 from "./agenda/day25";
-//import Day26 from "./agenda/day26";
-//import Day27 from "./agenda/day27";
-//import Day28 from "./agenda/day28";
+import Day24 from "../agenda/Day24";
+import Day25 from "../agenda/Day25";
+import Day26 from "../agenda/Day26";
+import Day27 from "../agenda/Day27";
+import Day28 from "../agenda/Day28";
 
 let next = NextClicked;
 let prev = PrevNotClicked;
@@ -194,7 +194,7 @@ function AgendaCarousel(props) {
             onClick={() => {
               navigate("prev");
             }}
-            className="clickable prev"
+            className={`${styles.clickable} ${styles.prev}`}
             style={{
               ...headerStyle().button,
               ...{ backgroundImage: `url(${prev})` },
@@ -205,7 +205,7 @@ function AgendaCarousel(props) {
             onClick={() => {
               navigate("next");
             }}
-            className="clickable next"
+            className={`${styles.clickable} ${styles.next}`}
             style={{
               ...headerStyle().button,
               ...{ backgroundImage: `url(${next})` },
