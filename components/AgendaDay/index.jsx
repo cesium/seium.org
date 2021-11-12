@@ -5,8 +5,8 @@ export default function AgendaDay(props) {
 
     return (
         <div className={styles.wrapper}>
-            <div className={`${styles.leftArrow} ${styles.noSelect}`}>
-                <button className={`${styles.prevDisabled} ${styles.arrow}`} onClick={props.previousDay}>&lt;</button>
+            <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
+                <button className={`${styles.prev} ${styles.arrow}`} onClick={props.previousDay}></button>
             </div>
 
             <div className={styles.dateWrapper}>
@@ -14,8 +14,8 @@ export default function AgendaDay(props) {
                 <h2 className={styles.dayTitle}>Today</h2>
             </div>
             
-            <div className={`${styles.rightArrow} ${styles.noSelect}`}>
-                <button className={`${styles.arrowDisabled} ${styles.arrow}`} onClick={props.nextDay}>&gt;</button>
+            <div className={`${styles.rightArrow} ${styles.arrowWrapper}`}>
+                <button className={`${styles.next} ${styles.arrow}`} onClick={props.nextDay}></button>
             </div>
         </div>
     );

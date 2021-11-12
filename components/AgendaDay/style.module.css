@@ -6,40 +6,59 @@
 }
 
 .leftArrow {
-    float: left;
+    float: right;
     position: relative;
-    margin-right: 3vw;
 }
 
 .rightArrow {
-    float: right;
+    float: left;
     position: relative;
-    margin-left: 0.3vw;
+}
+
+.arrowWrapper {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 1vw;
 }
 
 .arrow {
-    font-size: 5vw;
-    position: absolute;
-    bottom: 0;
     height: auto;
     margin: 0;
     border: none;
+    width: 4vw;
+    height: 4vw;
     background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center; 
+    background-size: 100% 100%;
+    padding: 0;
 }
 
 .arrowActive {
     color: white;
 }
 
-.prevDisabled {
-    font-smooth: 2em;
-    background: url('../../public/images/prev-not-clicked.svg');
-    
+.notVisible {
+    background-image: none;
 }
 
-.arrowActive:hover {
-    color: blue;
+.prev {
+    background-image: url('../../public/images/prev-not-clicked.svg');
 }
+
+.prev:hover {
+    background-image: url('../../public/images/prev-clicked.svg');
+}
+
+.next {
+    background-image: url('../../public/images/next-not-clicked.svg');
+}
+
+.next:hover {
+    background-image: url('../../public/images/next-clicked.svg');
+}
+
 
 .wrapper {
     display: flex;
@@ -50,14 +69,5 @@
     margin: 0;
     font-size: 1vw;
     color: blue;
+    margin-bottom: -1vw;
 }
-
-.noSelect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
-  }
