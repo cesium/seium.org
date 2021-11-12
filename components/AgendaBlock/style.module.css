@@ -1,0 +1,30 @@
+.topLine {
+    border-top: solid 1px white;
+    padding-bottom: 3vw;
+}
+
+.paragraph {
+    color: white;
+    font-size: 1vw;
+    line-height: 1vw;
+    margin-bottom: 0.4vw;
+    margin-top: 0.4vw;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.author {
+    color: white;
+    font-size: 0.8vw;
+    margin-bottom: 0.4vw;
+    margin-top: 0.4vw;
+}
+
+.imgWrapper {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    float:right;
+}
