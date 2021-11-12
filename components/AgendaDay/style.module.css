@@ -1,0 +1,63 @@
+.dayTitle {
+    font-size: 5vw;
+    float: left;
+    margin: 0;
+    color: white;
+}
+
+.leftArrow {
+    float: left;
+    position: relative;
+    margin-right: 3vw;
+}
+
+.rightArrow {
+    float: right;
+    position: relative;
+    margin-left: 0.3vw;
+}
+
+.arrow {
+    font-size: 5vw;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    margin: 0;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.arrowActive {
+    color: white;
+}
+
+.prevDisabled {
+    font-smooth: 2em;
+    background: url('../../public/images/prev-not-clicked.svg');
+    
+}
+
+.arrowActive:hover {
+    color: blue;
+}
+
+.wrapper {
+    display: flex;
+    background: black;
+}
+
+.date {
+    margin: 0;
+    font-size: 1vw;
+    color: blue;
+}
+
+.noSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
