@@ -1,6 +1,13 @@
 .topLine {
     border-top: solid 1px white;
+}
+
+.spaceBehind {
     padding-bottom: 3vw;
+}
+
+.nada {
+    padding-bottom: 0;
 }
 
 .paragraph {
@@ -23,6 +30,7 @@
 }
 
 .imgWrapper {
+    margin: auto;
     width: 50px;
     height: 50px;
     background-color: red;
