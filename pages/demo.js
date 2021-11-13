@@ -1,7 +1,7 @@
-import AgendaDay from '../components/AgendaDay';
+import FeaturedAgenda from '../components/FeaturedAgenda';
 
 export default function Demo() {
   return (
-    <><AgendaDay></AgendaDay></>
+    <FeaturedAgenda/>
   )
 }
