@@ -44,19 +44,19 @@
 }
 
 .prev {
-    background-image: url('../../public/images/prev-not-clicked.svg');
+    background-image: url('/images/prev-not-clicked.svg');
 }
 
 .prev:hover {
-    background-image: url('../../public/images/prev-clicked.svg');
+    background-image: url('/images/prev-clicked.svg');
 }
 
 .next {
-    background-image: url('../../public/images/next-not-clicked.svg');
+    background-image: url('/images/next-not-clicked.svg');
 }
 
 .next:hover {
-    background-image: url('../../public/images/next-clicked.svg');
+    background-image: url('/images/next-clicked.svg');
 }
 
 

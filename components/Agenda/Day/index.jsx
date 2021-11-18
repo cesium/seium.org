@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 
-export default function AgendaDay(props) {
+export default function Day(props) {
 
 
     return (

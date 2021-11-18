@@ -1,18 +1,18 @@
-import AgendaTable from '../AgendaTable';
-import AgendaDay from '../AgendaDay';
+import Table from './Table';
+import Day from './Day';
 
 import styles from './style.module.css';
 
 
-export default function FeaturedAgenda(props) {
+export default function Agenda(props) {
     return (
         <div className={styles.tempWrapper}>
             <div className={styles.dayWrapper}>
-                <AgendaDay/>
+                <Day/>
             </div>
 
             <div className={styles.tableWrapper}>
-                <AgendaTable/>
+                <Table/>
             </div>
         </div>
     );

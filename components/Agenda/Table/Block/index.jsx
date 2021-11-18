@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 
-export default function AgendaBlock(props) {
+export default function Block(props) {
     return (
         <div className={`${styles.topLine} ${props.coffeeBreak ? styles.noSpace : styles.spaceBehind}`}>
             <div className={styles.imgWrapper} style={{display: (props.coffeeBreak ? "flex" : "none")}}>                   
