@@ -10,7 +10,7 @@ export default function Day(props) {
             </div>
 
             <div className={styles.dateWrapper}>
-                <h5 className={styles.date}>23 Feb</h5>
+                <h5 className="text-3xl text-blue-500 font-bold">23 Feb</h5>
                 <h2 className={styles.dayTitle}>Today</h2>
             </div>
             
