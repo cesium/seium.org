@@ -1,0 +1,73 @@
+.dayTitle {
+    font-size: 5vw;
+    float: left;
+    margin: 0;
+    color: white;
+}
+
+.leftArrow {
+    float: right;
+    position: relative;
+}
+
+.rightArrow {
+    float: left;
+    position: relative;
+}
+
+.arrowWrapper {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 1vw;
+}
+
+.arrow {
+    height: auto;
+    margin: 0;
+    border: none;
+    width: 4vw;
+    height: 4vw;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center; 
+    background-size: 100% 100%;
+    padding: 0;
+}
+
+.arrowActive {
+    color: white;
+}
+
+.notVisible {
+    background-image: none;
+}
+
+.prev {
+    background-image: url('../../public/images/prev-not-clicked.svg');
+}
+
+.prev:hover {
+    background-image: url('../../public/images/prev-clicked.svg');
+}
+
+.next {
+    background-image: url('../../public/images/next-not-clicked.svg');
+}
+
+.next:hover {
+    background-image: url('../../public/images/next-clicked.svg');
+}
+
+
+.wrapper {
+    display: flex;
+    background: black;
+}
+
+.date {
+    margin: 0;
+    font-size: 1vw;
+    color: blue;
+    margin-bottom: -1vw;
+}
