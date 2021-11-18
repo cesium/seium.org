@@ -2,8 +2,17 @@
     border-bottom: solid 5px white;
 }
 
+.selected:hover {
+    border-bottom: solid 5px blue;
+}
+
+
+.notSelected:hover {
+    border-bottom: solid 5px blue;
+}
+
 .notSelected {
-    border: none;
+    border-bottom: solid 5px gray;
 }
 
 .text {
