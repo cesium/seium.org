@@ -22,8 +22,8 @@ export default function Sponsors(props) {
     return (
         <>
             <div className={styles.temp}>
-                <SponsorTab tabName="Exclusive&Gold" selected={val} onSelect={changeValLeft}></SponsorTab>
-                <SponsorTab tabName="Silver&Bronze" selected={!val} onSelect={changeValRight}></SponsorTab>
+                <SponsorTab tabName="Exclusive & Gold" selected={val} onSelect={changeValLeft}></SponsorTab>
+                <SponsorTab tabName="Silver & Bronze" selected={!val} onSelect={changeValRight}></SponsorTab>
             </div>
 
             <div className={styles.blockWrapper}>
@@ -32,8 +32,7 @@ export default function Sponsors(props) {
                 </div>
                 <div className={styles.rightBlock}>
                     <SponsorBlock sponsorType={val ? "Gold" : "Bronze"} color="green" left={false}></SponsorBlock>
-                </div>
-                
+                </div>               
             </div>
         </>
     );
