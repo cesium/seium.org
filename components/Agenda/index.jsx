@@ -6,12 +6,12 @@ import styles from './style.module.css';
 
 export default function Agenda(props) {
     return (
-        <div className={styles.tempWrapper}>
-            <div className={styles.dayWrapper}>
+        <div className="grid grid-cols-2 bg-black py-20">
+            <div className="pl-20">
                 <Day/>
             </div>
 
-            <div className={styles.tableWrapper}>
+            <div className="pl-20 pr-20">
                 <Table/>
             </div>
         </div>

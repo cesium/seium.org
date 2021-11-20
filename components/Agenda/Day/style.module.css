@@ -64,10 +64,3 @@
     display: flex;
     background: black;
 }
-
-.date {
-    margin: 0;
-    font-size: 1vw;
-    color: blue;
-    margin-bottom: -1vw;
-}
