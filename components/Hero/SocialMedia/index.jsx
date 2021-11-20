@@ -4,7 +4,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function SocialMedia() {
   return (
-    <div className="absolute left-0 pl-40">
+    <div className="absolute left-0">
       <h5 className="text-white text-md">
         Follow us on
       </h5>

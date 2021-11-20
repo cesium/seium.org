@@ -11,7 +11,7 @@ export default function Day(props) {
 
             <div className={styles.dateWrapper}>
                 <h5 className="text-3xl text-blue-500 font-bold">23 Feb</h5>
-                <h2 className={styles.dayTitle}>Today</h2>
+                <h2 className="font-bold text-8xl text-white">Today</h2>
             </div>
             
             <div className={`${styles.rightArrow} ${styles.arrowWrapper}`}>
