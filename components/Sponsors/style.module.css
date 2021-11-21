@@ -1,11 +1,4 @@
-.temp {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-}
-
 .blockWrapper {
-    background-color: black;
     display: flex;
     justify-content: center;
     margin-top: 2vw;

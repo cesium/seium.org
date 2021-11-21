@@ -1,7 +1,6 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
-import SponsorBlock from '../SponsorBlock';
-import SponsorTab from '../SponsorTab';
+import Tab from '/components/Sponsors/Tab';
 
 
 import styles from './style.module.css';
@@ -9,32 +8,31 @@ import styles from './style.module.css';
 export default function Sponsors(props) {
     const [val, setValue] = useState(true);
 
-    const changeValLeft = function() {
-        if(val != true)
+    const changeValLeft = function () {
+        if (val != true)
             setValue(true);
     }
 
-    const changeValRight = function() {
-        if(val == true)
+    const changeValRight = function () {
+        if (val == true)
             setValue(false);
     }
 
     return (
-        <>
-            <div className={styles.temp}>
-                <SponsorTab tabName="Exclusive" selected={val} onSelect={changeValLeft}></SponsorTab>
-                <SponsorTab tabName="Silver" selected={!val} onSelect={changeValRight}></SponsorTab>
+        <div className="bg-medium_blue text-white py-20">
+            <h2 className="text-6xl font-bold py-10 flex justify-center"> Our amazing sponsors </h2>
+            <div className="flex justify-center">
+                <Tab tabName="Exclusive&Gold" selected={val} onSelect={changeValLeft}></Tab>
+                <Tab tabName="Silver&Bronze" selected={!val} onSelect={changeValRight}></Tab>
             </div>
 
             <div className={styles.blockWrapper}>
                 <div className={styles.leftBlock}>
-                    <SponsorBlock color="red"></SponsorBlock>
                 </div>
                 <div className={styles.rightBlock}>
-                    <SponsorBlock color="green"></SponsorBlock>
                 </div>
-                
+
             </div>
-        </>
+        </div>
     );
 }
