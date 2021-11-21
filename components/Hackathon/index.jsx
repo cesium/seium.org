@@ -2,8 +2,8 @@ import Button from "/components/Button";
 
 export default function Hackathon() {
     return (
-        <div className="bg-black py-20">
-            <h3 className="px-60 text-2xl text-blue-500 font-bold">
+        <div className="bg-medium_blue py-20">
+            <h3 className="px-60 text-2xl text-aqua font-bold">
                 Hackathon 2022
             </h3>
             <h1 className="px-60 text-9xl text-white font-bold">

@@ -1,13 +1,15 @@
-import Agenda from '/components/Agenda';
 import Hero from '/components/Hero';
-import Hackathon from '../components/Hackathon';
+import Schedule from '/components/Schedule';
+import Hackathon from '/components/Hackathon';
+import Speakers from '/components/Speakers';
 
 export default function Demo() {
   return (
     <>
       <Hero />
-      <Agenda />
+      <Schedule />
       <Hackathon />
+      <Speakers />
     </>
   )
 }

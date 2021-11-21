@@ -1,6 +1,5 @@
 import Block from './Block';
 
-
 export default function Table() {
     return (
         <div>
