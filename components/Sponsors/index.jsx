@@ -2,19 +2,18 @@ import { useState } from 'react';
 
 import Tab from '/components/Sponsors/Tab';
 
-
 import styles from './style.module.css';
 
 export default function Sponsors(props) {
     const [val, setValue] = useState(true);
 
-    const changeValLeft = function () {
-        if (val != true)
+    const changeValLeft = function() {
+        if(val != true)
             setValue(true);
     }
 
-    const changeValRight = function () {
-        if (val == true)
+    const changeValRight = function() {
+        if(val == true)
             setValue(false);
     }
 
