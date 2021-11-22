@@ -1,11 +1,4 @@
-.temp {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-}
-
 .blockWrapper {
-    background-color: black;
     display: flex;
     justify-content: center;
     margin-top: 2vw;
@@ -15,14 +8,12 @@
     width: 50%;
     justify-content: center;
     display: flex;
-    border-right: solid 1px gray;
 }
 
 .rightBlock {
     width: 50%;
     justify-content: center;
     display: flex;
-    border-left: solid 1px gray;
 }
 
 .tab {
