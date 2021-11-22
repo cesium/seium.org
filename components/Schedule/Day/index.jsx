@@ -9,7 +9,7 @@ export default function Day(props) {
                 <button className={`${styles.prev} ${styles.arrow}`} onClick={props.previousDay}></button>
             </div>
 
-            <div className={styles.dateWrapper}>
+            <div className={`-mt-10 ${styles.dateWrapper}`}>
                 <h5 className="text-3xl text-blue-500 font-bold">23 Feb</h5>
                 <h2 className="font-bold text-8xl text-white">Today</h2>
             </div>
