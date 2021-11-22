@@ -1,0 +1,20 @@
+.testDiv {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-self: center;
+    margin: auto;
+}
+
+.wrapper {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsorType {
+    display: blocK;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+}
