@@ -29,8 +29,6 @@ export default function Title() {
                     </div>
                 </span>
             </h1>
-            
-                
         </div>
     );
 }

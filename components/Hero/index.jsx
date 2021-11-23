@@ -10,7 +10,8 @@ const Animation = dynamic(() => import('./Animation'), { ssr: false })
 
 export default function Hero() {
   return (
-    <div className="px-60 py-20 bg-dark_blue">
+    <div className=" bg-dark_blue">
+      <div className="max-w-screen-md px-3 py-3 container mx-auto px-30 py-30">
       <Animation />
       <Title />
       <div className="relative grid grid-cols-2 mt-20">
@@ -27,6 +28,8 @@ export default function Hero() {
         <Pitch />
       </div>
     </div>
+    </div>
+    
   );
 }
 
