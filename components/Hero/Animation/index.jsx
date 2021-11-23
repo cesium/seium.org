@@ -9,8 +9,9 @@ let currPos = [];
 const Animation = () => {
   const setup = (p) => {
     let canvas = p.createCanvas(window.innerWidth, window.innerHeight);
+    canvas.style("position", "absolute");
     canvas.position(0, 0);
-    canvas.style("z-index", "10");
+    canvas.style("z-index", "1");
 
     p.noFill();
     p.stroke(76, 169, 255);
