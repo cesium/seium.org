@@ -3,7 +3,7 @@ import Button from "/components/utils/Button";
 export default function Hackathon() {
     return (
         <div className="bg-medium_blue py-5">
-            <div className="spacing">
+            <div className="max-w-screen-xl mx-auto">
                 <h3 className="px-5 text-2xl text-aqua font-bold">
                     Hackathon 2022
                 </h3>
