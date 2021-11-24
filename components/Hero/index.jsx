@@ -13,7 +13,7 @@ export default function Hero() {
     <div className=" bg-dark_blue">
       <div className="spacing py-60 z-50 relative">
         <Title />
-        {/* <Animation /> */}
+        <Animation />
         <div className="relative grid grid-cols-2 mt-20">
           <div className="absolute left-0 text-white">
             <h5 className="text-md">
