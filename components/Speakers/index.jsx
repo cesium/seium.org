@@ -3,7 +3,7 @@ import Speaker from "/components/Speakers/Speaker"
 
 export default function Speakers() {
     return (
-        <div className="grid grid-cols-2 bg-dark_blue px-60 py-40">
+        <div className="spacing grid grid-cols-2 bg-dark_blue py-40">
             <div className="">
                 <h2 className="w-3/5 text-white font-bold text-6xl">
                     Here’s a selection of this year’s speakers

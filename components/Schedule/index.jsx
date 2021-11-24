@@ -3,7 +3,7 @@ import Day from './Day';
 
 export default function Schedule() {
     return (
-        <div className="grid grid-cols-2 bg-medium_blue pt-20 px-60">
+        <div className="spacing grid grid-cols-2 bg-medium_blue pt-20">
             <div className="">
                 <Day/>
             </div>
