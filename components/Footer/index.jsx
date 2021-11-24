@@ -21,10 +21,10 @@ function Animation(props) {
 
   return (
     /* We need to have height set in order for inView to work properly */
-    <div ref={observe} style={{height: "100px"}}>
+    <div ref={observe} style={{height: "25px"}}>
       {inView ? 
         <Fade bottom>
-          <div className={styles.cardfooter}>
+          <div className={`-mt-6 ${styles.cardfooter}`}>
               <Card img="/images/mascot-footer.svg" alt="MascotFooter">
                 {props.children}
               </Card>
