@@ -2,32 +2,19 @@ import Button from "/components/Button";
 
 export default function Hackathon() {
     return (
-        <div className="bg-medium_blue py-20">
-            <h3 className="px-60 text-2xl text-aqua font-bold">
-                Hackathon 2022
-            </h3>
-            <h1 className="px-60 text-9xl text-white font-bold">
-                Create products, train skills and learn new
-            </h1>
-            <div className="grid grid-cols-12">
-                <div className="col-start-1 col-end-5">
-                    <h1 className="px-60 text-9xl text-white font-bold">
-                        technologies.
-                    </h1>
-                </div>
-                <div className="col-start-6 col-end-10 pl-80">
-                    <div className="pt-14">
-                        <Button text="REGISTER YOUR TEAM" />
-                    </div>
-                </div>
-                <div>
-                    <div className="col-start-11 col-end-12 pt-4">
-                        <h5 className="pt-14 text-gray-100">
-                            2-5 people
-                        </h5>
-                    </div>
-                </div>
+        <div className="bg-medium_blue py-5">
+            <div className="max-w-screen-xl mx-auto">
+                <h3 className="px-5 text-2xl text-aqua font-bold">
+                    Hackathon 2022
+                </h3>
+                <h1 className="px-5 text-7xl text-white font-bold">
+                    Create products, train skills and learn new technologies
+                            <span className="pl-4 align-middle"><Button text="REGISTER YOUR TEAM" /></span>
+                            <span className="text-gray-100 text-2xl pl-4 align-middle">
+                                2-5 people
+                            </span>
+                </h1>
             </div>
-        </div >
+        </div>
     );
 }
