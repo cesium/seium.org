@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Tab from '/components/Sponsors/Tab';
+import Tab from './Tab';
 
 import styles from './style.module.css';
 

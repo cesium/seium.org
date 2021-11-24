@@ -1,4 +1,4 @@
-import Button from "/components/Button";
+import Button from "/components/utils/Button";
 
 export default function Hackathon() {
     return (

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 
-import Title from "./Title";
-import Social from "/components/Social";
+import Title from "/components/landing/utils/Title";
+import Social from "/components/landing/utils/Social";
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";

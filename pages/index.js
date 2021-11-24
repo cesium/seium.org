@@ -1,9 +1,9 @@
-import Hero from '/components/Hero';
-import Schedule from '/components/Schedule';
-import Sponsors from '/components/Sponsors';
-import Hackathon from '/components/Hackathon';
-import Speakers from '/components/Speakers';
-import Footer from '/components/Footer';
+import Hero from '/components/landing/sections/Hero';
+import Schedule from '/components/landing/sections/Schedule';
+import Sponsors from '/components/landing/sections/Sponsors';
+import Hackathon from '/components/landing/sections/Hackathon';
+import Speakers from '/components/landing/sections/Speakers';
+import Footer from '/components/landing/sections/Footer';
 
 export default function Demo() {
   return (
