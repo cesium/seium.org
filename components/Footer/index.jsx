@@ -10,6 +10,35 @@ import Card from "/components/Footer/Card";
 
 import styles from './style.module.css';
 
+function Animation(props) {
+  const { observe, unobserve, inView, scrollDirection, entry } = useInView({
+    threshold: 0.25,
+    onChange: ({observe, unobserve }) => {
+      unobserve();
+      observe();
+    }
+  });
+
+  return (
+    /* We need to have height set in order for inView to work properly */
+    <div ref={observe} style={{height: "25px"}}>
+      {inView ? 
+        <Fade bottom>
+          <div className={`-mt-6 ${styles.cardfooter}`}>
+              <Card img="/images/mascot-footer.svg" alt="MascotFooter">
+                {props.children}
+              </Card>
+          </div>
+        </Fade> : 
+        <div className={styles.cardfooter}>
+            <Card img="/images/mascot-footer.svg" alt="MascotFooter">
+              {props.children}
+            </Card>
+        </div>}
+    </div>
+  );
+};
+
 export default function Footer(props) {
   const [animation, setAnimation] = useState(false);
   const { ref, inView } = useInView({
@@ -47,19 +76,9 @@ export default function Footer(props) {
         </div>
         <div className="grid grid-cols-2">
           <div>
-            {/* {animation && ( */}
-              <Fade bottom>
-                <div className={styles.cardfooter}>
-                  {props.children ? (
-                    <Card img="/images/mascot-footer.svg" alt="MascotFooter">
-                      {props.children}
-                    </Card>
-                  ) : (
-                    ""
-                  )}
-                </div>
-              </Fade>
-            {/* )} */}
+              <Animation>
+                {props.children}
+              </Animation>
           </div>
           <div className="ml-60 text-white">
             <Social />
