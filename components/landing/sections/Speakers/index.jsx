@@ -3,16 +3,16 @@ import Speaker from "./Speaker"
 
 export default function Speakers() {
     return (
-        <div className="spacing grid grid-cols-2 bg-dark_blue py-40">
-            <div className="">
-                <h2 className="w-3/5 text-white font-bold text-6xl">
+        <div className="flex flex-col justify-around lg:flex-row bg-dark_blue py-40 spacing">
+            <div className="mb-10 lg:w-1/2">
+                <h2 className="text-white font-bold text-5xl lg:text-6xl mb-8">
                     Here’s a selection of this year’s speakers
                 </h2>
-                <div className="mt-8">
+                <div>
                     <Button text="EXPLORE" />
                 </div>
             </div>
-            <div className="grid gap-y-8 gap-x-0 grid-cols-2 pl-60">
+            <div className="grid gap-y-8 gap-x-2 grid-cols-2 justify-items-center lg:gap-x-8">
                 <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
                 <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
                 <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
