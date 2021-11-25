@@ -2,10 +2,17 @@
     text-decoration-thickness: 10px;
 }
 
-.space {
+.cardWrapper {
     position: absolute;
     top: 100%;
     left: 30%;
     margin-top: -15px;
-    width: 200px;
+    width: 300px;
+}
+
+.cardText {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: normal;
+    margin: 0;
 }

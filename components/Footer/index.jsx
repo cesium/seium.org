@@ -25,7 +25,7 @@ function Animation(props) {
       {inView ? 
         <Fade bottom>
           <div className={`-mt-6 ${styles.cardfooter}`}>
-              <Card img="/images/mascot-footer.svg" alt="MascotFooter">
+              <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
                 {props.children}
               </Card>
           </div>

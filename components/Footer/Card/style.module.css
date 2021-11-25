@@ -25,6 +25,10 @@
   background-color: #ffffff;
 }
 
+.upsideDown {
+  margin-top: 50px;
+}
+
 @media (max-width: 768px) {
   .card .reminder {
     width: 141px;
