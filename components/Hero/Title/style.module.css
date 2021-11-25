@@ -7,8 +7,8 @@
 .cardWrapper {
     position: absolute;
     top: 100%;
-    left: 30%;
-    margin-top: -15px;
+    left: 15%;
+    margin-top: 6px;
     width: 300px;
     z-index: -10;
 }
