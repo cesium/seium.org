@@ -1,5 +1,7 @@
 .underline {
     text-decoration-thickness: 10px;
+    position: relative;
+    z-index: 5;
 }
 
 .cardWrapper {
@@ -8,6 +10,7 @@
     left: 30%;
     margin-top: -15px;
     width: 300px;
+    z-index: -10;
 }
 
 .cardText {
