@@ -1,7 +1,7 @@
 import {useState } from 'react';
 import Fade from "react-reveal/Fade";
 
-import Card from "/components/Footer/Card";
+import Card from "/components/Card";
 
 import styles from './style.module.css';
 
