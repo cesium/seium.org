@@ -5,6 +5,7 @@
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  transform: rotate(180);
 }
 
 @media (max-width: 768px) {

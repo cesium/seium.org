@@ -3,6 +3,8 @@ import Fade from "react-reveal/Fade";
 
 import Card from "/components/Footer/Card";
 
+import styles from './style.module.css';
+
 export default function Title() {
     const [hovered, setHover] = useState(false);
     return (
@@ -12,15 +14,15 @@ export default function Title() {
             </h5>
             <h1 className="text-9xl text-white w-4/5">
                 The software engineering week is back, let's just&nbsp;
-                <span className="z50 relative" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-                    <u>SEI</u> that
-                    <div  style={{position:"absolute", top:"100%", left:"0%"}}>
+                <span className="z50 relative leading-none w-32" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                    <u className={styles.underline}>SEI</u>
+                    <div className={styles.space}>
                     {hovered ? 
                     <Fade top>
                     <Card img="/images/mascot-footer.svg" alt="MascotFooter">
                     </Card></Fade> : <></>}
                     </div>
-                </span>
+                </span> that
             </h1>
             
                 
