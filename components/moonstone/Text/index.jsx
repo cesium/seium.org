@@ -1,0 +1,12 @@
+export default function Text (props){
+    return (
+        <div className={`pl-${props.padding} mt-4 flex items-center justify-between`}>
+            <div className="text-sm text-white">
+                {props.text}
+                <a href={props.href} className="pl-2 font-medium underline text-aqua">
+                    {props.link}
+                </a>
+            </div>
+        </div>
+    )
+}

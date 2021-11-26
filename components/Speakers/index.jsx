@@ -8,8 +8,8 @@ export default function Speakers() {
                 <h2 className="w-3/5 text-white font-bold text-6xl">
                     Here’s a selection of this year’s speakers
                 </h2>
-                <div className="mt-8">
-                    <Button text="EXPLORE" />
+                <div className="mt-8 w-1/3">
+                    <Button text="EXPLORE" fg_color="white" padding="20"/>
                 </div>
             </div>
             <div className="grid gap-y-8 gap-x-0 grid-cols-2 pl-60">
