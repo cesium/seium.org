@@ -11,7 +11,7 @@ const Animation = dynamic(() => import('./Animation'), { ssr: false })
 export default function Hero() {
   return (
     <div className=" bg-dark_blue">
-      <div className="spacing py-60 z-50 relative">
+      <div className="spacing py-32 z-50 relative">
         <Title />
         <Animation />
         <div className="relative grid grid-cols-2 mt-20">
