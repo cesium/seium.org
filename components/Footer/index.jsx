@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Social from "/components/Social";
-import Card from "/components/Footer/Card";
+import Card from "/components/Card";
 
 import styles from './style.module.css';
 
@@ -25,16 +25,12 @@ function Animation(props) {
       {inView ? 
         <Fade bottom>
           <div className={`-mt-6 ${styles.cardfooter}`}>
-              <Card img="/images/mascot-footer.svg" alt="MascotFooter">
+              <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
                 {props.children}
               </Card>
           </div>
         </Fade> : 
-        <div className={styles.cardfooter}>
-            <Card img="/images/mascot-footer.svg" alt="MascotFooter">
-              {props.children}
-            </Card>
-        </div>}
+        <></>}
     </div>
   );
 };

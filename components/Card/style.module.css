@@ -5,6 +5,7 @@
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  transform: rotate(180);
 }
 
 @media (max-width: 768px) {
@@ -22,6 +23,10 @@
   -webkit-box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
   background-color: #ffffff;
+}
+
+.upsideDown {
+  margin-top: 50px;
 }
 
 @media (max-width: 768px) {
