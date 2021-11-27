@@ -1,6 +1,6 @@
-export default function Button({ text }) {
+export default function Button({ text, type, bg_color, fg_color, border, padding}) {
     return (
-        <button type="button" className="text-white rounded-full inline-flex items-center px-12 py-4 border border-white shadow-sm text-sm rounded-md">
+        <button type={type} className={`bg-${bg_color} text-${fg_color} w-full rounded-full inline-flex items-center px-${padding} py-4 border border-${border} shadow-sm text-sm`}>
             { text }
         </button>
     );

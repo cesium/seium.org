@@ -13,7 +13,7 @@ import styles from './style.module.css';
 function Animation(props) {
   const { observe, unobserve, inView, scrollDirection, entry } = useInView({
     threshold: 0.25,
-    onChange: ({observe, unobserve }) => {
+    onChange: ({ observe, unobserve }) => {
       unobserve();
       observe();
     }
@@ -21,15 +21,16 @@ function Animation(props) {
 
   return (
     /* We need to have height set in order for inView to work properly */
-    <div ref={observe} style={{height: "25px"}}>
-      {inView ? 
+    <div ref={observe} style={{ height: "25px" }}>
+      {inView ?
         <Fade bottom>
           <div className={`-mt-6 ${styles.cardfooter}`}>
-              <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
-                {props.children}
-              </Card>
+            <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
+              Psst. Have you checked the <a className="text-medium_light_blue font-bold hover:underline" href="/challenges">challenges</a>? Just
+              saying.
+            </Card>
           </div>
-        </Fade> : 
+        </Fade> :
         <></>}
     </div>
   );
@@ -72,9 +73,9 @@ export default function Footer(props) {
         </div>
         <div className="grid grid-cols-2">
           <div>
-              <Animation>
-                {props.children}
-              </Animation>
+            <Animation>
+              {props.children}
+            </Animation>
           </div>
           <div className="ml-60 text-white">
             <Social />

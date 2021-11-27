@@ -16,8 +16,8 @@ export default function Hackathon() {
                     </h1>
                 </div>
                 <div className="col-start-6 col-end-10 pl-80">
-                    <div className="pt-14">
-                        <Button text="REGISTER YOUR TEAM" />
+                    <div className="pt-14 w-5/6">
+                        <Button type="button" text="REGISTER YOUR TEAM" fg_color="white" bg_color="" border="white" padding="14"/>
                     </div>
                 </div>
                 <div>
