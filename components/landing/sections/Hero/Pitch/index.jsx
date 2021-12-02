@@ -2,7 +2,7 @@ import Button from "/components/utils/Button";
 
 export default function Pitch() {
     return (
-        <div className="w-3/5 text-white">
+        <div className="w-full lg:w-9/12 xl:9/12 text-white">
             <h2 className="text-4xl font-bold">
                 We gather speakers, attract parterns and give our imagination wings, all for this to be your favorite week.
             </h2>
