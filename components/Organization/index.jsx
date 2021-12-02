@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/ff/refactoring
 import Member from "./Member";
 
 import React, { useState } from "react";
@@ -96,4 +97,8 @@ export default function Organization() {
             </div>
         </section>
     )
+=======
+export default function Organization() {
+    return <> </>
+>>>>>>> Team
 }
