@@ -2,11 +2,19 @@ import Dashboard from "/components/moonstone/Dashboard";
 import Form from '/components/moonstone/Form';
 import Input from '/components/moonstone/Input';
 import Link from '/components/Link';
+import Heading from '/components/moonstone/Heading';
+import Button from '/components/Button';
+
 export default function Profile() {
   return (
     <Dashboard href="profile" title="User Profile" description="Hi John, welcome to your profile">
       <div className="grid-cols-2">
         <div>
+          <Heading text="User Profile">
+            <div className="flex float-right w-24">
+              <Button bg_color="aqua" fg_color="white" text="Edit"></Button>
+            </div>
+          </Heading>
           <img src="/public/images/sei-logo.svg"/>
           <Form>
               <Input
