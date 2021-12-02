@@ -10,7 +10,9 @@ function isAfter(date1, date2) // equivalent to date1 > date2
     const year1 = parseInt(arr1[0]), month1 = parseInt(arr1[1]), day1 = parseInt(arr1[2]);
     const year2 = parseInt(arr2[0]), month2 = parseInt(arr2[1]), day2 = parseInt(arr2[2]);
 
-    return year1 > year2 || month1 > month2 || day1 > day2;
+    return year1 != year2 ? year1 > year2 :
+           month1 != month2 ? month1 > month2 :
+           day1 > day2;
 }
 
 function leapYear(year)
@@ -45,11 +47,14 @@ function addDate(date, days) //date is a string "yyyy/mm/dd"
 
 export default function Schedule()
 {
-    const default_date = "2022/2/23"; //TODO: define as current day
-    const min_date = "2022/2/23";
-    const max_date = "2022/2/27";
-    const [date, updateDate] = useState(default_date);
+    const min_date = "2022/2/15";
+    const max_date = "2022/2/20";
 
+    const _today = new Date();
+    const today = _today.getFullYear() + "/" + (_today.getMonth() + 1) + "/" + _today.getDate();
+    const default_date = isAfter(today, min_date) ? today : min_date;
+    
+    const [date, updateDate] = useState(default_date);
     const table = <Table date = { date } />;
 
     const previous_day = function(){
