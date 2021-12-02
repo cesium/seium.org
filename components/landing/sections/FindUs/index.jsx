@@ -4,7 +4,7 @@ export default function FindUs() {
             <div className="flex flex-col text-white mb-10">
                 <h2 className="font-bold text-6xl mb-2">How to find us</h2>
 
-                <p className="mb-8">The SEI is free for participants and is organized by volunteers from CeSIUM.</p>
+                <p className="mb-8">The SEI is free for participants and is organized by volunteers from CeSIUM and from the university community.</p>
 
                 <p className="font-bold mb-2">Centro de Estudantes de Engenharia Informática</p>
                 <ul className="list-inside list-disc">
