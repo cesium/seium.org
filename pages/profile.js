@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import Dashboard from "/components/moonstone/Dashboard";
 import Form from '/components/moonstone/Form';
 import Input from '/components/moonstone/Input';
@@ -12,10 +14,12 @@ export default function Profile() {
         <div>
           <Heading text="User Profile">
             <div className="flex float-right w-24">
-              <Button bg_color="aqua" fg_color="white" text="Edit"></Button>
+              <Button bg_color="aqua" fg_color="white" text="Edit">Edit</Button>
             </div>
           </Heading>
-          <img src="/public/images/sei-logo.svg"/>
+          <div className="pl-6">          
+            <Image src="/images/speakers/joaooliveira.png" className="rounded-full overflow-hidden" width="220" height="220" />
+          </div>
           <Form>
               <Input
                   text="NAME"
