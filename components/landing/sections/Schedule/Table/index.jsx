@@ -3,9 +3,10 @@ import Block from './Block';
 export default function Table(props)
 {
     const schedule = require('./schedule.json');
-    
-    if (schedule[props.date] == undefined)
-        return <Block/>;
+    const obj = schedule.find((obj) => obj.date === props.date);
+
+    if (obj == undefined)
+        return [];
     else
-        return schedule[props.date].map((activity) => new Block(activity));
+        return obj.activities.map((activity) => new Block(activity));
 }

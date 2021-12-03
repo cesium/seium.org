@@ -1,55 +1,64 @@
-{
-    "2022/2/15": [
-        {
-            "startTime": "10:00",
-            "endTime": "11:00",
-            "activityType": "Talk",
-            "description": "Uma talk bue fixe",
-            "author": "Rui Oliveira, outros gajos"
-        },
-        {
-            "startTime": "11:00",
-            "endTime": "11:15",
-            "activityType": "Coffee Break",
-            "coffeeBreak": true
-        },
-        {
-            "startTime": "11:15",
-            "endTime": "12:00",
-            "activityType": "Talk",
-            "description": "Outra talk bue fixe",
-            "author": "Rui Oliveira"
-        }
-    ],
-    "2022/2/16": [
-        {
-            "startTime": "10:00",
-            "endTime": "11:00",
-            "activityType": "Talk",
-            "description": "O sentido da vida",
-            "author": "Neil deGrasse Tyson"
-        },
-        {
-            "startTime": "11:00",
-            "endTime": "11:15",
-            "activityType": "Coffee Break",
-            "coffeeBreak": true
-        },
-        {
-            "startTime": "11:15",
-            "endTime": "12:00",
-            "activityType": "Talk",
-            "description": "Outra talk bue fixe",
-            "author": "Rui Oliveira"
-        }
-    ],
-    "2022/2/17": [
-        {
-            "startTime": "11:00",
-            "endTime": "11:15",
-            "activityType": "Coffee Break",
-            "Name": "Porquê pausa para o café se não há mais nada hoje?",
-            "coffeeBreak": true
-        }
-    ]
-}
+[
+    {
+        "date": "2022/2/15",
+        "activities": [
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "description": "Uma talk bue fixe",
+                "author": "Rui Oliveira, outros gajos"
+            },
+            {
+                "startTime": "11:00",
+                "endTime": "11:15",
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "11:15",
+                "endTime": "12:00",
+                "activityType": "Talk",
+                "description": "Outra talk bue fixe",
+                "author": "Rui Oliveira"
+            }
+        ]
+    },
+    {
+        "date": "2022/2/16",
+        "activities": [
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "description": "O sentido da vida",
+                "author": "Neil deGrasse Tyson"
+            },
+            {
+                "startTime": "11:00",
+                "endTime": "11:15",
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "11:15",
+                "endTime": "12:00",
+                "activityType": "Talk",
+                "description": "Outra talk bue fixe",
+                "author": "Rui Oliveira"
+            }
+        ]
+    },
+    {
+        "date": "2022/2/17",
+        "activities": [
+            {
+                "startTime": "11:00",
+                "endTime": "11:15",
+                "activityType": "Coffee Break",
+                "Name": "Porquê pausa para o café se não há mais nada hoje?",
+                "coffeeBreak": true
+            }
+        ]
+    }
+]

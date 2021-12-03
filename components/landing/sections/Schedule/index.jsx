@@ -1,7 +1,37 @@
 import Table from './Table';
 import Day from './Day';
+import DayWrapper from './DayWrapper';
 
-import { useState } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
+
+//copied from https://ysfaran.github.io/blog/post/0002-use-state-with-promise/
+function useStateWithPromise(initialState)
+{
+    const [state, setState] = useState(initialState);
+    const resolverRef = useRef(null);
+  
+    useEffect(() => {
+      if (resolverRef.current) {
+        resolverRef.current(state);
+        resolverRef.current = null;
+      }
+      /**
+       * Since a state update could be triggered with the exact same state again,
+       * it's not enough to specify state as the only dependency of this useEffect.
+       * That's why resolverRef.current is also a dependency, because it will guarantee,
+       * that handleSetState was called in previous render
+       */
+    }, [resolverRef.current, state]);
+  
+    const handleSetState = useCallback((stateAction) => {
+      setState(stateAction);
+      return new Promise(resolve => {
+        resolverRef.current = resolve;
+      });
+    }, [setState])
+  
+    return [state, handleSetState];
+}
 
 function isAfter(date1, date2) // equivalent to date1 > date2
 {
@@ -54,19 +84,27 @@ export default function Schedule()
     const today = _today.getFullYear() + "/" + (_today.getMonth() + 1) + "/" + _today.getDate();
     const default_date = isAfter(today, min_date) ? today : min_date;
     
-    const [date, updateDate] = useState(default_date);
+    const [date, updateDate] = useStateWithPromise(default_date);
     const table = <Table date = { date } />;
 
-    const previous_day = function(){
+    const update = new Event('scheduleUpdate'); //listened to by the dayWrapper
+
+    const previous_day = async () => {
         const new_date = addDate(date, -1);
         if (!isAfter(min_date, new_date) && !isAfter(new_date, max_date))
-            updateDate(new_date);
+        {
+            await updateDate(new_date);
+            dispatchEvent(update);
+        }
     };
 
-    const next_day = function(){
+    const next_day = async () => {
         const new_date = addDate(date, 1);
         if (!isAfter(min_date, new_date) && !isAfter(new_date, max_date))
-            updateDate(new_date);
+        {
+            await updateDate(new_date);
+            dispatchEvent(update);
+        }
     };
 
     const day = <Day date = { date } previousDay = { previous_day } nextDay = { next_day } />;
@@ -77,7 +115,11 @@ export default function Schedule()
                 { day }
             </div>
 
-            <div className="">
+//        <div className="grid grid-cols-2 bg-medium_blue pt-20 px-60">
+//            <DayWrapper day={day}/>
+//
+
+            <div className="" style={{gridColumnStart: 2}}>
                 { table }
             </div>
         </div>
