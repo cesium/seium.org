@@ -25,8 +25,6 @@ export default function DayWrapper(props)
         const offset = paddingTop - inputRef.current.parentNode.getBoundingClientRect().top
             - safeParseFloat(window.getComputedStyle(inputRef.current.parentNode, null).getPropertyValue('padding-top'));
         const height = getHeight(inputRef.current.parentNode) - getHeight(inputRef.current.childNodes[0]) - paddingTop;
-        console.log("height: " + height);
-        //console.log("offset: " + offset);
 
         if (offset < 0)
             updateStyle(prevStyle => ({...prevStyle, "position": "", "padding-top": 0}));
