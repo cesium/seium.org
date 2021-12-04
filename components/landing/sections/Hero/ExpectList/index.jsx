@@ -1,7 +1,7 @@
 export default function ExpectList() {
     return (
-        <div className="w-2/5 text-white">
-            <h3 className="font-bold text-4xl">
+        <div className="w-3/5 text-white">
+            <h3 className="font-bold text-4xl md:text5xl">
                 What you can expect:
             </h3>
             <ul className="pl-4 list-disc mt-8">
