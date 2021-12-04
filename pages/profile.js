@@ -13,8 +13,8 @@ export default function Profile() {
       <div className="grid-cols-2">
         <div>
           <Heading text="User Profile">
-            <div className="flex float-right w-24">
-              <Button bg_color="aqua" fg_color="white" text="Edit">Edit</Button>
+            <div className="w-24">
+              <Button bg_color="aqua" fg_color="white" text="Edit"></Button>
             </div>
           </Heading>
           <div className="pl-6">          
