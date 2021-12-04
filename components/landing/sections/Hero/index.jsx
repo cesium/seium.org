@@ -1,4 +1,6 @@
 import dynamic from 'next/dynamic'
+
+import Navbar from '/components/landing/sections/Navbar';
 import Title from "/components/landing/utils/Title";
 import Social from "/components/landing/utils/Social";
 import Organization from "./Organization";
@@ -10,7 +12,10 @@ export default function Hero() {
     <div className=" bg-dark_blue">
       <div className="spacing pb-32 z-50 relative">
         <Animation />
-        <div className="pt-5">
+        <div className="pt-14">
+          <Navbar />
+        </div>
+        <div className="pt-2">
           <Title />
         </div>
         <div className="relative grid grid-cols-2 mt-20">
