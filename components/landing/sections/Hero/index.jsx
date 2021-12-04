@@ -6,9 +6,7 @@ import Social from "/components/landing/utils/Social";
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
-
 const Animation = dynamic(() => import('./Animation'), { ssr: false })
-
 export default function Hero() {
   return (
     <div className=" bg-dark_blue">
@@ -35,7 +33,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-
   );
 }
-
