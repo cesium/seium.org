@@ -4,7 +4,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
   return (
-      <div className="mt-4 grid grid-cols-5 gap-x-2">
+      <div className="mt-4 grid justify-items-center grid-cols-5 gap-x-2">
         <a className="w-4" target="_blank" href="https://www.facebook.com/SEI.UMinho/">
           <FontAwesomeIcon icon={faGithubAlt} />
         </a>

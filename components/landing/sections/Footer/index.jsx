@@ -53,7 +53,7 @@ export default function Footer(props) {
 
   return (
     <div className={`spacing bg-${props.color}`} ref={ref} style={{ ...color, overflowY: "hidden" }}>
-      <div className="flex w-1/5">
+      <div className="font-bold flex lg:w-1/5 justify-center lg:justify-start">
         <Image src="/images/sei-logo.svg" width="100" height="100" />
         <p className="text-white pl-6 pt-4">
           Semana da <br />
@@ -62,25 +62,23 @@ export default function Footer(props) {
           Informática
         </p>
       </div>
-      <div className="grid grid-cols-2 py-10">
-        <div className="grid grid-cols-3 text-white">
+      <div className="lg:grid lg:grid-cols-2 py-10">
+        <div className="font-bold grid lg:grid-cols-3 grid-rows-2 gap-y-10 lg:gap-y-0 justify-items-center lg:justify-items-start text-white">
           <Link href="https://2021.seium.org/">
-            <a> Previous Edition </a>
+            Previous Edition
           </Link>
           <Link href="">
-            <a> General Regulation </a>
+            General Regulation
           </Link>
         </div>
-        <div className="grid grid-cols-2">
-          <div>
-            <Animation>
-              {props.children}
-            </Animation>
-          </div>
-          <div className="ml-60 text-white">
-            <Social />
-          </div>
+        <div className="lg:justify-self-end lg:w-1/2 text-white mt-10 lg:mt-0">
+          <Social />
         </div>
+      </div>
+      <div className="-mt-20 pb-10 flex justify-center invisible xl:visible">
+        <Animation>
+          {props.children}
+        </Animation>
       </div>
     </div>
   );
