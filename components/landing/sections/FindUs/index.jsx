@@ -1,5 +1,4 @@
 export default function FindUs() {
-<<<<<<< refs/remotes/origin/ff/refactoring
     return (
         <section className="flex flex-col md:flex-row md:justify-between bg-medium_light_blue py-20 spacing">
             <div className="flex flex-col text-white mb-10">
@@ -18,7 +17,4 @@ export default function FindUs() {
             </div>
         </section>
     )
-=======
-    return <> </>
->>>>>>> Team
 }
