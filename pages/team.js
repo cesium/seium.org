@@ -1,7 +1,7 @@
-import HeroTeam from '/components/HeroTeam';
-import Organization from '/components/Organization';
-import FindUs from '/components/FindUs';
-import Footer from '/components/Footer';
+import HeroTeam from '/components/landing/sections/HeroTeam';
+import Organization from '/components/landing/sections/Organization';
+import FindUs from '/components/landing/sections/FindUs';
+import Footer from '/components/landing/sections/Footer';
 
 export default function Index() {
   return (
