@@ -13,9 +13,9 @@ export default function Navbar() {
     return (
         <div className="flex flex-auto z-50 relative">
             <div className="grid grid-cols-4 w-full">
-                <div className="">
+                <a href="/" className="">
                     <Image src="/images/sei-logo.svg" width="50" height="40" />
-                </div>
+                </a>
                 <div className="justify-self-end col-span-3 invisible xl:visible flex flex-auto gap-x-20">
                     <div className="grid grid-cols-3 gap-x-20">
                         {navigation.map((item) => (
