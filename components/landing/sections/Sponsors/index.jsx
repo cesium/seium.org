@@ -18,7 +18,7 @@ export default function Sponsors(props) {
     }
 
     return (
-        <div className="bg-medium_blue text-white py-20">
+        <div className="spacing bg-medium_blue text-white py-20">
             <h2 className="text-6xl font-bold py-10 flex justify-center"> Our amazing sponsors </h2>
             <div className="flex justify-center">
                 <Tab tabName="Exclusive & Gold" selected={val} onSelect={changeValLeft}></Tab>
