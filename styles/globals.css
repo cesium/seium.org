@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.spacing {
+    @apply px-10 md:px-32 xl:px-60;
+}
+
 @font-face {
     font-family: "Inter Regular";
     src: url("/fonts/Inter/Inter-Regular.ttf") format("truetype");

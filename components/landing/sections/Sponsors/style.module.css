@@ -1,0 +1,22 @@
+.blockWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+}
+
+.leftBlock {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.rightBlock {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.tab {
+    width: 20vw;
+    float: left;
+}

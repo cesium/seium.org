@@ -1,7 +1,7 @@
 import Fade from "react-reveal/Fade";
 
-import Button from "../components/Button";
-import Card from "../components/Card";
+import Button from "/components/utils/Button";
+import Card from "/components/utils/Card";
 
 import Return from "/components/moonstone/Return";
 import Title from "/components/moonstone/Title";
