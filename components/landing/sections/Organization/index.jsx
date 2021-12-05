@@ -4,7 +4,7 @@ import Member from "./Member";
 import React, { useState } from "react";
 import useInView from "react-cool-inview";
 import Fade from "react-reveal/Fade";
-import Card from "/components/Card";
+import Card from "/components/utils/Card";
 
 import styles from './style.module.css';
 
