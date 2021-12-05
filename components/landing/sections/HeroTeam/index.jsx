@@ -11,16 +11,12 @@ export default function HeroTeam() {
     <div className="bg-medium_light_blue spacing">
       <div className="z-50 relative">
         <Animation />
-<<<<<<< HEAD:components/landing/sections/HeroTeam/index.jsx
         <div className="pt-14">
           <Navbar />
         </div>
         <div className="pt-2">
           <Title />
         </div>
-=======
-        <Title />
->>>>>>> bbdfd83 (Organization creation):components/HeroTeam/index.jsx
         <div className="mt-20 pb-20">
           <Organization />
         </div>

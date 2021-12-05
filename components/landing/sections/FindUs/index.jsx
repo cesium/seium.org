@@ -1,3 +1,10 @@
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('./Map'), {
+    ssr: false
+});
+
+
 export default function FindUs() {
     return (
         <section className="flex flex-col md:flex-row md:justify-between bg-medium_light_blue py-20 spacing">
@@ -13,7 +20,7 @@ export default function FindUs() {
                 </ul>
             </div>
             <div>
-                <div className="h-72 w-96 bg-dark_blue"></div>
+                <Map />
             </div>
         </section>
     )
