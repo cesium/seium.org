@@ -109,15 +109,15 @@ export default function Schedule()
 
     const day = <Day date = { date } previousDay = { previous_day } nextDay = { next_day } />;
 
-    return (
-        <div className="spacing grid grid-cols-2 bg-medium_blue pt-20">
-            <div className="">
-                { day }
-            </div>
+    //<div className="spacing grid grid-cols-2 bg-medium_blue pt-20">
+    //<div className="">
+    //{ day }
+    //</div>
 
-//        <div className="grid grid-cols-2 bg-medium_blue pt-20 px-60">
-//            <DayWrapper day={day}/>
-//
+    return (
+        <div className="grid grid-cols-2 bg-medium_blue pt-20 px-60">
+            <DayWrapper day={day}/>
+
 
             <div className="" style={{gridColumnStart: 2}}>
                 { table }
