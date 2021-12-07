@@ -9,7 +9,7 @@ const navigation = [
     { name: 'Moonstone', href: '/login' },
 ]
 
-export default function Navbar({button}) {
+export default function Navbar({button , fg_color}) {
     return (
         <div className="flex flex-auto z-50 relative">
             <div className="grid grid-cols-4 w-full">
@@ -28,7 +28,7 @@ export default function Navbar({button}) {
                     </div>
                     <a 
                         href="/signup"
-                        className={`transform rotate-15 -mt-5 text-xl font-bold items-center justify-center flex h-28 w-28 bg-${button} rounded-full translate-x-0`}>
+                        className={`transform rotate-15 -mt-5 text-xl font-bold items-center justify-center flex h-28 w-28 text-${fg_color} bg-${button} rounded-full translate-x-0`}>
                             Join us 👋
                     </a>
                 </div>
