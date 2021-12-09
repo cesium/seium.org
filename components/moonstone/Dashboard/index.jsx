@@ -6,11 +6,11 @@ import { Dialog, Transition } from '@headlessui/react'
 import Return from '../Return'
 
 const navigation = [
-    { name: 'PROFILE', href: 'profile'},
-    { name: 'WHEEL', href: 'wheel'},
-    { name: 'BADGEDEX', href: 'badgedex'},
-    { name: 'LEADERBOARD', href: 'leaderboard'},
-    { name: 'AWARDS', href: 'awards'},
+    'profile',
+    'wheel',
+    'badgedex',
+    'leaderboard',
+    'awards'
 ]
 
 function classNames(...classes) {
@@ -72,19 +72,17 @@ export default function Dashboard(props) {
                                         alt="Workflow"
                                     />
                                 </div>
-                                <nav className="mt-5 px-2 space-y-1">
+                                <nav className="mt-5 flex-1">
                                     {navigation.map((item) => (
                                         <a
-                                            key={item.name}
-                                            href={item.href}
+                                            key={item}
+                                            href={item}
                                             className={classNames(
-                                                item.current
-                                                    ? 'bg-indigo-800 text-white'
-                                                    : 'text-white hover:bg-indigo-600 hover:bg-opacity-75',
-                                                'group flex items-center px-2 py-2 text-base font-medium rounded-md'
+                                                item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
+                                                'group flex items-center px-8 py-8 text-xs font-bold border-b-2 border-medium_blue border-opacity-50'
                                             )}
                                         >
-                                            {item.name}
+                                            {item.toUpperCase()}
                                         </a>
                                     ))}
                                 </nav>
@@ -132,14 +130,14 @@ export default function Dashboard(props) {
                         <nav className="mt-5 flex-1">
                             {navigation.map((item) => (
                                 <a
-                                    key={item.name}
-                                    href={item.href}
+                                    key={item}
+                                    href={item}
                                     className={classNames(
-                                        item.name == props.href.toUpperCase() ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
+                                        item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
                                         'group flex items-center px-8 py-8 text-xs font-bold border-b-2 border-medium_blue border-opacity-50'
                                     )}
                                 >
-                                    {item.name}
+                                    {item.toUpperCase()}
                                 </a>
                             ))}
                         </nav>
