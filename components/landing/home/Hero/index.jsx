@@ -1,12 +1,14 @@
 import dynamic from 'next/dynamic'
 
-import Navbar from '/components/landing/sections/Navbar';
+import Navbar from '/components/landing/utils/Navbar';
 import Title from "/components/landing/utils/Title";
 import Social from "/components/landing/utils/Social";
+
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
-const Animation = dynamic(() => import('./Animation'), { ssr: false })
+
+const Animation = dynamic(() => import('../Animation'), { ssr: false })
 export default function Hero() {
   return (
     <div className=" bg-dark_blue">
