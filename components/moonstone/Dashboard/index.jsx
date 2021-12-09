@@ -161,7 +161,7 @@ export default function Dashboard(props) {
                 </div>
                 <main className="flex-1">
                     <div className="py-6">
-                        <div className="max-w-7xl mx-20 px-4 sm:px-6 md:px-8">
+                        <div className="max-w-7xl md:mx-20 px-4 sm:px-6 md:px-8">
                             <p className="pt-20 font-bold text-5xl text-dark_blue">
                                 {props.title}
                             </p>

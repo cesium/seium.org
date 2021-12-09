@@ -3,9 +3,8 @@ import Image from 'next/image'
 import Dashboard from "/components/moonstone/Dashboard";
 import Form from '/components/moonstone/Form';
 import Input from '/components/moonstone/Input';
-import Link from '/components/Link';
 import Heading from '/components/moonstone/Heading';
-import Button from '/components/Button';
+import Button from '/components/utils/Button';
 import CodeInput from '/components/moonstone/CodeInput';
 import CheckpointTracker from '/components/moonstone/CheckpointTracker';
 
@@ -13,7 +12,7 @@ export default function Profile() {
   return (
     <Dashboard href="profile" title="User Profile" description="Hi John, welcome to your profile">
       <div className="grid-cols-2 overflow-hidden">
-        <div className="col-span-1 w-1/2 float-left">
+        <div className="col-span-1 w-full md:w-1/2 float-left">
           <Heading text="User Profile">
             <div className="w-24">
               <Button bg_color="aqua" fg_color="white" text="Edit"></Button>
@@ -46,11 +45,11 @@ export default function Profile() {
                   bgColor="white"
                   fgColor="black"
               />
-              <Link href="#" fgColor="aqua">Reset Password</Link>
+              <a href="#" className="pl-6 text-aqua h-auto inline-block underline">Reset Password</a>
           </Form>
         </div>
 
-        <div className="col-span-1 w-1/2 float-right pl-6">
+        <div className="col-span-1 w-full md:w-1/2 float-right pt-6 md:pl-6">
           <div>
             <Heading text="Achievements"></Heading>
 
