@@ -1,5 +1,5 @@
 import Button from "/components/utils/Button"
-import Speaker from "./Speaker"
+import Speaker from "/components/landing/utils/Speaker"
 
 export default function Speakers() {
     return (
