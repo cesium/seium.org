@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-import Navbar from '/components/landing/sections/Navbar';
+import Navbar from '/components/landing/utils/Navbar';
 import Title from "/components/hackathon/Hero/Title";
 import Button from '/components/utils/Button';
 import Organization from "./Organization";

@@ -1,6 +1,6 @@
 import Hero from '/components/hackathon/Hero';
 import PeopleShowcase from '/components/landing/utils/PeopleShowcase';
-import Footer from '/components/landing/sections/Footer';
+import Footer from '/components/landing/utils/Footer';
 import Speaker from '/components/landing/utils/Speaker';
 import UnderlineAnimation from '/components/landing/utils/UnderlineAnimation';
 import Awards from '/components/hackathon/Awards';
