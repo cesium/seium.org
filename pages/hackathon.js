@@ -1,10 +1,11 @@
-import Hero from '/components/hackathon/Hero';
+import Hero from '/components/landing/hackathon/Hero';
 import PeopleShowcase from '/components/landing/utils/PeopleShowcase';
-import Footer from '/components/landing/utils/Footer';
-import Speaker from '/components/landing/utils/Speaker';
 import UnderlineAnimation from '/components/landing/utils/UnderlineAnimation';
-import Awards from '/components/hackathon/Awards';
-import Regulations from '/components/hackathon/Regulations';
+import Awards from '/components/landing/hackathon/Awards';
+import Regulations from '/components/landing/hackathon/Regulations';
+
+import Speaker from '/components/landing/utils/Speaker';
+import Footer from '/components/landing/utils/Footer';
 
 function JuryTitle() {
     return (

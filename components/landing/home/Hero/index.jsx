@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="spacing pb-32 z-50 relative">
         <Animation />
         <div className="pt-14">
-          <Navbar button="aqua" fg_color="white"/>
+          <Navbar button="aqua" fg_color="black"/>
         </div>
         <div className="pt-2">
           <Title />

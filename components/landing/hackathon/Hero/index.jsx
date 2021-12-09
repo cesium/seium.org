@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 
 import Navbar from '/components/landing/utils/Navbar';
-import Title from "/components/hackathon/Hero/Title";
+import Title from "./Title";
 import Button from '/components/utils/Button';
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="spacing pb-32 z-50 relative">
         <Animation />
         <div className="pt-14">
-          <Navbar />
+          <Navbar button="aqua" fg_color="black" />
         </div>
         <div className="pt-2">
           <Title />
