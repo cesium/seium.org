@@ -6,11 +6,11 @@ import { Dialog, Transition } from '@headlessui/react'
 import Return from '../Return'
 
 const navigation = [
-    { name: 'PROFILE', href: '#', current: true },
-    { name: 'WHEEL', href: '#', current: false },
-    { name: 'BADGEDEX', href: '#', current: false },
-    { name: 'LEADERBOARD', href: '#', current: false },
-    { name: 'AWARDS', href: '#', current: false },
+    { name: 'PROFILE', href: 'profile'},
+    { name: 'WHEEL', href: 'wheel'},
+    { name: 'BADGEDEX', href: 'badgedex'},
+    { name: 'LEADERBOARD', href: 'leaderboard'},
+    { name: 'AWARDS', href: 'awards'},
 ]
 
 function classNames(...classes) {
@@ -135,7 +135,7 @@ export default function Dashboard(props) {
                                     key={item.name}
                                     href={item.href}
                                     className={classNames(
-                                        item.current ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
+                                        item.name == props.href.toUpperCase() ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
                                         'group flex items-center px-8 py-8 text-xs font-bold border-b-2 border-medium_blue border-opacity-50'
                                     )}
                                 >
@@ -143,7 +143,7 @@ export default function Dashboard(props) {
                                 </a>
                             ))}
                         </nav>
-                        <a href="/" className="text-aqua px-4">
+                        <a href="/login" className="text-aqua px-4">
                             Log out 👋
                         </a>
                     </div>
@@ -161,7 +161,13 @@ export default function Dashboard(props) {
                 </div>
                 <main className="flex-1">
                     <div className="py-6">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                        <div className="max-w-7xl md:mx-20 px-4 sm:px-6 md:px-8">
+                            <p className="pt-20 font-bold text-5xl text-dark_blue">
+                                {props.title}
+                            </p>
+                            <p className="text-lg text-black pt-2">
+                                {props.description}
+                            </p>
                             {props.children}
                         </div>
                     </div>

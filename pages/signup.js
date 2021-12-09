@@ -22,6 +22,8 @@ export default function Login() {
                         text="NAME"
                         id="name"
                         name="name"
+                        fgColor="white"
+                        bgColor="darkest_blue"
                     />
                     <Input
                         text="EMAIL"
@@ -29,11 +31,15 @@ export default function Login() {
                         name="email"
                         type="email"
                         autoComplete="email"
+                        fgColor="white"
+                        bgColor="darkest_blue"
                     />
                     <Input
                         text="USERNAME"
                         id="username"
                         name="username"
+                        fgColor="white"
+                        bgColor="darkest_blue"
                     />
                     <Input
                         text="PASSWORD"
@@ -41,7 +47,8 @@ export default function Login() {
                         name="password"
                         type="password"
                         autoComplete="current-password"
-                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        fgColor="white"
+                        bgColor="darkest_blue"
                     />
                     <Input
                         text="CONFIRM PASSWORD"
@@ -49,7 +56,8 @@ export default function Login() {
                         name="password"
                         type="password"
                         autoComplete="current-password"
-                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        fgColor="white"
+                        bgColor="darkest_blue"
                     />
                     <Button
                         type="submit"
