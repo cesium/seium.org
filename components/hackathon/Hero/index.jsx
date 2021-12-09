@@ -1,10 +1,6 @@
 import dynamic from 'next/dynamic'
 
-<<<<<<< HEAD
 import Navbar from '/components/landing/utils/Navbar';
-=======
-import Navbar from '/components/landing/sections/Navbar';
->>>>>>> 6e30e51d6d1df79dbfd99cff2624c1c243221a4b
 import Title from "/components/hackathon/Hero/Title";
 import Button from '/components/utils/Button';
 import Organization from "./Organization";
