@@ -7,8 +7,8 @@ const Map = dynamic(() => import('./Map'), {
 
 export default function FindUs() {
     return (
-        <section className="flex flex-col md:flex-row md:justify-between bg-medium_light_blue py-20 spacing">
-            <div className="flex flex-col text-white mb-10">
+        <section className="flex flex-col lg:flex-row lg:justify-between bg-medium_light_blue py-20 spacing">
+            <div className="flex flex-col text-white mb-10 mr-10">
                 <h2 className="font-bold text-6xl mb-2">How to find us</h2>
 
                 <p className="mb-8">The SEI is free for participants and is organized by volunteers from CeSIUM and from the university community.</p>
@@ -19,7 +19,7 @@ export default function FindUs() {
                     <li className="">Phone: +351 253 604 448</li>
                 </ul>
             </div>
-            <div>
+            <div className="w-full lg:w-3/5">
                 <Map />
             </div>
         </section>
