@@ -6,6 +6,7 @@ function BadgeOwner({user, badge, when}) {
     return (
         <div className="w-full mb-5 pb-3 border-b-solid border-b-2 border-black grid grid-cols-3">
             <div className="text-left">
+<<<<<<< HEAD
                 <p className="font-ibold">{user}</p>
             </div>
             <div className="text-center">
@@ -13,6 +14,15 @@ function BadgeOwner({user, badge, when}) {
             </div>
             <div className="text-right">
                 <p className="font-bold text-aqua text-ibold">{when}</p>
+=======
+                <p className="font-bold">{user}</p>
+            </div>
+            <div className="text-center">
+                <p>{badge}</p>
+            </div>
+            <div className="text-right">
+                <p className="font-bold text-aqua">{when}</p>
+>>>>>>> ac56b57 (Made badge slug)
             </div>
         </div>
     );
