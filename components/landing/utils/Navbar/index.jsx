@@ -28,7 +28,7 @@ export default function Navbar({button, fg_color}) {
                     </div>
                     <a 
                         href="/signup"
-                        className={`transform rotate-15 -mt-5 text-xl font-inter_bold items-center justify-center flex h-28 w-28 text-${fg_color} bg-${button} rounded-full translate-x-0`}>
+                        className={`transform rotate-15 -mt-5 text-xl font-ibold items-center justify-center flex h-28 w-28 text-${fg_color} bg-${button} rounded-full translate-x-0`}>
                             Join us 👋
                     </a>
                 </div>

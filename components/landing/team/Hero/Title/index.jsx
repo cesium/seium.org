@@ -1,6 +1,6 @@
 export default function Title() {
     return (
-        <div className="font-bold z-50 relative">
+        <div className="font-iextrabold z-50 relative">
             <h5 className="text-2xl text-dark_blue">
                 Team
             </h5>

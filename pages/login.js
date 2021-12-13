@@ -15,32 +15,37 @@ export default function Login() {
             <Return top="10" left="40" mt="10" mt_sm="10" />
             <div className="mt-10 sm:mt-40 flex flex-col items-center justify-center">
                 <Title text="Log in" />
-
-                <Form>
-                    <Input
-                        text="YOUR EMAIL"
-                        id="email"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
-                    />
-                    <Input
-                        text="YOUR PASSWORD"
-                        id="password"
-                        name="password"
-                        type="password"
-                        autoComplete="current-password"
-                    />
-                    <Text padding="6" text="Forgot your password?" link="Right this way" href="#" />
-                    <Button
-                        type="submit"
-                        text="LET'S GO"
-                        fg_color="black"
-                        bg_color="aqua"
-                        border="aqua"
-                        padding="32"
-                    />
-                </Form>
+                <div className="mt-8">
+                    <Form>
+                        <Input
+                            text="YOUR EMAIL"
+                            id="email"
+                            name="email"
+                            type="email"
+                            fgColor="white"
+                            bgColor="darkest_blue"
+                            autoComplete="email"
+                        />
+                        <Input
+                            text="YOUR PASSWORD"
+                            id="password"
+                            name="password"
+                            type="password"
+                            fgColor="white"
+                            bgColor="darkest_blue"
+                            autoComplete="current-password"
+                        />
+                        <Text padding="6" text="Forgot your password?" link="Right this way" href="#" />
+                        <Button
+                            type="submit"
+                            text="LET'S GO"
+                            fg_color="black"
+                            bg_color="aqua"
+                            border="aqua"
+                            padding="32"
+                        />
+                    </Form>
+                </div>
                 <Text text="Don’t have an account?" link="Signup here" href="/signup" />
                 <div className="hidden lg:block absolute bottom-0 right-60">
                     <Fade bottom>

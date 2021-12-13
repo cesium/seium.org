@@ -1,7 +1,7 @@
 export default function Input({ text, id, name, type, autocomplete, fgColor, bgColor }) {
     return (
         <div>
-            <label htmlFor={id} className={`pl-6 text-${fgColor} mt-5 block text-sm`}>
+            <label htmlFor={id} className={`font-iregular pl-6 text-${fgColor} mt-5 block text-sm`}>
                 {text}
             </label>
             <div className="mt-2">

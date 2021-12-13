@@ -9,7 +9,7 @@ export default function Title({ text }) {
             <div className="block sm:hidden">
                 <Image src="/images/moonstone-logo.svg" width="270" height="141" />
             </div>
-            <p className="mt-4 font-bold text-white text-4xl sm:text-5xl">
+            <p className="mt-4 font-iextrabold text-white text-4xl sm:text-5xl">
                 {text}
             </p>
         </>

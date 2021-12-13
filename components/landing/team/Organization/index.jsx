@@ -5,6 +5,10 @@ import useInView from "react-cool-inview";
 import Fade from "react-reveal/Fade";
 import Card from "/components/utils/Card";
 
+import Team from "./Team";
+
+import team from "/data/team.json"
+
 import styles from './style.module.css';
 
 function Animation(props) {
@@ -50,50 +54,26 @@ export default function Organization() {
     return (
         <section className="py-20 grid grid-cols-1 lg:grid-cols-2 gap-x-32 gap-y-8 bg-medium_light_blue spacing">
             <div className="text-white">
-                <h2 className="text-6xl font-bold mb-4">
+                <h2 className="font-iextrabold text-6xl font-bold mb-4">
                     Organization
                 </h2>
-                <p>They walk around, full of work, gathering speakers, attracting partners and giving their imaginations wings, all for this to be your favorite week.</p>
-            </div>
-            <div>
-                <h3 className="text-white font-bold mb-4">Tech Team</h3>
-                <div className="grid grid-cols-2 gap-8 justify-items-center">
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                </div>
+                <p className="font-imedium">
+                  They walk around, full of work, gathering speakers, attracting partners and giving their imaginations wings, all for this to be your favorite week.
+                </p>
             </div>
             
-            <div>
-                <h3 className="text-white font-bold mb-4">Support Team</h3>
-                <div className="grid grid-cols-2 gap-8 justify-items-center">
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                </div>
-            </div>
+            <Team title={team["tech"].title} list={team["tech"].list} />
+            
+            <Team title={team["support"].title} list={team["support"].list.slice(0,2)} />
+
             <div className="hidden lg:flex justify-center items-center">
                 <Animation></Animation>
             </div>
+            
+            <Team title="" list={team["support"].list.slice(2,6)} />
+            
+            <Team title={team["partners"].title} list={team["partners"].list} />
 
-            <div>
-                <h3></h3>
-                <div className="grid grid-cols-2 gap-8 justify-items-center">
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                </div>
-            </div>
-            <div>
-                <h3 className="text-white font-bold mb-4">Partners Team</h3>
-                <div className="grid grid-cols-2 gap-8 justify-items-center">
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                    <Member id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-                </div>
-            </div>
         </section>
     )
 }

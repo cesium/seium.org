@@ -12,7 +12,7 @@ export default function Title() {
             <h5 className="font-iextrabold text-2xl text-aqua m-1">
                 15-20 February 2022
             </h5>
-            <h1 className="font-iextrabold font-bold text-white text-6xl w-11/12 md:text-8xl md:w-full xl:text-9xl 2xl:w-4/5 relative z-0">
+            <h1 className="font-iextrabold text-white text-6xl w-11/12 md:text-8xl md:w-full xl:text-9xl 2xl:w-4/5 relative z-0">
                 The software engineering week is back, let's just&nbsp;
                 <span className="relative leading-none z-10 w-auto my-4 inline-block">
                     <u className="relative h-auto inline-block z-0" onMouseEnter={() => setHover(true)} 

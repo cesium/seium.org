@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function Title() {
     const [hovered, setHover] = useState(false);
     return (
-        <div className="font-bold z-50 relative">
+        <div className="font-iextrabold z-50 relative">
             <h5 className="text-2xl text-aqua m-1">
                 Hackathon
             </h5>
