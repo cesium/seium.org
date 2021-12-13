@@ -4,10 +4,10 @@ export default function Hackathon() {
     return (
         <div className="spacing bg-medium_blue py-20">
             <div className="max-w-screen-xl mx-auto">
-                <h3 className="px-5 text-2xl text-aqua font-bold">
+                <h3 className="px-5 text-2xl text-aqua font-iextrabold">
                     Hackathon 2022
                 </h3>
-                <h1 className="px-5 text-5xl md:text-6xl lg:text-7xl text-white font-bold">
+                <h1 className="font-iextrabold px-5 text-5xl md:text-6xl lg:text-8xl text-white">
                     Create products, train skills and learn new technologies
                             <span className="pl-4 pb-8 align-middle items-center text-center content-center">
                                 <Button className="items-center" text="REGISTER YOUR TEAM" />

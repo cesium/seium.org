@@ -19,7 +19,7 @@ export default function Navbar({button, fg_color}) {
                 <div className="justify-self-end col-span-3 invisible xl:visible flex flex-auto gap-x-20">
                     <div className="grid grid-cols-3 gap-x-20">
                         {navigation.map((item) => (
-                            <a className="text-white text-opacity-40 hover:text-opacity-100"
+                            <a className="font-iregular text-white text-opacity-40 hover:text-opacity-100"
                                 href={item.href}
                             >
                                 {item.name}
@@ -28,7 +28,7 @@ export default function Navbar({button, fg_color}) {
                     </div>
                     <a 
                         href="/signup"
-                        className={`transform rotate-15 -mt-5 text-xl font-bold items-center justify-center flex h-28 w-28 text-${fg_color} bg-${button} rounded-full translate-x-0`}>
+                        className={`transform rotate-15 -mt-5 text-xl font-inter_bold items-center justify-center flex h-28 w-28 text-${fg_color} bg-${button} rounded-full translate-x-0`}>
                             Join us 👋
                     </a>
                 </div>

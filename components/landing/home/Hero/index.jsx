@@ -14,7 +14,7 @@ export default function Hero() {
     <div className=" bg-dark_blue">
       <div className="spacing pb-32 z-50 relative">
         <Animation />
-        <div className="pt-14">
+        <div className="pt-8">
           <Navbar button="aqua" fg_color="black"/>
         </div>
         <div className="pt-2">
@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
         <div className="relative grid grid-cols-2 mt-20">
           <div className="absolute left-0 text-white">
-            <h5 className="text-md">
+            <h5 className="font-imedium text-md">
               Follow us on
             </h5>
             <Social />
