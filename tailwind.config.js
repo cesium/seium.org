@@ -26,8 +26,15 @@ module.exports = {
         aqua: "#36DBEE",
       },
       fontFamily: {
-        regular: ["Inter-Regular"],
-        black: ["Inter-Black"]
+        inter_black: ["Inter-Black"],
+        inter_extrabold: ["Inter-ExtraBold"],
+        inter_bold: ["Inter-Bold"],
+        inter_semibold: ["Inter-SemiBold"],
+        inter_medium: ["Inter-Medium"],
+        inter_regular: ["Inter-Regular"],
+        inter_light: ["Inter-Light"],
+        inter_extralight: ["Inter-ExtraLight"],
+        inter_thin: ["Inter-Thin"]
       }
     },
   },
