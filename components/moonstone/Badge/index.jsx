@@ -10,7 +10,7 @@ export default function Badge() {
                     alt="Error"
                 ></img>
             </div>
-            <div className="grid grid-rows-2 justify-items-center">
+            <div className="grid grid-rows-2 font-iregular justify-items-center">
                 <div> Badge Name</div>
                 <div>10 💰 </div>
             </div>
