@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <>
 			<div className="spacing py-10 bg-dark_blue">
-	      <Navbar />
+	      <Navbar button={"aqua"} fg_color={"black"}/>
 			</div>
 			<Faq />
       <Footer color="medium_blue" />
