@@ -1,7 +1,7 @@
 import Questions from "./Questions";
 
 
-export default function Faq(props) {
+export default function Faqs(props) {
   
 
   return (
