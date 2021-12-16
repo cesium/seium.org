@@ -6,6 +6,7 @@ const navigation = [
     { name: 'Team', href: '/team' },
     { name: 'Challenges', href: '/challenges' },
     { name: 'Speakers', href: '/speakers' },
+    { name: 'FAQs', href: '/faq' },
     { name: 'Moonstone', href: '/login' },
 ]
 
@@ -17,7 +18,7 @@ export default function Navbar({ button, fg_color }) {
                     <Image src="/images/sei-logo.svg" width="50" height="40" />
                 </a>
                 <div className="justify-self-end col-span-3 invisible xl:visible flex flex-auto gap-x-20">
-                    <div className="grid grid-cols-3 gap-x-20">
+                    <div className="grid grid-cols-4 gap-x-10">
                         {navigation.map((item, i) => (
                             <a id={i}
                                 className="font-iregular text-white text-opacity-40 hover:text-opacity-100"
