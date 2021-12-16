@@ -10,7 +10,7 @@ export default function Index() {
   return (
     <>
       <Hero />
-      <Schedule />
+      <Schedule detailed={false} />
       <Sponsors/>
       <Hackathon />
       <Speakers />

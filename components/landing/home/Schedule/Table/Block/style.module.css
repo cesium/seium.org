@@ -1,34 +1,80 @@
-.topLine {
+.clickable {
+    @apply cursor-pointer;
+}
+
+.block {
     border-top: solid 1px white;
+    position: relative;
+    padding: 10px;
 }
 
-.spaceBehind {
-    padding-bottom: 3vw;
+.clickable:hover > .block {
+    @apply hover:bg-blue-500;
+    border-top: 0px;
+    padding-top: 11px;
 }
 
-.noSpace {
+.notCoffee {
+    padding-bottom: 2em;
+    min-height: 200px;
+}
+
+.coffee {
     padding-bottom: 0;
+    min-height: 60px;
 }
 
 .paragraph {
     color: white;
-    font-size: 1vw;
-    line-height: 1vw;
-    margin-bottom: 0.4vw;
-    margin-top: 0.4vw;
+    font-size: 1.25em;
+    line-height: 1em;
+    margin-bottom: 0.4em;
+}
+
+.bold {
+    font-weight: bolder;
 }
 
 .author {
-    color: white;
-    font-size: 0.8vw;
-    margin-bottom: 0.4vw;
-    margin-top: 0.4vw;
+    color: lightgray;
+    font-size: 0.9em;
+    margin-bottom: 0.4em;
+    margin-top: 0.4em;
 }
 
 .imgWrapper {
-    margin: auto;
+    margin-top: -5px;
     width: 50px;
     height: 50px;
-    background-color: red;
     float:right;
+    position: relative;
+}
+
+.location {
+    color: lightgray;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.clickable:hover .location {
+    @apply text-dark_blue;
+}
+
+.expand {
+    @apply rounded-full text-center items-center px-8 py-0 border border-white shadow-sm text-white font-bold;
+    font-size: 2em;
+    line-height: 1em;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+
+    width: 5rem;
+}
+
+.clickable:hover .expand {
+    @apply border-dark_blue text-dark_blue
 }
