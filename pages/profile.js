@@ -54,7 +54,7 @@ export default function Profile() {
           </Form>
         </div>
 
-        <div className="mt-10 md:mt-0 col-span-1 w-full md:w-1/2 float-right md:pl-6">
+        <div className="col-span-1 w-full md:w-1/2 float-right md:pl-6">
           <div>
             <Heading text="Achievements"></Heading>
 
