@@ -1,7 +1,5 @@
 import styles from './style.module.css';
 import Image from 'next/image';
-import Button from '/components/utils/Button';
-import { useState, useEffect } from 'react'
 
 export default function Block(props) {
 
@@ -12,15 +10,18 @@ export default function Block(props) {
             <div className={`${styles.imgWrapper} ${props.coffeeBreak ? "flex" : "hidden"}`}> 
                 <Image src="/images/Coffee.svg" layout="fill"/>
             </div>
-            <p className={`${styles.paragraph} ${styles.bold} ${props.coffeeBreak ? "hidden" : "flex"}`}>
+            <p className={`text-xl text-white font-iextrabold ${props.coffeeBreak ? "hidden" : "flex"}`}>
                 {props.startTime}-{props.endTime}
             </p>
-            <p className={styles.paragraph}><b>{props.activityType}</b> {props.summary}</p>
-            <p className={styles.author}>{props.author}</p>
-            <p className={styles.location}>{props.location}</p>
-            <button className={`${styles.expand} ${!props.coffeeBreak && props.detailed ? "flex" : "hidden"}`}>
+            <p className={`text-xl text-white font-iregular`}>
+                <span className='font-iextrabold'>{props.activityType}</span>
+                {` ${props.summary === undefined ? "" : props.summary}`}
+            </p>
+            <p className={`${styles.author} text-sm text-gray-400 font-iregular`}>{props.author}</p>
+            <p className={`${styles.location} text-sm text-gray-400 font-iregular`}>{props.location}</p>
+            <span className={`${styles.expand} ${!props.coffeeBreak && props.detailed ? "flex" : "hidden"}`}>
                 { props.focused ? "-" : "+" }
-            </button>
+            </span>
         </div>
     );
 

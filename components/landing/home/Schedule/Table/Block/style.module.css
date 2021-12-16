@@ -24,20 +24,7 @@
     min-height: 60px;
 }
 
-.paragraph {
-    color: white;
-    font-size: 1.25em;
-    line-height: 1em;
-    margin-bottom: 0.4em;
-}
-
-.bold {
-    font-weight: bolder;
-}
-
 .author {
-    color: lightgray;
-    font-size: 0.9em;
     margin-bottom: 0.4em;
     margin-top: 0.4em;
 }
@@ -51,8 +38,6 @@
 }
 
 .location {
-    color: lightgray;
-    font-size: 0.9em;
     position: absolute;
     bottom: 0;
     margin-bottom: 10px;
@@ -63,14 +48,13 @@
 }
 
 .expand {
-    @apply rounded-full text-center items-center px-8 py-0 border border-white shadow-sm text-white font-bold;
-    font-size: 2em;
-    line-height: 1em;
+    @apply rounded-full text-center items-center px-8 py-0 border border-white shadow-sm text-3xl text-white font-ibold;
 
     position: absolute;
     bottom: 0;
     right: 0;
     margin-bottom: 10px;
+    margin-right: 10px;
 
     width: 5rem;
 }

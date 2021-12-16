@@ -39,8 +39,8 @@ export default function Day(props)
             </div>
 
             <div className={`-mt-10 ${styles.dateWrapper}`}>
-                <h5 className="text-3xl text-blue-500 font-bold"> { date_string } </h5>
-                <h2 className={`font-bold text-white`}> { date_descriptor } </h2>
+                <h5 className="text-3xl text-blue-500 font-ibold"> { date_string } </h5>
+                <h2 className={`font-iextrabold text-white`}> { date_descriptor } </h2>
             </div>
             
             <div className={`${styles.rightArrow} ${styles.arrowWrapper}`}>
