@@ -49,7 +49,7 @@ export default function Profile() {
           </Form>
         </div>
 
-        <div className="col-span-1 w-full md:w-1/2 float-right pt-6 md:pl-6">
+        <div className="col-span-1 w-full md:w-1/2 float-right md:pl-6">
           <div>
             <Heading text="Achievements"></Heading>
 
