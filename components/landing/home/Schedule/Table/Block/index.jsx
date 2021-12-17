@@ -7,21 +7,40 @@ export default function Block(props) {
 
     const block = (
         <div id={id} className={`${styles.block} ${props.coffeeBreak ? styles.coffee : styles.notCoffee}`}>
-            <div className={`${styles.imgWrapper} ${props.coffeeBreak ? "flex" : "hidden"}`}> 
-                <Image src="/images/Coffee.svg" layout="fill"/>
-            </div>
-            <p className={`text-xl text-white font-iextrabold ${props.coffeeBreak ? "hidden" : "flex"}`}>
-                {props.startTime}-{props.endTime}
-            </p>
+            { props.coffeeBreak &&
+                <div className={styles.imgWrapper}> 
+                    <Image src="/images/Coffee.svg" layout="fill"/>
+                </div>
+            }
+            
+            { !props.coffeeBreak &&
+                <p className="text-xl text-white font-iextrabold">
+                    {props.startTime}-{props.endTime}
+                </p>
+            }
+            
             <p className={`text-xl text-white font-iregular`}>
-                <span className='font-iextrabold'>{props.activityType}</span>
-                {` ${props.summary === undefined ? "" : props.summary}`}
+                <span className='font-iextrabold'>{`${props.activityType} `}</span>
+               { props.summary }
             </p>
             <p className={`${styles.author} text-sm text-gray-400 font-iregular`}>{props.author}</p>
             <p className={`${styles.location} text-sm text-gray-400 font-iregular`}>{props.location}</p>
-            <span className={`${styles.expand} ${!props.coffeeBreak && props.detailed ? "flex" : "hidden"}`}>
-                { props.focused ? "-" : "+" }
-            </span>
+
+            { !props.coffeeBreak &&
+                <div className={styles.bottomRightCorner}>
+                    { props.hyperlink !== undefined &&
+                        <a href={props.hyperlink} target="_blank" className={`${styles.hyperlink} text-lg text-blue-400 font-ibold`}>
+                            Join
+                        </a>
+                    }
+
+                    { props.detailed &&
+                        <span className={styles.expand}>
+                            { props.focused ? "-" : "+" }
+                        </span>
+                    }
+                </div>
+            }
         </div>
     );
 
@@ -29,8 +48,9 @@ export default function Block(props) {
         return block;
     else
         return (
-            <a className={styles.clickable} href={`agenda/#${id}`}>
+            <div className={styles.clickable}>
+                <a className={styles.outerLink} href={`agenda/#${id}`}/>
                 { block }
-            </a>
+            </div>
         );
 }

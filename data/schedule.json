@@ -9,7 +9,8 @@
                 "summary": "Uma talk bue fixe",
                 "description": "Esta descrição é bastante genérica. No entanto, tenho a certeza que querem vir a esta talk. Não percam!",
                 "author": "Rui Oliveira, outros gajos",
-                "location": "CP2-B1"
+                "location": "CP2-B1",
+                "hyperlink": "https://bragatv.pt/universidade-do-minho-tem-tres-novos-estudantes-com-nota-20/"
             },
             {
                 "activityType": "Coffee Break",
@@ -36,7 +37,8 @@
                 "summary": "O sentido da vida",
                 "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
                 "author": "Neil deGrasse Tyson",
-                "location": "CP2-B1"
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
             },
             {
                 "activityType": "Coffee Break",
@@ -73,7 +75,8 @@
                 "summary": "Limpar o auditório",
                 "description": "As atividades foram todas neste auditório. Não vamos deixar tudo porco.",
                 "author": "Dona Alberta",
-                "location": "CP2-B1"
+                "location": "CP2-B1",
+                "hyperlink": "https://www.goodhousekeeping.com/home/cleaning/g5115/best-cleaning-products/"
             }
         ]
     }

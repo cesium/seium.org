@@ -26,7 +26,6 @@ export default function Table(props)
     useEffect(() => {
         const onHashChanged = function() {
             const arr = window.location.hash.split("-");
-            console.log(arr);
             if (props.detailed && arr.length == 2)
                 updateFocused(parseInt(arr[1]));
         };

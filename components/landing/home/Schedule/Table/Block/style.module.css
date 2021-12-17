@@ -1,17 +1,28 @@
 .clickable {
-    @apply cursor-pointer;
+    position: relative;
+}
+
+.outerLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .block {
     border-top: solid 1px white;
-    position: relative;
     padding: 10px;
+    position:relative;
+    pointer-events: none;
 }
 
-.clickable:hover > .block {
-    @apply hover:bg-blue-500;
+.clickable:hover .block {
+    @apply bg-blue-500;
     border-top: 0px;
     padding-top: 11px;
+}
+
+.clickable .block a {
+    pointer-events: all;
 }
 
 .notCoffee {
@@ -20,7 +31,6 @@
 }
 
 .coffee {
-    padding-bottom: 0;
     min-height: 60px;
 }
 
@@ -47,15 +57,31 @@
     @apply text-dark_blue;
 }
 
-.expand {
-    @apply rounded-full text-center items-center px-8 py-0 border border-white shadow-sm text-3xl text-white font-ibold;
-
+.bottomRightCorner {
     position: absolute;
     bottom: 0;
     right: 0;
     margin-bottom: 10px;
     margin-right: 10px;
+}
 
+.hyperlink {
+    position: relative;
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.clickable:hover .hyperlink {
+    @apply text-dark_blue
+}
+
+.expand {
+    @apply rounded-full text-center items-center px-8 py-0 border border-white shadow-sm text-3xl text-white font-ibold;
+
+    margin-left:30px;
     width: 5rem;
 }
 
