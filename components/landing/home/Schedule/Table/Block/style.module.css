@@ -16,7 +16,7 @@
 }
 
 .clickable:hover .block {
-    @apply bg-blue-500;
+    @apply bg-medium_light_blue;
     border-top: 0px;
     padding-top: 11px;
 }
