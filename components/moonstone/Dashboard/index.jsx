@@ -79,7 +79,7 @@ export default function Dashboard(props) {
                                             href={item}
                                             className={classNames(
                                                 item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
-                                                'group flex items-center px-8 py-8 text-xs font-bold border-b-2 border-medium_blue border-opacity-50'
+                                                'font-ibold group flex items-center px-8 py-8 text-xs border-b-2 border-medium_blue border-opacity-50'
                                             )}
                                         >
                                             {item.toUpperCase()}
@@ -120,10 +120,10 @@ export default function Dashboard(props) {
                             <Image src="/images/moonstone-logo.svg" width="220" height="120" />
                         </div>
                         <div className="px-4 text-md my-8 text-white">
-                            <p className="font-bold">
+                            <p className="font-ibold">
                                 You have:
                             </p>
-                            <p className="">
+                            <p className="font-iregular">
                                 💰 170 Tokens
                             </p>
                         </div>
@@ -134,14 +134,14 @@ export default function Dashboard(props) {
                                     href={item}
                                     className={classNames(
                                         item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
-                                        'group flex items-center px-8 py-8 text-xs font-bold border-b-2 border-medium_blue border-opacity-50'
+                                        'group flex items-center px-8 py-8 text-xs font-ibold border-b-2 border-medium_blue border-opacity-50'
                                     )}
                                 >
                                     {item.toUpperCase()}
                                 </a>
                             ))}
                         </nav>
-                        <a href="/login" className="text-aqua px-4">
+                        <a href="/login" className="text-aqua px-4 font-iregular">
                             Log out 👋
                         </a>
                     </div>
@@ -160,10 +160,10 @@ export default function Dashboard(props) {
                 <main className="flex-1">
                     <div className="py-6">
                         <div className="max-w-7xl md:mx-20 px-4 sm:px-6 md:px-8">
-                            <p className="pt-20 font-bold text-5xl text-dark_blue">
+                            <p className="pt-20 font-ibold text-5xl text-dark_blue">
                                 {props.title}
                             </p>
-                            <p className="text-lg text-black pt-2">
+                            <p className="font-iregular text-lg text-black pt-2">
                                 {props.description}
                             </p>
                             {props.children}
