@@ -13,7 +13,7 @@ export default function CheckpointTracker({checkpoints, progress}) {
     return (
         <div className="py-5 w-80">
             <div>
-                <span style={{marginLeft: ml}}>🏁</span>
+                <span className="font-iregular" style={{marginLeft: ml}}>🏁</span>
             </div>
             <div className="w-full overflow-hidden border border-aqua rounded-full h-6">
                 {[...Array(checkpoints)].map((col, i) => <Step count={i} progress={progress} checkpoints={checkpoints}/>)}
