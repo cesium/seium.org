@@ -1,10 +1,3 @@
-.dayTitle {
-    font-size: 5vw;
-    float: left;
-    margin: 0;
-    color: white;
-}
-
 .leftArrow {
     float: right;
     position: relative;
@@ -19,15 +12,14 @@
     display: flex;
 	align-items: center;
 	justify-content: center;
-    margin-top: 1vw;
+    margin-top: 0.15em;
 }
 
 .arrow {
-    height: auto;
     margin: 0;
     border: none;
-    width: 4vw;
-    height: 4vw;
+    width: 0.8em;
+    height: 0.8em;
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: center; 
