@@ -7,10 +7,9 @@ import styles from './style.module.css';
 
 export default function UnderlineAnimation({children, text}) {
     const [hovered, setHover] = useState(false);
-    //Did you see what I did there?
     return (
         <span className="relative leading-none z-10 w-auto my-4 inline-block">
-                <h2 className="font-bold text-white text-6xl md:text-8xl md:w-full relative z-0 border-b-8 border-b-solid border-white">
+                <h2 className="font-bold text-white md:w-full relative z-0 border-b-8 border-b-solid border-white">
                     <span className="relative h-auto inline-block z-0" onMouseEnter={() => setHover(true)} 
                         onMouseLeave={() => setHover(false)}>
                             {children}

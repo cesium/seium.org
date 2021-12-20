@@ -2,10 +2,7 @@ import dynamic from 'next/dynamic'
 
 import Navbar from '/components/landing/utils/Navbar';
 import Title from "./Title";
-import Button from '/components/utils/Button';
-import Organization from "./Organization";
-import ExpectList from "./ExpectList";
-import Pitch from "./Pitch";
+
 const Animation = dynamic(() => import('./Animation'), { ssr: false })
 export default function Hero() {
   return (

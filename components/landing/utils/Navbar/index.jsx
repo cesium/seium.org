@@ -20,7 +20,7 @@ export default function Navbar({ button, fg_color }) {
                 <div className="justify-self-end col-span-3 invisible xl:visible flex flex-auto gap-x-20">
                     <div className="grid grid-cols-4 gap-x-10">
                         {navigation.map((item, i) => (
-                            <a id={i}
+                            <a key={i}
                                 className="font-iregular text-white text-opacity-40 hover:text-opacity-100"
                                 href={item.href}
                             >

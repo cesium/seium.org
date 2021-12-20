@@ -1,5 +1,6 @@
 
 import UnderlineAnimation from '/components/landing/utils/UnderlineAnimation';
+
 export default function Title() {
     return (
         <div className="font-iextrabold z-50 relative">
