@@ -9,7 +9,7 @@ import Footer from '/components/landing/utils/Footer';
 
 function JuryTitle() {
     return (
-        <UnderlineAnimation>
+        <UnderlineAnimation text="These are the one to fear. Just saying">
             The Jury
         </UnderlineAnimation>
     );
