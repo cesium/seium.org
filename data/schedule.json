@@ -41,6 +41,36 @@
                 "hyperlink": "https://www.haydenplanetarium.org/tyson/"
             },
             {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "O sentido da vida IV",
+                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
+                "author": "Neil deGrasse Tyson",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+            },
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "O sentido da vida II",
+                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
+                "author": "Neil deGrasse Tyson",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+            },
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "O sentido da vida III",
+                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
+                "author": "Neil deGrasse Tyson",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+            },
+            {
                 "activityType": "Coffee Break",
                 "coffeeBreak": true
             },

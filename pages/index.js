@@ -1,10 +1,10 @@
-import Hero from '/components/landing/home/Hero';
-import Schedule from '/components/landing/home/Schedule';
-import Sponsors from '/components/landing/home/Sponsors';
-import Hackathon from '/components/landing/home/Hackathon';
-import Speakers from '/components/landing/home/Speakers';
+import Hero from '/components/website/home/Hero';
+import Schedule from '/components/website/home/Schedule';
+import Sponsors from '/components/website/home/Sponsors';
+import Hackathon from '/components/website/home/Hackathon';
+import Speakers from '/components/website/home/Speakers';
 
-import Footer from '/components/landing/utils/Footer';
+import Footer from '/components/website/utils/Footer';
 
 export default function Index() {
   return (

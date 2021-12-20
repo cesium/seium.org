@@ -5,7 +5,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Member({ id, name, github, twitter, linkedin, gitlab }) {
   return (
-    <div className="text-white">
+    <div key={id} className="text-white">
       <Image src={`/images/team/${id}.png`} width="210" height="210"/>
       <p className="text-md font-iextrabold mb-1"> { name } </p>
       <div className="flex">
