@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import Image from "next/image";
 import Link from "next/link";
 
-import Social from "/components/landing/utils/Social";
+import Social from "/components/website/utils/Social";
 import Card from "/components/utils/Card";
 
 import styles from './style.module.css';

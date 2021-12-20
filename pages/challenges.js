@@ -1,6 +1,6 @@
-import Hero from '/components/landing/challenges/Hero';
-import Challenges from '/components/landing/challenges/Challenges';
-import Footer from '/components/landing/utils/Footer';
+import Hero from '/components/website/challenges/Hero';
+import Challenges from '/components/website/challenges/Challenges';
+import Footer from '/components/website/utils/Footer';
 
 
 export default function Index() {

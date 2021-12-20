@@ -1,6 +1,6 @@
-import Navbar from '/components/landing/utils/Navbar';
-import Footer from '/components/landing/utils/Footer';
-import Faqs from '../components/landing/faqs';
+import Navbar from '/components/website/utils/Navbar';
+import Footer from '/components/website/utils/Footer';
+import Faqs from '../components/website/faqs';
 
 export default function Faq() {
   return (

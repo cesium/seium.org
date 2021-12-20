@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
 
-import Navbar from '/components/landing/utils/Navbar';
-import Title from "/components/landing/utils/Title";
-import Social from "/components/landing/utils/Social";
+import Navbar from '/components/website/utils/Navbar';
+import Title from "/components/website/utils/Title";
+import Social from "/components/website/utils/Social";
 
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
