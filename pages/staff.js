@@ -17,7 +17,7 @@ export default function Awards() {
                         <span className="font-iregular ml-4 text-md sm:text-lg">disponíveis para atribuir neste momento</span>
                     </div>
 
-                    <div className="mt-5 ml-3 mr-3">
+                    <div className="mt-5 ml-3 w-3/4">
                         <StaffBadgeButton badge="X" start="9" end="11"/>
                         <StaffBadgeButton badge="X" start="9" end="11"/>
                         <StaffBadgeButton badge="X" start="9" end="11"/>
@@ -31,7 +31,7 @@ export default function Awards() {
                         <span className="font-ibold text-xl sm:text-2xl">Prizes</span>
                     </div>
 
-                    <div className="mt-5 ml-3 mr-3">
+                    <div className="mt-5 ml-3  w-3/4">
                         <StaffRedeemButton/>
                     </div>
                 </div>
