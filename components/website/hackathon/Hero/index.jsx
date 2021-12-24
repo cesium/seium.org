@@ -7,9 +7,10 @@ import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
 const Animation = dynamic(() => import('./Animation'), { ssr: false })
+
 export default function Hero() {
   return (
-    <div className=" bg-dark_blue">
+    <div className="bg-dark_blue">
       <div className="spacing pb-32 z-50 relative">
         <Animation />
         <div className="pt-14">
