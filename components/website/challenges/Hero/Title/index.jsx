@@ -1,5 +1,5 @@
 
-import UnderlineAnimation from '/components/landing/utils/UnderlineAnimation';
+import UnderlineAnimation from '/components/website/utils/UnderlineAnimation';
 
 export default function Title() {
     return (
