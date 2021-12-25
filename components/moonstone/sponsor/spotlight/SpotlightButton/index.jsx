@@ -1,8 +1,8 @@
-export default function SponsorBadgeButton({ sponsor }) {
+export default function SpotlightButton() {
     return (
         <div className="w-auto mt-8">
             <button className="block m-auto bg-aqua rounded-full w-full h-16">
-                <p className="font-ibold"> 🏅 Dar Badge {sponsor} </p>
+                <p className="font-ibold"> Ativar Spotlight </p>
             </button>
         </div>
     );

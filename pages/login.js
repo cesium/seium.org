@@ -13,7 +13,7 @@ import Text from "/components/moonstone/authentication/Text";
 export default function Login() {
     return (
         <div className="overflow-hidden bg-dark_blue min-h-screen">
-            <Return ml="20" mt="10" mt_sm="10" />
+            <Return ml="4" mt="10" mt_sm="10" />
             <div className="mt-10 sm:mt-40 flex flex-col items-center justify-center">
                 <Title text="Log in" />
                 <div className="mt-8">
