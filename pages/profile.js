@@ -1,12 +1,15 @@
 import Image from 'next/image'
 
-import Dashboard from "/components/moonstone/Dashboard";
-import Form from '/components/moonstone/Form';
-import Input from '/components/moonstone/Input';
-import Heading from '/components/moonstone/Heading';
 import Button from '/components/utils/Button';
-import CodeInput from '/components/moonstone/CodeInput';
-import CheckpointTracker from '/components/moonstone/CheckpointTracker';
+
+import Form from '/components/moonstone/utils/Form';
+import Input from '/components/moonstone/utils/Input';
+
+import Dashboard from "/components/moonstone/user/utils/Dashboard";
+import Heading from '/components/moonstone/user/utils/Heading';
+
+import CodeInput from '/components/moonstone/user/profile/CodeInput';
+import CheckpointTracker from '/components/moonstone/user/profile/CheckpointTracker';
 
 export default function Profile() {
   return (

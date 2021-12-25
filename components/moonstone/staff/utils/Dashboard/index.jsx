@@ -3,15 +3,7 @@ import Image from 'next/image'
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
-import Return from '../Return'
-
-const navigation = [
-    'profile',
-    'wheel',
-    'badgedex',
-    'leaderboard',
-    'awards'
-]
+import Return from '/components/moonstone/utils/Return'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -72,20 +64,6 @@ export default function Dashboard(props) {
                                         alt="Workflow"
                                     />
                                 </div>
-                                <nav className="mt-5 flex-1">
-                                    {navigation.map((item) => (
-                                        <a
-                                            key={item}
-                                            href={item}
-                                            className={classNames(
-                                                item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
-                                                'font-ibold group flex items-center px-8 py-8 text-xs border-b-2 border-medium_blue border-opacity-50'
-                                            )}
-                                        >
-                                            {item.toUpperCase()}
-                                        </a>
-                                    ))}
-                                </nav>
                             </div>
                             <div className="flex-shrink-0 flex border-t border-indigo-800 p-4">
                                 <a href="#" className="flex-shrink-0 group block">
@@ -115,33 +93,11 @@ export default function Dashboard(props) {
             <div className="hidden md:flex md:w-72 md:flex-col md:fixed md:inset-y-0">
                 <div className="flex-1 flex flex-col min-h-0 bg-dark_blue">
                     <div className="flex-1 flex flex-col pt-5 pb-10 overflow-y-auto">
-                        <Return top="0" left="4" mt="10" mt_sm="10" />
+                        <Return pl="4" mt="10" mt_sm="10" />
                         <div className="mt-20 flex items-center flex-shrink-0 px-4">
                             <Image src="/images/moonstone-logo.svg" width="220" height="120" />
                         </div>
-                        <div className="px-4 text-md my-8 text-white">
-                            <p className="font-ibold">
-                                You have:
-                            </p>
-                            <p className="font-iregular">
-                                💰 170 Tokens
-                            </p>
-                        </div>
-                        <nav className="mt-5 flex-1">
-                            {navigation.map((item) => (
-                                <a
-                                    key={item}
-                                    href={item}
-                                    className={classNames(
-                                        item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
-                                        'group flex items-center px-8 py-8 text-xs font-ibold border-b-2 border-medium_blue border-opacity-50'
-                                    )}
-                                >
-                                    {item.toUpperCase()}
-                                </a>
-                            ))}
-                        </nav>
-                        <a href="/login" className="text-aqua px-4 font-iregular">
+                    <a href="/login" className="mt-[500px] text-aqua px-4 font-iregular">
                             Log out 👋
                         </a>
                     </div>

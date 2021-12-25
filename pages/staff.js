@@ -1,6 +1,7 @@
-import Dashboard from "/components/moonstone/Dashboard";
-import StaffBadgeButton from '/components/moonstone/StaffBadgeButton';
-import StaffRedeemButton from "/components/moonstone/StaffRedeemButton";
+import Dashboard from "/components/moonstone/staff/utils/Dashboard";
+
+import StaffBadgeButton from '/components/moonstone/staff/StaffBadgeButton';
+import StaffRedeemButton from "/components/moonstone/staff/StaffRedeemButton";
 
 export default function Awards() {
   return (

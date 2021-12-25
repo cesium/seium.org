@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-import Dashboard from "/components/moonstone/Dashboard";
-import Filter from "/components/moonstone/Filter";
-import Badge from "/components/moonstone/Badge";
+import Dashboard from "/components/moonstone/user/utils/Dashboard";
+
+import Badge from "/components/moonstone/user/badgedex/Badge";
+import Filter from "/components/moonstone/user/badgedex/Filter";
 
 function BadgeButton({ text, val, setValue, selected }) {
     const changeValAll = function () {

@@ -1,8 +1,10 @@
-import Dashboard from "/components/moonstone/Dashboard";
-import Award from "/components/moonstone/Award";
+import Dashboard from "/components/moonstone/user/utils/Dashboard";
+
+import Award from "/components/moonstone/user/awards/Award";
+
 export default function Awards() {
   return (
-    <Dashboard>
+    <Dashboard href="awards">
         <div>
             <div className="md:mt-16 mt-8">
                 <h1 className="font-bold text-4xl text-iextrabold sm:text-5xl">Awards</h1>
