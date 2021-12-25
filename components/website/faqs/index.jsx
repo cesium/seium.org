@@ -5,7 +5,7 @@ export default function Faqs(props) {
   
 
   return (
-      <div className="spacing py-20 flex flex-col lg:flex-row justify-between bg-dark_blue lg:h-3/4">
+      <div className="spacing py-20 flex flex-col lg:flex-row justify-between bg-secondary lg:h-3/4">
           <div className="text-white lg:w-2/5 mb-10">
             <h1 className="text-4xl lg:text-6xl font-bold mb-4 font-iextrabold">Frequently Asked Questions</h1>
             <p className="text-lg">

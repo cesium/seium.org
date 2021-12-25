@@ -18,11 +18,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        darkest_blue: "#011A2C",
-        dark_blue: "#01253D",
-        medium_blue: "#063D66",
-        medium_light_blue: "#0085A6",
-        aqua: "#36DBEE",
+        primary: "#011A2C",
+        secondary: "#01253D",
+        tertiary: "#063D66",
+        quaternary: "#0085A6",
+        quinary: "#36DBEE",
       },
       fontFamily: {
         iblack: ["Inter-Black"],

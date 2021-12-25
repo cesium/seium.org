@@ -8,7 +8,7 @@ export default function Index() {
     <>
       <Hero />
       <Challenges />
-      <Footer color="dark_blue" />
+      <Footer color="secondary" />
     </>
   );
 }

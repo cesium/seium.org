@@ -12,7 +12,7 @@ import Text from "/components/moonstone/Text";
 
 export default function Login() {
     return (
-        <div className="overflow-hidden bg-dark_blue min-h-screen">
+        <div className="overflow-hidden bg-secondary min-h-screen">
             <Return top="2" left="40" mt="10" mt_sm="10" />
             <div className="sm:mt-16 flex flex-col items-center justify-center">
                 <Title text="Sign up" />
@@ -23,7 +23,7 @@ export default function Login() {
                         id="name"
                         name="name"
                         fgColor="white"
-                        bgColor="darkest_blue"
+                        bgColor="primary"
                     />
                     <Input
                         text="EMAIL"
@@ -32,14 +32,14 @@ export default function Login() {
                         type="email"
                         autoComplete="email"
                         fgColor="white"
-                        bgColor="darkest_blue"
+                        bgColor="primary"
                     />
                     <Input
                         text="USERNAME"
                         id="username"
                         name="username"
                         fgColor="white"
-                        bgColor="darkest_blue"
+                        bgColor="primary"
                     />
                     <Input
                         text="PASSWORD"
@@ -48,7 +48,7 @@ export default function Login() {
                         type="password"
                         autoComplete="current-password"
                         fgColor="white"
-                        bgColor="darkest_blue"
+                        bgColor="primary"
                     />
                     <Input
                         text="CONFIRM PASSWORD"
@@ -57,14 +57,14 @@ export default function Login() {
                         type="password"
                         autoComplete="current-password"
                         fgColor="white"
-                        bgColor="darkest_blue"
+                        bgColor="primary"
                     />
                     <Button
                         type="submit"
                         text="LET'S GO"
                         fg_color="black"
-                        bg_color="aqua"
-                        border="aqua"
+                        bg_color="quinary"
+                        border="quinary"
                         padding="32"
                     />
                 </Form>

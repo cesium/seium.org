@@ -70,7 +70,7 @@ export default function Index() {
 
       <Regulations/>
 
-      <Footer color="dark_blue" />
+      <Footer color="secondary" />
     </>
   )
 }

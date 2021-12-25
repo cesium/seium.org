@@ -44,7 +44,7 @@ export default function Dashboard(props) {
                         leaveFrom="translate-x-0"
                         leaveTo="-translate-x-full"
                     >
-                        <div className="relative flex-1 flex flex-col max-w-xs w-full bg-dark_blue">
+                        <div className="relative flex-1 flex flex-col max-w-xs w-full bg-secondary">
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-in-out duration-300"
@@ -78,8 +78,8 @@ export default function Dashboard(props) {
                                             key={item}
                                             href={item}
                                             className={classNames(
-                                                item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
-                                                'font-ibold group flex items-center px-8 py-8 text-xs border-b-2 border-medium_blue border-opacity-50'
+                                                item == props.href ? 'bg-primary text-quinary' : 'text-white hover:bg-primary hover:bg-opacity-50',
+                                                'font-ibold group flex items-center px-8 py-8 text-xs border-b-2 border-tertiary border-opacity-50'
                                             )}
                                         >
                                             {item.toUpperCase()}
@@ -113,7 +113,7 @@ export default function Dashboard(props) {
             </Transition.Root>
 
             <div className="hidden md:flex md:w-72 md:flex-col md:fixed md:inset-y-0">
-                <div className="flex-1 flex flex-col min-h-0 bg-dark_blue">
+                <div className="flex-1 flex flex-col min-h-0 bg-secondary">
                     <div className="flex-1 flex flex-col pt-5 pb-10 overflow-y-auto">
                         <Return top="0" left="4" mt="10" mt_sm="10" />
                         <div className="mt-20 flex items-center flex-shrink-0 px-4">
@@ -133,15 +133,15 @@ export default function Dashboard(props) {
                                     key={item}
                                     href={item}
                                     className={classNames(
-                                        item == props.href ? 'bg-darkest_blue text-aqua' : 'text-white hover:bg-darkest_blue hover:bg-opacity-50',
-                                        'group flex items-center px-8 py-8 text-xs font-ibold border-b-2 border-medium_blue border-opacity-50'
+                                        item == props.href ? 'bg-primary text-quinary' : 'text-white hover:bg-primary hover:bg-opacity-50',
+                                        'group flex items-center px-8 py-8 text-xs font-ibold border-b-2 border-tertiary border-opacity-50'
                                     )}
                                 >
                                     {item.toUpperCase()}
                                 </a>
                             ))}
                         </nav>
-                        <a href="/login" className="text-aqua px-4 font-iregular">
+                        <a href="/login" className="text-quinary px-4 font-iregular">
                             Log out 👋
                         </a>
                     </div>
@@ -160,7 +160,7 @@ export default function Dashboard(props) {
                 <main className="flex-1">
                     <div className="py-6">
                         <div className="max-w-7xl md:mx-20 px-4 sm:px-6 md:px-8">
-                            <p className="pt-20 font-ibold text-5xl text-dark_blue">
+                            <p className="pt-20 font-ibold text-5xl text-secondary">
                                 {props.title}
                             </p>
                             <p className="font-iregular text-lg text-black pt-2">

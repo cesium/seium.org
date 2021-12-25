@@ -94,7 +94,7 @@ export default function Schedule(props)
                      showFilters = { props.detailed } updateFilters = { props.detailed ? function() {} : update_filters } />;
 
     return (
-        <div className={`spacing ${styles.responsiveGrid}  bg-medium_blue pt-20`}>
+        <div className={`spacing ${styles.responsiveGrid}  bg-tertiary pt-20`}>
             <div className={`${styles.tlefGridElem} ${styles.responsiveCentered} mb-10 `}>
                 <div className="sticky top-12">
                     { day }

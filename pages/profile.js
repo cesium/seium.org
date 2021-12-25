@@ -15,7 +15,7 @@ export default function Profile() {
         <div className="mt-12 col-span-1 w-full md:w-1/2 float-left">
           <Heading text="User Profile">
             <div className="w-24">
-              <Button bg_color="aqua" fg_color="white" text="Edit"></Button>
+              <Button bg_color="quinary" fg_color="white" text="Edit"></Button>
             </div>
           </Heading>
           <div className="pl-6">          
@@ -45,7 +45,7 @@ export default function Profile() {
                   bgColor="white"
                   fgColor="black"
               />
-              <a href="#" className="text-iregular pl-6 text-aqua h-auto inline-block underline">Reset Password</a>
+              <a href="#" className="text-iregular pl-6 text-quinary h-auto inline-block underline">Reset Password</a>
           </Form>
         </div>
 
