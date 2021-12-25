@@ -8,7 +8,7 @@ export default function Awards() {
     <Dashboard>
         <div>
             <div className="md:mt-16 mt-8">
-                <h1 className="font-bold text-4xl text-iextrabold sm:text-5xl">STAFF</h1>
+                <h1 className="font-ibold text-4xl text-iextrabold sm:text-5xl">STAFF</h1>
             </div>
             
             <div className="grid-cols-2 overflow-hidden">
