@@ -19,6 +19,8 @@ import Heading from '/components/moonstone/user/utils/Heading';
 import CodeInput from '/components/moonstone/user/profile/CodeInput';
 import CheckpointTracker from '/components/moonstone/user/profile/CheckpointTracker';
 
+import FileInput from '/components/utils/FileInput';
+
 export default function Profile() {
   return (
     <Dashboard href="profile" title="User Profile" description="Hi John, welcome to your profile">
