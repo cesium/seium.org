@@ -1,7 +1,7 @@
-import Hero from '/components/landing/team/Hero';
-import Organization from '/components/landing/team/Organization';
-import FindUs from '/components/landing/team/FindUs';
-import Footer from '/components/landing/utils/Footer';
+import Hero from '/components/website/team/Hero';
+import Organization from '/components/website/team/Organization';
+import FindUs from '/components/website/team/FindUs';
+import Footer from '/components/website/utils/Footer';
 
 export default function Index() {
   return (

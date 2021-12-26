@@ -3,16 +3,17 @@ import Fade from "react-reveal/Fade";
 import Button from "/components/utils/Button";
 import Card from "/components/utils/Card";
 
-import Return from "/components/moonstone/Return";
-import Title from "/components/moonstone/Title";
-import Form from "/components/moonstone/Form";
-import Input from "/components/moonstone/Input";
-import Text from "/components/moonstone/Text";
+import Return from "/components/moonstone/utils/Return";
+import Form from "/components/moonstone/utils/Form";
+import Input from "/components/moonstone/utils/Input";
+
+import Title from "/components/moonstone/authentication/Title";
+import Text from "/components/moonstone/authentication/Text";
 
 export default function Login() {
     return (
         <div className="overflow-hidden bg-dark_blue min-h-screen">
-            <Return top="10" left="40" mt="10" mt_sm="10" />
+            <Return ml="4" mt="10" mt_sm="10" />
             <div className="mt-10 sm:mt-40 flex flex-col items-center justify-center">
                 <Title text="Log in" />
                 <div className="mt-8">

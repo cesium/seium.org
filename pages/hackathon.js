@@ -1,15 +1,15 @@
-import Hero from '/components/landing/hackathon/Hero';
-import PeopleShowcase from '/components/landing/utils/PeopleShowcase';
-import UnderlineAnimation from '/components/landing/utils/UnderlineAnimation';
-import Awards from '/components/landing/hackathon/Awards';
-import Regulations from '/components/landing/hackathon/Regulations';
+import Hero from '/components/website/hackathon/Hero';
+import PeopleShowcase from '/components/website/utils/PeopleShowcase';
+import UnderlineAnimation from '/components/website/utils/UnderlineAnimation';
+import Awards from '/components/website/hackathon/Awards';
+import Regulations from '/components/website/hackathon/Regulations';
 
-import Speaker from '/components/landing/utils/Speaker';
-import Footer from '/components/landing/utils/Footer';
+import Speaker from '/components/website/utils/Speaker';
+import Footer from '/components/website/utils/Footer';
 
 function JuryTitle() {
     return (
-        <UnderlineAnimation>
+        <UnderlineAnimation text="These are the one to fear. Just saying">
             The Jury
         </UnderlineAnimation>
     );
