@@ -4,7 +4,7 @@ import SponsorPrizeButton from '/components/moonstone/sponsor/dashboard/SponsorP
 import SponsorBadgeButton from '/components/moonstone/sponsor/dashboard/SponsorBadgeButton';
 import ParticipantSelector from '/components/moonstone/sponsor/dashboard/ParticipantSelector';
 
-export default function Dashboard() {
+export default function SponsorDashboard() {
     const participants = ["Nome 1", "Nome 2", "Nome 3", "Nome 4"];
 
     const onParticipantChange = (p) => {};

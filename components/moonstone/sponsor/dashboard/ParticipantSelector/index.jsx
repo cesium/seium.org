@@ -15,7 +15,6 @@ export default function ParticipantSelector({participants, onParticipantChange})
         defaultState.push(false);
 
     const [st, updateState] = useState(defaultState);
-
     const changeParticipant = (n) => {
         //Making a deep copy of the state array so that when it is updated
         //the component rerenders. If we do a shallow copy, React will not
