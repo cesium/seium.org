@@ -26,7 +26,7 @@ function BadgeButton({ text, val, setValue, selected }) {
 
     let button =
         <button
-            className={`${selected ? "bg-aqua" : "bg-white text-opacity-40"} 
+            className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"} 
                         ${text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"}           
                         w-full rounded-full inline-flex items-center text-sm text-black
                        `}

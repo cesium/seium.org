@@ -9,7 +9,7 @@ export default function Index() {
       <Hero />
       <Organization />
       <FindUs />
-      <Footer color="medium_light_blue" />
+      <Footer color="quaternary" />
     </>
   )
 }

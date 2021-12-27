@@ -13,9 +13,9 @@ function Question(props) {
             <p className={showQuestion ? "hidden" : ""}>{description}</p>
             <div className="flex justify-end items-center">
                 <Link href={href}>
-                    <a className="text-aqua font-iextrabold text-sm mr-4">{link}</a>
+                    <a className="text-quinary font-iextrabold text-sm mr-4">{link}</a>
                 </Link>
-                <button className="bg-aqua px-2 font-iextrabold text-xl text-white rounded-full w-16" onClick={() => setShowQuestion(!showQuestion)}>
+                <button className="bg-quinary px-2 font-iextrabold text-xl text-white rounded-full w-16" onClick={() => setShowQuestion(!showQuestion)}>
                     {showQuestion ? "+" : "-"}
                 </button>
             </div>

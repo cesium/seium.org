@@ -7,7 +7,7 @@ const Map = dynamic(() => import('./Map'), {
 
 export default function FindUs() {
     return (
-        <section className="flex flex-col lg:flex-row lg:justify-between bg-medium_light_blue py-20 spacing">
+        <section className="flex flex-col lg:flex-row lg:justify-between bg-quaternary py-20 spacing">
             <div className="flex flex-col text-white mb-10 mr-10">
                 <h2 className="font-iextrabold text-6xl mb-2">How to find us</h2>
 

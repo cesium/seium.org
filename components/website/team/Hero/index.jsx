@@ -8,11 +8,11 @@ const Animation = dynamic(() => import('./Animation'), { ssr: false })
 
 export default function Hero() {
   return (
-    <div className="bg-medium_light_blue spacing">
+    <div className="bg-quaternary spacing">
       <div className="z-50 relative">
         <Animation />
         <div className="pt-14">
-          <Navbar button="medium_blue" fg_color="white"/>
+          <Navbar button="tertiary" fg_color="white"/>
         </div>
         <div className="pt-2">
           <Title />

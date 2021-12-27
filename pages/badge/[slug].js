@@ -12,7 +12,7 @@ function BadgeOwner({ user, badge, when }) {
                 <p className="text-iregular">{badge}</p>
             </div>
             <div className="text-right">
-                <p className="font-bold text-aqua text-ibold">{when}</p>
+                <p className="font-bold text-quinary text-ibold">{when}</p>
 
             </div>
         </div>

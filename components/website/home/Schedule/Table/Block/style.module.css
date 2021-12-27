@@ -16,7 +16,7 @@
 }
 
 .clickable:hover .block {
-    @apply bg-medium_light_blue;
+    @apply bg-tertiary;
     border-top: 0px;
     padding-top: 11px;
 }
@@ -54,7 +54,7 @@
 }
 
 .clickable:hover .location {
-    @apply text-dark_blue;
+    @apply text-secondary;
 }
 
 .bottomRightCorner {
@@ -75,7 +75,7 @@
 }
 
 .clickable:hover .hyperlink {
-    @apply text-dark_blue
+    @apply text-secondary
 }
 
 .expand {
@@ -86,5 +86,5 @@
 }
 
 .clickable:hover .expand {
-    @apply border-dark_blue text-dark_blue
+    @apply border-secondary text-secondary
 }

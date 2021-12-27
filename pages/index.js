@@ -14,7 +14,7 @@ export default function Index() {
       <Sponsors/>
       <Hackathon />
       <Speakers />
-      <Footer color="dark_blue" />
+      <Footer color="secondary" />
     </>
   )
 }
