@@ -6,7 +6,7 @@ import Form from '/components/moonstone/utils/Form';
 import Input from '/components/moonstone/utils/Input';
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
-import Heading from '/components/moonstone/user/utils/Heading';
+import Heading from '/components/moonstone/utils/Heading';
 
 import CodeInput from '/components/moonstone/user/profile/CodeInput';
 import CheckpointTracker from '/components/moonstone/user/profile/CheckpointTracker';
