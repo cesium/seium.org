@@ -1,13 +1,5 @@
 import Image from 'next/image'
 
-<<<<<<< HEAD
-=======
-import Dashboard from "/components/moonstone/Dashboard";
-import Form from '/components/moonstone/Form';
-import Input from '/components/moonstone/Input';
-import FileInput from '/components/moonstone/FileInput';
-import Heading from '/components/moonstone/Heading';
->>>>>>> 2609399 (Added cv button)
 import Button from '/components/utils/Button';
 
 import Form from '/components/moonstone/utils/Form';
