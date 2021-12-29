@@ -1,5 +1,13 @@
 import Image from 'next/image'
 
+<<<<<<< HEAD
+=======
+import Dashboard from "/components/moonstone/Dashboard";
+import Form from '/components/moonstone/Form';
+import Input from '/components/moonstone/Input';
+import FileInput from '/components/moonstone/FileInput';
+import Heading from '/components/moonstone/Heading';
+>>>>>>> 2609399 (Added cv button)
 import Button from '/components/utils/Button';
 
 import Form from '/components/moonstone/utils/Form';
@@ -14,8 +22,8 @@ import CheckpointTracker from '/components/moonstone/user/profile/CheckpointTrac
 export default function Profile() {
   return (
     <Dashboard href="profile" title="User Profile" description="Hi John, welcome to your profile">
-      <div className="grid-cols-2 overflow-hidden">
-        <div className="mt-12 col-span-1 w-full md:w-1/2 float-left">
+      <div className="grid-cols-2 overflow-hidden mt-12">
+        <div className="col-span-1 w-full md:w-1/2 float-left">
           <Heading text="User Profile">
             <div className="w-24">
               <Button bg_color="quinary" fg_color="white" text="Edit"></Button>
@@ -48,11 +56,18 @@ export default function Profile() {
                   bgColor="white"
                   fgColor="black"
               />
-              <a href="#" className="text-iregular pl-6 text-quinary h-auto inline-block underline">Reset Password</a>
+
+              <a href="#" className="pl-6 text-quinary h-auto inline-block underline">Reset Password</a>
+
+              <FileInput
+                  text="UPLOAD YOUR CV"
+                  id="cv"
+                  name="cv"
+              />
           </Form>
         </div>
 
-        <div className="mt-12 col-span-1 w-full md:w-1/2 float-right md:pl-6">
+        <div className="col-span-1 w-full md:w-1/2 float-right md:pl-6">
           <div>
             <Heading text="Achievements"></Heading>
 
