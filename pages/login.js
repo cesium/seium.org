@@ -12,7 +12,7 @@ import Text from "/components/moonstone/authentication/Text";
 
 export default function Login() {
     return (
-        <div className="overflow-hidden bg-dark_blue min-h-screen">
+        <div className="overflow-hidden bg-secondary min-h-screen">
             <Return ml="4" mt="10" mt_sm="10" />
             <div className="mt-10 sm:mt-40 flex flex-col items-center justify-center">
                 <Title text="Log in" />
@@ -24,7 +24,7 @@ export default function Login() {
                             name="email"
                             type="email"
                             fgColor="white"
-                            bgColor="darkest_blue"
+                            bgColor="primary"
                             autoComplete="email"
                         />
                         <Input
@@ -33,7 +33,7 @@ export default function Login() {
                             name="password"
                             type="password"
                             fgColor="white"
-                            bgColor="darkest_blue"
+                            bgColor="primary"
                             autoComplete="current-password"
                         />
                         <Text padding="6" text="Forgot your password?" link="Right this way" href="#" />
@@ -41,8 +41,8 @@ export default function Login() {
                             type="submit"
                             text="LET'S GO"
                             fg_color="black"
-                            bg_color="aqua"
-                            border="aqua"
+                            bg_color="quinary"
+                            border="quinary"
                             padding="32"
                         />
                     </Form>

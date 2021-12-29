@@ -4,7 +4,7 @@ import challenges from '/data/challenges.json';
 
 export default function Challenges() {
     return (
-        <div className="flex flex-col w-full bg-dark_blue px-40 pb-20 spacing">
+        <div className="flex flex-col w-full bg-secondary px-40 pb-20 spacing">
             {Object.keys(challenges).map(key =>
                 <div key={key}>
                     <Challenge

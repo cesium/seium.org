@@ -7,7 +7,7 @@ export default function Filter() {
       <select
         id="location"
         name="location"
-        className="rounded-full mt-1 block w-full pl-3 pr-10 py-2 border border-aqua ring-aqua focus:border-aqua text-sm"
+        className="rounded-full mt-1 block w-full pl-3 pr-10 py-2 border border-quinary ring-quinary focus:border-quinary text-sm"
         defaultValue="CATEGORY"
       >
         {options.map(option =>
