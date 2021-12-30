@@ -1,7 +1,8 @@
 import challenges from '/data/challenges.json'
 
-export default function List(title) {
+export default function List({ title }) {
     const list = Object.keys(challenges)
+
     return (
         <ul className="font-ibold text-xl">
             {list.map((challenge, i) =>

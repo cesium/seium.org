@@ -10,7 +10,16 @@ import Card from "/components/utils/Card";
 
 import styles from './style.module.css';
 
-function Animation(props) {
+function DefaultAnimation() {
+  return (
+    <>
+      Psst. Have you checked the <a className="text-quaternary font-bold hover:underline" href="/challenges">challenges</a>? Just
+              saying.
+    </>
+  );
+}
+
+function Animation({text}) {
   const { observe, unobserve, inView, scrollDirection, entry } = useInView({
     threshold: 0.25,
     onChange: ({ observe, unobserve }) => {
@@ -26,8 +35,7 @@ function Animation(props) {
         <Fade bottom>
           <div className={`-mt-6 ${styles.cardfooter}`}>
             <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
-              Psst. Have you checked the <a className="text-quaternary font-bold hover:underline" href="/challenges">challenges</a>? Just
-              saying.
+              {text}
             </Card>
           </div>
         </Fade> :
@@ -76,7 +84,7 @@ export default function Footer(props) {
         </div>
       </div>
       <div className="-mt-20 pb-10 flex justify-center invisible xl:visible">
-        <Animation>
+        <Animation text={props.animationText != undefined ? props.animationText : <DefaultAnimation/>}>
           {props.children}
         </Animation>
       </div>
