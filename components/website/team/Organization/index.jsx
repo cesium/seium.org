@@ -52,7 +52,7 @@ export default function Organization() {
       : "";
     
     return (
-        <section className="py-20 grid grid-cols-1 lg:grid-cols-2 gap-x-32 gap-y-8 bg-medium_light_blue spacing">
+        <section className="py-20 grid grid-cols-1 lg:grid-cols-2 gap-x-32 gap-y-8 bg-quaternary spacing">
             <div className="text-white">
                 <h2 className="font-iextrabold text-6xl font-bold mb-4">
                     Organization

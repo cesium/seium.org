@@ -26,7 +26,7 @@ function Animation(props) {
         <Fade bottom>
           <div className={`-mt-6 ${styles.cardfooter}`}>
             <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
-              Psst. Have you checked the <a className="text-medium_light_blue font-bold hover:underline" href="/challenges">challenges</a>? Just
+              Psst. Have you checked the <a className="text-quaternary font-bold hover:underline" href="/challenges">challenges</a>? Just
               saying.
             </Card>
           </div>
