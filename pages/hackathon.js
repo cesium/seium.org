@@ -10,7 +10,7 @@ import Footer from '/components/website/utils/Footer';
 function JuryTitle() {
     return (
         <UnderlineAnimation text="These are the one to fear. Just saying">
-            The Jury
+            <h2 className="font-bold text-white text-5xl md:text-6xl md:w-full relative z-0">The Jury</h2>
         </UnderlineAnimation>
     );
 }
@@ -27,7 +27,7 @@ function JurySubtitle() {
 
 function MentorsTitle() {
     return (
-        <h2 className="font-bold text-white text-6xl md:text-8xl md:w-full relative z-0">
+        <h2 className="font-bold text-white text-5xl md:text-6xl md:w-full relative z-0">
             The mentors
         </h2>
     );
