@@ -13,7 +13,7 @@ function Action({ text, url }) {
 
 export default function Challenge({title, description, prizes, rules}) {
     return (
-        <div className="grid lg:grid-cols-2 grid-cols-1 mb-24">
+        <div className="grid lg:grid-cols-2 grid-cols-1 mb-24 sticky top-0">
             <div className="hidden lg:block">
             <List title={title}/>
             </div>
