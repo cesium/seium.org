@@ -7,7 +7,7 @@ export default function Pitch() {
                 We gather speakers, attract parterns and give our imagination wings, all for this to be your favorite week.
             </h2>
             <div className="mt-8">
-                <Button text="KNOW THE TEAM"/>
+                <Button text="KNOW THE TEAM" fg_color="white"/>
             </div>
         </div>
     );

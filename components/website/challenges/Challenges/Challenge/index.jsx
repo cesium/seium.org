@@ -6,7 +6,7 @@ import List from '../../List';
 function Action({ text, url }) {
   return (
     <div className="w-40">
-      <Button href={url} text={text} fg_color="white" />
+      <Button onClick={(e) => window.location.href = url} text={text} fg_color="white" />
     </div>
   );
 }
