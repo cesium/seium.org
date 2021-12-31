@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Image from 'next/image'
+
 import Tab from './Tab';
 
 import styles from './style.module.css';
@@ -27,8 +29,14 @@ export default function Sponsors(props) {
 
             <div className={styles.blockWrapper}>
                 <div className={styles.leftBlock}>
+                    <p className={` text-3xl text-iextrabold text-white`}> {val ? "Exclusive" : "Silver"}</p>
+                    <div className= 'mt-10 grid-cols-1'>
+                    <Image className={`${val ? "visible" : "invisible"} `} src="/images/sponsors/accenture.svg" width={250} height={50} alt="Accenture"/>
+                    </div>
                 </div>
+
                 <div className={styles.rightBlock}>
+                <h5 className={` text-3xl text-iextrabold text-white`}> {val ? "Gold" : "Bronze"}</h5>
                 </div>
 
             </div>
