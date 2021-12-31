@@ -35,7 +35,7 @@ export default function Table(props) {
     else
         return (
             <div className="flex flex-col">
-                {obj.speakers.map(speaker => ( <Block {...speaker} /> ))}
+                {obj.speakers.map(speaker => (<Block {...speaker} />))}
             </div >
         );
 }

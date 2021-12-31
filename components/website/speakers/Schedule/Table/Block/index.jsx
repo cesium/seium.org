@@ -11,7 +11,7 @@ export default function Block({ id, name, role, company, talk, linkedin, github,
     const [showSpeaker, setShowSpeaker] = useState(true)
 
     return (
-        <div className="text-white border-t-2 border-white py-4">
+        <div key={id} className="text-white border-t-2 border-white py-4">
             <div className="flex mb-2">
                 <Image src={`/images/speakers/${id}.png`} width="210" height="210" />
 
