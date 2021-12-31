@@ -1,25 +1,26 @@
+import { useState } from 'react'
+
 import Link from 'next/link'
 import Image from "next/image"
-import React, { useState } from 'react';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithubAlt, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-import speakers from '/data/speakers';
+export default function Block({ id, name, role, company, talk, linkedin, github, twitter, href, description }) {
 
-function Speaker({ id, name, role, company, talk, linkedin, github, twitter, href, description }) {
     const [showSpeaker, setShowSpeaker] = useState(true)
 
     return (
         <div className="text-white border-t-2 border-white py-4">
             <div className="flex mb-2">
-                <Image src={`/images/speakers/${id}.png`} width="210" height="210"/>
+                <Image src={`/images/speakers/${id}.png`} width="210" height="210" />
 
                 <div className="flex flex-col justify-between ml-4 w-full">
                     <div className="flex justify-between">
                         <div>
                             <h2 className="text-xl font-iextrabold">{name}</h2>
-                            <p className="">{ role }</p>
-                            <p className="">{ company }</p>
+                            <p className="">{role}</p>
+                            <p className="">{company}</p>
                         </div>
 
                         <div className="flex">
@@ -43,7 +44,7 @@ function Speaker({ id, name, role, company, talk, linkedin, github, twitter, hre
 
                     <div className="flex justify-end items-center">
                         <p className="text-gray-400 grow">
-                            { talk }
+                            {talk}
                         </p>
                         <Link href={href}>
                             <a className="text-quinary font-iextrabold text-sm mr-4">Go to event</a>
@@ -54,18 +55,8 @@ function Speaker({ id, name, role, company, talk, linkedin, github, twitter, hre
                     </div>
                 </div>
             </div>
-            
-            <p className={showSpeaker ? "hidden" : ""}>{description}</p>
-        </div>
-    );
-}
 
-export default function SpeakersList(props) {
-    return (
-        <div className="flex flex-col">
-            {speakers.map((speaker) => (
-                <Speaker {...speaker} />
-            ))}
+            <p className={showSpeaker ? "hidden" : ""}>{description}</p>
         </div>
     );
 }

@@ -24,13 +24,6 @@ export default function Day(props)
     const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Set", "Oct", "Nov", "Dec" ];
     let date = props.date.split("/");
     let date_string = date[2] + " " + months[date[1] - 1];
-    let date_descriptor = getDayDescriptor(parseInt(date[0]), parseInt(date[1]), parseInt(date[2]));
-
-    if (props.showFilters)
-    {
-        //TODO: filters
-        //<Filters updateFilters = { props.updateFilters } />
-    }
 
     return (
         <div className={`${styles.wrapper} text-7xl md:text-8xl`}>
@@ -39,8 +32,8 @@ export default function Day(props)
             </div>
 
             <div className={`-mt-10 ${styles.dateWrapper}`}>
-                <h5 className="text-3xl text-quinary font-ibold"> { date_string } </h5>
-                <h2 className={`font-iextrabold text-white`}> { date_descriptor } </h2>
+                <h5 className="text-3xl text-quinary font-ibold"> Happening on </h5>
+                <h2 className={`font-iextrabold text-white`}> { date_string } </h2>
             </div>
             
             <div className={`${styles.rightArrow} ${styles.arrowWrapper}`}>

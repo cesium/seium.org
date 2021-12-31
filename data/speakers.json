@@ -1,48 +1,89 @@
 [
     {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "role": "CEO and Founder",
-        "company": "Bright Pixel",
-        "talk": "Talk. 14h",
-        "linkedin": "filipe-felício-5077821a3",
-        "github": "necc",
-        "twitter": "",
-        "href": "",
-        "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+        "date": "2022/2/15",
+        "speakers": [
+            {
+                "id": "joaooliveira",
+                "name": "Celso Martinho",
+                "role": "CEO and Founder",
+                "company": "Bright Pixel",
+                "talk": "Talk. 14h",
+                "linkedin": "filipe-felício-5077821a3",
+                "github": "necc",
+                "twitter": "",
+                "href": "",
+                "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+            },
+            {
+                "id": "joaooliveira",
+                "name": "Celso Martinho",
+                "role": "CEO and Founder",
+                "company": "Bright Pixel",
+                "talk": "Talk. 14h",
+                "linkedin": "filipe-felício-5077821a3",
+                "github": "necc",
+                "twitter": "",
+                "href": "",
+                "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+            },
+            {
+                "id": "joaooliveira",
+                "name": "Celso Martinho",
+                "role": "CEO and Founder",
+                "company": "Bright Pixel",
+                "talk": "Talk. 14h",
+                "linkedin": "filipe-felício-5077821a3",
+                "github": "necc",
+                "twitter": "",
+                "href": "",
+                "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+            },
+            {
+                "id": "joaooliveira",
+                "name": "Celso Martinho",
+                "role": "CEO and Founder",
+                "company": "Bright Pixel",
+                "talk": "Talk. 14h",
+                "linkedin": "filipe-felício-5077821a3",
+                "href": "",
+                "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+            }
+        ]
     },
     {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "role": "CEO and Founder",
-        "company": "Bright Pixel",
-        "talk": "Talk. 14h",
-        "linkedin": "filipe-felício-5077821a3",
-        "github": "necc",
-        "twitter": "",
-        "href": "",
-        "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+        "date": "2022/2/16",
+        "speakers": [
+            {
+                "id": "joaooliveira",
+                "name": "Celso Martinho",
+                "role": "CEO and Founder",
+                "company": "Bright Pixel",
+                "talk": "Talk. 14h",
+                "linkedin": "filipe-felício-5077821a3",
+                "href": "",
+                "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+            }
+        ]
     },
     {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "role": "CEO and Founder",
-        "company": "Bright Pixel",
-        "talk": "Talk. 14h",
-        "linkedin": "filipe-felício-5077821a3",
-        "github": "necc",
-        "twitter": "",
-        "href": "",
-        "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+        "date": "2022/2/17",
+        "speakers": [
+            {
+                "id": "joaooliveira",
+                "name": "Celso Martinho",
+                "role": "CEO and Founder",
+                "company": "Bright Pixel",
+                "talk": "Talk. 14h",
+                "linkedin": "filipe-felício-5077821a3",
+                "href": "",
+                "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+            }
+        ]
     },
     {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "role": "CEO and Founder",
-        "company": "Bright Pixel",
-        "talk": "Talk. 14h",
-        "linkedin": "filipe-felício-5077821a3",
-        "href": "",
-        "description": "Celso Martinho is someone that finds motivation in challenges, an optimistic technological geek, a man of the product and a business oriented soul, thrown into a managerial career. Founder of SAPO, the biggest internet project in Portugal, now a media company and part of the innovation engine that is Portugal Telecom, he now builds large scale B2C services in areas such as: cloud, e-commerce, e-payments and IPTV interactivity. His past is composed of high level management, software projects management, systems architecture, technical product development and several decades of experience in the telecom and internet industries. Celso is also the CEO and founder of Bright Pixel, a software studio, home to a team of industrie experts with vast experience using technology and creativity to create products with global reach and services in a diverse group of areas such as web development, security, e-payment, big-data and user interface design."
+        "date": "2022/2/18",
+        "speakers": [
+
+        ]
     }
 ]

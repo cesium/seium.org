@@ -13,15 +13,13 @@ export default function Hero() {
     <div className="bg-secondary">
       <div className="spacing pb-32 z-50 relative">
         <Animation />
-        <div className="pt-14">
-          <Navbar button="quinary" fg_color="black" />
-        </div>
+        <Navbar button="quinary" fg_color="black" />
         <div className="pt-2">
           <Title />
         </div>
         <div className="relative grid grid-cols-2 mt-20">
           <div className="absolute left-0 text-white">
-            <Button text="Register your team"/>
+            <Button text="Register your team" />
             <span className="pl-7 text-white">3-5 people</span>
           </div>
           <Organization />

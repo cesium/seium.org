@@ -12,7 +12,7 @@ const navigation = [
 
 export default function Navbar({ button, fg_color }) {
     return (
-        <div className="flex flex-auto z-50 relative">
+        <div className="pt-8 flex flex-auto z-50 relative">
             <div className="grid grid-cols-4 w-full">
                 <a href="/" className="">
                     <Image src="/images/sei-logo.svg" width="50" height="40" />
