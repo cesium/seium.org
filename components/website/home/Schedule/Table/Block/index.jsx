@@ -29,7 +29,7 @@ export default function Block(props) {
             { !props.coffeeBreak &&
                 <div className={styles.bottomRightCorner}>
                     { props.hyperlink !== undefined &&
-                        <a href={props.hyperlink} target="_blank" className={`${styles.hyperlink} text-lg text-blue-400 font-ibold`}>
+                        <a href={props.hyperlink} target="_blank" className={`${styles.hyperlink} text-lg text-quinary font-ibold`}>
                             Join
                         </a>
                     }

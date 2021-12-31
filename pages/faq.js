@@ -5,7 +5,7 @@ import Faqs from '../components/website/faqs';
 export default function Faq() {
   return (
     <>
-			<div className="spacing py-10 bg-secondary">
+			<div className="spacing bg-secondary">
 	      <Navbar button={"quinary"} fg_color={"black"}/>
 			</div>
 			<Faqs />

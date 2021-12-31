@@ -11,9 +11,7 @@ export default function Hero() {
     <div className="bg-quaternary spacing">
       <div className="z-50 relative">
         <Animation />
-        <div className="pt-14">
-          <Navbar button="tertiary" fg_color="white"/>
-        </div>
+        <Navbar button="tertiary" fg_color="white" />
         <div className="pt-2">
           <Title />
         </div>

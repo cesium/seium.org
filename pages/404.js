@@ -9,10 +9,8 @@ export default function Error() {
             <div className="absolute invisible xl:visible xl:w-full xl:h-screen left-0">
                 {<Image src="/images/ponto.svg" layout="fill" alt="Question mark" />}
             </div>
+            <Navbar button="quinary" fg_color="black" />
             <div className="pt-14">
-                <Navbar button="quinary" fg_color="black" />
-            </div>
-            <div className="pt-2">
                 <div className="font-iextrabold z-50 relative">
                     <h5 className="text-7xl lg:text-8xl xl:text-9xl text-quinary">
                         404
