@@ -33,7 +33,7 @@ export default function Sponsors(props) {
                     return(
                         <div key={key} className={`${key == 1 ? "border-l-2 border-white" : undefined } w-1/2`}>
                             <div className="grid grid-cols-1 w-full place-items-center px-[10%]">
-                                <p className="text-3xl font-iextrabold text-white pb-10"> {!val ? (key == 0 ? "Exclusive" : "Gold") : (key == 1 ? "Silver" : "Bronze")} </p>
+                                <p className="text-3xl font-iextrabold text-white pb-10"> {!val ? (key == 0 ? "Exclusive" : "Gold") : (key == 0 ? "Silver" : "Bronze")} </p>
                                 <div className={`${!val && key == 0 ? "grid-cols-1" : "grid-cols-2"} grid gap-10`}>
                                     {elem.map((sponsor,i) => {
                                         return(
