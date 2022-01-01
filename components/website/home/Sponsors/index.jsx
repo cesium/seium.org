@@ -4,36 +4,10 @@ import Image from 'next/image'
 
 import Tab from './Tab';
 
-import styles from './style.module.css';
-import Link from 'next/link';
+import sponsors from '/data/sponsors.json'
 
 export default function Sponsors(props) {
     const [val, setValue] = useState(0);
-
-    const sponsors = [
-        [
-            [
-                {image: "accenture",link: "https://cesium.link"}
-            ],
-            [
-                {image: "continental",link: "https://cesium.link"},
-                {image: "rentailconsult",link: "https://cesium.link"},
-                {image: "saltpay",link: "https://cesium.link"},
-                {image: "uphold",link: "https://cesium.link"}
-            ],
-        ],
-        [
-            [
-                {image: "deloitte",link: "https://cesium.link"},
-                {image: "ey",link: "https://cesium.link"},
-                {image: "farfetch",link: "https://cesium.link"},
-                {image: "glintt",link: "https://cesium.link"},
-                {image: "xpandit",link: "https://cesium.link"},
-                {image: "yarilabs",link: "https://cesium.link"}
-            ],
-            []
-        ]
-    ]
 
     return (
         <div className="spacing bg-tertiary text-white py-20">
@@ -44,7 +18,7 @@ export default function Sponsors(props) {
             </div>
 
             <div className="flex flex-row justify-center pt-[6vw]">
-                {sponsors[val].map((elem,key) => {
+                {sponsors[val].map((elem, key) => {
                     return(
                         <div key={key} className={`${key == 1 ? "border-l-2 border-white" : undefined } w-1/2`}>
                             <div className="grid grid-cols-1 w-full place-items-center px-[10%]">
