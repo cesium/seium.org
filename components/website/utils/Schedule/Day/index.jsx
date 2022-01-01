@@ -34,11 +34,11 @@ export default function Day(props)
             </div>
 
             <div className={`-mt-10 ${styles.dateWrapper}`}>
-                <h5 className="text-3xl text-quinary textTransition font-ibold">
-                    { date_string }
+                <h5 className={`text-${props.fontSize == undefined ? "3xl" : props.fontSize} text-quinary font-ibold`}> 
+                    { date_string } 
                 </h5>
-                <h2 className={`font-iextrabold text-white`}>
-                    { date_descriptor }
+                <h2 className={`font-iextrabold text-${props.fg_color == undefined ? "white" : props.fg_color}`}> 
+                    { date_descriptor } 
                 </h2>
             </div>
             
