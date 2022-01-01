@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import Hero from '/components/website/schedule/Hero';
-import Schedule from '/components/website/schedule/Schedule';
 
+import Schedule from '/components/website/utils/Schedule';
 import Footer from '/components/website/utils/Footer';
 
 export default function Index() {
