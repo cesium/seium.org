@@ -17,17 +17,17 @@ export default function Sponsors(props) {
                 <Tab tabName="Silver & Bronze" selected={val} onSelect={() => setValue(1)} />
             </div>
 
-            <div className="flex flex-row justify-center pt-[6vw]">
+            <div className="flex flex-row justify-center pt-16 md:pt-[6vw]">
                 {sponsors[val].map((elem, key) => {
                     return(
                         <div key={key} className={`${key == 1 ? "border-l-2 border-white" : undefined } w-1/2`}>
                             <div className="grid grid-cols-1 w-full place-items-center px-[10%]">
-                                <p className="text-3xl font-iextrabold text-white pb-10"> {!val ? (key == 0 ? "Exclusive" : "Gold") : (key == 0 ? "Silver" : "Bronze")} </p>
-                                <div className={`${!val && key == 0 ? "grid-cols-1" : "grid-cols-2"} grid gap-10`}>
+                                <p className="text-2xl md:text-3xl font-iextrabold text-white pb-10"> {!val ? (key == 0 ? "Exclusive" : "Gold") : (key == 0 ? "Silver" : "Bronze")} </p>
+                                <div className={`${!val && key == 0 ? "grid-cols-1" : "grid-cols-2"} grid gap-2 md:gap-10`}>
                                     {elem.map((sponsor,i) => {
                                         return(
-                                            <a key={i} href={sponsor.link}>
-                                                <Image src={`/images/sponsors/${sponsor.image}.svg`} width={250} height={66} alt={sponsor.image}/>
+                                            <a href={sponsor.link}>
+                                                <Image key={i} src={`/images/sponsors/${sponsor.image}.svg`} width={250} height={66} alt={sponsor.image}/>
                                             </a>
                                         )})
                                     }
