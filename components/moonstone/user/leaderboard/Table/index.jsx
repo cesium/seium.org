@@ -1,4 +1,4 @@
-export default function LeaderboardTable({list, user, maxUsersToShow}) {
+export default function Table({list, user, maxUsersToShow}) {
     /*
         Notes: we are assuming the list is already sorted
         We are comparing the user by their name. This can be unreliable

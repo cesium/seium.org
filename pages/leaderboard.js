@@ -1,10 +1,9 @@
 import { useState } from 'react';
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
-import LeaderboardTable from "/components/moonstone/user/leaderboard/LeaderboardTable";
-import Day from "/components/website/home/Schedule/Day";
+import Table from "/components/moonstone/user/leaderboard/Table";
 
-
+import Day from "/components/website/utils/Schedule/Day";
 
 function leapYear(year)
 {
@@ -116,7 +115,7 @@ export default function Leaderboard() {
                     <button className={`font-iregular bg-${st.hallOfFame ? "quinary" : "white"} rounded-full h-12 ml-12 text-center items-center px-4 py-1`}
                         onClick={(e) => changeLeaderboard(true)}>HALL OF FAME</button>
 
-                    <LeaderboardTable list={list} user="Me" maxUsersToShow={5}/>
+                    <Table list={list} user="Me" maxUsersToShow={5}/>
                 </div>
             </div>
         </Dashboard>
