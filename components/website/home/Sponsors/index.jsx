@@ -26,8 +26,8 @@ export default function Sponsors(props) {
                                 <div className={`${!val && key == 0 ? "grid-cols-1" : "grid-cols-2"} grid gap-2 md:gap-10`}>
                                     {elem.map((sponsor,i) => {
                                         return(
-                                            <a href={sponsor.link}>
-                                                <Image key={i} src={`/images/sponsors/${sponsor.image}.svg`} width={250} height={66} alt={sponsor.image}/>
+                                            <a key={i} href={sponsor.link}>
+                                                <Image src={`/images/sponsors/${sponsor.image}.svg`} width={250} height={66} alt={sponsor.image}/>
                                             </a>
                                         )})
                                     }
