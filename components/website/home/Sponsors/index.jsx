@@ -5,17 +5,32 @@ import Image from 'next/image'
 import Tab from './Tab';
 
 import styles from './style.module.css';
+import Link from 'next/link';
 
 export default function Sponsors(props) {
     const [val, setValue] = useState(0);
 
     const sponsors = [
         [
-            ["accenture"],
-            ["continental","rentailconsult","saltpay","uphold"],
+            [
+                {image: "accenture",link: "https://cesium.link"}
+            ],
+            [
+                {image: "continental",link: "https://cesium.link"},
+                {image: "rentailconsult",link: "https://cesium.link"},
+                {image: "saltpay",link: "https://cesium.link"},
+                {image: "uphold",link: "https://cesium.link"}
+            ],
         ],
         [
-            ["deloitte","ey","farfetch","glintt","xpandit","yarilabs"],
+            [
+                {image: "deloitte",link: "https://cesium.link"},
+                {image: "ey",link: "https://cesium.link"},
+                {image: "farfetch",link: "https://cesium.link"},
+                {image: "glintt",link: "https://cesium.link"},
+                {image: "xpandit",link: "https://cesium.link"},
+                {image: "yarilabs",link: "https://cesium.link"}
+            ],
             []
         ]
     ]
@@ -37,7 +52,9 @@ export default function Sponsors(props) {
                                 <div className={`${!val && key == 0 ? "grid-cols-1" : "grid-cols-2"} grid gap-10`}>
                                     {elem.map((sponsor,i) => {
                                         return(
-                                            <Image key={i} src={`/images/sponsors/${sponsor}.svg`} width={250} height={66} alt={sponsor}/>
+                                            <a href={sponsor.link}>
+                                                <Image key={i} src={`/images/sponsors/${sponsor.image}.svg`} width={250} height={66} alt={sponsor.image}/>
+                                            </a>
                                         )})
                                     }
                                 </div>
