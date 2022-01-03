@@ -17,11 +17,11 @@ export default function Sponsors(props) {
                 <Tab tabName="Silver & Bronze" selected={val} onSelect={() => setValue(1)} />
             </div>
 
-            <div className="flex flex-row justify-center pt-16 md:pt-[6vw]">
+            <div className="flex flex-col md:flex-row justify-center pt-16 md:pt-[6vw]">
                 {sponsors[val].map((elem, key) => {
                     return(
-                        <div key={key} className={`${key == 1 ? "border-l-2 border-white" : undefined } w-1/2`}>
-                            <div className="grid grid-cols-1 w-full place-items-center px-[10%]">
+                        <div key={key} className={`${key == 1 ? "border-t-2 md:border-t-0 md:border-l-2 border-white" : undefined } w-[100%] md:w-1/2`}>
+                            <div className="grid grid-cols-1 w-full place-items-center py-[5%] md:py-0 md:px-[10%]">
                                 <p className="text-2xl md:text-3xl font-iextrabold text-white pb-10"> {!val ? (key == 0 ? "Exclusive" : "Gold") : (key == 0 ? "Silver" : "Bronze")} </p>
                                 <div className={`${!val && key == 0 ? "grid-cols-1" : "grid-cols-2"} grid gap-2 md:gap-10`}>
                                     {elem.map((sponsor,i) => {
