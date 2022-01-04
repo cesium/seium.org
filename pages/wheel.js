@@ -32,7 +32,7 @@ export default function Profile() {
   return (
     <Dashboard href="sweel" title="Wheel" description="Spin the wheel and win awards!">
       <div className="grid-cols-1 2xl:grid-cols-2 overflow-hidden">
-        <div className="col-span-1 w-full 2xl:w-1/2 float-left">
+        <div className="col-span-1 w-full 2xl:w-1/2 float-left h-full">
           <Heading text="Achievements">
             <div className="w-40 h-full pt-1">
                 <div className="col-span-1 float-left w-full">
@@ -45,12 +45,14 @@ export default function Profile() {
                 </div>
             </div>
           </Heading>
-          <div className="w-96 h-96 m-auto">
-            <Wheel steps={16} angle={st.angle}/>
+          <div className="mb-10">
+            <div className="w-96 h-96 m-auto">
+              <Wheel steps={16} angle={st.angle}/>
+            </div>
             <button className="block mt-10 m-auto bg-quinary rounded-full w-64 h-20"
-              onClick={(e) => updateState({angle: 0, speed: angleSpeed})}>
-              <p className="font-bold font-ibold">SPIN THE WHEEL</p>
-              <p className="font-iregular">15 tokens💰</p>
+                onClick={(e) => updateState({angle: 0, speed: angleSpeed})}>
+                <p className="font-bold font-ibold">SPIN THE WHEEL</p>
+                <p className="font-iregular">15 tokens💰</p>
             </button>
           </div>
         </div>
