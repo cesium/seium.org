@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
-import Dashboard from "/components/moonstone/Dashboard";
-import Heading from '/components/moonstone/Heading';
+import Dashboard from "/components/moonstone/user/utils/Dashboard";
+import Heading from '/components/moonstone/utils/Heading';
 import ListItem3 from '../components/moonstone/ListItem3Cols';
 import ListItem4 from '../components/moonstone/ListItem4Cols';
 import Wheel from '/components/moonstone/Wheel';
@@ -9,7 +9,7 @@ import Wheel from '/components/moonstone/Wheel';
 export default function Profile() {
   const defaultState = {
     angle: 0,
-    speed: 20,
+    speed: 0,
   }
   const angleSpeed = 20;
   const fps = 60;
@@ -47,6 +47,11 @@ export default function Profile() {
           </Heading>
           <div className="w-96 h-96 m-auto">
             <Wheel steps={16} angle={st.angle}/>
+            <button className="block mt-10 m-auto bg-quinary rounded-full w-64 h-20"
+              onClick={(e) => updateState({angle: 0, speed: angleSpeed})}>
+              <p className="font-bold font-ibold">SPIN THE WHEEL</p>
+              <p className="font-iregular">15 tokens💰</p>
+            </button>
           </div>
         </div>
 

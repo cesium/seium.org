@@ -44,8 +44,14 @@ export default function Wheel({steps, angle}) {
     });
 
     return (
-        <div className="w-full h-full rounded-full relative" style={styleGlobal}>
-            {borders}
+        <div className="w-full h-full relative">
+            <div className="w-full h-full rounded-full" style={styleGlobal}>
+                {borders}
+            </div>
+            <div className="w-full h-full text-tertiary -ml-6 -mt-6 text-5xl font-iregular absolute top-1/2 left-1/2">
+                ↑
+            </div>
         </div>
+        
     );
 }
