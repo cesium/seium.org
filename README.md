@@ -1,57 +1,34 @@
-[contributing]: CONTRIBUTING.md
-[code_of_conduct]: CODE_OF_CONDUCT.md
-[figma]: https://www.figma.com/file/1phER5eukGFC5p9tFGnfk7/SEI
-[netlify-badge]: https://api.netlify.com/api/v1/badges/ed584f7f-e3cd-47a3-b00e-c07faa722ce1/deploy-status
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# SEI - Semana da Engenharia Informática da UMinho
+## Getting Started
 
-[![Netlify Status][netlify-badge]](https://app.netlify.com/sites/seium/deploys)
-[![Design](https://img.shields.io/badge/-figma-s?style=flat&logo=figma&color=black)][figma]
+First, run the development server:
 
-## :rocket: Getting Started
-
-These instructions will get you a copy of the project up and running on your
-local machine for development and testing purposes.
-
-### :inbox_tray: Prerequisites
-
-The following software is required to be installed on your system:
-
-- [Node.js 15.7.0](https://nodejs.org/en/download/)
-
-Install all dependencies using `yarn install`.
-
-### :hammer: Development
-
-Starting the development server.
-
-```
-yarn start
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-Format your code.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-yarn pretty
-```
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### :package: Deployment
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Bundling the app into static files for production.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-```
-yarn build
-```
+## Learn More
 
-### :link: References
+To learn more about Next.js, take a look at the following resources:
 
-You can use this resources to learn more about the tecnologies this project
-uses.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- [Getting Started with React](https://reactjs.org/docs/getting-started.html)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## :handshake: Contributing
+## Deploy on Vercel
 
-Please read [CONTRIBUTING][contributing] and [CODE_OF_CONDUCT][code_of_conduct]
-for details on our code of conduct and the process for submitting pull requests
-to us.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

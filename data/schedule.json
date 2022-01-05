@@ -1,0 +1,113 @@
+[
+    {
+        "date": "2022/2/15",
+        "activities": [
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "Uma talk bue fixe",
+                "description": "Esta descrição é bastante genérica. No entanto, tenho a certeza que querem vir a esta talk. Não percam!",
+                "author": "Rui Oliveira, outros gajos",
+                "location": "CP2-B1",
+                "hyperlink": "https://bragatv.pt/universidade-do-minho-tem-tres-novos-estudantes-com-nota-20/"
+            },
+            {
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "11:15",
+                "endTime": "12:00",
+                "activityType": "Talk",
+                "summary": "Outra talk bue fixe. Vais ficar de queixo no chão com quão fixe é esta talk. E com o tamanho do título da talk",
+                "description": "Nesta talk, Rui Oliveira explica como fazer um Cristo Redentor de cabeça para baixo, debaixo da torre Eiffel.",
+                "author": "Rui Oliveira",
+                "location": "CP2-B1"
+            }
+        ]
+    },
+    {
+        "date": "2022/2/16",
+        "activities": [
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "O sentido da vida",
+                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
+                "author": "Neil deGrasse Tyson",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+            },
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "O sentido da vida IV",
+                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
+                "author": "Neil deGrasse Tyson",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+            },
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "O sentido da vida II",
+                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
+                "author": "Neil deGrasse Tyson",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+            },
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Talk",
+                "summary": "O sentido da vida III",
+                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
+                "author": "Neil deGrasse Tyson",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+            },
+            {
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "11:15",
+                "endTime": "12:00",
+                "activityType": "Talk",
+                "summary": "Outra talk bue fixe",
+                "description": "Esta talk é igual à do dia anterior. Não tínhamos dinheiro para mais nada depois da talk do Neil deGrasse Tyson.",
+                "author": "Rui Oliveira",
+                "location": "CP2-B1"
+            }
+        ]
+    },
+    {
+        "date": "2022/2/17",
+        "activities": [
+            {
+                "activityType": "Coffee Break",
+                "description": "Se não há mais nada hoje, estamos a fazer uma pausa de quê?",
+                "coffeeBreak": true
+            }
+        ]
+    },
+    {
+        "date": "2022/2/18",
+        "activities": [
+            {
+                "startTime": "10:00",
+                "endTime": "11:00",
+                "activityType": "Cleaning",
+                "summary": "Limpar o auditório",
+                "description": "As atividades foram todas neste auditório. Não vamos deixar tudo porco.",
+                "author": "Dona Alberta",
+                "location": "CP2-B1",
+                "hyperlink": "https://www.goodhousekeeping.com/home/cleaning/g5115/best-cleaning-products/"
+            }
+        ]
+    }
+]
