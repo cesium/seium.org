@@ -1,10 +1,12 @@
 import {useState, useEffect} from 'react';
 
-import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Heading from '/components/moonstone/utils/Heading';
-import ListItem3 from '../components/moonstone/ListItem3Cols';
-import ListItem4 from '../components/moonstone/ListItem4Cols';
-import Wheel from '/components/moonstone/Wheel';
+
+import Dashboard from "/components/moonstone/user/utils/Dashboard";
+
+import ListItem3 from '../components/moonstone/user/wheel/ListItem3Cols';
+import ListItem4 from '../components/moonstone/user/wheel/ListItem4Cols';
+import Wheel from '/components/moonstone/user/wheel/Wheel';
 
 export default function Profile() {
   const defaultState = {
@@ -30,8 +32,8 @@ export default function Profile() {
   }, [st]);
 
   return (
-    <Dashboard href="sweel" title="Wheel" description="Spin the wheel and win awards!">
-      <div className="grid-cols-1 2xl:grid-cols-2 overflow-hidden">
+    <Dashboard href="wheel" title="Wheel" description="Spin the wheel and win awards!">
+      <div className="mt-12 grid-cols-1 2xl:grid-cols-2 overflow-hidden">
         <div className="col-span-1 w-full 2xl:w-1/2 float-left h-full">
           <Heading text="Achievements">
             <div className="w-40 h-full pt-1">
