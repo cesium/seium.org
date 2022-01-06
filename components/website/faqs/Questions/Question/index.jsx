@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React, { useState } from 'react';
 
-export default function Question(props) {
-    const { title, description, href, link } = props
+export default function Question({ title, description, href, link }) {
+
     const [showQuestion, setShowQuestion] = useState(true)
 
     return (
