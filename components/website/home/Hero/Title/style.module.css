@@ -8,9 +8,11 @@
     position: absolute;
     top: 100%;
     left: 15%;
-    margin-top: 6px;
+    padding-top:12px;
+    margin-top: -60px;
     width: 300px;
     z-index: -10;
+    overflow: hidden;
 }
 
 .cardText {
