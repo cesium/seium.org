@@ -62,7 +62,7 @@ export default function UnderlineAnimation({children, text, afterText}) {
             </span>
             <span className="relative h-auto inline-block z-20">&nbsp;{afterText ? afterText : ""}</span>
             <div className="bg-secondary absolute top-0 left-0 w-full h-full z-10 -my-1"></div>
-            <div className="absolute top-full left-20 pt-3 z-0" style={{marginTop: st.margin + "px"}}>      
+            <div className="absolute top-full left-20 pt-3 z-0" style={{marginTop: `${st.margin}px`}}>      
                 <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={true}>
                     <h5 className={`font-ithin ${styles.cardText}`}>{text}</h5>
                 </Card>
