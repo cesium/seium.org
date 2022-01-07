@@ -60,7 +60,7 @@ export default function Footer(props) {
     : "";
 
   return (
-    <div className={`spacing bg-${props.color}`} ref={ref} style={{ ...color, overflowY: "hidden" }}>
+    <div className={`spacing bgTransition bg-${props.color}`} ref={ref} style={{ ...color, overflowY: "hidden" }}>
       <div className="font-ibold flex lg:w-1/5 justify-center lg:justify-start">
         <Image src="/images/sei-logo.svg" width="100" height="100" />
         <p className="text-white pl-6 pt-4">

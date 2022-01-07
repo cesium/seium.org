@@ -14,7 +14,7 @@ function leapYear(year)
 function isValid(date)
 {
     const arr = date.split("/");
-    if (arr.length != 2)
+    if (arr.length != 3)
         return false;
 
     const y = parseInt(arr[0]), m = parseInt(arr[1]), d = parseInt(arr[2]);
@@ -114,6 +114,10 @@ export default function Schedule(props)
 
         return () => router.events.off("hashChangeStart", onHashChangeStart);
     }, [router.events]);
+
+    useEffect(() => {
+        document.getElementById(hash)?.scrollIntoView();
+    }, [hash]);
     
 
     const previous_day = () => {

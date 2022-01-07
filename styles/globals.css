@@ -7,6 +7,14 @@
     @apply px-10 md:px-32 xl:px-60;
 }
 
+.smoothScroll {
+    scroll-behavior: smooth;
+}
+
+.bgTransition {
+    transition: background-color 0.5s;
+}
+
 @font-face {
     font-family: "Inter-Black";
     src: url("/fonts/Inter/Inter-Black.ttf") format("truetype");
