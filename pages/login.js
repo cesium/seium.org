@@ -37,13 +37,9 @@ export default function Login() {
                             autoComplete="current-password"
                         />
                         <Text padding="6" text="Forgot your password?" link="Right this way" href="#" />
-                        <Button
-                            type="submit"
+                        <Button type="submit"
                             text="LET'S GO"
-                            fg_color="black"
-                            bg_color="quinary"
-                            border="quinary"
-                            padding="32"
+                            customStyle="text-secondary bg-quinary border-quinary"
                         />
                     </Form>
                 </div>

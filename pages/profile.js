@@ -17,39 +17,42 @@ export default function Profile() {
       <div className="grid-cols-2 overflow-hidden mt-12">
         <div className="col-span-1 w-full md:w-1/2 float-left">
           <Heading text="User Profile">
-            <div className="w-24">
-              <Button bg_color="quinary" fg_color="white" text="Edit"></Button>
+            <div className="w-20">
+              <Button
+                text="Edit"
+                customStyle="text-secondary bg-quinary border-quinary"
+              />
             </div>
           </Heading>
-          <div className="pl-6">          
+          <div className="pl-6">
             <Image src="/images/speakers/joaooliveira.png" className="rounded-full overflow-hidden" width="220" height="220" />
           </div>
           <Form>
-              <Input
-                  text="NAME"
-                  id="name"
-                  name="name"
-                  bgColor="white"
-                  fgColor="black"
-              />
-              <Input
-                  text="USERNAME"
-                  id="username"
-                  name="username"
-                  bgColor="white"
-                  fgColor="black"
-              />
-              <Input
-                  text="PASSWORD"
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  bgColor="white"
-                  fgColor="black"
-              />
+            <Input
+              text="NAME"
+              id="name"
+              name="name"
+              bgColor="white"
+              fgColor="black"
+            />
+            <Input
+              text="USERNAME"
+              id="username"
+              name="username"
+              bgColor="white"
+              fgColor="black"
+            />
+            <Input
+              text="PASSWORD"
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="current-password"
+              bgColor="white"
+              fgColor="black"
+            />
 
-              <a href="#" className="pl-6 text-quinary h-auto inline-block underline">Reset Password</a>
+            <a href="#" className="pl-6 text-quinary h-auto inline-block underline">Reset Password</a>
 
           </Form>
         </div>
@@ -84,14 +87,14 @@ export default function Profile() {
             <p className="font-iregular"><b className="font-ibold">Level 3</b> 15 companies &rarr; +40 entries</p>
             <p className="font-iregular"><b className="font-ibold">Level 4</b> 20 companies &rarr; +100 entries</p>
 
-            <CheckpointTracker checkpoints={5} progress={3}/>
+            <CheckpointTracker checkpoints={5} progress={3} />
 
             <p className="font-iregular">You just need 4 more bages to go to Level 4 (and win 10+ entries to the final draw). Hurry!</p>
-            <CodeInput/>
+            <CodeInput />
           </div>
 
           <div className="mt-10">
-            <Heading text="Upload CV"></Heading> 
+            <Heading text="Upload CV"></Heading>
             <p className="font-iregular"> Get a chance to win a spot at the Coporate dinner by submiting you CV!</p>
 
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
@@ -104,7 +107,7 @@ export default function Profile() {
                     <div class="flex text-sm text-gray-600">
                       <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-quinary hover:text-quintary">
                         <span>Upload a file</span>
-                        <input id="file-upload" name="file-upload" type="file" class="sr-only"/>
+                        <input id="file-upload" name="file-upload" type="file" class="sr-only" />
                       </label>
                       <p class="pl-1">or drag and drop</p>
                     </div>
