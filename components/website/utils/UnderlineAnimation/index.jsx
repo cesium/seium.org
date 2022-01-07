@@ -54,15 +54,15 @@ export default function UnderlineAnimation({children, text, afterText}) {
     }, [st]);
 
     return (
-        <span className="relative leading-none z-10 w-full h-auto inline-block z-10 mt-4">
+        <span className="relative leading-none z-10 w-auto h-auto inline-block z-10 mt-4">
             
             <span className="relative h-auto inline-block z-10 border-b-8 border-white" onMouseEnter={() => updateState((oldState) => ({...oldState, status: 1}))} 
                 onMouseLeave={() => updateState((oldState) => ({ ...oldState, status: 3}))}>
                     {children}
             </span>
             <span className="relative h-auto inline-block z-10">&nbsp;{afterText ? afterText : ""}</span>
-            <div className="absolute top-full  w-full h-52 z-10 overflow-hidden">
-            <div className="absolute top-0 left-20 pt-3 z-0" style={{marginTop: `${st.margin}px`}}>      
+            <div className="absolute top-full  w-96 h-52 z-10 overflow-y-hidden overflow-x-visible">
+            <div className="absolute top-0 left-20 pt-3 z-0 overflow-visible" style={{marginTop: `${st.margin}px`}}>      
                 <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={true}>
                     <h5 className={`font-ithin ${styles.cardText}`}>{text}</h5>
                 </Card>
