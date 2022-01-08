@@ -7,6 +7,9 @@ import Regulations from '/components/website/hackathon/Regulations';
 import Speaker from '/components/website/utils/Speaker';
 import Footer from '/components/website/utils/Footer';
 
+import mentors from '/data/mentors.json';
+import jury from '/data/jury.json';
+
 function JuryTitle() {
     return (
         <UnderlineAnimation text="These are the one to fear. Just saying">
@@ -19,7 +22,7 @@ function JurySubtitle() {
     return (
         <p className="text-white mt-10">
             Who will be the jurors? Can you guess? I bet you already suspect…
-            Yeah, once again we have members of Fake Company! They will evaluate everything, 
+            Yeah, once again we have members of Fake Company! They will evaluate everything,
             including the technical component, so you need to do your best throughout the entire project! Good luck!
         </p>
     )
@@ -44,33 +47,31 @@ function MentorsSubtitle() {
 }
 
 export default function Index() {
-  return (
-    <>
-      <Hero />
+    return (
+        <>
+            <Hero />
 
-      <PeopleShowcase title={<MentorsTitle/>} subtitle={<MentorsSubtitle/>}>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-      </PeopleShowcase>
+            <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
+                {mentors.map((mentor, i) =>
+                    <div key={i}>
+                        <Speaker {...mentor} />
+                    </div>
+                )}
+            </PeopleShowcase>
 
-      <Awards/>
+            <Awards />
 
-      <PeopleShowcase title={<JuryTitle/>} subtitle={<JurySubtitle/>}>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-        <Speaker id="joaooliveira" name="João Oliveira" job="CEO and Founder" company="Fake Company"/>
-      </PeopleShowcase>
+            <PeopleShowcase title={<JuryTitle />} subtitle={<JurySubtitle />}>
+                {jury.map((member, i) =>
+                    <div key={i}>
+                        <Speaker {...member} />
+                    </div>
+                )}
+            </PeopleShowcase>
 
-      <Regulations/>
+            <Regulations />
 
-      <Footer color="secondary" />
-    </>
-  )
+            <Footer color="secondary" />
+        </>
+    )
 }
