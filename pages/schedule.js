@@ -10,21 +10,13 @@ export default function Index() {
   const [ hasFocusedElem, updateHasFocused ] = useState();
   const bg = hasFocusedElem ? "secondary" : "tertiary";
 
-  //smooth scroll
-  useEffect(() => {
-    document.documentElement.classList.add("smoothScroll");
-
-    return () => {
-        document.documentElement.classList.remove("smoothScroll");
-    };
-  }, []);
-
   return (
-    <>
+    <div className="scroll-smooth">
       <Hero />
-      <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}/>
-      <div className={`py-24 bg-${bg} bgTransition`} />
+      <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
+        <div className="py-24"></div>
+      </Schedule>
       <Footer color={bg} />
-    </>
+    </div>
   )
 }

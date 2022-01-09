@@ -146,6 +146,7 @@ export default function Schedule(props)
             <div className={`${styles.rightGridElem}`}>
                 { table }
             </div>
+            {props.children}
         </div>
     );
 }
