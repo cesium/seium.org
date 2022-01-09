@@ -18,7 +18,7 @@ export default function Sponsors(props) {
                 <Tab tabName="Silver & Bronze" selected={val} onSelect={() => setValue(1)} />
             </div>
 
-            <div className="flex flex-col lg:flex-row justify-center pt-40">
+            <div className="flex flex-col lg:flex-row justify-center pt-20 sm:pt-40">
                 {sponsors[val].map((elem, key) => {
                     return(
                         <div key={key} className={`${key == 1 ? "border-t-2 lg:border-t-0 lg:border-l-2 border-white" : undefined } w-[100%] lg:w-1/2`}>
