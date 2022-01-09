@@ -7,17 +7,14 @@ export default function Partners() {
     const maxPerRow = 4;
     let rows = [];
     let cur = 0;
-
+    console.log(partners.length);
     while(cur <= partners.length) {
         let noElements = Math.min(partners.length - cur, maxPerRow);
+        console.log(cur);
         rows.push(  <div className={`spacing grid grid-cols-${noElements} gap-${noElements} mb-10`}>
                         {[...Array(noElements).keys()].map((entry, i) => 
-                            <div className="m-auto w-1/4 filter grayscale" key={entry}>
-                                <Link href={partners[i].url}>
-                                    <a className="w-full h-full" target="_blank">
-                                        <Image src={`/images/partners/${partners[entry].image}`} layout="responsive" width={partners[i].width} height={partners[i].height} />
-                                    </a>
-                                </Link>      
+                            <div className="m-auto" key={entry}>
+                                <Image src={`/images/partners/${partners[entry].image}`} width={partners[i].width} height={partners[i].height}/>
                             </div>)}
                     </div>);
         cur += maxPerRow;
