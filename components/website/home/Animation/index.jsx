@@ -8,7 +8,7 @@ let currPos = [];
 
 const Animation = () => {
   const setup = (p) => {
-    let canvas = p.createCanvas(window.innerWidth, window.innerHeight);
+    let canvas = p.createCanvas(window.innerWidth-13, window.innerHeight);
     canvas.style("position", "absolute");
     canvas.position(0, 0);
     canvas.style("z-index", "1");
@@ -59,7 +59,7 @@ const Animation = () => {
   };
 
   const windowResized = (p) => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight);
+    p.resizeCanvas(window.innerWidth-13, window.innerHeight);
 
     basePos1 = [];
     basePos2 = [];
