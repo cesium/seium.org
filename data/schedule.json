@@ -8,7 +8,15 @@
                 "activityType": "Talk",
                 "summary": "Uma talk bue fixe",
                 "description": "Esta descrição é bastante genérica. No entanto, tenho a certeza que querem vir a esta talk. Não percam!",
-                "author": "Rui Oliveira, outros gajos",
+                "authors": [
+                    {
+                        "name": "Rui Oliveira",
+                        "speakerId": "ruioliveira"
+                    },
+                    {
+                        "name": "outros gajos"
+                    }
+                ],
                 "location": "CP2-B1",
                 "hyperlink": "https://bragatv.pt/universidade-do-minho-tem-tres-novos-estudantes-com-nota-20/"
             },
@@ -22,7 +30,12 @@
                 "activityType": "Talk",
                 "summary": "Outra talk bue fixe. Vais ficar de queixo no chão com quão fixe é esta talk. E com o tamanho do título da talk",
                 "description": "Nesta talk, Rui Oliveira explica como fazer um Cristo Redentor de cabeça para baixo, debaixo da torre Eiffel.",
-                "author": "Rui Oliveira",
+                "authors": [
+                    {
+                        "name": "Rui Oliveira",
+                        "speakerId": "ruioliveira"
+                    }
+                ],
                 "location": "CP2-B1"
             }
         ]
@@ -36,7 +49,12 @@
                 "activityType": "Talk",
                 "summary": "O sentido da vida",
                 "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "author": "Neil deGrasse Tyson",
+                "authors": [
+                    {
+                        "name": "Neil deGrasse Tyson",
+                        "speakerId": "neiltyson"
+                    }
+                ],
                 "location": "CP2-B1",
                 "hyperlink": "https://www.haydenplanetarium.org/tyson/"
             },
@@ -46,7 +64,12 @@
                 "activityType": "Talk",
                 "summary": "O sentido da vida IV",
                 "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "author": "Neil deGrasse Tyson",
+                "authors": [
+                    {
+                        "name": "Neil deGrasse Tyson",
+                        "speakerId": "neiltyson"
+                    }
+                ],
                 "location": "CP2-B1",
                 "hyperlink": "https://www.haydenplanetarium.org/tyson/"
             },
@@ -56,7 +79,12 @@
                 "activityType": "Talk",
                 "summary": "O sentido da vida II",
                 "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "author": "Neil deGrasse Tyson",
+                "authors": [
+                    {
+                        "name": "Neil deGrasse Tyson",
+                        "speakerId": "neiltyson"
+                    }
+                ],
                 "location": "CP2-B1",
                 "hyperlink": "https://www.haydenplanetarium.org/tyson/"
             },
@@ -66,7 +94,12 @@
                 "activityType": "Talk",
                 "summary": "O sentido da vida III",
                 "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "author": "Neil deGrasse Tyson",
+                "authors": [
+                    {
+                        "name": "Neil deGrasse Tyson",
+                        "speakerId": "neiltyson"
+                    }
+                ],
                 "location": "CP2-B1",
                 "hyperlink": "https://www.haydenplanetarium.org/tyson/"
             },
@@ -80,7 +113,12 @@
                 "activityType": "Talk",
                 "summary": "Outra talk bue fixe",
                 "description": "Esta talk é igual à do dia anterior. Não tínhamos dinheiro para mais nada depois da talk do Neil deGrasse Tyson.",
-                "author": "Rui Oliveira",
+                "authors": [
+                    {
+                        "name": "Rui Oliveira",
+                        "speakerId": "ruioliveira"
+                    }
+                ],
                 "location": "CP2-B1"
             }
         ]
@@ -104,7 +142,11 @@
                 "activityType": "Cleaning",
                 "summary": "Limpar o auditório",
                 "description": "As atividades foram todas neste auditório. Não vamos deixar tudo porco.",
-                "author": "Dona Alberta",
+                "authors": [
+                    {
+                        "name": "Dona Alberta"
+                    }
+                ],
                 "location": "CP2-B1",
                 "hyperlink": "https://www.goodhousekeeping.com/home/cleaning/g5115/best-cleaning-products/"
             }

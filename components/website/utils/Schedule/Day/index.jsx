@@ -28,13 +28,13 @@ export default function Day(props)
     const date_descriptor = getDayDescriptor(parseInt(date[0]), parseInt(date[1]), parseInt(date[2]));
 
     const ans = (
-        <div className={`${styles.wrapper} text-7xl md:text-8xl`}>
+        <div className={`${styles.wrapper} text-5xl md:text-8xl`}>
             <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
                 <button className={`${styles.prev} ${styles.arrow}`} onClick={props.previousDay}></button>
             </div>
 
             <div className={`-mt-10 ${styles.dateWrapper}`}>
-                <h5 className={`text-${props.fontSize == undefined ? "3xl" : props.fontSize} text-quinary font-ibold`}> 
+                <h5 className={`text-2xl md:text-3xl text-quinary font-ibold`}> 
                     { date_string } 
                 </h5>
                 <h2 className={`font-iextrabold text-${props.fg_color == undefined ? "white" : props.fg_color}`}> 
