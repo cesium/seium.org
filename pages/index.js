@@ -13,7 +13,6 @@ export default function Index() {
       <Hero />
       <Schedule color="tertiary" detailed={false}/>
       <Sponsors/>
-      <Partners/>
       <Hackathon />
       <Speakers />
       <Partners/>
