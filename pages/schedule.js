@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Hero from '/components/website/schedule/Hero';
 
@@ -11,10 +11,12 @@ export default function Index() {
   const bg = hasFocusedElem ? "secondary" : "tertiary";
 
   return (
-    <>
+    <div className="scroll-smooth">
       <Hero />
-      <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}/>
+      <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
+        <div className="py-24"></div>
+      </Schedule>
       <Footer color={bg} />
-    </>
+    </div>
   )
 }
