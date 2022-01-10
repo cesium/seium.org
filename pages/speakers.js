@@ -8,7 +8,7 @@ export default function Speakers() {
     <>
       <Hero />
       <Schedule detailed={false} />
-      <Footer color="tertiary" />
+      <Footer color="secondary" />
     </>
   )
 }
