@@ -8,7 +8,7 @@ export default function Block(props) {
     const id = `${props.date}-${props.id}`;
 
     const block = (
-        <div id={id} className={`${styles.gridBlock} ${props.coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 200}}>
+        <div id={id} className={`${styles.gridBlock} ${props.coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 225}}>
             { props.coffeeBreak &&
                 <div className={styles.imgWrapper}> 
                     <Image src="/images/Coffee.svg" layout="fill"/>
@@ -75,7 +75,7 @@ export default function Block(props) {
 
     useEffect(() => {
         const b = document.getElementById(id);
-        b.style.maxHeight = (props.focused ? (b.scrollHeight + 50 + 'px') : '200px');
+        b.style.maxHeight = (props.focused ? (b.scrollHeight + 50 + 'px') : '225px');
     }, [props.focused])
 
     const skipLink = props.coffeeBreak || props.focused;
