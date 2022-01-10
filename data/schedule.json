@@ -30,8 +30,8 @@
                 "startTime": "12:00",
                 "endTime": "13:00",
                 "activityType": "Talk",
-                "summary": "O início da década de 20 permite focar simultaneamente o “hardware” e o “software” da computação. A interação entre tecnologias sugere o recurso à Inteligência Artificial (IA) para atacar alguns problemas complexos (criativos, divergentes) com grandes quantidades de dados. No entanto, estamos ainda longe de dominar a inteligência humana (conceitos, abstração, analogia) e a conservação da privacidade levanta questões de ética.",
-                "description": "Olhando para o Futuro",
+                "summary": "Olhando para o Futuro",
+                "description": "O início da década de 20 permite focar simultaneamente o “hardware” e o “software” da computação. A interação entre tecnologias sugere o recurso à Inteligência Artificial (IA) para atacar alguns problemas complexos (criativos, divergentes) com grandes quantidades de dados. No entanto, estamos ainda longe de dominar a inteligência humana (conceitos, abstração, analogia) e a conservação da privacidade levanta questões de ética.",
                 "author": "Helder Coelho",
                 "location": "CP2-B1"
             },
@@ -43,8 +43,8 @@
                 "startTime": "14:00",
                 "endTime": "15:00",
                 "activityType": "Talk",
-                "summary": "The end of password-based authentication is near. Weak passwords are the cause of endless security breaches, and the constant reuse of the same password across different accounts is what keeps the clock ticking for the next breach to happen. The FIDO2 standard aims to replace passwords entirely, and there is a good deal of chance that it will succeed. It has gained significant momentum in the past couple of years, as all major browser and operating system vendors fully jumped on board. This talk will provide a deep dive of the FIDO2 and W3C WebAuthn standards, with the main focus on how to quickly implement it on any JVM/GraalVM based application using open-source FIDO Alliance conformant libraries. Best practices, including security token lifecycle management, will also be covered. Attendees should have basic knowledge in password usage and be able to identify the major problems with this system. Furthermore, attendees should be capable of bootstrapping a web application project and have basic knowledge on request routing and the basic principles of web security.",
-                "description": "Passwordless FIDO2/Webauthn 101: Strong security meets great UX",
+                "summary": "Passwordless FIDO2/Webauthn 101: Strong security meets great UX",
+                "description": "The end of password-based authentication is near. Weak passwords are the cause of endless security breaches, and the constant reuse of the same password across different accounts is what keeps the clock ticking for the next breach to happen. The FIDO2 standard aims to replace passwords entirely, and there is a good deal of chance that it will succeed. It has gained significant momentum in the past couple of years, as all major browser and operating system vendors fully jumped on board. This talk will provide a deep dive of the FIDO2 and W3C WebAuthn standards, with the main focus on how to quickly implement it on any JVM/GraalVM based application using open-source FIDO Alliance conformant libraries. Best practices, including security token lifecycle management, will also be covered. Attendees should have basic knowledge in password usage and be able to identify the major problems with this system. Furthermore, attendees should be capable of bootstrapping a web application project and have basic knowledge on request routing and the basic principles of web security.",
                 "author": "Paulo Coelho",
                 "location": "CP2-B1"
             },
