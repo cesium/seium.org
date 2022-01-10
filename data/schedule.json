@@ -5,38 +5,97 @@
             {
                 "startTime": "10:00",
                 "endTime": "11:00",
-                "activityType": "Talk",
-                "summary": "Uma talk bue fixe",
-                "description": "Esta descrição é bastante genérica. No entanto, tenho a certeza que querem vir a esta talk. Não percam!",
-                "authors": [
-                    {
-                        "name": "Rui Oliveira",
-                        "speakerId": "ruioliveira"
-                    },
-                    {
-                        "name": "outros gajos"
-                    }
-                ],
+                "activityType": "Opening Session",
+                "summary": "",
+                "description": "",
+                "author": "",
                 "location": "CP2-B1",
-                "hyperlink": "https://bragatv.pt/universidade-do-minho-tem-tres-novos-estudantes-com-nota-20/"
+                "hyperlink": ""
+            },
+            {
+                "startTime": "11:00",
+                "endTime": "11:30",
+                "activityType": "Prizes and Contests",
+                "summary": "",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
             },
             {
                 "activityType": "Coffee Break",
                 "coffeeBreak": true
             },
             {
-                "startTime": "11:15",
-                "endTime": "12:00",
+                "startTime": "12:00",
+                "endTime": "13:00",
                 "activityType": "Talk",
-                "summary": "Outra talk bue fixe. Vais ficar de queixo no chão com quão fixe é esta talk. E com o tamanho do título da talk",
-                "description": "Nesta talk, Rui Oliveira explica como fazer um Cristo Redentor de cabeça para baixo, debaixo da torre Eiffel.",
-                "authors": [
-                    {
-                        "name": "Rui Oliveira",
-                        "speakerId": "ruioliveira"
-                    }
-                ],
+                "summary": "Olhando para o Futuro",
+                "description": "O início da década de 20 permite focar simultaneamente o “hardware” e o “software” da computação. A interação entre tecnologias sugere o recurso à Inteligência Artificial (IA) para atacar alguns problemas complexos (criativos, divergentes) com grandes quantidades de dados. No entanto, estamos ainda longe de dominar a inteligência humana (conceitos, abstração, analogia) e a conservação da privacidade levanta questões de ética.",
+                "author": "Helder Coelho",
                 "location": "CP2-B1"
+            },
+            {
+                "activityType": "Lunch Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "14:00",
+                "endTime": "15:00",
+                "activityType": "Talk",
+                "summary": "Passwordless FIDO2/Webauthn 101: Strong security meets great UX",
+                "description": "The end of password-based authentication is near. Weak passwords are the cause of endless security breaches, and the constant reuse of the same password across different accounts is what keeps the clock ticking for the next breach to happen. The FIDO2 standard aims to replace passwords entirely, and there is a good deal of chance that it will succeed. It has gained significant momentum in the past couple of years, as all major browser and operating system vendors fully jumped on board. This talk will provide a deep dive of the FIDO2 and W3C WebAuthn standards, with the main focus on how to quickly implement it on any JVM/GraalVM based application using open-source FIDO Alliance conformant libraries. Best practices, including security token lifecycle management, will also be covered. Attendees should have basic knowledge in password usage and be able to identify the major problems with this system. Furthermore, attendees should be capable of bootstrapping a web application project and have basic knowledge on request routing and the basic principles of web security.",
+                "author": "Paulo Coelho",
+                "location": "CP2-B1"
+            },
+            {
+                "startTime": "15:00",
+                "endTime": "16:00",
+                "activityType": "Talk",
+                "summary": "",
+                "description": "",
+                "author": "TBA",
+                "location": "CP2-B1"
+            },
+            {
+                "startTime": "16:00",
+                "endTime": "16:30",
+                "activityType": "Pitch",
+                "summary": "FARFETCH",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1"
+            },
+            {
+                "startTime": "16:30",
+                "endTime": "17:00",
+                "activityType": "Pitch",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1"
+            },
+            {
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "17:00",
+                "endTime": "18:00",
+                "activityType": "Tertúlia",
+                "summary": "",
+                "description": "",
+                "author": "TBA",
+                "location": "CP2-B1"
+            },
+            {
+                "startTime": "21:00",
+                "endTime": "00:00",
+                "activityType": "Social",
+                "summary": "",
+                "description": "",
+                "author": "TBA",
+                "location": ""
             }
         ]
     },
@@ -44,82 +103,103 @@
         "date": "2022/2/16",
         "activities": [
             {
-                "startTime": "10:00",
+                "startTime": "09:00",
                 "endTime": "11:00",
-                "activityType": "Talk",
-                "summary": "O sentido da vida",
-                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "authors": [
-                    {
-                        "name": "Neil deGrasse Tyson",
-                        "speakerId": "neiltyson"
-                    }
-                ],
+                "activityType": "Workshop",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
                 "location": "CP2-B1",
-                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+                "hyperlink": ""
             },
             {
-                "startTime": "10:00",
+                "startTime": "09:00",
                 "endTime": "11:00",
-                "activityType": "Talk",
-                "summary": "O sentido da vida IV",
-                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "authors": [
-                    {
-                        "name": "Neil deGrasse Tyson",
-                        "speakerId": "neiltyson"
-                    }
-                ],
+                "activityType": "Workshop",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
                 "location": "CP2-B1",
-                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
-            },
-            {
-                "startTime": "10:00",
-                "endTime": "11:00",
-                "activityType": "Talk",
-                "summary": "O sentido da vida II",
-                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "authors": [
-                    {
-                        "name": "Neil deGrasse Tyson",
-                        "speakerId": "neiltyson"
-                    }
-                ],
-                "location": "CP2-B1",
-                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
-            },
-            {
-                "startTime": "10:00",
-                "endTime": "11:00",
-                "activityType": "Talk",
-                "summary": "O sentido da vida III",
-                "description": "Nesta talk inesquecível, contamos com a presença de Neil deGrasse Tyson para nos ajudar a explorar os mistérios do universo, da vida e do preenchimento dos documentos de isenção de impostos.",
-                "authors": [
-                    {
-                        "name": "Neil deGrasse Tyson",
-                        "speakerId": "neiltyson"
-                    }
-                ],
-                "location": "CP2-B1",
-                "hyperlink": "https://www.haydenplanetarium.org/tyson/"
+                "hyperlink": ""
             },
             {
                 "activityType": "Coffee Break",
                 "coffeeBreak": true
             },
             {
-                "startTime": "11:15",
-                "endTime": "12:00",
+                "startTime": "11:30",
+                "endTime": "12:30",
                 "activityType": "Talk",
-                "summary": "Outra talk bue fixe",
-                "description": "Esta talk é igual à do dia anterior. Não tínhamos dinheiro para mais nada depois da talk do Neil deGrasse Tyson.",
-                "authors": [
-                    {
-                        "name": "Rui Oliveira",
-                        "speakerId": "ruioliveira"
-                    }
-                ],
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "activityType": "Lunch Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "14:00",
+                "endTime": "15:00",
+                "activityType": "Talk",
+                "summary": "Industry 4.0 or why do we need software in a tire plant?",
+                "description": "The 4th industrial revolution is reshaping manufacturing plants around the world. The talk will discuss opportunities and challenges of digitalization in manufacturing using real world examples from Continental Tire plants.",
+                "author": "Lars Frische",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "15:00",
+                "endTime": "16:00",
+                "activityType": "Talk",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "16:00",
+                "endTime": "16:30",
+                "activityType": "Pitch",
+                "summary": "Retail Consult",
+                "description": "",
+                "author": "",
                 "location": "CP2-B1"
+            },
+            {
+                "startTime": "16:30",
+                "endTime": "17:00",
+                "activityType": "Pitch",
+                "summary": "Uphold",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1"
+            },
+            {
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "17:00",
+                "endTime": "18:00",
+                "activityType": "Tertúlia",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "21:00",
+                "endTime": "00:00",
+                "activityType": "Social",
+                "summary": "",
+                "description": "",
+                "author": "TBA",
+                "location": ""
             }
         ]
     },
@@ -127,9 +207,103 @@
         "date": "2022/2/17",
         "activities": [
             {
+                "startTime": "09:00",
+                "endTime": "11:00",
+                "activityType": "Workshop",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "11:00",
+                "activityType": "Workshop",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
                 "activityType": "Coffee Break",
-                "description": "Se não há mais nada hoje, estamos a fazer uma pausa de quê?",
                 "coffeeBreak": true
+            },
+            {
+                "startTime": "11:30",
+                "endTime": "12:30",
+                "activityType": "Talk",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "activityType": "Lunch Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "14:00",
+                "endTime": "15:00",
+                "activityType": "Talk",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "15:00",
+                "endTime": "16:00",
+                "activityType": "Talk",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "16:00",
+                "endTime": "16:30",
+                "activityType": "Pitch",
+                "summary": "Continental",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1"
+            },
+            {
+                "startTime": "16:30",
+                "endTime": "17:00",
+                "activityType": "Pitch",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1"
+            },
+            {
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "17:00",
+                "endTime": "18:00",
+                "activityType": "Tertúlia",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "21:00",
+                "endTime": "00:00",
+                "activityType": "Social",
+                "summary": "",
+                "description": "",
+                "author": "TBA",
+                "location": ""
             }
         ]
     },
@@ -137,18 +311,154 @@
         "date": "2022/2/18",
         "activities": [
             {
-                "startTime": "10:00",
+                "startTime": "09:00",
                 "endTime": "11:00",
-                "activityType": "Cleaning",
-                "summary": "Limpar o auditório",
-                "description": "As atividades foram todas neste auditório. Não vamos deixar tudo porco.",
-                "authors": [
-                    {
-                        "name": "Dona Alberta"
-                    }
-                ],
+                "activityType": "Workshop",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
                 "location": "CP2-B1",
-                "hyperlink": "https://www.goodhousekeeping.com/home/cleaning/g5115/best-cleaning-products/"
+                "hyperlink": ""
+            },
+            {
+                "startTime": "09:00",
+                "endTime": "11:00",
+                "activityType": "Workshop",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "11:30",
+                "endTime": "12:30",
+                "activityType": "Talk",
+                "summary": "From Blender to the Web - the Journey of a 3D Model",
+                "description": "Creating 3D experiences in the web can be something that sounds very daunting. I’m here to remove this idea from your mind and show you that the 3D world is for everyone. For that we will get a model from the 3D software Blender into the web packed with animations, accessibility controls and optimised for web use so join me in this journey as we make the web more awesome.",
+                "author": "Sara Vieira",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "activityType": "Lunch Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "14:00",
+                "endTime": "15:00",
+                "activityType": "Talk",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "15:00",
+                "endTime": "16:00",
+                "activityType": "Talk",
+                "summary": "TBA",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "activityType": "Coffee Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "16:30",
+                "endTime": "17:30",
+                "activityType": "",
+                "summary": "Closing Session and Prize Announcement",
+                "description": "",
+                "author": "",
+                "location": "CP2-B1",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "21:00",
+                "endTime": "24:00",
+                "activityType": "",
+                "summary": "Hackathon (42 hours)",
+                "description": "",
+                "author": "",
+                "location": "TBA",
+                "hyperlink": ""
+            }
+        ]
+    },
+    {
+        "date": "2022/2/19",
+        "activities": [
+            {
+                "startTime": "00:00",
+                "endTime": "13:00",
+                "activityType": "",
+                "summary": "Hackathon (42 hours)",
+                "description": "",
+                "author": "",
+                "location": "TBA",
+                "hyperlink": ""
+            },
+            {
+                "activityType": "Lunch Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "14:00",
+                "endTime": "24:00",
+                "activityType": "",
+                "summary": "Hackathon (42 hours)",
+                "description": "",
+                "author": "",
+                "location": "TBA",
+                "hyperlink": ""
+            }
+        ]
+    },
+    {
+        "date": "2022/2/20",
+        "activities": [
+            {
+                "startTime": "00:00",
+                "endTime": "13:00",
+                "activityType": "",
+                "summary": "Hackathon (42 hours)",
+                "description": "",
+                "author": "",
+                "location": "TBA",
+                "hyperlink": ""
+            },
+            {
+                "activityType": "Lunch Break",
+                "coffeeBreak": true
+            },
+            {
+                "startTime": "14:00",
+                "endTime": "15:00",
+                "activityType": "",
+                "summary": "Hackathon (42 hours)",
+                "description": "",
+                "author": "",
+                "location": "TBA",
+                "hyperlink": ""
+            },
+            {
+                "startTime": "15:00",
+                "endTime": "17:00",
+                "activityType": "",
+                "summary": "Hackathon Final Pitches and Closing Session",
+                "description": "",
+                "author": "",
+                "location": "TBA",
+                "hyperlink": ""
             }
         ]
     }
