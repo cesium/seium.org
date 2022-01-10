@@ -1,38 +1,20 @@
 [
     {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "job": "CEO and Founder",
-        "company": "Bright Pixel"
+        "id": "paulolopes",
+        "name": "Paulo Lopes",
+        "job": "Software Engineer",
+        "company": "Red Hat"
     },    
     {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "job": "CEO and Founder",
-        "company": "Bright Pixel"
+        "id": "saravieira",
+        "name": "Sara Vieira",
+        "job": "Frontend Engineer",
+        "company": "Remote"
     },
     {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "job": "CEO and Founder",
-        "company": "Bright Pixel"
-    },
-    {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "job": "CEO and Founder",
-        "company": "Bright Pixel"
-    },
-    {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "job": "CEO and Founder",
-        "company": "Bright Pixel"
-    },
-    {
-        "id": "joaooliveira",
-        "name": "Celso Martinho",
-        "job": "CEO and Founder",
-        "company": "Bright Pixel"
+        "id": "heldercoelho",
+        "name": "Helder Coelho",
+        "job": "Professor Emérito",
+        "company": "Universidade de Lisboa"
     }
 ]
