@@ -136,7 +136,7 @@ export default function Schedule(props)
         showFilters = { props.detailed } filters = { filters } updateFilters = { props.detailed ? updateFilters : () => {} } />;
 
     return (
-        <div className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} bgTransition pt-20`}>
+        <div className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} pt-20`}>
             <div className={`${styles.leftGridElem} ${styles.responsiveCentered} mb-10 `}>
                 <div className="sticky top-12">
                     { day }
