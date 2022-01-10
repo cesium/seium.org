@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+canvas {
+    margin:auto;
+}
+
 .spacing {
     @apply px-10 md:px-32 xl:px-60;
 }
