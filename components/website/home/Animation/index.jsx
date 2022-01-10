@@ -11,7 +11,7 @@ const Animation = () => {
     let canvas = p.createCanvas(window.innerWidth, window.innerHeight);
     canvas.style("position", "absolute");
     canvas.position(0, 0);
-    canvas.style("z-index", "1");
+    canvas.style("z-index", "15");
 
     p.noFill();
     p.stroke(76, 169, 255);
