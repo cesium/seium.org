@@ -2,6 +2,10 @@
     @apply px-5 md:px-32 xl:px-16 2xl:px-32;
 }
 
+.bgTransition {
+    transition: background-color 0.5s;
+}
+
 .responsiveGrid {
     @apply grid grid-cols-1 xl:grid-cols-10;
 }
