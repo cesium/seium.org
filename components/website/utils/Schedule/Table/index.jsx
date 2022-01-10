@@ -1,6 +1,6 @@
 import Block from './Block';
 import { isSelected } from '../Day/Filters'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 function filterElem(filters)
 {
@@ -21,15 +21,6 @@ function filterElem(filters)
 
 export default function Table(props)
 {
-    //smooth scroll
-    useEffect(() => {
-        document.documentElement.classList.add("smoothScroll");
-    
-        return () => {
-            document.documentElement.classList.remove("smoothScroll");
-        };
-    }, []);
-
     const schedule = require('/data/schedule.json');
     const obj = schedule.find((obj) => obj.date === props.date);
 

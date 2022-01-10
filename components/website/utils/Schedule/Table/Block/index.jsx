@@ -83,7 +83,7 @@ export default function Block(props) {
     return (
         <div className={skipLink ? "" : styles.clickable}>
             { !skipLink && 
-                <Link href={{hash: id}}>
+                <Link href={`schedule/#${id}`}>
                     <a className={styles.outerLink}/>
                 </Link>
             }
