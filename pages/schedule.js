@@ -14,7 +14,7 @@ export default function Index() {
     <div className="scroll-smooth">
       <Hero />
       <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
-        <div className="py-24"></div>
+        <div className="py-24"/>
       </Schedule>
       <Footer color={bg} />
     </div>
