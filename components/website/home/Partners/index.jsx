@@ -11,7 +11,9 @@ export default function Partners() {
                 {partners.map((partner, i) =>
                     <div className={`${partners.length == 2 && "col-span-2"} 
                                      ${(partners.length == 1) && "col-span-4"}
-                                     m-auto filter grayscale`} key={i}>
+                                     m-auto filter grayscale`} 
+                         key={i}
+                    >
                         <Link href={partner.url}>
                             <button>
                                 <Image src={`/images/partners/${partner.image}`} width="200" height="200" />
