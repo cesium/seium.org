@@ -9,7 +9,9 @@ export default function Partners() {
             <h2 className="text-center text-5xl lg:text-6xl font-iextrabold py-10 text-white">Partners who made this possible</h2>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 my-10">
                 {partners.map((partner, i) =>
-                    <div className={`col-span-${4 / partners.length} m-auto filter grayscale`} key={i}>
+                    <div className={`${partners.length == 2 && "col-span-2"} 
+                                     ${(partners.length == 1) && "col-span-4"}
+                                     m-auto filter grayscale`} key={i}>
                         <Link href={partner.url}>
                             <button>
                                 <Image src={`/images/partners/${partner.image}`} width="200" height="200" />

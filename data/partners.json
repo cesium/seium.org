@@ -1,14 +1,10 @@
 [
     {
         "image": "um-school-of-engineering.png",
-        "width": 300,
-        "height": 272,
         "url": "https://ipdj.gov.pt/"
     },
     {
         "image": "ipdj.png",
-        "width": 300,
-        "height": 300,
         "url": "https://www.eng.uminho.pt/pt"
     }
 ]
