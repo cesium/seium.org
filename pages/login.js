@@ -36,8 +36,9 @@ export default function Login() {
                             bgColor="primary"
                             autoComplete="current-password"
                         />
-                        <Text padding="6" text="Forgot your password?" link="Right this way" href="#" />
-                        <Button type="submit"
+                        <Text padding="6" text="Forgot your password?" link="Right this way" href="/forgot-password" />
+                        <Button
+                            type="submit"
                             text="LET'S GO"
                             customStyle="text-secondary bg-quinary border-quinary"
                         />
