@@ -5,7 +5,7 @@ import Button from '/components/utils/Button'
 
 export default function Error() {
     return (
-        <div className="spacing overflow-y-hidden bg-secondary h-screen">
+        <div className="spacing h-screen bg-secondary">
             <div className="absolute invisible xl:visible xl:w-full xl:h-screen left-0">
                 {<Image src="/images/ponto.svg" layout="fill" alt="Question mark" />}
             </div>
@@ -19,11 +19,11 @@ export default function Error() {
                         You’re in the wrong line of code, pal.
                     </h1>
                 </div>
-                <div className="mt-5 lg:mt-7 w-1/2">
-                    <Button text="Back to Homepage" bg_color="primary" fg_color="white" />
+                <div className="mt-5 lg:mt-7 w-1/2 relative z-50">
+                    <Button onClick={(e) => window.location.href = "/"} text="Back to Homepage" customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"/>
                 </div>
             </div>
-            <div className="absolute invisible xl:visible xl:w-1/4 xl:h-1/2 bottom-0 right-0">
+            <div className="absolute invisible bg-secondary xl:visible xl:w-1/4 xl:h-1/2 bottom-0 right-0">
                 <Image src="/images/mascote-404.svg" layout="fill" alt="Mascote Image" />
             </div>
         </div>
