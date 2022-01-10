@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import partners from "/data/partners";
 
@@ -14,11 +13,11 @@ export default function Partners() {
                                      m-auto filter grayscale`} 
                          key={i}
                     >
-                        <Link href={partner.url}>
+                        <a href={partner.url} target="_blank">
                             <button>
                                 <Image src={`/images/partners/${partner.image}`} width="200" height="200" />
                             </button>
-                        </Link>
+                        </a>
                     </div>
                 )}
             </div>
