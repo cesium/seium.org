@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "moonstone",
+  "version": "2.0.0-dev",
   "private": true,
   "scripts": {
     "dev": "next dev",
