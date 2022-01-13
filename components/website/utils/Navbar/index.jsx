@@ -24,7 +24,7 @@ export default function Navbar(props) {
         <Disclosure as="nav">
             {({ open }) => (
                 <>
-                    <div className={`spacing pt-14 pb-4 ${open ? `lg:bg-${props.bg_color} bg-primary` : "bg-" + props.bg_color}`}>
+                    <div className={`spacing pt-14 pb-4 ${open ? `lg:bg-${props.bgColor} bg-primary` : "bg-" + props.bgColor}`}>
                         <div className="flex items-center justify-between h-16">
                             <div className="flex flex-auto z-50 relative">
                                 <div className="grid grid-cols-4 w-full">
@@ -45,7 +45,7 @@ export default function Navbar(props) {
                                             </div>
                                             <a
                                                 href="/signup"
-                                                className={`hidden transform rotate-15 -mt-5 text-xl font-ibold items-center justify-center xl:flex h-28 w-28 text-${props.fg_color} bg-${props.button} rounded-full translate-x-0`}>
+                                                className={`hidden transform rotate-15 -mt-5 text-xl font-ibold items-center justify-center xl:flex h-28 w-28 text-${props.fgColor} bg-${props.button} rounded-full translate-x-0`}>
                                                 Join us 👋
                                             </a>
                                         </div>

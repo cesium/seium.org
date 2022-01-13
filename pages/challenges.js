@@ -13,7 +13,7 @@ function FooterText() {
 
 export default function Index() {
   return (
-    <Navbar bg_color="secondary" button="quinary" fg_color="black" >
+    <Navbar bgColor="secondary" button="quinary" fgColor="black" >
       <Hero />
       <Challenges />
       <Footer color="secondary" animationText={<FooterText/>}/>

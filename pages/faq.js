@@ -4,7 +4,7 @@ import Faqs from '../components/website/faqs';
 
 export default function Faq() {
   return (
-    <Navbar bg_color="secondary" button={"quinary"} fg_color={"black"}>
+    <Navbar bgColor="secondary" button={"quinary"} fgColor={"black"}>
       <Faqs />
       <Footer color="tertiary" />
     </Navbar>

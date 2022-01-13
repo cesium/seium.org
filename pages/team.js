@@ -8,7 +8,7 @@ import Organization from '/components/website/team/Organization';
 
 export default function Index() {
   return (
-    <Navbar bg_color="quaternary" button="tertiary" fg_color="white">
+    <Navbar bgColor="quaternary" button="tertiary" fgColor="white">
       <Hero />
       <Organization />
       <FindUs />

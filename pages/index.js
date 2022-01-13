@@ -10,18 +10,7 @@ import Footer from '/components/website/utils/Footer';
 
 export default function Index() {
   return (
-<<<<<<< HEAD
-    <>
-      <Hero />
-      <Schedule color="tertiary" detailed={false}/>
-      <Sponsors/>
-      <Hackathon />
-      <Speakers />
-      <Partners/>
-      <Footer color="secondary" />
-    </>
-=======
-      <Navbar bg_color="secondary" button="quinary" fg_color="black">
+      <Navbar bgColor="secondary" button="quinary" fgColor="black">
         <Hero />
         <Schedule color="tertiary" detailed={false}/>
         <Sponsors/>
@@ -29,6 +18,5 @@ export default function Index() {
         <Speakers />
         <Footer color="secondary" />
       </Navbar>
->>>>>>> 00dd61c (Make Navbar Responsive)
   )
 }

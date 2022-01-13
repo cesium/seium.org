@@ -12,7 +12,7 @@ export default function Index() {
   const bg = hasFocusedElem ? "secondary" : "tertiary";
 
   return (
-    <Navbar bg_color="tertiary" button="quinary" fg_color="black" >
+    <Navbar bgColor="tertiary" button="quinary" fgColor="black" >
       <div className="scroll-smooth">
         <Hero />
         <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>

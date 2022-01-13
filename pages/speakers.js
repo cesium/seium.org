@@ -6,7 +6,7 @@ import Footer from '/components/website/utils/Footer';
 
 export default function Speakers() {
   return (
-    <Navbar bg_color="secondary" button="quinary" fg_color="black" >
+    <Navbar bgColor="secondary" button="quinary" fgColor="black" >
       <Hero />
       <Schedule detailed={false} />
       <Footer color="secondary" />
