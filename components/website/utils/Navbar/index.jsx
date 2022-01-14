@@ -3,10 +3,8 @@ import Image from "next/image";
 const navigation = [
     { name: 'Schedule', href: '/schedule' },
     { name: 'Hackathon', href: '/hackathon' },
-    { name: 'Challenges', href: '/challenges' },
     { name: 'Speakers', href: '/speakers' },
     { name: 'FAQs', href: '/faq' },
-    { name: 'Login', href: '/login' },
 ]
 
 export default function Navbar({ button, fg_color }) {
