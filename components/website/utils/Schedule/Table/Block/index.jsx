@@ -95,7 +95,7 @@ function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, sum
 }
 
 export default function Block({detailed, focused, date, elems}) {
-
+    console.log(JSON.stringify(elems));
     return (
         <div className={`grid grid-cols-${elems.length}`}>
             {elems.map((elem, id) => <BlockItem key={id} date={date} id={id} focused={focused} detailed={detailed} {...elem.activity}/>)}
