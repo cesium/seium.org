@@ -10,12 +10,15 @@ function filterElem(filters)
             return true;
         if (filters === "")
             return true;
-        //TODO
+
         switch (elem.activity.activityType)
         {
             
             case "Coffee Break":    result = isSelected(filters, "Breaks"); break;
             case "Talk":            result = isSelected(filters, "Talks"); break;
+            case "Pitch":           result = isSelected(filters, "Pitch"); break;
+            case "Workshop":        result = isSelected(filters, "Workshops"); break;
+            case "Hackathon":       result = isSelected(filters, "Hackathons"); break;
             default:                break;
         }
 
