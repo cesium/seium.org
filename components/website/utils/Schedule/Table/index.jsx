@@ -56,13 +56,13 @@ export default function Table({date, updateHasFocused, hash, filters, detailed})
         return [];
     }
 
-    let filtered = obj.activities.map((activity, id) => ({activity: activity, id: id, focused: hash === `${date}-${id}`}))
+    let filtered = obj.activities.map((activity, id) => ({activity: activity, id: id, focused: hash == `${date}-${id}`}))
                                    .filter(filterElem(filters));
 
     updateHasFocused(filtered.filter(activity => activity.focused).length != 0);
-    
+
     filtered = group(filtered);
 
     return filtered.map((elem,id) =>
-        <Block key={`${date}-${id}`} index={id} detailed={detailed} focused={elem.focused} date={date} elems={elem}/>);
+        <Block key={`${date}-${id}`} date={date} detailed={detailed} focused={elem.focused} elems={elem}/>);
 }

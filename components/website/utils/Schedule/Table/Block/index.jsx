@@ -3,19 +3,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react'
 
-function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, summary, 
+function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary, 
     author, description, focused, location, detailed, hyperlink}) {
      
-    const ident = `${date}-${id}`;
-
+    const ident = id;
+    console.log(ident);
 
     useEffect(() => {
         const b = document.getElementById(ident);
-        b.style.maxHeight = (focused ? (b.scrollHeight + 50 + 'px') : '225px');
+        if(b)
+            b.style.maxHeight = (focused ? (b.scrollHeight + 50 + 'px') : '225px');
     }, [focused])
 
     const skipLink = coffeeBreak || focused;
-
+    console.log(focused);
     const block = (
         <div id={ident} className={`${styles.gridBlock} ${coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 225}}>
             { coffeeBreak &&
@@ -86,11 +87,11 @@ function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, sum
     );
 }
 
-export default function Block({index, detailed, focused, date, elems}) {
+export default function Block({date, detailed,  elems}) {
 
     return (
         <div className={`grid grid-cols-${elems.length}`}>
-            {elems.map((elem, id) => <BlockItem key={id} date={date} id={`${index}-${id}`} focused={focused} detailed={detailed} {...elem.activity}/>)}
+            {elems.map((elem, id) => <BlockItem key={id}  id={`${date}-${elem.id}`} focused={elem.focused} detailed={detailed} {...elem.activity}/>)}
         </div>
     );
 }
