@@ -2,9 +2,9 @@ import styles from './style.module.css';
 
 export default function SponsorTab({tabName, selected, onSelect}) {
     return (
-        <button className={styles.wrapper}  onClick={onSelect}>
+        <div className={styles.wrapper}  onClick={onSelect}>
             <span className={`font-imedium ${styles.text}`}>{tabName}</span>
             <button className={selected ? styles.button_selected : styles.button_no_selected} />
-        </button>
+        </div>
     );
 }
