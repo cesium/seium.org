@@ -11,12 +11,14 @@ export default function Hackathon() {
                     <p className="font-iextrabold text-5xl md:text-6xl lg:text-8xl text-white">
                         Create products, train skills and learn new technologies
                     </p>
-                    <span className="mt-4 w-56 inline-block align-middle items-center text-center content-center">
-                        <Button text="REGISTER YOUR TEAM" customStyle="text-white bg-secondary border-gray-900 hover:bg-gray-900" />
-                    </span>
-                    <span className="opacity-80 text-white text-2xl pl-8 pt-4 align-middle">
-                        2-5 people
-                    </span>
+                    <div className="sm:flex pt-6 sm:pt-4">
+                        <span className="self-center w-56">
+                            <Button text="REGISTER YOUR TEAM" customStyle="text-white bg-secondary border-gray-900 hover:bg-gray-900" />
+                        </span>
+                        <div className="pt-3 sm:pt-0 self-center pl-4 sm:pl-8 opacity-80 text-white text-md">
+                            2-5 people
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
