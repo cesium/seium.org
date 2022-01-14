@@ -23,7 +23,7 @@ export default function Sponsors(props) {
                     return(
                         <div key={key} className={`${key == 1 ? "border-t-2 lg:border-t-0 lg:border-l-2 border-white" : undefined } w-[100%] lg:w-1/2`}>
                             <div className="grid grid-cols-1 w-full place-items-center py-[5%] lg:py-0 lg:px-[10%]">
-                                <p className="text-2xl lg:text-3xl font-iextrabold text-white pb-10"> {!val ? (key == 0 ? "Exclusive" : "Gold") : (key == 0 ? "Silver" : "Bronze")} </p>
+                                <p className="text-2xl lg:text-3xl font-iextrabold text-quinary pb-10"> {!val ? (key == 0 ? "Exclusive" : "Gold") : (key == 0 ? "Silver" : "Bronze")} </p>
                                 <div className={`${!val && key == 0 ? "grid-cols-1" : "grid-cols-2"} grid gap-2 lg:gap-10 p-6`}>
                                     {elem.map((sponsor,i) => {
                                         return(
