@@ -11,7 +11,9 @@ export default function Speakers() {
                     Here’s a selection of this year’s speakers
                 </h2>
                 <div className="w-80">
-                    <Button text="MEET THE SPEAKERS" customStyle="text-white bg-primary border-tertiary hover:bg-tertiary" />
+                    <a href="/speakers">
+                        <Button text="MEET THE SPEAKERS" customStyle="text-white bg-primary border-tertiary hover:bg-tertiary" />
+                    </a>
                 </div>
             </div>
             <div className="grid gap-y-8 gap-x-2 grid-cols-2 justify-items-center lg:gap-x-8">
