@@ -64,7 +64,7 @@ export default function Schedule(props)
 {
     const min_date = "2022/2/15";
     const max_date = "2022/2/20";
-    const defaultFilter = props.filters === undefined ? [] : props.filters;
+    const defaultFilter = props.filters === undefined ? "" : props.filters;
 
 
     //calculate default date
