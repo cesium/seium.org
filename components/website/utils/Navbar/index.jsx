@@ -12,11 +12,11 @@ function classNames(...classes) {
 const navigation = [
     { name: 'Schedule', href: '/schedule' },
     { name: 'Hackathon', href: '/hackathon' },
-    { name: 'Team', href: '/team' },
+    // { name: 'Team', href: '/team' },
     { name: 'Challenges', href: '/challenges' },
     { name: 'Speakers', href: '/speakers' },
     { name: 'FAQs', href: '/faq' },
-    { name: 'Moonstone', href: '/login' },
+    { name: 'Login', href: '/login' },
 ]
 
 export default function Navbar(props) {
@@ -33,10 +33,10 @@ export default function Navbar(props) {
                                     </a>
                                     <div className="justify-self-end col-span-3 hidden lg:block">
                                         <div className="flex flex-auto gap-x-20">
-                                            <div className="grid grid-cols-4 gap-x-10">
+                                            <div className="grid grid-cols-3 gap-x-20 gap-y-6 xl:gap-y-0">
                                                 {navigation.map((item, i) => (
                                                     <a key={i}
-                                                        className="font-iregular text-white text-opacity-40 hover:text-opacity-100"
+                                                        className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
                                                         href={item.href}
                                                     >
                                                         {item.name}
@@ -44,7 +44,7 @@ export default function Navbar(props) {
                                                 ))}
                                             </div>
                                             <a
-                                                href="/signup"
+                                                href=""
                                                 className={`hidden transform rotate-15 -mt-5 text-xl font-ibold items-center justify-center xl:flex h-28 w-28 text-${props.fgColor} bg-${props.button} rounded-full translate-x-0`}>
                                                 Join us 👋
                                             </a>
