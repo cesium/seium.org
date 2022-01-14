@@ -1,21 +1,24 @@
 import Block from './Block';
 import { isSelected } from '../Day/Filters'
-import { useState } from 'react'
 
 function filterElem(filters)
 {
     return function(elem)
     {
+        let result = elem.activity.author == filters;
+        if(result)
+            return true;
         if (filters === "")
             return true;
-
         //TODO
         switch (elem.activity.activityType)
         {
-            case "Coffee Break":    return isSelected(filters, "Breaks");
-            case "Talk":            return isSelected(filters, "Talks");
-            default:                return false;
+            
+            case "Coffee Break":    result = isSelected(filters, "Breaks"); break;
+            case "Talk":            result = isSelected(filters, "Talks"); break;
+            default:                break;
         }
+
     }
 }
 

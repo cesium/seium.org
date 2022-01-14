@@ -64,6 +64,8 @@ export default function Schedule(props)
 {
     const min_date = "2022/2/15";
     const max_date = "2022/2/20";
+    const defaultFilter = props.filters === undefined ? [] : props.filters;
+
 
     //calculate default date
     const _today = new Date();
@@ -72,10 +74,10 @@ export default function Schedule(props)
     
     const [date, updateDate] = useState(default_date);
     const [hash, updateHash] = useState("");
-    const [filters, updateFilters] = useState("");
+    const [filters, updateFilters] = useState(defaultFilter);
     const [hasFocusedElem, updateHasFocused] = useState(false);
 
-    const table = <Table detailed = {props.detailed} date = {date} hash = {hash} filters = {filters} updateHasFocused={updateHasFocused}/>;
+    const table = <Table detailed = {props.detailed} date = {date} hash = {hash} filters = {defaultFilter} updateHasFocused={updateHasFocused}/>;
     if (props.updateHasFocused !== undefined)
         props.updateHasFocused(hasFocusedElem);
 
