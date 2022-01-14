@@ -3,8 +3,8 @@ import Day from './Day';
 
 import styles from './style.module.css';
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 function leapYear(year)
 {
