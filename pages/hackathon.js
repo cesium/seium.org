@@ -4,6 +4,7 @@ import UnderlineAnimation from '/components/website/utils/UnderlineAnimation';
 import Awards from '/components/website/hackathon/Awards';
 import Regulations from '/components/website/hackathon/Regulations';
 
+import Navbar from '/components/website/utils/Navbar';
 import Speaker from '/components/website/utils/Speaker';
 import Footer from '/components/website/utils/Footer';
 
@@ -48,7 +49,7 @@ function MentorsSubtitle() {
 
 export default function Index() {
     return (
-        <>
+        <Navbar bgColor="secondary" button="quinary" fgColor="black" >
             <Hero />
 
             <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
@@ -72,6 +73,6 @@ export default function Index() {
             <Regulations />
 
             <Footer color="secondary" />
-        </>
+        </Navbar>
     )
 }
