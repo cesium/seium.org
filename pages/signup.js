@@ -11,7 +11,7 @@ import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
 
-export default function Login() {
+export default function Signup() {
     return (
         <div className="overflow-hidden bg-secondary min-h-screen">
             <Return componentStyle="sm:ml-14 mt-10 sm:mt-20 mb-6" />

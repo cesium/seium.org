@@ -1,19 +1,16 @@
 import Image from "next/image";
 
-import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
+import JoinUs from "/components/website/utils/JoinUs"
 
 const navigation = [
     { name: 'Schedule', href: '/schedule' },
     { name: 'Hackathon', href: '/hackathon' },
     // { name: 'Team', href: '/team' },
-    { name: 'Challenges', href: '/challenges' },
+    // { name: 'Challenges', href: '/challenges' },
     { name: 'Speakers', href: '/speakers' },
     { name: 'FAQs', href: '/faq' },
     { name: 'Login', href: '/login' },
@@ -43,11 +40,9 @@ export default function Navbar(props) {
                                                     </a>
                                                 ))}
                                             </div>
-                                            <a
-                                                href=""
-                                                className={`hidden transform rotate-15 -mt-5 text-xl font-ibold items-center justify-center xl:flex h-28 w-28 text-${props.fgColor} bg-${props.button} rounded-full translate-x-0`}>
-                                                Join us 👋
-                                            </a>
+                                            <div className="hidden xl:block">
+                                                <JoinUs fgColor={props.fgColor} button={props.button} />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
