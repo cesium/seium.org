@@ -1,6 +1,6 @@
-export default function Return({ ml, mt, mt_sm }) {
+export default function Return({ componentStyle }) {
     return (
-        <a href="/" className={`sm:ml-${ml} text-quinary mt-${mt} sm:mt-${mt_sm} flex items-center justify-center sm:absolute`}>
+        <a href="/" className={`${componentStyle} text-quinary font-iregular flex items-center justify-center sm:absolute`}>
             &lt; Back to SEI website
         </a>
     );

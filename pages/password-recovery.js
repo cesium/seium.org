@@ -24,62 +24,56 @@ export default function RecoverPassword() {
 
     return (
         <div className="overflow-hidden bg-secondary min-h-screen">
-            <Return ml="20" mt="10" mt_sm="10" />
-            <div className="sm:mt-16 flex flex-col items-center justify-center">
+            <Return componentStyle="sm:ml-14 mt-10 sm:mt-20 mb-20" />
+            <div className="sm:mt-40 flex flex-col items-center justify-center">
                 <Title text="Recover your password" />
 
-                {st != true ? 
-                <Form>
-                    <Input
-                        text="PASSWORD"
-                        id="password"
-                        name="password"
-                        type="password"
-                        autoComplete="current-password"
-                        fgColor="white"
-                        bgColor="primary"
-                    />
-                    <Input
-                        text="CONFIRM PASSWORD"
-                        id="password"
-                        name="password"
-                        type="password"
-                        autoComplete="current-password"
-                        fgColor="white"
-                        bgColor="primary"
-                    />
-                    <Button
-                        type="submit"
-                        text="LET'S GO"
-                        fg_color="black"
-                        bg_color="quinary"
-                        border="quinary"
-                        padding="32"
-                    />
-                </Form> : <></> }
+                {st != true ?
+                    <Form>
+                        <Input
+                            text="PASSWORD"
+                            id="password"
+                            name="password"
+                            type="password"
+                            autoComplete="current-password"
+                            fgColor="white"
+                            bgColor="primary"
+                        />
+                        <Input
+                            text="CONFIRM PASSWORD"
+                            id="password"
+                            name="password"
+                            type="password"
+                            autoComplete="current-password"
+                            fgColor="white"
+                            bgColor="primary"
+                        />
+                        <Button
+                            type="submit"
+                            text="LET'S GO"
+                            customStyle="text-secondary bg-quinary border-quinary"
+                        />
+                    </Form> : <></>}
 
                 {st == false ?
-                <p className="mt-10 font-iregular text-red-600">An error has occured. Please try again later
-                </p> : <></>}
+                    <p className="mt-10 font-iregular text-red-600">An error has occured. Please try again later
+                    </p> : <></>}
 
                 {st == true ?
-                <>
-                    <p className="mt-10 mb-10 font-iregular text-quinary">Password reset successfully</p> 
-                    <div className="w-96">
-                        <Button
-                            type=""
-                            text="BACK TO MOONSTONE"
-                            fg_color="black"
-                            bg_color="quinary"
-                            border="quinary"
-                            padding="32"
-                        />
-                    </div>
-                    
-                </>     
-                : <></>}
+                    <>
+                        <p className="mt-10 mb-10 font-iregular text-quinary">Password reset successfully</p>
+                        <div className="w-96">
+                            <Button
+                                type=""
+                                text="BACK TO MOONSTONE"
+                                customStyle="text-secondary bg-quinary border-quinary"
+                            />
+                        </div>
 
- 
+                    </>
+                    : <></>}
+
+
                 <div className="hidden lg:block absolute bottom-0 right-60">
                     <Fade bottom>
                         <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
