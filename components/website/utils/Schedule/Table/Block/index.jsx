@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect } from 'react'
 
 function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, summary, 
-    authors, description, focused, location, detailed, hyperlink}) {
+    author, description, focused, location, detailed, hyperlink}) {
      
     const ident = `${date}-${id}`;
 
@@ -36,21 +36,13 @@ function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, sum
             </p>
 
             <ul className={`${styles.authors} text-sm text-gray-400 font-iregular flex`}>
-                { authors?.map((author, index) => [
-                    <li className={styles.listElem} key={index * 2}>
-                        {
-                            author.speakerId !== undefined ?
-                                <Link href={`speakers#${author.speakerId}`}>
-                                    <a className={styles.author}> {author.name} </a>
-                                </Link>
-                            :
-                                author.name
-                        }
-                    </li>,
-                    <li className={styles.listElem} key={index * 2 + 1}>
-                        {index + 1 == authors.length ? "" : ",\u00A0"}
+            { author != "" ?
+                    <li className={styles.listElem}>
+                        <Link href={`speakers?author=${author}`}>
+                            <a className={styles.author}> {author} </a>
+                        </Link>
                     </li>
-                ])}
+                : <></>}
             </ul>
 
             { description !== undefined &&
@@ -95,7 +87,7 @@ function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, sum
 }
 
 export default function Block({index, detailed, focused, date, elems}) {
-    console.log(JSON.stringify(elems));
+
     return (
         <div className={`grid grid-cols-${elems.length}`}>
             {elems.map((elem, id) => <BlockItem key={id} date={date} id={`${index}-${id}`} focused={focused} detailed={detailed} {...elem.activity}/>)}
