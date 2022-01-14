@@ -5,15 +5,15 @@ function filterElem(filters)
 {
     return function(elem)
     {
+        if (filters == "")
+            return true;
+
         let result = elem.activity.author == filters;
         if(result)
             return true;
-        if (filters === "")
-            return true;
 
         switch (elem.activity.activityType)
-        {
-            
+        {   
             case "Coffee Break":    result = isSelected(filters, "Breaks"); break;
             case "Talk":            result = isSelected(filters, "Talks"); break;
             case "Pitch":           result = isSelected(filters, "Pitch"); break;
@@ -21,7 +21,7 @@ function filterElem(filters)
             case "Hackathon":       result = isSelected(filters, "Hackathons"); break;
             default:                break;
         }
-
+        return result;
     }
 }
 
