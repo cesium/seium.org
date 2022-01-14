@@ -77,7 +77,7 @@ export default function Schedule(props)
     const [filters, updateFilters] = useState(defaultFilter);
     const [hasFocusedElem, updateHasFocused] = useState(false);
 
-    const table = <Table detailed = {props.detailed} date = {date} hash = {hash} filters = {defaultFilter} updateHasFocused={updateHasFocused}/>;
+    const table = <Table detailed = {props.detailed} date = {date} hash = {hash} filters = {filters} updateHasFocused={updateHasFocused}/>;
     if (props.updateHasFocused !== undefined)
         props.updateHasFocused(hasFocusedElem);
 
