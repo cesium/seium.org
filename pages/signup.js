@@ -14,7 +14,7 @@ import Text from "/components/moonstone/authentication/Text";
 export default function Login() {
     return (
         <div className="overflow-hidden bg-secondary min-h-screen">
-            <Return ml="20" mt="10" mt_sm="10" />
+            <Return componentStyle="sm:ml-14 mt-10 sm:mt-20 mb-6" />
             <div className="sm:mt-16 flex flex-col items-center justify-center">
                 <Title text="Sign up" />
 

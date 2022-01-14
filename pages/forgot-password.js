@@ -24,41 +24,38 @@ export default function ForgotPassword() {
 
     return (
         <div className="overflow-hidden bg-secondary min-h-screen">
-            <Return ml="4" mt="10" mt_sm="10" />
+            <Return componentStyle="sm:ml-14 mt-10 sm:mt-20" />
             <div className="mt-10 sm:mt-40 flex flex-col items-center justify-center">
                 <Title text="Reset password" />
-                {st != true ? 
-                <div className="mt-8">
-                    <Form>
-                        <Input
-                            text="YOUR EMAIL"
-                            id="email"
-                            name="email"
-                            type="email"
-                            fgColor="white"
-                            bgColor="primary"
-                            autoComplete="email"
-                        />
-                        <Button
-                            type="submit"
-                            text="LET'S GO"
-                            fg_color="black"
-                            bg_color="quinary"
-                            border="quinary"
-                            padding="32"
-                        />
-                    </Form>
-                </div> : <></>}
+                {st != true ?
+                    <div className="mt-8">
+                        <Form>
+                            <Input
+                                text="YOUR EMAIL"
+                                id="email"
+                                name="email"
+                                type="email"
+                                fgColor="white"
+                                bgColor="primary"
+                                autoComplete="email"
+                            />
+                            <Button
+                                type="submit"
+                                text="LET'S GO"
+                                customStyle="text-secondary bg-quinary border-quinary"
+                            />
+                        </Form>
+                    </div> : <></>}
                 {st == false ?
-                <p className="mt-10 font-iregular text-red-600">An error has occured. Please make sure the email you provided is
-                    correct and try again later
-                </p> : <></>}
+                    <p className="mt-10 font-iregular text-red-600">An error has occured. Please make sure the email you provided is
+                        correct and try again later
+                    </p> : <></>}
 
                 {st == true ?
-                <p className="mt-10 font-iregular text-quinary">An email has bent sent. Please check your inbox to recover your password
-                </p> : <></>}
+                    <p className="mt-10 font-iregular text-quinary">An email has bent sent. Please check your inbox to recover your password
+                    </p> : <></>}
 
-                {st != true ? <Text text="Don’t have an account?" link="Signup here" href="/signup" /> : <></> }
+                {st != true ? <Text text="Don’t have an account?" link="Signup here" href="/signup" /> : <></>}
                 <div className="hidden lg:block absolute bottom-0 right-60">
                     <Fade bottom>
                         <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
