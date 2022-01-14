@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,7 +13,7 @@ const navigation = [
     // { name: 'Challenges', href: '/challenges' },
     { name: 'Speakers', href: '/speakers' },
     { name: 'FAQs', href: '/faq' },
-    { name: 'Login', href: '/login' },
+    // { name: 'Login', href: '/login' },
 ]
 
 export default function Navbar(props) {
@@ -21,7 +21,7 @@ export default function Navbar(props) {
         <Disclosure as="nav">
             {({ open }) => (
                 <>
-                    <div className={`spacing pt-14 pb-4 ${open ? `lg:bg-${props.bgColor} bg-primary` : "bg-" + props.bgColor}`}>
+                    <div className={`spacing pt-14 pb-4 bg-${props.bgColor}`}>
                         <div className="flex items-center justify-between h-16">
                             <div className="flex flex-auto z-50 relative">
                                 <div className="grid grid-cols-4 w-full">
@@ -59,7 +59,7 @@ export default function Navbar(props) {
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="lg:hidden bg-primary">
+                    <Disclosure.Panel className={`lg:hidden bg-${props.bgColor}`}>
                         <div className="px-2 pt-12 object-cover min-h-screen z-50 relative">
                             {navigation.map((item, i) => (
                                 <Disclosure.Button
@@ -82,7 +82,6 @@ export default function Navbar(props) {
                 </>
             )
             }
-
 
         </Disclosure >
     );
