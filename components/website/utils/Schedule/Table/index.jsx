@@ -19,22 +19,44 @@ function filterElem(filters)
     }
 }
 
-export default function Table(props)
-{
+/*
+ *  Groups the activities into arrays. Two elements will be in the same array if they happen at the same
+ *  time
+ */
+function group(list) {
+    var result = [];
+
+    for(var i = 0; i < list.length; i++) {
+        var temp = [];
+        for(var j = i; j < list.length && list[j].activity.startTime == list[i].activity.startTime 
+            && list[j].activity.endTime == list[i].activity.endTime; j++) {
+
+            temp.push(list[j]);
+        }
+        result.push(temp);
+        i += temp.length - 1;
+    }
+
+    return result;
+}
+
+export default function Table({date, updateHasFocused, hash, filters, detailed}) {
     const schedule = require('/data/schedule.json');
-    const obj = schedule.find((obj) => obj.date === props.date);
+    const obj = schedule.find((obj) => obj.date == date);
 
     if (obj === undefined || obj.activities === undefined)
     {
-        props.updateHasFocused(false);
+        updateHasFocused(false);
         return [];
     }
 
-    const filtered = obj.activities.map((activity, id) => ({activity: activity, id: id, focused: props.hash === `${props.date}-${id}`}))
-                                   .filter(filterElem(props.filters));
+    let filtered = obj.activities.map((activity, id) => ({activity: activity, id: id, focused: hash === `${date}-${id}`}))
+                                   .filter(filterElem(filters));
 
-    props.updateHasFocused(filtered.filter(activity => activity.focused).length != 0);
+    updateHasFocused(filtered.filter(activity => activity.focused).length != 0);
     
+    filtered = group(filtered);
+
     return filtered.map(elem =>
-        <Block key={`${props.date}-${elem.id}`} detailed={props.detailed} focused={elem.focused} date={props.date} id={elem.id} {...elem.activity}/>);
+        <Block key={`${date}-${elem.id}`} detailed={detailed} focused={elem.focused} date={date} id={elem.id} elems={elem}/>);
 }
