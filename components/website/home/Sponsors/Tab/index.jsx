@@ -1,10 +1,10 @@
 import styles from './style.module.css';
 
-export default function SponsorTab(props) {
+export default function SponsorTab({tabName, selected, onSelect}) {
     return (
-        <div className={styles.wrapper}>
-            <span className={`font-imedium ${styles.text}`}>{props.tabName}</span>
-            <button className={props.selected ? styles.button_selected : styles.button_no_selected} onClick={props.onSelect} />
+        <div className={styles.wrapper}  onClick={onSelect}>
+            <span className={`font-imedium ${styles.text}`}>{tabName}</span>
+            <button className={selected ? styles.button_selected : styles.button_no_selected} />
         </div>
     );
 }
