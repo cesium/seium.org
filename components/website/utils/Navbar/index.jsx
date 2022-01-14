@@ -54,7 +54,6 @@ export default function Navbar(props) {
                             </div>
                             <div className="flex lg:hidden z-50 relative">
                                 <Disclosure.Button className="inline-flex items-center justify-center text-white w-6 h-6">
-                                    <span className="sr-only">Open main menu</span>
                                     {open ? (
                                         <FontAwesomeIcon icon={faTimes} />
                                     ) : (
@@ -66,7 +65,7 @@ export default function Navbar(props) {
                     </div>
 
                     <Disclosure.Panel className="lg:hidden bg-primary">
-                        <div className="px-2 pt-12 object-cover min-h-screen">
+                        <div className="px-2 pt-12 object-cover min-h-screen z-50 relative">
                             {navigation.map((item, i) => (
                                 <Disclosure.Button
                                     as="a"
