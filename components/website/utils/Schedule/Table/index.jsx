@@ -58,5 +58,5 @@ export default function Table({date, updateHasFocused, hash, filters, detailed})
     filtered = group(filtered);
 
     return filtered.map((elem,id) =>
-        <Block key={`${date}-${id}`} detailed={detailed} focused={elem.focused} date={date} id={id} elems={elem}/>);
+        <Block key={`${date}-${id}`} index={id} detailed={detailed} focused={elem.focused} date={date} elems={elem}/>);
 }

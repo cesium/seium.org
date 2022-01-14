@@ -85,7 +85,7 @@ function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, sum
     return (
         <div className={skipLink ? "" : styles.clickable}>
             { !skipLink && 
-                <Link href={`schedule/#${id}`}>
+                <Link href={`schedule/#${ident}`}>
                     <a className={styles.outerLink}/>
                 </Link>
             }
@@ -94,11 +94,11 @@ function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, sum
     );
 }
 
-export default function Block({detailed, focused, date, elems}) {
+export default function Block({index, detailed, focused, date, elems}) {
     console.log(JSON.stringify(elems));
     return (
         <div className={`grid grid-cols-${elems.length}`}>
-            {elems.map((elem, id) => <BlockItem key={id} date={date} id={id} focused={focused} detailed={detailed} {...elem.activity}/>)}
+            {elems.map((elem, id) => <BlockItem key={id} date={date} id={`${index}-${id}`} focused={focused} detailed={detailed} {...elem.activity}/>)}
         </div>
     );
 }
