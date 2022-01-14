@@ -38,7 +38,7 @@ function BlockItem({date, id, coffeeBreak, startTime, endTime, activityType, sum
             <ul className={`${styles.authors} text-sm text-gray-400 font-iregular flex`}>
             { author != "" ?
                     <li className={styles.listElem}>
-                        <Link href={`speakers?author=${author}`}>
+                        <Link href={`speakers?speaker=${author}`}>
                             <a className={styles.author}> {author} </a>
                         </Link>
                     </li>
