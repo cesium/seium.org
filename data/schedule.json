@@ -400,7 +400,7 @@
             {
                 "startTime": "00:00",
                 "endTime": "13:00",
-                "activityType": "",
+                "activityType": "Hackathon",
                 "summary": "Hackathon (42 hours)",
                 "description": "",
                 "author": "",
@@ -414,7 +414,7 @@
             {
                 "startTime": "14:00",
                 "endTime": "24:00",
-                "activityType": "",
+                "activityType": "Hackathon",
                 "summary": "Hackathon (42 hours)",
                 "description": "",
                 "author": "",
@@ -429,7 +429,7 @@
             {
                 "startTime": "00:00",
                 "endTime": "13:00",
-                "activityType": "",
+                "activityType": "Hackathon",
                 "summary": "Hackathon (42 hours)",
                 "description": "",
                 "author": "",
@@ -443,7 +443,7 @@
             {
                 "startTime": "14:00",
                 "endTime": "15:00",
-                "activityType": "",
+                "activityType": "Hackathon",
                 "summary": "Hackathon (42 hours)",
                 "description": "",
                 "author": "",
@@ -453,7 +453,7 @@
             {
                 "startTime": "15:00",
                 "endTime": "17:00",
-                "activityType": "",
+                "activityType": "Hackathon",
                 "summary": "Hackathon Final Pitches and Closing Session",
                 "description": "",
                 "author": "",

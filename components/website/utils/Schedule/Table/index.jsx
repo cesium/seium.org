@@ -1,40 +1,70 @@
 import Block from './Block';
 import { isSelected } from '../Day/Filters'
-import { useState } from 'react'
+
+import schedule from '/data/schedule.json'
 
 function filterElem(filters)
 {
     return function(elem)
     {
-        if (filters === "")
+        if (filters == "")
             return true;
 
-        //TODO
+        let result = elem.activity.author == filters;
+        if(result)
+            return true;
+
         switch (elem.activity.activityType)
-        {
-            case "Coffee Break":    return isSelected(filters, "Breaks");
-            case "Talk":            return isSelected(filters, "Talks");
-            default:                return false;
+        {   
+            case "Coffee Break":    result = isSelected(filters, "Breaks"); break;
+            case "Talk":            result = isSelected(filters, "Talks"); break;
+            case "Pitch":           result = isSelected(filters, "Pitch"); break;
+            case "Workshop":        result = isSelected(filters, "Workshops"); break;
+            case "Hackathon":       result = isSelected(filters, "Hackathons"); break;
+            default:                break;
         }
+        return result;
     }
 }
 
-export default function Table(props)
-{
-    const schedule = require('/data/schedule.json');
-    const obj = schedule.find((obj) => obj.date === props.date);
+/*
+ *  Groups the activities into arrays. Two elements will be in the same array if they happen at the same
+ *  time
+ */
+function group(list) {
+    const result = [];
+
+    for(let i = 0; i < list.length; i++) {
+        const temp = [];
+        for(let j = i; j < list.length && list[j].activity.startTime == list[i].activity.startTime 
+            && list[j].activity.endTime == list[i].activity.endTime; j++) {
+
+            temp.push(list[j]);
+        }
+        result.push(temp);
+        i += temp.length - 1;
+    }
+
+    return result;
+}
+
+export default function Table({date, updateHasFocused, hash, filters, detailed}) {
+    
+    const obj = schedule.find((obj) => obj.date == date);
 
     if (obj === undefined || obj.activities === undefined)
     {
-        props.updateHasFocused(false);
+        updateHasFocused(false);
         return [];
     }
 
-    const filtered = obj.activities.map((activity, id) => ({activity: activity, id: id, focused: props.hash === `${props.date}-${id}`}))
-                                   .filter(filterElem(props.filters));
+    let filtered = obj.activities.map((activity, id) => ({activity: activity, id: id, focused: hash == `${date}-${id}`}))
+                                   .filter(filterElem(filters));
 
-    props.updateHasFocused(filtered.filter(activity => activity.focused).length != 0);
-    
-    return filtered.map(elem =>
-        <Block key={`${props.date}-${elem.id}`} detailed={props.detailed} focused={elem.focused} date={props.date} id={elem.id} {...elem.activity}/>);
+    updateHasFocused(filtered.filter(activity => activity.focused).length != 0);
+
+    filtered = group(filtered);
+
+    return filtered.map((elem,id) =>
+        <Block key={`${date}-${id}`} date={date} detailed={detailed} focused={elem.focused} elems={elem}/>);
 }
