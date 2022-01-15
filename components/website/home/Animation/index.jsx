@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Sketch from "react-p5";
 
+
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
+let touch = isTouchDevice();
+
 const Animation = () => {
 
   var path1_backup = [[2599.298864957342, -844.3636519746029], [2690.3746029830672, -820.1607875000084], [2295.7699583085746, 645.2217897637374], [2473.6820111172765, 542.4129187451488], [2736.783243232903, -430.9702762031668], [2826.1970036109656, -404.265288728904], [2589.2624421742867, 475.6223711077539], [2729.749072653589, 394.4260643912444], [2856.338389377531, -75.63615183163802], [2946.915493325826, -49.6129957441799], [2810.5370612051456, 456.8580909151324], [2262.537459012803, 773.5368049663193], [1490.8584569063153, 568.4558973688372], [841.8330237966927, -554.6530872407102], [1086.0964735288117, -1655.924777005776], [1178.1531464725228, -1635.3601558008038], [1114.276961033294, -1346.8810830947004], [2008.8927285572258, 201.21463968544094], [2297.115833490085, 277.812597454762], [2599.298864957342, -844.3636519746029]]
@@ -116,25 +125,29 @@ const Animation = () => {
 
   const draw = (p) => {
     p.clear();
-    let mouseX = p.mouseX
-    let mouseY = p.mouseY
 
-    if (mouseX && mouseY) {
-      update_vars(p,mouseX, mouseY, path1, path1_index_1, path1_var_1);
-      update_vars(p,mouseX, mouseY, path1, path1_index_2, path1_var_2);
-      update_vars(p,mouseX, mouseY, path2, path2_index_1, path2_var_1);
-      update_vars(p,mouseX, mouseY, path2, path2_index_2, path2_var_2);
-      update_vars(p,mouseX, mouseY, path3, path3_index_1, path3_var_1);
-      update_vars(p,mouseX, mouseY, path3, path3_index_2, path3_var_2);
-    } else { 
-      update_vars_nomouse(path1, path1_index_1, path1_var_1);
-      update_vars_nomouse(path1, path1_index_2, path1_var_2);
-      update_vars_nomouse(path2, path2_index_1, path2_var_1);
-      update_vars_nomouse(path2, path2_index_2, path2_var_2);
-      update_vars_nomouse(path3, path3_index_1, path3_var_1);
-      update_vars_nomouse(path3, path3_index_2, path3_var_2);
-
+    if (!touch) {
+      let mouseX = p.mouseX
+      let mouseY = p.mouseY
+  
+      if (mouseX && mouseY) {
+        update_vars(p,mouseX, mouseY, path1, path1_index_1, path1_var_1);
+        update_vars(p,mouseX, mouseY, path1, path1_index_2, path1_var_2);
+        update_vars(p,mouseX, mouseY, path2, path2_index_1, path2_var_1);
+        update_vars(p,mouseX, mouseY, path2, path2_index_2, path2_var_2);
+        update_vars(p,mouseX, mouseY, path3, path3_index_1, path3_var_1);
+        update_vars(p,mouseX, mouseY, path3, path3_index_2, path3_var_2);
+      } else { 
+        update_vars_nomouse(path1, path1_index_1, path1_var_1);
+        update_vars_nomouse(path1, path1_index_2, path1_var_2);
+        update_vars_nomouse(path2, path2_index_1, path2_var_1);
+        update_vars_nomouse(path2, path2_index_2, path2_var_2);
+        update_vars_nomouse(path3, path3_index_1, path3_var_1);
+        update_vars_nomouse(path3, path3_index_2, path3_var_2);
+  
+      }
     }
+    
     drawPaths(p,path1)
     drawPaths(p,path2)
     drawPaths(p,path3)

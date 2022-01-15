@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Sketch from "react-p5";
 
-let basePos1 = [];
-let basePos2 = [];
-let basePos3 = [];
-let currPos = [];
 
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
 
+let touch = isTouchDevice();
 
 
 const Animation = () => {
-
 
   var path1_backup = [[1511.5917743472655, -1004.2590745605789], [1615.0221769967784, -1023.6427358595708], [1921.6712064284177, 643.0163675547201], [2051.5735135407845, 453.87534926114535], [1848.8734353134316, -653.6793148101153], [1951.8314207142116, -669.7421723654782], [2135.9640447283336, 330.999180529709], [2238.533382451991, 181.63136825986527], [2140.1761507165493, -353.0001707144358], [2243.978946485936, -370.3094500494616], [2349.970520118017, 205.7245542354019], [1949.8538598186624, 788.3211495436742], [1073.4890051604527, 952.5460429308325], [-120.52727847616795, 132.51962696908328], [-403.68741921325926, -1094.8808881252785], [-301.0171405558742, -1118.4031038485966], [-226.73339832096667, -796.9367915434569], [1419.0988553164239, 333.3903643554854], [1746.4222488509852, 272.052127800603], [1511.5917743472655, -1004.2590745605789]]
   var path2_backup = [[1827.0266480503458, 704.2710602436306], [1805.5291448420733, 593.3281563648001], [1219.203362622194, 703.1982961577642], [-89.05490840656651, -195.28887948772993], [-28.40163176229641, 69.21951574033571], [1095.7986389254515, 841.3001391746628], [1827.0266480503458, 704.2710602436306]]
@@ -20,21 +21,15 @@ const Animation = () => {
   var path2 = []
   var path3 = []
 
-
-
   var path1_index_1 = 12
   var path1_var_1 = undefined
   var path1_index_2 = 17
   var path1_var_2 = undefined
   
-
-
   var path2_index_1 = 2
   var path2_var_1 = undefined
   var path2_index_2 = 5
   var path2_var_2 = undefined
-
-  
 
   var path3_index_1 = 2
   var path3_var_1 = undefined
@@ -84,7 +79,6 @@ const setup = (p) => {
   p.stroke(76, 169, 255);
   update_path_horizontally(p)
   update_path_vars()
-
 };
 
 
@@ -122,25 +116,29 @@ function drawPaths(p,path) {
 
 const draw = (p) => {
   p.clear();
-  let mouseX = p.mouseX
-  let mouseY = p.mouseY
 
-  if (mouseX && mouseY) {
-    update_vars(p,mouseX, mouseY, path1, path1_index_1, path1_var_1);
-    update_vars(p,mouseX, mouseY, path1, path1_index_2, path1_var_2);
-    update_vars(p,mouseX, mouseY, path2, path2_index_1, path2_var_1);
-    update_vars(p,mouseX, mouseY, path2, path2_index_2, path2_var_2);
-    update_vars(p,mouseX, mouseY, path3, path3_index_1, path3_var_1);
-    update_vars(p,mouseX, mouseY, path3, path3_index_2, path3_var_2);
-  } else { 
-    update_vars_nomouse(path1, path1_index_1, path1_var_1);
-    update_vars_nomouse(path1, path1_index_2, path1_var_2);
-    update_vars_nomouse(path2, path2_index_1, path2_var_1);
-    update_vars_nomouse(path2, path2_index_2, path2_var_2);
-    update_vars_nomouse(path3, path3_index_1, path3_var_1);
-    update_vars_nomouse(path3, path3_index_2, path3_var_2);
-
+  if (!touch) {
+    let mouseX = p.mouseX
+    let mouseY = p.mouseY
+  
+    if (mouseX && mouseY) {
+      update_vars(p,mouseX, mouseY, path1, path1_index_1, path1_var_1);
+      update_vars(p,mouseX, mouseY, path1, path1_index_2, path1_var_2);
+      update_vars(p,mouseX, mouseY, path2, path2_index_1, path2_var_1);
+      update_vars(p,mouseX, mouseY, path2, path2_index_2, path2_var_2);
+      update_vars(p,mouseX, mouseY, path3, path3_index_1, path3_var_1);
+      update_vars(p,mouseX, mouseY, path3, path3_index_2, path3_var_2);
+    } else { 
+      update_vars_nomouse(path1, path1_index_1, path1_var_1);
+      update_vars_nomouse(path1, path1_index_2, path1_var_2);
+      update_vars_nomouse(path2, path2_index_1, path2_var_1);
+      update_vars_nomouse(path2, path2_index_2, path2_var_2);
+      update_vars_nomouse(path3, path3_index_1, path3_var_1);
+      update_vars_nomouse(path3, path3_index_2, path3_var_2);
+  
+    }
   }
+
   drawPaths(p,path1)
   drawPaths(p,path2)
   drawPaths(p,path3)

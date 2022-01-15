@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div className="bg-quaternary spacing">
       <div className="z-50 relative">
-        {/* <Animation /> */}
+        <Animation />
         <div className="pt-2">
           <Title />
         </div>

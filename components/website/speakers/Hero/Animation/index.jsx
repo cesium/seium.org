@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Sketch from "react-p5";
 
-let basePos1 = [];
-let basePos2 = [];
-let basePos3 = [];
-let currPos = [];
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
+let touch = isTouchDevice();
 
 const Animation = () => {
 
@@ -119,25 +122,31 @@ const Animation = () => {
   
   const draw = (p) => {
     p.clear();
-    let mouseX = p.mouseX
-    let mouseY = p.mouseY
-  
-    if (mouseX && mouseY) {
-      update_vars(p,mouseX, mouseY, path1, path1_index_1, path1_var_1);
-      update_vars(p,mouseX, mouseY, path1, path1_index_2, path1_var_2);
-      update_vars(p,mouseX, mouseY, path2, path2_index_1, path2_var_1);
-      update_vars(p,mouseX, mouseY, path2, path2_index_2, path2_var_2);
-      update_vars(p,mouseX, mouseY, path3, path3_index_1, path3_var_1);
-      update_vars(p,mouseX, mouseY, path3, path3_index_2, path3_var_2);
-    } else { 
-      update_vars_nomouse(path1, path1_index_1, path1_var_1);
-      update_vars_nomouse(path1, path1_index_2, path1_var_2);
-      update_vars_nomouse(path2, path2_index_1, path2_var_1);
-      update_vars_nomouse(path2, path2_index_2, path2_var_2);
-      update_vars_nomouse(path3, path3_index_1, path3_var_1);
-      update_vars_nomouse(path3, path3_index_2, path3_var_2);
-  
+
+    if (!touch) {
+
+      let mouseX = p.mouseX
+      let mouseY = p.mouseY
+    
+      if (mouseX && mouseY) {
+        update_vars(p,mouseX, mouseY, path1, path1_index_1, path1_var_1);
+        update_vars(p,mouseX, mouseY, path1, path1_index_2, path1_var_2);
+        update_vars(p,mouseX, mouseY, path2, path2_index_1, path2_var_1);
+        update_vars(p,mouseX, mouseY, path2, path2_index_2, path2_var_2);
+        update_vars(p,mouseX, mouseY, path3, path3_index_1, path3_var_1);
+        update_vars(p,mouseX, mouseY, path3, path3_index_2, path3_var_2);
+      } else { 
+        update_vars_nomouse(path1, path1_index_1, path1_var_1);
+        update_vars_nomouse(path1, path1_index_2, path1_var_2);
+        update_vars_nomouse(path2, path2_index_1, path2_var_1);
+        update_vars_nomouse(path2, path2_index_2, path2_var_2);
+        update_vars_nomouse(path3, path3_index_1, path3_var_1);
+        update_vars_nomouse(path3, path3_index_2, path3_var_2);
+    
+      }
+
     }
+
     drawPaths(p,path1)
     drawPaths(p,path2)
     drawPaths(p,path3)
