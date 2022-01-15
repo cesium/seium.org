@@ -14,16 +14,16 @@ import jury from '/data/jury.json';
 function JuryTitle() {
     return (
         <UnderlineAnimation text="These are the one to fear. Just saying">
-            <h2 className="font-bold text-white text-5xl md:text-6xl md:w-full relative z-0">The Jury</h2>
+            <h2 className="relative z-0 text-5xl font-bold text-white md:text-6xl md:w-full">The Jury</h2>
         </UnderlineAnimation>
     );
 }
 
 function JurySubtitle() {
     return (
-        <p className="text-white mt-10">
+        <p className="mt-10 text-white">
             Who will be the jurors? Can you guess? I bet you already suspect…
-            Yeah, once again we have members of Fake Company! They will evaluate everything,
+            Yeah, we have members of Accenture! They will evaluate everything,
             including the technical component, so you need to do your best throughout the entire project! Good luck!
         </p>
     )
@@ -31,7 +31,7 @@ function JurySubtitle() {
 
 function MentorsTitle() {
     return (
-        <h2 className="font-bold text-white text-5xl md:text-6xl md:w-full relative z-0">
+        <h2 className="relative z-0 text-5xl font-bold text-white md:text-6xl md:w-full">
             The mentors
         </h2>
     );
@@ -39,10 +39,10 @@ function MentorsTitle() {
 
 function MentorsSubtitle() {
     return (
-        <p className="text-white mt-10">
+        <p className="mt-10 text-white">
             This year, we provide the most amazing mentors you could ever have to accompany and help you in order to
             make the best decisions for the development of your, certainly, spectacular project! Who are the mentors?
-            You should have guessed by now, don’t you think?! However, we will tell you, our mentors are *drum roll* some members of Fake Company!
+            You should have guessed by now, don’t you think?! However, we will tell you, our mentors are *drum roll* some members of Accenture!
         </p>
     )
 }
