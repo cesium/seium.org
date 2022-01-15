@@ -6,7 +6,7 @@ export default function ExpectList() {
             </h3>
 
             <p className="pt-4 text-xl font-bold">
-                How does this thing really work?
+                Let us show you.
             </p>
 
             <ul className="pl-4 mt-8 list-disc">

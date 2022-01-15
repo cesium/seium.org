@@ -1,11 +1,11 @@
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
 import Title from "./Title";
-import Button from '/components/utils/Button';
+import Button from "/components/utils/Button";
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
-const Animation = dynamic(() => import('./Animation'), { ssr: false })
+const Animation = dynamic(() => import("./Animation"), { ssr: false });
 
 export default function Hero() {
   return (
@@ -18,9 +18,13 @@ export default function Hero() {
         <div className="relative md:grid md:grid-cols-3 mt-8">
           <div className="col-span-2">
             <span className="w-56 inline-block align-middle items-center text-center content-center">
-              <Button text="REGISTER YOUR TEAM" customStyle="text-white bg-primary border-tertiary hover:bg-tertiary" />
+              <a href="https://forms.gle/eFft9LTLSQzJjTG29">
+                <Button 
+                  text="REGISTER YOUR TEAM" 
+                  customStyle="text-white bg-primary border-tertiary hover:bg-tertiary" />
+              </a>
             </span>
-            <span className="opacity-80 text-white text-2xl pl-8 align-middle">
+            <span className="pl-8 text-2xl text-white align-middle opacity-80">
               2-5 people
             </span>
           </div>
@@ -28,7 +32,7 @@ export default function Hero() {
             <Organization />
           </div>
         </div>
-        <div className="md:grid grid md:grid-cols-2 mt-40">
+        <div className="grid mt-40 md:grid md:grid-cols-2">
           <ExpectList />
           <div className="h-20 md:hidden"></div> {/* just spacing */}
           <Pitch />
