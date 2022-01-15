@@ -45,7 +45,7 @@ function addDate(date, days) //date is a string "yyyy/mm/dd"
 export default function Schedule(props) {
 
     const min_date = "2022/2/15";
-    const max_date = "2022/2/20";
+    const max_date = "2022/2/18";
 
     //calculate default date
     const _today = new Date();
@@ -84,17 +84,17 @@ export default function Schedule(props) {
     };
 
     return (
-        <section className="2xl:grid 2xl:grid-cols-2 z-50 relative bg-secondary lg:pt-10 pb-20 spacing">
-            <div className="grid place-items-center md:place-items-start sm:flex sm:flex-col text-white mb-10 md:mr-10">
+        <section className="relative z-50 pb-20 2xl:grid 2xl:grid-cols-2 bg-secondary lg:pt-10 spacing">
+            <div className="grid mb-10 text-white place-items-center md:place-items-start sm:flex sm:flex-col md:mr-10">
                 <Day date={date} previousDay={previous_day} nextDay={next_day} />
-                <p className="mt-10 md:px-20 w-5/6 text-md font-iregular">
+                <p className="w-5/6 mt-10 md:px-20 text-md font-iregular">
                     During this week, you have the opportunity to interact with many recognized speakers, national, international and notorious companies!
                 </p>
-                <p className="mt-4 md:px-20 w-5/6 text-md font-iregular">
+                <p className="w-5/6 mt-4 md:px-20 text-md font-iregular">
                     You can get to know them better here.
                 </p>
             </div>
-            <div className="md:px-10 w-full">
+            <div className="w-full md:px-10">
                 <Table detailed = { props.detailed } date = { date } />;
             </div>
         </section>
