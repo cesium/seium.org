@@ -10,7 +10,7 @@ export default function Partners() {
                 {partners.map((partner, i) =>
                     <div className={`${partners.length == 2 && "col-span-2"} 
                                      ${(partners.length == 1) && "col-span-4"}
-                                     m-auto filter grayscale`} 
+                                     m-auto filter grayscale hover:filter-none`} 
                          key={i}
                     >
                         <a href={partner.url} target="_blank">
