@@ -1,6 +1,8 @@
 import Block from './Block';
 import { isSelected } from '../Day/Filters'
 
+import schedule from '/data/schedule.json'
+
 function filterElem(filters)
 {
     return function(elem)
@@ -30,11 +32,11 @@ function filterElem(filters)
  *  time
  */
 function group(list) {
-    var result = [];
+    const result = [];
 
-    for(var i = 0; i < list.length; i++) {
-        var temp = [];
-        for(var j = i; j < list.length && list[j].activity.startTime == list[i].activity.startTime 
+    for(let i = 0; i < list.length; i++) {
+        const temp = [];
+        for(let j = i; j < list.length && list[j].activity.startTime == list[i].activity.startTime 
             && list[j].activity.endTime == list[i].activity.endTime; j++) {
 
             temp.push(list[j]);
@@ -47,7 +49,7 @@ function group(list) {
 }
 
 export default function Table({date, updateHasFocused, hash, filters, detailed}) {
-    const schedule = require('/data/schedule.json');
+    
     const obj = schedule.find((obj) => obj.date == date);
 
     if (obj === undefined || obj.activities === undefined)

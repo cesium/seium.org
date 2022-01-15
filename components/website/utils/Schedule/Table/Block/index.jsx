@@ -5,20 +5,17 @@ import { useEffect } from 'react'
 
 function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary, 
     author, description, focused, location, detailed, hyperlink}) {
-     
-    const ident = id;
-    console.log(ident);
 
     useEffect(() => {
-        const b = document.getElementById(ident);
-        if(b)
-            b.style.maxHeight = (focused ? (b.scrollHeight + 50 + 'px') : '225px');
-    }, [focused])
+        const block = document.getElementById(id);
+        if (block)
+        block.style.maxHeight = (focused ? (block.scrollHeight + 50 + 'px') : '225px');
+    }, [focused]);
 
     const skipLink = coffeeBreak || focused;
-    console.log(focused);
+
     const block = (
-        <div id={ident} className={`${styles.gridBlock} ${coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 225}}>
+        <div id={id} className={`${styles.gridBlock} ${coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 225}}>
             { coffeeBreak &&
                 <div className={styles.imgWrapper}> 
                     <Image src="/images/Coffee.svg" layout="fill"/>
@@ -37,16 +34,16 @@ function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary,
             </p>
 
             <ul className={`${styles.authors} text-sm text-gray-400 font-iregular flex`}>
-            { author != "" ?
+                { author &&
                     <li className={styles.listElem}>
                         <Link href={`speakers?speaker=${author}`}>
                             <a className={styles.author}> {author} </a>
                         </Link>
                     </li>
-                : <></>}
+                }
             </ul>
 
-            { description !== undefined &&
+            { description &&
                 <div className={styles.description} style={{opacity: focused ? 1 : 0}}>
                     { description.split("\n").map((text, i) => <p key={i} className={`mb-2 text-lg text-white font-iregular`}>{text}</p>) }
                 </div>
@@ -78,7 +75,7 @@ function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary,
     return (
         <div className={skipLink ? "" : styles.clickable}>
             { !skipLink && 
-                <Link href={`schedule/#${ident}`}>
+                <Link href={`schedule/#${id}`}>
                     <a className={styles.outerLink}/>
                 </Link>
             }
