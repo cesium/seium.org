@@ -73,7 +73,7 @@ export default function Footer(props) {
           </div>
         </div>
         <div className="py-10 flex-2">
-          <div className="grid grid-rows-2 gap-10 text-sm text-white font-iregular lg:grid-cols-3 justify-items-center lg:justify-items-end">
+          <div className="grid grid-rows-2 gap-10 text-sm text-white font-iregular lg:grid-cols-2 justify-items-center lg:justify-items-end">
             <Link passHref href="https://2021.seium.org/">
               <a className="text-white hover:underline">Previous Edition</a>
             </Link>
