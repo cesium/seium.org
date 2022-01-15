@@ -42,7 +42,7 @@ export default function Block({ id, name, role, company, talk, linkedin, github,
                         </div>
                     </div>
 
-                    <div className="flex justify-end items-center">
+                    <div className="z-50 flex justify-end items-center">
                         <p className="text-gray-400 grow">
                             {talk}
                         </p>
