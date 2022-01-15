@@ -13,13 +13,11 @@ export default function Index() {
 
   return (
     <Navbar bgColor="tertiary" button="quinary" fgColor="black" >
-      <div className="scroll-smooth">
-        <Hero />
-        <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
-          <div className="py-24" />
-        </Schedule>
-        <Footer color={bg} />
-      </div >
+      <Hero />
+      <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
+        <div className="py-24" />
+      </Schedule>
+      <Footer color={bg} />
     </Navbar>
   )
 }

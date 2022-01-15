@@ -84,8 +84,8 @@ export default function Schedule(props) {
     };
 
     return (
-        <section className="2xl:grid 2xl:grid-cols-2 z-50 relative bg-secondary lg:pt-10 pb-20 spacing">
-            <div className="grid place-items-center md:place-items-start sm:flex sm:flex-col text-white mb-10 md:mr-10">
+        <section className="2xl:grid 2xl:grid-cols-2 relative bg-secondary lg:pt-10 pb-20 spacing">
+            <div className="z-50 grid place-items-center md:place-items-start sm:flex sm:flex-col text-white mb-10 md:mr-10">
                 <Day date={date} previousDay={previous_day} nextDay={next_day} />
                 <p className="mt-10 md:px-20 w-5/6 text-md font-iregular">
                     During this week, you have the opportunity to interact with many recognized speakers, national, international and notorious companies!
@@ -94,7 +94,7 @@ export default function Schedule(props) {
                     You can get to know them better here.
                 </p>
             </div>
-            <div className="md:px-10 w-full">
+            <div className="md:px-10 w-full z-50">
                 <Table detailed = { props.detailed } date = { date } />;
             </div>
         </section>
