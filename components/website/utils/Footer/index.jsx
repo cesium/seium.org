@@ -77,9 +77,9 @@ export default function Footer(props) {
             <Link passHref href="https://2021.seium.org/">
               <a className="text-white hover:underline">Previous Edition</a>
             </Link>
-            <Link passHref href="">
+            {/* <Link passHref href="">
               <a className="hover:underline">General Regulation</a>
-            </Link>
+            </Link> */}
             <Link passHref href="/docs/contingency-plan-2616d0424547c145781b4aabc2422c53.pdf">
               <a className="hover:underline">Contingency Plan</a>
             </Link>
