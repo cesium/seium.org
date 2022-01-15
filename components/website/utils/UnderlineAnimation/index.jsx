@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 import Card from "/components/utils/Card";
@@ -54,7 +55,7 @@ export default function UnderlineAnimation({children, text, afterText}) {
     }, [st]);
 
     return (
-        <span className="relative leading-none z-10 w-auto h-auto inline-block z-10 mt-4">
+        <span className="relative leading-none w-auto h-auto inline-block z-10 mt-4">
             
             <span className="relative h-auto inline-block z-10 border-b-8 border-white" onMouseEnter={() => updateState((oldState) => ({...oldState, status: 1}))} 
                 onMouseLeave={() => updateState((oldState) => ({ ...oldState, status: 3}))}>
