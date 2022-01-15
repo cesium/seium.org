@@ -1,6 +1,6 @@
 export default function ExpectList() {
     return (
-        <div className="w-3/5 text-white">
+        <div className="sm:w-3/5 text-white">
             <h3 className="text-4xl font-bold md:text5xl">
                 How does this thing really work?
             </h3>
