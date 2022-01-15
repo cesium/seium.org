@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <div className=" bg-secondary">
       <div className="spacing pb-32 z-50 relative">
-        {/* <Animation /> */}
+        <Animation />
         <div className="pt-2">
           <Title />
         </div>
