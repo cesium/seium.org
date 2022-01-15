@@ -7,7 +7,7 @@ function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary,
     author, description, focused, location, detailed, hyperlink}) {
 
     useEffect(() => {
-        const block = document.getElementById(id);
+        const block = document.getElementById("B" + id);
         if (block)
         block.style.maxHeight = (focused ? (block.scrollHeight + 50 + 'px') : '225px');
     }, [focused]);
@@ -15,7 +15,7 @@ function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary,
     const skipLink = coffeeBreak || focused;
 
     const block = (
-        <div id={id} className={`${styles.gridBlock} ${coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 225}}>
+        <div id={`B${id}`} className={`${styles.gridBlock} ${coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 225}}>
             { coffeeBreak &&
                 <div className={styles.imgWrapper}> 
                     <Image src="/images/Coffee.svg" layout="fill"/>
@@ -61,7 +61,7 @@ function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary,
 
                     { detailed && (
                         focused ? 
-                            <Link href={{hash: ""}}>
+                            <Link href={{hash: "_"}}>
                                 <a className={styles.expand}>-</a>
                             </Link>
                          :
