@@ -26,7 +26,7 @@ export default function Day(props)
     let date_string = date[2] + " " + months[date[1] - 1];
 
     return (
-        <div className={`${styles.wrapper} text-7xl sm:text-8xl`}>
+        <div className={`${styles.wrapper} text-6xl sm:text-8xl`}>
             <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
                 <button className={`${styles.prev} ${styles.arrow}`} onClick={props.previousDay}></button>
             </div>
