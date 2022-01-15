@@ -27,7 +27,7 @@ export default function Day(props) {
 
     const ans = (
         <div className="grid place-items-center lg:block">
-            <div className={`${styles.wrapper} text-7xl md:text-8xl`}>
+            <div className={`${styles.wrapper} text-5xl sm:text-7xl md:text-8xl`}>
                 <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
                     <button className={`${styles.prev} ${styles.arrow}`} onClick={props.previousDay}></button>
                 </div>
