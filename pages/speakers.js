@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 
 import Hero from '/components/website/speakers/Hero';
-import Schedule from '/components/website/utils/Schedule';
+import Schedule from '/components/website/speakers/Schedule';
 
 import Navbar from '/components/website/utils/Navbar';
 import Footer from '/components/website/utils/Footer';

@@ -16,6 +16,7 @@ export default function Index() {
         <Sponsors/>
         <Hackathon />
         <Speakers />
+        <Partners />
         <Footer color="secondary" />
       </Navbar>
   )
