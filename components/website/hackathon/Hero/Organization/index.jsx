@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Organization() {
     return (
-        <div className="grid grid-rows-2 absolute right-0">
+        <div className="grid grid-rows-2">
             <h5 className="text-white text-sm">
                 Powered by
             </h5>
