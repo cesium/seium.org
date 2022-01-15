@@ -116,10 +116,6 @@ export default function Schedule(props)
 
         return () => router.events.off("hashChangeStart", onHashChangeStart);
     }, [router.events]);
-
-    useEffect(() => {
-        document.getElementById(hash)?.scrollIntoView();
-    }, [hash]);
     
 
     const previous_day = () => {
