@@ -13,7 +13,7 @@ import styles from './style.module.css';
 function DefaultAnimation() {
   return (
     <>
-      Psst. Have you checked the <a className="text-quaternary font-bold hover:underline" href="/challenges">challenges</a>? Just saying.
+      Psst. Challenges will be available soon. Stay tuned!
     </>
   );
 }
@@ -62,9 +62,9 @@ export default function Footer(props) {
     <div className={`spacing ${styles.bgTransition} bg-${props.color}`} ref={ref} style={{ ...color, overflowY: "hidden" }}>
       <div className="justify-center lg:flex">
         <div className="flex-1">
-          <div className="flex font-ibold justify-center lg:justify-start">
+          <div className="flex justify-center font-ibold lg:justify-start">
             <Image className="lg:flex-1" src="/images/sei-logo.svg" width="100" height="100" />
-            <p className="lg:flex-1 text-white pl-6 pt-4">
+            <p className="pt-4 pl-6 text-white lg:flex-1">
               Semana da <br />
               Engenharia
               <br />
@@ -72,8 +72,8 @@ export default function Footer(props) {
             </p>
           </div>
         </div>
-        <div className="flex-2 py-10">
-          <div className="font-iregular text-sm grid lg:grid-cols-3 grid-rows-2 gap-10 justify-items-center lg:justify-items-end text-white">
+        <div className="py-10 flex-2">
+          <div className="grid grid-rows-2 gap-10 text-sm text-white font-iregular lg:grid-cols-3 justify-items-center lg:justify-items-end">
             <Link passHref href="https://2021.seium.org/">
               <a className="text-white hover:underline">Previous Edition</a>
             </Link>
@@ -85,13 +85,13 @@ export default function Footer(props) {
             </Link>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <div className="sm:w-1/2 text-white mt-10 lg:mt-0">
+            <div className="mt-10 text-white sm:w-1/2 lg:mt-0">
               <Social />
             </div>
           </div>
         </div>
       </div>
-      <div className="invisible lg:visible flex -mt-20 pb-10 justify-center">
+      <div className="flex justify-center invisible pb-10 -mt-20 lg:visible">
         <Animation text={props.animationText != undefined ? props.animationText : <DefaultAnimation/>}>
           {props.children}
         </Animation>
