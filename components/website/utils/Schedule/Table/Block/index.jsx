@@ -14,8 +14,6 @@ function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary,
 
     const skipLink = coffeeBreak || focused;
 
-    const skipLink = coffeeBreak || focused;
-    console.log(focused);
     const block = (
         <div id={id} className={`${styles.gridBlock} ${coffeeBreak ? styles.coffee : styles.notCoffee}`} style={{maxHeight: 225}}>
             { coffeeBreak &&
@@ -77,7 +75,7 @@ function BlockItem({ id, coffeeBreak, startTime, endTime, activityType, summary,
     return (
         <div className={skipLink ? "" : styles.clickable}>
             { !skipLink && 
-                <Link href={`schedule/#${ident}`}>
+                <Link href={`schedule/#${id}`}>
                     <a className={styles.outerLink}/>
                 </Link>
             }
