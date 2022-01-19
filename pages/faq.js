@@ -1,6 +1,6 @@
-import Navbar from '/components/website/utils/Navbar';
-import Footer from '/components/website/utils/Footer';
-import Faqs from '../components/website/faqs';
+import Navbar from "/components/website/utils/Navbar";
+import Footer from "/components/website/utils/Footer";
+import Faqs from "../components/website/faqs";
 
 export default function Faq() {
   return (
@@ -8,5 +8,5 @@ export default function Faq() {
       <Faqs />
       <Footer color="primary" />
     </Navbar>
-  )
+  );
 }

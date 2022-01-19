@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
-import Hero from '/components/website/speakers/Hero';
-import Schedule from '/components/website/speakers/Schedule';
+import Hero from "/components/website/speakers/Hero";
+import Schedule from "/components/website/speakers/Schedule";
 
-import Navbar from '/components/website/utils/Navbar';
-import Footer from '/components/website/utils/Footer';
+import Navbar from "/components/website/utils/Navbar";
+import Footer from "/components/website/utils/Footer";
 
 export default function Speakers() {
   const router = useRouter();
@@ -12,8 +12,12 @@ export default function Speakers() {
   return (
     <Navbar bgColor="secondary" button="quinary" fgColor="black">
       <Hero />
-      <Schedule color="secondary" detailed={false} filters={router.query.speaker} />
+      <Schedule
+        color="secondary"
+        detailed={false}
+        filters={router.query.speaker}
+      />
       <Footer color="secondary" />
     </Navbar>
-  )
+  );
 }

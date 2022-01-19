@@ -8,40 +8,42 @@ import Link from "next/link";
 import Social from "/components/website/utils/Social";
 import Card from "/components/utils/Card";
 
-import styles from './style.module.css';
+import styles from "./style.module.css";
 
 function DefaultAnimation() {
-  return (
-    <>
-      Psst. Challenges will be available soon. Stay tuned!
-    </>
-  );
+  return <>Psst. Challenges will be available soon. Stay tuned!</>;
 }
 
-function Animation({text}) {
+function Animation({ text }) {
   const { observe, inView } = useInView({
     threshold: 0.25,
     onChange: ({ observe, unobserve }) => {
       unobserve();
       observe();
-    }
+    },
   });
 
   return (
     /* We need to have height set in order for inView to work properly */
     <div ref={observe} style={{ height: "25px" }}>
-      {inView ?
+      {inView ? (
         <Fade bottom>
           <div className={`-mt-6 ${styles.cardfooter}`}>
-            <Card img="/images/mascot-footer.svg" alt="MascotFooter" inverted={false}>
+            <Card
+              img="/images/mascot-footer.svg"
+              alt="MascotFooter"
+              inverted={false}
+            >
               {text}
             </Card>
           </div>
-        </Fade> :
-        <></>}
+        </Fade>
+      ) : (
+        <></>
+      )}
     </div>
   );
-};
+}
 
 export default function Footer(props) {
   const [setAnimation] = useState(false);
@@ -59,11 +61,20 @@ export default function Footer(props) {
     : "";
 
   return (
-    <div className={`spacing ${styles.bgTransition} bg-${props.color}`} ref={ref} style={{ ...color, overflowY: "hidden" }}>
+    <div
+      className={`spacing ${styles.bgTransition} bg-${props.color}`}
+      ref={ref}
+      style={{ ...color, overflowY: "hidden" }}
+    >
       <div className="justify-center lg:flex">
         <div className="flex-1">
           <div className="flex justify-center font-ibold lg:justify-start">
-            <Image className="lg:flex-1" src="/images/sei-logo.svg" width="100" height="100" />
+            <Image
+              className="lg:flex-1"
+              src="/images/sei-logo.svg"
+              width="100"
+              height="100"
+            />
             <p className="pt-4 pl-6 text-white lg:flex-1">
               Semana da <br />
               Engenharia
@@ -80,7 +91,10 @@ export default function Footer(props) {
             {/* <Link passHref href="">
               <a className="hover:underline">General Regulation</a>
             </Link> */}
-            <Link passHref href="/docs/contingency-plan-2616d0424547c145781b4aabc2422c53.pdf">
+            <Link
+              passHref
+              href="/docs/contingency-plan-2616d0424547c145781b4aabc2422c53.pdf"
+            >
               <a className="hover:underline">Contingency Plan</a>
             </Link>
           </div>
@@ -92,7 +106,15 @@ export default function Footer(props) {
         </div>
       </div>
       <div className="flex justify-center invisible pb-10 -mt-20 lg:visible">
-        <Animation text={props.animationText != undefined ? props.animationText : <DefaultAnimation/>}>
+        <Animation
+          text={
+            props.animationText != undefined ? (
+              props.animationText
+            ) : (
+              <DefaultAnimation />
+            )
+          }
+        >
           {props.children}
         </Animation>
       </div>

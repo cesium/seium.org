@@ -1,10 +1,10 @@
-import Navbar from '/components/website/utils/Navbar';
-import Footer from '/components/website/utils/Footer';
+import Navbar from "/components/website/utils/Navbar";
+import Footer from "/components/website/utils/Footer";
 
-import Hero from '/components/website/team/Hero';
-import FindUs from '/components/website/team/FindUs';
+import Hero from "/components/website/team/Hero";
+import FindUs from "/components/website/team/FindUs";
 
-import Organization from '/components/website/team/Organization';
+import Organization from "/components/website/team/Organization";
 
 export default function Index() {
   return (
@@ -14,5 +14,5 @@ export default function Index() {
       <FindUs />
       <Footer color="quaternary" />
     </Navbar>
-  )
+  );
 }
