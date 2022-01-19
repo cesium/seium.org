@@ -1,129 +1,129 @@
 {
-    "tech": {
-        "title": "Tech Team",
-        "list": [
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            }
-        ]
-    },
-    "support": {
-        "title": "Support Team",
-        "list": [
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            }
-        ]
-    },
-    "partners": {
-        "title": "Partners Team",
-        "list": [
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            },
-            {
-                "id": "matilde",
-                "name": "Matilde Bravo",
-                "github": "feliciofilipe",
-                "twitter": "feliciofilipe",
-                "gitlab": "feliciofilipe",
-                "linkedin": "filipe-felício-5077821a3"
-            }
-        ]
-    }
+  "tech": {
+    "title": "Tech Team",
+    "list": [
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      }
+    ]
+  },
+  "support": {
+    "title": "Support Team",
+    "list": [
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Partners Team",
+    "list": [
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      },
+      {
+        "id": "matilde",
+        "name": "Matilde Bravo",
+        "github": "feliciofilipe",
+        "twitter": "feliciofilipe",
+        "gitlab": "feliciofilipe",
+        "linkedin": "filipe-felício-5077821a3"
+      }
+    ]
+  }
 }

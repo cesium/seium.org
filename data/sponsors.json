@@ -1,57 +1,57 @@
 [
+  [
     [
-        [
-            {
-                "image": "accenture",
-                "link": "https://cesium.link"
-            }
-        ],
-        [
-            {
-                "image": "continental",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "rentailconsult",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "saltpay",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "uphold",
-                "link": "https://cesium.link"
-            }
-        ]
+      {
+        "image": "accenture",
+        "link": "https://cesium.link"
+      }
     ],
     [
-        [
-            {
-                "image": "deloitte",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "ey",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "farfetch",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "glintt",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "xpandit",
-                "link": "https://cesium.link"
-            },
-            {
-                "image": "yarilabs",
-                "link": "https://cesium.link"
-            }
-        ],
-        []
+      {
+        "image": "continental",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "rentailconsult",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "saltpay",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "uphold",
+        "link": "https://cesium.link"
+      }
     ]
+  ],
+  [
+    [
+      {
+        "image": "deloitte",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "ey",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "farfetch",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "glintt",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "xpandit",
+        "link": "https://cesium.link"
+      },
+      {
+        "image": "yarilabs",
+        "link": "https://cesium.link"
+      }
+    ],
+    []
+  ]
 ]

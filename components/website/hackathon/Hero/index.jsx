@@ -19,9 +19,10 @@ export default function Hero() {
           <div className="col-span-2">
             <span className="w-56 inline-block align-middle items-center text-center content-center">
               <a href="https://forms.gle/eFft9LTLSQzJjTG29">
-                <Button 
-                  text="REGISTER YOUR TEAM" 
-                  customStyle="text-white bg-primary border-tertiary hover:bg-tertiary" />
+                <Button
+                  text="REGISTER YOUR TEAM"
+                  customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
+                />
               </a>
             </span>
             <span className="pl-8 text-2xl text-white align-middle opacity-80">

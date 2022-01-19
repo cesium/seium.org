@@ -10,7 +10,10 @@ export default function Faqs() {
           Frequently Asked Questions
         </h1>
         <p className="text-lg">
-        This list of frequently asked questions serves to complement the general rules that you can find below. Get in touch with the organizing team whenever a question arises and we will add answers to the most frequently asked questions here.
+          This list of frequently asked questions serves to complement the
+          general rules that you can find below. Get in touch with the
+          organizing team whenever a question arises and we will add answers to
+          the most frequently asked questions here.
         </p>
       </div>
       <div className="lg:w-1/3">

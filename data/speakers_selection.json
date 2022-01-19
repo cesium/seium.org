@@ -1,20 +1,20 @@
 [
-    {
-        "id": "paulolopes",
-        "name": "Paulo Lopes",
-        "job": "Software Engineer",
-        "company": "Red Hat"
-    },    
-    {
-        "id": "saravieira",
-        "name": "Sara Vieira",
-        "job": "Frontend Engineer",
-        "company": "Remote"
-    },
-    {
-        "id": "heldercoelho",
-        "name": "Helder Coelho",
-        "job": "Professor Emérito",
-        "company": "Universidade de Lisboa"
-    }
+  {
+    "id": "paulolopes",
+    "name": "Paulo Lopes",
+    "job": "Software Engineer",
+    "company": "Red Hat"
+  },
+  {
+    "id": "saravieira",
+    "name": "Sara Vieira",
+    "job": "Frontend Engineer",
+    "company": "Remote"
+  },
+  {
+    "id": "heldercoelho",
+    "name": "Helder Coelho",
+    "job": "Professor Emérito",
+    "company": "Universidade de Lisboa"
+  }
 ]

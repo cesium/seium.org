@@ -7,9 +7,13 @@ export default function SponsorDashboard() {
     <Dashboard href="dashboard">
       <div>
         <div className="md:mt-16 mt-8">
-          <h1 className="font-ibold text-4xl text-iextrabold sm:text-5xl"> Dashboard </h1>
+          <h1 className="font-ibold text-4xl text-iextrabold sm:text-5xl">
+            {" "}
+            Dashboard{" "}
+          </h1>
           <p className="mt-4 text-xl font-iregular">
-            Neste local, pode dar badges e premiar os participantes que se encontram no seu stand.
+            Neste local, pode dar badges e premiar os participantes que se
+            encontram no seu stand.
           </p>
         </div>
 
@@ -19,7 +23,7 @@ export default function SponsorDashboard() {
           </div>
 
           <div className="mt-5 ml-3  w-3/4">
-            <SponsorBadgeButton sponsor="Accenture"/>
+            <SponsorBadgeButton sponsor="Accenture" />
           </div>
         </div>
       </div>

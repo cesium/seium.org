@@ -1,9 +1,9 @@
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
 import Title from "./Title";
 import Organization from "./Organization";
 
-const Animation = dynamic(() => import('./Animation'), { ssr: false })
+const Animation = dynamic(() => import("./Animation"), { ssr: false });
 
 export default function Hero() {
   return (
@@ -20,4 +20,3 @@ export default function Hero() {
     </div>
   );
 }
-
