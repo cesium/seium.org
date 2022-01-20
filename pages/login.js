@@ -14,21 +14,17 @@ import Input from "/components/moonstone/utils/Input";
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
+import {login} from '/lib/api';
 
 function Login() {
-  const { errors, isLoading, login } = useAuth();
-  const [email, updateEmail] = useState("");
-  const [password, updatePassword] = useState("");
-  const [loginHasFailed, updateLoginFailed] = useState(false);
 
-  const requestLogin = async function () {
-    const response = await login({ email, password });
+  const [email, updateEmail] = useState('');
+  const [password, updatePassword] = useState('');
 
-    updateLoginFailed(response);
-  };
-
-  const onFinish = ({ email, password }) => {
-    login({ email, password });
+  const requestLogin = async function() {
+    alert(email);
+    alert(password);
+    const response = await login({email, password});
   };
 
   return (
