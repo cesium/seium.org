@@ -1,8 +1,9 @@
+import { withAuth } from "/components/Auth";
 import Dashboard from "/components/moonstone/sponsor/utils/Dashboard";
 
 import SponsorBadgeButton from "/components/moonstone/sponsor/dashboard/SponsorBadgeButton";
 
-export default function SponsorDashboard() {
+function SponsorDashboard() {
   return (
     <Dashboard href="dashboard">
       <div>
@@ -30,3 +31,5 @@ export default function SponsorDashboard() {
     </Dashboard>
   );
 }
+
+export default withAuth(SponsorDashboard);

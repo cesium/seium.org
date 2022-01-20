@@ -1,3 +1,4 @@
+import { withoutAuth } from "/components/Auth";
 import Fade from "react-reveal/Fade";
 
 import Button from "/components/utils/Button";
@@ -10,7 +11,7 @@ import Input from "/components/moonstone/utils/Input";
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
-export default function Login() {
+function Login() {
   return (
     <div className="overflow-hidden bg-secondary min-h-screen">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
@@ -66,3 +67,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default withoutAuth(Login);

@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { withoutAuth } from "/components/Auth";
 
 import Hero from "/components/website/speakers/Hero";
 import Schedule from "/components/website/speakers/Schedule";
@@ -6,7 +7,7 @@ import Schedule from "/components/website/speakers/Schedule";
 import Navbar from "/components/website/utils/Navbar";
 import Footer from "/components/website/utils/Footer";
 
-export default function Speakers() {
+function Speakers() {
   const router = useRouter();
 
   return (
@@ -21,3 +22,5 @@ export default function Speakers() {
     </Navbar>
   );
 }
+
+export default withoutAuth(Speakers);

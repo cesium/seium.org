@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { withoutAuth } from "/components/Auth";
 
 import Fade from "react-reveal/Fade";
 
@@ -11,9 +12,9 @@ import Input from "/components/moonstone/utils/Input";
 
 import Title from "/components/moonstone/authentication/Title";
 
-export default function RecoverPassword() {
+function RecoverPassword() {
   /*
-    
+
     Null  -> No reset yet
     True  -> Reset successful
     False -> Reset failed
@@ -97,3 +98,5 @@ export default function RecoverPassword() {
     </div>
   );
 }
+
+export default withoutAuth(RecoverPassword);

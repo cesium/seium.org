@@ -1,8 +1,9 @@
+import { withoutAuth } from "/components/Auth";
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 
 import Award from "/components/moonstone/user/awards/Award";
 
-export default function Awards() {
+function Awards() {
   return (
     <Dashboard href="awards">
       <div>
@@ -70,3 +71,5 @@ export default function Awards() {
     </Dashboard>
   );
 }
+
+export default withoutAuth(Awards);

@@ -3,6 +3,7 @@ import Fade from "react-reveal/Fade";
 import Button from "/components/utils/Button";
 import Card from "/components/utils/Card";
 
+import { withoutAuth } from "/components/Auth";
 import { useState } from "react";
 
 import Return from "/components/moonstone/utils/Return";
@@ -12,9 +13,9 @@ import Input from "/components/moonstone/utils/Input";
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
-export default function ForgotPassword() {
+function ForgotPassword() {
   /*
-    
+
     Null  -> No email sent
     True  -> Email sent successfully
     False -> Error occured sending email
@@ -92,3 +93,5 @@ export default function ForgotPassword() {
     </div>
   );
 }
+
+export default withoutAuth(ForgotPassword);

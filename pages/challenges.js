@@ -1,3 +1,4 @@
+import { withoutAuth } from "/components/Auth";
 import Hero from "/components/website/challenges/Hero";
 import Challenges from "/components/website/challenges/Challenges";
 
@@ -8,7 +9,7 @@ function FooterText() {
   return <>Just really useful links here. Bye now 👋</>;
 }
 
-export default function Index() {
+function Index() {
   return (
     <Navbar bgColor="secondary" button="quinary" fgColor="black">
       <Hero />
@@ -17,3 +18,5 @@ export default function Index() {
     </Navbar>
   );
 }
+
+export default withoutAuth(Index);
