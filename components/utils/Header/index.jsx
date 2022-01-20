@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function Header() {
   return (
     <Head>
-      <title>SEI</title>
+      <title>SEI 2022</title>
       <link rel="icon" href="/favicon.ico" />
       <link
         rel="preload"

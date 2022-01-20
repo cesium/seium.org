@@ -87,7 +87,11 @@ export default function Day(props) {
   if (props.showFilters)
     return [
       ans,
-      <Filters filters={props.filters} updateFilters={props.updateFilters} />,
+      <Filters
+        key="key"
+        filters={props.filters}
+        updateFilters={props.updateFilters}
+      />,
     ];
   else return ans;
 }

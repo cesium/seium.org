@@ -40,7 +40,7 @@ export default function Wheel({ steps, angle }) {
     var st = JSON.parse(JSON.stringify(style)); //Create copy of value
     st.transform = "rotate(" + entry + "deg)";
 
-    return <div style={st}></div>;
+    return <div key={entry} style={st}></div>;
   });
 
   return (

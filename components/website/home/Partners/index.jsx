@@ -11,12 +11,12 @@ export default function Partners() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 my-10">
         {partners.map((partner, i) => (
           <div
-            className={`${partners.length == 2 && "col-span-2"} 
+            className={`${partners.length == 2 && "col-span-2"}
                                      ${partners.length == 1 && "col-span-4"}
                                      m-auto filter grayscale hover:filter-none`}
             key={i}
           >
-            <a href={partner.url} target="_blank">
+            <a href={partner.url} target="_blank" rel="noreferrer">
               <button>
                 <Image
                   src={`/images/partners/${partner.image}`}

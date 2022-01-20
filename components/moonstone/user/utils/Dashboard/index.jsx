@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
@@ -147,9 +148,9 @@ export default function Dashboard(props) {
                 </a>
               ))}
             </nav>
-            <a href="/login" className="text-quinary px-4 font-iregular">
+            <Link href="/" className="text-quinary px-4 font-iregular">
               Log out 👋
-            </a>
+            </Link>
           </div>
         </div>
       </div>
