@@ -3,7 +3,7 @@ function Step({ count, progress, checkpoints }) {
 
   return (
     <div
-      className={`${count < progress ? "bg-quinary" : "bg-white"} 
+      className={`${count < progress ? "bg-quinary" : "bg-white"}
             border-white ${count != 0 ? "border-l" : ""} ${
         count != checkpoints - 1 ? "border-r" : ""
       } float-left h-full`}
@@ -23,7 +23,12 @@ export default function CheckpointTracker({ checkpoints, progress }) {
       </div>
       <div className="w-full overflow-hidden border border-quinary rounded-full h-6">
         {[...Array(checkpoints)].map((col, i) => (
-          <Step count={i} progress={progress} checkpoints={checkpoints} />
+          <Step
+            key={i}
+            count={i}
+            progress={progress}
+            checkpoints={checkpoints}
+          />
         ))}
       </div>
     </div>

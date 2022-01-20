@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
@@ -125,6 +126,7 @@ export default function Dashboard(props) {
                 src="/images/sponsors/accenture.svg"
                 width="220"
                 height="120"
+                alt=""
               />
             </div>
             <nav className="mt-5 flex-1">
@@ -143,9 +145,9 @@ export default function Dashboard(props) {
                 </a>
               ))}
             </nav>
-            <a href="/login" className="text-quinary px-4 font-iregular">
+            <Link href="/" className="text-quinary px-4 font-iregular">
               Log out 👋
-            </a>
+            </Link>
           </div>
         </div>
       </div>

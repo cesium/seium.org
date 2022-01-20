@@ -22,36 +22,40 @@ export default function Member({
       <div className="flex">
         {linkedin && (
           <a
+            href={`https://www.linkedin.com/in/${linkedin}`}
             className="w-4 mr-3"
             target="_blank"
-            href={`https://www.linkedin.com/in/${linkedin}`}
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
         )}
         {github && (
           <a
+            href={`https://www.github.com/${github}`}
             className="w-4 mr-3"
             target="_blank"
-            href={`https://www.github.com/${github}`}
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faGithubAlt} />
           </a>
         )}
         {gitlab && (
           <a
+            href={`https://gitlab.com/${gitlab}`}
             className="w-4 mr-3"
             target="_blank"
-            href={`https://gitlab.com/${gitlab}`}
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faGitlab} />
           </a>
         )}
         {twitter && (
           <a
+            href={`https://twitter.com/${twitter}`}
             className="w-4 mr-3"
             target="_blank"
-            href={`https://twitter.com/${twitter}`}
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faTwitter} />
           </a>

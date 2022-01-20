@@ -1,6 +1,6 @@
-import Dashboard from "/components/moonstone/Dashboard";
-import Heading from "/components/moonstone/Heading";
-import Badge from "/components/moonstone/Badge";
+import Dashboard from "/components/moonstone/user/utils/Dashboard";
+import Heading from "/components/moonstone/utils/Heading";
+import Badge from "/components/moonstone/user/badgedex/Badge";
 
 function BadgeOwner({ user, badge, when }) {
   return (

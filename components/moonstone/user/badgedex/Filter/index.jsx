@@ -1,5 +1,5 @@
 export default function Filter() {
-  let options = ["CATEGORY", "CATEGORY2", "CATEGORY3"];
+  let categories = ["CATEGORY", "CATEGORY2", "CATEGORY3"];
 
   return (
     <div>
@@ -9,8 +9,8 @@ export default function Filter() {
         className="rounded-full mt-1 block w-full pl-3 pr-10 py-2 border border-quinary ring-quinary focus:border-quinary text-sm"
         defaultValue="CATEGORY"
       >
-        {options.map((option) => (
-          <option>{option}</option>
+        {categories.map((category) => (
+          <option key={category}>{category}</option>
         ))}
       </select>
     </div>

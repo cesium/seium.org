@@ -88,6 +88,7 @@ function BlockItem({
               href={hyperlink}
               target="_blank"
               className={`${styles.hyperlink} text-lg text-quinary font-ibold`}
+              rel="noreferrer"
             >
               Join
             </a>

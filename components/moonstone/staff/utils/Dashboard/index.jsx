@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
@@ -107,14 +108,15 @@ export default function Dashboard(props) {
                 src="/images/moonstone-logo.svg"
                 width="220"
                 height="120"
+                alt="Moonstone"
               />
             </div>
-            <a
-              href="/login"
+            <Link
+              href="/"
               className="mt-[500px] text-quinary px-4 font-iregular"
             >
               Log out 👋
-            </a>
+            </Link>
           </div>
         </div>
       </div>

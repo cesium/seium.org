@@ -27,7 +27,12 @@ export default function Block({
   return (
     <div key={id} className="text-white border-t-2 border-white py-4">
       <div className="flex mb-2">
-        <Image src={`/images/speakers/${id}.png`} width="210" height="210" />
+        <Image
+          src={`/images/speakers/${id}.png`}
+          width="210"
+          height="210"
+          alt={name}
+        />
 
         <div className="flex flex-col justify-between ml-4 w-full">
           <div className="flex justify-between">
@@ -40,27 +45,30 @@ export default function Block({
             <div className="flex">
               {linkedin && (
                 <a
+                  href={`https://www.linkedin.com/in/${linkedin}`}
                   className="w-4 mr-3"
                   target="_blank"
-                  href={`https://www.linkedin.com/in/${linkedin}`}
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
               )}
               {github && (
                 <a
+                  href={`https://www.github.com/${github}`}
                   className="w-4 mr-3"
                   target="_blank"
-                  href={`https://www.github.com/${github}`}
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faGithubAlt} />
                 </a>
               )}
               {twitter && (
                 <a
+                  href={`https://twitter.com/${twitter}`}
                   className="w-4 mr-3"
                   target="_blank"
-                  href={`https://twitter.com/${twitter}`}
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>

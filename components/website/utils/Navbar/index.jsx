@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 import { Disclosure } from "@headlessui/react";
@@ -5,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import JoinUs from "/components/website/utils/JoinUs";
+import styles from "./style.module.css";
 
 const navigation = [
   { name: "Schedule", href: "/schedule" },
@@ -25,9 +27,16 @@ export default function Navbar(props) {
             <div className="flex items-center justify-between h-16">
               <div className="flex flex-auto z-50 relative">
                 <div className="grid grid-cols-4 w-full">
-                  <a href="/" className="">
-                    <Image src="/images/sei-logo.svg" width="50" height="40" />
-                  </a>
+                  <Link href="/" className="" passHref>
+                    <div className={styles.logo}>
+                      <Image
+                        src="/images/sei-logo.svg"
+                        width="50"
+                        height="40"
+                        alt="SEIUM"
+                      />
+                    </div>
+                  </Link>
                   <div className="justify-self-end col-span-3 hidden lg:block">
                     <div className="flex flex-auto gap-x-20">
                       <div className="grid grid-cols-3 gap-x-20 gap-y-6 xl:gap-y-0">
@@ -67,6 +76,7 @@ export default function Navbar(props) {
                   as="a"
                   href={item.href}
                   className="text-white hover:text-quinary block text-center py-6 rounded-md text-3xl font-ibold"
+                  key={item.href}
                 >
                   {item.name}
                 </Disclosure.Button>
