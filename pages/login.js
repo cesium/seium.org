@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 import { withoutAuth } from "/components/Auth";
 import Fade from "react-reveal/Fade";
 
@@ -11,7 +13,19 @@ import Input from "/components/moonstone/utils/Input";
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
+import {login} from '/lib/api';
+
 function Login() {
+
+  const [email, updateEmail] = useState('');
+  const [password, updatePassword] = useState('');
+
+  const requestLogin = async function() {
+    alert(email);
+    alert(password);
+    const response = await login({email, password});
+  };
+
   return (
     <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
@@ -27,6 +41,7 @@ function Login() {
               fgColor="white"
               bgColor="primary"
               autoComplete="email"
+              onChange={(e) => updateEmail(e.currentTarget.value)}
             />
             <Input
               text="YOUR PASSWORD"
@@ -36,6 +51,7 @@ function Login() {
               fgColor="white"
               bgColor="primary"
               autoComplete="current-password"
+              onChange={(e) => updatePassword(e.currentTarget.value)}
             />
             <Text
               padding="6"
@@ -47,6 +63,7 @@ function Login() {
               type="submit"
               text="LET'S GO"
               customStyle="text-secondary bg-quinary border-quinary"
+              onClick={(e) => requestLogin()}
             />
           </Form>
         </div>
