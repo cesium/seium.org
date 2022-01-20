@@ -1,12 +1,22 @@
 {
   "name": "moonstone",
-  "version": "2.0.0-dev",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "format": "npx prettier --write .",
+    "format-check": "npx prettier --check ."
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -14,6 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@headlessui/react": "^1.4.2",
+    "axios": "^0.25.0",
     "next": "^12.0.7",
     "react": "17.0.2",
     "react-cool-inview": "^2.0.8",
@@ -27,7 +38,11 @@
     "autoprefixer": "^10.4.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.2.1",
     "postcss": "^8.4.5",
+    "prettier": "2.5.1",
     "tailwindcss": "^3.0.7"
   }
 }

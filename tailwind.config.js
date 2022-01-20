@@ -1,20 +1,20 @@
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     rotate: {
-      '15': '15deg',
-      '-180': '-180deg',
-      '-90': '-90deg',
-
-     '-45': '-45deg',
-      '0': '0',
-      '45': '45deg',
-      '90': '90deg',
-
-     '135': '135deg',
-      '180': '180deg',
-
-     '270': '270deg',
+      15: "15deg",
+      "-180": "-180deg",
+      "-90": "-90deg",
+      "-45": "-45deg",
+      0: "0",
+      45: "45deg",
+      90: "90deg",
+      135: "135deg",
+      180: "180deg",
+      270: "270deg",
     },
     extend: {
       colors: {
@@ -33,12 +33,12 @@ module.exports = {
         iregular: ["Inter-Regular"],
         ilight: ["Inter-Light"],
         iextralight: ["Inter-ExtraLight"],
-        ithin: ["Inter-Thin"]
-      }
+        ithin: ["Inter-Thin"],
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

@@ -1,23 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useState } from "react";
+import { withoutAuth } from "/components/Auth";
 
-import Hero from '/components/website/schedule/Hero';
+import Hero from "/components/website/schedule/Hero";
 
-import Navbar from '../components/website/utils/Navbar';
-import Schedule from '/components/website/utils/Schedule';
-import Footer from '/components/website/utils/Footer';
+import Navbar from "../components/website/utils/Navbar";
+import Schedule from "/components/website/utils/Schedule";
+import Footer from "/components/website/utils/Footer";
 
-export default function Index() {
-
+function Index() {
   const [hasFocusedElem, updateHasFocused] = useState();
   const bg = hasFocusedElem ? "secondary" : "tertiary";
 
   return (
-    <Navbar bgColor="tertiary" button="quinary" fgColor="black" >
+    <Navbar bgColor="tertiary" button="quinary" fgColor="black">
       <Hero />
       <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
         <div className="py-24" />
       </Schedule>
       <Footer color={bg} />
     </Navbar>
-  )
+  );
 }
+
+export default withoutAuth(Index);
