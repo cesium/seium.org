@@ -16,6 +16,7 @@ const navigation = [
   { name: "Speakers", href: "/speakers" },
   { name: "FAQs", href: "/faq" },
   // { name: 'Login', href: '/login' },
+  { name: "Join Staff", href: "https://forms.gle/4EwD1Gs8FGCGRdYX8" },
 ];
 
 export default function Navbar(props) {
