@@ -1,3 +1,4 @@
+import { withoutAuth } from "/components/Auth";
 import Hero from "/components/website/hackathon/Hero";
 import PeopleShowcase from "/components/website/utils/PeopleShowcase";
 import UnderlineAnimation from "/components/website/utils/UnderlineAnimation";
@@ -52,7 +53,7 @@ function MentorsSubtitle() {
   );
 }
 
-export default function Index() {
+function Index() {
   return (
     <Navbar bgColor="secondary" button="quinary" fgColor="black">
       <Hero />
@@ -81,3 +82,5 @@ export default function Index() {
     </Navbar>
   );
 }
+
+export default withoutAuth(Index);

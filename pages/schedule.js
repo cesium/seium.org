@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { withoutAuth } from "/components/Auth";
 
 import Hero from "/components/website/schedule/Hero";
 
@@ -6,7 +7,7 @@ import Navbar from "../components/website/utils/Navbar";
 import Schedule from "/components/website/utils/Schedule";
 import Footer from "/components/website/utils/Footer";
 
-export default function Index() {
+function Index() {
   const [hasFocusedElem, updateHasFocused] = useState();
   const bg = hasFocusedElem ? "secondary" : "tertiary";
 
@@ -20,3 +21,5 @@ export default function Index() {
     </Navbar>
   );
 }
+
+export default withoutAuth(Index);

@@ -1,3 +1,5 @@
+import { withoutAuth } from "/components/Auth";
+
 import Navbar from "/components/website/utils/Navbar";
 import Footer from "/components/website/utils/Footer";
 
@@ -6,7 +8,7 @@ import FindUs from "/components/website/team/FindUs";
 
 import Organization from "/components/website/team/Organization";
 
-export default function Index() {
+function Index() {
   return (
     <Navbar bgColor="quaternary" button="tertiary" fgColor="white">
       <Hero />
@@ -16,3 +18,5 @@ export default function Index() {
     </Navbar>
   );
 }
+
+export default withoutAuth(Index);

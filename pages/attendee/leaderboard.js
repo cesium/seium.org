@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { withAuth } from "/components/Auth";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Table from "/components/moonstone/user/leaderboard/Table";
@@ -62,7 +63,7 @@ function addDate(date, days) {
   return year + "/" + month + "/" + day;
 }
 
-export default function Leaderboard() {
+function Leaderboard() {
   const min_date = "2022/2/15";
   const max_date = "2022/2/20";
 
@@ -171,3 +172,5 @@ export default function Leaderboard() {
     </Dashboard>
   );
 }
+
+export default withAuth(Leaderboard);

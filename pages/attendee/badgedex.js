@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { withAuth } from "/components/Auth";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 
@@ -24,10 +25,8 @@ function BadgeButton({ text, val, setValue, selected }) {
 
   let button = (
     <button
-      className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"} 
-                        ${
-                          text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"
-                        }           
+      className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"}
+                        ${text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"}
                         w-full rounded-full inline-flex items-center text-sm text-black
                        `}
       onClick={onClick}
@@ -38,7 +37,7 @@ function BadgeButton({ text, val, setValue, selected }) {
   return button;
 }
 
-export default function Badgedex() {
+function Badgedex() {
   let badges = [];
   for (var i = 0; i < 18; i++) {
     badges.push(<Badge />);
@@ -78,3 +77,5 @@ export default function Badgedex() {
     </Dashboard>
   );
 }
+
+export default withAuth(Badgedex);

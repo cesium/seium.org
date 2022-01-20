@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { withAuth } from "/components/Auth";
 
 import Heading from "/components/moonstone/utils/Heading";
 
@@ -8,7 +9,7 @@ import ListItem3 from "../components/moonstone/user/wheel/ListItem3Cols";
 import ListItem4 from "../components/moonstone/user/wheel/ListItem4Cols";
 import Wheel from "/components/moonstone/user/wheel/Wheel";
 
-export default function Profile() {
+function WheelPage() {
   const defaultState = {
     angle: 0,
     speed: 0,
@@ -137,3 +138,5 @@ export default function Profile() {
     </Dashboard>
   );
 }
+
+export default withAuth(WheelPage);

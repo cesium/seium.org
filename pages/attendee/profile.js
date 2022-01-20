@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withAuth } from "/components/Auth";
 
 import Button from "/components/utils/Button";
 
@@ -11,7 +12,7 @@ import Heading from "/components/moonstone/utils/Heading";
 import CodeInput from "/components/moonstone/user/profile/CodeInput";
 import CheckpointTracker from "/components/moonstone/user/profile/CheckpointTracker";
 
-export default function Profile() {
+function Profile() {
   return (
     <Dashboard
       href="profile"
@@ -173,3 +174,5 @@ export default function Profile() {
     </Dashboard>
   );
 }
+
+export default withAuth(Profile);

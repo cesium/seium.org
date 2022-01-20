@@ -1,9 +1,10 @@
+import { withAuth } from "/components/Auth";
 import Dashboard from "/components/moonstone/staff/utils/Dashboard";
 
 import StaffBadgeButton from "/components/moonstone/staff/StaffBadgeButton";
 import StaffRedeemButton from "/components/moonstone/staff/StaffRedeemButton";
 
-export default function Awards() {
+function Awards() {
   return (
     <Dashboard>
       <div>
@@ -43,3 +44,5 @@ export default function Awards() {
     </Dashboard>
   );
 }
+
+export default withAuth(Awards);

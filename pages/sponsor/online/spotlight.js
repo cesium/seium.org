@@ -1,8 +1,9 @@
+import { withAuth } from "/components/Auth";
 import Dashboard from "/components/moonstone/sponsor/utils/Dashboard";
 
 import SpotlightButton from "/components/moonstone/sponsor/spotlight/SpotlightButton";
 
-export default function Spotlight() {
+function Spotlight() {
   return (
     <Dashboard href="spotlight">
       <div>
@@ -31,3 +32,5 @@ export default function Spotlight() {
     </Dashboard>
   );
 }
+
+export default withAuth(Spotlight);

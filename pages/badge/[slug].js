@@ -1,3 +1,4 @@
+import { withAuth } from "/components/Auth";
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Heading from "/components/moonstone/utils/Heading";
 import Badge from "/components/moonstone/user/badgedex/Badge";
@@ -18,7 +19,7 @@ function BadgeOwner({ user, badge, when }) {
   );
 }
 
-export default function BadgeSlug() {
+function BadgeSlug() {
   return (
     <Dashboard>
       <div>
@@ -54,3 +55,5 @@ export default function BadgeSlug() {
     </Dashboard>
   );
 }
+
+export default withAuth(BadgeSlug);

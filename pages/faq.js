@@ -1,8 +1,9 @@
+import { withoutAuth } from "/components/Auth";
 import Navbar from "/components/website/utils/Navbar";
 import Footer from "/components/website/utils/Footer";
 import Faqs from "../components/website/faqs";
 
-export default function Faq() {
+function Faq() {
   return (
     <Navbar bgColor="primary" button={"quinary"} fgColor={"black"}>
       <Faqs />
@@ -10,3 +11,5 @@ export default function Faq() {
     </Navbar>
   );
 }
+
+export default withoutAuth(Faq);
