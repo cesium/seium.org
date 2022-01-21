@@ -12,9 +12,15 @@
     "company": "Remote"
   },
   {
-    "id": "heldercoelho",
-    "name": "Helder Coelho",
-    "job": "Professor Emérito",
-    "company": "Universidade de Lisboa"
+    "id": "alexandraoliveira",
+    "name": "Alexandra Oliveira",
+    "job": "Data Scientist",
+    "company": "Retail Consult"
+  },
+  {
+    "id": "bernardoamorin",
+    "name": "Bernardo Amorim",
+    "job": "Software Engineer",
+    "company": "SaltPay"
   }
 ]

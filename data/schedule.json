@@ -30,8 +30,8 @@
         "startTime": "12:00",
         "endTime": "13:00",
         "activityType": "Talk",
-        "summary": "Olhando para o Futuro",
-        "description": "O início da década de 20 permite focar simultaneamente o “hardware” e o “software” da computação. A interação entre tecnologias sugere o recurso à Inteligência Artificial (IA) para atacar alguns problemas complexos (criativos, divergentes) com grandes quantidades de dados. No entanto, estamos ainda longe de dominar a inteligência humana (conceitos, abstração, analogia) e a conservação da privacidade levanta questões de ética.",
+        "summary": "Looking at the future",
+        "description": "The beginning of the 20's allows to focus simultaneously on the “hardware” and the “software” of computing. The interaction between technologies suggests the use of Artificial Intelligence (AI) to attack some complex problems (creative, divergent) with large amounts of data. However, we are still far from mastering human intelligence (concepts, abstraction, analogy) and the conservation of privacy raises questions of ethics.",
         "author": "Helder Coelho",
         "location": "CP2-B1"
       },
@@ -52,27 +52,23 @@
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "",
-        "description": "",
-        "author": "TBA",
+        "summary": " Elixir in the community",
+        "description": "Elixir is a functional programming language, highly scalable and open-source created by José Valim backed by the community. Elixir was created because of the lack of capability of some languages like ruby to adopt concurrency models, this made José Valim search for solutions. That’s when he found Functional Programming and Erlang. Functional programming, due to the immutability, solved a lot of concurrency problems that other languages had and, Erlang’s Virtual Machine (BEAM) was ahead of everyone in terms of distribution. The community was sold on this premiss and soon projects started being released to support the Elixir environment. One of the biggest projects is Phoenix, an open-source framework that allows devs to build web apps using Elixir. One famous feature is LiveView, which allows the combination of server-side rendering and real-time features without the JS complexity. In this talk, we will dive into the basis for the creation of Erlang and how they fit into modern world requirements to build large scale applications and how the Elixir community is expanding its horizons into spaces like Data Science, Machine Learning and many others.",
+        "author": "Bernardo Amorim",
         "location": "CP2-B1"
       },
       {
         "startTime": "16:00",
         "endTime": "16:30",
         "activityType": "Pitch",
-        "summary": "FARFETCH",
-        "description": "",
-        "author": "",
+        "author": "FARFETCH",
         "location": "CP2-B1"
       },
       {
         "startTime": "16:30",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "author": "ACCENTURE",
         "location": "CP2-B1"
       },
       {
@@ -82,7 +78,7 @@
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "Tertúlia",
+        "activityType": "Panel Discussion",
         "summary": "",
         "description": "",
         "author": "TBA",
@@ -106,20 +102,20 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
+        "summary": "Deploying ML Models in Sagemaker",
+        "description": "Amazon SageMaker helps data scientists and developers to prepare, build, train, and deploy high-quality machine learning models quickly by bringing together a broad set of capabilities purpose-built for machine learning. To make it easier to get started, Amazon SageMaker JumpStart provides a set of solutions for the most common use cases that can be deployed readily with just a few clicks. In this workshop we will explore the end to end capabilities of sagemaker.",
+        "author": "Karel Roeland Verhoeven - SaltPay",
+        "location": "TBA",
         "hyperlink": ""
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
+        "summary": "Agile HealthCare",
+        "description": "How to implement agile methodologies in healthcare software development (Viewer). Team Challenge - Micro Sprint to develop a technological use case in the health area.",
+        "author": "André Mota and Catarina Caçote - Glintt",
+        "location": "TBA",
         "hyperlink": ""
       },
       {
@@ -161,12 +157,14 @@
         "hyperlink": ""
       },
       {
+        "activityType": "Coffee Break",
+        "coffeeBreak": true
+      },
+      {
         "startTime": "16:00",
         "endTime": "16:30",
         "activityType": "Pitch",
         "summary": "Retail Consult",
-        "description": "",
-        "author": "",
         "location": "CP2-B1"
       },
       {
@@ -174,18 +172,12 @@
         "endTime": "17:00",
         "activityType": "Pitch",
         "summary": "Uphold",
-        "description": "",
-        "author": "",
         "location": "CP2-B1"
-      },
-      {
-        "activityType": "Coffee Break",
-        "coffeeBreak": true
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "Tertúlia",
+        "activityType": "Panel Discussion",
         "summary": "TBA",
         "description": "",
         "author": "",
@@ -258,11 +250,15 @@
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Artificial Intelligence in Retail and Intelligent Batch Processing System",
+        "description": "From elevating the consumer experience to planning and managing retail operations, artificial intelligence (AI) is innovatively driving the entire retail experience! This session aims to provide an overview of current AI challenges applied to the particularities of the retail area, as well as to explore in more depth an application in the area of ​​operational management: batch processing optimization. In order to respond to these objectives, the problem of developing an intelligent process scheduling system that uses the results of the prediction of their characteristics will be discussed, as well as dynamic multi-criteria optimization techniques, such as meta-heuristics and/or constrained programming. , in order to find an optimal scheduling of batch processes in real time.",
+        "author": "Alexandra Oliveira - Retail Consult",
         "location": "CP2-B1",
         "hyperlink": ""
+      },
+      {
+        "activityType": "Coffee Break",
+        "coffeeBreak": true
       },
       {
         "startTime": "16:00",
@@ -277,19 +273,13 @@
         "startTime": "16:30",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "author": "EY",
         "location": "CP2-B1"
-      },
-      {
-        "activityType": "Coffee Break",
-        "coffeeBreak": true
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "Tertúlia",
+        "activityType": "Panel Discussion",
         "summary": "TBA",
         "description": "",
         "author": "",
