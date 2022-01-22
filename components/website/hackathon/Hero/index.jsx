@@ -10,14 +10,14 @@ const Animation = dynamic(() => import("./Animation"), { ssr: false });
 export default function Hero() {
   return (
     <div className="bg-secondary">
-      <div className="spacing relative z-50 pb-32">
+      <div className="relative z-50 pb-32 spacing">
         <Animation />
         <div className="pt-2">
           <Title />
         </div>
         <div className="relative mt-8 md:grid md:grid-cols-3">
           <div className="col-span-2">
-            <span className="inline-block w-56 content-center items-center text-center align-middle">
+            <span className="items-center content-center inline-block w-56 text-center align-middle">
               <a href="https://forms.gle/eFft9LTLSQzJjTG29">
                 <Button
                   text="REGISTER YOUR TEAM"
@@ -25,11 +25,11 @@ export default function Hero() {
                 />
               </a>
             </span>
-            <span className="pl-8 align-middle text-2xl text-white opacity-80">
-              2-5 people
+            <span className="pl-8 text-2xl text-white align-middle opacity-80">
+              3-5 people
             </span>
           </div>
-          <div className="absolute left-0 mt-6 md:relative md:flex md:flex-row-reverse">
+          <div className="absolute left-0 mt-6 md:flex md:flex-row-reverse md:relative">
             <Organization />
           </div>
         </div>
