@@ -27,22 +27,58 @@
         "description": "Architect/Principal Software Developer with successful record of performance tuning of Java online applications on Financial, Telecom, Video Game and Geo-Spatial businesses."
       },
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
+        "id": "bernardoamorim",
+        "name": "Bernardo Amorim",
+        "role": "Software Engineer",
+        "company": "SaltPay",
         "talk": "Talk. 15h",
-        "linkedin": "",
-        "github": "",
+        "linkedin": "https://www.linkedin.com/in/bdornellas",
+        "github": "https://github.com/bamorim",
         "twitter": "",
         "href": "",
-        "description": ""
+        "description": "Bernardo fell in love with programming at age 12 and never stopped since then. He has built an EdTech product to improve the ecosystem for a dependently typed language and a banking system almost from scratch. He loves programming in Elixir and interacting with the community."
       }
     ]
   },
   {
     "date": "2022/2/16",
     "speakers": [
+      {
+        "id": "karelverhoeven",
+        "name": "Karel Verhoeven",
+        "role": "Data Specialist",
+        "company": "SaltPay",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://www.linkedin.com/in/karel-verhoeven-0b299b89",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "andremota",
+        "name": "André Mota",
+        "role": "Tech Lead",
+        "company": "Glintt",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://www.linkedin.com/in/andremoah",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "catarinacacote",
+        "name": "Catarina Caçote",
+        "role": "Scrum Master",
+        "company": "Glintt",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://www.linkedin.com/in/catarina-ca%C3%A7ote-a9848215b",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
       {
         "id": "tbd",
         "name": "TBA",
@@ -103,16 +139,16 @@
         "description": ""
       },
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
+        "id": "alexandraoliveira",
+        "name": "Alexandra Oliveira",
+        "role": "Data Scientist",
+        "company": "Retail Consult",
         "talk": "Talk. 15h",
-        "linkedin": "",
+        "linkedin": "https://pt.linkedin.com/in/alexandraaoliveira",
         "github": "",
         "twitter": "",
         "href": "",
-        "description": ""
+        "description": "Alexandra has more than 10 years of experience in the data science field. She has developed solutions in several areas, such as health and wellness, management of the risk level associated with food inspections, among others. She has been a Bioinformatics professor at Escola Superior de Saúde do Instituto Politécnico do Porto for more than 10 years, is a reasearcher at  Laboratório de Inteligência Artificial e Ciências de Computadores da Universidade do Porto as well as a data scientists at Retail Consult."
       }
     ]
   },
