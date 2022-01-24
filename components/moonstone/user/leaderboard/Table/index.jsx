@@ -9,24 +9,24 @@ export default function Table({ list, user, maxUsersToShow }) {
   const rows = toShow.map((entry, id) => (
     <div
       key={id}
-      className="grid-cols-3 border-t-2 border-t-slate-700 h-8 pt-2 mb-2"
+      className="mb-2 h-8 grid-cols-3 border-t-2 border-t-slate-700 pt-2"
     >
       <div
-        className={`col-span-1 font-iregular w-1/3 float-left text-left ${
+        className={`col-span-1 float-left w-1/3 text-left font-iregular ${
           entry.name == user ? "text-quinary" : ""
         }`}
       >
         {id + 1}
       </div>
       <div
-        className={`col-span-1 font-ibold w-1/3 float-left text-center ${
+        className={`col-span-1 float-left w-1/3 text-center font-ibold ${
           entry.name == user ? "text-quinary" : ""
         }`}
       >
         {entry.name}
       </div>
       <div
-        className={`col-span-1 font-iregular w-1/3 float-left text-right ${
+        className={`col-span-1 float-left w-1/3 text-right font-iregular ${
           entry.name == user ? "text-quinary" : ""
         }`}
       >
@@ -49,14 +49,14 @@ export default function Table({ list, user, maxUsersToShow }) {
     userId < maxUsersToShow ? (
       <></>
     ) : (
-      <div className="grid-cols-3 border-t-2 border-t-slate-700 h-8 pt-2 pb-2">
-        <div className="col-span-1 text-quinary font-iregular w-1/3 float-left text-left">
+      <div className="h-8 grid-cols-3 border-t-2 border-t-slate-700 pt-2 pb-2">
+        <div className="col-span-1 float-left w-1/3 text-left font-iregular text-quinary">
           {userId + 1}
         </div>
-        <div className="col-span-1 text-quinary font-ibold w-1/3 float-left text-center">
+        <div className="col-span-1 float-left w-1/3 text-center font-ibold text-quinary">
           {user}
         </div>
-        <div className="col-span-1 text-quinary w-1/3 font-iregular text-aqua float-left text-right">
+        <div className="text-aqua col-span-1 float-left w-1/3 text-right font-iregular text-quinary">
           {userBadges}
         </div>
       </div>
@@ -64,14 +64,14 @@ export default function Table({ list, user, maxUsersToShow }) {
 
   return (
     <div className="overflow-hidden">
-      <div className="grid-cols-3 mt-12 h-8 pt-2">
-        <div className="col-span-1 font-iregular w-1/3 float-left text-left">
+      <div className="mt-12 h-8 grid-cols-3 pt-2">
+        <div className="col-span-1 float-left w-1/3 text-left font-iregular">
           Rank
         </div>
-        <div className="col-span-1 font-iregular w-1/3 float-left text-center">
+        <div className="col-span-1 float-left w-1/3 text-center font-iregular">
           Name
         </div>
-        <div className="col-span-1 font-iregular w-1/3 float-left text-right">
+        <div className="col-span-1 float-left w-1/3 text-right font-iregular">
           Badges
         </div>
       </div>

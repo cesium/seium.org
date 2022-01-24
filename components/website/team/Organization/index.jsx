@@ -59,9 +59,9 @@ export default function Organization() {
     : "";
 
   return (
-    <section className="py-20 grid grid-cols-1 lg:grid-cols-2 gap-x-32 gap-y-8 bg-quaternary spacing">
+    <section className="spacing grid grid-cols-1 gap-x-32 gap-y-8 bg-quaternary py-20 lg:grid-cols-2">
       <div className="text-white">
-        <h2 className="font-iextrabold text-6xl font-bold mb-4">
+        <h2 className="mb-4 font-iextrabold text-6xl font-bold">
           Organization
         </h2>
         <p className="font-imedium">
@@ -78,7 +78,7 @@ export default function Organization() {
         list={team["support"].list.slice(0, 2)}
       />
 
-      <div className="hidden lg:flex justify-center items-center">
+      <div className="hidden items-center justify-center lg:flex">
         <Animation></Animation>
       </div>
 

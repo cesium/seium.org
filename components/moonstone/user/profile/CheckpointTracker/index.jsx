@@ -15,13 +15,13 @@ function Step({ count, progress, checkpoints }) {
 export default function CheckpointTracker({ checkpoints, progress }) {
   const ml = (progress / checkpoints) * 100 + "%";
   return (
-    <div className="py-5 w-80">
+    <div className="w-80 py-5">
       <div>
         <span className="font-iregular" style={{ marginLeft: ml }}>
           🏁
         </span>
       </div>
-      <div className="w-full overflow-hidden border border-quinary rounded-full h-6">
+      <div className="h-6 w-full overflow-hidden rounded-full border border-quinary">
         {[...Array(checkpoints)].map((col, i) => (
           <Step
             key={i}

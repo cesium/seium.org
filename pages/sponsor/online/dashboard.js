@@ -15,11 +15,11 @@ function SponsorDashboard() {
       title="Dashboard"
       description="Neste local, pode dar badges ao participantes que se encontram no seu stand"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-10">
-        <div className="w-full mr-3">
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
+        <div className="mr-3 w-full">
           <Heading text="Participantes no stand" />
-          <div className="w-auto mt-8">
-            <button className="block m-auto bg-aqua rounded-full w-32 h-10">
+          <div className="mt-8 w-auto">
+            <button className="bg-aqua m-auto block h-10 w-32 rounded-full">
               <p className="font-iregular">Refresh</p>
             </button>
           </div>
@@ -29,10 +29,10 @@ function SponsorDashboard() {
           />
         </div>
 
-        <div className="w-full ml-3">
+        <div className="ml-3 w-full">
           <Heading text="Comandos" />
 
-          <div className="w-3/4 m-auto">
+          <div className="m-auto w-3/4">
             <div className="mt-5">
               <SponsorBadgeButton sponsor="Accenture" all={false} />
               <SponsorPrizeButton prize="Câmara ligada" />

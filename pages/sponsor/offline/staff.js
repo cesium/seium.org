@@ -8,15 +8,15 @@ function Awards() {
   return (
     <Dashboard>
       <div>
-        <div className="md:mt-16 mt-8">
+        <div className="mt-8 md:mt-16">
           <h1 className="font-ibold text-4xl sm:text-5xl">Staff</h1>
         </div>
 
         <div className="grid-cols-2 overflow-hidden">
-          <div className="mt-6 col-span-1 w-full md:w-1/2 float-left">
-            <div className="border-black border-b-2 mt-14 pb-2">
+          <div className="col-span-1 float-left mt-6 w-full md:w-1/2">
+            <div className="mt-14 border-b-2 border-black pb-2">
               <span className="font-ibold text-xl sm:text-2xl">Badges</span>
-              <span className="font-iregular ml-4 text-md sm:text-lg">
+              <span className="text-md ml-4 font-iregular sm:text-lg">
                 disponíveis para atribuir neste momento
               </span>
             </div>
@@ -30,8 +30,8 @@ function Awards() {
             </div>
           </div>
 
-          <div className="mt-6 pl-8 col-span-1 w-full md:w-1/2 float-left">
-            <div className="border-black border-b-2 mt-14 pb-2">
+          <div className="col-span-1 float-left mt-6 w-full pl-8 md:w-1/2">
+            <div className="mt-14 border-b-2 border-black pb-2">
               <span className="font-ibold text-xl sm:text-2xl">Prizes</span>
             </div>
 

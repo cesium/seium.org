@@ -2,10 +2,10 @@ import Button from "/components/utils/Button";
 
 export default function Regulations() {
   return (
-    <div className="sm:flex sm:flex-col justify-center lg:flex-row bg-secondary pt-20 pb-20 spacing">
-      <div className="sm:mt-6 text-center sm:grid gap-y-8 sm:gap-x-2 sm:grid-cols-2 sm:justify-items-center lg:gap-x-8 w-full">
+    <div className="spacing justify-center bg-secondary pt-20 pb-20 sm:flex sm:flex-col lg:flex-row">
+      <div className="w-full gap-y-8 text-center sm:mt-6 sm:grid sm:grid-cols-2 sm:justify-items-center sm:gap-x-2 lg:gap-x-8">
         <div className="sm:mt-2">
-          <h2 className="font-bold text-white text-xl md:text-3xl md:w-full relative">
+          <h2 className="relative text-xl font-bold text-white md:w-full md:text-3xl">
             Ready to go? 👉
           </h2>
         </div>

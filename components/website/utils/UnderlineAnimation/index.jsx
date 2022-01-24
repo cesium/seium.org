@@ -54,9 +54,9 @@ export default function UnderlineAnimation({ children, text, afterText }) {
   }, [st]);
 
   return (
-    <span className="relative leading-none w-auto h-auto inline-block z-10 mt-4">
+    <span className="relative z-10 mt-4 inline-block h-auto w-auto leading-none">
       <span
-        className="relative h-auto inline-block z-10 md:border-b-8 border-white"
+        className="relative z-10 inline-block h-auto border-white md:border-b-8"
         onMouseEnter={() =>
           updateState((oldState) => ({ ...oldState, status: 1 }))
         }
@@ -66,12 +66,12 @@ export default function UnderlineAnimation({ children, text, afterText }) {
       >
         {children}
       </span>
-      <span className="relative h-auto inline-block z-10">
+      <span className="relative z-10 inline-block h-auto">
         &nbsp;{afterText ? afterText : ""}
       </span>
-      <div className="absolute top-full md:w-96 h-52 z-10 overflow-y-hidden overflow-x-visible">
+      <div className="absolute top-full z-10 h-52 overflow-y-hidden overflow-x-visible md:w-96">
         <div
-          className="hidden md:block absolute top-0 left-20 pt-3 z-0 overflow-visible"
+          className="absolute top-0 left-20 z-0 hidden overflow-visible pt-3 md:block"
           style={{ marginTop: `${st.margin}px` }}
         >
           <Card

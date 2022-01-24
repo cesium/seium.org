@@ -42,18 +42,18 @@ function BlockItem({
       )}
 
       {!coffeeBreak && (
-        <p className="text-xl text-white font-iextrabold">
+        <p className="font-iextrabold text-xl text-white">
           {startTime}-{endTime}
         </p>
       )}
 
-      <p className={`text-xl text-white font-imedium`}>
+      <p className={`font-imedium text-xl text-white`}>
         <span className="font-iextrabold">{`${activityType} `}</span>
         {summary}
       </p>
 
       <ul
-        className={`${styles.authors} text-sm text-gray-400 font-iregular flex`}
+        className={`${styles.authors} flex font-iregular text-sm text-gray-400`}
       >
         {author && (
           <li className={styles.listElem}>
@@ -70,14 +70,14 @@ function BlockItem({
           style={{ opacity: focused ? 1 : 0 }}
         >
           {description.split("\n").map((text, i) => (
-            <p key={i} className={`mb-2 text-lg text-white font-iregular`}>
+            <p key={i} className={`mb-2 font-iregular text-lg text-white`}>
               {text}
             </p>
           ))}
         </div>
       )}
 
-      <p className={`${styles.location} text-sm text-gray-400 font-iregular`}>
+      <p className={`${styles.location} font-iregular text-sm text-gray-400`}>
         {location}
       </p>
 
@@ -87,7 +87,7 @@ function BlockItem({
             <a
               href={hyperlink}
               target="_blank"
-              className={`${styles.hyperlink} text-lg text-quinary font-ibold`}
+              className={`${styles.hyperlink} font-ibold text-lg text-quinary`}
               rel="noreferrer"
             >
               Join

@@ -10,8 +10,8 @@ export default function Sponsors(props) {
   const [val, setValue] = useState(0);
 
   return (
-    <div className="spacing bg-tertiary text-white py-20">
-      <h2 className="text-6xl font-iextrabold py-10 flex text-center justify-center">
+    <div className="spacing bg-tertiary py-20 text-white">
+      <h2 className="flex justify-center py-10 text-center font-iextrabold text-6xl">
         {" "}
         Our amazing sponsors{" "}
       </h2>
@@ -28,19 +28,19 @@ export default function Sponsors(props) {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center pt-20 sm:pt-40">
+      <div className="flex flex-col justify-center pt-20 sm:pt-40 lg:flex-row">
         {sponsors[val].map((elem, key) => {
           return (
             <div
               key={key}
               className={`${
                 key == 1
-                  ? "border-t-2 lg:border-t-0 lg:border-l-2 border-white"
+                  ? "border-t-2 border-white lg:border-t-0 lg:border-l-2"
                   : undefined
               } w-[100%] lg:w-1/2`}
             >
-              <div className="grid grid-cols-1 w-full place-items-center py-[5%] lg:py-0 lg:px-[10%]">
-                <p className="text-2xl lg:text-3xl font-iextrabold text-quinary pb-10">
+              <div className="grid w-full grid-cols-1 place-items-center py-[5%] lg:py-0 lg:px-[10%]">
+                <p className="pb-10 font-iextrabold text-2xl text-quinary lg:text-3xl">
                   {" "}
                   {!val
                     ? key == 0
@@ -53,7 +53,7 @@ export default function Sponsors(props) {
                 <div
                   className={`${
                     !val && key == 0 ? "grid-cols-1" : "grid-cols-2"
-                  } grid gap-2 lg:gap-10 p-6`}
+                  } grid gap-2 p-6 lg:gap-10`}
                 >
                   {elem.map((sponsor, i) => {
                     return (

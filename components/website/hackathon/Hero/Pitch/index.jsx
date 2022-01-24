@@ -2,7 +2,7 @@ import Button from "/components/utils/Button";
 
 export default function Pitch() {
   return (
-    <div className="w-full text-white lg:w-9/12 xl:9/12">
+    <div className="xl:9/12 w-full text-white lg:w-9/12">
       <h2 className="text-4xl font-bold">Hackathon 2022</h2>
       <div className="mt-8">
         <p className="text-white">

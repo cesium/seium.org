@@ -13,9 +13,9 @@ import Text from "/components/moonstone/authentication/Text";
 
 function Signup() {
   return (
-    <div className="overflow-hidden bg-secondary min-h-screen">
+    <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20 mb-6" />
-      <div className="sm:mt-16 flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center sm:mt-16">
         <Title text="Sign up" />
 
         <Form>
@@ -67,7 +67,7 @@ function Signup() {
           />
         </Form>
         <Text text="Already have an account?" link="Login here" href="/login" />
-        <div className="hidden lg:block absolute bottom-0 right-60">
+        <div className="absolute bottom-0 right-60 hidden lg:block">
           <Fade bottom>
             <Card
               img="/images/mascot-footer.svg"

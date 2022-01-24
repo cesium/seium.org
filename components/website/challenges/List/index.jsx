@@ -9,7 +9,7 @@ export default function List({ title }) {
         <li
           key={i}
           className={`mb-6 ${
-            challenge == title ? "text-white ml-8" : "text-gray-700"
+            challenge == title ? "ml-8 text-white" : "text-gray-700"
           }`}
         >
           <a href={`#${challenge}`}>{challenge}</a>

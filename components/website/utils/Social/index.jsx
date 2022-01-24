@@ -9,7 +9,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
   return (
-    <div className="mt-4 grid justify-items-center grid-cols-5 gap-x-6">
+    <div className="mt-4 grid grid-cols-5 justify-items-center gap-x-6">
       <a
         className="w-5 opacity-50 hover:opacity-100"
         href="https://github.com/cesium/seium.org"
@@ -43,7 +43,7 @@ export default function Social() {
         <FontAwesomeIcon icon={faLinkedinIn} />
       </a>
       <a
-        className="pt-0.5 w-5 opacity-50 hover:opacity-100"
+        className="w-5 pt-0.5 opacity-50 hover:opacity-100"
         href="mailto:geral@seium.org"
         target="_blank"
         rel="noreferrer"

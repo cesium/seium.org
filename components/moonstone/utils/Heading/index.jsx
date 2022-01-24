@@ -1,12 +1,12 @@
 export default function Heading({ text, children }) {
   return (
-    <div className="w-full mb-5 pb-3 border-b-solid border-b-2 border-slate-400 grid-cols-2 overflow-hidden">
-      <div className="col-span-1 flex float-left h-full font-ibold">
-        <p className="inline-block align-middle font-bold text-2xl font-ibold">
+    <div className="border-b-solid mb-5 w-full grid-cols-2 overflow-hidden border-b-2 border-slate-400 pb-3">
+      <div className="col-span-1 float-left flex h-full font-ibold">
+        <p className="inline-block align-middle font-ibold text-2xl font-bold">
           {text}
         </p>
       </div>
-      <div className="col-span-1 flex float-right font-iregular">
+      <div className="col-span-1 float-right flex font-iregular">
         {children}
       </div>
     </div>

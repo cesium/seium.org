@@ -19,8 +19,8 @@ function Profile() {
       title="User Profile"
       description="Hi John, welcome to your profile"
     >
-      <div className="grid-cols-2 overflow-hidden mt-12">
-        <div className="col-span-1 w-full md:w-1/2 float-left">
+      <div className="mt-12 grid-cols-2 overflow-hidden">
+        <div className="col-span-1 float-left w-full md:w-1/2">
           <Heading text="User Profile">
             <div className="w-20">
               <Button
@@ -32,7 +32,7 @@ function Profile() {
           <div className="pl-6">
             <Image
               src="/images/speakers/joaooliveira.png"
-              className="rounded-full overflow-hidden"
+              className="overflow-hidden rounded-full"
               width="220"
               height="220"
             />
@@ -64,14 +64,14 @@ function Profile() {
 
             <a
               href="#"
-              className="pl-6 text-quinary h-auto inline-block underline"
+              className="inline-block h-auto pl-6 text-quinary underline"
             >
               Reset Password
             </a>
           </Form>
         </div>
 
-        <div className="col-span-1 w-full md:w-1/2 float-right md:pl-6">
+        <div className="col-span-1 float-right w-full md:w-1/2 md:pl-6">
           <div>
             <Heading text="Achievements"></Heading>
 
@@ -84,7 +84,7 @@ function Profile() {
               </div>
             </div>
 
-            <div className="grid-cols-2 overflow-hidden mt-4">
+            <div className="mt-4 grid-cols-2 overflow-hidden">
               <div className="col-span-1 float-left w-1/2 font-iregular">
                 🏆16 Entries Final Draw
               </div>
@@ -130,9 +130,9 @@ function Profile() {
               CV!
             </p>
 
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+            <div className="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:pt-5">
+              <div className="mt-1 sm:col-span-2 sm:mt-0">
+                <div className="flex max-w-lg justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
                   <div className="space-y-1 text-center">
                     <svg
                       className="mx-auto h-12 w-12 text-gray-400"
@@ -151,7 +151,7 @@ function Profile() {
                     <div className="flex text-sm text-gray-600">
                       <label
                         htmlFor="file-upload"
-                        className="relative cursor-pointer bg-white rounded-md font-medium text-quinary hover:text-quintary"
+                        className="hover:text-quintary relative cursor-pointer rounded-md bg-white font-medium text-quinary"
                       >
                         <span>Upload a file</span>
                         <input

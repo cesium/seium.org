@@ -4,9 +4,9 @@ import questions from "/data/faqs";
 
 export default function Faqs() {
   return (
-    <div className="flex flex-col justify-between py-20 spacing lg:flex-row bg-primary lg:h-3/4">
+    <div className="spacing flex flex-col justify-between bg-primary py-20 lg:h-3/4 lg:flex-row">
       <div className="mb-10 text-white lg:w-2/5">
-        <h1 className="mb-4 text-4xl font-bold lg:text-6xl font-iextrabold">
+        <h1 className="mb-4 font-iextrabold text-4xl font-bold lg:text-6xl">
           Frequently Asked Questions
         </h1>
         <p className="text-lg">

@@ -24,9 +24,9 @@ function ForgotPassword() {
   const [st, updateState] = useState(null);
 
   return (
-    <div className="overflow-hidden bg-secondary min-h-screen">
+    <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20" />
-      <div className="mt-10 sm:mt-40 flex flex-col items-center justify-center">
+      <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Reset password" />
         {st != true ? (
           <div className="mt-8">
@@ -77,7 +77,7 @@ function ForgotPassword() {
         ) : (
           <></>
         )}
-        <div className="hidden lg:block absolute bottom-0 right-60">
+        <div className="absolute bottom-0 right-60 hidden lg:block">
           <Fade bottom>
             <Card
               img="/images/mascot-footer.svg"

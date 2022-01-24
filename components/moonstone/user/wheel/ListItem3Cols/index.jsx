@@ -11,7 +11,7 @@ export default function ListItem3({
   if (isFullBold) {
   }
   return (
-    <div className={`w-full mb-5 pb-3 ${border} grid grid-cols-3`}>
+    <div className={`mb-5 w-full pb-3 ${border} grid grid-cols-3`}>
       <div className="text-left">
         <p className="font-ibold">{user}</p>
       </div>
@@ -19,7 +19,7 @@ export default function ListItem3({
         <p className="text-iregular">{badge}</p>
       </div>
       <div className="text-right">
-        <p className="font-bold text-aqua text-ibold pr-4">{when}</p>
+        <p className="text-aqua text-ibold pr-4 font-bold">{when}</p>
       </div>
     </div>
   );
