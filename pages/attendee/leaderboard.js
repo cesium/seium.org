@@ -137,8 +137,8 @@ function Leaderboard() {
       title="Leaderboard"
       description="Check the users with the highest number of badges"
     >
-      <div className="grid-cols-2 overflow-hidden mt-12">
-        <div className="col-span-1 w-full md:w-1/2 float-left">
+      <div className="mt-12 grid-cols-2 overflow-hidden">
+        <div className="col-span-1 float-left w-full md:w-1/2">
           <Day
             date={st.date}
             fg_color="quinary"
@@ -147,12 +147,12 @@ function Leaderboard() {
             fontSize="lg"
           />
         </div>
-        <div className="col-span-1 w-full md:w-1/2 pl-24 float-left">
+        <div className="col-span-1 float-left w-full pl-24 md:w-1/2">
           <b className="text-ibold">Board</b>
           <button
             className={`font-iregular bg-${
               st.hallOfFame ? "white" : "quinary"
-            } rounded-full h-12 ml-24 text-center items-center px-4 py-1`}
+            } ml-24 h-12 items-center rounded-full px-4 py-1 text-center`}
             onClick={(e) => changeLeaderboard(false)}
           >
             LEADERBOARD
@@ -160,7 +160,7 @@ function Leaderboard() {
           <button
             className={`font-iregular bg-${
               st.hallOfFame ? "quinary" : "white"
-            } rounded-full h-12 ml-12 text-center items-center px-4 py-1`}
+            } ml-12 h-12 items-center rounded-full px-4 py-1 text-center`}
             onClick={(e) => changeLeaderboard(true)}
           >
             HALL OF FAME

@@ -27,7 +27,7 @@ function BadgeButton({ text, val, setValue, selected }) {
     <button
       className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"}
                         ${text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"}
-                        w-full rounded-full inline-flex items-center text-sm text-black
+                        inline-flex w-full items-center rounded-full text-sm text-black
                        `}
       onClick={onClick}
     >
@@ -52,10 +52,10 @@ function Badgedex() {
     >
       <div className="pt-10 xl:flex xl:flex-auto">
         <div className="flex flex-auto space-x-5">
-          <p className="mb-10 xl:mb-0 font-bold text-2xl">Filter by</p>
+          <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
           <Filter />
         </div>
-        <div className="w-auto lg:w-1/2 xl:w-auto font-bold text-2xl grid grid-cols-3 xl:gap-x-8">
+        <div className="grid w-auto grid-cols-3 text-2xl font-bold lg:w-1/2 xl:w-auto xl:gap-x-8">
           <div>Show</div>
           <BadgeButton
             text="ALL"
@@ -71,7 +71,7 @@ function Badgedex() {
           />
         </div>
       </div>
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-y-3">
+      <div className="mt-8 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
         {badges}
       </div>
     </Dashboard>

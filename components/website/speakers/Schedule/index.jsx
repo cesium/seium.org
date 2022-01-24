@@ -105,18 +105,18 @@ export default function Schedule(props) {
   };
 
   return (
-    <section className="z-50 2xl:grid 2xl:grid-cols-2 relative bg-secondary lg:pt-10 pb-20 spacing">
-      <div className="grid place-items-center md:place-items-start sm:flex sm:flex-col text-white mb-10 md:mr-10">
+    <section className="spacing relative z-50 bg-secondary pb-20 lg:pt-10 2xl:grid 2xl:grid-cols-2">
+      <div className="mb-10 grid place-items-center text-white sm:flex sm:flex-col md:mr-10 md:place-items-start">
         <Day date={date} previousDay={previous_day} nextDay={next_day} />
-        <p className="mt-10 md:px-20 w-5/6 text-md font-iregular">
+        <p className="text-md mt-10 w-5/6 font-iregular md:px-20">
           During this week, you have the opportunity to interact with many
           recognized speakers, national, international and notorious companies!
         </p>
-        <p className="mt-4 md:px-20 w-5/6 text-md font-iregular">
+        <p className="text-md mt-4 w-5/6 font-iregular md:px-20">
           You can get to know them better here.
         </p>
       </div>
-      <div className="md:px-10 w-full z-50">
+      <div className="z-50 w-full md:px-10">
         <Table detailed={props.detailed} date={date} />;
       </div>
     </section>

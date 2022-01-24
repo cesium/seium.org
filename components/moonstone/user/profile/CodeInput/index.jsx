@@ -4,9 +4,9 @@ export default function CodeInput() {
       <input
         type="text"
         placeholder="CODE"
-        className="border border-quinary rounded-full h-10 w-80 pl-4 pr-28 font-iregular"
+        className="h-10 w-80 rounded-full border border-quinary pl-4 pr-28 font-iregular"
       ></input>
-      <button className="bg-quinary rounded-full w-28 h-10 -ml-28 font-iregular">
+      <button className="-ml-28 h-10 w-28 rounded-full bg-quinary font-iregular">
         SEND
       </button>
     </div>

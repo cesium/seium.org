@@ -22,7 +22,7 @@
 }
 
 .clickable:hover .gridBlock {
-  @apply bg-quaternary border-quaternary;
+  @apply border-quaternary bg-quaternary;
 }
 
 .clickable .gridBlock a {
@@ -100,7 +100,7 @@
 }
 
 .expand {
-  @apply rounded-full text-center items-center px-8 py-0 border border-white shadow-sm text-3xl text-white font-ibold;
+  @apply items-center rounded-full border border-white px-8 py-0 text-center font-ibold text-3xl text-white shadow-sm;
   margin-left: 15px;
   display: inline-block;
   width: 5rem;

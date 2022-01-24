@@ -25,9 +25,9 @@ export default function Navbar(props) {
       {({ open }) => (
         <>
           <div className={`spacing pt-14 pb-4 bg-${props.bgColor}`}>
-            <div className="flex items-center justify-between h-16">
-              <div className="flex flex-auto z-50 relative">
-                <div className="grid grid-cols-4 w-full">
+            <div className="flex h-16 items-center justify-between">
+              <div className="relative z-50 flex flex-auto">
+                <div className="grid w-full grid-cols-4">
                   <Link href="/" className="" passHref>
                     <div className={styles.logo}>
                       <Image
@@ -38,7 +38,7 @@ export default function Navbar(props) {
                       />
                     </div>
                   </Link>
-                  <div className="justify-self-end col-span-3 hidden lg:block">
+                  <div className="col-span-3 hidden justify-self-end lg:block">
                     <div className="flex flex-auto gap-x-20">
                       <div className="grid grid-cols-3 gap-x-20 gap-y-6 xl:gap-y-0">
                         {navigation.map((item, i) => (
@@ -58,8 +58,8 @@ export default function Navbar(props) {
                   </div>
                 </div>
               </div>
-              <div className="flex lg:hidden z-50 relative">
-                <Disclosure.Button className="inline-flex items-center justify-center text-white w-6 h-6">
+              <div className="relative z-50 flex lg:hidden">
+                <Disclosure.Button className="inline-flex h-6 w-6 items-center justify-center text-white">
                   {open ? (
                     <FontAwesomeIcon icon={faTimes} />
                   ) : (
@@ -71,12 +71,12 @@ export default function Navbar(props) {
           </div>
 
           <Disclosure.Panel className={`lg:hidden bg-${props.bgColor}`}>
-            <div className="px-2 pt-12 object-cover min-h-screen z-50 relative">
+            <div className="relative z-50 min-h-screen object-cover px-2 pt-12">
               {navigation.map((item, i) => (
                 <Disclosure.Button
                   as="a"
                   href={item.href}
-                  className="text-white hover:text-quinary block text-center py-6 rounded-md text-3xl font-ibold"
+                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                   key={item.href}
                 >
                   {item.name}

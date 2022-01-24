@@ -16,10 +16,10 @@
 }
 
 .responsiveCentered {
-  @apply flex xl:block justify-center xl:justify-start;
+  @apply flex justify-center xl:block xl:justify-start;
 }
 
 .rightGridElem {
   /*@apply xl:col-start-7 xl:col-span-4 2xl:col-start-6 2xl:col-span-5;*/
-  @apply xl:col-start-7 xl:col-span-4;
+  @apply xl:col-span-4 xl:col-start-7;
 }

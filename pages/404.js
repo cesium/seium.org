@@ -6,22 +6,22 @@ import Button from "/components/utils/Button";
 export default function Error() {
   return (
     <>
-      <div className="absolute w-screen h-screen bg-secondary z-0"></div>
-      <div className="spacing bg-secondary relative z-10">
-        <div className="absolute secondary invisible xl:visible xl:w-full xl:h-screen left-0">
+      <div className="absolute z-0 h-screen w-screen bg-secondary"></div>
+      <div className="spacing relative z-10 bg-secondary">
+        <div className="secondary invisible absolute left-0 xl:visible xl:h-screen xl:w-full">
           {<Image src="/images/ponto.svg" layout="fill" alt="Question mark" />}
         </div>
         <Navbar bgColor="secondary" button="quinary" fgColor="black">
-          <div className="pt-14 bg-secondary">
-            <div className="font-iextrabold z-50 relative">
-              <h5 className="text-7xl lg:text-8xl xl:text-9xl text-quinary">
+          <div className="bg-secondary pt-14">
+            <div className="relative z-50 font-iextrabold">
+              <h5 className="text-7xl text-quinary lg:text-8xl xl:text-9xl">
                 404
               </h5>
-              <h1 className="text-white text-7xl lg:text-8xl xl:text-9xl md:w-4/5 relative z-0">
+              <h1 className="relative z-0 text-7xl text-white md:w-4/5 lg:text-8xl xl:text-9xl">
                 You’re in the wrong line of code, pal.
               </h1>
             </div>
-            <div className="mt-5 lg:mt-7 w-1/2 relative z-50">
+            <div className="relative z-50 mt-5 w-1/2 lg:mt-7">
               <Button
                 onClick={(e) => (window.location.href = "/")}
                 text="Back to Homepage"
@@ -30,7 +30,7 @@ export default function Error() {
             </div>
           </div>
         </Navbar>
-        <div className="fixed invisible bg-secondary xl:visible w-1/4 h-1/2 bottom-0 right-0">
+        <div className="invisible fixed bottom-0 right-0 h-1/2 w-1/4 bg-secondary xl:visible">
           <Image
             src="/images/mascote-404.svg"
             layout="fill"

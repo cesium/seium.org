@@ -1,10 +1,10 @@
 export default function ExpectList() {
   return (
-    <div className="mt-20 sm:mt-0 w-3/5 text-white">
-      <h3 className="text-4xl font-iextrabold md:text5xl">
+    <div className="mt-20 w-3/5 text-white sm:mt-0">
+      <h3 className="md:text5xl font-iextrabold text-4xl">
         What you can expect:
       </h3>
-      <ul className="pl-4 mt-8 list-disc font-iregular">
+      <ul className="mt-8 list-disc pl-4 font-iregular">
         <li>Hackatons 💻</li>
         <li>Talks</li>
         <li>Workshops</li>

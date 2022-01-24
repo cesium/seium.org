@@ -9,7 +9,7 @@ export default function ListItem4({
     var border = "border-b-solid border-b-2";
   }
   return (
-    <div className={`w-full mb-5 pb-3 ${border} grid grid-cols-4`}>
+    <div className={`mb-5 w-full pb-3 ${border} grid grid-cols-4`}>
       <div className="text-left">
         <p className="font-ibold">{name}</p>
       </div>
@@ -20,7 +20,7 @@ export default function ListItem4({
         <p className="text-iregular">{qnty}</p>
       </div>
       <div className="text-right">
-        <p className="font-iregular pr-4">{prob}</p>
+        <p className="pr-4 font-iregular">{prob}</p>
       </div>
     </div>
   );

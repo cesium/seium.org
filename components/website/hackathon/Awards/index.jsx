@@ -9,12 +9,12 @@ function Prize({ place, prize }) {
 
 export default function Awards() {
   return (
-    <div className="w-full text-center bg-quinary">
-      <h2 className="relative pt-10 text-6xl font-bold md:text-8xl md:w-full">
+    <div className="w-full bg-quinary text-center">
+      <h2 className="relative pt-10 text-6xl font-bold md:w-full md:text-8xl">
         Awards
       </h2>
-      <div className="flex flex-col justify-center pt-20 pb-20 lg:flex-row spacing">
-        <div className="grid w-full grid-cols-3 gap-y-8 gap-x-2 justify-items-center lg:gap-x-8">
+      <div className="spacing flex flex-col justify-center pt-20 pb-20 lg:flex-row">
+        <div className="grid w-full grid-cols-3 justify-items-center gap-y-8 gap-x-2 lg:gap-x-8">
           <div>
             <Prize
               place={

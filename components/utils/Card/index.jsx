@@ -6,7 +6,7 @@ const Card = (props) => {
       <img
         src={props.img}
         alt="props.alt"
-        className={props.inverted ? "transform rotate-180" : ""}
+        className={props.inverted ? "rotate-180 transform" : ""}
       />
       <p
         className={`${styles.medium - 2} ${styles.reminder} ${

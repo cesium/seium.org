@@ -7,26 +7,26 @@ function Awards() {
   return (
     <Dashboard href="awards">
       <div>
-        <div className="md:mt-16 mt-8">
-          <h1 className="font-bold text-4xl text-iextrabold sm:text-5xl">
+        <div className="mt-8 md:mt-16">
+          <h1 className="text-iextrabold text-4xl font-bold sm:text-5xl">
             Awards
           </h1>
-          <p className="text-md sm:text-lg text-iregular">
+          <p className="text-md text-iregular sm:text-lg">
             Win awards with your collected tokens
           </p>
         </div>
 
-        <div className="border-black border-b-2 mt-14">
+        <div className="mt-14 border-b-2 border-black">
           <span className="font-ibold text-xl sm:text-2xl">Achievements</span>
-          <span className="font-iregular ml-24 text-md sm:text-lg">
+          <span className="text-md ml-24 font-iregular sm:text-lg">
             💰170 tokens
           </span>
-          <span className="font-iregular ml-24 text-md sm:text-lg">
+          <span className="text-md ml-24 font-iregular sm:text-lg">
             🏅68 badges
           </span>
         </div>
 
-        <div className="grid gap-y-8 gap-x-2 grid-cols-1 lg:grid-cols-4 justify-items-center lg:gap-x-8 mt-10">
+        <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-4 lg:gap-x-8">
           <div>
             <Award
               image="/images/speakers/joaooliveira.png"

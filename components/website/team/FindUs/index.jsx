@@ -6,19 +6,19 @@ const Map = dynamic(() => import("./Map"), {
 
 export default function FindUs() {
   return (
-    <section className="flex flex-col lg:flex-row lg:justify-between bg-quaternary py-20 spacing">
-      <div className="flex flex-col text-white mb-10 mr-10">
-        <h2 className="font-iextrabold text-6xl mb-2">How to find us</h2>
+    <section className="spacing flex flex-col bg-quaternary py-20 lg:flex-row lg:justify-between">
+      <div className="mb-10 mr-10 flex flex-col text-white">
+        <h2 className="mb-2 font-iextrabold text-6xl">How to find us</h2>
 
         <p className="mb-8 font-iregular">
           The SEI is free for participants and is organized by volunteers from
           CeSIUM and from the university community.
         </p>
 
-        <p className="font-ibold mb-2">
+        <p className="mb-2 font-ibold">
           Centro de Estudantes de Engenharia Informática
         </p>
-        <ul className="font-iregular list-inside list-disc">
+        <ul className="list-inside list-disc font-iregular">
           <li className="">E-mail: cesium@di.uminho.pt</li>
           <li className="">Phone: +351 253 604 448</li>
         </ul>

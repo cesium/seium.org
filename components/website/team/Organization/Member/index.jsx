@@ -18,12 +18,12 @@ export default function Member({
   return (
     <div key={id} className="text-white">
       <Image src={`/images/team/${id}.png`} width="210" height="210" />
-      <p className="text-md font-iextrabold mb-1"> {name} </p>
+      <p className="text-md mb-1 font-iextrabold"> {name} </p>
       <div className="flex">
         {linkedin && (
           <a
             href={`https://www.linkedin.com/in/${linkedin}`}
-            className="w-4 mr-3"
+            className="mr-3 w-4"
             target="_blank"
             rel="noreferrer"
           >
@@ -33,7 +33,7 @@ export default function Member({
         {github && (
           <a
             href={`https://www.github.com/${github}`}
-            className="w-4 mr-3"
+            className="mr-3 w-4"
             target="_blank"
             rel="noreferrer"
           >
@@ -43,7 +43,7 @@ export default function Member({
         {gitlab && (
           <a
             href={`https://gitlab.com/${gitlab}`}
-            className="w-4 mr-3"
+            className="mr-3 w-4"
             target="_blank"
             rel="noreferrer"
           >
@@ -53,7 +53,7 @@ export default function Member({
         {twitter && (
           <a
             href={`https://twitter.com/${twitter}`}
-            className="w-4 mr-3"
+            className="mr-3 w-4"
             target="_blank"
             rel="noreferrer"
           >

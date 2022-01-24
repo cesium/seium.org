@@ -3,13 +3,13 @@ import { useState } from "react";
 function Participant({ name, selected, onClick, last }) {
   return (
     <div
-      className={`w-full h-16 ${selected ? "bg-quinary" : ""} ${
+      className={`h-16 w-full ${selected ? "bg-quinary" : ""} ${
         last ? "" : "border-b-2 border-slate-400"
       }`}
     >
       <button
         onClick={onClick}
-        className="h-full py-2 px-2 text-left w-full tems-center font-iregular font-md"
+        className="tems-center font-md h-full w-full py-2 px-2 text-left font-iregular"
       >
         {name}
       </button>

@@ -5,7 +5,7 @@ import List from "../../List";
 
 function Action({ text, url }) {
   return (
-    <div className="w-60 mt-5">
+    <div className="mt-5 w-60">
       <Button
         onClick={(e) => (window.location.href = url)}
         text={text}
@@ -17,18 +17,18 @@ function Action({ text, url }) {
 
 export default function Challenge({ title, description, prizes, rules }) {
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1 mb-24 sticky top-0">
+    <div className="sticky top-0 mb-24 grid grid-cols-1 lg:grid-cols-2">
       <div className="hidden lg:block">
         <List title={title} />
       </div>
       <div>
-        <h2 className="font-iextrabold text-white text-3xl md:text-4xl xl:text-5xl">
+        <h2 className="font-iextrabold text-3xl text-white md:text-4xl xl:text-5xl">
           {title}
         </h2>
         <p className="mt-10 font-iregular text-white">{description}</p>
 
         <div>
-          <h3 className="mt-5 mb-3 text-white text-ibold text-xl md:text-md xl:text-md ">
+          <h3 className="text-ibold md:text-md xl:text-md mt-5 mb-3 text-xl text-white ">
             Awards 🏆
           </h3>
           <p>

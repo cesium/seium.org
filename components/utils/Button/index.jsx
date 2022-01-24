@@ -3,7 +3,7 @@ export default function Button({ text, type, onClick, customStyle }) {
     <button
       onClick={onClick}
       type={type}
-      className={`${customStyle} font-iregular w-full rounded-full text-center items-center px-4 py-4 border shadow-sm text-sm`}
+      className={`${customStyle} w-full items-center rounded-full border px-4 py-4 text-center font-iregular text-sm shadow-sm`}
     >
       {text}
     </button>

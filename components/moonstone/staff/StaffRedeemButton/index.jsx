@@ -1,8 +1,8 @@
 export default function StaffRedeemButton() {
   return (
-    <div className="w-auto mt-8">
-      <button className="block m-auto bg-quinary rounded-full w-full h-16">
-        <p className="font-bold font-ibold">💰 Redeem prizes</p>
+    <div className="mt-8 w-auto">
+      <button className="m-auto block h-16 w-full rounded-full bg-quinary">
+        <p className="font-ibold font-bold">💰 Redeem prizes</p>
       </button>
     </div>
   );
