@@ -1,0 +1,47 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  transform: rotate(180);
+}
+
+@media (max-width: 768px) {
+  .card .imgCard {
+    width: 50px;
+    height: 57px;
+  }
+}
+
+.card .reminder {
+  width: 235px;
+  margin-left: 15.4px;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
+  background-color: #ffffff;
+}
+
+.upsideDown {
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .card .reminder {
+    width: 141px;
+    font-size: 10px;
+    padding: 6px;
+    margin-left: 10px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .card .reminder {
+    width: 139px;
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,21 @@
+.underline {
+  text-decoration-thickness: 10px;
+  position: relative;
+  text-decoration: underline;
+  z-index: 5;
+}
+
+.cardWrapper {
+  position: absolute;
+  top: 100%;
+  left: 15%;
+  margin-top: 0px;
+  width: 300px;
+  z-index: -10;
+}
+
+.cardText {
+  font-size: 1.5rem;
+  color: black;
+  margin: 0;
+}
