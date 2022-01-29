@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from "react";
 
 import { withoutAuth } from "/components/Auth";
 import Fade from "react-reveal/Fade";
@@ -13,17 +13,21 @@ import Input from "/components/moonstone/utils/Input";
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
-import {login} from '/lib/api';
+import { login } from "/lib/api";
 
 function Login() {
+  const [email, updateEmail] = useState("");
+  const [password, updatePassword] = useState("");
+  const [loginHasFailed, updateLoginFailed] = useState(false);
 
-  const [email, updateEmail] = useState('');
-  const [password, updatePassword] = useState('');
+  const requestLogin = async function () {
+    const response = await login({ email, password });
 
-  const requestLogin = async function() {
-    alert(email);
-    alert(password);
-    const response = await login({email, password});
+    if (response.jwt) {
+      alert("Login successful");
+    } else {
+      updateLoginFailed(true);
+    }
   };
 
   return (
@@ -60,11 +64,18 @@ function Login() {
               href="/forgot-password"
             />
             <Button
-              type="submit"
               text="LET'S GO"
               customStyle="text-secondary bg-quinary border-quinary"
-              onClick={(e) => requestLogin()}
+              onClick={(e) => {
+                e.preventDefault();
+                requestLogin();
+              }}
             />
+            {loginHasFailed && (
+              <p className="text-center text-red-700">
+                Incorrect e-mail or password
+              </p>
+            )}
           </Form>
         </div>
         <Text text="Don’t have an account?" link="Signup here" href="/signup" />
