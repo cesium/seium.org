@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Challenges() {
   let [title, setTitle] = useState("");
   return (
-    <div className="bg-secondary spacing flex w-full flex-col px-40 pt-52 pb-20">
+    <div className="spacing flex w-full flex-col bg-secondary px-40 pt-52 pb-20">
       <div className="mb-24 grid grid-cols-1 gap-20 lg:grid-cols-2">
         <div className="lg:sticky lg:top-0">
           <List title={title} />

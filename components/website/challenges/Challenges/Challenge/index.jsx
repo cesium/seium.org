@@ -25,7 +25,7 @@ export default function Challenge({
         <h2 className="font-iextrabold text-3xl text-white md:text-4xl xl:text-5xl">
           {title}
         </h2>
-        <p className="font-iregular mt-10 text-white">{description}</p>
+        <p className="mt-10 font-iregular text-white">{description}</p>
         <div>
           {prizes && (
             <h3 className="text-ibold md:text-md xl:text-md mt-5 mb-3 text-xl text-white ">
