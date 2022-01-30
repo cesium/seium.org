@@ -1,72 +1,121 @@
 {
-  "CV Challenge": {
+  "Final Badge Challenge": {
     "prizes": [
       {
-        "name": "Alcatel One Touch",
+        "name": "PS5 Standard Edition + extra DualSense + Racthet & Clank + Ghost of Tsushima",
+        "url": "https://mediamarkt.pt/products/consola-playstation-5?variant=32836255154251"
+      },
+      {
+        "name": "Apple Watch SE",
+        "url": "https://www.apple.com/pt/apple-watch-se/"
+      },
+      {
+        "name": "Electric Scooter Xiaomi Mi Essential",
+        "url": "https://www.worten.pt/mobilidade/veiculos-eletricos/trotinetes-eletricas/trotinete-eletrica-xiaomi-mi-electric-essential-velocidade-max-20-km-h-autonomia-20-km-7213542"
+      }
+    ],
+    "descriptions": "You participate in talks and workshops, you talk with every company you can and participate in every tournament. Now you are left with a bunch of badges, what do you do?! Every badge comes with a set of entries to the Final Badge Draw! On the last day of SEI, we will select three winning entries and their owners will be the lucky recipients of an amazing selection of prizes! The more badges you have, the more likely you are to win!"
+  },
+  "Daily Badge Challenges - day one": {
+    "prizes": [
+      {
+        "name": "Nintendo Switch Lite (32 GB - Gray)",
         "url": ""
       },
       {
-        "name": "XBox One",
+        "name": "Backpack Samsonite Securipak Antitheft 15.6\"",
         "url": ""
       },
       {
-        "name": "PlayStation 5",
+        "name": "Smartwatch XIAOMI Mi Watch Lite Black 41 mm",
         "url": ""
       }
     ],
-    "descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    "descriptions": "This one is easy. The winners are the three people with the most badges won on the first day! If there is a tie, the participant with the most tokens wins! If there’s still a tie after that, we’ll toss a coin! The badges you win before SEI starts will be counted on this day."
+  },
+  "Daily Badge Challenges - day two": {
+    "prizes": [
+      {
+        "name": "Monitor LG 27QN600-B IPS 27\" 75Hz 2560x1440p",
+        "url": ""
+      },
+      {
+        "name": "Mouse Laser Logitech MX Master 3 Wireless/Bluetooth 4000DPI Graphite",
+        "url": ""
+      },
+      {
+        "name": "Headphones Bluetooth True Wireless JBL Live 300TWS - Black",
+        "url": ""
+      }
+    ],
+    "descriptions": "The same rules as day one apply. However only the badges you win on the second day count towards this prize."
+  },
+  "Daily Badge Challenges - day three": {
+    "prizes": [
+      {
+        "name": "Gaming Chair Alpha Gamer Cygnus RGB Black",
+        "url": ""
+      },
+      {
+        "name": "Headset Razer Kraken Kitty Edition Quartz",
+        "url": ""
+      },
+      {
+        "name": "SSD WD My Passport 500GB",
+        "url": ""
+      }
+    ],
+    "descriptions": "The same rules as day one (again). However only the badges you win on the third day count towards this prize."
+  },
+  "Daily Badge Challenges - day four": {
+    "prizes": [
+      {
+        "name": "Apple AirPods Pro (In Ear - Noise Canceling - White)",
+        "url": ""
+      },
+      {
+        "name": "Mechanical Keyboard Corsair K60 RGB Pro Gaming Cherry Viola PT",
+        "url": ""
+      },
+      {
+        "name": "Nespresso Coffee Maker + Capsules + Coffee Mugs",
+        "url": ""
+      }
+    ],
+    "descriptions": "This is getting a little repetitive… The same rules as day one (again). The difference is that only the badges you win on the fourth day count towards this prize."
+  },
+  "CV Challenge": {
+    "prizes": [
+      {
+        "name": "Galaxy Tab S6 Lite",
+        "url": "https://www.pcdiga.com/mobilidade/tablets/tablets-android/tablet-samsung-galaxy-tab-s6-lite-10-4-4gb-128gb-wi-fi-cinzento-sm-p610nzaetph"
+      }
+    ],
+    "descriptions": "Our sponsors want your CV. You want them to have it. And why not try to win a Samsung Galaxy Tab S6 Lite while you’re at it? Submit your CV to cv@seium.org to enter the contest and win this amazing prize! It goes without saying that by sending us your CV, you give us consent to share it with our Silver, Gold and Exclusive sponsors. In order to enter the contest, you have to submit your CV until Friday, the 18th, at 17h."
+  },
+  "Chess Tournament": {
+    "button": {
+      "text": "Register now!",
+      "url": "https://forms.gle/cdc2bVqmdGpv2Q7G9"
+    },
+    "descriptions": "Big brain? Then come and show it off! If you can manage to win, we have a very nice, wood chess set to give you!"
+  },
+  "CTF": {
+    "prizes": [
+      {
+        "name": "Hak5 USB Rubber Ducky (Ethical Hacking Device)",
+        "url": "https://shop.hak5.org/products/usb-rubber-ducky-deluxe"
+      }
+    ],
+    "descriptions": "Self explanatory, right? Test your security and general skills and find those pesky flags in our CTF! Be one of the first three to submit all the flags and win an awesome prize!"
   },
   "Photography": {
     "prizes": [
       {
-        "name": "Alcatel One Touch",
-        "url": ""
-      },
-      {
-        "name": "XBox One",
-        "url": ""
-      },
-      {
-        "name": "PlayStation 5",
-        "url": ""
+        "name": "POLAROID Now Black",
+        "url": "https://www.pcdiga.com/imagem-e-som/fotografia-e-video/maquinas-instantaneas/maquina-fotografica-instantanea-polaroid-now-preta-pola009028"
       }
     ],
-    "descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  },
-  "Final Challenge": {
-    "prizes": [
-      {
-        "name": "Alcatel One Touch",
-        "url": ""
-      },
-      {
-        "name": "XBox One",
-        "url": ""
-      },
-      {
-        "name": "PlayStation 5",
-        "url": ""
-      }
-    ],
-    "rules": "https://www.cesium.di.uminho.pt",
-    "descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  },
-  "Today's Challenge": {
-    "prizes": [
-      {
-        "name": "Alcatel One Touch",
-        "url": ""
-      },
-      {
-        "name": "XBox One",
-        "url": ""
-      },
-      {
-        "name": "PlayStation 5",
-        "url": ""
-      }
-    ],
-    "rules": "https://www.cesium.di.uminho.pt",
-    "descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    "descriptions": "Take a cool photo on your favorite week and share it on your instagram with the following hashtags: #sei22 #sei22challenge and tag @sei.uminho. Your profile must be public so everyone can see your entry. The most creative picture will be chosen by a jury and win an amazing Polaroid camera! This contest starts after the Opening Ceremony on Tuesday."
   }
 }
