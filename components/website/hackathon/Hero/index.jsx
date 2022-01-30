@@ -26,7 +26,7 @@ export default function Hero() {
               </a>
             </span>
             <span className="pl-8 align-middle text-2xl text-white opacity-80">
-              2-5 people
+              3-5 people
             </span>
           </div>
           <div className="absolute left-0 mt-6 md:relative md:flex md:flex-row-reverse">
