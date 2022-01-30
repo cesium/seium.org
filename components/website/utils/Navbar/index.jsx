@@ -17,6 +17,7 @@ const navigation = [
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
+  // { name: 'Login', slug: '/login' },
 ];
 
 const userNavigation = [{ name: "Dashboard", slug: "/attendee/profile" }];
