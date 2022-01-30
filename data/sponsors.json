@@ -3,25 +3,25 @@
     [
       {
         "image": "accenture",
-        "link": "https://cesium.link"
+        "link": "https://www.accenture.com/pt-pt"
       }
     ],
     [
       {
         "image": "continental",
-        "link": "https://cesium.link"
+        "link": "https://www.continental-pneus.pt"
       },
       {
         "image": "rentailconsult",
-        "link": "https://cesium.link"
+        "link": "https://www.retail-consult.com/"
       },
       {
         "image": "saltpay",
-        "link": "https://cesium.link"
+        "link": "https://www.saltpayportugal.pt/"
       },
       {
         "image": "uphold",
-        "link": "https://cesium.link"
+        "link": "https://www.uphold.com/"
       }
     ]
   ],
@@ -29,29 +29,62 @@
     [
       {
         "image": "deloitte",
-        "link": "https://cesium.link"
+        "link": "https://deloitte.com/"
       },
       {
         "image": "ey",
-        "link": "https://cesium.link"
+        "link": "https://www.ey.com/pt_pt"
       },
       {
         "image": "farfetch",
-        "link": "https://cesium.link"
+        "link": "https://www.farfetch.com/"
       },
       {
         "image": "glintt",
-        "link": "https://cesium.link"
+        "link": "https://www.glintt.com/"
       },
       {
         "image": "xpandit",
-        "link": "https://cesium.link"
+        "link": "https://www.xpand-it.com"
       },
       {
         "image": "yarilabs",
-        "link": "https://cesium.link"
+        "link": "https://www.yarilabs.com"
       }
     ],
-    []
+    [
+      {
+        "image": "celfocus",
+        "link": "https://www.celfocus.com/"
+      },
+      {
+        "image": "vilt",
+        "link": "https://www.vilt-group.com/"
+      },
+      {
+        "image": "checkmarx",
+        "link": "https://checkmarx.com/"
+      },
+      {
+        "image": "itsector",
+        "link": "http://www.itsector.pt/"
+      },
+      {
+        "image": "kpmg",
+        "link": "https://home.kpmg/"
+      },
+      {
+        "image": "primavera",
+        "link": "https://pt.primaverabss.com/"
+      },
+      {
+        "image": "seegno",
+        "link": "https://seegno.com/"
+      },
+      {
+        "image": "gowithflow",
+        "link": "https://gowithflow.io/"
+      }
+    ]
   ]
 ]
