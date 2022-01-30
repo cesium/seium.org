@@ -20,7 +20,7 @@ export default function Hackathon() {
                 />
               </a>{" "}
             </span>
-            <div className="self-center pt-3 pl-4 text-white sm:pt-0 sm:pl-8 opacity-80 text-md">
+            <div className="text-md self-center pt-3 pl-4 text-white opacity-80 sm:pt-0 sm:pl-8">
               3-5 people
             </div>
           </div>
