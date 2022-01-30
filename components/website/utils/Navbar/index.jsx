@@ -12,7 +12,7 @@ const navigation = [
   { name: "Schedule", slug: "/schedule" },
   { name: "Hackathon", slug: "/hackathon" },
   // { name: 'Team', slug: '/team' },
-  // { name: 'Challenges', slug: '/challenges' },
+  { name: 'Challenges', slug: '/challenges' },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
   // { name: 'Login', slug: '/login' },
