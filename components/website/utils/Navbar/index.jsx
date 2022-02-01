@@ -12,7 +12,7 @@ const navigation = [
   { name: "Schedule", slug: "/schedule" },
   { name: "Hackathon", slug: "/hackathon" },
   // { name: 'Team', slug: '/team' },
-  { name: 'Challenges', slug: '/challenges' },
+  { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
   // { name: 'Login', slug: '/login' },
@@ -75,10 +75,11 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key={item.slug}
                   as="a"
-                  href={item.slug}
                   className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                 >
-                  {item.name}
+                  <Link key={item.slug} href={item.slug} passHref>
+                    {item.name}
+                  </Link>
                 </Disclosure.Button>
               ))}
             </div>
