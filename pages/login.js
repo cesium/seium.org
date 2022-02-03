@@ -14,7 +14,6 @@ import Input from "/components/moonstone/utils/Input";
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
-
 function Login() {
   const { errors, isLoading, login } = useAuth();
   const [email, updateEmail] = useState("");
@@ -24,7 +23,7 @@ function Login() {
   const requestLogin = async function () {
     const response = await login({ email, password });
 
-    updateLoginFailed(response);
+    updateLoginFailed(!(response && response.jwt));
   };
 
   const onFinish = ({ email, password }) => {
