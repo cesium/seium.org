@@ -6,27 +6,27 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const router = useRouter();
-  const [user, setUser] = useState(null);
+  const [authenticated, setAuthenticated] = useState(false);
   const [errors, setErrors] = useState();
   const [isLoading, setLoading] = useState(false);
   const [isFirstLoading, setFirstLoading] = useState(true);
 
   useEffect(() => {
-    api
+    setFirstLoading(false);
+    /*api
       .getCurrentUser()
-      .then((user) => setUser(user))
       .catch(() => {})
-      .finally(() => setFirstLoading(false));
+      .finally(() => setFirstLoading(false));*/
   }, []);
 
   function login({ email, password }) {
     setLoading(true);
-
     api
       .login({ email, password })
-      .then((user) => {
-        setUser(user);
-        router.push("/dashboard");
+      .then((success) => {
+        setAuthenticated(success); 
+        if(success)
+          router.push("/attendee/profile")
       })
       .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
@@ -37,9 +37,9 @@ export function AuthProvider({ children }) {
 
     api
       .sign_up({ email, password, role })
-      .then((user) => {
-        setUser(user);
-        router.push("/profile");
+      .then((auth) => {
+        setAuthenticated(auth);
+        router.push("");
       })
       .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
@@ -63,7 +63,7 @@ export function AuthProvider({ children }) {
 
     api
       .editUser(values)
-      .then((user) => setUser(user))
+      .then((auth) => setAuthenticated(auth))
       .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
   }
@@ -71,7 +71,7 @@ export function AuthProvider({ children }) {
   // Make the provider update only when it should
   const values = useMemo(
     () => ({
-      user,
+      authenticated,
       isLoading,
       errors,
       login,
@@ -80,7 +80,7 @@ export function AuthProvider({ children }) {
       edit_user,
     }),
     // eslint-disable-next-line
-    [user, isLoading, errors]
+    [authenticated, isLoading, errors]
   );
 
   return (

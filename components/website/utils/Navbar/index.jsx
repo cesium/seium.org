@@ -15,7 +15,7 @@ const navigation = [
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
-  // { name: 'Login', slug: '/login' },
+  { name: 'Login', slug: '/login' },
   { name: "Join Staff", slug: "https://forms.gle/4EwD1Gs8FGCGRdYX8" },
 ];
 

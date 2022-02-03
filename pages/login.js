@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { useAuth } from "/components/Auth/useAuth";
 import { withoutAuth } from "/components/Auth";
 import Fade from "react-reveal/Fade";
 
@@ -13,9 +14,9 @@ import Input from "/components/moonstone/utils/Input";
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
-import { login } from "/lib/api";
 
 function Login() {
+  const { errors, isLoading, login } = useAuth();
   const [email, updateEmail] = useState("");
   const [password, updatePassword] = useState("");
   const [loginHasFailed, updateLoginFailed] = useState(false);
@@ -23,11 +24,11 @@ function Login() {
   const requestLogin = async function () {
     const response = await login({ email, password });
 
-    if (response.jwt) {
-      alert("Login successful");
-    } else {
-      updateLoginFailed(true);
-    }
+    updateLoginFailed(response);
+  };
+
+  const onFinish = ({ email, password }) => {
+    login({ email, password });
   };
 
   return (
@@ -36,7 +37,7 @@ function Login() {
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Log in" />
         <div className="mt-8">
-          <Form>
+          <Form onFinish={onFinish}>
             <Input
               text="YOUR EMAIL"
               id="email"
