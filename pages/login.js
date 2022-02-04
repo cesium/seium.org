@@ -21,8 +21,8 @@ function Login() {
   const [loginTried, updateLoginTried] = useState(false);
 
   const requestLogin = async function () {
-    updateLoginTried(true);
     await login({ email, password });
+    updateLoginTried(true);
   };
 
   const onFinish = ({ email, password }) => {

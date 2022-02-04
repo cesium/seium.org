@@ -17,9 +17,17 @@ export function AuthProvider({ children }) {
     localStorage.clear();
     localStorage.setItem("token", token);
     api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-    api.getCurrentUser().then((u) => {
-      setUser(u);
-    }).catch(_ => localStorage.clear());
+    api
+      .getCurrentUser()
+      .then((u) => {
+        setUser(u);
+      })
+      .catch((_) => {
+        localStorage.clear();
+        api.API.defaults.headers.common["Authorization"] = undefined;
+        setUser(null);
+        router.replace("/login");
+      });
   }
 
   useEffect(() => {
@@ -38,7 +46,10 @@ export function AuthProvider({ children }) {
         setToken(data.jwt);
         router.push("/attendee/profile");
       })
-      .catch((error) => setErrors(error?.data?.errors))
+      .catch((error) => {
+        setErrors(error?.data?.errors);
+        setUser(null);
+      })
       .finally(() => setLoading(false));
   }
 

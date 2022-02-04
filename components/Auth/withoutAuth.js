@@ -8,9 +8,9 @@ export function withoutAuth(WrappedComponent) {
     const { user } = useAuth();
     const router = useRouter();
 
-    if (user && router.pathname == "/login") {
-      router.replace("/");
-    }
+    //if (user && router.pathname == "/login") {
+    //  router.replace("/");
+    //}
     return <WrappedComponent {...props} />;
   };
 }
