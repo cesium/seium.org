@@ -17,7 +17,10 @@ export function AuthProvider({ children }) {
     localStorage.clear();
     localStorage.setItem("token", token);
     api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-    api.getCurrentUser().then(u => {console.log(u);setUser(u);});
+    api.getCurrentUser().then((u) => {
+      console.log(u);
+      setUser(u);
+    });
   }
 
   useEffect(() => {
