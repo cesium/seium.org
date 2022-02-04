@@ -18,16 +18,14 @@ export function AuthProvider({ children }) {
     localStorage.setItem("token", token);
     api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     api.getCurrentUser().then((u) => {
-      console.log(u);
       setUser(u);
-    });
+    }).catch(_ => localStorage.clear());
   }
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-      setUser(true);
+      setToken(token);
     }
     setFirstLoading(false);
   }, []);
@@ -37,7 +35,6 @@ export function AuthProvider({ children }) {
     api
       .login({ email, password })
       .then((data) => {
-        setUser(true);
         setToken(data.jwt);
         router.push("/attendee/profile");
       })
