@@ -9,14 +9,14 @@ import JoinUs from "/components/website/utils/JoinUs";
 import styles from "./style.module.css";
 
 const navigation = [
-  { name: "Schedule", href: "/schedule" },
-  { name: "Hackathon", href: "/hackathon" },
-  // { name: 'Team', href: '/team' },
-  { name: 'Challenges', href: '/challenges' },
-  { name: "Speakers", href: "/speakers" },
-  { name: "FAQs", href: "/faq" },
-  { name: 'Login', href: '/login' },
-  { name: "Join Staff", href: "https://forms.gle/4EwD1Gs8FGCGRdYX8" },
+  { name: "Schedule", slug: "/schedule" },
+  { name: "Hackathon", slug: "/hackathon" },
+  // { name: 'Team', slug: '/team' },
+  { name: 'Challenges', slug: '/challenges' },
+  { name: "Speakers", slug: "/speakers" },
+  { name: "FAQs", slug: "/faq" },
+  { name: 'Login', slug: '/login' },
+  { name: "Join Staff", slug: "https://forms.gle/4EwD1Gs8FGCGRdYX8" },
 ];
 
 export default function Navbar({ bgColor, fgColor, button, children }) {
