@@ -2,7 +2,7 @@ import { createContext, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import * as api from "/lib/api.js";
 import { data } from "autoprefixer";
-import API from "../../lib/api";
+import API from "/lib/api";
 
 export const AuthContext = createContext();
 
@@ -16,7 +16,7 @@ export function AuthProvider({ children }) {
   function setToken(token) {
     localStorage.clear();
     localStorage.setItem("token", token);
-    api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     api
       .getCurrentUser()
       .then((u) => {
@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
       })
       .catch((_) => {
         localStorage.clear();
-        api.API.defaults.headers.common["Authorization"] = undefined;
+        API.defaults.headers.common["Authorization"] = undefined;
         setUser(null);
         router.replace("/login");
       });
