@@ -8,14 +8,24 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const router = useRouter();
-  const [isAuthenticated, setAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
   const [errors, setErrors] = useState();
   const [isLoading, setLoading] = useState(false);
   const [isFirstLoading, setFirstLoading] = useState(true);
 
+  function setToken(token) {
+    localStorage.clear();
+    localStorage.setItem("token", token);
+    api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    api.getCurrentUser().then(u => {console.log(u);setUser(u);});
+  }
+
   useEffect(() => {
-    if (api.API.defaults.headers.common["Authorization"])
-      setAuthenticated(true);
+    const token = localStorage.getItem("token");
+    if (token) {
+      api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      setUser(true);
+    }
     setFirstLoading(false);
   }, []);
 
@@ -24,14 +34,9 @@ export function AuthProvider({ children }) {
     api
       .login({ email, password })
       .then((data) => {
-        if (data.jwt) {
-          setAuthenticated(true);
-          const token = data.jwt;
-          localStorage.clear();
-          localStorage.setItem("token", token);
-          api.API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-          router.push("/attendee/profile");
-        }
+        setUser(true);
+        setToken(data.jwt);
+        router.push("/attendee/profile");
       })
       .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
@@ -75,7 +80,7 @@ export function AuthProvider({ children }) {
   // Make the provider update only when it should
   const values = useMemo(
     () => ({
-      isAuthenticated,
+      user,
       isLoading,
       errors,
       login,
@@ -84,7 +89,7 @@ export function AuthProvider({ children }) {
       edit_user,
     }),
     // eslint-disable-next-line
-    [isAuthenticated, isLoading, errors]
+    [user, isLoading, errors]
   );
 
   return (

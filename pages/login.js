@@ -15,15 +15,14 @@ import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
 function Login() {
-  const { errors, isLoading, login } = useAuth();
+  const { user, isLoading, login } = useAuth();
   const [email, updateEmail] = useState("");
   const [password, updatePassword] = useState("");
-  const [loginHasFailed, updateLoginFailed] = useState(false);
+  const [loginTried, updateLoginTried] = useState(false);
 
   const requestLogin = async function () {
-    const response = await login({ email, password });
-
-    updateLoginFailed(!(response && response.jwt));
+    updateLoginTried(true);
+    await login({ email, password });
   };
 
   const onFinish = ({ email, password }) => {
@@ -71,7 +70,7 @@ function Login() {
                 requestLogin();
               }}
             />
-            {loginHasFailed && (
+            {!user && !isLoading && loginTried && (
               <p className="text-center text-red-700">
                 Incorrect e-mail or password
               </p>

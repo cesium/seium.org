@@ -5,13 +5,13 @@ export function withAuth(WrappedComponent) {
   // eslint-disable-next-line react/display-name
   return (props) => {
     const router = useRouter();
-    const { isAuthenticated } = useAuth();
+    const { user } = useAuth();
 
-    if (!isAuthenticated) {
+    if (!user) {
       router.replace("/login");
     }
 
-    if (isAuthenticated && router.pathname == "/login") {
+    if (user && router.pathname == "/login") {
       router.replace("/");
     }
 
