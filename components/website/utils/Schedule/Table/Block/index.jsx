@@ -94,7 +94,7 @@ function BlockItem({
             </a>
           )}
 
-          { description &&
+          {description &&
             detailed &&
             (focused ? (
               <Link href={{ hash: "_" }}>
