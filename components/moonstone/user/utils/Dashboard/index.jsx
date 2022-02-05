@@ -135,7 +135,7 @@ export default function Dashboard(props) {
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
-                <Link href={item} passHref>
+                <Link key={item} href={item} passHref>
                   <a
                     key={item}
                     className={classNames(

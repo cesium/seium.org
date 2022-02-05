@@ -46,7 +46,6 @@ export function AuthProvider({ children }) {
       })
       .catch((_errors) => {
         // It means the jwt is expired
-        console.log(_errors);
         localStorage.clear();
         delete API.defaults.headers.common["Authorization"];
       })
@@ -63,7 +62,7 @@ export function AuthProvider({ children }) {
         setToken(jwt);
       })
       .catch((error) => {
-        setErrors(error?.data?.errors);
+        setErrors(error);
         setUser(undefined);
       })
       .finally(() => setLoading(false));
@@ -85,7 +84,6 @@ export function AuthProvider({ children }) {
     api
       .editUser(values)
       .then((user) => {
-        console.log(user);
         setUser((oldUser) => ({ ...oldUser, ...user }));
       })
       .catch((error) => setErrors(error?.data?.errors))
