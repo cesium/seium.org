@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
+    "fmt": "npx npm-run-all format",
     "format": "npx prettier --write .",
     "test": "npm-run-all test:*",
     "test:lint": "npm-run-all test:lint:*",

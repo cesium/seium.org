@@ -8,17 +8,7 @@ export function withAuth(WrappedComponent) {
     const { user } = useAuth();
 
     if (!user) {
-      router.replace("/404");
-      return null;
-    }
-
-    if (router.pathname !== "/confirm" && !user.verified) {
-      router.replace("/confirm");
-      return null;
-    }
-
-    if (router.pathname !== "/register" && !user.registered) {
-      router.replace("/register");
+      router.replace("/login");
       return null;
     }
 

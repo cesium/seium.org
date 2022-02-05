@@ -1,4 +1,6 @@
-import { withoutAuth } from "/components/Auth";
+import { useState } from "react";
+
+import { useAuth, withoutAuth } from "/components/Auth";
 import Fade from "react-reveal/Fade";
 
 import Button from "/components/utils/Button";
@@ -12,13 +14,28 @@ import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
 function Login() {
+  const { errors, login } = useAuth();
+  const [email, updateEmail] = useState();
+  const [password, updatePassword] = useState();
+  // const [loginTried, updateLoginTried] = useState(false);
+
+  // const requestLogin = async function () {
+  //   await login({ email, password });
+  //   // updateLoginTried(true);
+  // };
+
+  const onFinish = (event) => {
+    event.preventDefault();
+    login({ email, password });
+  };
+
   return (
     <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Log in" />
         <div className="mt-8">
-          <Form>
+          <Form onSubmit={onFinish}>
             <Input
               text="YOUR EMAIL"
               id="email"
@@ -27,6 +44,7 @@ function Login() {
               fgColor="white"
               bgColor="primary"
               autoComplete="email"
+              onChange={(e) => updateEmail(e.currentTarget.value)}
             />
             <Input
               text="YOUR PASSWORD"
@@ -36,6 +54,7 @@ function Login() {
               fgColor="white"
               bgColor="primary"
               autoComplete="current-password"
+              onChange={(e) => updatePassword(e.currentTarget.value)}
             />
             <Text
               padding="6"
@@ -44,10 +63,15 @@ function Login() {
               href="/forgot-password"
             />
             <Button
-              type="submit"
               text="LET'S GO"
+              type="submit"
               customStyle="text-secondary bg-quinary border-quinary"
             />
+            {errors && (
+              <p className="text-center text-red-700">
+                Incorrect e-mail or password
+              </p>
+            )}
           </Form>
         </div>
         <Text text="Don’t have an account?" link="Signup here" href="/signup" />

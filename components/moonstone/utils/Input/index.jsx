@@ -6,6 +6,7 @@ export default function Input({
   autocomplete,
   fgColor,
   bgColor,
+  onChange,
 }) {
   return (
     <div>
@@ -23,6 +24,7 @@ export default function Input({
           autoComplete={autocomplete}
           required
           className={`text-iregular text-${fgColor} bg-${bgColor} block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm focus:outline-none sm:text-sm`}
+          onChange={onChange}
         />
       </div>
     </div>
