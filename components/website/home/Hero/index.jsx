@@ -33,13 +33,11 @@ export default function Hero() {
           <div className="absolute right-0 hidden xl:block">
             <Organization />
           </div>
-          { 
-            isAuthenticated 
-            ||
+          {isAuthenticated || (
             <div className="absolute right-0 block lg:hidden">
               <JoinUs button="quinary" fgColor="black" />
             </div>
-          }
+          )}
         </div>
         <div className="mt-60 grid md:grid md:grid-cols-2 xl:mt-40">
           <ExpectList />
