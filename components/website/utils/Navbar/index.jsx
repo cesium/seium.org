@@ -5,6 +5,7 @@ import { Disclosure } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
+import { useAuth } from "/components/Auth";
 import JoinUs from "/components/website/utils/JoinUs";
 import styles from "./style.module.css";
 
@@ -15,11 +16,12 @@ const navigation = [
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
-  // { name: 'Login', slug: '/login' },
   { name: "Join Staff", slug: "https://forms.gle/4EwD1Gs8FGCGRdYX8" },
 ];
 
 export default function Navbar({ bgColor, fgColor, button, children }) {
+  const { user, isAuthenticated } = useAuth();
+
   return (
     <Disclosure as="nav">
       {({ open }) => (
@@ -49,6 +51,23 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             </a>
                           </Link>
                         ))}
+                        {isAuthenticated ? (
+                          <Link
+                            key="moonstone"
+                            href="/attendee/profile"
+                            passHref
+                          >
+                            <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
+                              Go to dashboard
+                            </a>
+                          </Link>
+                        ) : (
+                          <Link key="login" href="/login" passHref>
+                            <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
+                              Login
+                            </a>
+                          </Link>
+                        )}
                       </div>
                       <div className="hidden xl:block">
                         <JoinUs fgColor={fgColor} button={button} />
