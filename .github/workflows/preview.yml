@@ -1,0 +1,57 @@
+name: Deploy staging environment
+
+on:
+  pull_request:
+    branches: [main, develop]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    environment: staging
+
+    strategy:
+      matrix:
+        node-version: ["16.13.2"]
+
+    steps:
+      - name: ☁ Checkout code
+        uses: actions/checkout@v2
+
+      - name: 📬 Caching
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
+      - name: 🟩 Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: 🧰 Install dependencies
+        run: npm ci
+
+      - name: 🚀 Build & Deploy to Netlify
+        id: deploy-netlify
+        run: npm run preview
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+      - name: "Get Netlify URL"
+        uses: voorhoede/get-netlify-url@v2
+        id: netlify-url
+        with:
+          site-name: seium
+
+      - name: 💬 Netlify Preview URL comment
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT: "This pull request is being automatically deployed to Netlify.\n\n✅ Preview: ${{ steps.netlify-url.outputs.url }}"
+        with:
+          msg: ${{ env.OUTPUT }}
+          check_for_duplicate_msg: true
