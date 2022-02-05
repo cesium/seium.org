@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { withAuth } from "/components/Auth";
+import { withAuth, useAuth } from "/components/Auth";
 
 import Button from "/components/utils/Button";
 
@@ -13,11 +13,13 @@ import CodeInput from "/components/moonstone/user/profile/CodeInput";
 import CheckpointTracker from "/components/moonstone/user/profile/CheckpointTracker";
 
 function Profile() {
+  const { user } = useAuth();
+
   return (
     <Dashboard
       href="profile"
       title="User Profile"
-      description="Hi John, welcome to your profile"
+      description={`Hi ${user.name}, welcome to your profile 👋`}
     >
       <div className="mt-12 grid-cols-2 overflow-hidden">
         <div className="col-span-1 float-left w-full md:w-1/2">
@@ -30,8 +32,8 @@ function Profile() {
             </div>
           </Heading>
           <div className="pl-6">
-            <Image
-              src="/images/speakers/joaooliveira.png"
+            <img
+              src={`${process.env.NEXT_PUBLIC_API_URL}${user.avatar}`}
               className="overflow-hidden rounded-full"
               width="220"
               height="220"

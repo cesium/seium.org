@@ -145,8 +145,8 @@ export default function Dashboard(props) {
                 </a>
               ))}
             </nav>
-            <Link href="/" className="px-4 font-iregular text-quinary">
-              Log out 👋
+            <Link href="/" passHref>
+              <a className="px-4 font-iregular text-quinary">Log out 👋</a>
             </Link>
           </div>
         </div>

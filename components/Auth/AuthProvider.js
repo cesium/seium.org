@@ -1,69 +1,91 @@
 import { createContext, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
-import * as api from "/lib/api.js";
+import API from "/lib/api";
+import * as api from "/lib/api";
+import * as USER from "/lib/user";
 
 export const AuthContext = createContext();
+
+const TOKEN_KEY_NAME = "safira_token";
 
 export function AuthProvider({ children }) {
   const router = useRouter();
   const [user, setUser] = useState(null);
-  const [errors, setErrors] = useState();
+  const [isAuthenticated, setAuthenticated] = useState(false);
+  const [token, setToken] = useState(null);
+  const [errors, setErrors] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [isFirstLoading, setFirstLoading] = useState(true);
 
   useEffect(() => {
+    const jwt = localStorage.getItem(TOKEN_KEY_NAME);
+
+    if (!jwt) {
+      // No jwt means it's user's first time
+      setFirstLoading(false);
+      return;
+    }
+
+    API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
     api
       .getCurrentUser()
-      .then((user) => setUser(user))
-      .catch(() => {})
+      .then((response) => {
+        setUser(response);
+        setAuthenticated(true);
+        setToken(jwt);
+        switch (response.type) {
+          case USER.ROLES.ATTENDEE:
+            router.push("/attendee/profile");
+            break;
+          case USER.ROLES.COMPANY:
+            router.push("/sponsor/offline/profile");
+            break;
+          default:
+            throw new Error(`Unknown USER TYPE: ${response.type}`);
+        }
+      })
+      .catch((_errors) => {
+        // It means the jwt is expired
+        localStorage.clear();
+        delete API.defaults.headers.common["Authorization"];
+      })
       .finally(() => setFirstLoading(false));
-  }, []);
+  }, [token]);
 
   function login({ email, password }) {
     setLoading(true);
 
     api
-      .login({ email, password })
-      .then((user) => {
-        setUser(user);
-        router.push("/dashboard");
+      .sign_in({ email, password })
+      .then(({ jwt }) => {
+        localStorage.setItem(TOKEN_KEY_NAME, jwt);
+        setToken(jwt);
       })
-      .catch((error) => setErrors(error?.data?.errors))
-      .finally(() => setLoading(false));
-  }
-
-  function sign_up({ email, password, role }) {
-    setLoading(true);
-
-    api
-      .sign_up({ email, password, role })
-      .then((user) => {
-        setUser(user);
-        router.push("/profile");
+      .catch((error) => {
+        setErrors(error);
+        setUser(undefined);
       })
-      .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
   }
 
   function logout() {
     setLoading(true);
-
-    api
-      .logout()
-      .then(() => {
-        setUser(undefined);
-        router.push("/");
-      })
-      .catch((error) => setErrors(error?.data?.errors))
-      .finally(() => setLoading(false));
+    localStorage.clear();
+    delete API.defaults.headers.common["Authorization"];
+    setUser(undefined);
+    setAuthenticated(false);
+    router.push("/");
+    setLoading(false);
   }
 
-  function edit_user(values) {
+  function editUser(values) {
     setLoading(true);
 
     api
       .editUser(values)
-      .then((user) => setUser(user))
+      .then((user) => {
+        setUser((oldUser) => ({ ...oldUser, ...user }));
+      })
       .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
   }
@@ -72,15 +94,15 @@ export function AuthProvider({ children }) {
   const values = useMemo(
     () => ({
       user,
+      isAuthenticated,
       isLoading,
       errors,
       login,
-      sign_up,
       logout,
-      edit_user,
+      editUser,
     }),
     // eslint-disable-next-line
-    [user, isLoading, errors]
+    [user, isAuthenticated, isLoading, errors]
   );
 
   return (

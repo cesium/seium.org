@@ -4,7 +4,7 @@ export default function List({ title }) {
   const list = Object.keys(challenges);
 
   return (
-    <ul className="font-ibold text-xl">
+    <ul className="font-ibold text-xl lg:sticky lg:top-0">
       {list.map((challenge, i) => (
         <li
           key={i}
