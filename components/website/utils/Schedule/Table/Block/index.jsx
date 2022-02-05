@@ -90,11 +90,12 @@ function BlockItem({
               className={`${styles.hyperlink} font-ibold text-lg text-quinary`}
               rel="noreferrer"
             >
-              Join
+              Enroll
             </a>
           )}
 
-          {detailed &&
+          { description &&
+            detailed &&
             (focused ? (
               <Link href={{ hash: "_" }}>
                 <a className={styles.expand}>-</a>

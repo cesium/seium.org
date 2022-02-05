@@ -9,8 +9,7 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "11:00",
@@ -19,8 +18,7 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -129,8 +127,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Lunch Break",
@@ -143,8 +140,7 @@
         "summary": "Industry 4.0 or why do we need software in a tire plant?",
         "description": "The 4th industrial revolution is reshaping manufacturing plants around the world. The talk will discuss opportunities and challenges of digitalization in manufacturing using real world examples from Continental Tire plants.",
         "author": "Lars Frische",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "15:00",
@@ -153,8 +149,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -181,8 +176,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "21:00",
@@ -190,8 +184,7 @@
         "activityType": "Social",
         "summary": "",
         "description": "",
-        "author": "TBA",
-        "location": ""
+        "author": "TBA"
       }
     ]
   },
@@ -229,8 +222,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Lunch Break",
@@ -243,8 +235,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "15:00",
@@ -253,8 +244,7 @@
         "summary": "Artificial Intelligence in Retail and Intelligent Batch Processing System",
         "description": "From elevating the consumer experience to planning and managing retail operations, artificial intelligence (AI) is innovatively driving the entire retail experience! This session aims to provide an overview of current AI challenges applied to the particularities of the retail area, as well as to explore in more depth an application in the area of ​​operational management: batch processing optimization. In order to respond to these objectives, the problem of developing an intelligent process scheduling system that uses the results of the prediction of their characteristics will be discussed, as well as dynamic multi-criteria optimization techniques, such as meta-heuristics and/or constrained programming. , in order to find an optimal scheduling of batch processes in real time.",
         "author": "Alexandra Oliveira - Retail Consult",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -283,8 +273,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "21:00",
@@ -292,8 +281,7 @@
         "activityType": "Social",
         "summary": "",
         "description": "",
-        "author": "TBA",
-        "location": ""
+        "author": "TBA"
       }
     ]
   },
@@ -331,8 +319,7 @@
         "summary": "From Blender to the Web - the Journey of a 3D Model",
         "description": "Creating 3D experiences in the web can be something that sounds very daunting. I’m here to remove this idea from your mind and show you that the 3D world is for everyone. For that we will get a model from the 3D software Blender into the web packed with animations, accessibility controls and optimised for web use so join me in this journey as we make the web more awesome.",
         "author": "Sara Vieira",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Lunch Break",
@@ -345,8 +332,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "15:00",
@@ -355,8 +341,7 @@
         "summary": "TBA",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -369,8 +354,7 @@
         "summary": "Closing Session and Prize Announcement",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "21:00",
@@ -379,8 +363,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       }
     ]
   },
@@ -394,8 +377,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       },
       {
         "activityType": "Lunch Break",
@@ -408,8 +390,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       }
     ]
   },
@@ -423,8 +404,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       },
       {
         "activityType": "Lunch Break",
@@ -437,8 +417,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       },
       {
         "startTime": "15:00",
@@ -447,8 +426,7 @@
         "summary": "Hackathon Final Pitches and Closing Session",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       }
     ]
   }
