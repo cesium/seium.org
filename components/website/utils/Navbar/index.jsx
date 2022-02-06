@@ -33,7 +33,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Link href="/" passHref>
                     <div className={styles.logo}>
                       <Image
-                        className="opacity-60 hover:opacity-100 cursor-pointer"
+                        className="cursor-pointer opacity-60 hover:opacity-100"
                         src="/images/sei-logo.svg"
                         width="50"
                         height="40"
