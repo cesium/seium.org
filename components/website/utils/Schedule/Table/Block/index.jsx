@@ -42,7 +42,7 @@ function BlockItem({
       )}
 
       {!coffeeBreak && (
-        <p className="font-iextrabold text-xl text-white">
+        <p className="xs:text-xl text-l font-iextrabold text-white">
           {startTime}-{endTime}
         </p>
       )}
@@ -77,32 +77,35 @@ function BlockItem({
         </div>
       )}
 
-      <p className={`${styles.location} font-iregular text-sm text-gray-400`}>
-        {location}
-      </p>
-
       {!coffeeBreak && (
-        <div className={styles.bottomRightCorner}>
-          {hyperlink !== undefined && (
-            <a
-              href={hyperlink}
-              target="_blank"
-              className={`${styles.hyperlink} font-ibold text-lg text-quinary`}
-              rel="noreferrer"
-            >
-              Enroll
-            </a>
-          )}
-
-          {description &&
-            detailed &&
-            (focused ? (
-              <Link href={{ hash: "_" }}>
-                <a className={styles.expand}>-</a>
-              </Link>
-            ) : (
-              <span className={styles.expand}>+</span>
-            ))}
+        <div className="absolute bottom-0 mt-auto w-full p-3">
+          <div className="flex flex-wrap">
+            <div className="flex w-auto items-center">
+              <p className="font-iregular text-sm text-gray-400">{location}</p>
+            </div>
+            <div className="float-right mr-5 flex flex-1 items-center justify-end">
+              {hyperlink !== undefined && (
+                <a
+                  href={hyperlink}
+                  target="_blank"
+                  className={`${styles.hyperlink} -mr-3 font-ibold text-lg text-quinary sm:mr-1`}
+                  rel="noreferrer"
+                >
+                  Enroll
+                </a>
+              )}
+            </div>
+            <div className="float-right w-auto">
+              {detailed && detailed &&
+                (focused ? (
+                  <Link href={{ hash: "_" }}>
+                    <a className={styles.expand}>-</a>
+                  </Link>
+                ) : (
+                  <span className={styles.expand}>+</span>
+                ))}
+            </div>
+          </div>
         </div>
       )}
     </div>
