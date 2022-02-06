@@ -11,6 +11,7 @@ const TOKEN_KEY_NAME = "safira_token";
 export function AuthProvider({ children }) {
   const router = useRouter();
   const [user, setUser] = useState(null);
+  const [attendee, setAttendee] = useState(null);
   const [isAuthenticated, setAuthenticated] = useState(false);
   const [token, setToken] = useState(null);
   const [errors, setErrors] = useState(null);
@@ -100,6 +101,7 @@ export function AuthProvider({ children }) {
   const values = useMemo(
     () => ({
       user,
+      attendee,
       isAuthenticated,
       isLoading,
       errors,
