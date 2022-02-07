@@ -1,4 +1,9 @@
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { withAuth } from "/components/Auth";
+
+import { getBadge } from "/lib/api";
+
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Heading from "/components/moonstone/utils/Heading";
 import Badge from "/components/moonstone/user/badgedex/Badge";
@@ -20,6 +25,26 @@ function BadgeOwner({ user, badge, when }) {
 }
 
 function BadgeSlug() {
+  const [badge, updateBadge] = useState(null);
+  const router = useRouter();
+  useEffect(() => {
+    getBadge(router.query.slug)
+      .then((response) => {
+        updateBadge(response.data.data);
+      })
+      .catch((_) => router.replace("/404"));
+  }, [badge]);
+
+  const owners = badge
+    ? badge.attendees.map((entry, id) => (
+        <BadgeOwner
+          user={entry.name}
+          badge={badge.name}
+          when="19 seconds ago"
+        />
+      ))
+    : [];
+
   return (
     <Dashboard>
       <div>
@@ -35,21 +60,13 @@ function BadgeSlug() {
             <span className="mt-1 mr-12 font-iregular">Talk Badge</span>
           </Heading>
 
-          <Badge />
+          <Badge {...badge} />
         </div>
 
         <div className="w-full">
           <Heading text="Owners" />
 
-          <div className="mt-10">
-            <BadgeOwner user="usernameX" badge="Award" when="19 seconds ago" />
-            <BadgeOwner user="usernameX" badge="Award" when="19 seconds ago" />
-            <BadgeOwner user="usernameX" badge="Award" when="19 seconds ago" />
-            <BadgeOwner user="usernameX" badge="Award" when="19 seconds ago" />
-            <BadgeOwner user="usernameX" badge="Award" when="19 seconds ago" />
-            <BadgeOwner user="usernameX" badge="Award" when="19 seconds ago" />
-            <BadgeOwner user="usernameX" badge="Award" when="19 seconds ago" />
-          </div>
+          <div className="mt-10">{owners}</div>
         </div>
       </div>
     </Dashboard>
