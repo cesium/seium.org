@@ -97,7 +97,7 @@ function Leaderboard() {
     const args = hallOfFame ? "" : date.replaceAll("/", "-");
     getLeaderboard(args)
       .then((response) => updateLeaderboard(response.data))
-      .catch(_ => updateError(true));
+      .catch((_) => updateError(true));
   };
 
   const previous_day = () => {
@@ -156,7 +156,7 @@ function Leaderboard() {
           >
             HALL OF FAME
           </button>
-          {error && <ErrorMessage/>}
+          {error && <ErrorMessage />}
           <Table list={leaderboard} user={user.id} maxUsersToShow={5} />
         </div>
       </div>
