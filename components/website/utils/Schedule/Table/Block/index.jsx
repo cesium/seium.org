@@ -125,7 +125,7 @@ function BlockItem({
 
 export default function Block({ date, detailed, elems }) {
   return (
-    <div className={`grid grid-cols-${elems.length}`}>
+    <div className={`grid grid-cols-1 sm:grid-cols-${elems.length}`}>
       {elems.map((elem, id) => (
         <BlockItem
           key={id}
