@@ -32,7 +32,7 @@ function BadgeButton({ text, val, setValue, selected }) {
 function Badgedex() {
   const [allBadges, updateAllBadges] = useState([]);
   const [all, updateAll] = useState(true);
-  const [filter, updateFilter] = useState(0);
+  const [filter, updateFilter] = useState(null);
 
   const { attendee } = useAuth();
 
@@ -44,7 +44,7 @@ function Badgedex() {
   };
 
   const badges = (all ? allBadges : attendee.badges).filter(
-    (entry) => entry.type == filter || filter == 0
+    (entry) => entry.type == filter || !filter
   );
   const badgeComponents = badges.map((badge, id) => (
     <Badge id={id} {...badge} />

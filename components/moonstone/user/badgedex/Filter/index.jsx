@@ -1,6 +1,6 @@
-export default function Filter({ onChange }) {
-  const categories = ["All", "CATEGORY2", "CATEGORY3"];
+import badgeTypes from "/data/badge_types.json";
 
+export default function Filter({ onChange }) {
   return (
     <div>
       <select
@@ -8,10 +8,16 @@ export default function Filter({ onChange }) {
         name="location"
         className="mt-1 block w-full rounded-full border border-quinary py-2 pl-3 pr-10 text-sm ring-quinary focus:border-quinary"
         defaultValue="All"
-        onChange={(e) => onChange(categories.indexOf(e.currentTarget.value))}
+        onChange={(e) => {
+          const badge = badgeTypes.find(
+            (type) => type.name == e.currentTarget.value
+          );
+          onChange(badge ? badge.id : null);
+        }}
       >
-        {categories.map((category) => (
-          <option key={category}>{category}</option>
+        <option key={null}>All</option>
+        {badgeTypes.map((type) => (
+          <option key={type.id}>{type.name}</option>
         ))}
       </select>
     </div>
