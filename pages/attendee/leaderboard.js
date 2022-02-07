@@ -7,6 +7,7 @@ import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Table from "/components/moonstone/user/leaderboard/Table";
 
 import Day from "/components/website/utils/Schedule/Day";
+import ErrorMessage from "/components/utils/ErrorMessage";
 
 import { getLeaderboard } from "/lib/api";
 
@@ -88,6 +89,7 @@ function Leaderboard() {
   const [hallOfFame, updateHallOfFame] = useState(false);
   const [date, updateDate] = useState(defaultDate);
   const [leaderboard, updateLeaderboard] = useState([]);
+  const [error, updateError] = useState(false);
 
   useEffect(() => requestLeaderboard(), [leaderboard]);
 
@@ -95,7 +97,7 @@ function Leaderboard() {
     const args = hallOfFame ? "" : date.replaceAll("/", "-");
     getLeaderboard(args)
       .then((response) => updateLeaderboard(response.data))
-      .catch(); //What to do in case of error?
+      .catch(_ => updateError(true));
   };
 
   const previous_day = () => {
@@ -154,7 +156,7 @@ function Leaderboard() {
           >
             HALL OF FAME
           </button>
-
+          {error && <ErrorMessage/>}
           <Table list={leaderboard} user={user.id} maxUsersToShow={5} />
         </div>
       </div>
