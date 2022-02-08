@@ -37,6 +37,50 @@
         "twitter": "",
         "href": "",
         "description": "Bernardo fell in love with programming at age 12 and never stopped since then. He has built an EdTech product to improve the ecosystem for a dependently typed language and a banking system almost from scratch. He loves programming in Elixir and interacting with the community."
+      },
+      {
+        "id": "andresantos",
+        "name": "André Santos",
+        "role": "Co-Founder & CEO",
+        "company": "Nutrium",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "https://pt.linkedin.com/in/62gerente",
+        "github": "https://github.com/62gerente",
+        "twitter": "https://twitter.com/62gerente",
+        "href": ""
+      },
+      {
+        "id": "robertomachado",
+        "name": "Roberto Machado",
+        "role": "Co-Founder & CEO",
+        "company": "Subvisual",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "https://pt.linkedin.com/in/robertomachado",
+        "github": "https://github.com/rmdmachado",
+        "twitter": "",
+        "href": ""
+      },
+      {
+        "id": "helenamoura",
+        "name": "Helena Moura",
+        "role": "Academic Entrepeneurship",
+        "company": "TecMinho",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "https://pt.linkedin.com/in/helenamoura/pt",
+        "github": "",
+        "twitter": "",
+        "href": ""
+      },
+      {
+        "id": "ramalho",
+        "name": "José Ramalho",
+        "role": "Co-Founder",
+        "company": "Keep Solutions",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "https://pt.linkedin.com/in/jos%C3%A9-carlos-ramalho-ab5535a",
+        "github": "",
+        "twitter": "",
+        "href": ""
       }
     ]
   },
@@ -44,12 +88,12 @@
     "date": "2022/2/16",
     "speakers": [
       {
-        "id": "karelverhoeven",
-        "name": "Karel Verhoeven",
-        "role": "Data Specialist",
+        "id": "walidslim",
+        "name": "Walid Slim",
+        "role": "Machine Learning Engineer",
         "company": "SaltPay",
         "talk": "Workshop. 9h",
-        "linkedin": "https://www.linkedin.com/in/karel-verhoeven-0b299b89",
+        "linkedin": "https://tn.linkedin.com/in/walid-slim-038984193",
         "github": "",
         "twitter": "",
         "href": "",
@@ -80,16 +124,16 @@
         "description": ""
       },
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 12h",
-        "linkedin": "",
+        "id": "franciscoprata",
+        "name": "Francisco Prata",
+        "role": "Cloud Lead",
+        "company": "Accenture",
+        "talk": "Talk. 11h30",
+        "linkedin": "https://pt.linkedin.com/in/franciscoprata",
         "github": "",
         "twitter": "",
         "href": "",
-        "description": ""
+        "description": "Responsible for the Cloud team at Accenture's Advanced Technology Center in Portugal, Francisco and his team have helped several companies to adopt the cloud, and to migrate and modernize their applications in several European companies and in the world. He is also responsible for Accenture's Google Cloud area in Portugal."
       },
       {
         "id": "larsfrische",
@@ -102,16 +146,60 @@
         "description": ""
       },
       {
+        "id": "andrecoelho",
+        "name": "André Coelho",
+        "role": "Frontend Engineer",
+        "company": "Uphold",
+        "talk": "Talk. 15h",
+        "linkedin": "https://pt.linkedin.com/in/andr%C3%A9-coelho-8059a064",
+        "github": "https://github.com/hitmanmcc",
+        "twitter": "https://twitter.com/hitmanmcc",
+        "href": "",
+        "description": ""
+      },
+      {
         "id": "tbd",
         "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 15h",
+        "role": "TBA",
+        "company": "UMINHO",
+        "talk": "Panel Discussion. 17h",
         "linkedin": "",
         "github": "",
         "twitter": "",
-        "href": "",
-        "description": ""
+        "href": ""
+      },
+      {
+        "id": "tbd",
+        "name": "TBA",
+        "role": "TBA",
+        "company": "UMINHO",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": ""
+      },
+      {
+        "id": "tbd",
+        "name": "TBA",
+        "role": "TBA",
+        "company": "UMINHO",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": ""
+      },
+      {
+        "id": "tbd",
+        "name": "TBA",
+        "role": "TBA",
+        "company": "UMINHO",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": ""
       }
     ]
   },
@@ -122,19 +210,44 @@
         "id": "tbd",
         "name": "TBA",
         "role": "",
-        "company": "",
-        "talk": "Talk. 12h",
+        "company": "Delloite",
+        "talk": "Workshop. 9h",
         "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "antoniolemos",
+        "name": "António Lemos",
+        "role": "Senior Manager",
+        "company": "Accenture",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://pt.linkedin.com/in/armlemos",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "emanuelmota",
+        "name": "Emanuel Mota",
+        "role": "CEO",
+        "company": "Yari Labs",
+        "talk": "Talk. 12h",
+        "linkedin": "https://www.linkedin.com/in/emanuel-mota-7371613/",
+        "github": "https://github.com/emanuel",
+        "twitter": "https://twitter.com/emota7",
         "href": "",
         "description": ""
       },
       {
         "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
+        "name": "Ana Ferreira",
+        "role": "Cybersecurity Researcher",
+        "company": "CINTESIS - Center for Health Technology and Services Research",
         "talk": "Talk. 14h",
-        "linkedin": "",
+        "linkedin": "https://pt.linkedin.com/in/ana-ferreira-cybersecurity",
         "href": "",
         "description": ""
       },
@@ -149,12 +262,106 @@
         "twitter": "",
         "href": "",
         "description": "Alexandra has more than 10 years of experience in the data science field. She has developed solutions in several areas, such as health and wellness, management of the risk level associated with food inspections, among others. She has been a Bioinformatics professor at Escola Superior de Saúde do Instituto Politécnico do Porto for more than 10 years, is a reasearcher at  Laboratório de Inteligência Artificial e Ciências de Computadores da Universidade do Porto as well as a data scientists at Retail Consult."
+      },
+      {
+        "id": "alexandremendes",
+        "name": "Alexandre Mendes",
+        "role": "Head of Ventures and Strategy",
+        "company": "Subvisual",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "https://pt.linkedin.com/in/carlosalexandremendes",
+        "github": "",
+        "twitter": "https://twitter.com/senhoralfaiate",
+        "href": ""
+      },
+      {
+        "id": "gabrielpoca",
+        "name": "Gabriel Poça",
+        "role": "Developer",
+        "company": "Subvisual",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "https://pt.linkedin.com/in/gabrielpoca",
+        "github": "",
+        "twitter": "https://twitter.com/gabrielgpoca",
+        "href": "https://gabrielpoca.com/"
+      },
+      {
+        "id": "resende",
+        "name": "José Resende",
+        "role": "Developer",
+        "company": "Finiam",
+        "talk": "Panel Discussion. 17h",
+        "linkedin": "https://pt.linkedin.com/in/jose-pedro-resende",
+        "github": "https://github.com/ZePedroResende",
+        "twitter": "https://twitter.com/Resende_666",
+        "gitlab": "https://gitlab.com/ZePedroResende",
+        "href": ""
       }
     ]
   },
   {
     "date": "2022/2/18",
     "speakers": [
+      {
+        "id": "tbd",
+        "name": "TBA",
+        "role": "",
+        "company": "Subvisual",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "emanuelmota",
+        "name": "Emanuel Mota",
+        "role": "CEO",
+        "company": "Yari Labs",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://www.linkedin.com/in/emanuel-mota-7371613/",
+        "github": "https://github.com/emanuel",
+        "twitter": "https://twitter.com/emota7",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "helderpinto",
+        "name": "Helder Pinto",
+        "role": "Developer",
+        "company": "Yari Labs",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://www.linkedin.com/in/helderjnpinto/",
+        "github": "https://github.com/helderjnpinto",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "pedrocosta",
+        "name": "Pedro Costa",
+        "role": "Developer",
+        "company": "Yari Labs",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://www.linkedin.com/in/pedro-costa-3b0637202/",
+        "github": "https://github.com/pCosta99",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "brunoribeiro",
+        "name": "Bruno Ribeiro",
+        "role": "Big Data Software Engineering",
+        "company": "XpandIT",
+        "talk": "Workshop. 9h",
+        "linkedin": "https://pt.linkedin.com/in/brunoribeiro127",
+        "github": "https://github.com/bacr-xpand",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
       {
         "id": "saravieira",
         "name": "Sara Vieira",
@@ -169,99 +376,25 @@
       },
       {
         "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
+        "name": "Telmo Pires",
+        "role": "Senior Machine Learning Engineer",
+        "company": "Apple",
         "talk": "Talk. 14h",
-        "linkedin": "",
+        "linkedin": "https://www.linkedin.com/in/tjppires",
         "href": "",
         "description": ""
       },
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
+        "id": "ruiquelhas",
+        "name": "Rui Quelhas",
+        "role": "Principal Software Developer",
+        "company": "Oracle",
         "talk": "Talk. 15h",
-        "linkedin": "",
-        "github": "",
-        "twitter": "",
+        "linkedin": "https://pt.linkedin.com/in/ruiquelhas",
+        "github": "https://github.com/ruiquelhas",
+        "twitter": "https://twitter.com/ruiquelhas",
         "href": "",
-        "description": ""
-      }
-    ]
-  },
-  {
-    "date": "2022/2/19",
-    "speakers": [
-      {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 14h",
-        "linkedin": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 14h",
-        "linkedin": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 15h",
-        "linkedin": "",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      }
-    ]
-  },
-  {
-    "date": "2022/2/20",
-    "speakers": [
-      {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 14h",
-        "linkedin": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 14h",
-        "linkedin": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
-        "company": "",
-        "talk": "Talk. 15h",
-        "linkedin": "",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": ""
+        "description": "Rui Quelhas is a software engineer with more than a decade of experience developing and working with software in the market either with or on Open Source code, end-user applications, services and protocols.His interests include topics such as Application Security, Databases, Distributed Systems and Bitcoin.Currently, he is part of the MySQL Middlware and Clients team at Oracle and is the lead developer of the MySQL X DevAPI Connector for Node.js."
       }
     ]
   }
