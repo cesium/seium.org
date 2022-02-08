@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Dialog, Transition } from "@headlessui/react";
 import { useAuth } from "/components/Auth";
 import Return from "/components/moonstone/utils/Return";
-import { faLongArrowAltUp } from "@fortawesome/free-solid-svg-icons";
 
 const navigation = ["profile", "wheel", "badgedex", "leaderboard", "awards"];
 

@@ -9,8 +9,7 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "11:00",
@@ -19,8 +18,7 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -130,7 +128,7 @@
         "description": "The cloud is nowadays one of the main factors of disruption in the global technological landscape. In this session you can see why the cloud is disruptive, what is changing in markets and companies and what is being done to help companies adapt and seize this opportunity.",
         "author": "Franciso Prata",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "activityType": "Lunch Break",
@@ -143,8 +141,7 @@
         "summary": "Industry 4.0 or why do we need software in a tire plant?",
         "description": "The 4th industrial revolution is reshaping manufacturing plants around the world. The talk will discuss opportunities and challenges of digitalization in manufacturing using real world examples from Continental Tire plants.",
         "author": "Lars Frische",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "15:00",
@@ -154,7 +151,7 @@
         "description": "The legacy financial system has many shortcomings and poses many barriers to the transaction of value in our daily life. Cryptocurrencies and decentralized finance (DeFi) are disrupting the status quo with a flurry of technological innovations such as distributed ledgers, blockchains, smart contracts and NFTs. Paving the way to change how we transact value and doing away with the need for a trusted third-party. This talk will provide an overview of these technologies, how they came to be, how they are affecting the world of finance and how we at Uphold play a part in this financial revolution.",
         "author": "André Coelho",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "activityType": "Coffee Break",
@@ -182,7 +179,7 @@
         "description": "TBA",
         "author": "TBA",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "startTime": "20:00",
@@ -244,7 +241,7 @@
         "description": "",
         "author": "Ana Ferreira",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "startTime": "15:00",
@@ -253,8 +250,7 @@
         "summary": "Artificial Intelligence in Retail and Intelligent Batch Processing System",
         "description": "From elevating the consumer experience to planning and managing retail operations, artificial intelligence (AI) is innovatively driving the entire retail experience! This session aims to provide an overview of current AI challenges applied to the particularities of the retail area, as well as to explore in more depth an application in the area of ​​operational management: batch processing optimization. In order to respond to these objectives, the problem of developing an intelligent process scheduling system that uses the results of the prediction of their characteristics will be discussed, as well as dynamic multi-criteria optimization techniques, such as meta-heuristics and/or constrained programming. , in order to find an optimal scheduling of batch processes in real time.",
         "author": "Alexandra Oliveira - Retail Consult",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -284,7 +280,7 @@
         "description": "",
         "author": "Alexandre Mendes & José Poça & José Resende",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "startTime": "21:00",
@@ -348,8 +344,7 @@
         "summary": "From Blender to the Web - the Journey of a 3D Model",
         "description": "Creating 3D experiences in the web can be something that sounds very daunting. I’m here to remove this idea from your mind and show you that the 3D world is for everyone. For that we will get a model from the 3D software Blender into the web packed with animations, accessibility controls and optimised for web use so join me in this journey as we make the web more awesome.",
         "author": "Sara Vieira",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Lunch Break",
@@ -363,7 +358,7 @@
         "description": "",
         "author": "Telmo Pires",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "startTime": "15:00",
@@ -373,7 +368,7 @@
         "description": "The last decade saw the advent of a new application security threat in the form of supply chain vulnerabilities and attacks. These affect not software we create or control, but things we buy, rent or re-use and eventually bundle as part of our stack. From known exploits such as Sunburn to potentially catastrophic ones like Hearthbleed and Log4Shell, these are now part of the zeitgeist and became one of the most sought-after topics for the security community, culminating in a brand new critical category that jumped straight into the top 10 of the latest OWASP report. With the pervasiveness of Open Source and the increasing popularity of easy-to-use package managers and repositories like NPM, the risks have only been exacerbated and the topic became a big concern for everyone, from indie developers to huge Fortune 500 companies. In this talk, we will dive into the history and scope of software supply chain vulnerabilitie and attacks whilst discussing how to mitigate the risks they pose to developers, enterprises and users alike.",
         "author": "Rui Quelhas",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "activityType": "Coffee Break",
@@ -386,8 +381,7 @@
         "summary": "Closing Session and Prize Announcement",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "21:00",
@@ -396,8 +390,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       }
     ]
   },
@@ -411,8 +404,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       },
       {
         "activityType": "Lunch Break",
@@ -425,8 +417,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       }
     ]
   },
@@ -440,8 +431,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       },
       {
         "activityType": "Lunch Break",
@@ -454,8 +444,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       },
       {
         "startTime": "15:00",
@@ -464,8 +453,7 @@
         "summary": "Hackathon Final Pitches and Closing Session",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "TBA"
       }
     ]
   }

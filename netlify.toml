@@ -1,0 +1,15 @@
+[build]
+  publish = ".next"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "16.13.2"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[context.production.environment]
+  NEXT_PUBLIC_API_URL = "https://sei22-production.herokuapp.com"
+
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_API_URL = "https://sei22-staging.herokuapp.com"

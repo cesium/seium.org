@@ -1,5 +1,7 @@
 import dynamic from "next/dynamic";
 
+import { useAuth } from "/components/Auth";
+
 import Social from "/components/website/utils/Social";
 
 import JoinUs from "/components/website/utils/JoinUs";
@@ -10,10 +12,12 @@ import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
 
 const Animation = dynamic(() => import("../Animation"), { ssr: false });
+
 export default function Hero() {
+  const { isAuthenticated } = useAuth();
   return (
     <div className=" bg-secondary">
-      <div className="spacing relative z-50 pb-32">
+      <div className="spacing relative z-40 pb-32">
         <Animation />
         <div className="pt-2">
           <Title />
@@ -29,9 +33,11 @@ export default function Hero() {
           <div className="absolute right-0 hidden xl:block">
             <Organization />
           </div>
-          <div className="absolute right-0 block xl:hidden">
-            <JoinUs button="quinary" fgColor="black" />
-          </div>
+          {isAuthenticated || (
+            <div className="absolute right-0 block lg:hidden">
+              <JoinUs button="quinary" fgColor="black" />
+            </div>
+          )}
         </div>
         <div className="mt-60 grid md:grid md:grid-cols-2 xl:mt-40">
           <ExpectList />
