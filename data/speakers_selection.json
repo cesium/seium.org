@@ -22,5 +22,16 @@
     "name": "Rui Quelhas",
     "job": "Principal Software Developer",
     "company": "Oracle"
-  }
+  },
+  {
+    "id": "telmopires",
+    "name": "Telmo Pires",
+    "role": "Senior Machine Learning Engineer",
+    "company": "Apple"
+  },
+  {
+    "id": "anaferreira",
+    "name": "Ana Ferreira",
+    "role": "Cybersecurity Researcher",
+    "company": "CINTESIS"}
 ]

@@ -12,8 +12,7 @@
         "github": "",
         "twitter": "",
         "href": "https://scholar.google.com/citations?user=NVB8M7wAAAAJ",
-        "description": "Professor Emérito da Universidade de Lisboa, e um dos fundadores da IA e da Ciência da Complexidade em Portugal. Membro do Colégio Mente-Cérebro da ULisboa."
-      },
+        "description": "Professor Emeritus at the University of Lisbon, and one of the founders of AI and Complexity Science in Portugal. Member of the Mind-Brain College at ULisboa."},
       {
         "id": "paulolopes",
         "name": "Paulo Lopes",
@@ -47,7 +46,8 @@
         "linkedin": "https://pt.linkedin.com/in/62gerente",
         "github": "https://github.com/62gerente",
         "twitter": "https://twitter.com/62gerente",
-        "href": ""
+        "href": "",
+        "description": "André Santos is a LEI alumni and the Co-Founder of Nutrium"
       },
       {
         "id": "robertomachado",
@@ -58,7 +58,8 @@
         "linkedin": "https://pt.linkedin.com/in/robertomachado",
         "github": "https://github.com/rmdmachado",
         "twitter": "",
-        "href": ""
+        "href": "",
+        "description": "Roberto Machado is a LEI alumni and the Co-Founder of Subvisual"
       },
       {
         "id": "helenamoura",
@@ -207,16 +208,16 @@
     "date": "2022/2/17",
     "speakers": [
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
+        "id": "cristianosousa",
+        "name": "Cristiano Sousa",
+        "role": "Manager, Risk Advisory, Financial Services",
         "company": "Delloite",
         "talk": "Workshop. 9h",
-        "linkedin": "",
+        "linkedin": "https://pt.linkedin.com/in/cristianosilvasousa",
         "github": "",
         "twitter": "",
         "href": "",
-        "description": ""
+        "description": "Cristiano is a Manager at Deloitte's Risk Advisory division for the Financial Services industry in Braga. Cristiano holds a master's degree in Computer Engineering from the University of Minho, with a strong focus on computational performance, software correctness and software development. Straight from University, he joined Deloitte in 2014, being nominated to Manager in 2019. In December 2021 he was relocated to the Braga office, where he is contributing to growing the Risk Advisory practice and Deloitte."
       },
       {
         "id": "antoniolemos",
@@ -242,14 +243,14 @@
         "description": ""
       },
       {
-        "id": "tbd",
+        "id": "anaferreira",
         "name": "Ana Ferreira",
         "role": "Cybersecurity Researcher",
         "company": "CINTESIS - Center for Health Technology and Services Research",
         "talk": "Talk. 14h",
         "linkedin": "https://pt.linkedin.com/in/ana-ferreira-cybersecurity",
         "href": "",
-        "description": ""
+        "description": "Ana Ferreira (PhD, CISSP, HCISPP), specialist and researcher in cybersecurity at CINTESIS, Faculty of Medicine, University of Porto, and professor at the same institution. She is an evaluator of projects in the area, for the European Commission, and is co-founder of Women4Cyber ​​Portugal. He currently leads the AnyMApp project, funded by the FCT, where he studies the need to evaluate technologies, anonymously, and online, to improve their usability, trust and adherence."
       },
       {
         "id": "alexandraoliveira",
@@ -303,12 +304,12 @@
     "date": "2022/2/18",
     "speakers": [
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "",
+        "id": "alvarobezerra",
+        "name": "Álvaro Bezerra",
+        "role": "Product Manager",
         "company": "Subvisual",
         "talk": "Workshop. 9h",
-        "linkedin": "",
+        "linkedin": "https://pt.linkedin.com/in/alvarobezerra",
         "github": "",
         "twitter": "",
         "href": "",
@@ -375,7 +376,7 @@
         "description": ""
       },
       {
-        "id": "tbd",
+        "id": "telmopires",
         "name": "Telmo Pires",
         "role": "Senior Machine Learning Engineer",
         "company": "Apple",

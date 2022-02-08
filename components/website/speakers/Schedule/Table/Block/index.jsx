@@ -25,8 +25,8 @@ export default function Block({
   const [showSpeaker, setShowSpeaker] = useState(true);
 
   return (
-    <div key={id} className="border-t-2 border-white py-4 text-white">
-      <div className="mb-2 flex">
+    <div key={id} className="py-4 text-white border-t-2 border-white">
+      <div className="flex mb-2">
         <Image
           src={`/images/speakers/${id}.png`}
           width="210"
@@ -34,10 +34,10 @@ export default function Block({
           alt={name}
         />
 
-        <div className="ml-4 flex w-full flex-col justify-between">
+        <div className="flex flex-col justify-between w-full ml-4">
           <div className="flex justify-between">
             <div>
-              <h2 className="font-iextrabold text-xl">{name}</h2>
+              <h2 className="text-xl font-iextrabold">{name}</h2>
               <p className="">{role}</p>
               <p className="">{company}</p>
             </div>
@@ -46,7 +46,7 @@ export default function Block({
               {linkedin && (
                 <a
                   href={`https://www.linkedin.com/in/${linkedin}`}
-                  className="mr-3 w-4"
+                  className="w-4 mr-3"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -56,7 +56,7 @@ export default function Block({
               {github && (
                 <a
                   href={`https://www.github.com/${github}`}
-                  className="mr-3 w-4"
+                  className="w-4 mr-3"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -66,7 +66,7 @@ export default function Block({
               {twitter && (
                 <a
                   href={`https://twitter.com/${twitter}`}
-                  className="mr-3 w-4"
+                  className="w-4 mr-3"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -77,14 +77,9 @@ export default function Block({
           </div>
 
           <div className="z-50 flex items-center justify-end">
-            <p className="grow text-gray-400">{talk}</p>
-            <Link href={href}>
-              <a className="mr-4 font-iextrabold text-sm text-quinary">
-                Go to event
-              </a>
-            </Link>
+            <p className="text-gray-400 grow">{talk}</p>
             <button
-              className="w-16 rounded-full border border-gray-500 bg-tertiary px-2 font-iextrabold text-xl text-white"
+              className="w-16 px-2 text-xl text-white border border-gray-500 rounded-full bg-tertiary font-iextrabold"
               onClick={() => setShowSpeaker(!showSpeaker)}
             >
               {showSpeaker ? "+" : "-"}
