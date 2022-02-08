@@ -38,6 +38,7 @@ function BadgeSlug() {
   const owners = badge
     ? badge.attendees.map((entry, id) => (
         <BadgeOwner
+          key={id}
           user={entry.name}
           badge={badge.name}
           when="19 seconds ago"
