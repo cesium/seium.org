@@ -91,7 +91,7 @@ function Leaderboard() {
   const [leaderboard, updateLeaderboard] = useState([]);
   const [error, updateError] = useState(false);
 
-  useEffect(() => requestLeaderboard(), [leaderboard]);
+  useEffect(() => requestLeaderboard(), [hallOfFame]);
 
   const requestLeaderboard = () => {
     const args = hallOfFame ? "" : date.replaceAll("/", "-");
@@ -140,7 +140,6 @@ function Leaderboard() {
             } ml-24 h-12 items-center rounded-full px-4 py-1 text-center`}
             onClick={(e) => {
               updateHallOfFame(false);
-              requestLeaderboard();
             }}
           >
             LEADERBOARD
@@ -151,7 +150,6 @@ function Leaderboard() {
             } ml-12 h-12 items-center rounded-full px-4 py-1 text-center`}
             onClick={(e) => {
               updateHallOfFame(true);
-              requestLeaderboard();
             }}
           >
             HALL OF FAME

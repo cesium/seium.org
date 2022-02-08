@@ -3,24 +3,24 @@ export default function Table({ list, user, maxUsersToShow }) {
   const rows = toShow.map((entry, id) => (
     <div
       key={id}
-      className="mb-2 h-8 grid-cols-3 border-t-2 border-t-slate-700 pt-2"
+      className="mb-2 h-auto flex border-t-2 border-t-slate-700 pt-2"
     >
       <div
-        className={`col-span-1 float-left w-1/3 text-left font-iregular ${
+        className={`w-1/3 text-left font-iregular ${
           entry.id == user ? "text-quinary" : ""
         }`}
       >
         {id + 1}
       </div>
       <div
-        className={`col-span-1 float-left w-1/3 text-center font-ibold ${
+        className={`w-1/3 text-center font-ibold ${
           entry.id == user ? "text-quinary" : ""
         }`}
       >
         {entry.name}
       </div>
       <div
-        className={`col-span-1 float-left w-1/3 text-right font-iregular ${
+        className={`w-1/3 text-right font-iregular ${
           entry.id == user ? "text-quinary" : ""
         }`}
       >
