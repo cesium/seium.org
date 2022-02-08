@@ -25,7 +25,7 @@ npm install
 Then, create your local environment file and fill in all the required details.
 
 ```
-cp -n .env.sample .env.local
+cp -n .env.local.sample .env.local
 ```
 
 ## 🔨 Development
