@@ -47,7 +47,7 @@ function Badgedex() {
     (entry) => entry.type == filter || !filter
   );
   const badgeComponents = badges.map((badge, id) => (
-    <Badge id={id} {...badge} />
+    <Badge key={id} {...badge} />
   ));
 
   return (
