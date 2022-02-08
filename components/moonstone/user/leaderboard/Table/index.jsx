@@ -3,7 +3,7 @@ export default function Table({ list, user, maxUsersToShow }) {
   const rows = toShow.map((entry, id) => (
     <div
       key={id}
-      className="mb-2 h-auto flex border-t-2 border-t-slate-700 pt-2"
+      className="mb-2 flex h-auto border-t-2 border-t-slate-700 pt-2"
     >
       <div
         className={`w-1/3 text-left font-iregular ${
