@@ -70,16 +70,10 @@ function WheelPage() {
     if (st.speed > 0) setTimeout(changeState, 1000 / 60);
   }, [st]);
 
-  const play = () => {
-    spinWheel()
-      .then((response) => {})
-      .catch();
-  };
-
   const prizeComponents = prizes.map((entry, id) => (
     <ListItem4
       prob="2.00%"
-      id={id}
+      key={id}
       name={entry.name}
       qnty={entry.stock}
       maxQnty={max_amount_per_attendee}
@@ -88,6 +82,7 @@ function WheelPage() {
 
   const latestWinsComponents = latestWins.map((entry, id) => (
     <ListItem3
+      key={id}
       user={entry.attendee_name}
       badge={entry.prize.name}
       when={displayTimeSince(entry.date)}
