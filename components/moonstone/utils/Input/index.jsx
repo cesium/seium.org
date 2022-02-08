@@ -3,6 +3,7 @@ export default function Input({
   id,
   name,
   type,
+  value,
   autocomplete,
   fgColor,
   bgColor,
@@ -22,6 +23,7 @@ export default function Input({
           name={name}
           type={type}
           autoComplete={autocomplete}
+          value={value}
           required
           className={`text-iregular text-${fgColor} bg-${bgColor} block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm focus:outline-none sm:text-sm`}
           onChange={onChange}

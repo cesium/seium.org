@@ -33,16 +33,6 @@ export function AuthProvider({ children }) {
         setUser(response);
         setAuthenticated(true);
         setToken(jwt);
-        switch (response.type) {
-          case USER.ROLES.ATTENDEE:
-            router.push("/attendee/profile");
-            break;
-          case USER.ROLES.COMPANY:
-            router.push("/sponsor/offline/profile");
-            break;
-          default:
-            throw new Error(`Unknown USER TYPE: ${response.type}`);
-        }
       })
       .catch((_errors) => {
         // It means the jwt is expired
@@ -60,6 +50,22 @@ export function AuthProvider({ children }) {
       .then(({ jwt }) => {
         localStorage.setItem(TOKEN_KEY_NAME, jwt);
         setToken(jwt);
+        API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
+        api.getCurrentUser().then((response) => {
+          setUser(response);
+          setAuthenticated(true);
+          setToken(jwt);
+          switch (response.type) {
+            case USER.ROLES.ATTENDEE:
+              router.push("/attendee/profile");
+              break;
+            case USER.ROLES.COMPANY:
+              router.push("/sponsor/offline/profile");
+              break;
+            default:
+              throw new Error(`Unknown USER TYPE: ${response.type}`);
+          }
+        });
       })
       .catch((error) => {
         setErrors(error);
