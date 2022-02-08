@@ -3,9 +3,12 @@
 [license]: LICENSE.txt
 [ci-style-status]: https://github.com/cesium/seium.org/actions/workflows/style.yml/badge.svg
 [ci-style-workflow]: https://github.com/cesium/seium.org/actions/workflows/style.yml
+[netlify-deploys]: https://app.netlify.com/sites/seium/deploys
+[netlify-status]: https://api.netlify.com/api/v1/badges/ed584f7f-e3cd-47a3-b00e-c07faa722ce1/deploy-status
 
 # ![SEI Banner](.github/brand/sei-banner.png)
 
+[![Netlify Status][netlify-status]][netlify-deploys]
 [![CI Style][ci-style-status]][ci-style-workflow]
 
 ## 🤝 Contributing
