@@ -20,7 +20,7 @@ function WheelPage() {
   const fps = 60;
   const [st, updateState] = useState(defaultState);
 
-  const { attendee } = useAuth();
+  const { attendee, user } = useAuth();
 
   const [prizes, updatePrizes] = useState([]);
   const [latestWins, updateLatestWins] = useState([]);
@@ -33,7 +33,29 @@ function WheelPage() {
     getWheelLatestWins()
       .then((response) => updateLatestWins(response.data))
       .catch(); //TODO
-  }, [prizes]);
+  }, []);
+
+  const spinTheWheel = async () => {
+    spinWheel()
+      .then((response) => {
+        updateState({ angle: 0, speed: angleSpeed });
+        setTimeout(3000); //Wait for roulette to finish spinning
+        if (response.data.tokens) {
+          //Tokens won
+        } else if (response.data.badge) {
+          //Badge won
+        } else if (response.data.entries) {
+          //Entries for normal draw
+        } else if (response.data.prize.id == 67) {
+          //Nothing won
+        } else {
+          //Prize won
+        }
+      })
+      .catch((errors) => {
+        //Display pop up saying no money
+      });
+  };
 
   const changeState = () => {
     updateState({
@@ -79,7 +101,6 @@ function WheelPage() {
       title="Wheel"
       description="Spin the wheel and win awards!"
     >
-      {JSON.stringify(attendee)}
       <div className="mt-12 grid-cols-1 overflow-hidden 2xl:grid-cols-2">
         <div className="col-span-1 float-left h-full w-full 2xl:w-1/2">
           <Heading text="Achievements">
@@ -97,8 +118,7 @@ function WheelPage() {
             <button
               className="m-auto mt-10 block h-20 w-64 rounded-full bg-quinary"
               onClick={(e) => {
-                updateState({ angle: 0, speed: angleSpeed });
-                play();
+                spinTheWheel();
               }}
             >
               <p className="font-ibold font-bold">SPIN THE WHEEL</p>
