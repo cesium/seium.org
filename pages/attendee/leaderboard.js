@@ -91,7 +91,7 @@ function Leaderboard() {
   const [leaderboard, updateLeaderboard] = useState([]);
   const [error, updateError] = useState(false);
 
-  useEffect(() => requestLeaderboard(), [hallOfFame]);
+  useEffect(() => requestLeaderboard(), [hallOfFame, date]);
 
   const requestLeaderboard = () => {
     const args = hallOfFame ? "" : date.replaceAll("/", "-");
@@ -104,16 +104,12 @@ function Leaderboard() {
     const new_date = addDate(date, -1);
     if (!isAfter(min_date, new_date) && !isAfter(new_date, max_date))
       updateDate(new_date);
-
-    if (!hallOfFame) requestLeaderboard();
   };
 
   const next_day = () => {
     const new_date = addDate(date, 1);
     if (!isAfter(min_date, new_date) && !isAfter(new_date, max_date))
       updateDate(new_date);
-
-    if (!hallOfFame) requestLeaderboard();
   };
 
   return (
