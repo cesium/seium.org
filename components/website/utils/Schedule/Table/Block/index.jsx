@@ -17,32 +17,21 @@ function BlockItem({
   detailed,
   hyperlink,
 }) {
-  useEffect(() => {
-    const block = document.getElementById("B" + id);
-    if (block)
-      block.style.maxHeight = focused
-        ? block.scrollHeight + 50 + "px"
-        : "225px";
-  }, [focused]);
-
   const skipLink = coffeeBreak || focused;
 
   const block = (
     <div
       id={`B${id}`}
-      className={`${styles.gridBlock} ${
-        coffeeBreak ? styles.coffee : styles.notCoffee
-      }`}
-      style={{ maxHeight: 225 }}
+      className={`mx-2 h-full border-t-2 border-white p-2 ${styles.gridBlock}`}
     >
       {coffeeBreak && (
-        <div className={styles.imgWrapper}>
+        <div className="relative float-right mr-6 h-10 w-10">
           <Image src="/images/Coffee.svg" layout="fill" />
         </div>
       )}
 
       {!coffeeBreak && (
-        <p className="font-iextrabold text-xl text-white">
+        <p className="xs:text-xl text-l font-iextrabold text-white">
           {startTime}-{endTime}
         </p>
       )}
@@ -67,7 +56,7 @@ function BlockItem({
       {description && (
         <div
           className={styles.description}
-          style={{ opacity: focused ? 1 : 0 }}
+          style={{ display: focused ? "block" : "none" }}
         >
           {description.split("\n").map((text, i) => (
             <p key={i} className={`mb-2 font-iregular text-lg text-white`}>
@@ -76,33 +65,37 @@ function BlockItem({
           ))}
         </div>
       )}
-
-      <p className={`${styles.location} font-iregular text-sm text-gray-400`}>
-        {location}
-      </p>
-
+      {!coffeeBreak && <div className="h-16 w-2"></div>}
       {!coffeeBreak && (
-        <div className={styles.bottomRightCorner}>
-          {hyperlink !== undefined && (
-            <a
-              href={hyperlink}
-              target="_blank"
-              className={`${styles.hyperlink} font-ibold text-lg text-quinary`}
-              rel="noreferrer"
-            >
-              Enroll
-            </a>
-          )}
-
-          {description &&
-            detailed &&
-            (focused ? (
-              <Link href={{ hash: "_" }}>
-                <a className={styles.expand}>-</a>
-              </Link>
-            ) : (
-              <span className={styles.expand}>+</span>
-            ))}
+        <div className="absolute bottom-0 mt-auto w-full p-3">
+          <div className="flex flex-wrap">
+            <div className="flex w-auto items-center">
+              <p className="font-iregular text-sm text-gray-400">{location}</p>
+            </div>
+            <div className="float-right mr-5 flex flex-1 items-center justify-end">
+              {hyperlink !== undefined && (
+                <a
+                  href={hyperlink}
+                  target="_blank"
+                  className={`${styles.hyperlink} -mr-3 font-ibold text-lg text-quinary sm:mr-1`}
+                  rel="noreferrer"
+                >
+                  Enroll
+                </a>
+              )}
+            </div>
+            <div className="float-right mr-4 w-auto">
+              {description &&
+                detailed &&
+                (focused ? (
+                  <Link href={{ hash: "_" }}>
+                    <a className={styles.expand}>-</a>
+                  </Link>
+                ) : (
+                  <span className={styles.expand}>+</span>
+                ))}
+            </div>
+          </div>
         </div>
       )}
     </div>
@@ -112,7 +105,7 @@ function BlockItem({
     <div className={skipLink ? "" : styles.clickable}>
       {!skipLink && (
         <Link href={`schedule/#${id}`}>
-          <a className={styles.outerLink} />
+          <a className="absolute h-full w-full" />
         </Link>
       )}
       {block}
@@ -122,7 +115,7 @@ function BlockItem({
 
 export default function Block({ date, detailed, elems }) {
   return (
-    <div className={`grid grid-cols-${elems.length}`}>
+    <div className={`relative z-50 grid md:grid-cols-${elems.length}`}>
       {elems.map((elem, id) => (
         <BlockItem
           key={id}

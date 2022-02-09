@@ -179,7 +179,7 @@ export default function Schedule(props) {
 
   return (
     <div
-      className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} z-50 pt-60`}
+      className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} relative z-50 pt-60`}
     >
       <div
         className={`${styles.leftGridElem} ${styles.responsiveCentered} mb-10 `}
