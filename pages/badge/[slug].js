@@ -10,7 +10,7 @@ import Badge from "/components/moonstone/user/badgedex/Badge";
 
 function BadgeOwner({ user, badge, when }) {
   return (
-    <div className="border-b-solid mb-5 grid w-full grid-cols-3 border-b-2 border-black pb-3">
+    <div className="border-b-solid mb-5 grid w-full grid-cols-3 border-b-2 border-slate-400 pb-3">
       <div className="text-left">
         <p className="font-ibold">{user}</p>
       </div>
@@ -25,26 +25,32 @@ function BadgeOwner({ user, badge, when }) {
 }
 
 function BadgeSlug() {
-  const [badge, updateBadge] = useState(null);
+  const [badge, updateBadge] = useState({});
   const router = useRouter();
+  const maxUsersToShow = 5;
+
   useEffect(() => {
     getBadge(router.query.slug)
       .then((response) => {
         updateBadge(response.data.data);
       })
       .catch((_) => router.replace("/404"));
-  }, [badge]);
+  }, []);
 
-  const owners = badge
-    ? badge.attendees.map((entry, id) => (
-        <BadgeOwner
-          key={id}
-          user={entry.name}
-          badge={badge.name}
-          when="19 seconds ago"
-        />
-      ))
-    : [];
+  const owners =
+    badge && badge.attendees
+      ? badge.attendees.map(
+          (entry, id) =>
+            id < maxUsersToShow && (
+              <BadgeOwner
+                key={id}
+                user={entry.name}
+                badge={badge.name}
+                when="19 seconds ago"
+              />
+            )
+        )
+      : [];
 
   return (
     <Dashboard>
@@ -58,7 +64,7 @@ function BadgeSlug() {
       <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2">
         <div className="w-full">
           <Heading text="Badge info">
-            <span className="mt-1 mr-12 font-iregular">Talk Badge</span>
+            <span className="mt-1 mr-12 font-iregular">{badge.name}</span>
           </Heading>
 
           <Badge {...badge} />
