@@ -24,7 +24,6 @@ class Map extends Component {
         mapboxApiAccessToken="pk.eyJ1IjoiY2VzaW5mb3JtYXRpY2F1bSIsImEiOiJja3d0aGRoc3ExZ2E2Mm9wbTlrbjlucmt1In0.vMxC_EtVdBjkc9-F7HsMCw"
         onViewportChange={(viewport) => {
           this.setState({ viewport });
-          console.log("teste");
         }}
         {...this.state.viewport}
       >
