@@ -8,6 +8,8 @@ import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import ListItem3 from "/components/moonstone/user/wheel/ListItem3Cols";
 import ListItem4 from "/components/moonstone/user/wheel/ListItem4Cols";
 import Wheel from "/components/moonstone/user/wheel/Wheel";
+import WheelMessage from "/components/moonstone/user/wheel/WheelMessage";
+import ErrorMessage from "/components/utils/ErrorMessage";
 
 import { getWheelPrizes, getWheelLatestWins, spinWheel } from "/lib/api";
 
@@ -20,40 +22,82 @@ function WheelPage() {
   const fps = 60;
   const [st, updateState] = useState(defaultState);
 
-  const { attendee, user } = useAuth();
+  const { user } = useAuth();
 
   const [prizes, updatePrizes] = useState([]);
   const [latestWins, updateLatestWins] = useState([]);
+  const [error, updateError] = useState(false);
+  const [played, updatePlayed] = useState(false);
+
+  let wheelMessage = <></>;
 
   useEffect(() => {
     getWheelPrizes()
       .then((response) => updatePrizes(response.data))
-      .catch(); //TODO
+      .catch((_) => updateError(true));
 
     getWheelLatestWins()
       .then((response) => updateLatestWins(response.data))
-      .catch(); //TODO
+      .catch((_) => updateError(true));
   }, []);
 
   const spinTheWheel = async () => {
+    updateState({ angle: 0, speed: angleSpeed });
     spinWheel()
       .then((response) => {
-        updateState({ angle: 0, speed: angleSpeed });
-        setTimeout(3000); //Wait for roulette to finish spinning
+        //setTimeout(3000); //Wait for roulette to finish spinning
+        alert(response);
         if (response.data.tokens) {
-          //Tokens won
+          wheelMessage = (
+            <WheelMessage
+              title="You won tokens!"
+              description={`Congratulations! You won ${response.data.tokens} tokens!`}
+              onExit={updatePlayed(false)}
+            />
+          );
         } else if (response.data.badge) {
-          //Badge won
+          wheelMessage = (
+            <WheelMessage
+              title="You won a badge!"
+              description={`Congratulations! You won the ${response.data.badge.name} badge. Go check it out in the badgedex tab.`}
+              onExit={updatePlayed(false)}
+            />
+          );
         } else if (response.data.entries) {
-          //Entries for normal draw
+          wheelMessage = (
+            <WheelMessage
+              title="You won entries to the final draw!"
+              description={`Congratulations! You won ${response.data.entries} entries for the final draw!`}
+              onExit={updatePlayed(false)}
+            />
+          );
         } else if (response.data.prize.id == 67) {
-          //Nothing won
+          <WheelMessage
+            title="You din't win anything!"
+            description="Better luck next time."
+            onExit={updatePlayed(false)}
+          />;
         } else {
-          //Prize won
+          //TODO:: CHANGE THIS MESSAGE
+          wheelMessage = (
+            <WheelMessage
+              title={`You won a ${response.data.prize.name}!`}
+              description={`Congratulations! You won a ${response.data.name}! To claim your prize, do something!`}
+              onExit={updatePlayed(false)}
+            />
+          );
         }
+        updatePlayed(true);
+        alert(response);
       })
-      .catch((errors) => {
-        //Display pop up saying no money
+      .catch((_) => {
+        wheelMessage = (
+          <WheelMessage
+            title="You don't have tokens!"
+            description="You do not have enough tokens to spin the wheel."
+            onExit={updatePlayed(false)}
+          />
+        );
       });
   };
 
@@ -100,10 +144,14 @@ function WheelPage() {
         <div className="col-span-1 float-left h-full w-full 2xl:w-1/2">
           <Heading text="Achievements">
             <div className="h-full w-40 pt-1">
-              <div className="col-span-1 float-left w-full">💰170 Tokens</div>
+              <div className="col-span-1 float-left w-full">
+                💰{user.token_balance} Tokens
+              </div>
             </div>
             <div className="h-full w-40 pt-1">
-              <div className="col-span-1 float-left w-full">🏅68 Badges</div>
+              <div className="col-span-1 float-left w-full">
+                🏅{user.badge_count} Badges
+              </div>
             </div>
           </Heading>
           <div className="mb-10">
@@ -148,6 +196,8 @@ function WheelPage() {
           </div>
         </div>
       </div>
+      {error && <ErrorMessage />}
+      {played && wheelMessage}
     </Dashboard>
   );
 }
