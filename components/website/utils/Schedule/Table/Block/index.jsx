@@ -17,26 +17,15 @@ function BlockItem({
   detailed,
   hyperlink,
 }) {
-  useEffect(() => {
-    const block = document.getElementById("B" + id);
-    if (block)
-      block.style.maxHeight = focused
-        ? block.scrollHeight + 50 + "px"
-        : "225px";
-  }, [focused]);
-
   const skipLink = coffeeBreak || focused;
 
   const block = (
     <div
       id={`B${id}`}
-      className={`${styles.gridBlock} ${
-        coffeeBreak ? styles.coffee : styles.notCoffee
-      }`}
-      style={{ maxHeight: 225 }}
+      className={`mx-2 h-full border-t-2 border-white p-2 ${styles.gridBlock}`}
     >
       {coffeeBreak && (
-        <div className={styles.imgWrapper}>
+        <div className="relative float-right mr-6 h-10 w-10">
           <Image src="/images/Coffee.svg" layout="fill" />
         </div>
       )}
@@ -67,7 +56,7 @@ function BlockItem({
       {description && (
         <div
           className={styles.description}
-          style={{ opacity: focused ? 1 : 0 }}
+          style={{ display: focused ? "block" : "none" }}
         >
           {description.split("\n").map((text, i) => (
             <p key={i} className={`mb-2 font-iregular text-lg text-white`}>
@@ -76,7 +65,7 @@ function BlockItem({
           ))}
         </div>
       )}
-
+      {!coffeeBreak && <div className="h-16 w-2"></div>}
       {!coffeeBreak && (
         <div className="absolute bottom-0 mt-auto w-full p-3">
           <div className="flex flex-wrap">
@@ -95,7 +84,7 @@ function BlockItem({
                 </a>
               )}
             </div>
-            <div className="float-right w-auto">
+            <div className="float-right mr-4 w-auto">
               {detailed &&
                 detailed &&
                 (focused ? (
@@ -116,7 +105,7 @@ function BlockItem({
     <div className={skipLink ? "" : styles.clickable}>
       {!skipLink && (
         <Link href={`schedule/#${id}`}>
-          <a className={styles.outerLink} />
+          <a className="absolute h-full w-full" />
         </Link>
       )}
       {block}
@@ -126,7 +115,7 @@ function BlockItem({
 
 export default function Block({ date, detailed, elems }) {
   return (
-    <div className={`grid grid-cols-1 sm:grid-cols-${elems.length}`}>
+    <div className={`relative z-50 grid md:grid-cols-${elems.length}`}>
       {elems.map((elem, id) => (
         <BlockItem
           key={id}
