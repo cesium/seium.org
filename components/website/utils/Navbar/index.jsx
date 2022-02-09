@@ -95,11 +95,14 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                                 </Menu.Item>
                               ))}
                               <Menu.Item key="log_out">
-                                <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                  <button onClick={() => logout()}>
+                                <button
+                                  onClick={() => logout()}
+                                  className="w-full"
+                                >
+                                  <div className="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100">
                                     Log out
-                                  </button>
-                                </div>
+                                  </div>
+                                </button>
                               </Menu.Item>
                             </Menu.Items>
                           </Transition>
