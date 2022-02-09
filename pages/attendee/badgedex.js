@@ -5,7 +5,7 @@ import { useAuth } from "/components/Auth";
 import { getAllBadges } from "/lib/api";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
-
+import ErrorMessage from "/components/utils/ErrorMessage";
 import Badge from "/components/moonstone/user/badgedex/Badge";
 import Filter from "/components/moonstone/user/badgedex/Filter";
 
@@ -33,18 +33,18 @@ function Badgedex() {
   const [allBadges, updateAllBadges] = useState([]);
   const [all, updateAll] = useState(true);
   const [filter, updateFilter] = useState(null);
-
-  const { attendee } = useAuth();
+  const [error, updateError] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => requestBadges(), [allBadges]);
   const requestBadges = () => {
     getAllBadges()
       .then((response) => updateAllBadges(response.data))
-      .catch();
+      .catch(_ => updateError(true));
   };
 
-  const badges = (all ? allBadges : attendee.badges).filter(
-    (entry) => entry.type == filter || !filter
+  const badges = (all ? allBadges : user.badges).filter(
+    (entry) => entry.type == filter || filter == null
   );
   const badgeComponents = badges.map((badge, id) => (
     <Badge key={id} {...badge} />
@@ -80,6 +80,7 @@ function Badgedex() {
       <div className="mt-8 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
         {badgeComponents}
       </div>
+      {error && <ErrorMessage/>}
     </Dashboard>
   );
 }
