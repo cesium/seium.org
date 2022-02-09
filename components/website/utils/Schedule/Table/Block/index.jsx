@@ -85,7 +85,7 @@ function BlockItem({
               )}
             </div>
             <div className="float-right mr-4 w-auto">
-              {detailed &&
+              {description &&
                 detailed &&
                 (focused ? (
                   <Link href={{ hash: "_" }}>
