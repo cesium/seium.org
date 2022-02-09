@@ -40,7 +40,7 @@ function Badgedex() {
   const requestBadges = () => {
     getAllBadges()
       .then((response) => updateAllBadges(response.data))
-      .catch(_ => updateError(true));
+      .catch((_) => updateError(true));
   };
 
   const badges = (all ? allBadges : user.badges).filter(
@@ -80,7 +80,7 @@ function Badgedex() {
       <div className="mt-8 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
         {badgeComponents}
       </div>
-      {error && <ErrorMessage/>}
+      {error && <ErrorMessage />}
     </Dashboard>
   );
 }
