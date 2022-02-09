@@ -13,6 +13,29 @@ import ErrorMessage from "/components/utils/ErrorMessage";
 
 import { getWheelPrizes, getWheelLatestWins, spinWheel } from "/lib/api";
 
+/*
+
+Gets how long ago the given date/time was in a user friendly way (10 seconds ago, 1 minute ago, etc)
+
+*/
+function displayTimeSince(dateString) {
+  const date = Date.parse(dateString);
+  const now = new Date();
+
+  const differenceMiliSeconds = now - date;
+
+  if (differenceMiliSeconds <= 60 * 1000)
+    return `${Math.round(differenceMiliSeconds / 1000)} seconds ago`;
+  if (differenceMiliSeconds <= 60 * 60 * 1000)
+    return `${Math.round(differenceMiliSeconds / (60 * 1000))} minutes ago`;
+  if (differenceMiliSeconds <= 24 * 60 * 60 * 1000)
+    return `${Math.round(differenceMiliSeconds / (60 * 60 * 1000))} hours ago`;
+
+  return `${Math.round(
+    differenceMiliSeconds / (24 * 60 * 60 * 1000)
+  )} days ago`;
+}
+
 function WheelPage() {
   const defaultState = {
     angle: 0,
@@ -21,7 +44,7 @@ function WheelPage() {
   const angleSpeed = 20;
   const [st, updateState] = useState(defaultState);
 
-  const { user } = useAuth();
+  const { user, refreshUser } = useAuth();
 
   const [prizes, updatePrizes] = useState([]);
   const [latestWins, updateLatestWins] = useState([]);
@@ -86,7 +109,6 @@ function WheelPage() {
             />
           );
         }
-        requestAllInfo();
       })
       .catch((_) => {
         wheelMessage = (
@@ -96,6 +118,10 @@ function WheelPage() {
             onExit={(_) => updateWheelMessage(null)}
           />
         );
+      })
+      .finally((_) => {
+        requestAllInfo();
+        refreshUser();
       });
   };
 
@@ -125,7 +151,7 @@ function WheelPage() {
       key={id}
       user={entry.attendee_name}
       badge={entry.prize.name}
-      when="ola" //{displayTimeSince(entry.date)}
+      when={displayTimeSince(entry.date)}
       isLast={id == latestWins.length - 1}
     />
   ));
@@ -168,7 +194,7 @@ function WheelPage() {
         <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">
           <div>
             <Heading text="Latest Wins"></Heading>
-            <div className="h-72">{latestWinsComponents}</div>
+            <div className="h-auto">{latestWinsComponents}</div>
           </div>
 
           <div className="mt-10">
