@@ -46,6 +46,7 @@
     "sharp": "^0.30.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.2.5",
     "autoprefixer": "^10.4.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
