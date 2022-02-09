@@ -9,6 +9,7 @@ export default function WheelMessage({ title, description, onExit }) {
       <Dialog
         open={true}
         className="fixed top-1/2 left-1/2 z-50 -translate-y-2/4 -translate-x-2/4 overflow-y-auto rounded-3xl border-8 border-secondary p-10 px-12"
+        onClose={(_) => {}}
       >
         <Dialog.Overlay />
 
@@ -16,12 +17,12 @@ export default function WheelMessage({ title, description, onExit }) {
           {title}
         </Dialog.Title>
         <Dialog.Description className="mt-10 font-iregular text-lg">
-          {descritpion}
+          {description}
         </Dialog.Description>
 
         <button
           className="mt-10 h-12 w-28 rounded-full bg-quinary font-ibold text-lg"
-          onClick={onExit}
+          onClick={(e) => onExit(e)}
         >
           OK
         </button>

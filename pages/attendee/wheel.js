@@ -19,7 +19,6 @@ function WheelPage() {
     speed: 0,
   };
   const angleSpeed = 20;
-  const fps = 60;
   const [st, updateState] = useState(defaultState);
 
   const { user } = useAuth();
@@ -27,11 +26,9 @@ function WheelPage() {
   const [prizes, updatePrizes] = useState([]);
   const [latestWins, updateLatestWins] = useState([]);
   const [error, updateError] = useState(false);
-  const [played, updatePlayed] = useState(false);
+  const [wheelMessage, updateWheelMessage] = useState(<></>);
 
-  let wheelMessage = <></>;
-
-  useEffect(() => {
+  const requestAllInfo = () => {
     getWheelPrizes()
       .then((response) => updatePrizes(response.data))
       .catch((_) => updateError(true));
@@ -39,63 +36,64 @@ function WheelPage() {
     getWheelLatestWins()
       .then((response) => updateLatestWins(response.data))
       .catch((_) => updateError(true));
-  }, []);
+  };
 
-  const spinTheWheel = async () => {
+  useEffect(requestAllInfo, []);
+
+  const spinTheWheel = () => {
     updateState({ angle: 0, speed: angleSpeed });
     spinWheel()
       .then((response) => {
-        //setTimeout(3000); //Wait for roulette to finish spinning
-        alert(response);
-        if (response.data.tokens) {
-          wheelMessage = (
+        if (response.tokens) {
+          updateWheelMessage(
             <WheelMessage
               title="You won tokens!"
-              description={`Congratulations! You won ${response.data.tokens} tokens!`}
-              onExit={updatePlayed(false)}
+              description={`Congratulations! You won ${response.tokens} tokens!`}
+              onExit={(_) => updateWheelMessage(null)}
             />
           );
-        } else if (response.data.badge) {
-          wheelMessage = (
+        } else if (response.badge) {
+          updateWheelMessage(
             <WheelMessage
               title="You won a badge!"
-              description={`Congratulations! You won the ${response.data.badge.name} badge. Go check it out in the badgedex tab.`}
-              onExit={updatePlayed(false)}
+              description={`Congratulations! You won the ${response.badge.name} badge. Go check it out in the badgedex tab.`}
+              onExit={(_) => updateWheelMessage(null)}
             />
           );
-        } else if (response.data.entries) {
-          wheelMessage = (
+        } else if (response.entries) {
+          updateWheelMessage(
             <WheelMessage
               title="You won entries to the final draw!"
-              description={`Congratulations! You won ${response.data.entries} entries for the final draw!`}
-              onExit={updatePlayed(false)}
+              description={`Congratulations! You won ${response.entries} entries for the final draw!`}
+              onExit={(_) => updateWheelMessage(null)}
             />
           );
-        } else if (response.data.prize.id == 67) {
-          <WheelMessage
-            title="You din't win anything!"
-            description="Better luck next time."
-            onExit={updatePlayed(false)}
-          />;
+        } else if (response.prize.name == "Nada") {
+          updateWheelMessage(
+            <WheelMessage
+              title="You din't win anything!"
+              description="Better luck next time."
+              onExit={(_) => updateWheelMessage(null)}
+            />
+          );
         } else {
           //TODO:: CHANGE THIS MESSAGE
-          wheelMessage = (
+          updateWheelMessage(
             <WheelMessage
-              title={`You won a ${response.data.prize.name}!`}
-              description={`Congratulations! You won a ${response.data.name}! To claim your prize, do something!`}
-              onExit={updatePlayed(false)}
+              title={`You won a ${response.prize.name}!`}
+              description={`Congratulations! You won a ${response.prize.name}!`}
+              onExit={(_) => updateWheelMessage(null)}
             />
           );
         }
-        updatePlayed(true);
-        alert(response);
+        requestAllInfo();
       })
       .catch((_) => {
         wheelMessage = (
           <WheelMessage
             title="You don't have tokens!"
             description="You do not have enough tokens to spin the wheel."
-            onExit={updatePlayed(false)}
+            onExit={(_) => updateWheelMessage(null)}
           />
         );
       });
@@ -110,7 +108,6 @@ function WheelPage() {
 
   //Rotate at 60fps
   useEffect(() => {
-    console.log(st.angle);
     if (st.speed > 0) setTimeout(changeState, 1000 / 60);
   }, [st]);
 
@@ -120,20 +117,18 @@ function WheelPage() {
       key={id}
       name={entry.name}
       qnty={entry.stock}
-      maxQnty={max_amount_per_attendee}
+      maxQnty={entry.max_amount_per_attendee}
     />
   ));
-
   const latestWinsComponents = latestWins.map((entry, id) => (
     <ListItem3
       key={id}
       user={entry.attendee_name}
       badge={entry.prize.name}
-      when={displayTimeSince(entry.date)}
+      when="ola" //{displayTimeSince(entry.date)}
       isLast={id == latestWins.length - 1}
     />
   ));
-
   return (
     <Dashboard
       href="wheel"
@@ -165,7 +160,7 @@ function WheelPage() {
               }}
             >
               <p className="font-ibold font-bold">SPIN THE WHEEL</p>
-              <p className="font-iregular">15 tokens💰</p>
+              <p className="font-iregular">10 tokens💰</p>
             </button>
           </div>
         </div>
@@ -197,7 +192,7 @@ function WheelPage() {
         </div>
       </div>
       {error && <ErrorMessage />}
-      {played && wheelMessage}
+      {wheelMessage}
     </Dashboard>
   );
 }
