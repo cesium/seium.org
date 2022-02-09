@@ -10,15 +10,12 @@ import Badge from "/components/moonstone/user/badgedex/Badge";
 
 function BadgeOwner({ user, badge, when }) {
   return (
-    <div className="border-b-solid mb-5 grid w-full grid-cols-3 border-b-2 border-slate-400 pb-3">
+    <div className="border-b-solid mb-5 grid w-full grid-cols-2 border-b-2 border-slate-400 pb-3">
       <div className="text-left">
         <p className="font-ibold">{user}</p>
       </div>
-      <div className="text-center">
-        <p className="text-iregular">{badge}</p>
-      </div>
       <div className="text-right">
-        <p className="text-ibold font-bold text-quinary">{when}</p>
+        <p className="text-iregular text-quinary">{badge}</p>
       </div>
     </div>
   );
@@ -42,12 +39,7 @@ function BadgeSlug() {
       ? badge.attendees.map(
           (entry, id) =>
             id < maxUsersToShow && (
-              <BadgeOwner
-                key={id}
-                user={entry.name}
-                badge={badge.name}
-                when="19 seconds ago"
-              />
+              <BadgeOwner key={id} user={entry.name} badge={badge.name} />
             )
         )
       : [];
