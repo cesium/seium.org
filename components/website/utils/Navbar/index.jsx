@@ -29,7 +29,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
       {({ open }) => (
         <>
           <div className={`spacing pt-14 pb-4 bg-${bgColor}`}>
-            <div className="flex items-center justify-between h-16">
+            <div className="flex h-16 items-center justify-between">
               <div className="relative z-50 flex flex-auto">
                 <div className="grid w-full grid-cols-4">
                   <Link href="/" passHref>
@@ -43,19 +43,19 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                       />
                     </div>
                   </Link>
-                  <div className="hidden col-span-3 justify-self-end lg:block">
+                  <div className="col-span-3 hidden justify-self-end lg:block">
                     <div className="flex flex-auto gap-x-20">
                       <div className="grid grid-cols-3 gap-x-20 gap-y-6 xl:gap-y-0">
                         {navigation.map((item) => (
                           <Link key={item.slug} href={item.slug} passHref>
-                            <a className="text-sm text-white font-iregular text-opacity-40 hover:text-opacity-100">
+                            <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
                               {item.name}
                             </a>
                           </Link>
                         ))}
                         {isAuthenticated ? null : (
                           <Link key="login" href="/login" passHref>
-                            <a className="text-sm text-white font-iregular text-opacity-40 hover:text-opacity-100">
+                            <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
                               Login
                             </a>
                           </Link>
@@ -64,11 +64,11 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
                           <div>
-                            <Menu.Button className="flex items-center max-w-xs text-sm bg-white rounded-full ring-2 ring-quinary ring-offset-2 focus:outline-none">
+                            <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm ring-2 ring-quinary ring-offset-2 focus:outline-none">
                               <span className="sr-only">Open user menu</span>
                               {user && (
                                 <img
-                                  className="w-10 h-10 rounded-full"
+                                  className="h-10 w-10 rounded-full"
                                   src={`${process.env.NEXT_PUBLIC_API_URL}${user.avatar}`}
                                   alt=""
                                 />
@@ -84,7 +84,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95"
                           >
-                            <Menu.Items className="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                               {userNavigation.map((item) => (
                                 <Menu.Item key={item.name}>
                                   <Link passHref href={item.slug}>
@@ -95,9 +95,12 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                                 </Menu.Item>
                               ))}
                               <Menu.Item key="log_out">
-                                <button onClick={() => logout()} className="w-full">
-                                  <div className="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100">
-                                      Log out
+                                <button
+                                  onClick={() => logout()}
+                                  className="w-full"
+                                >
+                                  <div className="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100">
+                                    Log out
                                   </div>
                                 </button>
                               </Menu.Item>
@@ -112,7 +115,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 </div>
               </div>
               <div className="relative z-50 flex lg:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center w-6 h-6 text-white">
+                <Disclosure.Button className="inline-flex h-6 w-6 items-center justify-center text-white">
                   {open ? (
                     <FontAwesomeIcon icon={faTimes} />
                   ) : (
@@ -124,12 +127,12 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
           </div>
 
           <Disclosure.Panel className={`lg:hidden bg-${bgColor}`}>
-            <div className="relative z-50 object-cover min-h-screen px-2 pt-12">
+            <div className="relative z-50 min-h-screen object-cover px-2 pt-12">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.slug}
                   as="a"
-                  className="block py-6 text-3xl text-center text-white rounded-md font-ibold hover:text-quinary"
+                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                 >
                   <Link key={item.slug} href={item.slug} passHref>
                     {item.name}
@@ -141,7 +144,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Disclosure.Button
                     key={item.slug}
                     as="a"
-                    className="block py-6 text-3xl text-center text-white rounded-md font-ibold hover:text-quinary"
+                    className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                   >
                     <Link key={item.slug} href={item.slug} passHref>
                       {item.name}
@@ -152,7 +155,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key="login"
                   as="a"
-                  className="block py-6 text-3xl text-center text-white rounded-md font-ibold hover:text-quinary"
+                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                 >
                   <Link key="login" href="/login" passHref>
                     Login
@@ -163,7 +166,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key="login"
                   as="a"
-                  className="block py-6 text-3xl text-center text-white rounded-md font-ibold hover:text-quinary"
+                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                 >
                   <button onClick={() => logout()}>Log Out</button>
                 </Disclosure.Button>
