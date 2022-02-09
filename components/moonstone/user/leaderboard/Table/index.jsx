@@ -1,33 +1,27 @@
 export default function Table({ list, user, maxUsersToShow }) {
-  /*
-        Notes: we are assuming the list is already sorted
-        We are comparing the user by their name. This can be unreliable
-        as multiple people can share the same first and last names
-    */
   const toShow = list.slice(0, Math.min(maxUsersToShow, list.length));
-
   const rows = toShow.map((entry, id) => (
     <div
       key={id}
-      className="mb-2 h-8 grid-cols-3 border-t-2 border-t-slate-700 pt-2"
+      className="mb-2 flex h-auto border-t-2 border-t-slate-700 pt-2"
     >
       <div
-        className={`col-span-1 float-left w-1/3 text-left font-iregular ${
-          entry.name == user ? "text-quinary" : ""
+        className={`w-1/3 text-left font-iregular ${
+          entry.id == user ? "text-quinary" : ""
         }`}
       >
         {id + 1}
       </div>
       <div
-        className={`col-span-1 float-left w-1/3 text-center font-ibold ${
-          entry.name == user ? "text-quinary" : ""
+        className={`w-1/3 text-center font-ibold ${
+          entry.id == user ? "text-quinary" : ""
         }`}
       >
         {entry.name}
       </div>
       <div
-        className={`col-span-1 float-left w-1/3 text-right font-iregular ${
-          entry.name == user ? "text-quinary" : ""
+        className={`w-1/3 text-right font-iregular ${
+          entry.id == user ? "text-quinary" : ""
         }`}
       >
         {entry.badges}
@@ -35,11 +29,13 @@ export default function Table({ list, user, maxUsersToShow }) {
     </div>
   ));
 
-  var userId = 0;
-  var userBadges = 0;
+  let userId = 0;
+  let userBadges = 0;
+  let userName = "";
   for (var i = 0; i < list.length; i++) {
-    if (list[i].name == user) {
+    if (list[i].id == user) {
       userId = i;
+      userName = list[i].name;
       userBadges = list[i].badges;
       break;
     }
@@ -54,7 +50,7 @@ export default function Table({ list, user, maxUsersToShow }) {
           {userId + 1}
         </div>
         <div className="col-span-1 float-left w-1/3 text-center font-ibold text-quinary">
-          {user}
+          {userName}
         </div>
         <div className="text-aqua col-span-1 float-left w-1/3 text-right font-iregular text-quinary">
           {userBadges}

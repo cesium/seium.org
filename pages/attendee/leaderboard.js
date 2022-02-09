@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import { withAuth } from "/components/Auth";
+import { useAuth } from "/components/Auth/useAuth";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Table from "/components/moonstone/user/leaderboard/Table";
 
 import Day from "/components/website/utils/Schedule/Day";
+import ErrorMessage from "/components/utils/ErrorMessage";
+
+import { getLeaderboard } from "/lib/api";
 
 function leapYear(year) {
   return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
@@ -60,73 +65,49 @@ function addDate(date, days) {
     month++;
   }
 
+  month = month < 10 ? "0" + month : month;
+  day = day < 10 ? "0" + fay : day;
+
   return year + "/" + month + "/" + day;
 }
 
 function Leaderboard() {
-  const min_date = "2022/2/15";
-  const max_date = "2022/2/20";
+  const min_date = "2022/02/15";
+  const max_date = "2022/02/20";
 
   const _today = new Date();
   const today =
     _today.getFullYear() +
-    "/" +
+    "-" +
     (_today.getMonth() + 1) +
-    "/" +
+    "-" +
     _today.getDate();
   const defaultDate = isAfter(today, min_date) ? today : min_date;
 
-  const defaultState = {
-    hallOfFame: false,
-    date: defaultDate,
+  const { user } = useAuth();
+
+  const [hallOfFame, updateHallOfFame] = useState(false);
+  const [date, updateDate] = useState(defaultDate);
+  const [leaderboard, updateLeaderboard] = useState([]);
+  const [error, updateError] = useState(false);
+
+  useEffect(() => requestLeaderboard(), [hallOfFame, date]);
+
+  const requestLeaderboard = () => {
+    const args = hallOfFame ? "" : date.replaceAll("/", "-");
+    getLeaderboard(args)
+      .then((response) => updateLeaderboard(response.data))
+      .catch((_) => updateError(true));
   };
-
-  const [st, updateState] = useState(defaultState);
-
-  const changeLeaderboard = (b) => {
-    updateState({
-      hallOfFame: b,
-      date: st.date,
-    });
-  };
-
-  const updateDate = (d) => {
-    updateState({
-      hallOfFame: st.hallOfFame,
-      date: d,
-    });
-  };
-
-  const testUser = {
-    name: "John Doe",
-    badges: 42,
-  };
-
-  const me = {
-    name: "Me",
-    badges: 0,
-  };
-
-  const list = [
-    testUser,
-    testUser,
-    testUser,
-    testUser,
-    testUser,
-    testUser,
-    testUser,
-    testUser,
-    me,
-  ];
 
   const previous_day = () => {
-    const new_date = addDate(st.date, -1);
+    const new_date = addDate(date, -1);
     if (!isAfter(min_date, new_date) && !isAfter(new_date, max_date))
       updateDate(new_date);
   };
 
   const next_day = () => {
-    const new_date = addDate(st.date, 1);
+    const new_date = addDate(date, 1);
     if (!isAfter(min_date, new_date) && !isAfter(new_date, max_date))
       updateDate(new_date);
   };
@@ -140,7 +121,7 @@ function Leaderboard() {
       <div className="mt-12 grid-cols-2 overflow-hidden">
         <div className="col-span-1 float-left w-full md:w-1/2">
           <Day
-            date={st.date}
+            date={date}
             fg_color="quinary"
             previousDay={previous_day}
             nextDay={next_day}
@@ -151,22 +132,26 @@ function Leaderboard() {
           <b className="text-ibold">Board</b>
           <button
             className={`font-iregular bg-${
-              st.hallOfFame ? "white" : "quinary"
+              hallOfFame ? "white" : "quinary"
             } ml-24 h-12 items-center rounded-full px-4 py-1 text-center`}
-            onClick={(e) => changeLeaderboard(false)}
+            onClick={(e) => {
+              updateHallOfFame(false);
+            }}
           >
             LEADERBOARD
           </button>
           <button
             className={`font-iregular bg-${
-              st.hallOfFame ? "quinary" : "white"
+              hallOfFame ? "quinary" : "white"
             } ml-12 h-12 items-center rounded-full px-4 py-1 text-center`}
-            onClick={(e) => changeLeaderboard(true)}
+            onClick={(e) => {
+              updateHallOfFame(true);
+            }}
           >
             HALL OF FAME
           </button>
-
-          <Table list={list} user="Me" maxUsersToShow={5} />
+          {error && <ErrorMessage />}
+          <Table list={leaderboard} user={user.id} maxUsersToShow={5} />
         </div>
       </div>
     </Dashboard>
