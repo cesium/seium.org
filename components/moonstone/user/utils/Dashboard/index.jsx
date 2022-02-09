@@ -114,7 +114,7 @@ export default function Dashboard({ title, href, description, children }) {
             </div>
             <div className="text-md my-8 px-4 text-white">
               <p className="font-ibold">You have:</p>
-              <p className="font-iregular">💰 170 Tokens</p>
+              <p className="font-iregular">💰 {user.token_balance}  Tokens</p>
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
