@@ -68,7 +68,11 @@ function Login() {
             )}
           </Form>
         </div>
-        <Text text="Don’t have an account?" link="Signup here" href="/signup" />
+        <Text
+          text="Don’t have an account?"
+          link="Signup here"
+          href="https://sei22.eventbrite.pt"
+        />
         <div className="absolute bottom-0 right-60 hidden lg:block">
           <Fade bottom>
             <Card
