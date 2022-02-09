@@ -96,7 +96,8 @@ function BlockItem({
               )}
             </div>
             <div className="float-right w-auto">
-              {detailed && detailed &&
+              {detailed &&
+                detailed &&
                 (focused ? (
                   <Link href={{ hash: "_" }}>
                     <a className={styles.expand}>-</a>
