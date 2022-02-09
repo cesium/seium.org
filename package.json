@@ -12,7 +12,7 @@
     "preview": "netlify deploy --build --context deploy-preview",
     "deploy": "netlify deploy --build --prod",
     "fmt": "npx npm-run-all format",
-    "format": "npx prettier --write .",
+    "format": "npx prettier --ignore-path .gitignore --write .",
     "test": "npm-run-all test:*",
     "test:lint": "npm-run-all test:lint:*",
     "test:lint:js": "next lint",

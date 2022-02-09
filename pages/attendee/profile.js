@@ -1,7 +1,4 @@
-import Image from "next/image";
 import { withAuth, useAuth } from "/components/Auth";
-
-import Button from "/components/utils/Button";
 
 import Form from "/components/moonstone/utils/Form";
 import Input from "/components/moonstone/utils/Input";
@@ -12,23 +9,32 @@ import Heading from "/components/moonstone/utils/Heading";
 import CodeInput from "/components/moonstone/user/profile/CodeInput";
 import CheckpointTracker from "/components/moonstone/user/profile/CheckpointTracker";
 
+function getFirstName(fullName) {
+  const names = fullName.split(" ");
+
+  if (names.length > 0) {
+    return names[0];
+  }
+
+  return "";
+}
+
 function Profile() {
   const { user } = useAuth();
 
   return (
     <Dashboard
       href="profile"
-      title="User Profile"
-      description={`Hi ${user.name}, welcome to your profile 👋`}
+      title={`Hello, ${getFirstName(user.name)} 👋`}
+      description={`Welcome to your profile!`}
     >
       <div className="mt-12 grid-cols-2 overflow-hidden">
-        <div className="col-span-1 float-left w-full md:w-1/2">
+        <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile">
             <div className="w-20">
-              <Button
-                text="Edit"
-                customStyle="text-secondary bg-quinary border-quinary"
-              />
+              <button className="w-full items-center rounded-full border border-quinary bg-quinary px-4 py-1 text-center font-iregular text-sm text-secondary shadow-sm">
+                Edit
+              </button>
             </div>
           </Heading>
           <div className="pl-6">
@@ -44,6 +50,7 @@ function Profile() {
               text="NAME"
               id="name"
               name="name"
+              value={user.name || ""}
               bgColor="white"
               fgColor="black"
             />
@@ -51,6 +58,7 @@ function Profile() {
               text="USERNAME"
               id="username"
               name="username"
+              value={user.nickname || ""}
               bgColor="white"
               fgColor="black"
             />
@@ -64,16 +72,13 @@ function Profile() {
               fgColor="black"
             />
 
-            <a
-              href="#"
-              className="inline-block h-auto pl-6 text-quinary underline"
-            >
+            <button className="inline-block h-auto pl-6 pb-5 text-quinary underline">
               Reset Password
-            </a>
+            </button>
           </Form>
         </div>
 
-        <div className="col-span-1 float-right w-full md:w-1/2 md:pl-6">
+        <div className="col-span-1 float-right w-full xl:w-1/2 xl:pl-6">
           <div>
             <Heading text="Achievements"></Heading>
 
