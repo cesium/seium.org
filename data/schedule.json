@@ -103,7 +103,7 @@
         "summary": "Deploying ML Models in Sagemaker",
         "description": "Amazon SageMaker helps data scientists and developers to prepare, build, train, and deploy high-quality machine learning models quickly by bringing together a broad set of capabilities purpose-built for machine learning. To make it easier to get started, Amazon SageMaker JumpStart provides a set of solutions for the most common use cases that can be deployed readily with just a few clicks. In this workshop we will explore the end to end capabilities of sagemaker.",
         "author": "Walid Slim - SaltPay",
-        "location": "TBA",
+        "location": "Edifício 7 (DI) - 1.09",
         "hyperlink": "https://workshopsaltpay_sei22.eventbrite.pt"
       },
       {
@@ -113,7 +113,7 @@
         "summary": "Agile HealthCare",
         "description": "How to implement agile methodologies in healthcare software development (Viewer). Team Challenge - Micro Sprint to develop a technological use case in the health area.",
         "author": "André Mota and Catarina Caçote - Glintt",
-        "location": "TBA",
+        "location": "Edifício 7 (DI) - 1.10",
         "hyperlink": "https://workshopglintt_sei22.eventbrite.pt"
       },
       {
@@ -200,7 +200,7 @@
         "summary": "Code Rumble: #Analytics #Financial Risk",
         "description": "Join us in this coding competition and win prizes. In this challenge we’re going to take you through the technical aspects of financial risk and how these reflect the current market conditions in banking. Bring your own laptop and ensure you have the tools you prefer and enjoy most already installed to write simple algorithms and access a REST API and have fun!",
         "author": "Cristiano Sousa",
-        "location": "TBA",
+        "location": "Edifício 7 (DI) - 1.10",
         "hyperlink": "https://workshopdeloitte_sei22.eventbrite.pt"
       },
       {
@@ -210,7 +210,7 @@
         "summary": "Salesforce Tech Session",
         "description": "Have you ever heard of Cloud? Salesforce? In this workshop we will present one of the most innovative tools in the technological market. Let's get to know the reality and the impact that Salesforce has on several Accenture clients, through some demos and technical demonstrations.",
         "author": "António Lemos - Accenture",
-        "location": "TBA",
+        "location": "Edifício 7 (DI) - 1.09",
         "hyperlink": "https://workshopaccenture_sei22.eventbrite.pt"
       },
       {
@@ -305,7 +305,7 @@
         "summary": "Blockchain and Smart Contracts in Action! Blockchain and Smart Contracts in Action!",
         "description": "Let's get our hands dirty and create a Dapp (Decentralized Application) that in the end can be deployed on two different blockchains (Ethereum and Algorand).",
         "author": "Emanuel Mota & Helder Pinto & Pedro Costa - Yari Labs",
-        "location": "TBA",
+        "location": "Edifício 7 (DI) - 1.09",
         "hyperlink": "https://workshopyari_sei22.eventbrite.pt"
       },
       {
@@ -315,7 +315,7 @@
         "summary": "The role of a developer in a product team",
         "description": "Álvaro Bezerra, Product Manager @ Subvisual, prepared a workshop based on his experience of working with developers inside product teams. Being part of a product team means much more than just writing code. Learn how you can help yourself while leveraging your own skills and proficiency. This workshop will cover: product team tools and processes; roles and their responsibilities; product mindset and it will last for 90 minutes. It's required that you bring basic writing equipment or laptop.",
         "author": "Subvisual",
-        "location": "TBA",
+        "location": "Edifício 7 (DI) - 0.09",
         "hyperlink": "https://workshopsubvisual_sei22.eventbrite.pt"
       },
       {
@@ -325,7 +325,7 @@
         "summary": "Starting on Big Data with Twitter Streaming DEMO",
         "description": "In this workshop we will talk about Big Data, its definition and technical concepts, how software engineering handles large volumes of Near Real Time data, its scalability and architecture. In addition, we will bring a demo based on twitter messages, where through Kafka Streams, we were able to capture and process these messages showing interesting views about the events of this social network.",
         "author": "Bruno Ribeiro - XpandIT",
-        "location": "CP2-B1",
+        "location": "Edifício 7 (DI) - 1.10",
         "hyperlink": "https://workshopxpandit_sei22.eventbrite.pt"
       },
       {
@@ -383,7 +383,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA"
+        "location": "Edifício 7 (DI)"
       }
     ]
   },
@@ -397,7 +397,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA"
+        "location": "Edifício 7 (DI)"
       },
       {
         "activityType": "Lunch Break",
@@ -410,7 +410,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA"
+        "location": "Edifício 7 (DI)"
       }
     ]
   },
@@ -424,7 +424,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA"
+        "location": "Edifício 7 (DI)"
       },
       {
         "activityType": "Lunch Break",
@@ -437,7 +437,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA"
+        "location": "Edifício 7 (DI)"
       },
       {
         "startTime": "15:00",
@@ -446,7 +446,7 @@
         "summary": "Hackathon Final Pitches and Closing Session",
         "description": "",
         "author": "",
-        "location": "TBA"
+        "location": "CP2-B1"
       }
     ]
   }
