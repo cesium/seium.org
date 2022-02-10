@@ -13,9 +13,8 @@ function BadgeButton({ text, val, setValue, selected }) {
   const changeVal = () => {
     if (!selected) setValue(!val);
   };
-  let onClick;
 
-  let button = (
+  return (
     <button
       className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"}
                         ${text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"}
@@ -26,7 +25,6 @@ function BadgeButton({ text, val, setValue, selected }) {
       {text}
     </button>
   );
-  return button;
 }
 
 function Badgedex() {
