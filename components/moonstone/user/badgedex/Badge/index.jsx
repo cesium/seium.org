@@ -5,7 +5,7 @@ export default function Badge({ name, id, avatar, tokens }) {
     <Link href={`/badge/${id}`}>
       <a className="h-full w-full">
         <div>
-          <img src={avatar} className="" alt="Error"></img>
+          <img src={avatar} alt={name}></img>
         </div>
         <div className="grid grid-rows-2 justify-items-center font-iregular">
           <div>{name}</div>
