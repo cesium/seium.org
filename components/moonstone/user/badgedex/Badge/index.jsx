@@ -1,15 +1,17 @@
-export default function Badge() {
+import Link from "next/link";
+
+export default function Badge({ name, id, avatar, tokens }) {
   return (
-    <div
-    // onClick={handleClick}
-    >
-      <div>
-        <img src="/images/badges/teste.png" className="" alt="Error"></img>
-      </div>
-      <div className="grid grid-rows-2 justify-items-center font-iregular">
-        <div> Badge Name</div>
-        <div>10 💰 </div>
-      </div>
-    </div>
+    <Link href={`/badge/${id}`}>
+      <a className="h-full w-full">
+        <div>
+          <img src={avatar} className="" alt="Error"></img>
+        </div>
+        <div className="grid grid-rows-2 justify-items-center font-iregular">
+          <div>{name}</div>
+          <div>{tokens} 💰 </div>
+        </div>
+      </a>
+    </Link>
   );
 }
