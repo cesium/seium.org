@@ -47,7 +47,7 @@ function BadgeSlug() {
   return (
     <Dashboard>
       <div>
-        <h1 className="font-iextrabold text-4xl sm:text-5xl">Badge Page</h1>
+        <h1 className="font-iextrabold text-4xl sm:text-5xl">{badge.name}</h1>
         <p className="text-md mt-2 font-iregular sm:text-lg">
           Check who already has this badge
         </p>
