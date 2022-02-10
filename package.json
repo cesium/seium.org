@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx npm-run-all develop",
+    "dev": "npm-run-all develop",
     "develop": "next dev",
     "build": "next build",
     "start": "next start",
