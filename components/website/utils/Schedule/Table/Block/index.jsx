@@ -65,12 +65,15 @@ function BlockItem({
           ))}
         </div>
       )}
-      {!coffeeBreak && <div className="h-16 w-2"></div>}
+
+      {!coffeeBreak && <div className="h-20 w-2"></div>}
       {!coffeeBreak && (
-        <div className="absolute bottom-0 mt-auto w-full p-3">
-          <div className="flex flex-wrap">
+        <div className="absolute bottom-0 mt-auto w-full py-3">
+          <div className="flex flex-wrap justify-center">
             <div className="flex w-auto items-center">
-              <p className="font-iregular text-sm text-gray-400">{location}</p>
+              <p className="float-right font-iregular text-sm text-gray-400">
+                {location}
+              </p>
             </div>
             <div className="float-right mr-5 flex flex-1 items-center justify-end">
               {hyperlink !== undefined && (
@@ -84,15 +87,15 @@ function BlockItem({
                 </a>
               )}
             </div>
-            <div className="float-right mr-4 w-auto">
+            <div className="mr-5 w-auto">
               {description &&
                 detailed &&
                 (focused ? (
                   <Link href={{ hash: "_" }}>
-                    <a className={styles.expand}>-</a>
+                    <a className={`mx-auto ${styles.expand}`}>-</a>
                   </Link>
                 ) : (
-                  <span className={styles.expand}>+</span>
+                  <span className={`mx-auto ${styles.expand}`}>+</span>
                 ))}
             </div>
           </div>

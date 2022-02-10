@@ -67,10 +67,8 @@
 }
 
 .location {
-  position: absolute;
-  left: 0;
-  min-width: 20px;
-  bottom: 0;
+  margin-bottom: 0.4em;
+  margin-top: 0.4em;
 }
 
 .clickable:hover .location {
@@ -100,7 +98,6 @@
 
 .expand {
   @apply items-center rounded-full border border-white px-8 py-0 text-center font-ibold text-3xl text-white shadow-sm;
-  margin-left: 15px;
   display: inline-block;
   width: 5rem;
 }
