@@ -43,6 +43,20 @@ export function AuthProvider({ children }) {
       .finally(() => setFirstLoading(false));
   }, [token, needsRefetch]);
 
+  function sign_up(name, email, password, password_confirmation, username, id) {
+    api
+      .sign_up(email, password, password_confirmation, name, username, id)
+      .then((response) => {
+        API.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${response.data.jwt}`;
+        setToken(response.data.jwt);
+        refetchUser();
+        alert(JSON.stringify(response.data));
+      })
+      .catch((errors) => setErrors(errors));
+  }
+
   function login({ email, password }) {
     setLoading(true);
 
@@ -136,6 +150,7 @@ export function AuthProvider({ children }) {
       refetchUser,
       resetPassword,
       sendResetEmail,
+      sign_up,
     }),
     // eslint-disable-next-line
     [user, isAuthenticated, isLoading, errors]
