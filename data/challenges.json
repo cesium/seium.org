@@ -98,7 +98,24 @@
       "text": "Register now!",
       "url": "https://forms.gle/cdc2bVqmdGpv2Q7G9"
     },
+    "prizes": [
+      {
+        "name": "Chess Set"
+      }
+    ],
     "descriptions": "Big brain? Then come and show it off! If you can manage to win, we have a very nice, wood chess set to give you!"
+  },
+  "CS:GO Tournament": {
+    "button": {
+      "text": "Register now!",
+      "url": "https://forms.gle/nDiwzSgdJGDS8QSq8"
+    },
+    "prizes": [
+      {
+        "name": "Steam Voucher - 30€ per member"
+      }
+    ],
+    "descriptions": "Make a team and come show off your talent in our CS:GO tournament! We have a limit of 8 teams, so make sure you move fast!"
   },
   "CTF": {
     "prizes": [
