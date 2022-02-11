@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { classNames } from "/lib/css";
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
@@ -7,10 +8,6 @@ import { Dialog, Transition } from "@headlessui/react";
 import Return from "/components/moonstone/utils/Return";
 
 const navigation = ["dashboard", "spotlight"];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Dashboard(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);

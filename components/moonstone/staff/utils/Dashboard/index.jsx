@@ -6,10 +6,6 @@ import { Dialog, Transition } from "@headlessui/react";
 
 import Return from "/components/moonstone/utils/Return";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Dashboard(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
