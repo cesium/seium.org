@@ -5,10 +5,8 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
   const canvasRef = useRef(null);
   const videoRef = useRef(null);
   const wrapperRef = useRef(null);
+  const animationFrameRef = useRef();
   var animationFrame = null;
-
-  if (animationFrame && stop) {
-  }
 
   useEffect(() => {
     const video = videoRef.current;
@@ -19,7 +17,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
         video.srcObject = stream;
         video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
         video.play();
-        animationFrame = requestAnimationFrame(tick);
+        animationFrameRef.current = requestAnimationFrame(tick);
       });
   }, []);
 
@@ -41,7 +39,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
     const canvas = canvasRef.current;
 
     if (!canvas) {
-      cancelAnimationFrame(animationFrame);
+      cancelAnimationFrame(animationFrameRef.current);
       return null;
     }
 
@@ -89,7 +87,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
         }
       }
     }
-    animationFrame = requestAnimationFrame(tick);
+    animationFrameRef.current = requestAnimationFrame(tick);
   }
 
   return (
@@ -98,7 +96,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
 
       <div
         ref={wrapperRef}
-        className="flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid border-primary bg-primary align-middle"
+        className="border-primary bg-primary flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid align-middle"
       >
         <canvas ref={canvasRef} className="rounded-2xl" />
       </div>
