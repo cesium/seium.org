@@ -22,7 +22,7 @@ function getFirstName(fullName) {
 }
 
 function Profile() {
-  const { user } = useAuth();
+  const { user, editUser } = useAuth();
 
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
@@ -47,7 +47,8 @@ function Profile() {
               <button className="w-full items-center rounded-full border border-quinary bg-quinary px-4 py-1 text-center font-iregular text-sm text-secondary shadow-sm"
                 onClick={() => {
                   if(editing) {
-                    
+                    editUser(username);
+                    setEditing(false);
                   } else {
                     setEditing(true);
                   }               
