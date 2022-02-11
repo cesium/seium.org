@@ -2,7 +2,7 @@ name: Deploy staging environment
 
 on:
   pull_request:
-    branches: [main, develop]
+    branches: [develop, main, master, deploy]
     types: [opened, synchronize, reopened]
 
 jobs:
