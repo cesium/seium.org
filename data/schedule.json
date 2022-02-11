@@ -89,7 +89,8 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "Bar Industrial"
+        "location": "Bar Industrial",
+        "hyperlink": "https://forms.gle/kdTAmCQMJXgHbdGy9"
       }
     ]
   },
@@ -127,8 +128,7 @@
         "summary": "The cloud. A challenge and opportunity for companies.",
         "description": "The cloud is nowadays one of the main factors of disruption in the global technological landscape. In this session you can see why the cloud is disruptive, what is changing in markets and companies and what is being done to help companies adapt and seize this opportunity.",
         "author": "Franciso Prata",
-        "location": "CP2-B1",
-        "hyperlink": null
+        "location": "CP2-B1"
       },
       {
         "activityType": "Lunch Break",
