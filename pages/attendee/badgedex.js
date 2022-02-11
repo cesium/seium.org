@@ -75,7 +75,6 @@ function Badgedex() {
           .map((badge) => (
             <Badge key={badge.id} {...badge} />
           ))}
-        ;
       </div>
       {error && <ErrorMessage />}
     </Dashboard>
