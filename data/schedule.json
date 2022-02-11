@@ -56,14 +56,14 @@
         "location": "CP2-B1"
       },
       {
-        "startTime": "16:00",
-        "endTime": "16:30",
+        "startTime": "16:30",
+        "endTime": "16:45",
         "activityType": "Pitch",
         "author": "FARFETCH",
         "location": "CP2-B1"
       },
       {
-        "startTime": "16:30",
+        "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
         "author": "ACCENTURE",
@@ -157,14 +157,14 @@
         "coffeeBreak": true
       },
       {
-        "startTime": "16:00",
-        "endTime": "16:30",
+        "startTime": "16:30",
+        "endTime": "16:45",
         "activityType": "Pitch",
         "summary": "Retail Consult",
         "location": "CP2-B1"
       },
       {
-        "startTime": "16:30",
+        "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
         "summary": "Uphold",
@@ -253,8 +253,8 @@
         "coffeeBreak": true
       },
       {
-        "startTime": "16:00",
-        "endTime": "16:30",
+        "startTime": "16:30",
+        "endTime": "16:45",
         "activityType": "Pitch",
         "summary": "Continental",
         "description": "",
@@ -262,7 +262,7 @@
         "location": "CP2-B1"
       },
       {
-        "startTime": "16:30",
+        "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
         "author": "EY",
@@ -369,7 +369,14 @@
       },
       {
         "startTime": "16:30",
-        "endTime": "17:30",
+        "endTime": "16:45",
+        "activityType": "Pitch",
+        "author": "Agentifai",
+        "location": "CP2-B1"
+      },
+      {
+        "startTime": "17:00",
+        "endTime": "18:00",
         "activityType": "",
         "summary": "Closing Session and Prize Announcement",
         "description": "",
