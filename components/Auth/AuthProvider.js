@@ -59,8 +59,11 @@ export function AuthProvider({ children }) {
             case USER.ROLES.ATTENDEE:
               router.push("/attendee/profile");
               break;
-            case USER.ROLES.COMPANY:
-              router.push("/sponsor/offline/profile");
+            case USER.ROLES.SPONSOR:
+              router.push("/sponsor/scanner");
+              break;
+            case USER.ROLES.MANAGER:
+              router.push("/manager/badges");
               break;
             default:
               throw new Error(`Unknown USER TYPE: ${response.type}`);
