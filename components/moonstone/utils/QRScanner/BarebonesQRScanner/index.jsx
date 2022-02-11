@@ -96,7 +96,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
 
       <div
         ref={wrapperRef}
-        className="border-primary bg-primary flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid align-middle"
+        className="flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid border-primary bg-primary align-middle"
       >
         <canvas ref={canvasRef} className="rounded-2xl" />
       </div>

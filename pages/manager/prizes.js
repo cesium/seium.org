@@ -1,3 +1,3 @@
-export default function Placeholder(){
-  return null
+export default function Placeholder() {
+  return null;
 }
