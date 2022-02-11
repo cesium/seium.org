@@ -13,9 +13,8 @@ function BadgeButton({ text, val, setValue, selected }) {
   const changeVal = () => {
     if (!selected) setValue(!val);
   };
-  let onClick;
 
-  let button = (
+  return (
     <button
       className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"}
                         ${text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"}
@@ -26,29 +25,22 @@ function BadgeButton({ text, val, setValue, selected }) {
       {text}
     </button>
   );
-  return button;
 }
 
 function Badgedex() {
+  const { user } = useAuth();
   const [allBadges, updateAllBadges] = useState([]);
   const [all, updateAll] = useState(true);
   const [filter, updateFilter] = useState(null);
-  const [error, updateError] = useState(false);
-  const { user } = useAuth();
+  const [error, setError] = useState();
 
-  useEffect(() => requestBadges(), [allBadges]);
-  const requestBadges = () => {
+  useEffect(() => {
     getAllBadges()
       .then((response) => updateAllBadges(response.data))
-      .catch((_) => updateError(true));
-  };
-
-  const badges = (all ? allBadges : user.badges).filter(
-    (entry) => entry.type == filter || filter == null
-  );
-  const badgeComponents = badges.map((badge, id) => (
-    <Badge key={id} {...badge} />
-  ));
+      .catch((errors) => {
+        setError(errors);
+      });
+  }, []);
 
   return (
     <Dashboard
@@ -78,7 +70,11 @@ function Badgedex() {
         </div>
       </div>
       <div className="mt-8 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
-        {badgeComponents}
+        {(all ? allBadges : user.badges)
+          .filter((badge) => badge.type == filter || filter == null)
+          .map((badge) => (
+            <Badge key={badge.id} {...badge} />
+          ))}
       </div>
       {error && <ErrorMessage />}
     </Dashboard>
