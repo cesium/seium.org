@@ -32,6 +32,7 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@headlessui/react": "^1.4.2",
     "axios": "^0.25.0",
+    "jsqr": "^1.4.0",
     "next": "^12.0.9",
     "react": "17.0.2",
     "react-cool-inview": "^2.0.8",

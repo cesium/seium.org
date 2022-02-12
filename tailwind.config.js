@@ -23,6 +23,9 @@ module.exports = {
         tertiary: "#063D66",
         quaternary: "#0085A6",
         quinary: "#36DBEE",
+        success: "#008F05",
+        failure: "#A30E00",
+        warning: "#E09200",
       },
       fontFamily: {
         iblack: ["Inter-Black"],
