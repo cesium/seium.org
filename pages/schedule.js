@@ -15,7 +15,7 @@ function Index() {
     <Navbar bgColor="tertiary" button="quinary" fgColor="black">
       <Hero />
       <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
-        <div className="py-24" />
+        <div className="pb-24" />
       </Schedule>
       <Footer color={bg} />
     </Navbar>

@@ -108,15 +108,6 @@ export default function Schedule(props) {
   const [filters, updateFilters] = useState(defaultFilter);
   const [hasFocusedElem, updateHasFocused] = useState(false);
 
-  const table = (
-    <Table
-      detailed={props.detailed}
-      date={date}
-      hash={hash}
-      filters={filters}
-      updateHasFocused={updateHasFocused}
-    />
-  );
   if (props.updateHasFocused !== undefined)
     props.updateHasFocused(hasFocusedElem);
 
@@ -165,29 +156,34 @@ export default function Schedule(props) {
       updateDate(new_date);
   };
 
-  const day = (
-    <Day
-      date={date}
-      previousDay={previous_day}
-      nextDay={next_day}
-      hasFocusedElem={hasFocusedElem}
-      showFilters={props.detailed}
-      filters={filters}
-      updateFilters={props.detailed ? updateFilters : () => {}}
-    />
-  );
-
   return (
     <div
-      className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} relative z-50 pt-60`}
+      className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} relative z-50 pt-20 md:pt-60`}
     >
       <div
         className={`${styles.leftGridElem} ${styles.responsiveCentered} mb-10 `}
       >
-        <div className="sticky top-12">{day}</div>
+        <div className="sm sticky top-12">
+          <Day
+            date={date}
+            previousDay={previous_day}
+            nextDay={next_day}
+            hasFocusedElem={hasFocusedElem}
+            showFilters={props.detailed}
+            filters={filters}
+            updateFilters={props.detailed ? updateFilters : () => {}}
+          />
+        </div>
       </div>
-
-      <div className={`${styles.rightGridElem}`}>{table}</div>
+      <div className={`${styles.rightGridElem}`}>
+        <Table
+          detailed={props.detailed}
+          date={date}
+          hash={hash}
+          filters={filters}
+          updateHasFocused={updateHasFocused}
+        />
+      </div>
       {props.children}
     </div>
   );
