@@ -9,18 +9,10 @@ function Tab({ tabName, selected, onSelect }) {
     "text-center w-60 font-imedium text-white text-lg md:text-2xl pt-3 cursor-pointer";
   const classes2 = "w-full pt-4 border-solid border-b-[10px]";
 
-  if (selected) {
-    return (
-      <div className={classes1} onClick={onSelect}>
-        {tabName}
-        <div className={classes2} />
-      </div>
-    );
-  }
   return (
     <div className={classes1} onClick={onSelect}>
       {tabName}
-      <div className={`opacity-20 ${classes2}`} />
+      <div className={selected ? classes2 : `opacity-20 ${classes2}`} />
     </div>
   );
 }
