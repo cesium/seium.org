@@ -186,7 +186,7 @@ function WheelPage() {
               }}
             >
               <p className="font-ibold font-bold">SPIN THE WHEEL</p>
-              <p className="font-iregular">10 tokens💰</p>
+              <p className="font-iregular">20 tokens💰</p>
             </button>
           </div>
         </div>
