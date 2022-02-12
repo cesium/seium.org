@@ -160,10 +160,10 @@
         "description": ""
       },
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "TBA",
-        "company": "UMINHO",
+        "id": "antonionestor",
+        "name": "António Nestor",
+        "role": "Profesor",
+        "company": "Universidade do Minho",
         "talk": "Panel Discussion. 17h",
         "linkedin": "",
         "github": "",
@@ -171,10 +171,10 @@
         "href": ""
       },
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "TBA",
-        "company": "UMINHO",
+        "id": "jbb",
+        "name": "José Bernardo Barros",
+        "role": "Profesor",
+        "company": "Universidade do Minho",
         "talk": "Panel Discussion. 17h",
         "linkedin": "",
         "github": "",
@@ -182,21 +182,10 @@
         "href": ""
       },
       {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "TBA",
-        "company": "UMINHO",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "",
-        "github": "",
-        "twitter": "",
-        "href": ""
-      },
-      {
-        "id": "tbd",
-        "name": "TBA",
-        "role": "TBA",
-        "company": "UMINHO",
+        "id": "saraiva",
+        "name": "João Saraiva",
+        "role": "Professor",
+        "company": "Universidade do Minho",
         "talk": "Panel Discussion. 17h",
         "linkedin": "",
         "github": "",
