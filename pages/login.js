@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Fade from "react-reveal/Fade";
 
 import { useAuth, withoutAuth } from "/components/Auth";
-import Fade from "react-reveal/Fade";
 
 import Button from "/components/utils/Button";
 import Card from "/components/utils/Card";
@@ -14,15 +14,9 @@ import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
 function Login() {
-  const { errors, login } = useAuth();
+  const { errors, login, isLoading } = useAuth();
   const [email, updateEmail] = useState();
   const [password, updatePassword] = useState();
-  // const [loginTried, updateLoginTried] = useState(false);
-
-  // const requestLogin = async function () {
-  //   await login({ email, password });
-  //   // updateLoginTried(true);
-  // };
 
   const onFinish = (event) => {
     event.preventDefault();
@@ -63,7 +57,7 @@ function Login() {
               href="/forgot-password"
             />
             <Button
-              text="LET'S GO"
+              text={isLoading ? "Authenticating..." : "LET'S GO"}
               type="submit"
               customStyle="text-secondary bg-quinary border-quinary"
             />
