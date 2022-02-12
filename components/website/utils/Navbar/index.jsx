@@ -26,9 +26,14 @@ const userNavigation = (type) => {
     case USER.ROLES.ATTENDEE:
       return [{ name: "Dashboard", slug: "/attendee/profile" }];
     case USER.ROLES.MANAGER:
-      return [{ name: "Badges", slug: "/manager/badges" }];
+      return [
+        { name: "Give Badges", slug: "/manager/badges" },
+        { name: "Give Prizes", slug: "/manager/prizes" },
+      ];
     case USER.ROLES.SPONSOR:
       return [{ name: "Scanner", slug: "/sponsor/scanner" }];
+    default:
+      throw new Error(`Unknown USER TYPE: ${type}`);
   }
 };
 
