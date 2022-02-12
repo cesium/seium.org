@@ -9,10 +9,10 @@ export default function Speakers() {
   return (
     <div className="spacing flex flex-col justify-around bg-secondary pt-40 pb-20 lg:flex-row">
       <div className="mb-10 lg:w-1/2">
-        <h2 className="mb-8 font-iextrabold text-5xl text-white lg:text-6xl">
+        <h2 className="mb-8 font-iextrabold text-4xl text-white xs:text-5xl lg:text-6xl">
           Here’s a selection of this year’s speakers
         </h2>
-        <div className="w-80">
+        <div className="xs:w-70 w-60 sm:w-80">
           <Link href="/speakers" passHref>
             <Button
               text="MEET THE SPEAKERS"

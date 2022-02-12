@@ -9,7 +9,7 @@ const Animation = dynamic(() => import("./Animation"), { ssr: false });
 
 export default function Hero() {
   return (
-    <div className="bg-secondary">
+    <div className="overflow-hidden bg-secondary">
       <div className="spacing relative z-50 pb-32">
         <Animation />
         <div className="pt-2">
@@ -25,13 +25,13 @@ export default function Hero() {
                 />
               </a>
             </span>
-            <span className="pl-8 align-middle text-2xl text-white opacity-80">
+            <div className="pl-8 align-middle text-lg text-white opacity-80">
               3-5 people
-            </span>
+            </div>
           </div>
-          <div className="absolute left-0 mt-6 md:relative md:flex md:flex-row-reverse">
+          {/* <div className="absolute left-0 mt-6 md:relative md:flex md:flex-row-reverse">
             <Organization />
-          </div>
+          </div> */}
         </div>
         <div className="mt-40 grid md:grid md:grid-cols-2">
           <ExpectList />

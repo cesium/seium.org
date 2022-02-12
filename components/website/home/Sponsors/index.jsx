@@ -2,20 +2,30 @@ import { useState } from "react";
 
 import Image from "next/image";
 
-import Tab from "./Tab";
-
 import sponsors from "/data/sponsors.json";
+
+function Tab({ tabName, selected, onSelect }) {
+  const classes1 =
+    "text-center w-60 font-imedium text-white text-lg md:text-2xl pt-3 cursor-pointer";
+  const classes2 = "w-full pt-4 border-solid border-b-[10px]";
+
+  return (
+    <div className={classes1} onClick={onSelect}>
+      {tabName}
+      <div className={selected ? classes2 : `opacity-20 ${classes2}`} />
+    </div>
+  );
+}
 
 export default function Sponsors(props) {
   const [val, setValue] = useState(0);
 
   return (
     <div className="spacing bg-tertiary py-20 text-white">
-      <h2 className="flex justify-center py-10 text-center font-iextrabold text-6xl">
-        {" "}
-        Our amazing sponsors{" "}
+      <h2 className="flex justify-center py-10 text-center font-iextrabold text-4xl xs:text-5xl sm:text-6xl md:text-8xl">
+        Our amazing sponsors
       </h2>
-      <div className="flex justify-center">
+      <div className="mt-10 flex justify-center">
         <Tab
           tabName="Exclusive & Gold"
           selected={!val}
@@ -28,7 +38,7 @@ export default function Sponsors(props) {
         />
       </div>
 
-      <div className="flex flex-col justify-center pt-20 sm:pt-40 lg:flex-row">
+      <div className="flex flex-col justify-center pt-10 sm:pt-20 lg:flex-row">
         {sponsors[val].map((elem, key) => {
           return (
             <div
@@ -41,14 +51,13 @@ export default function Sponsors(props) {
             >
               <div className="grid w-full grid-cols-1 place-items-center py-[5%] lg:py-0 lg:px-[10%]">
                 <p className="pb-10 font-iextrabold text-2xl text-quinary lg:text-3xl">
-                  {" "}
                   {!val
                     ? key == 0
                       ? "Exclusive"
                       : "Gold"
                     : key == 0
                     ? "Silver"
-                    : "Bronze"}{" "}
+                    : "Bronze"}
                 </p>
                 <div
                   className={`${

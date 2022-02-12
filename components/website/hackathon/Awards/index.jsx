@@ -1,52 +1,55 @@
-function Prize({ place, prize }) {
+function Prize({ place, prize, description }) {
+  let abbreviation;
+  switch (place) {
+    case "1":
+      abbreviation = "st";
+      break;
+    case "2":
+      abbreviation = "nd";
+      break;
+    case "3":
+      abbreviation = "rd";
+      break;
+    default:
+      abbreviation = "th";
+      break;
+  }
+
   return (
-    <div>
-      <h3 className="text-2xl font-bold md:text-3xl">{place}</h3>
-      <p className="font-bold">{prize}</p>
+    <div className="mt-10 text-center font-ibold">
+      <h3 className="font-iextrabold text-3xl md:text-5xl">
+        {place}
+        <sup>{abbreviation}</sup> Place
+      </h3>
+      <p className="mt-10 text-4xl">🏆</p>
+      <p className="text-4xl">{prize}</p>
     </div>
   );
 }
 
 export default function Awards() {
   return (
-    <div className="w-full bg-quinary text-center">
-      <h2 className="relative pt-10 text-6xl font-bold md:w-full md:text-8xl">
+    <div className="w-full bg-quaternary pt-20 pb-10 text-center text-white">
+      <h2 className="relative font-ibold text-5xl md:w-full md:text-8xl ">
         Awards
       </h2>
-      <div className="spacing flex flex-col justify-center pt-20 pb-20 lg:flex-row">
-        <div className="grid w-full grid-cols-3 justify-items-center gap-y-8 gap-x-2 lg:gap-x-8">
+      <div className="spacing flex flex-col justify-center pt-10 lg:flex-row">
+        <div className="grid w-full grid-cols-1 justify-items-center gap-y-8 gap-x-2 md:grid-cols-3 lg:gap-x-8">
           <div>
-            <Prize
-              place={
-                <span>
-                  2<sup>nd</sup> place
-                </span>
-              }
-              prize="🏆 200€ in gift card"
-            />
+            <Prize place="1" prize="300€" />
           </div>
           <div>
-            <Prize
-              place={
-                <span>
-                  1<sup>st</sup> place
-                </span>
-              }
-              prize="🏆 300€ in gift card"
-            />
+            <Prize place="2" prize="200€" />
           </div>
           <div>
-            <Prize
-              place={
-                <span>
-                  3<sup>rd</sup> place
-                </span>
-              }
-              prize="🏆 100€ in gift card"
-            />
+            <Prize place="3" prize="100€" />
           </div>
         </div>
       </div>
+      <p className="text-ibold m-10 text-xl md:text-2xl">
+        All prizes ar divided in equal amounts amongst the winning team members.
+        Each member gets a &apos;Cartão Dá&apos; gift card!
+      </p>
     </div>
   );
 }

@@ -31,7 +31,7 @@ function BlockItem({
       )}
 
       {!coffeeBreak && (
-        <p className="xs:text-xl text-l font-iextrabold text-white">
+        <p className="text-l font-iextrabold text-white xs:text-xl">
           {startTime}-{endTime}
         </p>
       )}

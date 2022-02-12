@@ -3,7 +3,7 @@ import Button from "/components/utils/Button";
 export default function Pitch() {
   return (
     <div className="xl:9/12 w-full text-white lg:w-9/12">
-      <h2 className="text-4xl font-bold">Hackathon 2022</h2>
+      <h2 className="font-ibold text-4xl">Hackathon 2022</h2>
       <div className="mt-8">
         <p className="text-white">
           It will start at the end of the 18th of February and will run until

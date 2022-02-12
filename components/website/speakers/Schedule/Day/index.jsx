@@ -56,7 +56,10 @@ export default function Day(props) {
 
       <div className={`-mt-10 ${styles.dateWrapper}`}>
         <h5 className="font-ibold text-3xl text-quinary"> Happening on </h5>
-        <h2 className={`font-iextrabold text-white`}> {date_string} </h2>
+        <h2 className={`font-iextrabold text-5xl text-white sm:text-8xl`}>
+          {" "}
+          {date_string}{" "}
+        </h2>
       </div>
 
       <div className={`${styles.rightArrow} ${styles.arrowWrapper}`}>

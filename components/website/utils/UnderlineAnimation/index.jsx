@@ -54,7 +54,7 @@ export default function UnderlineAnimation({ children, text, afterText }) {
   }, [st]);
 
   return (
-    <span className="relative z-10 mt-4 inline-block h-auto w-auto leading-none">
+    <span className="relative z-10 inline-block h-auto w-auto leading-none md:mt-4">
       <span
         className="relative z-10 inline-block h-auto border-white md:border-b-8"
         onMouseEnter={() =>
