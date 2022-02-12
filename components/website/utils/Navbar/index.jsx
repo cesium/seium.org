@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import * as USER from "/lib/user";
+
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +21,16 @@ const navigation = [
   { name: "FAQs", slug: "/faq" },
 ];
 
-const userNavigation = [{ name: "Dashboard", slug: "/attendee/profile" }];
+const userNavigation = (type) => {
+  switch (type) {
+    case USER.ROLES.ATTENDEE:
+      return [{ name: "Dashboard", slug: "/attendee/profile" }];
+    case USER.ROLES.MANAGER:
+      return [{ name: "Badges", slug: "/manager/badges" }];
+    case USER.ROLES.SPONSOR:
+      return [{ name: "Scanner", slug: "/sponsor/scanner" }];
+  }
+};
 
 export default function Navbar({ bgColor, fgColor, button, children }) {
   const { user, isAuthenticated, logout } = useAuth();
@@ -85,7 +96,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             leaveTo="transform opacity-0 scale-95"
                           >
                             <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                              {userNavigation.map((item) => (
+                              {userNavigation(user.type).map((item) => (
                                 <Menu.Item key={item.name}>
                                   <Link passHref href={item.slug}>
                                     <a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -140,7 +151,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 </Disclosure.Button>
               ))}
               {isAuthenticated &&
-                userNavigation.map((item) => (
+                userNavigation(user.type).map((item) => (
                   <Disclosure.Button
                     key={item.slug}
                     as="a"
