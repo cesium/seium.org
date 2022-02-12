@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { referral } from "/lib/api";
 
 export default function CodeInput() {
   const [code, setCode] = useState("");
 
-  const sendCode = () => {};
+  const sendCode = () => {
+    referral(code)
+      .then((_) => {
+        alert("Code redeemed successfully");
+        setCode("");
+      })
+      .catch((_) => alert("An error occured"));
+  };
 
   return (
     <div className="pt-4">
