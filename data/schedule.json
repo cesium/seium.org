@@ -43,7 +43,7 @@
         "activityType": "Talk",
         "summary": "Passwordless FIDO2/Webauthn 101: Strong security meets great UX",
         "description": "The end of password-based authentication is near. Weak passwords are the cause of endless security breaches, and the constant reuse of the same password across different accounts is what keeps the clock ticking for the next breach to happen. The FIDO2 standard aims to replace passwords entirely, and there is a good deal of chance that it will succeed. It has gained significant momentum in the past couple of years, as all major browser and operating system vendors fully jumped on board. This talk will provide a deep dive of the FIDO2 and W3C WebAuthn standards, with the main focus on how to quickly implement it on any JVM/GraalVM based application using open-source FIDO Alliance conformant libraries. Best practices, including security token lifecycle management, will also be covered. Attendees should have basic knowledge in password usage and be able to identify the major problems with this system. Furthermore, attendees should be capable of bootstrapping a web application project and have basic knowledge on request routing and the basic principles of web security.",
-        "author": "Paulo Coelho",
+        "author": "Paulo Lopes",
         "location": "CP2-B1"
       },
       {
