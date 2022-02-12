@@ -7,7 +7,6 @@ export function withAuth(WrappedComponent) {
   return (props) => {
     const router = useRouter();
     const { user } = useAuth();
-    const component = <WrappedComponent {...props} />;
 
     if (!user) {
       router.replace("/login");
