@@ -1,5 +1,3 @@
-import { getRouteMatcher } from "next/dist/shared/lib/router/utils";
-
 function toHex(number) {
   var res = number.toString(16);
   res = res.length == 1 ? "0" + res : res;
@@ -12,7 +10,7 @@ export default function Wheel({ steps, angle }) {
   for (var i = 0; i < steps; i++) {
     colors.push((255.0 * i) / (steps - 1));
   }
-  const percentage = 100 / steps + "%";
+
   colors = colors.map((entry) => "#36DBEE" + toHex(entry));
 
   const styleGlobal = {
@@ -42,10 +40,12 @@ export default function Wheel({ steps, angle }) {
 
     return <div key={entry} style={st}></div>;
   });
-
   return (
     <div className="relative h-full w-full">
-      <div className="h-full w-full rounded-full" style={styleGlobal}>
+      <div
+        className="h-full w-full rounded-full bg-quinary"
+        style={styleGlobal}
+      >
         {borders}
       </div>
       <div className="absolute top-1/2 left-1/2 -ml-6 -mt-6 h-full w-full font-iregular text-5xl text-tertiary">
