@@ -17,33 +17,30 @@ export function withAuth(WrappedComponent) {
     switch (user.type) {
       case USER.ROLES.ATTENDEE:
         if (
-          router.pathname == "/attendee/profile" ||
-          router.pathname == "/attendee/wheel" ||
-          router.pathname == "/attendee/badgedex" ||
-          router.pathname == "/attendee/leaderboard" ||
-          router.pathname == "/attendee/awards"
+          ![
+            "/attendee/profile",
+            "/attendee/wheel",
+            "/attendee/badgedex",
+            "/attendee/leaderboard",
+            "/attendee/awards",
+          ].includes(router.pathname)
         ) {
-          return component;
-        } else {
-          router.replace("/404");
+          return router.replace("/404");
         }
       case USER.ROLES.MANAGER:
-        if (
-          router.pathname == "/manager/badges" ||
-          router.pathname == "/manager/wheel"
-        ) {
-          return component;
-        } else {
-          router.replace("/404");
+        if (!["/manager/badges", "/manager/wheel"].includes(router.pathname)) {
+          return router.replace("/404");
         }
       // case USER.ROLES.COMPANY:
-      //   if (router.pathname == "/manager/badges" ||
-      //       router.pathname == "/manager/wheel"   ) {
-      //     return component;
-      //   }
-      // else return null;
+      //   if (
+      //   ![
+      //     "/manager/badges",
+      //     "/manager/wheel",
+      //   ].includes(router.pathname)
+      // ) {
+      //   return router.replace("/404");
     }
 
-    return;
+    return <WrappedComponent {...props} />;
   };
 }
