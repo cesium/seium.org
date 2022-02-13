@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef } from "react";
 import Fade from "react-reveal/Fade";
 
 import { useAuth, withoutAuth } from "/components/Auth";
@@ -15,11 +15,15 @@ import Text from "/components/moonstone/authentication/Text";
 
 function Login() {
   const { errors, login, isLoading } = useAuth();
-  const [email, updateEmail] = useState();
-  const [password, updatePassword] = useState();
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
   const onFinish = (event) => {
     event.preventDefault();
+
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
     login({ email, password });
   };
 
@@ -38,7 +42,7 @@ function Login() {
               fgColor="white"
               bgColor="primary"
               autoComplete="email"
-              onChange={(e) => updateEmail(e.currentTarget.value)}
+              ref={emailRef}
             />
             <Input
               text="YOUR PASSWORD"
@@ -48,7 +52,7 @@ function Login() {
               fgColor="white"
               bgColor="primary"
               autoComplete="current-password"
-              onChange={(e) => updatePassword(e.currentTarget.value)}
+              ref={passwordRef}
             />
             <Text
               padding="6"
@@ -58,11 +62,12 @@ function Login() {
             />
             <Button
               text={isLoading ? "Authenticating..." : "LET'S GO"}
+              disabled={isLoading}
               type="submit"
               customStyle="text-secondary bg-quinary border-quinary"
             />
             {errors && (
-              <p className="text-center text-red-700">
+              <p className="text-error text-center">
                 Incorrect e-mail or password
               </p>
             )}
@@ -70,7 +75,7 @@ function Login() {
         </div>
         <Text
           text="Don’t have an account?"
-          link="Signup here"
+          link="Register here"
           href="https://sei22.eventbrite.pt"
         />
         <div className="absolute bottom-0 right-60 hidden lg:block">
