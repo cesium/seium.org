@@ -16,6 +16,7 @@ export function AuthProvider({ children }) {
   const [errors, setErrors] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [isFirstLoading, setFirstLoading] = useState(true);
+  const [needsRefetch, setRefetch] = useState(true);
 
   useEffect(() => {
     const jwt = localStorage.getItem(TOKEN_KEY_NAME);
@@ -40,21 +41,7 @@ export function AuthProvider({ children }) {
         delete API.defaults.headers.common["Authorization"];
       })
       .finally(() => setFirstLoading(false));
-  }, [token]);
-
-  function refreshUser() {
-    api
-      .getCurrentUser()
-      .then((response) => {
-        setUser(response);
-      })
-      .catch((_errors) => {
-        // It means the jwt is expired
-        localStorage.clear();
-        delete API.defaults.headers.common["Authorization"];
-        setUser(null);
-      });
-  }
+  }, [token, needsRefetch]);
 
   function login({ email, password }) {
     setLoading(true);
@@ -113,17 +100,22 @@ export function AuthProvider({ children }) {
       .finally(() => setLoading(false));
   }
 
+  function refetchUser() {
+    setRefetch((needsRefetch) => !needsRefetch);
+  }
+
   // Make the provider update only when it should
   const values = useMemo(
     () => ({
       user,
       isAuthenticated,
       isLoading,
+      setUser,
       errors,
       login,
       logout,
       editUser,
-      refreshUser,
+      refetchUser,
     }),
     // eslint-disable-next-line
     [user, isAuthenticated, isLoading, errors]

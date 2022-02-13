@@ -44,7 +44,7 @@ function WheelPage() {
   const angleSpeed = 20;
   const [st, updateState] = useState(defaultState);
 
-  const { user, refreshUser } = useAuth();
+  const { user, refetchUser } = useAuth();
 
   const [prizes, updatePrizes] = useState([]);
   const [latestWins, updateLatestWins] = useState([]);
@@ -121,7 +121,7 @@ function WheelPage() {
       })
       .finally((_) => {
         requestAllInfo();
-        refreshUser();
+        refetchUser();
       });
   };
 
