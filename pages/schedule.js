@@ -8,16 +8,13 @@ import Schedule from "/components/website/utils/Schedule";
 import Footer from "/components/website/utils/Footer";
 
 function Index() {
-  const [hasFocusedElem, updateHasFocused] = useState();
-  const bg = hasFocusedElem ? "secondary" : "tertiary";
-
   return (
     <Navbar bgColor="tertiary" button="quinary" fgColor="black">
       <Hero />
-      <Schedule color={bg} detailed={true} updateHasFocused={updateHasFocused}>
+      <Schedule color="tertiary" detailed={true}>
         <div className="pb-24" />
       </Schedule>
-      <Footer color={bg} />
+      <Footer color="tertiary" />
     </Navbar>
   );
 }
