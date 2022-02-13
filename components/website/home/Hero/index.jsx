@@ -16,17 +16,17 @@ const Animation = dynamic(() => import("../Animation"), { ssr: false });
 export default function Hero() {
   const { isAuthenticated } = useAuth();
   return (
-    <div className=" bg-secondary">
-      <div className="spacing relative z-40 pb-32">
+    <div className="bg-secondary">
+      <div className="relative z-40 pb-32 spacing">
         <Animation />
         <div className="pt-2">
           <Title />
         </div>
-        <div className="relative mt-20 grid grid-cols-2">
-          <div className="absolute left-0 text-white">
+        <div className="relative grid grid-cols-2 mt-20">
+          <div className="absolute left-0 z-50 text-white">
             <h5 className="text-md font-imedium">Follow us on</h5>
             <Social />
-            <div className="absolute left-0 mt-10 block xl:hidden">
+            <div className="absolute left-0 block mt-10 xl:hidden">
               <Organization />
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function Hero() {
             </div>
           )}
         </div>
-        <div className="mt-60 grid md:grid md:grid-cols-2 xl:mt-40">
+        <div className="grid mt-60 md:grid md:grid-cols-2 xl:mt-40">
           <ExpectList />
           <div className="h-20 md:hidden"></div> {/* just spacing */}
           <Pitch />
