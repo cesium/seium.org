@@ -50,7 +50,6 @@ export function AuthProvider({ children }) {
       .sign_up(fields)
       .then(({ jwt }) => {
         localStorage.setItem(TOKEN_KEY_NAME, jwt);
-        setToken(jwt);
         API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
         api.getCurrentUser().then((response) => {
           setUser(response);
@@ -86,7 +85,6 @@ export function AuthProvider({ children }) {
       .sign_in({ email, password })
       .then(({ jwt }) => {
         localStorage.setItem(TOKEN_KEY_NAME, jwt);
-        setToken(jwt);
         API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
         api.getCurrentUser().then((response) => {
           setUser(response);
