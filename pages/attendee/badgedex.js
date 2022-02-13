@@ -70,11 +70,18 @@ function Badgedex() {
         </div>
       </div>
       <div className="mt-8 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
-        {(all ? allBadges : user.badges)
+        {user.badges
           .filter((badge) => badge.type == filter || filter == null)
           .map((badge) => (
             <Badge key={badge.id} {...badge} />
           ))}
+        {all &&
+          allBadges
+            .filter((badge) => !user.badges.includes(badge))
+            .filter((badge) => badge.type == filter || filter == null)
+            .map((badge) => (
+              <Badge key={badge.id} opacity="opacity-30" {...badge} />
+            ))}
       </div>
       {error && <ErrorMessage />}
     </Dashboard>
