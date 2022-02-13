@@ -108,7 +108,7 @@ export function AuthProvider({ children }) {
     api
       .editUser(user.id, nickname)
       .then((at) => {
-        setUser((oldUser) => ({ ...oldUser, attendee: at }));
+        setUser((oldUser) => ({ ...oldUser, ...at }));
       })
       .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
