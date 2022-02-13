@@ -43,20 +43,6 @@ export function AuthProvider({ children }) {
       .finally(() => setFirstLoading(false));
   }, [token, needsRefetch]);
 
-  function refreshUser() {
-    api
-      .getCurrentUser()
-      .then((response) => {
-        setUser(response);
-      })
-      .catch((_errors) => {
-        // It means the jwt is expired
-        localStorage.clear();
-        delete API.defaults.headers.common["Authorization"];
-        setUser(null);
-      });
-  }
-
   function login({ email, password }) {
     setLoading(true);
 
@@ -129,7 +115,6 @@ export function AuthProvider({ children }) {
       login,
       logout,
       editUser,
-      refreshUser,
       refetchUser,
     }),
     // eslint-disable-next-line
