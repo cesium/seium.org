@@ -57,7 +57,7 @@ function Profile() {
           <Heading text="User Profile">
             <div className="w-auto">
               <button
-                className="w-full items-center rounded-full border border-quinary bg-quinary py-1 text-center font-iregular text-sm text-secondary shadow-sm"
+                className="w-full items-center rounded-full border border-quinary bg-quinary py-1 px-2 text-center font-iregular text-sm text-secondary shadow-sm"
                 onClick={() => {
                   if (editing) {
                     editUser(username);
@@ -109,19 +109,19 @@ function Profile() {
 
             <div className="grid-cols-2 overflow-hidden">
               <div className="col-span-1 float-left w-1/2 font-iregular">
-                💰{user.token_balance} Tokens
+                💰 {user.token_balance} Tokens
               </div>
               <div className="col-span-1 float-left w-1/2 font-iregular">
-                🏅{user.badge_count} Badges
+                🏅 {user.badge_count} Badges
               </div>
             </div>
 
             <div className="mt-4 grid-cols-2 overflow-hidden">
               <div className="col-span-1 float-left w-1/2 font-iregular">
-                🏆{user.entries} Entries Final Draw
+                🏆 {user.entries} Entries Final Draw
               </div>
               <div className="col-span-1 float-left w-1/2 font-iregular">
-                🏁Level {level} Checkpoint
+                🏁 Level {level} Checkpoint
               </div>
             </div>
           </div>
@@ -173,7 +173,7 @@ function Profile() {
 
             <a
               href="mailto:cv@seium.org"
-              className="inline-block h-auto pl-6 pb-5 text-quinary underline"
+              className="mt-5 inline-block h-auto rounded-full bg-quinary px-5 py-3 text-center font-iregular"
             >
               SEND YOUR CV
             </a>
@@ -185,44 +185,3 @@ function Profile() {
 }
 
 export default withAuth(Profile);
-
-/*
-<div className="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:pt-5">
-              <div className="mt-1 sm:col-span-2 sm:mt-0">
-                <div className="flex max-w-lg justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
-                  <div className="space-y-1 text-center">
-                    <svg
-                      className="mx-auto h-12 w-12 text-gray-400"
-                      stroke="currentColor"
-                      fill="none"
-                      viewBox="0 0 48 48"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    <div className="flex text-sm text-gray-600">
-                      <label
-                        htmlFor="file-upload"
-                        className="hover:text-quintary relative cursor-pointer rounded-md bg-white font-medium text-quinary"
-                      >
-                        <span>Upload a file</span>
-                        <input
-                          id="file-upload"
-                          name="file-upload"
-                          type="file"
-                          className="sr-only"
-                        />
-                      </label>
-                      <p className="pl-1">or drag and drop</p>
-                    </div>
-                    <p className="text-xs text-gray-500">PDF</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-*/

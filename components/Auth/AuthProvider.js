@@ -106,7 +106,7 @@ export function AuthProvider({ children }) {
     setLoading(true);
 
     api
-      .editUser(user.attendee.id)
+      .editUser(user.id, nickname)
       .then((at) => {
         setUser((oldUser) => ({ ...oldUser, attendee: at }));
       })

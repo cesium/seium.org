@@ -8,6 +8,7 @@ export default function Input({
   fgColor,
   bgColor,
   onChange,
+  enabled,
 }) {
   return (
     <div>
@@ -27,6 +28,7 @@ export default function Input({
           required
           className={`text-iregular text-${fgColor} bg-${bgColor} block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm focus:outline-none sm:text-sm`}
           onChange={onChange}
+          disabled={enabled == false}
         />
       </div>
     </div>
