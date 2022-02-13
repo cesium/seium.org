@@ -13,7 +13,7 @@ export function withAuth(WrappedComponent) {
       return null;
     }
 
-    switch (user.type) {
+    /*switch (user.type) {
       case USER.ROLES.ATTENDEE:
         if (
           ![
@@ -23,13 +23,15 @@ export function withAuth(WrappedComponent) {
             "/attendee/leaderboard",
             "/attendee/store",
             "/attendee/vault",
-          ].includes(router.pathname)
+            "/attendees"
+          ].filter(str => str.startsWith(router.pathname)).length //Because of dynamic routes we can't just check for equality
         ) {
           return router.replace("/404");
         }
         break;
       case USER.ROLES.MANAGER:
-        if (!["/manager/badges", "/manager/prizes"].includes(router.pathname)) {
+        if (!["/manager/badges", "/manager/prizes", "/attendees"]
+            .filter(str => str.startsWith(router.pathname)).length) { //Because of dynamic routes we can't just check for equality {
           return router.replace("/404");
         }
         break;
@@ -42,7 +44,7 @@ export function withAuth(WrappedComponent) {
       // ) {
       //   return router.replace("/404");
     }
-
+*/
     return <WrappedComponent {...props} />;
   };
 }

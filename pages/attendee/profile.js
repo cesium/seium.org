@@ -52,6 +52,7 @@ function Profile() {
       title={`Hello, ${getFirstName(user.name)} 👋`}
       description={`Welcome to your profile!`}
     >
+      {JSON.stringify(user)}
       <div className="mt-12 grid-cols-2 overflow-hidden">
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile">
