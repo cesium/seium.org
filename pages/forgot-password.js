@@ -1,9 +1,10 @@
 import Fade from "react-reveal/Fade";
 
-import Button from "/components/utils/Button";
+import ImageButton from "/components/moonstone/utils/ImageButton";
 import Card from "/components/utils/Card";
 
 import { withoutAuth } from "/components/Auth";
+import { useAuth } from "/components/Auth/useAuth";
 import { useState } from "react";
 
 import Return from "/components/moonstone/utils/Return";
@@ -21,16 +22,23 @@ function ForgotPassword() {
     False -> Error occured sending email
 
     */
-  const [st, updateState] = useState(null);
+  const [success, updateSuccess] = useState(null);
+  const [email, updateEmail] = useState("");
+  const { errors, isLoading, sendResetEmail } = useAuth();
+
+  function onSubmit(event) {
+    sendResetEmail({ email });
+    updateSuccess(errors === null);
+  }
 
   return (
     <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20" />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Reset password" />
-        {st != true ? (
+        {!success && (
           <div className="mt-8">
-            <Form>
+            <Form onSubmit={onSubmit}>
               <Input
                 text="YOUR EMAIL"
                 id="email"
@@ -39,44 +47,41 @@ function ForgotPassword() {
                 fgColor="white"
                 bgColor="primary"
                 autoComplete="email"
+                onChange={(e) => updateEmail(e.currentTarget.value)}
               />
-              <Button
+              <ImageButton
                 type="submit"
-                text="LET'S GO"
+                text="LET’S GO"
                 customStyle="text-secondary bg-quinary border-quinary"
+                imageSrc={isLoading ? "/images/loading.gif" : ""}
+                imageAlt="HANG TIGHT..."
               />
             </Form>
           </div>
-        ) : (
-          <></>
         )}
-        {st == false ? (
+
+        {success == false && (
           <p className="mt-10 font-iregular text-red-600">
             An error has occured. Please make sure the email you provided is
             correct and try again later
           </p>
-        ) : (
-          <></>
         )}
 
-        {st == true ? (
+        {success && (
           <p className="mt-10 font-iregular text-quinary">
-            An email has bent sent. Please check your inbox to recover your
+            An email has bent sent. Please check your inbox to reset your
             password
           </p>
-        ) : (
-          <></>
         )}
 
-        {st != true ? (
+        {!success && (
           <Text
             text="Don’t have an account?"
             link="Signup here"
-            href="/signup"
+            href="https://sei22.eventbrite.pt"
           />
-        ) : (
-          <></>
         )}
+
         <div className="absolute bottom-0 right-60 hidden lg:block">
           <Fade bottom>
             <Card
@@ -84,8 +89,7 @@ function ForgotPassword() {
               alt="MascotFooter"
               inverted={false}
             >
-              Just really awesome people here. Please login and prepare to be
-              amazed. 🔮
+              Happens to the best of us, don’t worry
             </Card>
           </Fade>
         </div>
