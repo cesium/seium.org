@@ -67,7 +67,7 @@ function Login() {
               customStyle="text-secondary bg-quinary border-quinary"
             />
             {errors && (
-              <p className="text-error text-center">
+              <p className="text-center text-failure">
                 Incorrect e-mail or password
               </p>
             )}

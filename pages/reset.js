@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { withoutAuth } from "/components/Auth";
-import { useAuth } from "/components/Auth/useAuth";
+
+import { resetPasswordWithToken } from "/lib/api";
 
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
@@ -15,10 +16,7 @@ import Form from "/components/moonstone/utils/Form";
 import Input from "/components/moonstone/utils/Input";
 
 import Title from "/components/moonstone/authentication/Title";
-
-function checkPasswordStrength(password) {
-  return password.length >= 8;
-}
+import is from "sharp/lib/is";
 
 export async function getServerSideProps({ query }) {
   if (query.token === undefined) {
@@ -36,30 +34,36 @@ function Reset() {
   const router = useRouter();
   const { token } = router.query;
 
-  /*
-
-    Null  -> No reset yet
-    True  -> Reset successful
-    False -> Reset failed
-
-    */
   const [success, updateSuccess] = useState(null);
-  const [password, updatePassword] = useState("");
-  const [passwordConfirmation, updatePasswordConfirmation] = useState("");
-  const [errorMsg, updateErrorMsg] = useState("");
-  const { errors, isLoading, resetPassword } = useAuth();
+  const [isLoading, setLoading] = useState(false);
+  const passwordRef = useRef(null);
+  const passwordConfirmationRef = useRef(null);
+  const [errorMsg, updateErrorMsg] = useState(null);
 
   function onSubmit(event) {
     event.preventDefault();
 
-    if (password !== passwordConfirmation)
+    const password = passwordRef.current.value;
+    const passwordConfirmation = passwordConfirmationRef.current.value;
+
+    if (password !== passwordConfirmation) {
       updateErrorMsg("The passwords must match");
-    else if (!checkPasswordStrength(password))
-      updateErrorMsg("The password isn't strong enough");
-    else {
-      resetPassword({ token, password });
-      updateSuccess(errors === null);
+      return null;
     }
+
+    if (password.length < 7) {
+      updateErrorMsg("The password isn't strong enough");
+      return null;
+    }
+
+    setLoading(true);
+
+    resetPasswordWithToken({ token, password })
+      .then(() => updateSuccess(true))
+      .catch(() => updateSuccess(false))
+      .finally(() => {
+        setLoading(false);
+      });
   }
 
   return (
@@ -78,7 +82,7 @@ function Reset() {
               autoComplete="current-password"
               fgColor="white"
               bgColor="primary"
-              onChange={(e) => updatePassword(e.currentTarget.value)}
+              ref={passwordRef}
             />
             <Input
               text="CONFIRM PASSWORD"
@@ -88,11 +92,9 @@ function Reset() {
               autoComplete="current-password"
               fgColor="white"
               bgColor="primary"
-              onChange={(e) =>
-                updatePasswordConfirmation(e.currentTarget.value)
-              }
+              ref={passwordConfirmationRef}
             />
-            <p className="mt-10 mb-10 text-center font-iregular text-red-700">
+            <p className="mt-10 mb-10 text-center font-iregular text-failure">
               {errorMsg}
             </p>
             <ImageButton
@@ -101,27 +103,28 @@ function Reset() {
               customStyle="text-secondary bg-quinary border-quinary"
               imageSrc={isLoading ? "/images/loading.gif" : ""}
               imageAlt="HANG TIGHT..."
+              disabled={isLoading}
             />
           </Form>
         )}
 
         {success === false && (
           <p className="mt-10 mb-10 text-center font-iregular text-red-700">
-            An error has occured. Please try again later
+            An error has occurred. Please try again later.
           </p>
         )}
 
-        {success === true && (
+        {success && (
           <>
             <p className="mt-10 mb-10 font-iregular text-quinary">
-              Password reset successfully
+              Password reset successfully!
             </p>
             <div className="w-96">
               <Link href="/login" passHref>
                 <a>
                   <Button
                     type=""
-                    text="BACK TO MOONSTONE"
+                    text="BACK TO LOGIN"
                     customStyle="text-secondary bg-quinary border-quinary"
                   />
                 </a>
@@ -137,7 +140,7 @@ function Reset() {
               alt="MascotFooter"
               inverted={false}
             >
-              Try not to forget your password
+              Try to not forget your password
             </Card>
           </Fade>
         </div>
