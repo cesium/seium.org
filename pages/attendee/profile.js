@@ -81,6 +81,15 @@ function Profile() {
           </div>
           <Form>
             <Input
+              text="NAME"
+              id="name"
+              name="name"
+              value={user.name || ""}
+              bgColor="white"
+              fgColor="black"
+              enabled={false}
+            />
+            <Input
               text="USERNAME"
               id="username"
               name="username"

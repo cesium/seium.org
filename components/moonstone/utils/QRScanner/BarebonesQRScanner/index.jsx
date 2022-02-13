@@ -6,7 +6,6 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
   const videoRef = useRef(null);
   const wrapperRef = useRef(null);
   const animationFrameRef = useRef();
-  var animationFrame = null;
 
   useEffect(() => {
     const video = videoRef.current;

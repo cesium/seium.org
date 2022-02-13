@@ -12,11 +12,20 @@ export function AuthProvider({ children }) {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [isAuthenticated, setAuthenticated] = useState(false);
-  const [token, setToken] = useState(null);
   const [errors, setErrors] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [isFirstLoading, setFirstLoading] = useState(true);
   const [needsRefetch, setRefetch] = useState(true);
+
+  useEffect(() => {
+    if (user) {
+      setAuthenticated(true);
+    } else {
+      setAuthenticated(false);
+    }
+
+    setLoading(false);
+  }, [user]);
 
   useEffect(() => {
     const jwt = localStorage.getItem(TOKEN_KEY_NAME);
@@ -32,8 +41,6 @@ export function AuthProvider({ children }) {
       .getCurrentUser()
       .then((response) => {
         setUser(response);
-        setAuthenticated(true);
-        setToken(jwt);
       })
       .catch((_errors) => {
         // It means the jwt is expired
@@ -41,35 +48,18 @@ export function AuthProvider({ children }) {
         delete API.defaults.headers.common["Authorization"];
       })
       .finally(() => setFirstLoading(false));
-  }, [token, needsRefetch]);
+  }, [needsRefetch]);
 
-  function sign_up(name, email, password, password_confirmation, username, id) {
-    api
-      .sign_up(email, password, password_confirmation, name, username, id)
-      .then((response) => {
-        API.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${response.data.jwt}`;
-        setToken(response.data.jwt);
-        refetchUser();
-        alert(JSON.stringify(response.data));
-      })
-      .catch((errors) => setErrors(errors));
-  }
-
-  function login({ email, password }) {
+  function sign_up(fields) {
     setLoading(true);
 
     api
-      .sign_in({ email, password })
+      .sign_up(fields)
       .then(({ jwt }) => {
         localStorage.setItem(TOKEN_KEY_NAME, jwt);
-        setToken(jwt);
         API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
         api.getCurrentUser().then((response) => {
           setUser(response);
-          setAuthenticated(true);
-          setToken(jwt);
           switch (response.type) {
             case USER.ROLES.ATTENDEE:
               router.push("/attendee/profile");
@@ -88,8 +78,38 @@ export function AuthProvider({ children }) {
       .catch((error) => {
         setErrors(error);
         setUser(undefined);
+      });
+  }
+
+  function login({ email, password }) {
+    setLoading(true);
+
+    api
+      .sign_in({ email, password })
+      .then(({ jwt }) => {
+        localStorage.setItem(TOKEN_KEY_NAME, jwt);
+        API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
+        api.getCurrentUser().then((response) => {
+          setUser(response);
+          switch (response.type) {
+            case USER.ROLES.ATTENDEE:
+              router.push("/attendee/profile");
+              break;
+            case USER.ROLES.SPONSOR:
+              router.push("/sponsor/scanner");
+              break;
+            case USER.ROLES.MANAGER:
+              router.push("/manager/badges");
+              break;
+            default:
+              throw new Error(`Unknown USER TYPE: ${response.type}`);
+          }
+        });
       })
-      .finally(() => setLoading(false));
+      .catch((error) => {
+        setErrors(error);
+        setUser(undefined);
+      });
   }
 
   function logout() {
@@ -97,9 +117,7 @@ export function AuthProvider({ children }) {
     localStorage.clear();
     delete API.defaults.headers.common["Authorization"];
     setUser(undefined);
-    setAuthenticated(false);
     router.push("/");
-    setLoading(false);
   }
 
   function editUser(nickname) {
@@ -110,8 +128,10 @@ export function AuthProvider({ children }) {
       .then((at) => {
         setUser((oldUser) => ({ ...oldUser, ...at }));
       })
-      .catch((error) => setErrors(error?.data?.errors))
-      .finally(() => setLoading(false));
+      .catch((errors) => {
+        setUser(undefined);
+        setErrors(errors);
+      });
   }
 
   function refetchUser() {
