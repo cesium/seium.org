@@ -23,6 +23,8 @@ export function AuthProvider({ children }) {
     } else {
       setAuthenticated(false);
     }
+
+    setLoading(false);
   }, [user]);
 
   useEffect(() => {
@@ -76,8 +78,7 @@ export function AuthProvider({ children }) {
       .catch((error) => {
         setErrors(error);
         setUser(undefined);
-      })
-      .finally(() => setLoading(false));
+      });
   }
 
   function login({ email, password }) {
@@ -108,8 +109,7 @@ export function AuthProvider({ children }) {
       .catch((error) => {
         setErrors(error);
         setUser(undefined);
-      })
-      .finally(() => setLoading(false));
+      });
   }
 
   function logout() {
@@ -118,7 +118,6 @@ export function AuthProvider({ children }) {
     delete API.defaults.headers.common["Authorization"];
     setUser(undefined);
     router.push("/");
-    setLoading(false);
   }
 
   function editUser(nickname) {
@@ -129,8 +128,10 @@ export function AuthProvider({ children }) {
       .then((at) => {
         setUser((oldUser) => ({ ...oldUser, ...at }));
       })
-      .catch((error) => setErrors(error?.data?.errors))
-      .finally(() => setLoading(false));
+      .catch((errors) => {
+        setUser(undefined);
+        setErrors(errors);
+      });
   }
 
   function refetchUser() {
