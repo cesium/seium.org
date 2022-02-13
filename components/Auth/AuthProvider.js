@@ -102,13 +102,13 @@ export function AuthProvider({ children }) {
     setLoading(false);
   }
 
-  function editUser(values) {
+  function editUser(nickname) {
     setLoading(true);
 
     api
-      .editUser(values)
-      .then((user) => {
-        setUser((oldUser) => ({ ...oldUser, ...user }));
+      .editUser(user.id, nickname)
+      .then((at) => {
+        setUser((oldUser) => ({ ...oldUser, ...at }));
       })
       .catch((error) => setErrors(error?.data?.errors))
       .finally(() => setLoading(false));
