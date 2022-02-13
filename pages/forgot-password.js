@@ -31,7 +31,7 @@ function ForgotPassword() {
   }
 
   return (
-    <div className="bg-secondary min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20" />
       <div className="my-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Reset password" />
@@ -61,14 +61,14 @@ function ForgotPassword() {
         )}
 
         {success == false && (
-          <p className="font-iregular mt-10 text-red-600">
+          <p className="mt-10 font-iregular text-red-600">
             An error has occured. Please make sure the email you provided is
             correct and try again later
           </p>
         )}
 
         {success && (
-          <p className="font-iregular text-quinary mt-10">
+          <p className="mt-10 font-iregular text-quinary">
             An email has bent sent. Please check your inbox to reset your
             password
           </p>

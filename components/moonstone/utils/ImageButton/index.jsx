@@ -15,13 +15,13 @@ export default function ImageButton({
   return (
     <button
       type={type}
-      className={`${customStyle} font-iregular relative w-full items-center rounded-full border text-center text-sm shadow-sm`}
+      className={`${customStyle} relative w-full items-center rounded-full border text-center font-iregular text-sm shadow-sm`}
       disabled={disabled}
     >
       <p
         className={`${
           imageSrc ? "invisible" : "visible"
-        } font-iregular mx-4 my-4 text-sm`}
+        } mx-4 my-4 font-iregular text-sm`}
       >
         {text}
       </p>

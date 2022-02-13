@@ -67,7 +67,7 @@ function Reset() {
   }
 
   return (
-    <div className="bg-secondary min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20 mb-20" />
       <div className="flex flex-col items-center justify-center sm:mt-40">
         <Title text="Recover your password" />
@@ -94,7 +94,7 @@ function Reset() {
               bgColor="primary"
               ref={passwordConfirmationRef}
             />
-            <p className="font-iregular text-failure mt-10 mb-10 text-center">
+            <p className="mt-10 mb-10 text-center font-iregular text-failure">
               {errorMsg}
             </p>
             <ImageButton
@@ -109,14 +109,14 @@ function Reset() {
         )}
 
         {success === false && (
-          <p className="font-iregular mt-10 mb-10 text-center text-red-700">
+          <p className="mt-10 mb-10 text-center font-iregular text-red-700">
             An error has occurred. Please try again later.
           </p>
         )}
 
         {success && (
           <>
-            <p className="font-iregular text-quinary mt-10 mb-10">
+            <p className="mt-10 mb-10 font-iregular text-quinary">
               Password reset successfully!
             </p>
             <div className="w-96">
