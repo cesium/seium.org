@@ -94,6 +94,9 @@ export default function Footer(props) {
             <Link passHref href="/docs/contingency-plan.pdf">
               <a className="hover:underline">Contingency Plan</a>
             </Link>
+            <Link passHref href="/docs/survival.pdf">
+              <a className="hover:underline">Survival Guide</a>
+            </Link>
           </div>
           <div className="flex justify-center lg:justify-end">
             <div className="mt-10 text-white sm:w-1/2 lg:mt-0">
