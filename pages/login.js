@@ -28,7 +28,7 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden bg-secondary">
+    <div className="bg-secondary min-h-screen overflow-hidden">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Log in" />
@@ -67,7 +67,7 @@ function Login() {
               customStyle="text-secondary bg-quinary border-quinary"
             />
             {errors && (
-              <p className="text-error text-center">
+              <p className="text-failure text-center">
                 Incorrect e-mail or password
               </p>
             )}

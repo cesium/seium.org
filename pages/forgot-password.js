@@ -1,40 +1,39 @@
-import Fade from "react-reveal/Fade";
+import { useState, useRef } from "react";
+import { withoutAuth } from "/components/Auth";
+import { sendResetEmail } from "/lib/api";
 
+import Fade from "react-reveal/Fade";
 import ImageButton from "/components/moonstone/utils/ImageButton";
 import Card from "/components/utils/Card";
-
-import { withoutAuth } from "/components/Auth";
-import { useAuth } from "/components/Auth/useAuth";
-import { useState } from "react";
-
 import Return from "/components/moonstone/utils/Return";
 import Form from "/components/moonstone/utils/Form";
 import Input from "/components/moonstone/utils/Input";
-
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
 function ForgotPassword() {
-  /*
-
-    Null  -> No email sent
-    True  -> Email sent successfully
-    False -> Error occured sending email
-
-    */
   const [success, updateSuccess] = useState(null);
-  const [email, updateEmail] = useState("");
-  const { errors, isLoading, sendResetEmail } = useAuth();
+  const [isLoading, setLoading] = useState(false);
+  const emailRef = useRef(null);
 
   function onSubmit(event) {
-    sendResetEmail({ email });
-    updateSuccess(errors === null);
+    event.preventDefault();
+    setLoading(true);
+
+    const email = emailRef.current.value;
+
+    sendResetEmail({ email })
+      .then(() => updateSuccess(true))
+      .catch(() => updateSuccess(false))
+      .finally(() => {
+        setLoading(false);
+      });
   }
 
   return (
-    <div className="min-h-screen overflow-hidden bg-secondary">
+    <div className="bg-secondary min-h-screen overflow-hidden">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20" />
-      <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
+      <div className="my-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Reset password" />
         {!success && (
           <div className="mt-8">
@@ -47,7 +46,7 @@ function ForgotPassword() {
                 fgColor="white"
                 bgColor="primary"
                 autoComplete="email"
-                onChange={(e) => updateEmail(e.currentTarget.value)}
+                ref={emailRef}
               />
               <ImageButton
                 type="submit"
@@ -55,20 +54,21 @@ function ForgotPassword() {
                 customStyle="text-secondary bg-quinary border-quinary"
                 imageSrc={isLoading ? "/images/loading.gif" : ""}
                 imageAlt="HANG TIGHT..."
+                disabled={isLoading}
               />
             </Form>
           </div>
         )}
 
         {success == false && (
-          <p className="mt-10 font-iregular text-red-600">
+          <p className="font-iregular mt-10 text-red-600">
             An error has occured. Please make sure the email you provided is
             correct and try again later
           </p>
         )}
 
         {success && (
-          <p className="mt-10 font-iregular text-quinary">
+          <p className="font-iregular text-quinary mt-10">
             An email has bent sent. Please check your inbox to reset your
             password
           </p>
@@ -77,7 +77,7 @@ function ForgotPassword() {
         {!success && (
           <Text
             text="Don’t have an account?"
-            link="Signup here"
+            link="Register here"
             href="https://sei22.eventbrite.pt"
           />
         )}

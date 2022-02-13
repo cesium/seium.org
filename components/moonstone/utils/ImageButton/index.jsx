@@ -10,17 +10,18 @@ export default function ImageButton({
   customStyle,
   imageSrc,
   imageAlt,
+  disabled,
 }) {
-  console.log(imageSrc);
   return (
     <button
       type={type}
-      className={`${customStyle} relative w-full items-center rounded-full border text-center font-iregular text-sm shadow-sm`}
+      className={`${customStyle} font-iregular relative w-full items-center rounded-full border text-center text-sm shadow-sm`}
+      disabled={disabled}
     >
       <p
         className={`${
           imageSrc ? "invisible" : "visible"
-        } mx-4 my-4 font-iregular text-sm`}
+        } font-iregular mx-4 my-4 text-sm`}
       >
         {text}
       </p>
