@@ -12,11 +12,18 @@ export function AuthProvider({ children }) {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [isAuthenticated, setAuthenticated] = useState(false);
-  const [token, setToken] = useState(null);
   const [errors, setErrors] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [isFirstLoading, setFirstLoading] = useState(true);
   const [needsRefetch, setRefetch] = useState(true);
+
+  useEffect(() => {
+    if (user) {
+      setAuthenticated(true);
+    } else {
+      setAuthenticated(false);
+    }
+  }, [user]);
 
   useEffect(() => {
     const jwt = localStorage.getItem(TOKEN_KEY_NAME);
@@ -32,8 +39,6 @@ export function AuthProvider({ children }) {
       .getCurrentUser()
       .then((response) => {
         setUser(response);
-        setAuthenticated(true);
-        setToken(jwt);
       })
       .catch((_errors) => {
         // It means the jwt is expired
@@ -41,7 +46,7 @@ export function AuthProvider({ children }) {
         delete API.defaults.headers.common["Authorization"];
       })
       .finally(() => setFirstLoading(false));
-  }, [token, needsRefetch]);
+  }, [needsRefetch]);
 
   function sign_up(fields) {
     setLoading(true);
@@ -53,8 +58,6 @@ export function AuthProvider({ children }) {
         API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
         api.getCurrentUser().then((response) => {
           setUser(response);
-          setAuthenticated(true);
-          setToken(jwt);
           switch (response.type) {
             case USER.ROLES.ATTENDEE:
               router.push("/attendee/profile");
@@ -72,7 +75,6 @@ export function AuthProvider({ children }) {
       })
       .catch((error) => {
         setErrors(error);
-        setAuthenticated(false);
         setUser(undefined);
       })
       .finally(() => setLoading(false));
@@ -88,8 +90,6 @@ export function AuthProvider({ children }) {
         API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
         api.getCurrentUser().then((response) => {
           setUser(response);
-          setAuthenticated(true);
-          setToken(jwt);
           switch (response.type) {
             case USER.ROLES.ATTENDEE:
               router.push("/attendee/profile");
@@ -107,7 +107,6 @@ export function AuthProvider({ children }) {
       })
       .catch((error) => {
         setErrors(error);
-        setAuthenticated(false);
         setUser(undefined);
       })
       .finally(() => setLoading(false));
@@ -118,7 +117,6 @@ export function AuthProvider({ children }) {
     localStorage.clear();
     delete API.defaults.headers.common["Authorization"];
     setUser(undefined);
-    setAuthenticated(false);
     router.push("/");
     setLoading(false);
   }
