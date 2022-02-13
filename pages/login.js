@@ -28,7 +28,7 @@ function Login() {
   };
 
   return (
-    <div className="bg-secondary min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Log in" />

@@ -19,7 +19,7 @@ export default forwardRef(function Input(
     <div>
       <label
         htmlFor={id}
-        className={`font-iregular pl-6 text-${fgColor} mt-5 block text-sm`}
+        className={`pl-6 font-iregular text-${fgColor} mt-5 block text-sm`}
       >
         {text}
       </label>
