@@ -66,7 +66,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
               </div>
               <nav className="flex-1">
                 {navigation.map((item) => (
-                  <Link key={item} herf={`/attendee/${item}`} passHref>
+                  <Link key={item} href={`/attendee/${item}`} passHref>
                     <a
                       className={classNames(
                         item == href

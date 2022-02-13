@@ -21,15 +21,18 @@ export function withAuth(WrappedComponent) {
             "/attendee/wheel",
             "/attendee/badgedex",
             "/attendee/leaderboard",
-            "/attendee/awards",
+            "/attendee/store",
+            "/attendee/vault",
           ].includes(router.pathname)
         ) {
           return router.replace("/404");
         }
+        break;
       case USER.ROLES.MANAGER:
         if (!["/manager/badges", "/manager/wheel"].includes(router.pathname)) {
           return router.replace("/404");
         }
+        break;
       // case USER.ROLES.COMPANY:
       //   if (
       //   ![

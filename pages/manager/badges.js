@@ -3,14 +3,12 @@ import { useState, useEffect, useRef } from "react";
 import { withAuth } from "/components/Auth";
 import { useAuth } from "/components/Auth";
 
-import { getAllBadges } from "/lib/api";
+import { getAllBadges, giveBadge } from "/lib/api";
 
 import Base from "/components/moonstone/staff/utils/Base";
 import ErrorMessage from "/components/utils/ErrorMessage";
 import Filter from "/components/moonstone/user/badgedex/Filter";
 import QRScanner from "/components/moonstone/utils/QRScanner";
-
-import { giveBadge } from "/lib/api";
 
 function ManagerBadges() {
   const [allBadges, updateAllBadges] = useState([]);
@@ -23,12 +21,13 @@ function ManagerBadges() {
   const [error, updateError] = useState(false);
   const { user } = useAuth();
 
-  useEffect(() => requestBadges(), []);
-  const requestBadges = () => {
+  useEffect(() => {
     getAllBadges()
-      .then((response) => updateAllBadges(response.data))
+      .then((response) => {
+        updateAllBadges(response.data);
+      })
       .catch((_) => updateError(true));
-  };
+  }, []);
 
   const badges = allBadges
     .filter((badge) => {
