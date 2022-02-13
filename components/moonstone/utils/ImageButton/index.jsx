@@ -10,12 +10,13 @@ export default function ImageButton({
   customStyle,
   imageSrc,
   imageAlt,
+  disabled,
 }) {
-  console.log(imageSrc);
   return (
     <button
       type={type}
       className={`${customStyle} relative w-full items-center rounded-full border text-center font-iregular text-sm shadow-sm`}
+      disabled={disabled}
     >
       <p
         className={`${
