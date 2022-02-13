@@ -80,9 +80,6 @@ export function AuthProvider({ children }) {
             case USER.ROLES.MANAGER:
               router.push("/manager/badges");
               break;
-            case USER.ROLES.MANAGER:
-              router.push("/sponsor/offline/staff");
-              break;
             default:
               throw new Error(`Unknown USER TYPE: ${response.type}`);
           }
