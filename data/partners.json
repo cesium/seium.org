@@ -1,14 +1,22 @@
 [
   {
+    "name": "UMinho School of Engineering",
     "image": "um-school-of-engineering.png",
     "url": "https://www.eng.uminho.pt/pt"
   },
   {
+    "name": "IPDJ",
     "image": "ipdj.png",
     "url": "https://ipdj.gov.pt/"
   },
   {
+    "name": "Haribo",
     "image": "haribo.svg",
     "url": "https://www.haribo.com/pt-pt/produtos/haribo"
+  },
+  {
+    "name": "Fruut",
+    "image": "fruut.png",
+    "url": "https://fruut.pt/"
   }
 ]
