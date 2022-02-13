@@ -43,18 +43,40 @@ export function AuthProvider({ children }) {
       .finally(() => setFirstLoading(false));
   }, [token, needsRefetch]);
 
-  function sign_up(name, email, password, password_confirmation, username, id) {
+  function sign_up(fields) {
+    setLoading(true);
+
     api
-      .sign_up(email, password, password_confirmation, name, username, id)
-      .then((response) => {
-        API.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${response.data.jwt}`;
-        setToken(response.data.jwt);
-        refetchUser();
-        alert(JSON.stringify(response.data));
+      .sign_up(fields)
+      .then(({ jwt }) => {
+        localStorage.setItem(TOKEN_KEY_NAME, jwt);
+        setToken(jwt);
+        API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
+        api.getCurrentUser().then((response) => {
+          setUser(response);
+          setAuthenticated(true);
+          setToken(jwt);
+          switch (response.type) {
+            case USER.ROLES.ATTENDEE:
+              router.push("/attendee/profile");
+              break;
+            case USER.ROLES.SPONSOR:
+              router.push("/sponsor/scanner");
+              break;
+            case USER.ROLES.MANAGER:
+              router.push("/manager/badges");
+              break;
+            default:
+              throw new Error(`Unknown USER TYPE: ${response.type}`);
+          }
+        });
       })
-      .catch((errors) => setErrors(errors));
+      .catch((error) => {
+        setErrors(error);
+        setAuthenticated(false);
+        setUser(undefined);
+      })
+      .finally(() => setLoading(false));
   }
 
   function login({ email, password }) {
@@ -87,6 +109,7 @@ export function AuthProvider({ children }) {
       })
       .catch((error) => {
         setErrors(error);
+        setAuthenticated(false);
         setUser(undefined);
       })
       .finally(() => setLoading(false));

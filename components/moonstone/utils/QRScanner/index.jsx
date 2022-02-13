@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import BarebonesQRScanner from "/components/moonstone/utils/QRScanner/BarebonesQRScanner";
 
 import Button from "/components/moonstone/utils/Button";

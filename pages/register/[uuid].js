@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 import { withoutAuth, useAuth } from "/components/Auth";
 import Fade from "react-reveal/Fade";
@@ -12,21 +13,17 @@ import Input from "/components/moonstone/utils/Input";
 
 import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
-import BarebonesQRScanner from "/components/moonstone/utils/QRScanner/BarebonesQRScanner";
 
-function Signup() {
+function Register() {
   const { sign_up, errors, isLoading } = useAuth();
+  const router = useRouter();
+  const { uuid } = router.query;
 
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [username, updateUsername] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
-  const [uuid, setUUID] = useState();
-  const [scanned, updateScanned] = useState(false);
-  const [scanning, updateScanning] = useState(false);
-  const pauseRef = useRef(false);
-  pauseRef.current = false;
 
   const onFinish = (e) => {
     e.preventDefault();
@@ -93,32 +90,6 @@ function Signup() {
             onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
           />
           <Button
-            text={scanning ? "STOP SCANNING" : "SCAN QR"}
-            customStyle="text-secondary bg-quinary border-quinary"
-            onClick={(e) => {
-              e.preventDefault();
-              updateScanning(!scanning);
-            }}
-          />
-          {scanned && (
-            <p className="mt-3 font-iregular text-lg text-quinary">
-              QR Code scanned successfully: {uuid}
-            </p>
-          )}
-          {scanning && (
-            <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <BarebonesQRScanner
-                pauseRef={pauseRef}
-                handleCode={(code) => {
-                  pauseRef.current = false;
-                  updateScanning(false);
-                  updateScanned(true);
-                  setUUID(code);
-                }}
-              />
-            </div>
-          )}
-          <Button
             type="submit"
             text={isLoading ? "Registering..." : "LET'S GO"}
             customStyle="text-secondary bg-quinary border-quinary"
@@ -146,4 +117,4 @@ function Signup() {
   );
 }
 
-export default withoutAuth(Signup);
+export default withoutAuth(Register);
