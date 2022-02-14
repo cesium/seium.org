@@ -18,11 +18,13 @@ function Vault() {
 
   const [tab, updateTab] = useState(true);
   const [products, setProducts] = useState(null);
+  const [prizes, updatePrizes] = useState([]);
 
   useEffect(() => {
     api.getProducts().then((response) => {
       setProducts(response.data);
     });
+    api.getWheelPrizes().then((response) => updatePrizes(response.data));
   }, []);
 
   return (
@@ -74,7 +76,7 @@ function Vault() {
           {user.redeemables.length != 0 ? (
             <Prizes products={user.prizes} />
           ) : (
-            <WheelEmpty products={products} />
+            <WheelEmpty products={prizes} />
           )}
         </div>
       )}
