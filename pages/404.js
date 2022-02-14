@@ -13,7 +13,7 @@ export default function Error() {
         </div>
         <Navbar bgColor="secondary" button="quinary" fgColor="black">
           <div className="bg-secondary pt-14">
-            <div className="relative z-50 font-iextrabold">
+            <div className="relative z-20 font-iextrabold">
               <h5 className="text-7xl text-quinary lg:text-8xl xl:text-9xl">
                 404
               </h5>
