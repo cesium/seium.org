@@ -33,7 +33,7 @@ export default function Challenges() {
         <div className="block xl:hidden">
           {Object.keys(challenges).map((k) => {
             return (
-              <section id={k} key={k} className="">
+              <section id={k} key={k} className="py-20">
                 <Challenge
                   title={challenges[k].name}
                   prizes={challenges[k].prizes}
