@@ -101,7 +101,7 @@ const Animation = () => {
   }
 
   const setup = (p) => {
-    let canvas = p.createCanvas(window.innerWidth, window.innerHeight + 1000);
+    let canvas = p.createCanvas(window.innerWidth, document.body.scrollHeight);
     canvas.style("position", "absolute");
     canvas.position(0, 0);
     canvas.style("z-index", "1");
@@ -181,7 +181,7 @@ const Animation = () => {
   };
 
   const windowResized = (p) => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight + 1000);
+    p.resizeCanvas(window.innerWidth, document.body.scrollHeight);
     update_path_horizontally(p);
     update_path_vars();
   };
