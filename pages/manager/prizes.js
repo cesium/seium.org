@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 
 import { withAuth } from "/components/Auth";
-import Dashboard from "/components/moonstone/staff/utils/Dashboard";
+import Base from "/components/moonstone/staff/utils/Base";
 
 import Award from "/components/moonstone/staff/Award";
 
@@ -30,6 +30,8 @@ function changeValue(array, index, value) {
   }
   return res;
 }
+
+const navigation = ["badges", "prizes"];
 
 function Reedem() {
   const [start, updateStart] = useState(true);
@@ -70,10 +72,15 @@ function Reedem() {
   };
 
   return (
-    <Dashboard title="Reedem prizes">
+    <Base
+      href="prizes"
+      title="Prizes"
+      description="Mark prizes as redeemed"
+      navigation={navigation}
+    >
       {start && (
         <button
-          className="m-auto block h-20 w-64 rounded-full bg-quinary"
+          className="m-auto mt-20 block h-20 w-64 rounded-full bg-quinary"
           onClick={() => {
             updateStart(false);
             updateScanning(true);
@@ -132,7 +139,7 @@ function Reedem() {
           pauseRef={pauseRef}
         />
       )}
-    </Dashboard>
+    </Base>
   );
 }
 

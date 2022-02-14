@@ -7,13 +7,11 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "/components/Auth";
 import Return from "/components/moonstone/utils/Return";
 
-const navigation = ["badges", "prizes"];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
+const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen, navigation }) => {
   return (
     <Transition.Root show={sidebarOpen} as={Fragment}>
       <Dialog
@@ -96,7 +94,13 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
   );
 };
 
-export default function Dashboard({ title, href, description, children }) {
+export default function Dashboard({
+  title,
+  href,
+  description,
+  navigation,
+  children,
+}) {
   const { logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -106,6 +110,7 @@ export default function Dashboard({ title, href, description, children }) {
         href={href}
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
+        navigation={navigation}
       />
 
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">

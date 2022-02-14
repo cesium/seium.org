@@ -10,6 +10,8 @@ import ErrorMessage from "/components/utils/ErrorMessage";
 import Filter from "/components/moonstone/user/badgedex/Filter";
 import QRScanner from "/components/moonstone/utils/QRScanner";
 
+const navigation = ["badges", "prizes"];
+
 function ManagerBadges() {
   const [allBadges, updateAllBadges] = useState([]);
   const [filter, updateFilter] = useState(null);
@@ -29,23 +31,13 @@ function ManagerBadges() {
       .catch((_) => updateError(true));
   }, []);
 
-  const badges = allBadges
-    .filter((badge) => {
-      const now = new Date();
-      const begin = new Date(badge.begin);
-      const end = new Date(badge.end);
-      if (now >= begin && now <= end) {
-        return true;
-      }
-      return false;
-    })
-    .filter((badge) => {
-      let result = true;
-      if (filter && badge.type != filter) {
-        result = false;
-      }
-      return result;
-    });
+  const badges = allBadges.filter((badge) => {
+    let result = true;
+    if (filter && badge.type != filter) {
+      result = false;
+    }
+    return result;
+  });
 
   const handleBadgeSelected = (badge) => {
     badgeRef.current = badge;
@@ -101,7 +93,12 @@ function ManagerBadges() {
   ));
 
   return (
-    <Base href="badges" title="Badges" description="Award a badge">
+    <Base
+      href="badges"
+      title="Badges"
+      description="Award a badge"
+      navigation={navigation}
+    >
       {showScanner ? (
         <div className="mt-5">
           <QRScanner

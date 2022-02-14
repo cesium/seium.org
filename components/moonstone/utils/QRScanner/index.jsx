@@ -10,6 +10,7 @@ function QRScanner({
   feedbackText,
   showScanner,
   setScanner,
+  removeClose,
 }) {
   function feedbackColor(success) {
     switch (success) {
@@ -39,13 +40,15 @@ function QRScanner({
               <p className="font-ibold font-bold">{feedbackText}</p>
             </div>
           </div>
-          <Button
-            onClick={() => {
-              setScanner(false);
-            }}
-          >
-            Close
-          </Button>
+          {removeClose !== true && (
+            <Button
+              onClick={() => {
+                setScanner(false);
+              }}
+            >
+              Close
+            </Button>
+          )}
         </div>
       </>
     );
