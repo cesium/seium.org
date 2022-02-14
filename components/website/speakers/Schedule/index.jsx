@@ -117,7 +117,7 @@ export default function Schedule(props) {
         </p>
       </div>
       <div className="z-50 w-full md:px-10">
-        <Table detailed={props.detailed} date={date} />;
+        <Table detailed={props.detailed} date={date} />
       </div>
     </section>
   );
