@@ -27,13 +27,15 @@ export default function Block({
   return (
     <div key={id} className="border-t-2 border-white py-4 text-white">
       <div className="mb-2 flex">
-        <Image
-          src={`/images/speakers/${id}.png`}
-          width="210"
-          height="210"
-          alt={name}
-        />
-
+        <div className="w-[210px]">
+          <Image
+            src={`/images/speakers/${id}.png`}
+            width="210"
+            height="210"
+            layout="responsive"
+            alt={name}
+          />
+        </div>
         <div className="ml-4 flex w-full flex-col justify-between">
           <div className="flex justify-between">
             <div>
