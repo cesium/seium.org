@@ -1,27 +1,44 @@
 import Challenge from "./Challenge";
-import List from "./../List";
 
 import challenges from "/data/challenges.json";
 import { useState } from "react";
 
 export default function Challenges() {
-  let [title, setTitle] = useState("");
+  const [k, setKey] = useState(0);
   return (
-    <div className="spacing flex w-full flex-col bg-secondary px-40 pt-52 pb-20">
-      <div className="mb-24 grid grid-cols-1 gap-20 lg:grid-cols-2">
-        <div className="lg:sticky lg:top-0">
-          <List title={title} />
+    <div className="spacing flex w-full flex-col bg-secondary px-40 pt-24">
+      <div className="mb-24 grid grid-cols-1 gap-20 xl:grid-cols-2">
+        <div className="hidden xl:flex">
+          <ul className="font-ibold text-xl">
+            {Object.keys(challenges).map((i) => (
+              <li
+                key={i}
+                className={`relative z-50 mb-6 ${
+                  i == k ? "ml-8 text-white" : "text-gray-700"
+                }`}
+              >
+                <button onClick={(e) => setKey(i)}>{challenges[i].name}</button>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="block">
-          {Object.keys(challenges).map((key) => {
+        <div className="m-auto hidden xl:flex">
+          <Challenge
+            title={challenges[k].name}
+            prizes={challenges[k].prizes}
+            description={challenges[k].descriptions}
+            button={challenges[k].button}
+          />
+        </div>
+        <div className="block xl:hidden">
+          {Object.keys(challenges).map((k) => {
             return (
-              <section id={key} key={key} className="h-screen">
+              <section id={k} key={k} className="">
                 <Challenge
-                  title={key}
-                  prizes={challenges[key].prizes}
-                  description={challenges[key].descriptions}
-                  button={challenges[key].button}
-                  setTitle={setTitle}
+                  title={challenges[k].name}
+                  prizes={challenges[k].prizes}
+                  description={challenges[k].descriptions}
+                  button={challenges[k].button}
                 />
               </section>
             );
