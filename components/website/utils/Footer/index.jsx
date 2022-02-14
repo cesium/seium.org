@@ -11,7 +11,15 @@ import Card from "/components/utils/Card";
 import styles from "./style.module.css";
 
 function DefaultAnimation() {
-  return <>Psst. Challenges will be available soon. Stay tuned!</>;
+  return (
+    <span>
+      Psst. Have you checked the{" "}
+      <Link href="/challenges">
+        <a className="text-primary underline">challenges?</a>
+      </Link>{" "}
+      Just saying.
+    </span>
+  );
 }
 
 function Animation({ text }) {
