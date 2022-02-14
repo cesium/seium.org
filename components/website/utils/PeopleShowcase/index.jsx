@@ -1,6 +1,6 @@
 export default function PeopleShowcase({ children, title, subtitle }) {
   return (
-    <div className="flex flex-col justify-around pt-40 pb-20 spacing bg-secondary lg:flex-row">
+    <div className="spacing flex flex-col justify-around bg-secondary pt-40 pb-20 lg:flex-row">
       <div className="mb-10 lg:w-1/2">
         {title}
         <div>{subtitle}</div>
