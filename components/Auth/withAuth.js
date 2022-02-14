@@ -23,7 +23,7 @@ export function withAuth(WrappedComponent) {
             "/attendee/leaderboard",
             "/attendee/store",
             "/attendee/vault",
-            "/attendees/[slug]",
+            "/attendees/[uuid]",
             "/badge/[slug]",
             "/product/[slug]",
           ].includes(router.pathname)
@@ -33,7 +33,7 @@ export function withAuth(WrappedComponent) {
         break;
       case USER.ROLES.MANAGER:
         if (
-          !["/manager/badges", "/manager/prizes", "/attendees/[slug]"].includes(
+          !["/manager/badges", "/manager/prizes", "/attendees/[uuid]"].includes(
             router.pathname
           )
         ) {
@@ -41,7 +41,9 @@ export function withAuth(WrappedComponent) {
         }
         break;
       case USER.ROLES.SPONSOR:
-        if (!["/sponsor/scanner"].includes(router.pathname)) {
+        if (
+          !["/sponsor/scanner", "/attendees/[uuid]"].includes(router.pathname)
+        ) {
           return router.replace("/404");
         }
         break;
