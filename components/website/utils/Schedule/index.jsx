@@ -158,12 +158,12 @@ export default function Schedule(props) {
 
   return (
     <div
-      className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} relative z-50 pt-20 md:pt-60`}
+      className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} relative pt-20 md:pt-60`}
     >
       <div
         className={`${styles.leftGridElem} ${styles.responsiveCentered} mb-10 `}
       >
-        <div className="sticky top-12 w-full items-center">
+        <div className="sticky top-12 z-50">
           <Day
             date={date}
             previousDay={previous_day}
@@ -175,7 +175,7 @@ export default function Schedule(props) {
           />
         </div>
       </div>
-      <div className={`${styles.rightGridElem}`}>
+      <div className={`${styles.rightGridElem} z-50`}>
         <Table
           detailed={props.detailed}
           date={date}
