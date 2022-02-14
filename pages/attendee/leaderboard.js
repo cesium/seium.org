@@ -118,38 +118,45 @@ function Leaderboard() {
       title="Leaderboard"
       description="Check the users with the highest number of badges"
     >
-      <div className="mt-12 grid-cols-2 overflow-hidden">
-        <div className="col-span-1 float-left w-full md:w-1/2">
-          <Day
-            date={date}
-            fg_color="quinary"
-            previousDay={previous_day}
-            nextDay={next_day}
-            fontSize="lg"
-          />
+      <div className="mt-12 grid grid-cols-1 justify-items-center gap-y-10 overflow-hidden md:gap-y-20 2xl:grid-cols-2">
+        <div className="col-span-1">
+          {!hallOfFame ? (
+            <Day
+              date={date}
+              fg_color="quinary"
+              previousDay={previous_day}
+              nextDay={next_day}
+              fontSize="lg"
+            />
+          ) : (
+            <h2 className="text-center font-iextrabold text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
+              All Time
+            </h2>
+          )}
         </div>
-        <div className="col-span-1 float-left w-full pl-24 md:w-1/2">
-          <b className="text-ibold">Board</b>
-          <button
-            className={`font-iregular bg-${
-              hallOfFame ? "white" : "quinary"
-            } ml-24 h-12 items-center rounded-full px-4 py-1 text-center`}
-            onClick={(e) => {
-              updateHallOfFame(false);
-            }}
-          >
-            LEADERBOARD
-          </button>
-          <button
-            className={`font-iregular bg-${
-              hallOfFame ? "quinary" : "white"
-            } ml-12 h-12 items-center rounded-full px-4 py-1 text-center`}
-            onClick={(e) => {
-              updateHallOfFame(true);
-            }}
-          >
-            HALL OF FAME
-          </button>
+        <div className="col-span-1 w-full 2xl:pl-24">
+          <div className="flex justify-center gap-6 xs:gap-10 md:gap-24">
+            <button
+              className={`font-iregular bg-${
+                hallOfFame ? "white" : "quinary"
+              } h-12 items-center rounded-full px-4 py-1 text-center`}
+              onClick={(e) => {
+                updateHallOfFame(false);
+              }}
+            >
+              LEADERBOARD
+            </button>
+            <button
+              className={`font-iregular bg-${
+                hallOfFame ? "quinary" : "white"
+              } h-12 items-center rounded-full px-4 py-1 text-center`}
+              onClick={(e) => {
+                updateHallOfFame(true);
+              }}
+            >
+              HALL OF FAME
+            </button>
+          </div>
           {error && <ErrorMessage />}
           <Table list={leaderboard} user={user.id} maxUsersToShow={5} />
         </div>

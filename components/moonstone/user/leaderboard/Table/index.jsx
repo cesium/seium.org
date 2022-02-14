@@ -1,10 +1,7 @@
 export default function Table({ list, user, maxUsersToShow }) {
   const toShow = list.slice(0, Math.min(maxUsersToShow, list.length));
   const rows = toShow.map((entry, id) => (
-    <div
-      key={id}
-      className="mb-2 flex h-auto border-t-2 border-t-slate-700 pt-2"
-    >
+    <div key={id} className=" flex h-auto border-t-2 border-t-slate-300 p-4">
       <div
         className={`w-1/3 text-left font-iregular ${
           entry.id == user ? "text-quinary" : ""
@@ -45,7 +42,7 @@ export default function Table({ list, user, maxUsersToShow }) {
     userId < maxUsersToShow ? (
       <></>
     ) : (
-      <div className="h-8 grid-cols-3 border-t-2 border-t-slate-700 pt-2 pb-2">
+      <div className="h-8 grid-cols-3 border-t-2 border-t-slate-300 p-4">
         <div className="col-span-1 float-left w-1/3 text-left font-iregular text-quinary">
           {userId + 1}
         </div>
