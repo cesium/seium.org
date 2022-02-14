@@ -16,14 +16,14 @@ const Animation = dynamic(() => import("../Animation"), { ssr: false });
 export default function Hero() {
   const { isAuthenticated } = useAuth();
   return (
-    <div className=" bg-secondary">
+    <div className="bg-secondary">
       <div className="spacing relative z-40 pb-32">
         <Animation />
         <div className="pt-2">
           <Title />
         </div>
         <div className="relative mt-20 grid grid-cols-2">
-          <div className="absolute left-0 text-white">
+          <div className="absolute left-0 z-50 text-white">
             <h5 className="text-md font-imedium">Follow us on</h5>
             <Social />
             <div className="absolute left-0 mt-10 block xl:hidden">
