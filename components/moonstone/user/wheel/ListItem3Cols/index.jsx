@@ -15,11 +15,11 @@ export default function ListItem3({
       <div className="text-left">
         <p className="font-ibold">{user}</p>
       </div>
-      <div className="text-center">
+      <div className="ml-4 text-left">
         <p className="text-iregular">{badge}</p>
       </div>
       <div className="text-right">
-        <p className="text-aqua text-ibold pr-4 font-bold">{when}</p>
+        <p className="text-ibold pr-4 font-bold text-quinary">{when}</p>
       </div>
     </div>
   );

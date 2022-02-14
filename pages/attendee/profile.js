@@ -57,7 +57,7 @@ function Profile() {
           <Heading text="User Profile">
             <div className="w-auto">
               <button
-                className="w-full items-center rounded-full border border-quinary bg-quinary py-1 px-2 text-center font-iregular text-sm text-secondary shadow-sm"
+                className="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
                 onClick={() => {
                   if (editing) {
                     editUser(username);
@@ -73,7 +73,7 @@ function Profile() {
           </Heading>
           <div className="pl-6">
             <img
-              src={`${process.env.NEXT_PUBLIC_API_URL}${user.avatar}`}
+              src={user.avatar}
               className="overflow-hidden rounded-full"
               width="220"
               height="220"

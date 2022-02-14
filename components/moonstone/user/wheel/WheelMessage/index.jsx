@@ -8,7 +8,7 @@ export default function WheelMessage({ title, description, onExit }) {
       <div className="fixed inset-0 z-30 h-full w-screen bg-white opacity-70"></div>
       <Dialog
         open={true}
-        className="fixed top-1/2 left-1/2 z-50 -translate-y-2/4 -translate-x-2/4 overflow-y-auto rounded-3xl border-8 border-secondary p-10 px-12"
+        className="fixed top-1/2 left-1/2 z-50 -translate-y-2/4 -translate-x-2/4 overflow-y-auto rounded-3xl border-8 border-secondary bg-white p-10 px-12 drop-shadow-xl"
         onClose={(_) => {}}
       >
         <Dialog.Overlay />

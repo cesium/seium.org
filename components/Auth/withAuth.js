@@ -24,6 +24,8 @@ export function withAuth(WrappedComponent) {
             "/attendee/store",
             "/attendee/vault",
             "/attendees/[slug]",
+            "/badge/[slug]",
+            "/product/[slug]",
           ].includes(router.pathname)
         ) {
           return router.replace("/404");
