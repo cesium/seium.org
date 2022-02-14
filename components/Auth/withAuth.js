@@ -40,14 +40,11 @@ export function withAuth(WrappedComponent) {
           return router.replace("/404");
         }
         break;
-      // case USER.ROLES.COMPANY:
-      //   if (
-      //   ![
-      //     "/manager/badges",
-      //     "/manager/wheel",
-      //   ].includes(router.pathname)
-      // ) {
-      //   return router.replace("/404");
+      case USER.ROLES.SPONSOR:
+        if (!["/sponsor/scanner"].includes(router.pathname)) {
+          return router.replace("/404");
+        }
+        break;
     }
 
     return <WrappedComponent {...props} />;
