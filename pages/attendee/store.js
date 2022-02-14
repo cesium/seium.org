@@ -33,7 +33,7 @@ function Store() {
         />
       </div>
 
-      <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-10 grid grid-cols-1 justify-items-center gap-x-10 gap-y-14 xs:grid-cols-2 md:gap-y-20 2xl:grid-cols-3">
         {products &&
           products
             .filter((a) => a.can_buy > 0)

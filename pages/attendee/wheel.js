@@ -175,15 +175,13 @@ function WheelPage() {
               </div>
             </div>
           </Heading>
-          <div className="mb-10">
-            <div className="m-auto h-96 w-96">
+          <div className="mb-10 pt-5">
+            <div className="m-auto h-72 w-72 xs:h-80 xs:w-80 sm:h-96 sm:w-96">
               <Wheel steps={16} angle={st.angle} />
             </div>
             <button
-              className="m-auto mt-10 block h-20 w-64 rounded-full bg-quinary"
-              onClick={(e) => {
-                spinTheWheel();
-              }}
+              className="m-auto mt-10 block h-20 w-64 cursor-pointer rounded-full bg-quinary"
+              onClick={spinTheWheel}
             >
               <p className="font-ibold font-bold">SPIN THE WHEEL</p>
               <p className="font-iregular">20 tokens💰</p>

@@ -48,7 +48,7 @@ export default function Wheel({ steps, angle }) {
       >
         {borders}
       </div>
-      <div className="absolute top-1/2 left-1/2 -ml-6 -mt-6 h-full w-full font-iregular text-5xl text-tertiary">
+      <div className="absolute top-1/2 left-1/2 -ml-6 -mt-6 font-iregular text-5xl text-tertiary">
         ↑
       </div>
     </div>

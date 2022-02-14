@@ -18,7 +18,7 @@ function BadgeButton({ text, val, setValue, selected }) {
     <button
       className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"}
                         ${text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"}
-                        inline-flex w-full items-center rounded-full text-sm text-black
+                        inline-flex w-full items-center rounded-full text-center text-sm text-black
                        `}
       onClick={changeVal}
     >
@@ -69,7 +69,7 @@ function Badgedex() {
           />
         </div>
       </div>
-      <div className="mt-8 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
+      <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {user.badges
           .filter((badge) => badge.type == filter || filter == null)
           .map((badge) => (

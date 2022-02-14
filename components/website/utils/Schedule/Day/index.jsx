@@ -22,7 +22,7 @@ function getDayDescriptor(year, month, day) {
   const day_difference =
     (target.getTime() - today.getTime()) / (24 * 3600 * 1000);
 
-  if (day_difference == -1) return "Yerterday";
+  if (day_difference == -1) return "Yesterday";
   else if (day_difference == 0) return "Today";
   else if (day_difference == 1) return "Tomorrow";
   else return weekdays[target.getDay()];
@@ -52,9 +52,9 @@ export default function Day(props) {
   );
 
   const ans = (
-    <div className="grid place-items-center lg:block">
+    <div className="flex w-full justify-center">
       <div
-        className={`${styles.wrapper} text-4xl xs:text-5xl sm:text-7xl md:text-8xl`}
+        className={`${styles.wrapper} flex w-full justify-between text-4xl xs:text-5xl sm:text-7xl md:text-8xl`}
       >
         <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
           <button
@@ -63,7 +63,7 @@ export default function Day(props) {
           ></button>
         </div>
 
-        <div className={`-mt-10 ${styles.dateWrapper}`}>
+        <div className={`-mt-8 md:-mt-10 ${styles.dateWrapper}`}>
           <h5 className={`font-ibold text-2xl text-quinary md:text-3xl`}>
             {date_string}
           </h5>

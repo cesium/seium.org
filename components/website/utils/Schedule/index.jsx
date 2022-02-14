@@ -163,7 +163,7 @@ export default function Schedule(props) {
       <div
         className={`${styles.leftGridElem} ${styles.responsiveCentered} mb-10 `}
       >
-        <div className="sm sticky top-12">
+        <div className="sticky top-12 w-full items-center">
           <Day
             date={date}
             previousDay={previous_day}

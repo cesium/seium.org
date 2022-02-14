@@ -19,7 +19,7 @@ function Owner({ attendee }) {
 }
 
 function BadgeSlug() {
-  const [badge, updateBadge] = useState({});
+  const [badge, updateBadge] = useState(null);
   const router = useRouter();
   const { slug } = router.query;
   const maxUsersToShow = 5;
@@ -35,7 +35,9 @@ function BadgeSlug() {
   return (
     <Dashboard>
       <div>
-        <h1 className="font-iextrabold text-4xl sm:text-5xl">{badge.name}</h1>
+        <h1 className="font-iextrabold text-4xl sm:text-5xl">
+          {badge && badge.name}
+        </h1>
         <p className="text-md mt-2 font-iregular sm:text-lg">
           Check who already has this badge
         </p>
@@ -44,7 +46,7 @@ function BadgeSlug() {
       <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2">
         <div className="w-full">
           <Heading text="Badge info" />
-          <Badge {...badge} />
+          {badge && <Badge {...badge} />}
         </div>
 
         <div className="w-full">
@@ -57,7 +59,7 @@ function BadgeSlug() {
                       <Owner key={attendee.id} attendee={attendee} />
                     )
                 )
-              : []}
+              : null}
           </div>
         </div>
       </div>
