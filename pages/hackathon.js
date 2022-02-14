@@ -15,7 +15,7 @@ import jury from "/data/jury.json";
 function JuryTitle() {
   return (
     <UnderlineAnimation text="These are the one to fear. Just saying">
-      <h2 className="relative z-0 font-ibold text-5xl text-white md:w-full md:text-6xl">
+      <h2 className="relative z-0 text-5xl text-white font-ibold md:w-full md:text-6xl">
         The Jury
       </h2>
     </UnderlineAnimation>
@@ -35,7 +35,7 @@ function JurySubtitle() {
 
 function MentorsTitle() {
   return (
-    <h2 className="relative z-0 font-ibold text-5xl text-white md:w-full md:text-6xl">
+    <h2 className="relative z-0 text-5xl text-white font-ibold md:w-full md:text-6xl">
       The mentors
     </h2>
   );
@@ -58,13 +58,13 @@ function Index() {
     <Navbar bgColor="secondary" button="quinary" fgColor="black">
       <Hero />
 
-      <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
+      {/* <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
         {mentors.map((mentor, i) => (
           <div key={i}>
             <Speaker {...mentor} />
           </div>
         ))}
-      </PeopleShowcase>
+      </PeopleShowcase> */}
 
       <Awards />
 
