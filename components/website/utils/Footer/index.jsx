@@ -15,9 +15,7 @@ function DefaultAnimation() {
     <span>
       Psst. Have you checked the{" "}
       <Link href="/challenges">
-        <a className="underline text-primary">
-        challenges?
-        </a>
+        <a className="text-primary underline">challenges?</a>
       </Link>{" "}
       Just saying.
     </span>
@@ -93,8 +91,8 @@ export default function Footer(props) {
             </p>
           </div>
         </div>
-        <div className="py-10 flex-2">
-          <div className="grid grid-rows-2 gap-10 text-sm text-white justify-items-center font-iregular lg:grid-cols-2 lg:justify-items-end">
+        <div className="flex-2 py-10">
+          <div className="grid grid-rows-2 justify-items-center gap-10 font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-end">
             <Link passHref href="https://2021.seium.org/">
               <a className="text-white hover:underline">Previous Edition</a>
             </Link>
@@ -115,7 +113,7 @@ export default function Footer(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-center invisible pb-10 -mt-20 lg:visible">
+      <div className="invisible -mt-20 flex justify-center pb-10 lg:visible">
         <Animation
           text={
             props.animationText != undefined ? (
