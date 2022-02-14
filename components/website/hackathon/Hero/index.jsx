@@ -10,7 +10,7 @@ const Animation = dynamic(() => import("./Animation"), { ssr: false });
 export default function Hero() {
   return (
     <div className="overflow-hidden bg-secondary">
-      <div className="spacing relative z-50 pb-32">
+      <div className="spacing relative z-20 pb-32">
         <Animation />
         <div className="pt-2">
           <Title />
