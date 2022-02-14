@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Challenges() {
   const [k, setKey] = useState(0);
   return (
-    <div className="spacing flex w-full flex-col bg-secondary px-40 pt-24">
+    <div className="spacing flex w-full flex-col bg-secondary px-40 py-60">
       <div className="mb-24 grid grid-cols-1 gap-20 xl:grid-cols-2">
         <div className="hidden xl:flex">
           <ul className="font-ibold text-xl">
