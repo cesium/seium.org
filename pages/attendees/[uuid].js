@@ -75,9 +75,3 @@ function Profile() {
 }
 
 export default withAuth(Profile);
-
-/*<div className="col-span-1 float-left w-1/2 font-iregular">
-                💰 {attendee.token_balance} Tokens
-                </div>
-  
-*/
