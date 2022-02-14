@@ -14,7 +14,7 @@ export default function Challenges() {
               <li
                 key={i}
                 className={`relative z-50 mb-6 ${
-                  i == k ? "ml-8 text-white" : "text-gray-700"
+                  i == k ? "ml-8 text-white" : "text-white text-opacity-20"
                 }`}
               >
                 <button onClick={(e) => setKey(i)}>{challenges[i].name}</button>
