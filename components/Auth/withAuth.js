@@ -24,18 +24,17 @@ export function withAuth(WrappedComponent) {
             "/attendee/store",
             "/attendee/vault",
             "/attendees/[slug]",
-          ].filter((str) => str.startsWith(router.pathname)).length //Because of dynamic routes we can't just check for equality
+          ].includes(router.pathname)
         ) {
           return router.replace("/404");
         }
         break;
       case USER.ROLES.MANAGER:
         if (
-          !["/manager/badges", "/manager/prizes", "/attendees"].filter((str) =>
-            str.startsWith(router.pathname)
-          ).length
+          !["/manager/badges", "/manager/prizes", "/attendees/[slug]"].includes(
+            router.pathname
+          )
         ) {
-          //Because of dynamic routes we can't just check for equality {
           return router.replace("/404");
         }
         break;
