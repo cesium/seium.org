@@ -39,7 +39,7 @@ export default function Redeemables({ products }) {
 
             <div className="mt-4 flex flex-1 items-end justify-between">
               <p className="flex items-center space-x-2 text-sm text-gray-700">
-                {product.not_redeemed == 1 ? (
+                {product.not_redeemed == 0 ? (
                   <CheckIcon
                     className="h-5 w-5 flex-shrink-0 text-green-500"
                     aria-hidden="true"
@@ -51,7 +51,7 @@ export default function Redeemables({ products }) {
                   />
                 )}
                 <span>
-                  {product.not_redeemed == 1
+                  {product.not_redeemed == 0
                     ? "Delivered"
                     : `Go to the acreditation to pick up your purchase`}
                 </span>

@@ -16,7 +16,6 @@ import Form from "/components/moonstone/utils/Form";
 import Input from "/components/moonstone/utils/Input";
 
 import Title from "/components/moonstone/authentication/Title";
-import is from "sharp/lib/is";
 
 export async function getServerSideProps({ query }) {
   if (query.token === undefined) {
