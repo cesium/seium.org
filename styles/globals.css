@@ -14,7 +14,8 @@ body {
 }
 
 canvas {
-  margin: auto;
+  margin: 0;
+  overflow: hidden;
 }
 
 .spacing {
