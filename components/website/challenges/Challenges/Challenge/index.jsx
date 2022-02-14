@@ -12,15 +12,9 @@ function Action({ text, url }) {
   );
 }
 
-export default function Challenge({
-  title,
-  description,
-  prizes,
-  button,
-  setTitle,
-}) {
+export default function Challenge({ title, description, prizes, button }) {
   return (
-    <div className="sticky top-0 mb-24">
+    <div className="sticky top-60">
       <div>
         <h2 className="font-iextrabold text-3xl text-white md:text-4xl xl:text-5xl">
           {title}

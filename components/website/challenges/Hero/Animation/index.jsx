@@ -101,7 +101,7 @@ const Animation = () => {
   }
 
   const setup = (p) => {
-    let canvas = p.createCanvas(window.innerWidth, window.innerHeight);
+    let canvas = p.createCanvas(window.innerWidth, window.innerHeight + 1000);
     canvas.style("position", "absolute");
     canvas.position(0, 0);
     canvas.style("z-index", "1");
@@ -112,23 +112,33 @@ const Animation = () => {
   };
 
   function update_vars(p, mouseX, mouseY, path, path_index, path_var) {
-    if (
-      mouseY > path_var[1] - p.height * 0.3 &&
-      mouseY < path_var[1] + p.height * 0.3 &&
-      mouseX > path_var[0] - p.width * 0.3 &&
-      mouseX < path_var[0] + p.width * 0.3
-    ) {
-      path[path_index][0] += (mouseX - path[path_index][0]) * 0.1;
-      path[path_index][1] += (mouseY - path[path_index][1]) * 0.1;
+    if (path_var == undefined) {
+      update_path_horizontally(p);
+      update_path_vars();
     } else {
-      path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
-      path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+      if (
+        mouseY > path_var[1] - p.height * 0.1 &&
+        mouseY < path_var[1] + p.height * 0.1 &&
+        mouseX > path_var[0] - p.width * 0.3 &&
+        mouseX < path_var[0] + p.width * 0.3
+      ) {
+        path[path_index][0] += (mouseX - path[path_index][0]) * 0.1;
+        path[path_index][1] += (mouseY - path[path_index][1]) * 0.1;
+      } else {
+        path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
+        path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+      }
     }
   }
 
   function update_vars_nomouse(path, path_index, path_var) {
-    path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
-    path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+    if (path_var == undefined) {
+      update_path_horizontally(p);
+      update_path_vars();
+    } else {
+      path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
+      path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+    }
   }
 
   function drawPaths(p, path) {
@@ -171,7 +181,7 @@ const Animation = () => {
   };
 
   const windowResized = (p) => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight);
+    p.resizeCanvas(window.innerWidth, window.innerHeight + 1000);
     update_path_horizontally(p);
     update_path_vars();
   };
