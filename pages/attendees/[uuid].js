@@ -5,17 +5,40 @@ import { withAuth, useAuth } from "/components/Auth";
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Heading from "/components/moonstone/utils/Heading";
 import Badge from "/components/moonstone/user/badgedex/Badge";
-import { getAttendee } from "/lib/api";
+import { getAttendee, isAttendeeRegistered } from "/lib/api";
 import Filter from "/components/moonstone/user/badgedex/Filter";
+
+export async function getServerSideProps({ query }) {
+  const { uuid } = query;
+
+  const { is_registered } = await isAttendeeRegistered(uuid)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((errors) => {
+      return errors.response;
+    });
+
+  if (is_registered) {
+    return {
+      props: {},
+    };
+  }
+
+  return {
+    redirect: {
+      destination: `/register/${uuid}`,
+      permanent: false,
+    },
+  };
+}
 
 function Profile() {
   const [attendee, updateAttendee] = useState(null);
   const router = useRouter();
-  const { user } = useAuth();
   const { uuid } = router.query;
   const [filter, updateFilter] = useState(null);
 
-  const maxUsersToShow = 5;
   useEffect(() => {
     getAttendee(uuid)
       .then((response) => {
