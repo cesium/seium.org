@@ -53,6 +53,17 @@ const Animation = () => {
     [2245.553232676324, 469.2924542063363],
   ];
 
+  let height_cost = 100;
+  path1_backup.forEach((x) => {
+    x[1] -= height_cost;
+  });
+  path2_backup.forEach((x) => {
+    x[1] -= height_cost;
+  });
+  path3_backup.forEach((x) => {
+    x[1] -= height_cost;
+  });
+
   var path1 = [];
   var path2 = [];
   var path3 = [];
@@ -101,7 +112,7 @@ const Animation = () => {
   }
 
   const setup = (p) => {
-    let canvas = p.createCanvas(window.innerWidth, window.innerHeight + 1000);
+    let canvas = p.createCanvas(window.innerWidth, window.innerHeight);
     canvas.style("position", "absolute");
     canvas.position(0, 0);
     canvas.style("z-index", "1");
@@ -181,7 +192,7 @@ const Animation = () => {
   };
 
   const windowResized = (p) => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight + 1000);
+    p.resizeCanvas(window.innerWidth, window.innerHeight);
 
     update_path_horizontally(p);
     update_path_vars();
