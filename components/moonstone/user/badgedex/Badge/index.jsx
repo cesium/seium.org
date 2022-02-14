@@ -7,7 +7,7 @@ export default function Badge({ name, id, avatar, tokens, opacity }) {
         <div>
           <img src={avatar} alt={name}></img>
         </div>
-        <div className="flex flex-col text-center justify-items-center font-iregular">
+        <div className="flex flex-col justify-items-center text-center font-iregular">
           <div>{name}</div>
           <div>{tokens} 💰 </div>
         </div>

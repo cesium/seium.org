@@ -81,11 +81,11 @@ function ManagerBadges() {
   const badgeComponents = badges.map((badge, index) => (
     <div
       key={index}
-      className="w-full h-full cursor-pointer"
+      className="h-full w-full cursor-pointer"
       onClick={() => handleBadgeSelected(badge)}
     >
       <img src={badge.avatar} alt={badge.name} />
-      <div className="flex flex-col text-center justify-items-center font-iregular">
+      <div className="flex flex-col justify-items-center text-center font-iregular">
         <div>{badge.name}</div>
         <div>{badge.tokens} 💰 </div>
       </div>
