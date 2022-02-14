@@ -53,9 +53,7 @@ export default function Day(props) {
 
   const ans = (
     <div className="flex w-full justify-center">
-      <div
-        className={`${styles.wrapper} flex w-full justify-between text-4xl xs:text-5xl sm:text-7xl md:text-8xl`}
-      >
+      <div className="flex w-full justify-between text-4xl xs:text-5xl sm:text-7xl lg:text-8xl xl:mx-20 xl:text-7xl">
         <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
           <button
             className={`${styles.prev} ${styles.arrow}`}

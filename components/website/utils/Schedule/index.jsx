@@ -1,8 +1,6 @@
 import Table from "./Table";
 import Day from "./Day";
 
-import styles from "./style.module.css";
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -158,11 +156,9 @@ export default function Schedule(props) {
 
   return (
     <div
-      className={`${styles.smallSpacing} ${styles.responsiveGrid} bg-${props.color} ${styles.bgTransition} relative pt-20 md:pt-60`}
+      className={`px-5 md:px-32 xl:grid xl:grid-cols-2 xl:px-16 2xl:px-32 bg-${props.color} relative pt-20 md:pt-60`}
     >
-      <div
-        className={`${styles.leftGridElem} ${styles.responsiveCentered} mb-10 `}
-      >
+      <div className="mb-20 xl:mb-0">
         <div className="sticky top-12 z-50">
           <Day
             date={date}
@@ -175,7 +171,7 @@ export default function Schedule(props) {
           />
         </div>
       </div>
-      <div className={`${styles.rightGridElem} z-50`}>
+      <div className="z-50">
         <Table
           detailed={props.detailed}
           date={date}
