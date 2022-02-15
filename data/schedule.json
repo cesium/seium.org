@@ -59,14 +59,14 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "author": "FARFETCH",
+        "summary": "FARFETCH",
         "location": "CP2-B1"
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "author": "ACCENTURE",
+        "summary": "ACCENTURE",
         "location": "CP2-B1"
       },
       {
@@ -265,7 +265,7 @@
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "author": "EY",
+        "summary":"EY",
         "location": "CP2-B1"
       },
       {
@@ -371,7 +371,7 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "author": "Agentifai",
+        "summary": "Agentifai",
         "location": "CP2-B1"
       },
       {
