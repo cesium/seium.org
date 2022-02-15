@@ -53,6 +53,17 @@ const Animation = () => {
     [2245.553232676324, 469.2924542063363],
   ];
 
+  let height_cost = 100;
+  path1_backup.forEach((x) => {
+    x[1] -= height_cost;
+  });
+  path2_backup.forEach((x) => {
+    x[1] -= height_cost;
+  });
+  path3_backup.forEach((x) => {
+    x[1] -= height_cost;
+  });
+
   var path1 = [];
   var path2 = [];
   var path3 = [];
@@ -112,23 +123,33 @@ const Animation = () => {
   };
 
   function update_vars(p, mouseX, mouseY, path, path_index, path_var) {
-    if (
-      mouseY > path_var[1] - p.height * 0.3 &&
-      mouseY < path_var[1] + p.height * 0.3 &&
-      mouseX > path_var[0] - p.width * 0.3 &&
-      mouseX < path_var[0] + p.width * 0.3
-    ) {
-      path[path_index][0] += (mouseX - path[path_index][0]) * 0.1;
-      path[path_index][1] += (mouseY - path[path_index][1]) * 0.1;
+    if (path_var == undefined) {
+      update_path_horizontally(p);
+      update_path_vars();
     } else {
-      path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
-      path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+      if (
+        mouseY > path_var[1] - p.height * 0.1 &&
+        mouseY < path_var[1] + p.height * 0.1 &&
+        mouseX > path_var[0] - p.width * 0.3 &&
+        mouseX < path_var[0] + p.width * 0.3
+      ) {
+        path[path_index][0] += (mouseX - path[path_index][0]) * 0.1;
+        path[path_index][1] += (mouseY - path[path_index][1]) * 0.1;
+      } else {
+        path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
+        path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+      }
     }
   }
 
   function update_vars_nomouse(path, path_index, path_var) {
-    path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
-    path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+    if (path_var == undefined) {
+      update_path_horizontally(p);
+      update_path_vars();
+    } else {
+      path[path_index][0] += (path_var[0] - path[path_index][0]) * 0.1;
+      path[path_index][1] += (path_var[1] - path[path_index][1]) * 0.1;
+    }
   }
 
   function drawPaths(p, path) {
