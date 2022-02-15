@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import useInView from "react-cool-inview";
 import Fade from "react-reveal/Fade";
 import Card from "/components/utils/Card";
-import SeiAnimation from "./Animation"
+import SeiAnimation from "./Animation";
 
 import Team from "./Team";
 
@@ -60,9 +60,9 @@ export default function Organization() {
     : "";
 
   return (
-    <section className="grid grid-cols-1 py-20 spacing gap-x-32 gap-y-8 bg-quaternary lg:grid-cols-2">
+    <section className="spacing grid grid-cols-1 gap-x-32 gap-y-8 bg-quaternary py-20 lg:grid-cols-2">
       <div className="text-white">
-        <h2 className="mb-4 text-4xl font-bold font-iextrabold">
+        <h2 className="mb-4 font-iextrabold text-4xl font-bold">
           Organization
         </h2>
         <p className="font-imedium">
@@ -72,29 +72,31 @@ export default function Organization() {
         </p>
       </div>
 
-      <Team title={team["organization"].title} list={team["organization"].list} />
+      <Team
+        title={team["organization"].title}
+        list={team["organization"].list}
+      />
 
       <Team
         title={team["marketing"].title}
         list={team["marketing"].list.slice(0, 2)}
       />
 
-      <div className="items-center justify-center hidden lg:flex">
-        <Animation/>
+      <div className="hidden items-center justify-center lg:flex">
+        <Animation />
       </div>
 
-      <div className="flex flex-col h-full">
+      <div className="flex h-full flex-col">
         <Team title="" list={team["marketing"].list.slice(2, 6)} />
-        <div className="justify-center hidden h-full lg:flex">
+        <div className="hidden h-full justify-center lg:flex">
           <SeiAnimation />
         </div>
       </div>
       <Team title={team["tech"].title} list={team["tech"].list} />
-      
+
       <Team title={team["program"].title} list={team["program"].list} />
 
       <Team title={team["activities"].title} list={team["activities"].list} />
-      
     </section>
   );
 }

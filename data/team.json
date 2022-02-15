@@ -23,8 +23,8 @@
       {
         "id": "alex",
         "name": "Francisco Neves",
-        "github":"franl08",
-        "linkedin":"francisco-neves-5bb7901a2/"
+        "github": "franl08",
+        "linkedin": "francisco-neves-5bb7901a2/"
       },
       {
         "id": "mascote",
@@ -39,9 +39,9 @@
       {
         "id": "luis",
         "name": "Luis Araújo",
-        "github":"LAraujo7",
+        "github": "LAraujo7",
         "gitlab": "LAraujo7",
-        "linkedin":"LAraujo7"
+        "linkedin": "LAraujo7"
       },
       {
         "id": "sofia",
@@ -52,7 +52,8 @@
         "name": "Beatriz Rocha"
       }
     ]
-  },"program": {
+  },
+  "program": {
     "title": "Program",
     "list": [
       {
@@ -120,7 +121,7 @@
       {
         "id": "gerson",
         "name": "Gerson Júnior"
-      }, 
+      },
       {
         "id": "mascote",
         "name": "Pedro Mendes"
