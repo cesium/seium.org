@@ -49,10 +49,6 @@ function Profile() {
     neededBadges = 0;
   }
 
-  console.log(companyBadges);
-  console.log(level);
-  console.log(neededBadges);
-
   const levelEntries = [10, 30, 60, 100];
 
   const onResetPassword = () => {

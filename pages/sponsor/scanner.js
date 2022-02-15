@@ -26,7 +26,6 @@ function SponsorBadges() {
   };
 
   const handleUUID = (uuid) => {
-    console.log(uuid);
     giveBadge(uuid, "69420")
       .then((response) => {
         if (response.redeem) {
