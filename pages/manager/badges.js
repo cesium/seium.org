@@ -53,7 +53,6 @@ function ManagerBadges() {
   };
 
   const handleUUID = (uuid) => {
-    console.log(uuid);
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
         if (response.redeem) {

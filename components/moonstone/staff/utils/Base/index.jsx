@@ -11,7 +11,13 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen, navigation }) => {
+const MobileNavbar = ({
+  href,
+  sidebarOpen,
+  setSidebarOpen,
+  navigation,
+  logout,
+}) => {
   return (
     <Transition.Root show={sidebarOpen} as={Fragment}>
       <Dialog
@@ -111,6 +117,7 @@ export default function Dashboard({
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
         navigation={navigation}
+        logout={logout}
       />
 
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">

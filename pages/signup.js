@@ -19,7 +19,7 @@ function Signup() {
 
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
-  const [username, updateUsername] = useState("");
+  const [nickname, updateNickname] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
@@ -35,7 +35,7 @@ function Signup() {
       email,
       password,
       password_confirmation,
-      username,
+      nickname,
       uuid,
     });
   };
@@ -65,12 +65,12 @@ function Signup() {
             onChange={(e) => updateEmail(e.currentTarget.value)}
           />
           <Input
-            text="USERNAME"
-            id="username"
-            name="username"
+            text="NICKNAME"
+            id="nickname"
+            name="nickname"
             fgColor="white"
             bgColor="primary"
-            onChange={(e) => updateUsername(e.currentTarget.value)}
+            onChange={(e) => updateNickname(e.currentTarget.value)}
           />
           <Input
             text="PASSWORD"

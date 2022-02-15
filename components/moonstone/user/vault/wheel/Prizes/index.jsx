@@ -10,7 +10,7 @@ export default function Prizes({ products }) {
         <li key={product.id} className="flex py-6">
           <div className="flex-shrink-0">
             <img
-              src={product.image}
+              src={product.avatar}
               alt={product.name}
               className="h-24 w-24 rounded-md object-cover object-center sm:h-32 sm:w-32"
             />

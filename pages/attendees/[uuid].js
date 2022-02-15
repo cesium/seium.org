@@ -47,8 +47,6 @@ function Profile() {
       .catch((_) => router.replace("/404"));
   }, []);
 
-  console.log(attendee);
-
   if (!attendee) return null;
 
   return (
