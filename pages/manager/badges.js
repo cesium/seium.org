@@ -10,7 +10,7 @@ import ErrorMessage from "/components/utils/ErrorMessage";
 import Filter from "/components/moonstone/user/badgedex/Filter";
 import QRScanner from "/components/moonstone/utils/QRScanner";
 
-const navigation = ["badges", "prizes"];
+const navigation = ["badges", "prizes", "identifier"];
 
 function ManagerBadges() {
   const [allBadges, updateAllBadges] = useState([]);

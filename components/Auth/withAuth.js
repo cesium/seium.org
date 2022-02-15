@@ -33,9 +33,12 @@ export function withAuth(WrappedComponent) {
         break;
       case USER.ROLES.MANAGER:
         if (
-          !["/manager/badges", "/manager/prizes", "/attendees/[uuid]"].includes(
-            router.pathname
-          )
+          ![
+            "/manager/badges",
+            "/manager/prizes",
+            "/manager/identifier",
+            "/attendees/[uuid]",
+          ].includes(router.pathname)
         ) {
           return router.replace("/404");
         }
