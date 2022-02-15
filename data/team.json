@@ -44,8 +44,12 @@
         "linkedin":"LAraujo7"
       },
       {
-        "id": "mascote",
+        "id": "sofia",
         "name": "Ana Sofia Gomes"
+      },
+      {
+        "id": "bea",
+        "name": "Beatriz Rocha"
       }
     ]
   },"program": {
@@ -56,7 +60,7 @@
         "name": "Marco Pereira"
       },
       {
-        "id": "mascote",
+        "id": "antonio",
         "name": "Pedro António"
       }
     ]
@@ -106,15 +110,15 @@
         "name": "Ruben Adão"
       },
       {
-        "id": "mascote",
-        "name": "Rodrigo Pereira"
+        "id": "nelson",
+        "name": "Nelson Estevão"
       },
       {
-        "id": "mascote",
-        "name": "David Machados"
+        "id": "david",
+        "name": "David Machado"
       },
       {
-        "id": "mascote",
+        "id": "gerson",
         "name": "Gerson Júnior"
       }, 
       {

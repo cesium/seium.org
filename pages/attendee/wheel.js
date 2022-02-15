@@ -161,35 +161,35 @@ function WheelPage() {
       title="Wheel"
       description="Spin the wheel and win awards!"
     >
-      <div className="mt-12 grid-cols-1 overflow-hidden 2xl:grid-cols-2">
-        <div className="col-span-1 float-left h-full w-full 2xl:w-1/2">
+      <div className="grid-cols-1 mt-12 overflow-hidden 2xl:grid-cols-2">
+        <div className="float-left w-full h-full col-span-1 2xl:w-1/2">
           <Heading text="Achievements">
-            <div className="h-full w-40 pt-1">
-              <div className="col-span-1 float-left w-full">
+            <div className="w-40 h-full pt-1">
+              <div className="float-left w-full col-span-1">
                 💰{user.token_balance} Tokens
               </div>
             </div>
-            <div className="h-full w-40 pt-1">
-              <div className="col-span-1 float-left w-full">
+            <div className="w-40 h-full pt-1">
+              <div className="float-left w-full col-span-1">
                 🏅{user.badge_count} Badges
               </div>
             </div>
           </Heading>
-          <div className="mb-10 pt-5">
+          <div className="pt-5 mb-10">
             <div className="m-auto h-72 w-72 xs:h-80 xs:w-80 sm:h-96 sm:w-96">
               <Wheel steps={16} angle={st.angle} />
             </div>
             <button
-              className="m-auto mt-10 block h-20 w-64 cursor-pointer rounded-full bg-quinary"
+              className="block w-64 h-20 m-auto mt-10 rounded-full cursor-pointer bg-quinary"
               onClick={spinTheWheel}
             >
-              <p className="font-ibold font-bold">SPIN THE WHEEL</p>
+              <p className="font-bold font-ibold">SPIN THE WHEEL</p>
               <p className="font-iregular">20 tokens💰</p>
             </button>
           </div>
         </div>
 
-        <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">
+        <div className="float-right w-full col-span-1 2xl:w-1/2 2xl:pl-6">
           <div>
             <Heading text="Latest Wins"></Heading>
             <div className="h-auto">{latestWinsComponents}</div>
@@ -197,7 +197,7 @@ function WheelPage() {
 
           <div className="mt-10">
             <Heading text="Awards"></Heading>
-            <div className="mb-5 grid w-full grid-cols-4 pb-3">
+            <div className="grid w-full grid-cols-4 pb-3 mb-5">
               <div className="text-left">
                 <p className="font-iregular">Name</p>
               </div>
@@ -208,7 +208,7 @@ function WheelPage() {
                 <p className="text-iregular">Qt</p>
               </div>
               <div className="text-right">
-                <p className="text-iregular pr-4">Probability</p>
+                <p className="pr-4 text-iregular">Probability</p>
               </div>
             </div>
             {prizeComponents}
