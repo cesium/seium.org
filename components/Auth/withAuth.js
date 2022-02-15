@@ -36,6 +36,7 @@ export function withAuth(WrappedComponent) {
           ![
             "/manager/badges",
             "/manager/prizes",
+            "/manager/prizes/[uuid]",
             "/manager/identifier",
             "/attendees/[uuid]",
           ].includes(router.pathname)
