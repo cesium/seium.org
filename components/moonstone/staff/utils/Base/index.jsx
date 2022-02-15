@@ -11,7 +11,13 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen, navigation }) => {
+const MobileNavbar = ({
+  href,
+  sidebarOpen,
+  setSidebarOpen,
+  navigation,
+  logout,
+}) => {
   return (
     <Transition.Root show={sidebarOpen} as={Fragment}>
       <Dialog
@@ -39,7 +45,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen, navigation }) => {
           leaveFrom="translate-x-0"
           leaveTo="-translate-x-full"
         >
-          <div className="absolute flex h-full w-full flex-1 flex-col bg-secondary md:max-w-md">
+          <div className="bg-secondary absolute flex h-full w-full flex-1 flex-col md:max-w-md">
             <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
               <div className="flex flex-shrink-0 items-center justify-between px-4">
                 <Link href="/">
@@ -51,7 +57,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen, navigation }) => {
                 </Link>
                 <button
                   type="button"
-                  className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-white hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-quaternary"
+                  className="focus:ring-quaternary -ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-white hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset"
                   onClick={() => setSidebarOpen(false)}
                 >
                   <span className="sr-only">Close sidebar</span>
@@ -65,8 +71,8 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen, navigation }) => {
                       className={classNames(
                         item == href
                           ? "bg-primary text-quinary"
-                          : "text-white hover:bg-primary hover:bg-opacity-50",
-                        "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                          : "hover:bg-primary text-white hover:bg-opacity-50",
+                        "group border-tertiary font-ibold flex items-center border-b-2 border-opacity-50 px-8 py-8 text-xs"
                       )}
                     >
                       {item.toUpperCase()}
@@ -75,11 +81,11 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen, navigation }) => {
                 ))}
               </nav>
             </div>
-            <div className="flex flex-shrink-0 border-t border-quaternary p-4">
+            <div className="border-quaternary flex flex-shrink-0 border-t p-4">
               <a
                 href="#"
                 onClick={() => logout()}
-                className="px-4 font-iregular text-quinary"
+                className="font-iregular text-quinary px-4"
               >
                 Log out 👋
               </a>
@@ -111,10 +117,11 @@ export default function Dashboard({
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
         navigation={navigation}
+        logout={logout}
       />
 
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">
-        <div className="flex min-h-0 flex-1 flex-col bg-secondary">
+        <div className="bg-secondary flex min-h-0 flex-1 flex-col">
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
             <div className="mt-20 flex flex-shrink-0 items-center px-4">
@@ -128,8 +135,8 @@ export default function Dashboard({
                     className={classNames(
                       item == href
                         ? "bg-primary text-quinary"
-                        : "text-white hover:bg-primary hover:bg-opacity-50",
-                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                        : "hover:bg-primary text-white hover:bg-opacity-50",
+                      "group border-tertiary font-ibold flex items-center border-b-2 border-opacity-50 px-8 py-8 text-xs"
                     )}
                   >
                     {item.toUpperCase()}
@@ -140,7 +147,7 @@ export default function Dashboard({
             <a
               href="#"
               onClick={() => logout()}
-              className="px-4 font-iregular text-quinary"
+              className="font-iregular text-quinary px-4"
             >
               Log out 👋
             </a>
@@ -151,7 +158,7 @@ export default function Dashboard({
         <div className="sticky top-0 z-10 flex justify-end pt-1 pl-1 sm:pl-3 sm:pt-3 lg:hidden">
           <button
             type="button"
-            className="inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
+            className="focus:ring-secondary inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset"
             onClick={() => setSidebarOpen(true)}
           >
             <span className="sr-only">Open sidebar</span>
@@ -161,10 +168,10 @@ export default function Dashboard({
         <main className="flex-1">
           <div className="py-6">
             <div className="max-w-7xl px-4 sm:px-6 lg:mx-20 lg:px-8">
-              <p className="font-ibold text-5xl text-secondary lg:pt-20">
+              <p className="font-ibold text-secondary text-5xl lg:pt-20">
                 {title}
               </p>
-              <p className="pt-2 font-iregular text-lg text-black">
+              <p className="font-iregular pt-2 text-lg text-black">
                 {description}
               </p>
               {children}
