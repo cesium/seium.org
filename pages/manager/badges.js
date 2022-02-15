@@ -45,7 +45,7 @@ function ManagerBadges() {
   };
 
   const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 500)).then(() => {
+    new Promise((r) => setTimeout(r, 1000)).then(() => {
       pauseRef.current = false;
       successRef.current = null;
       setFeedbackText("Scanning");
