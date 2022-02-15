@@ -31,7 +31,7 @@ function changeValue(array, index, value) {
   return res;
 }
 
-const navigation = ["badges", "prizes"];
+const navigation = ["badges", "prizes", "identifier"];
 
 function Reedem() {
   const [start, updateStart] = useState(true);
