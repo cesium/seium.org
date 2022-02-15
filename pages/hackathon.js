@@ -58,13 +58,13 @@ function Index() {
     <Navbar bgColor="secondary" button="quinary" fgColor="black">
       <Hero />
 
-      <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
+      {/* <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
         {mentors.map((mentor, i) => (
           <div key={i}>
             <Speaker {...mentor} />
           </div>
         ))}
-      </PeopleShowcase>
+      </PeopleShowcase> */}
 
       <Awards />
 
