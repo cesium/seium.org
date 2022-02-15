@@ -61,7 +61,7 @@ export default function Organization() {
   return (
     <section className="grid grid-cols-1 py-20 spacing gap-x-32 gap-y-8 bg-quaternary lg:grid-cols-2">
       <div className="text-white">
-        <h2 className="mb-4 text-6xl font-bold font-iextrabold">
+        <h2 className="mb-4 text-2xl font-bold font-iextrabold">
           Organization
         </h2>
         <p className="font-imedium">
