@@ -14,9 +14,7 @@ import ErrorMessage from "/components/utils/ErrorMessage";
 import { getWheelPrizes, getWheelLatestWins, spinWheel } from "/lib/api";
 
 /*
-
 Gets how long ago the given date/time was in a user friendly way (10 seconds ago, 1 minute ago, etc)
-
 */
 function displayTimeSince(dateString) {
   const date = Date.parse(dateString);
@@ -24,16 +22,23 @@ function displayTimeSince(dateString) {
 
   const differenceMiliSeconds = now - date;
 
-  if (differenceMiliSeconds <= 60 * 1000)
-    return `${Math.round(differenceMiliSeconds / 1000)} seconds ago`;
-  if (differenceMiliSeconds <= 60 * 60 * 1000)
-    return `${Math.round(differenceMiliSeconds / (60 * 1000))} minutes ago`;
-  if (differenceMiliSeconds <= 24 * 60 * 60 * 1000)
-    return `${Math.round(differenceMiliSeconds / (60 * 60 * 1000))} hours ago`;
+  let value;
+  let string;
 
-  return `${Math.round(
-    differenceMiliSeconds / (24 * 60 * 60 * 1000)
-  )} days ago`;
+  if (differenceMiliSeconds <= 60 * 1000) {
+    value = Math.round(differenceMiliSeconds / 1000);
+    string = `${value} seconds ago`;
+  } else if (differenceMiliSeconds <= 60 * 60 * 1000) {
+    value = Math.round(differenceMiliSeconds / (60 * 1000));
+    string = `${value} minutes ago`;
+  } else if (differenceMiliSeconds <= 24 * 60 * 60 * 1000) {
+    value = Math.round(differenceMiliSeconds / (60 * 60 * 1000));
+    string = `${value} hours ago`;
+  } else {
+    value = Math.round(differenceMiliSeconds / (24 * 60 * 60 * 1000));
+    string = `${value} days ago`;
+  }
+  return value < 0 ? "Now" : string;
 }
 
 function WheelPage() {
@@ -62,6 +67,10 @@ function WheelPage() {
   };
 
   useEffect(requestAllInfo, []);
+
+  const canSpin = () => {
+    return user.token_balance >= 20;
+  };
 
   const spinTheWheel = () => {
     updateState({ angle: 0, speed: angleSpeed });
@@ -139,18 +148,18 @@ function WheelPage() {
 
   const prizeComponents = prizes.map((entry, id) => (
     <ListItem4
-      prob="2.00%"
+      img={entry.avatar}
       key={id}
       name={entry.name}
-      qnty={entry.stock}
-      maxQnty={entry.max_amount_per_attendee}
+      quantity={entry.stock}
+      maxQuantity={entry.max_amount_per_attendee}
     />
   ));
   const latestWinsComponents = latestWins.map((entry, id) => (
     <ListItem3
       key={id}
       user={entry.attendee_name}
-      badge={entry.prize.name}
+      prize={entry.prize}
       when={displayTimeSince(entry.date)}
       isLast={id == latestWins.length - 1}
     />
@@ -180,7 +189,12 @@ function WheelPage() {
               <Wheel steps={16} angle={st.angle} />
             </div>
             <button
-              className="m-auto mt-10 block h-20 w-64 cursor-pointer rounded-full bg-quinary"
+              className={`${
+                canSpin()
+                  ? "cursor-pointer bg-quinary"
+                  : "bg-gray-400 opacity-50"
+              } m-auto mt-10 block h-20 w-64 rounded-full`}
+              disabled={!canSpin()}
               onClick={spinTheWheel}
             >
               <p className="font-ibold font-bold">SPIN THE WHEEL</p>
@@ -188,7 +202,6 @@ function WheelPage() {
             </button>
           </div>
         </div>
-
         <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">
           <div>
             <Heading text="Latest Wins"></Heading>
@@ -197,18 +210,18 @@ function WheelPage() {
 
           <div className="mt-10">
             <Heading text="Awards"></Heading>
-            <div className="mb-5 grid w-full grid-cols-4 pb-3">
-              <div className="text-left">
+            <div className="mb-5 grid w-full grid-cols-6 pb-3">
+              <div className="text-center">
+                <p className="text-iregular pr-4">Image</p>
+              </div>
+              <div className="col-span-3  text-left">
                 <p className="font-iregular">Name</p>
               </div>
               <div className="text-center">
-                <p className="text-iregular">Qt/pax(max)</p>
+                <p className="text-iregular">Qt/pax</p>
               </div>
               <div className="text-center">
-                <p className="text-iregular">Qt</p>
-              </div>
-              <div className="text-right">
-                <p className="text-iregular pr-4">Probability</p>
+                <p className="text-iregular pr-4">Qt</p>
               </div>
             </div>
             {prizeComponents}

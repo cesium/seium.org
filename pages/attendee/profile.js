@@ -30,9 +30,28 @@ function Profile() {
   const [username, setUsername] = useState(user.nickname || "");
 
   const companyBadges = user.badges.filter((entry) => entry.type == 4).length;
-  const level = companyBadges == 19 ? 4 : Math.floor(companyBadges / 20);
-  const neededBadges =
-    level == 3 ? 19 - companyBadges : (level + 1) * 5 - companyBadges;
+  let level = 0;
+  let neededBadges = 0;
+  if (companyBadges < 5) {
+    level = 0;
+    neededBadges = 5 - companyBadges;
+  } else if (companyBadges < 10) {
+    level = 1;
+    neededBadges = 10 - companyBadges;
+  } else if (companyBadges < 15) {
+    level = 2;
+    neededBadges = 15 - companyBadges;
+  } else if (companyBadges < 19) {
+    level = 3;
+    neededBadges = 19 - companyBadges;
+  } else {
+    level = 4;
+    neededBadges = 0;
+  }
+
+  console.log(companyBadges);
+  console.log(level);
+  console.log(neededBadges);
 
   const levelEntries = [10, 30, 60, 100];
 
@@ -139,43 +158,42 @@ function Profile() {
             <Heading text="Checkpoints"></Heading>
             <p className="font-iregular">
               <b className="font-ibold">Level 1</b> 5 companies &rarr; +
-              {levelEntries[0]}
-              entries
+              {levelEntries[0]} entries
             </p>
             <p className="font-iregular">
               <b className="font-ibold">Level 2</b> 10 companies &rarr; +
-              {levelEntries[1]}
-              entries
+              {levelEntries[1]} entries
             </p>
             <p className="font-iregular">
               <b className="font-ibold">Level 3</b> 15 companies &rarr; +
-              {levelEntries[2]}
-              entries
+              {levelEntries[2]} entries
             </p>
             <p className="font-iregular">
               <b className="font-ibold">Level 4</b> 19 companies &rarr; +
-              {levelEntries[3]}
-              entries
+              {levelEntries[3]} entries
             </p>
 
             <CheckpointTracker checkpoints={4} progress={level} />
 
             {level != 4 && (
-              <>
-                <p className="font-iregular">
-                  You just need {neededBadges} more bages to go to Level{" "}
-                  {level + 1} (and win +{levelEntries[level]} entries to the
-                  final draw). Hurry!
-                </p>
-                <CodeInput />
-              </>
+              <p className="font-iregular">
+                You just need {neededBadges} more badges to go to Level{" "}
+                {level + 1} (and win +{levelEntries[level]} entries to the final
+                draw). Hurry!
+              </p>
             )}
           </div>
 
+          <div className="my-10">
+            <Heading text="Redeem referral code" />
+            <p className="font-iregular">Redeem a badge using a unique code</p>
+
+            <CodeInput />
+          </div>
+
           <div className="mt-10">
-            <Heading text="Upload CV"></Heading>
+            <Heading text="Upload CV" />
             <p className="font-iregular">
-              {" "}
               Get a chance to win a spot at the Corporate dinner by submiting
               you CV!
             </p>
