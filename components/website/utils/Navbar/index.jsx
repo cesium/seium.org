@@ -85,8 +85,8 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                               {user && (
                                 <img
                                   className="h-10 w-10 rounded-full"
-                                  src={`${process.env.NEXT_PUBLIC_API_URL}${user.avatar}`}
-                                  alt=""
+                                  src={user.avatar}
+                                  alt="Avatar"
                                 />
                               )}
                             </Menu.Button>
@@ -101,15 +101,16 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             leaveTo="transform opacity-0 scale-95"
                           >
                             <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                              {userNavigation(user.type).map((item) => (
-                                <Menu.Item key={item.name}>
-                                  <Link passHref href={item.slug}>
-                                    <a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                      {item.name}
-                                    </a>
-                                  </Link>
-                                </Menu.Item>
-                              ))}
+                              {user &&
+                                userNavigation(user.type).map((item) => (
+                                  <Menu.Item key={item.name}>
+                                    <Link passHref href={item.slug}>
+                                      <a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        {item.name}
+                                      </a>
+                                    </Link>
+                                  </Menu.Item>
+                                ))}
                               <Menu.Item key="log_out">
                                 <button
                                   onClick={() => logout()}
