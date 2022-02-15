@@ -156,6 +156,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 </Disclosure.Button>
               ))}
               {isAuthenticated &&
+                user &&
                 userNavigation(user.type).map((item) => (
                   <Disclosure.Button
                     key={item.slug}

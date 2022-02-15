@@ -9,24 +9,6 @@ import ErrorMessage from "/components/utils/ErrorMessage";
 import Badge from "/components/moonstone/user/badgedex/Badge";
 import Filter from "/components/moonstone/user/badgedex/Filter";
 
-function BadgeButton({ text, val, setValue, selected }) {
-  const changeVal = () => {
-    if (!selected) setValue(!val);
-  };
-
-  return (
-    <button
-      className={`${selected ? "bg-quinary" : "bg-white text-opacity-40"}
-                        ${text == "ALL" ? "px-12 xl:px-6" : "px-10 xl:px-4"}
-                        inline-flex w-full items-center rounded-full text-center text-sm text-black
-                       `}
-      onClick={changeVal}
-    >
-      {text}
-    </button>
-  );
-}
-
 function Badgedex() {
   const { user } = useAuth();
   const [allBadges, updateAllBadges] = useState([]);
@@ -49,39 +31,51 @@ function Badgedex() {
       description="Explore all existing badges"
     >
       <div className="pt-10 xl:flex xl:flex-auto">
-        <div className="flex flex-auto space-x-5">
+        <div className="m-auto flex flex-auto space-x-5">
           <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
           <Filter onChange={updateFilter} />
         </div>
-        <div className="grid w-auto grid-cols-3 text-2xl font-bold lg:w-1/2 xl:w-auto xl:gap-x-8">
-          <div>Show</div>
-          <BadgeButton
-            text="ALL"
-            val={all}
-            setValue={updateAll}
-            selected={all}
-          />
-          <BadgeButton
-            text="MINE"
-            val={all}
-            setValue={updateAll}
-            selected={!all}
-          />
+        <div className="flex w-auto font-bold lg:w-1/2 xl:w-auto">
+          <div className="my-auto text-2xl">Show</div>
+          <div className="flex flex-row-reverse gap-x-8">
+            <button
+              className={`font-iregular bg-${
+                all ? "white" : "quinary"
+              } h-12 items-center rounded-full px-4 py-1 text-center`}
+              onClick={(e) => {
+                updateAll(false);
+              }}
+            >
+              MINE
+            </button>
+            <button
+              className={`font-iregular bg-${
+                all ? "quinary" : "white"
+              } ml-12 h-12 items-center rounded-full px-4 py-1 text-center`}
+              onClick={(e) => {
+                updateAll(true);
+              }}
+            >
+              ALL
+            </button>
+          </div>
         </div>
       </div>
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-        {user.badges
-          .filter((badge) => badge.type == filter || filter == null)
-          .map((badge) => (
-            <Badge key={badge.id} {...badge} />
-          ))}
-        {all &&
-          allBadges
-            .filter((badge) => !user.badges.includes(badge))
-            .filter((badge) => badge.type == filter || filter == null)
-            .map((badge) => (
-              <Badge key={badge.id} opacity="opacity-30" {...badge} />
-            ))}
+        {console.log(user.badges)}
+        {all
+          ? allBadges
+              .filter((badge) => badge.type == filter || filter == null)
+              .map((badge) => (
+                <Badge
+                  key={badge.id}
+                  owned={user.badges.map((b) => b.id).includes(badge.id)}
+                  {...badge}
+                />
+              ))
+          : user.badges
+              .filter((badge) => badge.type == filter || filter == null)
+              .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
       </div>
       {error && <ErrorMessage />}
     </Dashboard>

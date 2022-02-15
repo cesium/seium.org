@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Badge({ name, id, avatar, tokens, opacity }) {
+export default function Badge({ name, id, avatar, tokens, owned }) {
   return (
     <Link href={`/badge/${id}`}>
-      <a className={`h-full w-full ${opacity}`}>
+      <a className={`h-full w-full ${owned ? "opacity-100" : "opacity-30"}`}>
         <div>
           <img src={avatar} alt={name}></img>
         </div>
