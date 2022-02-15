@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { withAuth } from "/components/Auth";
+import { withAuth, useAuth } from "/components/Auth";
 
 import { getBadge } from "/lib/api";
 
@@ -19,6 +21,7 @@ function Owner({ attendee }) {
 }
 
 function BadgeSlug() {
+  const { user } = useAuth();
   const [badge, updateBadge] = useState(null);
   const router = useRouter();
   const { slug } = router.query;
@@ -33,8 +36,8 @@ function BadgeSlug() {
   }, [slug]);
 
   return (
-    <Dashboard>
-      <div>
+    <Dashboard href="badgedex">
+      <div className="mb-5">
         <h1 className="font-iextrabold text-4xl sm:text-5xl">
           {badge && badge.name}
         </h1>
@@ -43,10 +46,21 @@ function BadgeSlug() {
         </p>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2">
+      <Link href="/attendee/badgedex">
+        <a className="text-center font-imedium text-secondary">
+          &lt; Back to badgedex
+        </a>
+      </Link>
+
+      <div className="mt-5 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2">
         <div className="w-full">
           <Heading text="Badge info" />
-          {badge && <Badge {...badge} />}
+          {badge && (
+            <Badge
+              {...badge}
+              owned={user.badges.map((b) => b.id).includes(badge.id)}
+            />
+          )}
         </div>
 
         <div className="w-full">
