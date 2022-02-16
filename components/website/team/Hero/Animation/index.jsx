@@ -142,7 +142,7 @@ const Animation = () => {
     }
   }
 
-  function update_vars_nomouse(path, path_index, path_var) {
+  function update_vars_nomouse(p, path, path_index, path_var) {
     if (path_var == undefined) {
       update_path_horizontally(p);
       update_path_vars();
@@ -177,12 +177,12 @@ const Animation = () => {
         update_vars(p, mouseX, mouseY, path3, path3_index_1, path3_var_1);
         update_vars(p, mouseX, mouseY, path3, path3_index_2, path3_var_2);
       } else {
-        update_vars_nomouse(path1, path1_index_1, path1_var_1);
-        update_vars_nomouse(path1, path1_index_2, path1_var_2);
-        update_vars_nomouse(path2, path2_index_1, path2_var_1);
-        update_vars_nomouse(path2, path2_index_2, path2_var_2);
-        update_vars_nomouse(path3, path3_index_1, path3_var_1);
-        update_vars_nomouse(path3, path3_index_2, path3_var_2);
+        update_vars_nomouse(p, path1, path1_index_1, path1_var_1);
+        update_vars_nomouse(p, path1, path1_index_2, path1_var_2);
+        update_vars_nomouse(p, path2, path2_index_1, path2_var_1);
+        update_vars_nomouse(p, path2, path2_index_2, path2_var_2);
+        update_vars_nomouse(p, path3, path3_index_1, path3_var_1);
+        update_vars_nomouse(p, path3, path3_index_2, path3_var_2);
       }
     }
 
