@@ -47,7 +47,6 @@ function ManagerBadges() {
   const handleUUID = (uuid) => {
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
-        console.log(response);
         if (response.redeem) {
           navigator.vibrate([20, 10, 20]);
           setFeedback(FEEDBACK.SUCCESS);
