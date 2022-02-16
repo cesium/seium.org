@@ -30,11 +30,16 @@ function ManagerBadges() {
 
   useEffect(() => {
     if (feedback != FEEDBACK.SCANNING) {
-      setTimeout(() => {
+      const id = setTimeout(() => {
         pauseRef.current = false;
         setFeedback(FEEDBACK.SCANNING);
       }, 700);
+
+      return () => {
+        clearTimeout(id);
+      };
     }
+    return null;
   }, [feedback]);
 
   const badges = allBadges.filter(
