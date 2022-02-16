@@ -47,25 +47,25 @@ function ManagerBadges() {
   };
 
   const handleUUID = (uuid) => {
-    let feedback;
+    let feedback_var;
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
         if (response.redeem) {
           navigator.vibrate([40, 20, 40]);
-          feedback = FEEDBACK.SUCCESS;
+          feedback_var = FEEDBACK.SUCCESS;
         } else {
-          feedback = FEEDBACK.FAILURE;
+          feedback_var = FEEDBACK.FAILURE;
         }
       })
       .catch((errors) => {
         if (errors.response.data.errors?.unique_attendee_badge) {
-          feedback = FEEDBACK.ALREADY_HAS;
+          feedback_var = FEEDBACK.ALREADY_HAS;
         } else {
-          feedback = FEEDBACK.FAILURE;
+          feedback_var = FEEDBACK.FAILURE;
         }
       })
       .finally(() => {
-        setFeedback(feedback);
+        setFeedback(feedback_var);
       });
   };
 
@@ -103,7 +103,7 @@ function ManagerBadges() {
                 onClick={() => handleBadgeSelected(badge)}
               >
                 <img src={badge.avatar} alt={badge.name} />
-                <div className="flex flex-col justify-items-center text-center font-iregular">
+                <div className="font-iregular flex flex-col justify-items-center text-center">
                   <div>{badge.name}</div>
                   <div>{badge.tokens} 💰 </div>
                 </div>

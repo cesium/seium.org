@@ -25,25 +25,25 @@ function SponsorBadges() {
   }, [feedback]);
 
   const handleUUID = (uuid) => {
-    let feedback;
+    let feedback_var;
     giveBadge(uuid, "69420")
       .then((response) => {
         if (response.redeem) {
           navigator.vibrate([40, 20, 40]);
-          feedback = FEEDBACK.SUCCESS;
+          feedback_var = FEEDBACK.SUCCESS;
         } else {
-          feedback = FEEDBACK.FAILURE;
+          feedback_var = FEEDBACK.FAILURE;
         }
       })
       .catch((errors) => {
         if (errors.response.data.errors?.unique_attendee_badge) {
-          feedback = FEEDBACK.ALREADY_HAS;
+          feedback_var = FEEDBACK.ALREADY_HAS;
         } else {
-          feedback = FEEDBACK.FAILURE;
+          feedback_var = FEEDBACK.FAILURE;
         }
       })
       .finally(() => {
-        setFeedback(feedback);
+        setFeedback(feedback_var);
       });
   };
 
