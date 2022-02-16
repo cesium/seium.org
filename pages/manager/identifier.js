@@ -15,12 +15,14 @@ function ManagerIdentifier() {
   const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
   const [showScanner, setScanner] = useState(true);
 
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 500)).then(() => {
-      pauseRef.current = false;
-      setFeedback(FEEDBACK.SCANNING);
-    });
-  };
+  useEffect(() => {
+    if (feedback != FEEDBACK.SCANNING) {
+      setTimeout(() => {
+        pauseRef.current = false;
+        setFeedback(FEEDBACK.SCANNING);
+      }, 700);
+    }
+  }, [feedback]);
 
   const handleUUID = (uuid) => {
     getAttendee(uuid)
@@ -28,11 +30,9 @@ function ManagerIdentifier() {
         setText(`${response.data.name} | ${response.data.email}`);
         navigator.vibrate([20, 10, 20]);
         setFeedback(FEEDBACK.SUCCESS);
-        resetScannerState();
       })
       .catch((_) => {
         setFeedback(FEEDBACK.FAILURE);
-        resetScannerState();
       });
   };
 

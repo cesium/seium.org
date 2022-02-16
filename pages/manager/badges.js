@@ -28,6 +28,15 @@ function ManagerBadges() {
       .catch((_) => updateError(true));
   }, []);
 
+  useEffect(() => {
+    if (feedback != FEEDBACK.SCANNING) {
+      setTimeout(() => {
+        pauseRef.current = false;
+        setFeedback(FEEDBACK.SCANNING);
+      }, 700);
+    }
+  }, [feedback]);
+
   const badges = allBadges.filter(
     (badge) => badge.type == filter || filter == null
   );
@@ -35,13 +44,6 @@ function ManagerBadges() {
   const handleBadgeSelected = (badge) => {
     badgeRef.current = badge;
     setScanner(true);
-  };
-
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 1000)).then(() => {
-      pauseRef.current = false;
-      setFeedback(FEEDBACK.SCANNING);
-    });
   };
 
   const handleUUID = (uuid) => {
@@ -53,7 +55,6 @@ function ManagerBadges() {
         } else {
           setFeedback(FEEDBACK.FAILURE);
         }
-        resetScannerState();
       })
       .catch((errors) => {
         if (errors.response.data.errors?.unique_attendee_badge) {
@@ -61,7 +62,6 @@ function ManagerBadges() {
         } else {
           setFeedback(FEEDBACK.FAILURE);
         }
-        resetScannerState();
       });
   };
 
@@ -99,7 +99,7 @@ function ManagerBadges() {
                 onClick={() => handleBadgeSelected(badge)}
               >
                 <img src={badge.avatar} alt={badge.name} />
-                <div className="flex flex-col justify-items-center text-center font-iregular">
+                <div className="font-iregular flex flex-col justify-items-center text-center">
                   <div>{badge.name}</div>
                   <div>{badge.tokens} 💰 </div>
                 </div>
