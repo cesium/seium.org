@@ -99,7 +99,7 @@ function ManagerBadges() {
                 onClick={() => handleBadgeSelected(badge)}
               >
                 <img src={badge.avatar} alt={badge.name} />
-                <div className="font-iregular flex flex-col justify-items-center text-center">
+                <div className="flex flex-col justify-items-center text-center font-iregular">
                   <div>{badge.name}</div>
                   <div>{badge.tokens} 💰 </div>
                 </div>
