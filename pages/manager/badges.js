@@ -1,14 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 
 import { withAuth } from "/components/Auth";
-import { useAuth } from "/components/Auth";
 
 import { getAllBadges, giveBadge } from "/lib/api";
 
 import Base from "/components/moonstone/staff/utils/Base";
 import ErrorMessage from "/components/utils/ErrorMessage";
 import Filter from "/components/moonstone/user/badgedex/Filter";
-import QRScanner from "/components/moonstone/utils/QRScanner";
+import QRScanner, { FEEDBACK } from "/components/moonstone/utils/QRScanner";
 
 const navigation = ["badges", "prizes", "identifier"];
 
@@ -17,11 +16,9 @@ function ManagerBadges() {
   const [filter, updateFilter] = useState(null);
   const pauseRef = useRef(false);
   const badgeRef = useRef(null);
-  const successRef = useRef(null);
-  const [feedbackText, setFeedbackText] = useState("Scanning");
+  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
   const [showScanner, setScanner] = useState(false);
   const [error, updateError] = useState(false);
-  const { user } = useAuth();
 
   useEffect(() => {
     getAllBadges()
@@ -31,13 +28,9 @@ function ManagerBadges() {
       .catch((_) => updateError(true));
   }, []);
 
-  const badges = allBadges.filter((badge) => {
-    let result = true;
-    if (filter && badge.type != filter) {
-      result = false;
-    }
-    return result;
-  });
+  const badges = allBadges.filter(
+    (badge) => badge.type == filter || filter == null
+  );
 
   const handleBadgeSelected = (badge) => {
     badgeRef.current = badge;
@@ -47,49 +40,31 @@ function ManagerBadges() {
   const resetScannerState = () => {
     new Promise((r) => setTimeout(r, 1000)).then(() => {
       pauseRef.current = false;
-      successRef.current = null;
-      setFeedbackText("Scanning");
+      setFeedback(FEEDBACK.SCANNING);
     });
   };
 
   const handleUUID = (uuid) => {
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
+        console.log(response);
         if (response.redeem) {
-          successRef.current = true;
           navigator.vibrate([20, 10, 20]);
-          setFeedbackText("Success");
-          resetScannerState();
-        } else if (response.errors?.unique_attendee_badge) {
-          successRef.current = false;
-          setFeedbackText("User has badge");
-          resetScannerState();
+          setFeedback(FEEDBACK.SUCCESS);
         } else {
-          successRef.current = false;
-          setFeedbackText("Failure");
-          resetScannerState();
+          setFeedback(FEEDBACK.FAILURE);
         }
+        resetScannerState();
       })
-      .catch((_) => {
-        successRef.current = false;
-        setFeedbackText("Failure");
+      .catch((errors) => {
+        if (errors.response.data.errors?.unique_attendee_badge) {
+          setFeedback(FEEDBACK.ALREADY_HAS);
+        } else {
+          setFeedback(FEEDBACK.FAILURE);
+        }
         resetScannerState();
       });
   };
-
-  const badgeComponents = badges.map((badge, index) => (
-    <div
-      key={index}
-      className="h-full w-full cursor-pointer"
-      onClick={() => handleBadgeSelected(badge)}
-    >
-      <img src={badge.avatar} alt={badge.name} />
-      <div className="flex flex-col justify-items-center text-center font-iregular">
-        <div>{badge.name}</div>
-        <div>{badge.tokens} 💰 </div>
-      </div>
-    </div>
-  ));
 
   return (
     <Base
@@ -104,8 +79,7 @@ function ManagerBadges() {
             handleCode={handleUUID}
             pauseRef={pauseRef}
             text={badgeRef?.current.name}
-            successRef={successRef}
-            feedbackText={feedbackText}
+            feedback={feedback}
             showScanner={showScanner}
             setScanner={setScanner}
           />
@@ -119,7 +93,19 @@ function ManagerBadges() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
-            {badgeComponents}
+            {badges.map((badge, index) => (
+              <div
+                key={index}
+                className="h-full w-full cursor-pointer"
+                onClick={() => handleBadgeSelected(badge)}
+              >
+                <img src={badge.avatar} alt={badge.name} />
+                <div className="flex flex-col justify-items-center text-center font-iregular">
+                  <div>{badge.name}</div>
+                  <div>{badge.tokens} 💰 </div>
+                </div>
+              </div>
+            ))}
           </div>
         </>
       )}
