@@ -29,7 +29,6 @@ function SponsorBadges() {
     giveBadge(uuid, "69420")
       .then((response) => {
         if (response.redeem) {
-          navigator.vibrate([40, 20, 40]);
           feedback_var = FEEDBACK.SUCCESS;
         } else {
           feedback_var = FEEDBACK.FAILURE;

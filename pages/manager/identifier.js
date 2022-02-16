@@ -33,7 +33,6 @@ function ManagerIdentifier() {
     getAttendee(uuid)
       .then((response) => {
         setText(`${response.data.name} | ${response.data.email}`);
-        navigator.vibrate([20, 10, 20]);
         setFeedback(FEEDBACK.SUCCESS);
       })
       .catch((_) => {
