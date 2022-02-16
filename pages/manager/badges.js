@@ -47,21 +47,25 @@ function ManagerBadges() {
   };
 
   const handleUUID = (uuid) => {
+    let feedback;
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
         if (response.redeem) {
           navigator.vibrate([40, 20, 40]);
-          setFeedback(FEEDBACK.SUCCESS);
+          feedback = FEEDBACK.SUCCESS;
         } else {
-          setFeedback(FEEDBACK.FAILURE);
+          feedback = FEEDBACK.FAILURE;
         }
       })
       .catch((errors) => {
         if (errors.response.data.errors?.unique_attendee_badge) {
-          setFeedback(FEEDBACK.ALREADY_HAS);
+          feedback = FEEDBACK.ALREADY_HAS;
         } else {
-          setFeedback(FEEDBACK.FAILURE);
+          feedback = FEEDBACK.FAILURE;
         }
+      })
+      .finally(() => {
+        setFeedback(feedback);
       });
   };
 
