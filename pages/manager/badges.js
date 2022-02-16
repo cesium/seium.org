@@ -47,9 +47,8 @@ function ManagerBadges() {
   const handleUUID = (uuid) => {
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
-        console.log(response);
         if (response.redeem) {
-          navigator.vibrate([20, 10, 20]);
+          navigator.vibrate([40, 20, 40]);
           setFeedback(FEEDBACK.SUCCESS);
         } else {
           setFeedback(FEEDBACK.FAILURE);
@@ -100,7 +99,7 @@ function ManagerBadges() {
                 onClick={() => handleBadgeSelected(badge)}
               >
                 <img src={badge.avatar} alt={badge.name} />
-                <div className="flex flex-col justify-items-center text-center font-iregular">
+                <div className="font-iregular flex flex-col justify-items-center text-center">
                   <div>{badge.name}</div>
                   <div>{badge.tokens} 💰 </div>
                 </div>

@@ -25,7 +25,6 @@ function ManagerIdentifier() {
   const handleUUID = (uuid) => {
     getAttendee(uuid)
       .then((response) => {
-        console.log(response);
         setText(`${response.data.name} | ${response.data.email}`);
         navigator.vibrate([20, 10, 20]);
         setFeedback(FEEDBACK.SUCCESS);
