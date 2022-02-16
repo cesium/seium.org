@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Table({ list, user, maxUsersToShow }) {
   const toShow = list.slice(0, Math.min(maxUsersToShow, list.length));
   const rows = toShow.map((entry, id) => (
@@ -14,7 +16,7 @@ export default function Table({ list, user, maxUsersToShow }) {
           entry.id == user ? "text-quinary" : ""
         }`}
       >
-        {entry.name}
+        <Link href={`/attendees/${entry.id}`}>{entry.name}</Link>
       </div>
       <div
         className={`w-1/3 text-right font-iregular ${
