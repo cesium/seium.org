@@ -5,7 +5,7 @@ import { withAuth } from "/components/Auth";
 import { giveBadge } from "/lib/api";
 
 import Base from "/components/moonstone/staff/utils/Base";
-import QRScanner from "/components/moonstone/utils/QRScanner";
+import QRScanner, { FEEDBACK } from "/components/moonstone/utils/QRScanner";
 import { useAuth } from "/components/Auth/useAuth";
 import { useRouter } from "next/router";
 
@@ -15,15 +15,13 @@ function RedeemPrizes() {
   const { user } = useAuth();
   const router = useRouter();
   const pauseRef = useRef(false);
-  const successRef = useRef(null);
-  const [feedbackText, setFeedbackText] = useState("Scanning");
+  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
   const [showScanner, setScanner] = useState(true);
 
   const resetScannerState = () => {
     new Promise((r) => setTimeout(r, 500)).then(() => {
       pauseRef.current = false;
-      successRef.current = null;
-      setFeedbackText("Scanning");
+      setFeedback(FEEDBACK.SCANNING);
     });
   };
 
@@ -43,8 +41,7 @@ function RedeemPrizes() {
           handleCode={handleUUID}
           pauseRef={pauseRef}
           text={user.name}
-          successRef={successRef}
-          feedbackText={feedbackText}
+          feedback={feedback}
           showScanner={showScanner}
           setScanner={setScanner}
           removeClose={true}
