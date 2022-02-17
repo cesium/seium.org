@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { withAuth } from "/components/Auth";
 
@@ -15,21 +15,25 @@ function ManagerIdentifier() {
   const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
   const [showScanner, setScanner] = useState(true);
 
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 500)).then(() => {
-      pauseRef.current = false;
-      setFeedback(FEEDBACK.SCANNING);
-    });
-  };
+  useEffect(() => {
+    if (feedback != FEEDBACK.SCANNING) {
+      const id = setTimeout(() => {
+        pauseRef.current = false;
+        setFeedback(FEEDBACK.SCANNING);
+      }, 700);
+
+      return () => {
+        clearTimeout(id);
+      };
+    }
+    return null;
+  }, [feedback]);
 
   const handleUUID = (uuid) => {
     getAttendee(uuid)
       .then((response) => {
-        console.log(response);
         setText(`${response.data.name} | ${response.data.email}`);
-        navigator.vibrate([20, 10, 20]);
         setFeedback(FEEDBACK.SUCCESS);
-        resetScannerState();
       })
       .catch((_) => {
         setFeedback(FEEDBACK.FAILURE);
