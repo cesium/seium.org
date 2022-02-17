@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { withAuth } from "/components/Auth";
 
@@ -14,33 +14,35 @@ function SponsorBadges() {
   const { user } = useAuth();
   const pauseRef = useRef(false);
   const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
-  const [showScanner, setScanner] = useState(true);
 
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 500)).then(() => {
-      pauseRef.current = false;
-      setFeedback(FEEDBACK.SCANNING);
-    });
-  };
+  useEffect(() => {
+    if (feedback != FEEDBACK.SCANNING) {
+      setTimeout(() => {
+        pauseRef.current = false;
+        setFeedback(FEEDBACK.SCANNING);
+      }, 700);
+    }
+  }, [feedback]);
 
   const handleUUID = (uuid) => {
+    let feedback_var;
     giveBadge(uuid, "69420")
       .then((response) => {
         if (response.redeem) {
-          navigator.vibrate([20, 10, 20]);
-          setFeedback(FEEDBACK.SUCCESS);
+          feedback_var = FEEDBACK.SUCCESS;
         } else {
-          setFeedback(FEEDBACK.FAILURE);
+          feedback_var = FEEDBACK.FAILURE;
         }
-        resetScannerState();
       })
       .catch((errors) => {
         if (errors.response.data.errors?.unique_attendee_badge) {
-          setFeedback(FEEDBACK.ALREADY_HAS);
+          feedback_var = FEEDBACK.ALREADY_HAS;
         } else {
-          setFeedback(FEEDBACK.FAILURE);
+          feedback_var = FEEDBACK.FAILURE;
         }
-        resetScannerState();
+      })
+      .finally(() => {
+        setFeedback(feedback_var);
       });
   };
 
@@ -57,8 +59,8 @@ function SponsorBadges() {
           pauseRef={pauseRef}
           text={user.name}
           feedback={feedback}
-          showScanner={showScanner}
-          setScanner={setScanner}
+          showScanner={true}
+          setScanner={true}
           removeClose={true}
         />
       </div>
