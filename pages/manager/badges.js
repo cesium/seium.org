@@ -28,6 +28,20 @@ function ManagerBadges() {
       .catch((_) => updateError(true));
   }, []);
 
+  useEffect(() => {
+    if (feedback != FEEDBACK.SCANNING) {
+      const id = setTimeout(() => {
+        pauseRef.current = false;
+        setFeedback(FEEDBACK.SCANNING);
+      }, 700);
+
+      return () => {
+        clearTimeout(id);
+      };
+    }
+    return null;
+  }, [feedback]);
+
   const badges = allBadges.filter(
     (badge) => badge.type == filter || filter == null
   );
@@ -37,32 +51,25 @@ function ManagerBadges() {
     setScanner(true);
   };
 
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 1000)).then(() => {
-      pauseRef.current = false;
-      setFeedback(FEEDBACK.SCANNING);
-    });
-  };
-
   const handleUUID = (uuid) => {
+    let feedback_var;
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
-        console.log(response);
         if (response.redeem) {
-          navigator.vibrate([20, 10, 20]);
-          setFeedback(FEEDBACK.SUCCESS);
+          feedback_var = FEEDBACK.SUCCESS;
         } else {
-          setFeedback(FEEDBACK.FAILURE);
+          feedback_var = FEEDBACK.FAILURE;
         }
-        resetScannerState();
       })
       .catch((errors) => {
         if (errors.response.data.errors?.unique_attendee_badge) {
-          setFeedback(FEEDBACK.ALREADY_HAS);
+          feedback_var = FEEDBACK.ALREADY_HAS;
         } else {
-          setFeedback(FEEDBACK.FAILURE);
+          feedback_var = FEEDBACK.FAILURE;
         }
-        resetScannerState();
+      })
+      .finally(() => {
+        setFeedback(feedback_var);
       });
   };
 
