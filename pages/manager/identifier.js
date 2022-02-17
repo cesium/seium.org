@@ -37,6 +37,8 @@ function ManagerIdentifier() {
       })
       .catch((_) => {
         setFeedback(FEEDBACK.FAILURE);
+        setText("None");
+        resetScannerState();
       });
   };
 
