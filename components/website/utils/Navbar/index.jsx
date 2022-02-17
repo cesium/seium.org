@@ -15,7 +15,7 @@ import styles from "./style.module.css";
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
   { name: "Hackathon", slug: "/hackathon" },
-  // { name: 'Team', slug: '/team' },
+  { name: "Team", slug: "/team" },
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
@@ -61,7 +61,11 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
                     <div className="flex flex-auto gap-x-20">
-                      <div className="grid grid-cols-3 gap-x-20 gap-y-6 xl:gap-y-0">
+                      <div
+                        className={`grid ${
+                          isAuthenticated ? "grid-cols-3" : "grid-cols-4"
+                        } gap-x-20 gap-y-6 xl:gap-y-0`}
+                      >
                         {navigation.map((item) => (
                           <Link key={item.slug} href={item.slug} passHref>
                             <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
