@@ -3,17 +3,17 @@
     "title": "Main Organization",
     "list": [
       {
-        "id": "maria",
+        "avatar": "maria.png",
         "name": "Maria Pires",
         "github": "mariajbp",
         "gitlab": "mariajbp",
         "linkedin": "mariajbp"
       },
       {
-        "id": "brandao",
+        "avatar": "brandao.png",
         "name": "Miguel Brandão",
         "github": "miguelbrandao",
-        "linkedin": "miguel-a-brandao/"
+        "linkedin": "miguel-a-brandao"
       }
     ]
   },
@@ -21,35 +21,37 @@
     "title": "Marketing",
     "list": [
       {
-        "id": "alex",
+        "avatar": "alex.png",
         "name": "Francisco Neves",
         "github": "franl08",
-        "linkedin": "francisco-neves-5bb7901a2/"
+        "linkedin": "francisco-neves-5bb7901a2"
       },
       {
-        "id": "mascote",
+        "avatar": "mascote.png",
         "name": "Maria Regueiras",
         "github": "mimr21",
         "linkedin": "maria-miguel21"
       },
       {
-        "id": "gustavo",
+        "avatar": "gustavo.png",
         "name": "Gustavo Pereira"
       },
       {
-        "id": "luis",
+        "avatar": "luis.png",
         "name": "Luis Araújo",
         "github": "LAraujo7",
         "gitlab": "LAraujo7",
         "linkedin": "LAraujo7"
       },
       {
-        "id": "sofia",
+        "avatar": "sofia.png",
         "name": "Ana Sofia Gomes"
       },
       {
-        "id": "bea",
-        "name": "Beatriz Rocha"
+        "avatar": "bea.png",
+        "name": "Beatriz Rocha",
+        "github": "beatrizfrocha",
+        "linkedin": "beatrizfrocha"
       }
     ]
   },
@@ -57,12 +59,14 @@
     "title": "Program",
     "list": [
       {
-        "id": "marco",
+        "avatar": "marco.png",
         "name": "Marco Pereira"
       },
       {
-        "id": "antonio",
-        "name": "Pedro António"
+        "avatar": "antonio.png",
+        "name": "Pedro António",
+        "github": "Ankeeprojects",
+        "linkedin": "pedro-antónio-980046193"
       }
     ]
   },
@@ -70,8 +74,10 @@
     "title": "Activities",
     "list": [
       {
-        "id": "leo",
-        "name": "Leonardo Freitas"
+        "avatar": "leo.png",
+        "name": "Leonardo Freitas",
+        "github": "Leonardo1924",
+        "twitter": "Leonard28998146"
       }
     ]
   },
@@ -79,51 +85,62 @@
     "title": "Tech",
     "list": [
       {
-        "id": "teixeira",
+        "avatar": "teixeira.png",
         "name": "João Teixeira"
       },
       {
-        "id": "matilde",
-        "name": "Matilde Bravo"
+        "avatar": "matilde.png",
+        "name": "Matilde Bravo",
+        "github": "matildeopbravo",
+        "linkedin": "matilde-bravo-a9528b17a"
       },
       {
-        "id": "felicio",
+        "avatar": "felicio.png",
         "name": "Filipe Felicio",
         "github": "feliciofilipe",
-        "twitter": "feliciofilipe",
         "gitlab": "feliciofilipe",
         "linkedin": "filipe-felício-5077821a3"
       },
       {
-        "id": "rui",
-        "name": "Rui Oliveira"
+        "avatar": "rui.png",
+        "name": "Rui Oliveira",
+        "github": "ruioliveira02"
       },
       {
-        "id": "bacelar",
-        "name": "Tiago Bacelar"
+        "avatar": "bacelar.png",
+        "name": "Tiago Bacelar",
+        "github": "tiago-bacelar"
       },
       {
-        "id": "pedro",
-        "name": "Pedro Pereira"
+        "avatar": "pedro.png",
+        "name": "Pedro Pereira",
+        "github": "DrPeterPun",
+        "linkedin": "pbpereira"
       },
       {
-        "id": "mascote",
+        "avatar": "mascote.png",
         "name": "Ruben Adão"
       },
       {
-        "id": "nelson",
-        "name": "Nelson Estevão"
+        "avatar": "nelson.png",
+        "name": "Nelson Estevão",
+        "github": "nelsonmestevao",
+        "twitter": "nelsonmestevao",
+        "gitlab": "nelsonmestevao",
+        "linkedin": "nelsonmestevao"
       },
       {
-        "id": "david",
+        "avatar": "david.png",
         "name": "David Machado"
       },
       {
-        "id": "gerson",
-        "name": "Gerson Júnior"
+        "avatar": "gerson.png",
+        "name": "Gerson Júnior",
+        "github": "GresosJ",
+        "linkedin": "gerson-junior-5884ab1a3"
       },
       {
-        "id": "mascote",
+        "avatar": "mascote.png",
         "name": "Pedro Mendes"
       }
     ]

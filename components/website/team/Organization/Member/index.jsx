@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Member({
-  id,
+  avatar,
   name,
   github,
   twitter,
@@ -16,8 +16,8 @@ export default function Member({
   gitlab,
 }) {
   return (
-    <div key={id} className="text-white">
-      <Image src={`/images/team/${id}.png`} width="210" height="210" />
+    <div className="text-white">
+      <Image src={`/images/team/${avatar}`} width="210" height="210" />
       <p className="text-md mb-1 font-iextrabold"> {name} </p>
       <div className="flex">
         {linkedin && (
