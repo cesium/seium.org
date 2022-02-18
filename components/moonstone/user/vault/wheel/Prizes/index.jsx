@@ -26,7 +26,10 @@ export default function Prizes({ products }) {
                       {product.name}
                     </div>
                   </h4>
-                  <p className="ml-4 text-lg font-medium text-gray-900"> 2 </p>
+                  <p className="ml-4 text-lg font-medium text-gray-900">
+                    {" "}
+                    {product.quantity}{" "}
+                  </p>
                 </div>
                 <p className="mt-1 text-sm text-gray-500">
                   {product.description}
