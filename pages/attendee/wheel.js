@@ -103,7 +103,7 @@ function WheelPage() {
         } else if (response.prize.name == "Nada") {
           updateWheelMessage(
             <WheelMessage
-              title="You din't win anything!"
+              title="You didn't win anything!"
               description="Better luck next time."
               onExit={(_) => updateWheelMessage(null)}
             />
