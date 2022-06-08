@@ -1,6 +1,3 @@
-import Member from "./Member";
-
-import React, { useState } from "react";
 import useInView from "react-cool-inview";
 import Fade from "react-reveal/Fade";
 import Card from "/components/utils/Card";
@@ -8,12 +5,20 @@ import SeiAnimation from "./Animation";
 
 import Team from "./Team";
 
+import { getFirstName } from "/lib/naming";
+
 import team from "/data/team.json";
 
 import styles from "./style.module.css";
 
-function Animation(props) {
-  const { observe, unobserve, inView, scrollDirection, entry } = useInView({
+function sortListMembers(members) {
+  return members.sort((a, b) =>
+    getFirstName(a.name).localeCompare(getFirstName(b.name))
+  );
+}
+
+function Animation() {
+  const { observe, inView } = useInView({
     threshold: 0.25,
     onChange: ({ observe, unobserve }) => {
       unobserve();
@@ -45,20 +50,6 @@ function Animation(props) {
 }
 
 export default function Organization() {
-  const [animation, setAnimation] = useState(false);
-  const { ref, inView } = useInView({
-    onEnter: () => {
-      setAnimation(true);
-    },
-    onLeave: () => {
-      setAnimation(false);
-    },
-  });
-
-  let color = inView
-    ? { transition: "background 2s ease", background: "#181818" }
-    : "";
-
   return (
     <section className="spacing grid grid-cols-1 gap-x-32 gap-y-8 bg-quaternary py-20 lg:grid-cols-2">
       <div className="text-white">
@@ -74,12 +65,12 @@ export default function Organization() {
 
       <Team
         title={team["organization"].title}
-        list={team["organization"].list}
+        list={sortListMembers(team["organization"].list)}
       />
 
       <Team
         title={team["marketing"].title}
-        list={team["marketing"].list.slice(0, 2)}
+        list={sortListMembers(team["marketing"].list).slice(0, 2)}
       />
 
       <div className="hidden items-center justify-center lg:flex">
@@ -87,16 +78,28 @@ export default function Organization() {
       </div>
 
       <div className="flex h-full flex-col">
-        <Team title="" list={team["marketing"].list.slice(2, 6)} />
+        <Team
+          title=""
+          list={sortListMembers(team["marketing"].list).slice(2, 6)}
+        />
         <div className="hidden h-full justify-center lg:flex">
           <SeiAnimation />
         </div>
       </div>
-      <Team title={team["tech"].title} list={team["tech"].list} />
+      <Team
+        title={team["tech"].title}
+        list={sortListMembers(team["tech"].list)}
+      />
 
-      <Team title={team["program"].title} list={team["program"].list} />
+      <Team
+        title={team["program"].title}
+        list={sortListMembers(team["program"].list)}
+      />
 
-      <Team title={team["activities"].title} list={team["activities"].list} />
+      <Team
+        title={team["activities"].title}
+        list={sortListMembers(team["activities"].list)}
+      />
     </section>
   );
 }
