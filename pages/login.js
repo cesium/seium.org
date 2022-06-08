@@ -30,6 +30,10 @@ function Login() {
   return (
     <div className="min-h-screen overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
+      <img
+        className="absolute -left-[380px] bottom-0 hidden w-[750px] xl:block"
+        src="/images/mascot-head.png"
+      ></img>
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Log in" />
         <div className="mt-8">
@@ -78,7 +82,7 @@ function Login() {
           link="Register here"
           href="https://sei22.eventbrite.pt"
         />
-        <div className="absolute bottom-0 right-60 hidden lg:block">
+        <div className="absolute bottom-0 right-60 hidden lg:block xl:hidden">
           <Fade bottom>
             <Card
               img="/images/mascot-footer.svg"
