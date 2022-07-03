@@ -5,7 +5,7 @@ export default function ExpectList() {
         What you can expect:
       </h3>
       <ul className="mt-8 list-disc pl-4 font-iregular">
-        <li>Hackatons 💻</li>
+        <li>Hackathons 💻</li>
         <li>Talks</li>
         <li>Workshops</li>
         <li>Challenges 🕹️</li>
