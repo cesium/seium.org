@@ -100,7 +100,7 @@ export default function Schedule(props) {
     "/" +
     _today.getDate();
   let default_date = isAfter(today, min_date) ? today : min_date;
-  default_date = isAfter(default_date, max_date) ? max_date : default_date;
+  default_date = isAfter(default_date, max_date) ? min_date : default_date;
 
   const [date, updateDate] = useState(default_date);
   const [hash, updateHash] = useState("");
