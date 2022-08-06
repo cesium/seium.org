@@ -12,16 +12,7 @@ import CodeInput from "/components/moonstone/user/profile/CodeInput";
 import CheckpointTracker from "/components/moonstone/user/profile/CheckpointTracker";
 
 import { resetPassword } from "/lib/api";
-
-function getFirstName(fullName) {
-  const names = fullName.split(" ");
-
-  if (names.length > 0) {
-    return names[0];
-  }
-
-  return "";
-}
+import { getFirstName } from "/lib/naming";
 
 function Profile() {
   const { user, editUser } = useAuth();
