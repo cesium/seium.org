@@ -1,16 +1,15 @@
-import { withoutAuth } from "/components/Auth";
-import Hero from "/components/website/hackathon/Hero";
-import PeopleShowcase from "/components/website/utils/PeopleShowcase";
-import UnderlineAnimation from "/components/website/utils/UnderlineAnimation";
-import Awards from "/components/website/hackathon/Awards";
-import Regulations from "/components/website/hackathon/Regulations";
+import { withoutAuth } from "@components/Auth";
+import Hero from "@components/website/hackathon/Hero";
+import PeopleShowcase from "@components/website/utils/PeopleShowcase";
+import UnderlineAnimation from "@components/website/utils/UnderlineAnimation";
+import Awards from "@components/website/hackathon/Awards";
+import Regulations from "@components/website/hackathon/Regulations";
 
-import Navbar from "/components/website/utils/Navbar";
-import Speaker from "/components/website/utils/Speaker";
-import Footer from "/components/website/utils/Footer";
+import Navbar from "@components/website/utils/Navbar";
+import Speaker from "@components/website/utils/Speaker";
+import Footer from "@components/website/utils/Footer";
 
-import mentors from "/data/mentors.json";
-import jury from "/data/jury.json";
+import jury from "../data/jury.json";
 
 function JuryTitle() {
   return (

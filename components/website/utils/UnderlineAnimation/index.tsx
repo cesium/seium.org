@@ -1,10 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode, useCallback } from "react";
 
-import Card from "/components/utils/Card";
+import Card from "@components/utils/Card";
 
 import styles from "./style.module.css";
 
-export default function UnderlineAnimation({ children, text, afterText }) {
+interface Props {
+  children: ReactNode;
+  text: string;
+  afterText?: string;
+}
+
+export default function UnderlineAnimation({
+  children,
+  text,
+  afterText,
+}: Props) {
   const extendedMargin = -240;
   const retractedMargin = -12;
   const speed = 4;
@@ -17,7 +27,7 @@ export default function UnderlineAnimation({ children, text, afterText }) {
 
   const [st, updateState] = useState(defaultState);
 
-  const scrollDown = () => {
+  const scrollDown = useCallback(() => {
     if (st.margin == retractedMargin) {
       updateState({
         status: 0,
@@ -29,9 +39,9 @@ export default function UnderlineAnimation({ children, text, afterText }) {
         margin: st.margin + speed,
       });
     }
-  };
+  }, [retractedMargin, st.margin, st.status]);
 
-  const scrollUp = () => {
+  const scrollUp = useCallback(() => {
     if (st.margin == extendedMargin) {
       updateState({
         status: 0,
@@ -43,7 +53,7 @@ export default function UnderlineAnimation({ children, text, afterText }) {
         margin: st.margin - speed,
       });
     }
-  };
+  }, [extendedMargin, st.margin, st.status]);
 
   useEffect(() => {
     if (st.status == 1) {
@@ -51,7 +61,7 @@ export default function UnderlineAnimation({ children, text, afterText }) {
     } else if (st.status == 3) {
       setTimeout(scrollUp, 1000 / fps);
     }
-  }, [st]);
+  }, [scrollDown, scrollUp, st]);
 
   return (
     <span className="relative z-10 inline-block h-auto w-auto leading-none md:mt-4">

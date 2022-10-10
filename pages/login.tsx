@@ -1,22 +1,24 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { useRef } from "react";
 import Fade from "react-reveal/Fade";
 
-import { useAuth, withoutAuth } from "/components/Auth";
+import { useAuth, withoutAuth } from "@components/Auth";
 
-import Button from "/components/utils/Button";
-import Card from "/components/utils/Card";
+import Button from "@components/utils/Button";
+import Card from "@components/utils/Card";
 
-import Return from "/components/moonstone/utils/Return";
-import Form from "/components/moonstone/utils/Form";
-import Input from "/components/moonstone/utils/Input";
+import Return from "@components/moonstone/utils/Return";
+import Form from "@components/moonstone/utils/Form";
+import Input from "@components/moonstone/utils/Input";
 
-import Title from "/components/moonstone/authentication/Title";
-import Text from "/components/moonstone/authentication/Text";
+import Title from "@components/moonstone/authentication/Title";
+import Text from "@components/moonstone/authentication/Text";
 
 function Login() {
   const { errors, login, isLoading } = useAuth();
-  const emailRef = useRef();
-  const passwordRef = useRef();
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const onFinish = (event) => {
     event.preventDefault();
@@ -33,7 +35,7 @@ function Login() {
       <img
         className="absolute -left-[380px] bottom-0 hidden w-[750px] xl:block"
         src="/images/mascot-head.png"
-      ></img>
+      />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Log in" />
         <div className="mt-8">

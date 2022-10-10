@@ -1,15 +1,15 @@
 import { useState, useRef } from "react";
-import { withoutAuth } from "/components/Auth";
-import { sendResetEmail } from "/lib/api";
+import { withoutAuth } from "@components/Auth";
+import { sendResetEmail } from "@lib/api";
 
 import Fade from "react-reveal/Fade";
-import ImageButton from "/components/moonstone/utils/ImageButton";
-import Card from "/components/utils/Card";
-import Return from "/components/moonstone/utils/Return";
-import Form from "/components/moonstone/utils/Form";
-import Input from "/components/moonstone/utils/Input";
-import Title from "/components/moonstone/authentication/Title";
-import Text from "/components/moonstone/authentication/Text";
+import ImageButton from "@components/moonstone/utils/ImageButton";
+import Card from "@components/utils/Card";
+import Return from "@components/moonstone/utils/Return";
+import Form from "@components/moonstone/utils/Form";
+import Input from "@components/moonstone/utils/Input";
+import Title from "@components/moonstone/authentication/Title";
+import Text from "@components/moonstone/authentication/Text";
 
 function ForgotPassword() {
   const [success, updateSuccess] = useState(null);
