@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 
 import { withoutAuth, useAuth } from "@components/Auth";
-import Fade from "react-reveal/Fade";
+import { motion as Motion } from "framer-motion";
 
 import Button from "@components/utils/Button";
 import Card from "@components/utils/Card";
@@ -131,7 +131,11 @@ function Signup() {
         </Form>
         <Text text="Already have an account?" link="Login here" href="/login" />
         <div className="absolute bottom-0 right-60 hidden lg:block">
-          <Fade bottom>
+          <Motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Card
               img="/images/mascot-footer.svg"
               alt="MascotFooter"
@@ -139,7 +143,7 @@ function Signup() {
             >
               Very restricted area. You just need to fill the form.
             </Card>
-          </Fade>
+          </Motion.div>
         </div>
       </div>
     </div>

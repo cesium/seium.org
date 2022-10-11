@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { useRef } from "react";
-import Fade from "react-reveal/Fade";
+import { motion as Motion } from "framer-motion";
 
 import { useAuth, withoutAuth } from "@components/Auth";
 
@@ -85,7 +85,11 @@ function Login() {
           href="https://sei22.eventbrite.pt"
         />
         <div className="absolute bottom-0 right-60 hidden lg:block xl:hidden">
-          <Fade bottom>
+          <Motion.div
+            initial={{ opacity: 0 }}
+            animate={{ y: -15, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Card
               img="/images/mascot-footer.svg"
               alt="MascotFooter"
@@ -94,7 +98,7 @@ function Login() {
               Just really awesome people here. Please login and prepare to be
               amazed. 🔮
             </Card>
-          </Fade>
+          </Motion.div>
         </div>
       </div>
     </div>

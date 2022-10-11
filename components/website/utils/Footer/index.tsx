@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import useInView from "react-cool-inview";
-import Fade from "react-reveal/Fade";
+import { motion as Motion } from "framer-motion";
 
 import Image from "next/image";
 import Link from "next/link";
 
-import Social from "/components/website/utils/Social";
-import Card from "/components/utils/Card";
+import Social from "@components/website/utils/Social";
+import Card from "@components/utils/Card";
 
 import styles from "./style.module.css";
 
@@ -22,7 +22,12 @@ function DefaultAnimation() {
   );
 }
 
-function Animation({ text }) {
+interface IAnimationProps {
+  children: ReactNode;
+  text: string | JSX.Element;
+}
+
+function Animation({ text }: IAnimationProps) {
   const { observe, inView } = useInView({
     threshold: 0.25,
     onChange: ({ observe, unobserve }) => {
@@ -35,7 +40,11 @@ function Animation({ text }) {
     /* We need to have height set in order for inView to work properly */
     <div ref={observe} style={{ height: "25px" }}>
       {inView ? (
-        <Fade bottom>
+        <Motion.div
+          initial={{ opacity: 0 }}
+          animate={{ y: -15, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <div className={`-mt-6 ${styles.cardfooter}`}>
             <Card
               img="/images/mascot-footer.svg"
@@ -45,7 +54,7 @@ function Animation({ text }) {
               {text}
             </Card>
           </div>
-        </Fade>
+        </Motion.div>
       ) : (
         <></>
       )}
@@ -53,9 +62,15 @@ function Animation({ text }) {
   );
 }
 
-export default function Footer(props) {
-  const [setAnimation] = useState(false);
-  const { ref, inView } = useInView({
+interface IFooterProps {
+  children?: ReactNode;
+  color: string;
+  footerAnimationText?: string;
+}
+
+export default function Footer(props: IFooterProps) {
+  const [_, setAnimation] = useState(false);
+  const { observe, inView } = useInView({
     onEnter: () => {
       setAnimation(true);
     },
@@ -64,19 +79,21 @@ export default function Footer(props) {
     },
   });
 
-  let color = inView
-    ? { transition: "background 2s ease", background: "#181818" }
-    : "";
+  let color = inView && {
+    transition: "background 2s ease",
+    background: "#181818",
+  };
 
   return (
     <div
       className={`spacing ${styles.bgTransition} bg-${props.color}`}
-      ref={ref}
+      ref={observe}
       style={{ ...color, overflowY: "hidden" }}
     >
       <div className="justify-center lg:flex">
         <div className="flex-1">
           <div className="flex justify-center font-ibold lg:justify-start">
+            {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image
               className="lg:flex-1"
               src="/images/sei-logo.svg"
@@ -116,8 +133,8 @@ export default function Footer(props) {
       <div className="invisible -mt-20 flex justify-center pb-10 lg:visible">
         <Animation
           text={
-            props.animationText != undefined ? (
-              props.animationText
+            props.footerAnimationText != undefined ? (
+              props.footerAnimationText
             ) : (
               <DefaultAnimation />
             )

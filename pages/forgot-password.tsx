@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { withoutAuth } from "@components/Auth";
 import { sendResetEmail } from "@lib/api";
 
-import Fade from "react-reveal/Fade";
+import { motion as Motion } from "framer-motion";
 import ImageButton from "@components/moonstone/utils/ImageButton";
 import Card from "@components/utils/Card";
 import Return from "@components/moonstone/utils/Return";
@@ -83,7 +83,11 @@ function ForgotPassword() {
         )}
 
         <div className="absolute bottom-0 right-60 hidden lg:block">
-          <Fade bottom>
+          <Motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Card
               img="/images/mascot-footer.svg"
               alt="MascotFooter"
@@ -91,7 +95,7 @@ function ForgotPassword() {
             >
               Happens to the best of us, don’t worry
             </Card>
-          </Fade>
+          </Motion.div>
         </div>
       </div>
     </div>

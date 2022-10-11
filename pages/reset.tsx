@@ -4,7 +4,7 @@ import { withoutAuth } from "@components/Auth";
 
 import { resetPasswordWithToken } from "@lib/api";
 
-import Fade from "react-reveal/Fade";
+import { motion as Motion } from "framer-motion";
 import Link from "next/link";
 
 import Button from "@components/utils/Button";
@@ -133,7 +133,11 @@ function Reset() {
         )}
 
         <div className="absolute bottom-0 right-60 hidden lg:block">
-          <Fade bottom>
+          <Motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Card
               img="/images/mascot-footer.svg"
               alt="MascotFooter"
@@ -141,7 +145,7 @@ function Reset() {
             >
               Try to not forget your password
             </Card>
-          </Fade>
+          </Motion.div>
         </div>
       </div>
     </div>
