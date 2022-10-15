@@ -12,7 +12,7 @@ function Index() {
       <Challenges />
       <Footer
         color="secondary"
-        animationText="Just really useful links here. Bye now 👋"
+        footerAnimationText="Just really useful links here. Bye now 👋"
       />
     </Navbar>
   );
