@@ -1,18 +1,18 @@
 import { useState, useRef } from "react";
 
-import { withoutAuth, useAuth } from "/components/Auth";
-import Fade from "react-reveal/Fade";
+import { withoutAuth, useAuth } from "@components/Auth";
+import { motion as Motion } from "framer-motion";
 
-import Button from "/components/utils/Button";
-import Card from "/components/utils/Card";
+import Button from "@components/utils/Button";
+import Card from "@components/utils/Card";
 
-import Return from "/components/moonstone/utils/Return";
-import Form from "/components/moonstone/utils/Form";
-import Input from "/components/moonstone/utils/Input";
+import Return from "@components/moonstone/utils/Return";
+import Form from "@components/moonstone/utils/Form";
+import Input from "@components/moonstone/utils/Input";
 
-import Title from "/components/moonstone/authentication/Title";
-import Text from "/components/moonstone/authentication/Text";
-import BarebonesQRScanner from "/components/moonstone/utils/QRScanner/BarebonesQRScanner";
+import Title from "@components/moonstone/authentication/Title";
+import Text from "@components/moonstone/authentication/Text";
+import BarebonesQRScanner from "@components/moonstone/utils/QRScanner/BarebonesQRScanner";
 
 function Signup() {
   const { sign_up, errors, isLoading } = useAuth();
@@ -131,7 +131,11 @@ function Signup() {
         </Form>
         <Text text="Already have an account?" link="Login here" href="/login" />
         <div className="absolute bottom-0 right-60 hidden lg:block">
-          <Fade bottom>
+          <Motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Card
               img="/images/mascot-footer.svg"
               alt="MascotFooter"
@@ -139,7 +143,7 @@ function Signup() {
             >
               Very restricted area. You just need to fill the form.
             </Card>
-          </Fade>
+          </Motion.div>
         </div>
       </div>
     </div>

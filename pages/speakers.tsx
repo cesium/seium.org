@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import { withoutAuth } from "/components/Auth";
+import { withoutAuth } from "@components/Auth";
 
-import Hero from "/components/website/speakers/Hero";
-import Schedule from "/components/website/speakers/Schedule";
+import Hero from "@components/website/speakers/Hero";
+import Schedule from "@components/website/speakers/Schedule";
 
-import Navbar from "/components/website/utils/Navbar";
-import Footer from "/components/website/utils/Footer";
+import Navbar from "@components/website/utils/Navbar";
+import Footer from "@components/website/utils/Footer";
 
 function Speakers() {
   const router = useRouter();

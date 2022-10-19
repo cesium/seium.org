@@ -1,6 +1,14 @@
-import { forwardRef } from "react";
+import { forwardRef, InputHTMLAttributes } from "react";
 
-export default forwardRef(function Input(
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  text: string;
+  autocomplete?: string;
+  fgColor: string;
+  bgColor: string;
+  enabled?: boolean;
+}
+
+export default forwardRef<HTMLInputElement, Props>(function Input(
   {
     text,
     id,
@@ -12,6 +20,7 @@ export default forwardRef(function Input(
     bgColor,
     onChange,
     enabled,
+    ...rest
   },
   ref
 ) {
@@ -46,6 +55,7 @@ export default forwardRef(function Input(
           onChange={onChange}
           disabled={enabled == false}
           ref={ref}
+          {...rest}
         />
       </div>
     </div>

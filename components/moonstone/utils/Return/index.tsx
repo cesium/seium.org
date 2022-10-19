@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function Return({ componentStyle }) {
+interface Props {
+  componentStyle?: string;
+}
+
+export default function Return({ componentStyle }: Props) {
   return (
     <Link href="/">
       <a

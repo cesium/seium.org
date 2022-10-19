@@ -1,5 +1,5 @@
 import useInView from "react-cool-inview";
-import Fade from "react-reveal/Fade";
+import { motion as Motion } from "framer-motion";
 import Card from "/components/utils/Card";
 import SeiAnimation from "./Animation";
 
@@ -30,7 +30,11 @@ function Animation() {
     /* We need to have height set in order for inView to work properly */
     <div ref={observe} style={{ height: "25px" }}>
       {inView ? (
-        <Fade bottom>
+        <Motion.div
+          initial={{ opacity: 0 }}
+          animate={{ y: -15, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <div className={`-mt-6 ${styles.cardfooter} border-b-2 border-white`}>
             <Card
               img="/images/mascot-footer.svg"
@@ -41,7 +45,7 @@ function Animation() {
               first place
             </Card>
           </div>
-        </Fade>
+        </Motion.div>
       ) : (
         <></>
       )}

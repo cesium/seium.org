@@ -1,21 +1,21 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { withoutAuth } from "/components/Auth";
+import { withoutAuth } from "@components/Auth";
 
-import { resetPasswordWithToken } from "/lib/api";
+import { resetPasswordWithToken } from "@lib/api";
 
-import Fade from "react-reveal/Fade";
+import { motion as Motion } from "framer-motion";
 import Link from "next/link";
 
-import Button from "/components/utils/Button";
-import ImageButton from "/components/moonstone/utils/ImageButton";
-import Card from "/components/utils/Card";
+import Button from "@components/utils/Button";
+import ImageButton from "@components/moonstone/utils/ImageButton";
+import Card from "@components/utils/Card";
 
-import Return from "/components/moonstone/utils/Return";
-import Form from "/components/moonstone/utils/Form";
-import Input from "/components/moonstone/utils/Input";
+import Return from "@components/moonstone/utils/Return";
+import Form from "@components/moonstone/utils/Form";
+import Input from "@components/moonstone/utils/Input";
 
-import Title from "/components/moonstone/authentication/Title";
+import Title from "@components/moonstone/authentication/Title";
 
 export async function getServerSideProps({ query }) {
   if (query.token === undefined) {
@@ -122,7 +122,7 @@ function Reset() {
               <Link href="/login" passHref>
                 <a>
                   <Button
-                    type=""
+                    type="button"
                     text="BACK TO LOGIN"
                     customStyle="text-secondary bg-quinary border-quinary"
                   />
@@ -133,7 +133,11 @@ function Reset() {
         )}
 
         <div className="absolute bottom-0 right-60 hidden lg:block">
-          <Fade bottom>
+          <Motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Card
               img="/images/mascot-footer.svg"
               alt="MascotFooter"
@@ -141,7 +145,7 @@ function Reset() {
             >
               Try to not forget your password
             </Card>
-          </Fade>
+          </Motion.div>
         </div>
       </div>
     </div>
