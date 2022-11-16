@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import Sketch from "react-p5";
 
 let basePos1 = [];
@@ -14,7 +13,7 @@ const Animation = () => {
     canvas.style("z-index", "1");
 
     p.noFill();
-    p.stroke(76, 169, 255);
+    p.stroke(51, 11, 255);
 
     for (let i = 0; i < 10; i++) {
       basePos1.push({ x: 0, y: (p.height / 20) * i });

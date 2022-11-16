@@ -117,7 +117,7 @@ const Animation = () => {
     canvas.position(0, 0);
     canvas.style("z-index", "1");
     p.noFill();
-    p.stroke(76, 169, 255);
+    p.stroke(51, 11, 255);
     update_path_horizontally(p);
     update_path_vars();
   };

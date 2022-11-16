@@ -11,7 +11,7 @@ function Speakers() {
   const router = useRouter();
 
   return (
-    <Navbar bgColor="secondary" button="quinary" fgColor="black">
+    <Navbar bgColor="secondary" button="quinary" fgColor="white">
       <Hero />
       <Schedule
         color="secondary"

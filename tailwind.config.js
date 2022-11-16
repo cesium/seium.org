@@ -24,11 +24,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#011A2C",
-        secondary: "#01253D",
-        tertiary: "#063D66",
-        quaternary: "#0085A6",
-        quinary: "#36DBEE",
+        primary: "#04041C",
+        secondary: "#04041C",
+        tertiary: "#04041C",
+        quaternary: "#330BFF",
+        quinary: "#F52AB1",
         success: "#008F05",
         failure: "#FF4444",
         warning: "#E09200",

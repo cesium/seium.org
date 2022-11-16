@@ -54,16 +54,17 @@ function MentorsSubtitle() {
 
 function Index() {
   return (
-    <Navbar bgColor="secondary" button="quinary" fgColor="black">
+    <Navbar bgColor="secondary" button="quinary" fgColor="white">
       <Hero />
 
-      {/* <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
-        {mentors.map((mentor, i) => (
+      {/* TODO: Add mentors */}
+      <PeopleShowcase title={<MentorsTitle />} subtitle={<MentorsSubtitle />}>
+        {jury.map((mentor, i) => (
           <div key={i}>
             <Speaker {...mentor} />
           </div>
         ))}
-      </PeopleShowcase> */}
+      </PeopleShowcase>
 
       <Awards />
 

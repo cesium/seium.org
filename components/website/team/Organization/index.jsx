@@ -55,7 +55,7 @@ function Animation() {
 
 export default function Organization() {
   return (
-    <section className="spacing grid grid-cols-1 gap-x-32 gap-y-8 bg-quaternary py-20 lg:grid-cols-2">
+    <section className="spacing grid grid-cols-1 gap-x-32 gap-y-8 bg-primary py-20 lg:grid-cols-2">
       <div className="text-white">
         <h2 className="mb-4 font-iextrabold text-4xl font-bold">
           Organization

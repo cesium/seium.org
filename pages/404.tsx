@@ -11,7 +11,7 @@ export default function Error() {
         <div className="secondary invisible absolute left-0 xl:visible xl:h-screen xl:w-full">
           {<Image src="/images/ponto.svg" layout="fill" alt="Question mark" />}
         </div>
-        <Navbar bgColor="secondary" button="quinary" fgColor="black">
+        <Navbar bgColor="secondary" button="quinary" fgColor="white">
           <div className="bg-secondary pt-14">
             <div className="relative z-20 font-iextrabold">
               <h5 className="text-7xl text-quinary lg:text-8xl xl:text-9xl">
