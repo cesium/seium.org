@@ -29,7 +29,7 @@ export default function Filters(props) {
                                ${
                                  isSelected(props.filters, f)
                                    ? "border-quinary bg-quinary text-primary opacity-100"
-                                   : "hover:border-secondary hover:bg-secondary hover:text-quinary hover:opacity-80"
+                                   : "hover:border-quinary hover:bg-secondary hover:text-quinary hover:opacity-80"
                                }
                                `}
           >

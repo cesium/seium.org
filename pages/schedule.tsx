@@ -8,7 +8,7 @@ import Footer from "@components/website/utils/Footer";
 
 function Index() {
   return (
-    <Navbar bgColor="tertiary" button="quinary" fgColor="black">
+    <Navbar bgColor="tertiary" button="quinary" fgColor="white">
       <Hero />
       <Schedule color="tertiary" detailed={true}>
         <div className="pb-24" />

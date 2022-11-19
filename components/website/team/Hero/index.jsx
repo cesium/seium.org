@@ -7,7 +7,7 @@ const Animation = dynamic(() => import("./Animation"), { ssr: false });
 
 export default function Hero() {
   return (
-    <div className="spacing bg-quaternary">
+    <div className="spacing bg-primary">
       <div className="relative z-50">
         <Animation />
         <div className="pt-2">

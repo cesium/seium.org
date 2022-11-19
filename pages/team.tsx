@@ -10,11 +10,11 @@ import Organization from "@components/website/team/Organization";
 
 function Index() {
   return (
-    <Navbar bgColor="quaternary" button="tertiary" fgColor="white">
+    <Navbar bgColor="primary" button="quinary" fgColor="white">
       <Hero />
       <Organization />
       <FindUs />
-      <Footer color="quaternary" />
+      <Footer color="primary" />
     </Navbar>
   );
 }
