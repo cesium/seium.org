@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Navbar from "@components/website/utils/Navbar";
-import Button from "@components/utils/Button";
+import Navbar from "@components/Navbar";
+import Button from "@components/Button";
 
 export default function Error() {
   return (
