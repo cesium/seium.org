@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 
 import Title from "./Title";
 
-const Animation = dynamic(() => import("../Animation"), { ssr: false });
+const Animation = dynamic(() => import("./Animation"), { ssr: false });
 
 export default function Hero() {
   return (

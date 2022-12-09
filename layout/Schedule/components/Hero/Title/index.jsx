@@ -1,4 +1,4 @@
-import UnderlineAnimation from "/components/website/utils/UnderlineAnimation";
+import UnderlineAnimation from "@components/UnderlineAnimation";
 
 export default function Title() {
   return (
