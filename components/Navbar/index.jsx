@@ -18,7 +18,7 @@ const navigation = [
   { name: "Team", slug: "/team" },
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
-  { name: "FAQs", slug: "/faq" },
+  { name: "FAQs", slug: "/faqs" },
 ];
 
 const userNavigation = (type) => {
