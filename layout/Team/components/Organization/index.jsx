@@ -1,6 +1,6 @@
 import useInView from "react-cool-inview";
 import { motion as Motion } from "framer-motion";
-import Card from "/components/utils/Card";
+import Card from "@components/Card";
 import SeiAnimation from "./Animation";
 
 import Team from "./Team";
