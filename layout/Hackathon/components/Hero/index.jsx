@@ -1,10 +1,12 @@
 import dynamic from "next/dynamic";
 
+import Button from "@components/Button";
+
 import Title from "./Title";
-import Button from "/components/utils/Button";
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
+
 const Animation = dynamic(() => import("./Animation"), { ssr: false });
 
 export default function Hero() {
@@ -29,9 +31,9 @@ export default function Hero() {
               3-5 people
             </div>
           </div>
-          {/* <div className="absolute left-0 mt-6 md:relative md:flex md:flex-row-reverse">
+          <div className="absolute left-0 mt-6 md:relative md:flex md:flex-row-reverse">
             <Organization />
-          </div> */}
+          </div>
         </div>
         <div className="mt-40 grid md:grid md:grid-cols-2">
           <ExpectList />
