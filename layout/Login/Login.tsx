@@ -11,7 +11,7 @@ import Return from "@components/Return";
 
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
-import LoginForm from "./components/LoginForm";
+import { LoginForm } from "./components";
 
 function Login() {
   return (
