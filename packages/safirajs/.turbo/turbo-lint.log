@@ -1,0 +1,5 @@
+[33msafirajs:lint[0m: cache hit, replaying output [2m1e4a1d62b428009c[0m
+[33msafirajs:lint: [0m
+[33msafirajs:lint: [0m> safirajs@0.0.0 lint
+[33msafirajs:lint: [0m> eslint *.ts*
+[33msafirajs:lint: [0m

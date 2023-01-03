@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { withAuth, useAuth } from "/components/Auth";
 
-import * as api from "/lib/api";
+import * as api from "/packages/safirajs/lib";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 

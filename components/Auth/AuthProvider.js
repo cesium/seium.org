@@ -1,8 +1,8 @@
 import { createContext, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
-import API from "/lib/api";
-import * as api from "/lib/api";
-import * as USER from "/lib/user";
+import API from "/packages/safirajs/lib/api";
+import * as api from "/packages/safirajs/lib";
+import * as USER from "/packages/safirajs/lib/roles";
 
 export const AuthContext = createContext();
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { referral } from "/lib/api";
+import { referral } from "/packages/safirajs/lib/wheel";
 
 export default function CodeInput() {
   const [code, setCode] = useState("");

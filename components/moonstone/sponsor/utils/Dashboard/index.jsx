@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { classNames } from "/lib/css";
+import { classNames } from "/packages/safirajs/lib/css";
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";

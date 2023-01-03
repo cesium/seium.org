@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { withAuth, useAuth } from "/components/Auth";
 
-import * as api from "/lib/api";
+import * as api from "/packages/safirajs/lib";
 
 import StoreEmpty from "/components/moonstone/user/vault/store/Empty";
 import Redeemables from "/components/moonstone/user/vault/store/Redeemables";

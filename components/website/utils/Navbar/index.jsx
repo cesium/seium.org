@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import * as USER from "/lib/user";
+import * as USER from "/packages/safirajs/lib/roles";
 
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";

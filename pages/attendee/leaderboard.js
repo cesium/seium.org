@@ -9,7 +9,7 @@ import Table from "/components/moonstone/user/leaderboard/Table";
 import Day from "/components/website/utils/Schedule/Day";
 import ErrorMessage from "/components/utils/ErrorMessage";
 
-import { getLeaderboard } from "/lib/api";
+import { getLeaderboard } from "/packages/safirajs/lib/users";
 
 function leapYear(year) {
   return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;

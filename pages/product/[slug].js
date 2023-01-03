@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { withAuth, useAuth } from "/components/Auth";
 
-import { getProduct, buyProduct } from "/lib/api";
+import { getProduct, buyProduct } from "/packages/safirajs/lib/store";
 
 import Balance from "/components/moonstone/user/store/Balance";
 

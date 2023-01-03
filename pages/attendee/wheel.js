@@ -11,7 +11,11 @@ import Wheel from "/components/moonstone/user/wheel/Wheel";
 import WheelMessage from "/components/moonstone/user/wheel/WheelMessage";
 import ErrorMessage from "/components/utils/ErrorMessage";
 
-import { getWheelPrizes, getWheelLatestWins, spinWheel } from "/lib/api";
+import {
+  getWheelPrizes,
+  getWheelLatestWins,
+  spinWheel,
+} from "/packages/safirajs/lib/wheel";
 
 /*
 Gets how long ago the given date/time was in a user friendly way (10 seconds ago, 1 minute ago, etc)

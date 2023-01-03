@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { withoutAuth } from "@components/Auth";
 
-import { resetPasswordWithToken } from "@lib/api";
+import { resetPasswordWithToken } from "../packages/safirajs/lib/auth";
 
 import { motion as Motion } from "framer-motion";
 import Link from "next/link";

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { withoutAuth } from "@components/Auth";
-import { sendResetEmail } from "@lib/api";
+import { sendResetEmail } from "../packages/safirajs/lib/auth";
 
 import { motion as Motion } from "framer-motion";
 import ImageButton from "@components/moonstone/utils/ImageButton";

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useAuth } from "./useAuth";
-import * as USER from "/lib/user";
+import * as USER from "/packages/safirajs/lib";
 
 export function withAuth(WrappedComponent) {
   // eslint-disable-next-line react/display-name

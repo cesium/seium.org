@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { withAuth, useAuth } from "/components/Auth";
 import { useRouter } from "next/router";
 
-import * as api from "/lib/api";
+import * as api from "/packages/safirajs/lib";
 
 import Base from "/components/moonstone/staff/utils/Base";
 import Prizes from "/components/moonstone/user/vault/wheel/Prizes";

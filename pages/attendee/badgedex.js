@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { withAuth } from "/components/Auth";
 import { useAuth } from "/components/Auth";
 
-import { getAllBadges } from "/lib/api";
+import { getAllBadges } from "/packages/safirajs/lib/badges";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import ErrorMessage from "/components/utils/ErrorMessage";

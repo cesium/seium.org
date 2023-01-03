@@ -5,7 +5,7 @@ import SeiAnimation from "./Animation";
 
 import Team from "./Team";
 
-import { getFirstName } from "/lib/naming";
+import { getFirstName } from "/packages/safirajs/lib/users";
 
 import team from "/data/team.json";
 

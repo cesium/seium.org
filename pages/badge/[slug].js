@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { withAuth, useAuth } from "/components/Auth";
 
-import { getBadge } from "/lib/api";
+import { getBadge } from "/packages/safirajs/lib/badges";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Heading from "/components/moonstone/utils/Heading";

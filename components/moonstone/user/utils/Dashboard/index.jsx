@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { classNames } from "/lib/css";
+import { classNames } from "/packages/safirajs/lib/css";
 import { useAuth } from "/components/Auth";
 import Return from "/components/moonstone/utils/Return";
 

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 
 import { withAuth } from "/components/Auth";
 
-import { giveBadge } from "/lib/api";
+import { giveBadge } from "/packages/safirajs/lib/badges";
 
 import Base from "/components/moonstone/staff/utils/Base";
 import QRScanner, { FEEDBACK } from "/components/moonstone/utils/QRScanner";

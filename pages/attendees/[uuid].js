@@ -5,7 +5,10 @@ import { withAuth, useAuth } from "/components/Auth";
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Heading from "/components/moonstone/utils/Heading";
 import Badge from "/components/moonstone/user/badgedex/Badge";
-import { getAttendee, isAttendeeRegistered } from "/lib/api";
+import {
+  getAttendee,
+  isAttendeeRegistered,
+} from "/packages/safirajs/lib/users";
 import Filter from "/components/moonstone/user/badgedex/Filter";
 
 export async function getServerSideProps({ query }) {

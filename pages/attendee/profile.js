@@ -11,8 +11,8 @@ import Heading from "/components/moonstone/utils/Heading";
 import CodeInput from "/components/moonstone/user/profile/CodeInput";
 import CheckpointTracker from "/components/moonstone/user/profile/CheckpointTracker";
 
-import { resetPassword } from "/lib/api";
-import { getFirstName } from "/lib/naming";
+import { resetPassword } from "/packages/safirajs/lib/auth";
+import { getFirstName } from "/packages/safirajs/lib/users";
 
 function Profile() {
   const { user, editUser } = useAuth();
