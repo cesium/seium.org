@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "plop": "plop --plopfile generator/plopfile.js",
+    "generate": "plop --plopfile generator/plopfile.js",
     "prepare": "husky install",
     "preview": "netlify deploy --build --context deploy-preview",
     "deploy": "netlify deploy --build --prod",
