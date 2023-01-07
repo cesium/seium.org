@@ -1,0 +1,17 @@
+import { {{#if shouldAddAuth}}withAuth{{else}}withoutAuth{{/if}} } from "@context/Auth";
+
+{{#if shouldAddComponents}}
+import { Component } from "./components";
+  
+{{/if}}
+type {{pascalCase name}}Props = {};
+
+function {{pascalCase name}}(props: {{pascalCase name}}Props) {
+  return (
+    <div>
+      <h1>{{pascalCase name}}</h1>
+    </div>
+  );
+}
+
+export default {{#if shouldAddAuth}}withAuth{{else}}withoutAuth{{/if}}({{pascalCase name}});
