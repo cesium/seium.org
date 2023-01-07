@@ -11,7 +11,7 @@ module.exports = (plop) => {
       {
         type: "confirm",
         name: "shouldAddStyles",
-        message: "Shoul add moduled styles?",
+        message: "Should add moduled styles?",
         default: false,
       },
     ],
@@ -53,7 +53,7 @@ module.exports = (plop) => {
       {
         type: "confirm",
         name: "shouldAddComponents",
-        message: "Shoul add components folder used only in this layout?",
+        message: "Should add components folder used only in this layout?",
         default: true,
       },
       {
