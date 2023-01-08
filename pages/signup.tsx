@@ -1,18 +1,18 @@
 import { useState, useRef } from "react";
 
-import { withoutAuth, useAuth } from "@components/Auth";
+import { withoutAuth, useAuth } from "@context/Auth";
 import { motion as Motion } from "framer-motion";
 
-import Button from "@components/utils/Button";
-import Card from "@components/utils/Card";
+import Button from "@components/Button";
+import Card from "@components/Card";
 
-import Return from "@components/moonstone/utils/Return";
-import Form from "@components/moonstone/utils/Form";
-import Input from "@components/moonstone/utils/Input";
+import Return from "@components/Return";
+import Form from "@components/Form";
+import Input from "@components/Input";
 
-import Title from "@components/moonstone/authentication/Title";
-import Text from "@components/moonstone/authentication/Text";
-import BarebonesQRScanner from "@components/moonstone/utils/QRScanner/BarebonesQRScanner";
+import Title from "@layout/moonstone/authentication/Title";
+import Text from "@layout/moonstone/authentication/Text";
+import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
 
 function Signup() {
   const { sign_up, errors, isLoading } = useAuth();

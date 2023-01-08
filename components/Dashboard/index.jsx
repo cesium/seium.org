@@ -5,7 +5,7 @@ import { classNames } from "/lib/css";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-import Return from "/components/moonstone/utils/Return";
+import Return from "/components/Return";
 
 const navigation = ["dashboard", "spotlight"];
 
