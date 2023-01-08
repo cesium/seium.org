@@ -158,7 +158,7 @@ export default function Dashboard(props) {
             <span className="sr-only">Open sidebar</span>
           </button>
         </div>
-        <main className="flex-1">
+        <main className="flex-1 bg-white">
           <div className="py-6">
             <div className="max-w-7xl px-4 sm:px-6 md:mx-20 md:px-8">
               <p className="pt-20 font-ibold text-5xl text-secondary">
