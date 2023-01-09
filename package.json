@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "generate": "plop --plopfile generator/plopfile.js",
     "prepare": "husky install",
     "preview": "netlify deploy --build --context deploy-preview",
     "deploy": "netlify deploy --build --prod",
@@ -16,7 +17,7 @@
     "test": "npm-run-all test:*",
     "test:lint": "npm-run-all test:lint:*",
     "test:lint:js": "next lint",
-    "test:format": "npx prettier --check . --ignore-path .gitignore"
+    "test:format": "npx prettier --check . --ignore-path .gitignore '!**/*.hbs'"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -56,6 +57,7 @@
     "lint-staged": "^12.2.1",
     "netlify-cli": "^8.16.1",
     "npm-run-all": "^4.1.5",
+    "plop": "^3.1.1",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",
