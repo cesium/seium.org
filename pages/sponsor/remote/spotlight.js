@@ -1,7 +1,8 @@
-import { withAuth } from "/components/Auth";
-import Dashboard from "/components/moonstone/sponsor/utils/Dashboard";
+import { withAuth } from "@context/Auth";
 
-import SpotlightButton from "/components/moonstone/sponsor/spotlight/SpotlightButton";
+import Dashboard from "@components/Dashboard";
+
+import SpotlightButton from "@layout/moonstone/sponsor/spotlight/SpotlightButton";
 
 function Spotlight() {
   return (

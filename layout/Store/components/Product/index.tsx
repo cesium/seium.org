@@ -7,11 +7,8 @@ export default function Product({ name, id, image, price, enabled }) {
       className={enabled ? "opacity-100" : "opacity-50"}
       passHref
     >
-      <div className="group relative cursor-pointer">
-        <div
-          href={`/product/${id}`}
-          className={enabled ? "opacity-100" : "opacity-50"}
-        >
+      <a className="group relative cursor-pointer" href={`/product/${id}`}>
+        <div className={enabled ? "opacity-100" : "opacity-50"}>
           <div className="min-h-80 aspect-w-1 aspect-h-1 lg:aspect-none w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-80">
             <img
               src={image}
@@ -20,11 +17,12 @@ export default function Product({ name, id, image, price, enabled }) {
             />
           </div>
         </div>
+
         <div className="mt-4 text-center">
           <p className="font-ibold text-lg text-primary">{name}</p>
           <p className="font-imedium text-lg text-tertiary"> 💰 {price}</p>
         </div>
-      </div>
+      </a>
     </Link>
   );
 }

@@ -23,7 +23,7 @@ function displayTimeSince(dateString) {
   const date = Date.parse(dateString);
   const now = new Date();
 
-  const differenceMiliSeconds = now - date;
+  const differenceMiliSeconds = now.getMilliseconds() - date;
 
   let value;
   let string;
@@ -125,7 +125,7 @@ function WheelPage() {
         }
       })
       .catch((_) => {
-        wheelMessage = (
+        updateWheelMessage(
           <WheelMessage
             title="You don't have tokens!"
             description="You do not have enough tokens to spin the wheel."
@@ -133,7 +133,7 @@ function WheelPage() {
           />
         );
       })
-      .finally((_) => {
+      .finally(() => {
         requestAllInfo();
         refetchUser();
         setIsSpinning(false);

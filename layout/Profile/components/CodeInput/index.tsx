@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { referral } from "/lib/api";
+
+import { referral } from "@lib/api";
 
 export default function CodeInput() {
   const [code, setCode] = useState("");

@@ -1,14 +1,14 @@
-import Link from "next/link";
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { withAuth, useAuth } from "/components/Auth";
+import Link from "next/link";
 
-import { getBadge } from "/lib/api";
+import { getBadge } from "@lib/api";
 
-import Dashboard from "/components/moonstone/user/utils/Dashboard";
-import Heading from "/components/moonstone/utils/Heading";
-import Badge from "/components/moonstone/user/badgedex/Badge";
+import { withAuth, useAuth } from "@context/Auth";
+
+import Dashboard from "@components/Dashboard";
+import Heading from "@components/Heading";
+import Badge from "@components/Badge";
 
 function Owner({ attendee }) {
   return (

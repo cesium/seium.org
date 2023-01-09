@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
-import { withAuth } from "/components/Auth";
+import { getAllBadges, giveBadge } from "@lib/api";
 
-import { getAllBadges, giveBadge } from "/lib/api";
+import { withAuth } from "@context/Auth";
 
-import Base from "/components/moonstone/staff/utils/Base";
-import ErrorMessage from "/components/utils/ErrorMessage";
-import Filter from "/components/moonstone/user/badgedex/Filter";
-import QRScanner, { FEEDBACK } from "/components/moonstone/utils/QRScanner";
+import Base from "@components/Base";
+import ErrorMessage from "@components/ErrorMessage";
+import Filter from "@components/BadgeFilter";
+import QRScanner, { FEEDBACK } from "@components/QRScanner";
+
 const navigation = ["badges", "prizes", "identifier"];
 
 function ManagerBadges() {
@@ -39,7 +40,7 @@ function ManagerBadges() {
         clearTimeout(id);
       };
     }
-    return null;
+    return () => {};
   }, [feedback]);
 
   const handleBadgeSelected = (badge) => {

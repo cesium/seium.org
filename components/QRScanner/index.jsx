@@ -1,6 +1,5 @@
-import BarebonesQRScanner from "/components/moonstone/utils/QRScanner/BarebonesQRScanner";
-
-import Button from "/components/moonstone/utils/Button";
+import BarebonesQRScanner from "./BarebonesQRScanner";
+import Button from "@components/Button";
 
 export const FEEDBACK = {
   SUCCESS: {

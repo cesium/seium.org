@@ -1,7 +1,19 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export default function Question({ title, description, href, link }) {
+interface IQuestionProps {
+  title: string;
+  href: string;
+  description: string;
+  link?: string;
+}
+
+export default function Question({
+  title,
+  description,
+  href,
+  link,
+}: IQuestionProps) {
   const [showQuestion, setShowQuestion] = useState(false);
 
   return (

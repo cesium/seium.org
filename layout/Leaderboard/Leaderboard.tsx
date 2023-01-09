@@ -37,8 +37,8 @@ function addDate(date, days) {
   //Assume days < 28 and the year won't need changing
   const arr = date.split("/");
   const year = parseInt(arr[0]);
-  let month = parseInt(arr[1]);
-  let day = parseInt(arr[2]);
+  let month: number | string = parseInt(arr[1]);
+  let day: number | string = parseInt(arr[2]);
 
   const month_len = [
     31,
@@ -65,7 +65,7 @@ function addDate(date, days) {
   }
 
   month = month < 10 ? "0" + month : month;
-  day = day < 10 ? "0" + fay : day;
+  day = day < 10 ? "0" + day : day;
 
   return year + "/" + month + "/" + day;
 }

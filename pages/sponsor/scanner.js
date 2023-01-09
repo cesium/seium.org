@@ -1,12 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 
-import { withAuth } from "/components/Auth";
+import { giveBadge } from "@lib/api";
 
-import { giveBadge } from "/lib/api";
+import { withAuth, useAuth } from "@context/Auth";
 
-import Base from "/components/moonstone/staff/utils/Base";
-import QRScanner, { FEEDBACK } from "/components/moonstone/utils/QRScanner";
-import { useAuth } from "../../components/Auth/useAuth";
+import Base from "@components/Base";
+import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
 const navigation = ["badges"];
 
