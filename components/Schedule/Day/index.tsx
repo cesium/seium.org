@@ -51,7 +51,7 @@ export default function Day(props) {
     parseInt(date[2])
   );
 
-  const ans = (
+  const Ans = () => (
     <div className="flex w-full justify-center">
       <div className="flex w-full justify-between text-4xl xs:text-5xl sm:text-7xl lg:text-8xl xl:mx-20 xl:text-7xl">
         <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
@@ -84,14 +84,19 @@ export default function Day(props) {
     </div>
   );
 
-  if (props.showFilters)
-    return [
-      ans,
-      <Filters
-        key="key"
-        filters={props.filters}
-        updateFilters={props.updateFilters}
-      />,
-    ];
-  else return ans;
+  if (props.showFilters) {
+    return (
+      <>
+        <Ans />
+
+        <Filters
+          key="key"
+          filters={props.filters}
+          updateFilters={props.updateFilters}
+        />
+      </>
+    );
+  }
+
+  return <Ans />;
 }

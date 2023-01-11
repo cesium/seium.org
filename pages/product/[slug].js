@@ -1,15 +1,13 @@
 import { useState, useEffect } from "react";
-
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import { withAuth, useAuth } from "/components/Auth";
+import { getProduct, buyProduct } from "@lib/api";
 
-import { getProduct, buyProduct } from "/lib/api";
+import { withAuth, useAuth } from "@context/Auth";
 
-import Balance from "/components/moonstone/user/store/Balance";
-
-import Dashboard from "/components/moonstone/user/utils/Dashboard";
+import Balance from "@components/Balance";
+import Dashboard from "@components/Dashboard";
 
 function ProductSlug() {
   const [product, updateProduct] = useState({});

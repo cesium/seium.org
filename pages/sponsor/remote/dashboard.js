@@ -1,9 +1,11 @@
-import { withAuth } from "/components/Auth";
-import Dashboard from "/components/moonstone/sponsor/utils/Dashboard";
-import Heading from "/components/moonstone/utils/Heading";
-import SponsorPrizeButton from "/components/moonstone/sponsor/dashboard/SponsorPrizeButton";
-import SponsorBadgeButton from "/components/moonstone/sponsor/dashboard/SponsorBadgeButton";
-import ParticipantSelector from "/components/moonstone/sponsor/dashboard/ParticipantSelector";
+import { withAuth } from "@context/Auth";
+
+import Dashboard from "@components/Dashboard";
+import Heading from "@components/Heading";
+
+import SponsorPrizeButton from "@layout/moonstone/sponsor/dashboard/SponsorPrizeButton";
+import SponsorBadgeButton from "@layout/moonstone/sponsor/dashboard/SponsorBadgeButton";
+import ParticipantSelector from "@layout/moonstone/sponsor/dashboard/ParticipantSelector";
 
 function SponsorDashboard() {
   const participants = ["Nome 1", "Nome 2", "Nome 3", "Nome 4"];
