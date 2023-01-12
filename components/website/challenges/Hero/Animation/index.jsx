@@ -53,6 +53,22 @@ const Animation = () => {
     [2068.6121335029047, 85.15211354008466],
   ];
 
+  function getHighestPoint(list) {
+    let highest = list[0];
+    list.forEach((element) => {
+      if (element[1] > highest[1]) {
+        highest = element;
+      }
+    });
+    console.log("highest point: ", highest);
+    return highest;
+  }
+
+  //concatenate the three paths into one
+  let highestPoint = getHighestPoint(
+    path1_backup.concat(path2_backup).concat(path3_backup)
+  );
+
   let height_cost = 200;
   path1_backup.forEach((x) => {
     x[1] -= height_cost;
@@ -112,7 +128,7 @@ const Animation = () => {
   }
 
   const setup = (p) => {
-    let canvas = p.createCanvas(window.innerWidth, window.innerHeight);
+    let canvas = p.createCanvas(window.innerWidth, highestPoint[1] + 100);
     canvas.style("position", "absolute");
     canvas.position(0, 0);
     canvas.style("z-index", "1");
@@ -192,7 +208,7 @@ const Animation = () => {
   };
 
   const windowResized = (p) => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight);
+    p.resizeCanvas(window.innerWidth, highestPoint[1] + 100);
     update_path_horizontally(p);
     update_path_vars();
   };
