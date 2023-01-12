@@ -60,7 +60,6 @@ const Animation = () => {
         highest = element;
       }
     });
-    console.log("highest point: ", highest);
     return highest;
   }
 
