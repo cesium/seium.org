@@ -14,7 +14,7 @@ import styles from "./style.module.css";
 
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
-  { name: "Hackathon", slug: "/hackathon" },
+  //{ name: "Hackathon", slug: "/hackathon" },
   { name: "Team", slug: "/team" },
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
@@ -73,13 +73,15 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             </a>
                           </Link>
                         ))}
-                        {isAuthenticated ? null : (
+                        {
+                          isAuthenticated ? null : <></> /*(
                           <Link key="login" href="/login" passHref>
                             <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
                               Login
                             </a>
                           </Link>
-                        )}
+                        )*/
+                        }
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">

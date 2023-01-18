@@ -32,6 +32,44 @@
   [
     [
       {
+        "image": "eurotux",
+        "link": "https://eurotux.com/"
+      },
+      {
+        "image": "eurotux",
+        "link": "https://eurotux.com/"
+      },
+      {
+        "image": "glintt",
+        "link": "https://www.glintt.com/pt/Paginas/home.aspx"
+      },
+      {
+        "image": "xpandit",
+        "link": "https://www.xpand-it.com/pt-pt/"
+      },
+      {
+        "image": "deloitte",
+        "link": "https://www2.deloitte.com/pt/pt.html"
+      },
+      {
+        "image": "fujitsu",
+        "link": "https://www.fujitsu.com/pt/"
+      },
+      {
+        "image": "kpmg",
+        "link": "https://home.kpmg/pt/pt/home.html"
+      },
+      {
+        "image": "bosch",
+        "link": "https://www.bosch.pt/"
+      },
+      {
+        "image": "farfetch",
+        "link": "https://www.farfetch.com/br/"
+      }
+    ],
+    [
+      {
         "image": "seegno",
         "link": "https://seegno.com/"
       },

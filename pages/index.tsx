@@ -15,7 +15,6 @@ function Index() {
       <Hero />
       <Schedule color="tertiary" detailed={false} />
       <Sponsors />
-      <Hackathon />
       <Speakers />
       <Partners />
       <Footer color="secondary" />

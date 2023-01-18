@@ -83,4 +83,10 @@ function Index() {
   );
 }
 
-export default withoutAuth(Index);
+//export default withoutAuth(Index);
+
+export function getStaticProps() {
+  return {
+    notFound: true,
+  };
+}

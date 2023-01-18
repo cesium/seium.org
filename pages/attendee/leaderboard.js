@@ -72,8 +72,8 @@ function addDate(date, days) {
 }
 
 function Leaderboard() {
-  const min_date = "2022/02/15";
-  const max_date = "2022/02/20";
+  const min_date = "2023/02/14";
+  const max_date = "2023/02/17";
 
   const _today = new Date();
   const today =

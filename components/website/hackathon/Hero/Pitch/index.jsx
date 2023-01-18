@@ -1,5 +1,3 @@
-import Button from "/components/utils/Button";
-
 export default function Pitch() {
   return (
     <div className="xl:9/12 w-full text-white lg:w-9/12">
