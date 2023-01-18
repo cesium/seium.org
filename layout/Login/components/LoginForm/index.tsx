@@ -57,11 +57,7 @@ export default function LoginForm() {
           type="submit"
           customStyle="text-secondary bg-quinary border-quinary"
         />
-        {errors && (
-          <p className="text-center text-failure">
-            Incorrect e-mail or password
-          </p>
-        )}
+        {errors && <p className="text-center text-failure">{errors}</p>}
       </Form>
     </div>
   );
