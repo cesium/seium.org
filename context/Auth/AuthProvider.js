@@ -75,8 +75,7 @@ export function AuthProvider({ children }) {
           }
         });
       })
-      .catch((errors) => {
-        //TODO: unpack errors
+      .catch((_) => {
         setErrors("Something went wrong. Please try again later");
         setUser(undefined);
         setLoading(false);
@@ -109,11 +108,8 @@ export function AuthProvider({ children }) {
       })
       .catch((errors) => {
         if (errors.response) {
-          // The client was given an error response (5xx, 4xx)
-          // error code: errors.response.status
           setErrors("Invalid credentials");
         } else if (errors.request) {
-          // The client never received a response, and the request was never left
           setErrors(
             "No connection to the server. Please check your internet connection and try again later"
           );
