@@ -1,9 +1,9 @@
 [
   {
-    "id": "paulolopes",
-    "name": "Paulo Lopes",
-    "job": "Software Engineer",
-    "company": "Red Hat"
+    "id": "filipeborges",
+    "name": "Filipe Borges",
+    "job": "Team Owner",
+    "company": "Riot Games"
   },
   {
     "id": "saravieira",
@@ -12,27 +12,27 @@
     "company": "Remote"
   },
   {
-    "id": "alexandraoliveira",
-    "name": "Alexandra Oliveira",
-    "job": "Data Scientist",
-    "company": "Retail Consult"
+    "id": "filipacastro",
+    "name": "Filipa Castro",
+    "job": "",
+    "company": ""
   },
   {
-    "id": "ruiquelhas",
-    "name": "Rui Quelhas",
-    "job": "Principal Software Developer",
-    "company": "Oracle"
+    "id": "marcelosousa",
+    "name": "Marcelo Sousa",
+    "job": "Founder",
+    "company": "Reviewpad"
   },
   {
-    "id": "telmopires",
-    "name": "Telmo Pires",
-    "role": "Senior Machine Learning Engineer",
-    "company": "Apple"
+    "id": "antoniomurta",
+    "name": "António Murta",
+    "role": "",
+    "company": ""
   },
   {
-    "id": "anaferreira",
-    "name": "Ana Ferreira",
-    "role": "Cybersecurity Researcher",
-    "company": "CINTESIS"
+    "id": "barbaravieira",
+    "name": "Bárbara Vieira",
+    "role": "",
+    "company": ""
   }
 ]

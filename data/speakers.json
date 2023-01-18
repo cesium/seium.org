@@ -1,392 +1,126 @@
 [
   {
-    "date": "2022/2/15",
+    "date": "2023/2/14",
     "speakers": [
       {
-        "id": "heldercoelho",
-        "name": "Helder Coelho",
-        "role": "Professor Emérito",
-        "company": "Universidade de Lisboa",
-        "talk": "Talk. 12h",
+        "id": "antoniomurta",
+        "name": "António Murta",
+        "role": "",
+        "company": "",
+        "talk": "Talk. 14h",
         "linkedin": "",
         "github": "",
         "twitter": "",
-        "href": "https://scholar.google.com/citations?user=NVB8M7wAAAAJ",
-        "description": "Professor Emeritus at the University of Lisbon, and one of the founders of AI and Complexity Science in Portugal. Member of the Mind-Brain College at ULisboa."
-      },
-      {
-        "id": "paulolopes",
-        "name": "Paulo Lopes",
-        "role": "Software Engineer",
-        "company": "Red Hat",
-        "talk": "Talk. 14h",
-        "linkedin": "pmlopes",
-        "github": "",
-        "twitter": "pml0p35",
-        "href": "https://www.jetdrone.xyz/",
-        "description": "Architect/Principal Software Developer with successful record of performance tuning of Java online applications on Financial, Telecom, Video Game and Geo-Spatial businesses."
-      },
-      {
-        "id": "bernardoamorim",
-        "name": "Bernardo Amorim",
-        "role": "Software Engineer",
-        "company": "SaltPay",
-        "talk": "Talk. 15h",
-        "linkedin": "bdornellas",
-        "github": "bamorim",
-        "twitter": "",
         "href": "",
-        "description": "Bernardo fell in love with programming at age 12 and never stopped since then. He has built an EdTech product to improve the ecosystem for a dependently typed language and a banking system almost from scratch. He loves programming in Elixir and interacting with the community."
-      },
-      {
-        "id": "andresantos",
-        "name": "André Santos",
-        "role": "Co-Founder & CEO",
-        "company": "Nutrium",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "62gerente",
-        "github": "62gerente",
-        "twitter": "62gerente",
-        "href": "",
-        "description": "André Santos is a LEI alumni and the Co-Founder of Nutrium"
-      },
-      {
-        "id": "robertomachado",
-        "name": "Roberto Machado",
-        "role": "Co-Founder & CEO",
-        "company": "Subvisual",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "robertomachado",
-        "github": "rmdmachado",
-        "twitter": "",
-        "href": "",
-        "description": "Roberto Machado is a LEI alumni and the Co-Founder of Subvisual"
-      },
-      {
-        "id": "helenamoura",
-        "name": "Helena Moura",
-        "role": "Academic Entrepeneurship",
-        "company": "TecMinho",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "helenamoura/pt",
-        "github": "",
-        "twitter": "",
-        "href": ""
-      },
-      {
-        "id": "ramalho",
-        "name": "José Ramalho",
-        "role": "Co-Founder",
-        "company": "Keep Solutions",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "jos%C3%A9-carlos-ramalho-ab5535a",
-        "github": "",
-        "twitter": "",
-        "href": ""
+        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é, adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).   Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan School of Management US) e da Singularity University (US) – Exponential Medicine."
       }
     ]
   },
   {
-    "date": "2022/2/16",
+    "date": "2023/2/15",
     "speakers": [
       {
-        "id": "walidslim",
-        "name": "Walid Slim",
-        "role": "Machine Learning Engineer",
-        "company": "SaltPay",
-        "talk": "Workshop. 9h",
-        "linkedin": "walid-slim-038984193",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "andremota",
-        "name": "André Mota",
-        "role": "Tech Lead",
-        "company": "Glintt",
-        "talk": "Workshop. 9h",
-        "linkedin": "andremoah",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "catarinacacote",
-        "name": "Catarina Caçote",
-        "role": "Scrum Master",
-        "company": "Glintt",
-        "talk": "Workshop. 9h",
-        "linkedin": "catarina-ca%C3%A7ote-a9848215b",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "franciscoprata",
-        "name": "Francisco Prata",
-        "role": "Cloud Lead",
-        "company": "Accenture",
-        "talk": "Talk. 11h30",
-        "linkedin": "franciscoprata",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": "Responsible for the Cloud team at Accenture's Advanced Technology Center in Portugal, Francisco and his team have helped several companies to adopt the cloud, and to migrate and modernize their applications in several European companies and in the world. He is also responsible for Accenture's Google Cloud area in Portugal."
-      },
-      {
-        "id": "larsfrische",
-        "name": "Lars Frische",
-        "role": "Solution Development Center Coordinato",
-        "company": "Continental",
-        "talk": "Talk. 14h",
-        "linkedin": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "andrecoelho",
-        "name": "André Coelho",
-        "role": "Frontend Engineer",
-        "company": "Uphold",
+        "id": "marcelosousa",
+        "name": "Marcelo Sousa",
+        "role": "Founder",
+        "company": "Reviewpad",
         "talk": "Talk. 15h",
-        "linkedin": "andr%C3%A9-coelho-8059a064",
-        "github": "hitmanmcc",
-        "twitter": "hitmanmcc",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Marcelo is an open-source and formal methods advocate. He holds a Ph.D. from the University of Oxford where he researched automated code analysis for concurrent programs. He worked in compilers at IBM and code analysers for malware detection at Google. He was also the principal designer of the first security analyser in SonarQube and SonarCloud. He is now building Reviewpad, a product that allows developers to safely push code changes faster."
+      },
+      {
+        "id": "barbaravieira",
+        "name": "Bárbara Vieira",
+        "role": "",
+        "company": "",
+        "talk": "Talk. 15h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
         "href": "",
         "description": ""
       },
       {
-        "id": "antonionestor",
-        "name": "António Nestor",
-        "role": "Professor",
-        "company": "Universidade do Minho",
-        "talk": "Panel Discussion. 17h",
+        "id": "filipacastro",
+        "name": "Filipa Castro",
+        "role": "",
+        "company": "",
+        "talk": "",
         "linkedin": "",
         "github": "",
         "twitter": "",
-        "href": ""
-      },
-      {
-        "id": "jbb",
-        "name": "José Bernardo Barros",
-        "role": "Professor",
-        "company": "Universidade do Minho",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "",
-        "github": "",
-        "twitter": "",
-        "href": ""
-      },
-      {
-        "id": "saraiva",
-        "name": "João Saraiva",
-        "role": "Professor",
-        "company": "Universidade do Minho",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "",
-        "github": "",
-        "twitter": "",
-        "href": ""
+        "href": "",
+        "description": ""
       }
     ]
   },
   {
-    "date": "2022/2/17",
+    "date": "2023/2/16",
     "speakers": [
       {
-        "id": "cristianosousa",
-        "name": "Cristiano Sousa",
-        "role": "Manager, Risk Advisory, Financial Services",
-        "company": "Deloitte",
-        "talk": "Workshop. 9h",
-        "linkedin": "cristianosilvasousa",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": "Cristiano is a Manager at Deloitte's Risk Advisory division for the Financial Services industry in Braga. Cristiano holds a master's degree in Computer Engineering from the University of Minho, with a strong focus on computational performance, software correctness and software development. Straight from University, he joined Deloitte in 2014, being nominated to Manager in 2019. In December 2021 he was relocated to the Braga office, where he is contributing to growing the Risk Advisory practice and Deloitte."
-      },
-      {
-        "id": "antoniolemos",
-        "name": "António Lemos",
-        "role": "Senior Manager",
-        "company": "Accenture",
-        "talk": "Workshop. 9h",
-        "linkedin": "armlemos",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "emanuelmota",
-        "name": "Emanuel Mota",
-        "role": "CEO",
-        "company": "Yari Labs",
-        "talk": "Talk. 12h",
-        "linkedin": "emanuel-mota-7371613/",
-        "github": "emanuel",
-        "twitter": "emota7",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "anaferreira",
-        "name": "Ana Ferreira",
-        "role": "Cybersecurity Researcher",
-        "company": "CINTESIS - Center for Health Technology and Services Research",
+        "id": "filipeborges",
+        "name": "Filipe Borges",
+        "role": "Team Owner",
+        "company": "Riot Games",
         "talk": "Talk. 14h",
-        "linkedin": "ana-ferreira-cybersecurity",
-        "href": "",
-        "description": "Ana Ferreira (PhD, CISSP, HCISPP), specialist and researcher in cybersecurity at CINTESIS, Faculty of Medicine, University of Porto, and professor at the same institution. She is an evaluator of projects in the area, for the European Commission, and is co-founder of Women4Cyber ​​Portugal. He currently leads the AnyMApp project, funded by the FCT, where he studies the need to evaluate technologies, anonymously, and online, to improve their usability, trust and adherence."
-      },
-      {
-        "id": "alexandraoliveira",
-        "name": "Alexandra Oliveira",
-        "role": "Data Scientist",
-        "company": "Retail Consult",
-        "talk": "Talk. 15h",
-        "linkedin": "alexandraaoliveira",
+        "linkedin": "",
         "github": "",
         "twitter": "",
         "href": "",
-        "description": "Alexandra has more than 10 years of experience in the data science field. She has developed solutions in several areas, such as health and wellness, management of the risk level associated with food inspections, among others. She has been a Bioinformatics professor at Escola Superior de Saúde do Instituto Politécnico do Porto for more than 10 years, is a reasearcher at  Laboratório de Inteligência Artificial e Ciências de Computadores da Universidade do Porto as well as a data scientists at Retail Consult."
-      },
-      {
-        "id": "alexandremendes",
-        "name": "Alexandre Mendes",
-        "role": "Head of Ventures and Strategy",
-        "company": "Subvisual",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "carlosalexandremendes",
-        "github": "",
-        "twitter": "senhoralfaiate",
-        "href": ""
-      },
-      {
-        "id": "gabrielpoca",
-        "name": "Gabriel Poça",
-        "role": "Developer",
-        "company": "Subvisual",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "gabrielpoca",
-        "github": "",
-        "twitter": "gabrielgpoca",
-        "href": "https://gabrielpoca.com/"
-      },
-      {
-        "id": "resende",
-        "name": "José Resende",
-        "role": "Developer",
-        "company": "Finiam",
-        "talk": "Panel Discussion. 17h",
-        "linkedin": "jose-pedro-resende",
-        "github": "ZePedroResende",
-        "twitter": "Resende_666",
-        "gitlab": "ZePedroResende",
-        "href": ""
-      }
-    ]
-  },
-  {
-    "date": "2022/2/18",
-    "speakers": [
-      {
-        "id": "alvarobezerra",
-        "name": "Álvaro Bezerra",
-        "role": "Product Manager",
-        "company": "Subvisual",
-        "talk": "Workshop. 9h",
-        "linkedin": "alvarobezerra",
-        "github": "",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "emanuelmota",
-        "name": "Emanuel Mota",
-        "role": "CEO",
-        "company": "Yari Labs",
-        "talk": "Workshop. 9h",
-        "linkedin": "emanuel-mota-7371613/",
-        "github": "emanuel",
-        "twitter": "emota7",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "helderpinto",
-        "name": "Helder Pinto",
-        "role": "Developer",
-        "company": "Yari Labs",
-        "talk": "Workshop. 9h",
-        "linkedin": "helderjnpinto/",
-        "github": "helderjnpinto",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "pedrocosta",
-        "name": "Pedro Costa",
-        "role": "Developer",
-        "company": "Yari Labs",
-        "talk": "Workshop. 9h",
-        "linkedin": "pedro-costa-3b0637202/",
-        "github": "pCosta99",
-        "twitter": "",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "brunoribeiro",
-        "name": "Bruno Ribeiro",
-        "role": "Big Data Software Engineering",
-        "company": "XpandIT",
-        "talk": "Workshop. 9h",
-        "linkedin": "brunoribeiro127",
-        "github": "bacr-xpand",
-        "twitter": "",
-        "href": "",
-        "description": ""
+        "description": "I'm a highly experienced e-Sports focused Project Manager, having spent the last 6 years working full time in e-Sports. After graduating from University of Coimbra with a Masters in Industrial Engineering and Management, I quickly turned my passion for e-Sports into a career, bringing my formal education and grassroots experience together. Throughout my career I was fortunate to work in multiple roles, from being a Player, Coach, Product Manager, University Lecturer and Team Owner which now grants me a holistic perspective of the EMEA League of Legends Regional ecosystem I currently manage at Riot Games."
       },
       {
         "id": "saravieira",
         "name": "Sara Vieira",
         "role": "Frontend Engineer",
         "company": "Remote",
-        "talk": "Talk. 12h",
-        "linkedin": "saravieira1",
-        "github": "SaraVieira",
-        "twitter": "NikkitaFTW",
-        "href": "http://iamsaravieira.com",
-        "description": ""
-      },
-      {
-        "id": "telmopires",
-        "name": "Telmo Pires",
-        "role": "Senior Machine Learning Engineer",
-        "company": "Apple",
-        "talk": "Talk. 14h",
-        "linkedin": "tjppires",
-        "href": "",
-        "description": ""
-      },
-      {
-        "id": "ruiquelhas",
-        "name": "Rui Quelhas",
-        "role": "Principal Software Developer",
-        "company": "Oracle",
         "talk": "Talk. 15h",
-        "linkedin": "ruiquelhas",
-        "github": "ruiquelhas",
-        "twitter": "ruiquelhas",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
         "href": "",
-        "description": "Rui Quelhas is a software engineer with more than a decade of experience developing and working with software in the market either with or on Open Source code, end-user applications, services and protocols.His interests include topics such as Application Security, Databases, Distributed Systems and Bitcoin.Currently, he is part of the MySQL Middlware and Clients team at Oracle and is the lead developer of the MySQL X DevAPI Connector for Node.js."
+        "description": ""
+      },
+      {
+        "id": "josenunooliveira",
+        "name": "José Nuno Oliveira",
+        "role": "Professor",
+        "company": "University of Minho",
+        "talk": "Talk. 17h",
+        "linkedin": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "orlandobelo",
+        "name": "Orlando Belo",
+        "role": "Professor",
+        "company": "University of Minho",
+        "talk": "Talk. 17h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "josebernardobarros",
+        "name": "José Bernardo Barros",
+        "role": "Professor",
+        "company": "University of Minho",
+        "talk": "Talk. 17h",
+        "linkedin": "",
+        "href": "",
+        "description": ""
       }
     ]
+  },
+  {
+    "date": "2023/2/17",
+    "speakers": []
   }
 ]

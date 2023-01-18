@@ -2,65 +2,11 @@
   [
     [
       {
-        "image": "accenture",
-        "link": "https://www.accenture.com/pt-pt"
+        "image": "subvisual",
+        "link": "https://subvisual.com/"
       }
     ],
     [
-      {
-        "image": "continental",
-        "link": "https://www.continental-pneus.pt"
-      },
-      {
-        "image": "rentailconsult",
-        "link": "https://www.retail-consult.com/"
-      },
-      {
-        "image": "saltpay",
-        "link": "https://www.saltpayportugal.pt/"
-      },
-      {
-        "image": "uphold",
-        "link": "https://www.uphold.com/"
-      }
-    ]
-  ],
-  [
-    [
-      {
-        "image": "deloitte",
-        "link": "https://deloitte.com/"
-      },
-      {
-        "image": "ey",
-        "link": "https://www.ey.com/pt_pt"
-      },
-      {
-        "image": "farfetch",
-        "link": "https://www.farfetch.com/"
-      },
-      {
-        "image": "glintt",
-        "link": "https://www.glintt.com/"
-      },
-      {
-        "image": "xpandit",
-        "link": "https://www.xpand-it.com"
-      },
-      {
-        "image": "yarilabs",
-        "link": "https://www.yarilabs.com"
-      }
-    ],
-    [
-      {
-        "image": "celfocus",
-        "link": "https://www.celfocus.com/"
-      },
-      {
-        "image": "vilt",
-        "link": "https://www.vilt-group.com/"
-      },
       {
         "image": "checkmarx",
         "link": "https://checkmarx.com/"
@@ -70,36 +16,86 @@
         "link": "http://www.itsector.pt/"
       },
       {
-        "image": "kpmg",
-        "link": "https://home.kpmg/"
+        "image": "accenture",
+        "link": "https://www.accenture.com/pt-pt"
       },
       {
-        "image": "primavera",
-        "link": "https://pt.primaverabss.com/"
+        "image": "continental",
+        "link": "https://www.continental-pneus.pt"
       },
+      {
+        "image": "rentailconsult",
+        "link": "https://www.retail-consult.com/"
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "image": "eurotux",
+        "link": "https://eurotux.com/"
+      },
+      {
+        "image": "eurotux",
+        "link": "https://eurotux.com/"
+      },
+      {
+        "image": "glintt",
+        "link": "https://www.glintt.com/pt/Paginas/home.aspx"
+      },
+      {
+        "image": "xpandit",
+        "link": "https://www.xpand-it.com/pt-pt/"
+      },
+      {
+        "image": "deloitte",
+        "link": "https://www2.deloitte.com/pt/pt.html"
+      },
+      {
+        "image": "fujitsu",
+        "link": "https://www.fujitsu.com/pt/"
+      },
+      {
+        "image": "kpmg",
+        "link": "https://home.kpmg/pt/pt/home.html"
+      },
+      {
+        "image": "bosch",
+        "link": "https://www.bosch.pt/"
+      },
+      {
+        "image": "farfetch",
+        "link": "https://www.farfetch.com/br/"
+      }
+    ],
+    [
       {
         "image": "seegno",
         "link": "https://seegno.com/"
       },
       {
-        "image": "gowithflow",
-        "link": "https://gowithflow.io/"
+        "image": "yarilabs",
+        "link": "https://www.yarilabs.com/"
       },
       {
-        "image": "subvisual",
-        "link": "https://subvisual.com/"
+        "image": "axians",
+        "link": "https://www.axians.pt/"
       },
       {
-        "image": "agentifai",
-        "link": "https://agentifai.com/"
+        "image": "openvia",
+        "link": "https://openvia.io/pt/"
       },
       {
-        "image": "steeleye",
-        "link": "https://www.steel-eye.com/"
+        "image": "celfocus",
+        "link": "https://celfocus.com/home/"
       },
       {
-        "image": "eurotux",
-        "link": "https://eurotux.com/"
+        "image": "konkconsulting",
+        "link": "https://www.konkconsulting.com/EN"
+      },
+      {
+        "image": "issuu",
+        "link": "https://issuu.com/"
       }
     ]
   ]
