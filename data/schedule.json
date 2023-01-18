@@ -1,6 +1,6 @@
 [
   {
-    "date": "2022/2/14",
+    "date": "2023/2/14",
     "activities": [
       {
         "startTime": "10:00",
@@ -94,7 +94,7 @@
     ]
   },
   {
-    "date": "2022/2/15",
+    "date": "2023/2/15",
     "activities": [
       {
         "startTime": "09:00",
@@ -172,7 +172,7 @@
         "activityType": "Panel Discussion",
         "summary": "Women In Tech",
         "description": "",
-        "author": "Sara Vieira & Bárbara",
+        "author": "Filipa Castro & Sara Vieira & Bárbara Vieira",
         "location": ""
       },
       {
@@ -187,7 +187,7 @@
     ]
   },
   {
-    "date": "2022/2/16",
+    "date": "2023/2/16",
     "activities": [
       {
         "startTime": "09:00",
@@ -284,7 +284,7 @@
     ]
   },
   {
-    "date": "2022/2/17",
+    "date": "2023/2/17",
     "activities": [
       {
         "startTime": "09:00",

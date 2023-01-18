@@ -46,8 +46,8 @@
       }
     ]
   },
-  "Patrocínios": {
-    "title": "Sponsors",
+  "activities": {
+    "title": "Sponsorships",
     "list": [
       {
         "avatar": "mascote.png",
@@ -67,11 +67,11 @@
     "title": "Tech",
     "list": [
       {
-        "avatar": "felicio.png",
+        "avatar": "mascote.png",
         "name": "Filipe Felicio"
       },
       {
-        "avatar": "rui.png",
+        "avatar": "mascote.png",
         "name": "Rui Oliveira"
       },
       {
@@ -79,7 +79,7 @@
         "name": "Rui Lopes"
       },
       {
-        "avatar": "bacelar.png",
+        "avatar": "mascote.png",
         "name": "Tiago Bacelar"
       },
       {
