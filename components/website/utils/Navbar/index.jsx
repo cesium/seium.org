@@ -19,6 +19,10 @@ const navigation = [
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
+  {
+    name: "Be part of us",
+    slug: "https://docs.google.com/forms/d/e/1FAIpQLSfxBsNwZmxIsrkXDbFAzpNV5SsKfft_Vs-K8WlJpFP-kzrugg/viewform",
+  },
 ];
 
 const userNavigation = (type) => {
