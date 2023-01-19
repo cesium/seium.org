@@ -40,7 +40,7 @@ function Login() {
         <Title text="Log in" />
         <div className="mt-8">
           <Form onSubmit={onFinish}>
-            <Input
+            {/* <Input
               text="YOUR EMAIL"
               id="email"
               name="email"
@@ -59,7 +59,7 @@ function Login() {
               bgColor="primary"
               autoComplete="current-password"
               ref={passwordRef}
-            />
+            /> */}
             <Text
               padding="6"
               text="Forgot your password?"
