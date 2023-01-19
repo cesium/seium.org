@@ -4,7 +4,7 @@ import { withAuth, useAuth } from "@context/Auth";
 
 import * as api from "@lib/api";
 
-import Dashboard from "@components/Dashboard";
+import Dashboard from "../components/Dashboard";
 
 import Balance from "@components/Balance";
 import { Product } from "./components";

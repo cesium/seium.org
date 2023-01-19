@@ -6,7 +6,7 @@ import * as api from "@lib/api";
 
 import { Prizes, Redeemables, StoreEmpty, WheelEmpty } from "./components";
 
-import Dashboard from "@components/Dashboard";
+import Dashboard from "../components/Dashboard";
 import Balance from "@components/Balance";
 
 function Vault() {
