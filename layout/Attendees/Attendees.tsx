@@ -95,4 +95,4 @@ function Attendees() {
   );
 }
 
-export default withAuth(Attendee);
+export default withAuth(Attendees);
