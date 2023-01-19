@@ -6,7 +6,7 @@ export function isSelected(filters, filter) {
 
 export default function Filters(props) {
   //must not contain slashes '/'
-  const filterList = ["Talks", "Pitch", "Workshops", "Hackathons", "Breaks"];
+  const filterList = ["Talks", "Pitch", "Workshops", "Breaks"];
 
   function onClick(filter) {
     return function () {
