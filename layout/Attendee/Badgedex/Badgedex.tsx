@@ -3,7 +3,8 @@ import { withAuth, useAuth } from "@context/Auth";
 
 import { getAllBadges } from "@lib/api";
 
-import Dashboard from "@components/Dashboard";
+import Dashboard from "../components/Dashboard";
+
 import ErrorMessage from "@components/ErrorMessage";
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";

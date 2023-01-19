@@ -6,7 +6,7 @@ import { withAuth, useAuth } from "@context/Auth";
 import Form from "@components/Form";
 import Input from "@components/Input";
 
-import Dashboard from "@components/Dashboard";
+import Dashboard from "../components/Dashboard";
 import Heading from "@components/Heading";
 
 import { CheckpointTracker, CodeInput } from "./components";
@@ -78,7 +78,7 @@ function Profile() {
             </div>
           </Heading>
           <div className="pl-6">
-            <Image
+            <img
               src={user.avatar}
               alt=""
               className="overflow-hidden rounded-full"

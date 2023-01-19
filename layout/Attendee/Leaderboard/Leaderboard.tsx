@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { withAuth, useAuth } from "@context/Auth";
 
-import Dashboard from "@components/Dashboard";
+import Dashboard from "../components/Dashboard";
 import { Table } from "./components";
 
 import Day from "@components/Schedule/Day";

@@ -33,7 +33,7 @@ export async function getServerSideProps({ query }) {
   };
 }
 
-function Attendee() {
+function Attendees() {
   const [attendee, updateAttendee] = useState(null);
   const router = useRouter();
   const { uuid } = router.query;
@@ -95,4 +95,4 @@ function Attendee() {
   );
 }
 
-export default withAuth(Attendee);
+export default withAuth(Attendees);

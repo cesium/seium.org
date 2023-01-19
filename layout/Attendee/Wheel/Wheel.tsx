@@ -3,7 +3,7 @@ import { withAuth, useAuth } from "@context/Auth";
 
 import Heading from "@components/Heading";
 
-import Dashboard from "@components/Dashboard";
+import Dashboard from "../components/Dashboard";
 
 import {
   ListItem3Cols,
