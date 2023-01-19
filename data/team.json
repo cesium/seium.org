@@ -30,6 +30,10 @@
       {
         "avatar": "mascote.png",
         "name": "Adriana Frazão"
+      },
+      {
+        "avatar": "mascote.png",
+        "name": "Júlio Pinto  "
       }
     ]
   },
@@ -105,6 +109,15 @@
       {
         "avatar": "mascote.png",
         "name": "Mário Rodrigues"
+      }
+    ]
+  },
+  "merch": {
+    "title": "Merch",
+    "list": [
+      {
+        "avatar": "mascote.png",
+        "name": "Gerson Júnior"
       }
     ]
   }
