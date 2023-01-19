@@ -78,7 +78,7 @@ function ForgotPassword() {
           <Text
             text="Don’t have an account?"
             link="Register here"
-            href="https://sei22.eventbrite.pt"
+            href="https://www.eventbrite.pt/e/sei23-semana-da-engenharia-informatica-tickets-515760542667"
           />
         )}
 
