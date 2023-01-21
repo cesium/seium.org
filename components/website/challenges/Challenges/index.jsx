@@ -22,7 +22,7 @@ export default function Challenges() {
             ))}
           </ul>
         </div>
-        <div className="m-auto hidden xl:flex">
+        <div className="hidden xl:flex">
           <Challenge
             title={challenges[k].name}
             prizes={challenges[k].prizes}
