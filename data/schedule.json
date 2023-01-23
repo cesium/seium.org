@@ -110,9 +110,9 @@
         "endTime": "11:00",
         "activityType": "Talk",
         "summary": "How to detect a data breach by an authorized user",
-        "description": "",
+        "description": "Simulate a suspicious behaviour of an authorised user in a corporate application that is downloading a large amount of very sensitive information outside business hours. See how a Data Masking and Data Logging platform can help to detect this type of attacks and rapidly start an investigation and block these activities.⁣",
         "author": "André Sousa",
-        "location": "Simulate a suspicious behaviour of an authorised user in a corporate application that is downloading a large amount of very sensitive information outside business hours. See how a Data Masking and Data Logging platform can help to detect this type of attacks and rapidly start an investigation and block these activities.⁣"
+        "location": ""
       },
       {
         "activityType": "Coffee Break",
