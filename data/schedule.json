@@ -41,8 +41,8 @@
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
+        "summary": "Aplicações Clínicas de Machine Learning: Uma Introdução",
+        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é,⁣ adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo⁣ Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um⁣ MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).⁣ Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan⁣ School of Management US) e da Singularity University (US) – Exponential Medicine.⁣ ⁣De 1991 a 1997, foi CIO da Sonae Distribuição, o maior retalhista português na altura. Co-⁣fundou e foi CEO da Enabler a partir de 1998, empresa integradora de sistemas de⁣ informação focada em retalho. A Enabler foi adquirida pela Wipro em 2006 e, desde⁣ então, até o final de 2009, foi VP de serviços de Retail da Wipro.⁣Foi também Sócio Fundador e Business Angel de várias empresas de TI, MedTech e Digital⁣ Health.⁣ É Membro do Conselho Consultivo Digital da Caixa Geral de Depósitos, Membro não-⁣executivo do Board da Fundação José Neves, Membro não-executivo do Board da Parfois,⁣ Membro da Comissão de Avaliação do Curso de Medicina da Escola de Medicina da⁣ Universidade do Minho, Membro do Conselho Consultivo da Escola Superior de⁣ Enfermagem da Universidade do Minho e Júri do Catapult for Health – Digital Health⁣ chapter – Programa do EU EIT Health. É também orador sobre temas da Inovação de⁣ base Científico-Tecnológica e de Transferência de Tecnologia. Finalmente, é⁣ recorrentemente convidado para integrar painéis de peritos e júris em diversos eventos⁣ de Healthtech / Medech na Europa.",
         "author": "António Murta",
         "location": ""
       },
@@ -108,10 +108,11 @@
       {
         "startTime": "09:00",
         "endTime": "11:00",
-        "activityType": "Workshop",
-        "summary": "TBA",
+        "activityType": "Talk",
+        "summary": "How to detect a data breach by an authorized user",
         "description": "",
-        "location": ""
+        "author": "André Sousa",
+        "location": "Simulate a suspicious behaviour of an authorised user in a corporate application that is downloading a large amount of very sensitive information outside business hours. See how a Data Masking and Data Logging platform can help to detect this type of attacks and rapidly start an investigation and block these activities.⁣"
       },
       {
         "activityType": "Coffee Break",
@@ -230,8 +231,8 @@
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
+        "summary": "Not all those who wander are lost, a journey into the World of Esports",
+        "description": "I'm a highly experienced esports focused Product Manager, having spent the last 6 years working full time in esports. After graduating from University of Coimbra with a Masters in Industrial Engineering and Management, I quickly turned my passion for esports into a career, bringing my formal education and grassroots experience together. Throughout my career I was fortunate to work in multiple roles, from being a Player, Coach, Product Manager, University Lecturer and Team Owner which now grants me a holistic perspective of the EMEA League of Legends Regional ecosystem I currently manage at Riot Games.",
         "author": "Filipe Borges",
         "location": "CP2-B1"
       },
@@ -239,8 +240,8 @@
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
+        "summary": "Rust for the rest of us",
+        "description": "Sara Vieira is a founding engineer on axo.dev. Originally from Portugal, she now lives in Berlin doing some JavaScript and Rust. She's also a speaker and book author. In her spare time, she loves retro games and B movies.",
         "author": "Sara Vieira",
         "location": ""
       },
@@ -268,9 +269,9 @@
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
-        "summary": "TBA",
-        "description": "",
-        "author": "José Nuno Oliveira & JBB & Orlando Belo",
+        "summary": "Arquivo Confidencial",
+        "description": "A tertúlia Arquivo Confidencial reúne alguns dos professores mais emblemáticos do Departamento de Informática para discutir as suas experiências, percalços e vitórias no decurso da sua carreira profissional!",
+        "author": "José Nuno Oliveira & JBB & Orlando Belo && Bruno Dias",
         "location": ""
       },
       {
