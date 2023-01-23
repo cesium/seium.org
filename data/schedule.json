@@ -42,7 +42,7 @@
         "endTime": "15:00",
         "activityType": "Talk",
         "summary": "Aplicações Clínicas de Machine Learning: Uma Introdução",
-        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é,⁣ adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo⁣ Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um⁣ MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).⁣ Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan⁣ School of Management US) e da Singularity University (US) – Exponential Medicine.⁣ ⁣De 1991 a 1997, foi CIO da Sonae Distribuição, o maior retalhista português na altura. Co-⁣fundou e foi CEO da Enabler a partir de 1998, empresa integradora de sistemas de⁣ informação focada em retalho. A Enabler foi adquirida pela Wipro em 2006 e, desde⁣ então, até o final de 2009, foi VP de serviços de Retail da Wipro.⁣Foi também Sócio Fundador e Business Angel de várias empresas de TI, MedTech e Digital⁣ Health.⁣ É Membro do Conselho Consultivo Digital da Caixa Geral de Depósitos, Membro não-⁣executivo do Board da Fundação José Neves, Membro não-executivo do Board da Parfois,⁣ Membro da Comissão de Avaliação do Curso de Medicina da Escola de Medicina da⁣ Universidade do Minho, Membro do Conselho Consultivo da Escola Superior de⁣ Enfermagem da Universidade do Minho e Júri do Catapult for Health – Digital Health⁣ chapter – Programa do EU EIT Health. É também orador sobre temas da Inovação de⁣ base Científico-Tecnológica e de Transferência de Tecnologia. Finalmente, é⁣ recorrentemente convidado para integrar painéis de peritos e júris em diversos eventos⁣ de Healthtech / Medech na Europa.",
+        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é,⁣ adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo⁣ Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um⁣ MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).⁣ Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan⁣ School of Management US) e da Singularity University (US) – Exponential Medicine.",
         "author": "António Murta",
         "location": ""
       },
@@ -135,9 +135,9 @@
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Keep Calm, I'm a Security Engineer",
+        "description": "A security engineer sees a lot, learns a lot and forgets a lot. They're incredibly obsessed with security and work relentlessly every day to make every software system a little bit more secure. This is a challenging, rewarding and gratifying task. This talk introduces Security Engineering and addresses some fun facts about this job.",
+        "author": "Bárbara Vieira",
         "location": ""
       },
       {
