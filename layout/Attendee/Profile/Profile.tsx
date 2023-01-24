@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 
 import { withAuth, useAuth } from "@context/Auth";
 
@@ -19,6 +18,8 @@ function Profile() {
 
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
+
+  const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
   const companyBadges = user.badges.filter((entry) => entry.type == 4).length;
   let level = 0;
@@ -52,6 +53,26 @@ function Profile() {
       .catch((_) => alert("An error occured"));
   };
 
+  const handleSubmitForm = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (editing) {
+      editUser(username);
+    }
+
+    setEditing(!editing);
+  };
+
+  const handleOnFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("photo", file);
+
+    setPhotoFileUrl(URL.createObjectURL(file));
+  };
+
   return (
     <Dashboard
       href="profile"
@@ -64,29 +85,36 @@ function Profile() {
             <div className="w-auto">
               <button
                 className="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
-                onClick={() => {
-                  if (editing) {
-                    editUser(username);
-                    setEditing(false);
-                  } else {
-                    setEditing(true);
-                  }
-                }}
+                type="submit"
+                form="profile-form"
               >
                 {editing ? "Save Changes" : "Edit"}
               </button>
             </div>
           </Heading>
-          <div className="pl-6">
-            <img
-              src={user.avatar}
-              alt=""
-              className="overflow-hidden rounded-full"
-              width="220"
-              height="220"
-            />
-          </div>
-          <Form>
+
+          <Form onSubmit={handleSubmitForm} id="profile-form">
+            <div className="pl-6">
+              <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full">
+                <img
+                  src={photoFileUrl}
+                  alt="Avatar Photo"
+                  className="rounded-full"
+                />
+
+                {editing && (
+                  <label className="absolute top-0 left-0 flex h-[220px] w-[220px] cursor-pointer items-center justify-center rounded-full bg-quinary text-white opacity-50 transition-all ease-linear hover:opacity-90">
+                    <input
+                      type="file"
+                      className="hidden"
+                      onChange={handleOnFileChange}
+                    />
+                    Edit photo
+                  </label>
+                )}
+              </div>
+            </div>
+
             <Input
               text="NAME"
               id="name"
