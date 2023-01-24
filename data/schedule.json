@@ -204,8 +204,8 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
+        "summary": "Glintt - From Zero to Hero : how to build a product from scratch",
+        "description": "Neste workshop terão a oportunidade de entender o processo de desenvolvimento de um produto tecnológico.",
         "author": "",
         "location": "",
         "hyperlink": ""
@@ -218,9 +218,9 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "IT Sector",
-        "description": "",
-        "author": "",
+        "summary": "IT Sector - Microsserviços e a Transformação Digital na área da banca",
+        "description": "João Laranjeira iniciou a sua carreira na área de investigação, mais concretamente em sistemas de apoio à tomada de decisão. Em 2013 juntou-se à ITSector, fazendo toda a sua carreira ligada à banca, onde integrou equipas de evolução tecnológica de sistemas de apoio à decisão na área de crédito. Atualmente, além de Arquiteto de Sistemas de Informação também desempenha funções de Gestor de Projeto, liderando uma equipa de atualização tecnológica para uma arquitetura moderna baseada em microsserviços.",
+        "author": "João Laranjeira",
         "location": ""
       },
       {
