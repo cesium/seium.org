@@ -167,7 +167,7 @@ export default function Dashboard({
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <main className="flex-1">
+        <main className="flex-1 bg-white">
           <div className="py-6">
             <div className="max-w-7xl px-4 sm:px-6 lg:mx-20 lg:px-8">
               <p className="font-ibold text-5xl text-secondary lg:pt-20">

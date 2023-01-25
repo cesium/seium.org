@@ -10,7 +10,7 @@ import Button from "@components/Button";
 
 const navigation = ["badges", "prizes", "identifier"];
 
-function ManagePrize() {
+function Prize() {
   const router = useRouter();
   const { uuid } = router.query;
   const [refresh, setRefresh] = useState(false);
@@ -183,4 +183,4 @@ function ManagePrize() {
   );
 }
 
-export default withAuth(ManagePrize);
+export default withAuth(Prize);

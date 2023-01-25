@@ -8,7 +8,7 @@ import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
 const navigation = ["badges", "prizes", "identifier"];
 
-function ManagePrizes() {
+function Prizes() {
   const { user } = useAuth();
   const router = useRouter();
   const pauseRef = useRef(false);
@@ -41,4 +41,4 @@ function ManagePrizes() {
   );
 }
 
-export default withAuth(ManagePrizes);
+export default withAuth(Prizes);

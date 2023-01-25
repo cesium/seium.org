@@ -1,1 +1,1 @@
-export { default } from "@layout/Identifier";
+export { default } from "@layout/Manager/Identifier";

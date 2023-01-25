@@ -1,1 +1,1 @@
-export { default } from "@layout/ManagePrizes";
+export { default } from "@layout/Manager/Prizes";

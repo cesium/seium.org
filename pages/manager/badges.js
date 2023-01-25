@@ -1,1 +1,1 @@
-export { default } from "@layout/ManageBadges";
+export { default } from "@layout/Manager/Badges";

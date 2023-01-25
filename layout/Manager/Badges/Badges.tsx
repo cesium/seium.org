@@ -11,7 +11,7 @@ import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
 const navigation = ["badges", "prizes", "identifier"];
 
-function ManageBadges() {
+function Badges() {
   const [allBadges, updateAllBadges] = useState([]);
   const [filter, updateFilter] = useState(null);
   const [searchInput, setSearchInput] = useState("");
@@ -90,7 +90,7 @@ function ManageBadges() {
           />
         </div>
       ) : (
-        <>
+        <div className="min-h-screen">
           <div className="pt-10 xl:flex xl:flex-auto">
             <div className="flex flex-auto space-x-5">
               <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
@@ -132,11 +132,11 @@ function ManageBadges() {
                 </div>
               ))}
           </div>
-        </>
+        </div>
       )}
       {error && <ErrorMessage />}
     </Base>
   );
 }
 
-export default withAuth(ManageBadges);
+export default withAuth(Badges);
