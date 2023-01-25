@@ -88,7 +88,7 @@ function addDate(date, days) {
 
 export default function Schedule(props) {
   const min_date = "2023/2/14";
-  const max_date = "2023/2/20";
+  const max_date = "2023/2/17";
   const defaultFilter = props.filters === undefined ? "" : props.filters;
 
   //calculate default date
