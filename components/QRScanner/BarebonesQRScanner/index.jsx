@@ -1,11 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import jsQR from "jsqr";
+import ErrorMessage from "@components/ErrorMessage";
 
 function BarebonesQRScanner({ handleCode, pauseRef }) {
   const canvasRef = useRef(null);
   const videoRef = useRef(null);
   const wrapperRef = useRef(null);
   const animationFrameRef = useRef();
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const video = videoRef.current;
@@ -13,10 +15,20 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
     navigator.mediaDevices
       .getUserMedia({ video: { facingMode: "environment" } })
       .then(function (stream) {
-        video.srcObject = stream;
-        video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-        video.play();
-        animationFrameRef.current = requestAnimationFrame(tick);
+        //to prevent AbortError on Firefox in strict mode
+        if (!video.srcObject) {
+          setError("");
+          video.srcObject = stream;
+          video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+          video.play();
+          animationFrameRef.current = requestAnimationFrame(tick);
+        }
+      })
+      .catch((e) => {
+        setError(
+          "We couldn't access your camera. Check if your camera is being used by any other apps and if you gave us permission to use it."
+        );
+        video.srcObject = null;
       });
   }, []);
 
@@ -95,9 +107,10 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
 
       <div
         ref={wrapperRef}
-        className="flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid border-primary bg-primary align-middle"
+        className="relative flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid border-primary bg-primary align-middle"
       >
         <canvas ref={canvasRef} className="rounded-2xl" />
+        <p className="absolute m-3 text-white">{error}</p>
       </div>
     </>
   );
