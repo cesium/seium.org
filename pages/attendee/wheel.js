@@ -55,6 +55,7 @@ function WheelPage() {
   const [latestWins, updateLatestWins] = useState([]);
   const [error, updateError] = useState(false);
   const [wheelMessage, updateWheelMessage] = useState(<></>);
+  const [isSpinning, setIsSpinning] = useState(false);
 
   const requestAllInfo = () => {
     getWheelPrizes()
@@ -73,6 +74,7 @@ function WheelPage() {
   };
 
   const spinTheWheel = () => {
+    setIsSpinning(true);
     updateState({ angle: 0, speed: angleSpeed });
     spinWheel()
       .then((response) => {
@@ -103,7 +105,7 @@ function WheelPage() {
         } else if (response.prize.name == "Nada") {
           updateWheelMessage(
             <WheelMessage
-              title="You din't win anything!"
+              title="You didn't win anything!"
               description="Better luck next time."
               onExit={(_) => updateWheelMessage(null)}
             />
@@ -131,6 +133,7 @@ function WheelPage() {
       .finally((_) => {
         requestAllInfo();
         refetchUser();
+        setIsSpinning(false);
       });
   };
 
@@ -194,7 +197,7 @@ function WheelPage() {
                   ? "cursor-pointer bg-quinary"
                   : "bg-gray-400 opacity-50"
               } m-auto mt-10 block h-20 w-64 rounded-full`}
-              disabled={!canSpin()}
+              disabled={!canSpin() || isSpinning}
               onClick={spinTheWheel}
             >
               <p className="font-ibold font-bold">SPIN THE WHEEL</p>

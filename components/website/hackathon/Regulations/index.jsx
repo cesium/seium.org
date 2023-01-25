@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "/components/utils/Button";
 
 export default function Regulations() {
@@ -10,10 +11,12 @@ export default function Regulations() {
           </h2>
         </div>
         <div className="mt-6 sm:mt-0 sm:w-80">
-          <Button
-            text="READ THE RULES"
-            customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
-          />
+          <Link href={"/docs/hackathon.pdf"} passHref>
+            <Button
+              text="READ THE RULES"
+              customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
+            />
+          </Link>
         </div>
       </div>
     </div>

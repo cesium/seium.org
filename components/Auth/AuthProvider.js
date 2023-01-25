@@ -75,9 +75,10 @@ export function AuthProvider({ children }) {
           }
         });
       })
-      .catch((error) => {
-        setErrors(error);
+      .catch((errors) => {
+        setErrors(errors);
         setUser(undefined);
+        setLoading(false);
       });
   }
 
@@ -106,9 +107,14 @@ export function AuthProvider({ children }) {
           }
         });
       })
-      .catch((error) => {
-        setErrors(error);
+      .catch((errors) => {
+        if (errors.response?.data?.error) {
+          setErrors(errors.response.data.error);
+        } else {
+          setErrors(errors.response.data.error);
+        }
         setUser(undefined);
+        setLoading(false);
       });
   }
 

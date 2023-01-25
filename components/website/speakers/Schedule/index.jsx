@@ -61,8 +61,8 @@ function addDate(date, days) {
 }
 
 export default function Schedule(props) {
-  const min_date = "2022/2/15";
-  const max_date = "2022/2/18";
+  const min_date = "2023/2/14";
+  const max_date = "2023/2/17";
 
   //calculate default date
   const _today = new Date();
@@ -72,7 +72,8 @@ export default function Schedule(props) {
     (_today.getMonth() + 1) +
     "/" +
     _today.getDate();
-  const default_date = isAfter(today, min_date) ? today : min_date;
+  let default_date = isAfter(today, min_date) ? today : min_date;
+  default_date = isAfter(default_date, max_date) ? min_date : default_date;
 
   const [date, updateDate] = useState(default_date);
 

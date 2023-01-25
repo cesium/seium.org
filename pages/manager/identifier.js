@@ -1,41 +1,43 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { withAuth } from "/components/Auth";
 
 import { getAttendee } from "/lib/api";
 
 import Base from "/components/moonstone/staff/utils/Base";
-import QRScanner from "/components/moonstone/utils/QRScanner";
+import QRScanner, { FEEDBACK } from "/components/moonstone/utils/QRScanner";
 
 const navigation = ["badges", "prizes", "identifier"];
 
 function ManagerIdentifier() {
   const pauseRef = useRef(false);
-  const successRef = useRef(null);
   const [text, setText] = useState("None");
-  const [feedbackText, setFeedbackText] = useState("Scanning");
+  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
   const [showScanner, setScanner] = useState(true);
 
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 500)).then(() => {
-      pauseRef.current = false;
-      successRef.current = null;
-      setFeedbackText("Scanning");
-    });
-  };
+  useEffect(() => {
+    if (feedback != FEEDBACK.SCANNING) {
+      const id = setTimeout(() => {
+        pauseRef.current = false;
+        setFeedback(FEEDBACK.SCANNING);
+      }, 700);
+
+      return () => {
+        clearTimeout(id);
+      };
+    }
+    return null;
+  }, [feedback]);
 
   const handleUUID = (uuid) => {
     getAttendee(uuid)
       .then((response) => {
-        console.log(response);
         setText(`${response.data.name} | ${response.data.email}`);
-        navigator.vibrate([20, 10, 20]);
-        setFeedbackText("Success");
-        resetScannerState();
+        setFeedback(FEEDBACK.SUCCESS);
       })
       .catch((_) => {
-        successRef.current = false;
-        setFeedbackText("Failure");
+        setFeedback(FEEDBACK.FAILURE);
+        setText("None");
         resetScannerState();
       });
   };
@@ -52,8 +54,7 @@ function ManagerIdentifier() {
           handleCode={handleUUID}
           pauseRef={pauseRef}
           text={text}
-          successRef={successRef}
-          feedbackText={feedbackText}
+          feedback={feedback}
           showScanner={showScanner}
           setScanner={setScanner}
           removeClose={true}

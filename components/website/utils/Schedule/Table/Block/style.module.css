@@ -21,7 +21,7 @@
 }
 
 .clickable:hover .gridBlock {
-  @apply border-quaternary bg-quaternary;
+  @apply border-quinary bg-quinary;
 }
 
 .clickable .gridBlock a {

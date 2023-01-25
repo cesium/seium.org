@@ -14,11 +14,15 @@ import styles from "./style.module.css";
 
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
-  { name: "Hackathon", slug: "/hackathon" },
-  // { name: 'Team', slug: '/team' },
+  //{ name: "Hackathon", slug: "/hackathon" },
+  { name: "Team", slug: "/team" },
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
+  {
+    name: "Join our staff",
+    slug: "https://docs.google.com/forms/d/e/1FAIpQLSfxBsNwZmxIsrkXDbFAzpNV5SsKfft_Vs-K8WlJpFP-kzrugg/viewform",
+  },
 ];
 
 const userNavigation = (type) => {
@@ -61,7 +65,11 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
                     <div className="flex flex-auto gap-x-20">
-                      <div className="grid grid-cols-3 gap-x-20 gap-y-6 xl:gap-y-0">
+                      <div
+                        className={`grid ${
+                          isAuthenticated ? "grid-cols-3" : "grid-cols-4"
+                        } gap-x-20 gap-y-6 xl:gap-y-0`}
+                      >
                         {navigation.map((item) => (
                           <Link key={item.slug} href={item.slug} passHref>
                             <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
@@ -69,13 +77,15 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             </a>
                           </Link>
                         ))}
-                        {isAuthenticated ? null : (
+                        {
+                          isAuthenticated ? null : <></> /*(
                           <Link key="login" href="/login" passHref>
                             <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
                               Login
                             </a>
                           </Link>
-                        )}
+                        )*/
+                        }
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
@@ -169,17 +179,18 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </Link>
                   </Disclosure.Button>
                 ))}
-              {!isAuthenticated && (
-                <Disclosure.Button
-                  key="login"
-                  as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
-                >
-                  <Link key="login" href="/login" passHref>
-                    Login
-                  </Link>
-                </Disclosure.Button>
-              )}
+              {
+                !isAuthenticated ? null : <></>
+                // <Disclosure.Button
+                //   key="login"
+                //   as="a"
+                //   className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                // >
+                //   <Link key="login" href="/login" passHref>
+                //     Login
+                //   </Link>
+                // </Disclosure.Button>
+              }
               {isAuthenticated && (
                 <Disclosure.Button
                   key="login"

@@ -3,17 +3,12 @@
     "title": "Main Organization",
     "list": [
       {
-        "id": "maria",
-        "name": "Maria Pires",
-        "github": "mariajbp",
-        "gitlab": "mariajbp",
-        "linkedin": "mariajbp"
+        "avatar": "mascote.png",
+        "name": "Beatriz Rodrigues"
       },
       {
-        "id": "brandao",
-        "name": "Miguel Brandão",
-        "github": "miguelbrandao",
-        "linkedin": "miguel-a-brandao/"
+        "avatar": "mascote.png",
+        "name": "Gonçalo Rodrigues"
       }
     ]
   },
@@ -21,35 +16,24 @@
     "title": "Marketing",
     "list": [
       {
-        "id": "alex",
-        "name": "Francisco Neves",
-        "github": "franl08",
-        "linkedin": "francisco-neves-5bb7901a2/"
+        "avatar": "mascote.png",
+        "name": "Gabriela Prata"
       },
       {
-        "id": "mascote",
-        "name": "Maria Regueiras",
-        "github": "mimr21",
-        "linkedin": "maria-miguel21"
-      },
-      {
-        "id": "gustavo",
+        "avatar": "mascote.png",
         "name": "Gustavo Pereira"
       },
       {
-        "id": "luis",
-        "name": "Luis Araújo",
-        "github": "LAraujo7",
-        "gitlab": "LAraujo7",
-        "linkedin": "LAraujo7"
+        "avatar": "mascote.png",
+        "name": "Alexandre Neves"
       },
       {
-        "id": "sofia",
-        "name": "Ana Sofia Gomes"
+        "avatar": "mascote.png",
+        "name": "Adriana Frazão"
       },
       {
-        "id": "bea",
-        "name": "Beatriz Rocha"
+        "avatar": "mascote.png",
+        "name": "Júlio Pinto"
       }
     ]
   },
@@ -57,21 +41,29 @@
     "title": "Program",
     "list": [
       {
-        "id": "marco",
-        "name": "Marco Pereira"
+        "avatar": "mascote.png",
+        "name": "Millena Freitas"
       },
       {
-        "id": "antonio",
-        "name": "Pedro António"
+        "avatar": "mascote.png",
+        "name": "Rita Vaz"
       }
     ]
   },
   "activities": {
-    "title": "Activities",
+    "title": "Sponsorships",
     "list": [
       {
-        "id": "leo",
-        "name": "Leonardo Freitas"
+        "avatar": "mascote.png",
+        "name": "Diana Teixeira"
+      },
+      {
+        "avatar": "mascote.png",
+        "name": "Afonso Magalhães"
+      },
+      {
+        "avatar": "mascote.png",
+        "name": "Francisco Toldy"
       }
     ]
   },
@@ -79,52 +71,53 @@
     "title": "Tech",
     "list": [
       {
-        "id": "teixeira",
-        "name": "João Teixeira"
+        "avatar": "mascote.png",
+        "name": "Filipe Felicio"
       },
       {
-        "id": "matilde",
-        "name": "Matilde Bravo"
-      },
-      {
-        "id": "felicio",
-        "name": "Filipe Felicio",
-        "github": "feliciofilipe",
-        "twitter": "feliciofilipe",
-        "gitlab": "feliciofilipe",
-        "linkedin": "filipe-felício-5077821a3"
-      },
-      {
-        "id": "rui",
+        "avatar": "mascote.png",
         "name": "Rui Oliveira"
       },
       {
-        "id": "bacelar",
+        "avatar": "mascote.png",
+        "name": "Rui Lopes"
+      },
+      {
+        "avatar": "mascote.png",
         "name": "Tiago Bacelar"
       },
       {
-        "id": "pedro",
-        "name": "Pedro Pereira"
-      },
-      {
-        "id": "mascote",
+        "avatar": "mascote.png",
         "name": "Ruben Adão"
       },
       {
-        "id": "nelson",
-        "name": "Nelson Estevão"
+        "avatar": "mascote.png",
+        "name": "Artur Leite"
       },
       {
-        "id": "david",
-        "name": "David Machado"
+        "avatar": "mascote.png",
+        "name": "Guilherme Fernandes"
       },
       {
-        "id": "gerson",
+        "avatar": "mascote.png",
+        "name": "Enzo Vieira"
+      },
+      {
+        "avatar": "mascote.png",
+        "name": "Rodrigo Pereira"
+      },
+      {
+        "avatar": "mascote.png",
+        "name": "Mário Rodrigues"
+      }
+    ]
+  },
+  "merch": {
+    "title": "Merch",
+    "list": [
+      {
+        "avatar": "mascote.png",
         "name": "Gerson Júnior"
-      },
-      {
-        "id": "mascote",
-        "name": "Pedro Mendes"
       }
     ]
   }

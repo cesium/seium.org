@@ -1,11 +1,11 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { withAuth } from "/components/Auth";
 
 import { giveBadge } from "/lib/api";
 
 import Base from "/components/moonstone/staff/utils/Base";
-import QRScanner from "/components/moonstone/utils/QRScanner";
+import QRScanner, { FEEDBACK } from "/components/moonstone/utils/QRScanner";
 import { useAuth } from "../../components/Auth/useAuth";
 
 const navigation = ["badges"];
@@ -13,40 +13,36 @@ const navigation = ["badges"];
 function SponsorBadges() {
   const { user } = useAuth();
   const pauseRef = useRef(false);
-  const successRef = useRef(null);
-  const [feedbackText, setFeedbackText] = useState("Scanning");
-  const [showScanner, setScanner] = useState(true);
+  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
 
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 500)).then(() => {
-      pauseRef.current = false;
-      successRef.current = null;
-      setFeedbackText("Scanning");
-    });
-  };
+  useEffect(() => {
+    if (feedback != FEEDBACK.SCANNING) {
+      setTimeout(() => {
+        pauseRef.current = false;
+        setFeedback(FEEDBACK.SCANNING);
+      }, 700);
+    }
+  }, [feedback]);
 
   const handleUUID = (uuid) => {
+    let feedback_var;
     giveBadge(uuid, "69420")
       .then((response) => {
         if (response.redeem) {
-          successRef.current = true;
-          navigator.vibrate([20, 10, 20]);
-          setFeedbackText("Success");
-          resetScannerState();
-        } else if (response.errors?.unique_attendee_badge) {
-          successRef.current = false;
-          setFeedbackText("User has badge");
-          resetScannerState();
+          feedback_var = FEEDBACK.SUCCESS;
         } else {
-          successRef.current = false;
-          setFeedbackText("Failure");
-          resetScannerState();
+          feedback_var = FEEDBACK.FAILURE;
         }
       })
-      .catch((_) => {
-        successRef.current = false;
-        setFeedbackText("Failure");
-        resetScannerState();
+      .catch((errors) => {
+        if (errors.response.data.errors?.unique_attendee_badge) {
+          feedback_var = FEEDBACK.ALREADY_HAS;
+        } else {
+          feedback_var = FEEDBACK.FAILURE;
+        }
+      })
+      .finally(() => {
+        setFeedback(feedback_var);
       });
   };
 
@@ -62,10 +58,9 @@ function SponsorBadges() {
           handleCode={handleUUID}
           pauseRef={pauseRef}
           text={user.name}
-          successRef={successRef}
-          feedbackText={feedbackText}
-          showScanner={showScanner}
-          setScanner={setScanner}
+          feedback={feedback}
+          showScanner={true}
+          setScanner={true}
           removeClose={true}
         />
       </div>
