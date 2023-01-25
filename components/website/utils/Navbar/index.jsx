@@ -20,7 +20,7 @@ const navigation = [
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faq" },
   {
-    name: "Be part of us",
+    name: "Join our staff",
     slug: "https://docs.google.com/forms/d/e/1FAIpQLSfxBsNwZmxIsrkXDbFAzpNV5SsKfft_Vs-K8WlJpFP-kzrugg/viewform",
   },
 ];
