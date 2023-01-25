@@ -144,8 +144,8 @@
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
+        "summary": "My quest to help software developers: from where you are to start-up founder",
+        "description": "It has never been more exciting to be a software developer. The code that we produce impacts millions of people across the world. Yet, the lack of support and knowledge that we have when we are modifying code is quickly becoming a threat to the world as we know it. In this talk, I will share my journey from a student at UMinho to start-up founder and my quest to help software developers safely collaborate as fast as possible. I will also share some insights I wish I knew when I attended this conference over 10 years ago.",
         "author": "Marcelo Sousa",
         "location": ""
       },
