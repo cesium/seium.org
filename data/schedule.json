@@ -27,10 +27,10 @@
       {
         "startTime": "12:00",
         "endTime": "13:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "Multicloud: uma quebra de paradigma com desafios e oportunidades.",
+        "description": "Ricardo is a founding partner of Retail Consult, with more than 20 years of experience working with retailers across the globe, to deliver end-to-end integrated solutions as part of digital transformation programs. During this extensive career he played distinct roles, from technical consultancy to leading complex architectures design and implementation, in different business domains such as merchandising, supply chain, omni-channel, planning and optimization.",
+        "author": "Ricardo Rocha",
         "location": ""
       },
       {
@@ -42,7 +42,7 @@
         "endTime": "15:00",
         "activityType": "Talk",
         "summary": "Aplicações Clínicas de Machine Learning: Uma Introdução",
-        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é,⁣ adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo⁣ Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um⁣ MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).⁣ Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan⁣ School of Management US) e da Singularity University (US) – Exponential Medicine.",
+        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é, adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo⁣ Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um⁣ MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).⁣ Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan⁣ School of Management US) e da Singularity University (US) – Exponential Medicine.",
         "author": "António Murta",
         "location": ""
       },
@@ -194,9 +194,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Salesforce Tech Session",
+        "description": " Explicar o que é Salesforce, a importância da adoção de soluções como Salesforce na transformação digital e transição para a cloud; o trabalho realizado pela Accenture em Salesforce e demonstrações práticas das potencialidades da plataforma.",
+        "author": "Alexandre Gomes",
         "location": "",
         "hyperlink": ""
       },
@@ -291,7 +291,7 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
+        "summary": "Fujitsu",
         "description": "",
         "author": "",
         "location": "",
@@ -337,9 +337,9 @@
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "DevOps Talks",
+        "description": " Comecei a minha carreira profissional há cerca de 15 anos em Lisboa como Consultor em Change and Configuration Management e desde então esta area evoluiu para o DevOps como conhecemos hoje. luno de dissertação na Universidade Do Minho em Mestrado de Engenharia Informática, iniciei a minha carreira profissional há cerca 2 anos na Accenture, na àrea de DevOps, neste periodo trabalhei sempre em projectos na àrea da cloud. ",
+        "author": "Rui Oliveira & Ricardo Dias",
         "location": ""
       },
       {
