@@ -20,6 +20,42 @@
     "date": "2023/2/15",
     "speakers": [
       {
+        "id": "andresousa",
+        "name": "André Sousa",
+        "role": "Senior Manager",
+        "company": "Deloitte Cyber Risk Services",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "larsfrische",
+        "name": "Lars Frische",
+        "role": "Solution Development Center Coordinator",
+        "company": "Continental",
+        "talk": "Talk. 11h30m",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "My name is Lars Frische and I am passionate about developing IT solutions to help Continentals business grow. I studied information technology with a major in software engineering and graduated with a master's degree from Queensland University of Technology in Brisbane. The first years of my career I worked as a software developer on multiple projects. At some point my curiosity went past the purely technical topics and I pursued a master's degree in business engineering from Ostfalia University in Wolfsburg. Since 2014 I worked as developer and architect in different projects around manufacturing IT at Continental Tires IT. In 2020 I got the opportunity to move to Portugal, to lead the Solution Development Center and in 2022 the IT-HUB Lousado. My focus is on supporting the teams in our HUB to find the best possible work conditions and to grow individually to their best potential."
+      },
+      {
+        "id": "inesxavier",
+        "name": "Inês Xavier",
+        "role": "Digital Solutions Specialist - Backend Development",
+        "company": "Continental",
+        "talk": "Talk. 11h30m",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "I'm Inês Xavier, a backend developer who has a passion for technology. I completed my master's degree in telecommunications and computer engineering at the University of Minho, in Guimarães. I started my career as a software engineer at Multicert, where I worked on digital security projects for 3 years. After that, I took on a new challenge as a backend developer at Continental Solution Center, where I helped clients manage and monitor their fleets in the automotive industry, for the last 2 years. My focus is on developing REST APIs for external clients and providing support for integration with company systems. I have a strong background in IT and a desire to continue learning and growing in my field."
+      },
+      {
         "id": "marcelosousa",
         "name": "Marcelo Sousa",
         "role": "Founder",
@@ -60,6 +96,42 @@
   {
     "date": "2023/2/16",
     "speakers": [
+      {
+        "id": "andremota",
+        "name": "André Mota",
+        "role": "Tech Lead",
+        "company": "Glintt",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "catarinacacote",
+        "name": "Catarina Caçote",
+        "role": "Scrum Master",
+        "company": "Glintt",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "joaolaranjeira",
+        "name": "João Laranjeira",
+        "role": "Arquiteto de Sistemas de Informação",
+        "company": "ItSector",
+        "talk": "Talk. 11h30m",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "João Laranjeira iniciou a sua carreira na área de investigação, mais concretamente em sistemas de apoio à tomada de decisão. Em 2013 juntou-se à ITSector, fazendo toda a sua carreira ligada à banca, onde integrou equipas de evolução tecnológica de sistemas de apoio à decisão na área de crédito. Atualmente, além de Arquiteto de Sistemas de Informação também desempenha funções de Gestor de Projeto, liderando uma equipa de atualização tecnológica para uma arquitetura moderna baseada em microsserviços."
+      },
       {
         "id": "filipeborges",
         "name": "Filipe Borges",
@@ -121,6 +193,37 @@
   },
   {
     "date": "2023/2/17",
-    "speakers": []
+    "speakers": [
+      {
+        "id": "alexandregomes",
+        "name": "Alexandre Gomes",
+        "role": "Salesforce Specialist",
+        "company": "Accenture",
+        "talk": "Talk. 14h",
+        "linkedin": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "ricardodias",
+        "name": "Ricardo Dias",
+        "role": "DevOps Engineer",
+        "company": "Accenture",
+        "talk": "Talk. 14h",
+        "linkedin": "",
+        "href": "",
+        "description": "Aluno de dissertação na Universidade Do Minho em Mestrado de Engenharia Informática, iniciei a minha carreira profissional há cerca 2 anos na Accenture, na àrea de DevOps, neste periodo trabalhei sempre em projectos na àrea da cloud. Mas em âmbitos diferentes, desde migrações, a administração de Sistemas,  a desenvolvimento/operações, maioritariamente em Google Cloud. Neste momento trabalho num projecto como DevOps Engineer em GCP focado em monitorização."
+      },
+      {
+        "id": "ruioliveira",
+        "name": "Rui Oliveira",
+        "role": "DevOps Engineer",
+        "company": "Accenture",
+        "talk": "Talk. 14h",
+        "linkedin": "",
+        "href": "",
+        "description": "Comecei a minha carreira profissional há cerca de 15 anos em Lisboa como Consultor em Change and Configuration Management e desde então esta area evoluiu para o DevOps como conhecemos hoje.O paradigma passou a ser de um profissional com experiencia nas areas de desenvolvimento/operações/infraestrutura de forma a dar suporte continuo ao processo evolutivo de 1/ou várias aplicações/produtos. Hoje em dia trabalho em DevOps na cloud GCP em que o meu dia-a-dia consiste na migração de aplicações on-premises(servidores locais virtualizados) para a cloud."
+      }
+    ]
   }
 ]
