@@ -3,6 +3,18 @@
     "date": "2023/2/14",
     "speakers": [
       {
+        "id": "ricardorocha",
+        "name": "Ricardo Rocha",
+        "role": "Head of Technology and Innovation",
+        "company": "RetailConsult",
+        "talk": "Talk. 12h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Ricardo is a founding partner of Retail Consult, with more than 20 years of experience working with retailers across the globe, to deliver end-to-end integrated solutions as part of digital transformation programs. During this extensive career he played distinct roles, from technical consultancy to leading complex architectures design and implementation, in different business domains such as merchandising, supply chain, omni-channel, planning and optimization. Ricardo is currently the head of Technology and Innovation at Retail Consult."
+      },
+      {
         "id": "antoniomurta",
         "name": "António Murta",
         "role": "",
