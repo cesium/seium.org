@@ -170,7 +170,7 @@ export default function Dashboard({ title, href, description, children }) {
               <p className="font-ibold text-5xl text-secondary lg:pt-20">
                 {title}
               </p>
-              <p className="pt-2 font-iregular text-lg text-black">
+              <p className="pt-2 font-iregular text-lg text-white">
                 {description}
               </p>
               {children}

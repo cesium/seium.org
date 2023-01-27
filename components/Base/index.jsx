@@ -72,8 +72,8 @@ const MobileNavbar = ({
                     <a
                       className={classNames(
                         item == href
-                          ? "bg-primary text-quinary"
-                          : "text-white hover:bg-primary hover:bg-opacity-50",
+                          ? "bg-secondary text-quinary"
+                          : "text-white hover:bg-secondary hover:bg-opacity-50",
                         "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
                       )}
                     >
@@ -123,28 +123,44 @@ export default function Dashboard({
       />
 
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">
-        <div className="flex min-h-0 flex-1 flex-col bg-secondary">
+        <div className="flex min-h-0 flex-1 flex-col border-r-2 bg-secondary">
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
             <div className="mt-20 flex flex-shrink-0 items-center px-4">
               <Image src="/images/sei-logo.svg" width="220" height="120" />
             </div>
             <nav className="mt-5 flex-1">
-              {navigation.map((item) => (
-                <Link key={item} href={`/manager/${item}`} passHref>
-                  <a
-                    key={item}
-                    className={classNames(
-                      item == href
-                        ? "bg-primary text-quinary"
-                        : "text-white hover:bg-primary hover:bg-opacity-50",
-                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                    )}
-                  >
-                    {item.toUpperCase()}
-                  </a>
-                </Link>
-              ))}
+              {navigation.map((item) =>
+                item == "dashboard" || item == "spotlight" ? (
+                  <Link key={item} href={`/sponsor/remote/${item}`} passHref>
+                    <a
+                      key={item}
+                      className={classNames(
+                        item == href
+                          ? "bg-secondary text-quinary"
+                          : "text-white hover:bg-secondary hover:bg-opacity-50",
+                        "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                      )}
+                    >
+                      {item.toUpperCase()}
+                    </a>
+                  </Link>
+                ) : (
+                  <Link key={item} href={`/sponsor/${item}`} passHref>
+                    <a
+                      key={item}
+                      className={classNames(
+                        item == href
+                          ? "bg-secondary text-quinary"
+                          : "text-white hover:bg-secondary hover:bg-opacity-50",
+                        "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                      )}
+                    >
+                      {item.toUpperCase()}
+                    </a>
+                  </Link>
+                )
+              )}
             </nav>
             <a
               href="#"
@@ -167,13 +183,11 @@ export default function Dashboard({
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <main className="flex-1">
-          <div className="py-6">
+        <main className="flex-1 bg-secondary">
+          <div className="py-6 ">
             <div className="max-w-7xl px-4 sm:px-6 lg:mx-20 lg:px-8">
-              <p className="font-ibold text-5xl text-secondary lg:pt-20">
-                {title}
-              </p>
-              <p className="pt-2 font-iregular text-lg text-black">
+              <p className="font-ibold text-5xl text-white lg:pt-20">{title}</p>
+              <p className="pt-2 font-iregular text-lg text-white">
                 {description}
               </p>
               {children}
