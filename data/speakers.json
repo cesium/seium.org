@@ -207,6 +207,26 @@
     "date": "2023/2/17",
     "speakers": [
       {
+        "id": "filipacoelho",
+        "name": "Filipa Coelho",
+        "role": "DX Team Manager",
+        "company": "Fujitsu",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "osvaldo",
+        "name": "Osvaldo Ferreira",
+        "role": "SAP Team Lead",
+        "company": "Fujitsu",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "href": "",
+        "description": ""
+      },
+      {
         "id": "alexandregomes",
         "name": "Alexandre Gomes",
         "role": "Salesforce Specialist",
