@@ -50,7 +50,6 @@ export function withAuth(WrappedComponent) {
             "/sponsor/scanner",
             "/attendees/[uuid]",
             "/sponsor/remote/dashboard",
-            "/sponsor/remote/spotlight",
             "/manager/badges",
             "/sponsor/visitors",
           ].includes(router.pathname)

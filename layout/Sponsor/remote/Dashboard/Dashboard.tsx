@@ -1,6 +1,6 @@
 import React from "react";
 import { withAuth } from "@context/Auth";
-import Base from "@components/Base";
+import Base from "../../components/Base";
 import Heading from "@components/Heading";
 import SponsorPrizeButton from "@layout/moonstone/sponsor/dashboard/SponsorPrizeButton";
 import SponsorBadgeButton from "@layout/moonstone/sponsor/dashboard/SponsorBadgeButton";
@@ -12,7 +12,7 @@ const SponsorDashboard: React.FC<Props> = () => {
   const participants: string[] = ["Nome 1", "Nome 2", "Nome 3", "Nome 4"];
 
   const onParticipantChange = (p: string) => {};
-  const navigation = ["scanner", "dashboard", "spotlight", "visitors"];
+  const navigation = ["scanner", "dashboard", "visitors"];
 
   return (
     <Base

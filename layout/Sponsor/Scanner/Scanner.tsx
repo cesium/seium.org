@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import { giveBadge } from "@lib/api";
 import { withAuth, useAuth } from "@context/Auth";
-import Base from "@components/Base";
+import Base from "../components/Base";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
 interface Props {}
 
-const navigation = ["scanner", "dashboard", "spotlight", "visitors"];
+const navigation = ["scanner", "dashboard", "visitors"];
 
 const SponsorBadges: React.FC<Props> = () => {
   const { user } = useAuth();
