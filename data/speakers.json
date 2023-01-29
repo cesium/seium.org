@@ -235,6 +235,26 @@
         "linkedin": "",
         "href": "",
         "description": "Comecei a minha carreira profissional há cerca de 15 anos em Lisboa como Consultor em Change and Configuration Management e desde então esta area evoluiu para o DevOps como conhecemos hoje.O paradigma passou a ser de um profissional com experiencia nas areas de desenvolvimento/operações/infraestrutura de forma a dar suporte continuo ao processo evolutivo de 1/ou várias aplicações/produtos. Hoje em dia trabalho em DevOps na cloud GCP em que o meu dia-a-dia consiste na migração de aplicações on-premises(servidores locais virtualizados) para a cloud."
+      },
+      {
+        "id": "joseresende",
+        "name": "José Resende",
+        "role": "Blockchain Developer",
+        "company": "Finiam of Subvisual Group",
+        "talk": "Talk. 15h",
+        "linkedin": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "miguelpalhas",
+        "name": "Miguel Palhas",
+        "role": "Blockchain Developer",
+        "company": "Subvisual of Subvisual Group",
+        "talk": "Talk. 15h",
+        "linkedin": "",
+        "href": "",
+        "description": ""
       }
     ]
   }
