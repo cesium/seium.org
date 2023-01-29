@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import jsQR from "jsqr";
-import ErrorMessage from "@components/ErrorMessage";
 
 function BarebonesQRScanner({ handleCode, pauseRef }) {
   const canvasRef = useRef(null);
@@ -49,7 +48,6 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
   }
 
   function parseURL(url) {
-    console.log("handling url: " + url);
     try {
       const url_obj = new URL(url);
       if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) return null;

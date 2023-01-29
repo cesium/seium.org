@@ -38,7 +38,6 @@ function Identifier() {
   }, [feedback]);
 
   const handleUUID = (uuid) => {
-    console.log(uuid);
     getAttendee(uuid)
       .then((response) => {
         setText(`${response.data.name} | ${response.data.email}`);
