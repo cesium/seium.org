@@ -26,10 +26,17 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
       })
       .catch((e) => {
         setError(
-          "We couldn't access your camera. Check if your camera is being used by any other apps and if you gave us permission to use it."
+          "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
         );
-        video.srcObject = null;
+        video.srcObject = undefined;
       });
+
+    return () => {
+      if (video.srcObject) {
+        video.srcObject.getTracks().forEach((track) => track.stop());
+        video.srcObject = undefined;
+      }
+    };
   }, []);
 
   function drawLine(canvas, begin, end, color) {
@@ -42,7 +49,14 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
   }
 
   function parseURL(url) {
-    return url.slice(32);
+    console.log("handling url: " + url);
+    try {
+      const url_obj = new URL(url);
+      if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) return null;
+      return url_obj.pathname.split("/").at(-1);
+    } catch {
+      return null;
+    }
   }
 
   function tick() {
@@ -66,6 +80,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
       var code = jsQR(imageData.data, imageData.width, imageData.height, {
         inversionAttempts: "dontInvert",
       });
+
       if (code) {
         drawLine(
           canvas2D,
@@ -93,8 +108,12 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
         );
 
         if (!pauseRef.current) {
-          pauseRef.current = true;
-          handleCode(parseURL(code.data));
+          const uuid = parseURL(code.data);
+
+          if (uuid) {
+            pauseRef.current = true;
+            handleCode(uuid);
+          }
         }
       }
     }

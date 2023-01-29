@@ -52,12 +52,11 @@ function QRScanner({
       </div>
       {removeClose !== true && (
         <Button
+          text="Close"
           onClick={() => {
             setScanner(false);
           }}
-        >
-          Close
-        </Button>
+        ></Button>
       )}
     </div>
   );

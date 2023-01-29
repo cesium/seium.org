@@ -90,7 +90,7 @@ function Badges() {
           />
         </div>
       ) : (
-        <div className="min-h-screen">
+        <>
           <div className="pt-10 xl:flex xl:flex-auto">
             <div className="flex flex-auto space-x-5">
               <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
@@ -132,7 +132,7 @@ function Badges() {
                 </div>
               ))}
           </div>
-        </div>
+        </>
       )}
       {error && <ErrorMessage />}
     </Base>
