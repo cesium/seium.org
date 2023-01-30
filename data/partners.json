@@ -8,5 +8,10 @@
     "name": "IPDJ",
     "image": "ipdj.png",
     "url": "https://ipdj.gov.pt/"
+  },
+  {
+    "name": "Lighthouse Studios",
+    "image": "lighthousestudios.png",
+    "url": "https://lighthousestudios.pt/"
   }
 ]

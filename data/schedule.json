@@ -301,8 +301,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
+        "summary": "Subvisual - Introduction to Mobile Web3 development with React Native",
         "description": "",
+        "author": "João Ferreiro",
         "location": "",
         "hyperlink": ""
       },

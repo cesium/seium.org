@@ -207,6 +207,16 @@
     "date": "2023/2/17",
     "speakers": [
       {
+        "id": "joaoferreiro",
+        "name": "João Ferreiro",
+        "role": "Software Engineer",
+        "company": "Pink Room",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "href": "",
+        "description": "Nascido em Coimbra, Mestre em Engenharia e Software pela Universidade de Coimbra. Apaixonado por desporto em geral, F1 em particular. Especialista em React Native na Pink Room em Coimbra, empresa do Grupo Subvisual."
+      },
+      {
         "id": "filipacoelho",
         "name": "Filipa Coelho",
         "role": "DX Team Manager",
