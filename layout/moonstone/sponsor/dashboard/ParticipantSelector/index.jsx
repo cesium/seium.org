@@ -9,7 +9,7 @@ function Participant({ name, selected, onClick, last }) {
     >
       <button
         onClick={onClick}
-        className="tems-center font-md h-full w-full py-2 px-2 text-left font-iregular"
+        className="tems-center font-md h-full w-full py-2 px-2 text-left font-iregular text-white"
       >
         {name}
       </button>

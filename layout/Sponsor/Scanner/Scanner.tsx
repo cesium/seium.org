@@ -1,18 +1,19 @@
 import { useState, useRef, useEffect } from "react";
-
 import { giveBadge } from "@lib/api";
-
 import { withAuth, useAuth } from "@context/Auth";
-
-import Base from "@components/Base";
+import Base from "../components/Base";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
-const navigation = ["badges"];
+interface Props {}
 
-function SponsorBadges() {
+const navigation = ["scanner", "dashboard", "visitors"];
+
+const SponsorBadges: React.FC<Props> = () => {
   const { user } = useAuth();
   const pauseRef = useRef(false);
-  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
+  const [feedback, setFeedback] = useState<typeof FEEDBACK.SCANNING>(
+    FEEDBACK.SCANNING
+  );
 
   useEffect(() => {
     if (feedback != FEEDBACK.SCANNING) {
@@ -23,8 +24,8 @@ function SponsorBadges() {
     }
   }, [feedback]);
 
-  const handleUUID = (uuid) => {
-    let feedback_var;
+  const handleUUID = (uuid: string) => {
+    let feedback_var: typeof FEEDBACK.SCANNING;
     giveBadge(uuid, "69420")
       .then((response) => {
         if (response.redeem) {
@@ -47,9 +48,9 @@ function SponsorBadges() {
 
   return (
     <Base
-      href="badges"
-      title="Badges"
-      description="Award your company's badge"
+      href="scanner"
+      title="Scanner"
+      description="Recompensa os teus visitantes com o badge"
       navigation={navigation}
     >
       <div className="mt-5">
@@ -65,6 +66,6 @@ function SponsorBadges() {
       </div>
     </Base>
   );
-}
+};
 
 export default withAuth(SponsorBadges);

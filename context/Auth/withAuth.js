@@ -46,7 +46,13 @@ export function withAuth(WrappedComponent) {
         break;
       case USER.ROLES.SPONSOR:
         if (
-          !["/sponsor/scanner", "/attendees/[uuid]"].includes(router.pathname)
+          ![
+            "/sponsor/scanner",
+            "/attendees/[uuid]",
+            "/sponsor/remote/dashboard",
+            "/manager/badges",
+            "/sponsor/visitors",
+          ].includes(router.pathname)
         ) {
           return router.replace("/404");
         }

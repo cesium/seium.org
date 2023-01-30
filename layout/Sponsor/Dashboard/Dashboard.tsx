@@ -1,27 +1,31 @@
+import React from "react";
 import { withAuth } from "@context/Auth";
-
-import Dashboard from "@components/Dashboard";
+import Base from "../components/Base";
 import Heading from "@components/Heading";
-
 import SponsorPrizeButton from "@layout/moonstone/sponsor/dashboard/SponsorPrizeButton";
 import SponsorBadgeButton from "@layout/moonstone/sponsor/dashboard/SponsorBadgeButton";
 import ParticipantSelector from "@layout/moonstone/sponsor/dashboard/ParticipantSelector";
 
-function SponsorDashboard() {
-  const participants = ["Nome 1", "Nome 2", "Nome 3", "Nome 4"];
+interface Props {}
 
-  const onParticipantChange = (p) => {};
+const SponsorDashboard: React.FC<Props> = () => {
+  const participants: string[] = ["Nome 1", "Nome 2", "Nome 3", "Nome 4"];
+
+  const onParticipantChange = (p: string) => {};
+  const navigation = ["scanner", "dashboard", "visitors"];
 
   return (
-    <Dashboard
+    <Base
+      href="dashboard"
       title="Dashboard"
       description="Neste local, pode dar badges ao participantes que se encontram no seu stand"
+      navigation={navigation}
     >
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
         <div className="mr-3 w-full">
           <Heading text="Participantes no stand" />
-          <div className="mt-8 w-auto">
-            <button className="bg-aqua m-auto block h-10 w-32 rounded-full">
+          <div className="mt-8 w-auto text-white">
+            <button className="bg-aqua m-auto block h-10 w-32 rounded-full border-2 hover:bg-white hover:text-black">
               <p className="font-iregular">Refresh</p>
             </button>
           </div>
@@ -31,25 +35,25 @@ function SponsorDashboard() {
           />
         </div>
 
-        <div className="ml-3 w-full">
+        <div className="ml-3 w-full text-white">
           <Heading text="Comandos" />
 
           <div className="m-auto w-3/4">
             <div className="mt-5">
-              <SponsorBadgeButton sponsor="Accenture" all={false} />
+              <SponsorBadgeButton sponsor="Subvisual" all={false} />
               <SponsorPrizeButton prize="Câmara ligada" />
               <SponsorPrizeButton prize="Conversa Interessante" />
               <SponsorPrizeButton prize="Participante Excecional" />
             </div>
 
             <div className="mt-24">
-              <SponsorBadgeButton sponsor="Accenture" all={true} />
+              <SponsorBadgeButton sponsor="Subvisual" all={true} />
             </div>
           </div>
         </div>
       </div>
-    </Dashboard>
+    </Base>
   );
-}
+};
 
 export default withAuth(SponsorDashboard);
