@@ -1,6 +1,6 @@
 import React from "react";
 import { withAuth } from "@context/Auth";
-import Base from "../../components/Base";
+import Base from "../components/Base";
 import Heading from "@components/Heading";
 import SponsorPrizeButton from "@layout/moonstone/sponsor/dashboard/SponsorPrizeButton";
 import SponsorBadgeButton from "@layout/moonstone/sponsor/dashboard/SponsorBadgeButton";

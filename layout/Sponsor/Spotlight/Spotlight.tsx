@@ -1,5 +1,5 @@
 import { withAuth } from "@context/Auth";
-import Base from "../../components/Base";
+import Base from "../components/Base";
 import SpotlightButton from "@layout/moonstone/sponsor/spotlight/SpotlightButton";
 
 interface Props {}
