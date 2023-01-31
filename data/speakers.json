@@ -25,12 +25,72 @@
         "twitter": "",
         "href": "",
         "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é, adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).   Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan School of Management US) e da Singularity University (US) – Exponential Medicine."
+      },
+      {
+        "id": "ruilopes",
+        "name": "Rui Lopes",
+        "role": "Software Engineering Student",
+        "company": "",
+        "talk": "Talk. 17h",
+        "linkedin": "rui-lopes-dev",
+        "github": "ruil1904",
+        "twitter": "",
+        "href": "",
+        "description": "Currently studying Software Engineering @ UMinho. Started programming four years ago and since then never stopped. Loves Python and Elixir. Joined CeSIUM to develop a lot more skills and meet new people."
+      },
+      {
+        "id": "henriquepereira",
+        "name": "Henrique Pereira",
+        "role": "Software Engineering Student",
+        "company": "",
+        "talk": "Talk. 17h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "paulodimas",
+        "name": "Paulo Dimas",
+        "role": "VP of Product Innovation",
+        "company": "Unbabel",
+        "talk": "Talk. 17h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Paulo Dimas is the VP of Product Innovation at Unbabel, contributing to build the world’s translation layer. Joining when Unbabel was a 12 people-strong team, Paulo has been creating new game-changing AI products that have been driving innovation and growth through 3 series of funding, totaling $90 million. In 2020, Unbabel reached the top 3 of the World’s Most Innovative Companies in the Enterprise category by Fast Company. Paulo's passion for startups and products took him to co-found two tech startups and, at 14 years of age, develop and launch his first commercial tech product."
       }
     ]
   },
   {
     "date": "2023/2/15",
     "speakers": [
+      {
+        "id": "emanuelmota",
+        "name": "Emanuel Mota",
+        "role": "CEO",
+        "company": "Yari Labs",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "pedrocosta",
+        "name": "Pedro Costa",
+        "role": "Blockchain Developer",
+        "company": "Yari Labs",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
       {
         "id": "andresousa",
         "name": "André Sousa",
@@ -209,7 +269,7 @@
       {
         "id": "joaoferreiro",
         "name": "João Ferreiro",
-        "role": "Software Engineer",
+        "role": "React Native Specialist",
         "company": "Pink Room",
         "talk": "Workshop. 9h",
         "linkedin": "",
