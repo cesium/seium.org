@@ -63,23 +63,23 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "summary": "TBA",
+        "summary": "Bosch",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "summary": "TBA",
+        "summary": "KPMG",
         "location": ""
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
-        "summary": "TBA",
+        "summary": "Periférico ao vivo",
         "description": "",
-        "author": "",
+        "author": "Paulo Dimas & Rui Lopes & Henrique Pereira",
         "location": ""
       },
       {
@@ -100,15 +100,15 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Yari Labs - Blockchain 101: Assets Digitais - Tokens, NFTs e Smart-Contracts",
+        "description": "Vamos apresentar conceitos de Tokens Fungíveis, Não fungíveis e Aplicações Descentralizadas. Os participantes irão sair do workshop com um ambiente de desenvolvimento em Python para criar DApps na blockchain de Algorand. Vamos criar tokens, NFTs utilizando IPFS (Interplanetary Filesystem) e Smart-contracts. No final todos participantes irão receber uma paper wallet contendo um NFT com um certificado de participação que poderão importar para a wallets utilizadas durante o workshop!",
+        "author": "Emanuel Mota & Pedro Costa",
         "location": ""
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
-        "activityType": "Talk",
+        "activityType": "Workshop",
         "summary": "How to detect a data breach by an authorized user",
         "description": "Simulate a suspicious behaviour of an authorised user in a corporate application that is downloading a large amount of very sensitive information outside business hours. See how a Data Masking and Data Logging platform can help to detect this type of attacks and rapidly start an investigation and block these activities.⁣",
         "author": "André Sousa",
@@ -157,14 +157,14 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "summary": "TBA",
+        "summary": "IT Sector",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "summary": "TBA",
+        "summary": "RetailConsult",
         "location": ""
       },
       {
@@ -253,17 +253,15 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Eurotux",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "summary": "EY",
-        "location": "CP2-B1"
+        "summary": "Continental",
+        "location": ""
       },
       {
         "startTime": "17:00",
@@ -360,7 +358,14 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "summary": "TBA",
+        "summary": "Subvisual",
+        "location": "TBA"
+      },
+      {
+        "startTime": "16:45",
+        "endTime": "17:00",
+        "activityType": "Pitch",
+        "summary": "Farfetch",
         "location": "TBA"
       },
       {
