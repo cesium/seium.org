@@ -15,7 +15,7 @@ import { getFirstName } from "@lib/naming";
 
 function Profile() {
   const { user, editUser } = useAuth();
-
+  const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
 
@@ -55,9 +55,12 @@ function Profile() {
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("attendee[nickname]", username);
+    formData.append("attendee[avatar]", avatar);
 
     if (editing) {
-      editUser(username);
+      editUser(formData);
     }
 
     setEditing(!editing);
@@ -67,10 +70,8 @@ function Profile() {
     const file = e.target.files[0];
     if (!file) return;
 
-    const formData = new FormData();
-    formData.append("photo", file);
-
     setPhotoFileUrl(URL.createObjectURL(file));
+    setAvatar(file);
   };
 
   return (
