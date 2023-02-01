@@ -9,7 +9,7 @@ import Dashboard from "../components/Dashboard";
 import Heading from "@components/Heading";
 
 import { CheckpointTracker, CodeInput } from "./components";
-
+import CVInput from "./components/CVInput";
 import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
 
@@ -72,6 +72,12 @@ function Profile() {
 
     setPhotoFileUrl(URL.createObjectURL(file));
     setAvatar(file);
+  };
+
+  const submitCV = (f: File) => {
+    const formData = new FormData();
+    formData.append("attendee[cv]", f);
+    editUser(formData);
   };
 
   return (
@@ -214,13 +220,7 @@ function Profile() {
               Get a chance to win a spot at the Corporate dinner by submiting
               you CV!
             </p>
-
-            <a
-              href="mailto:cv@seium.org"
-              className="mt-5 inline-block h-auto rounded-full bg-quinary px-5 py-3 text-center font-iregular"
-            >
-              SEND YOUR CV
-            </a>
+            <CVInput cv={user?.cv} onSubmit={submitCV}></CVInput>
           </div>
         </div>
       </div>
