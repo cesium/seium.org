@@ -44,11 +44,11 @@
         "role": "Software Engineering Student",
         "company": "",
         "talk": "Talk. 17h",
-        "linkedin": "",
-        "github": "",
+        "linkedin": "henrique-pereira-06021b243",
+        "github": "hgp22",
         "twitter": "",
         "href": "",
-        "description": ""
+        "description": "Admires everything that respects its user's freedom - that's why his Emacs journey started. Turning libre software more approachable to everyone is one of his purposes. Free as in free speech not as in free beer!"
       },
       {
         "id": "paulodimas",
@@ -84,6 +84,18 @@
         "name": "Pedro Costa",
         "role": "Blockchain Developer",
         "company": "Yari Labs",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "margaridacunha",
+        "name": "Margarida Cunha",
+        "role": "Data Analyst",
+        "company": "XPand IT",
         "talk": "Workshop. 9h",
         "linkedin": "",
         "github": "",
