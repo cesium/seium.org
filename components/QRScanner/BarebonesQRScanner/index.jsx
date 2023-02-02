@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import jsQR from "jsqr";
 
 function BarebonesQRScanner({ handleCode, pauseRef }) {
@@ -6,6 +6,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
   const videoRef = useRef(null);
   const wrapperRef = useRef(null);
   const animationFrameRef = useRef();
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const video = videoRef.current;
@@ -13,11 +14,28 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
     navigator.mediaDevices
       .getUserMedia({ video: { facingMode: "environment" } })
       .then(function (stream) {
-        video.srcObject = stream;
-        video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-        video.play();
-        animationFrameRef.current = requestAnimationFrame(tick);
+        //to prevent AbortError on Firefox in strict mode
+        if (!video.srcObject) {
+          setError("");
+          video.srcObject = stream;
+          video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+          video.play();
+          animationFrameRef.current = requestAnimationFrame(tick);
+        }
+      })
+      .catch((e) => {
+        setError(
+          "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
+        );
+        video.srcObject = undefined;
       });
+
+    return () => {
+      if (video.srcObject) {
+        video.srcObject.getTracks().forEach((track) => track.stop());
+        video.srcObject = undefined;
+      }
+    };
   }, []);
 
   function drawLine(canvas, begin, end, color) {
@@ -30,7 +48,13 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
   }
 
   function parseURL(url) {
-    return url.slice(32);
+    try {
+      const url_obj = new URL(url);
+      if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) return null;
+      return url_obj.pathname.split("/").at(-1);
+    } catch {
+      return null;
+    }
   }
 
   function tick() {
@@ -54,6 +78,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
       var code = jsQR(imageData.data, imageData.width, imageData.height, {
         inversionAttempts: "dontInvert",
       });
+
       if (code) {
         drawLine(
           canvas2D,
@@ -81,8 +106,12 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
         );
 
         if (!pauseRef.current) {
-          pauseRef.current = true;
-          handleCode(parseURL(code.data));
+          const uuid = parseURL(code.data);
+
+          if (uuid) {
+            pauseRef.current = true;
+            handleCode(uuid);
+          }
         }
       }
     }
@@ -95,9 +124,10 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
 
       <div
         ref={wrapperRef}
-        className="flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid border-primary bg-primary align-middle"
+        className="relative flex aspect-square w-full max-w-full justify-center overflow-hidden rounded-2xl border-4 border-solid border-primary bg-primary align-middle"
       >
         <canvas ref={canvasRef} className="rounded-2xl" />
+        <p className="absolute m-3 text-white">{error}</p>
       </div>
     </>
   );

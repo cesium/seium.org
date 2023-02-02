@@ -157,7 +157,7 @@ export default function Dashboard({
         </div>
       </div>
       <div className="flex flex-1 flex-col lg:pl-64">
-        <div className="sticky top-0 z-10 flex justify-end pt-1 pl-1 sm:pl-3 sm:pt-3 lg:hidden">
+        <div className="sticky top-0 z-10 flex justify-end bg-primary pt-1 pl-1 sm:pl-3 sm:pt-3 lg:hidden">
           <button
             type="button"
             className="inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
@@ -167,7 +167,7 @@ export default function Dashboard({
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <main className="flex-1">
+        <main className="min-h-screen flex-1 bg-white">
           <div className="py-6">
             <div className="max-w-7xl px-4 sm:px-6 lg:mx-20 lg:px-8">
               <p className="font-ibold text-5xl text-secondary lg:pt-20">
