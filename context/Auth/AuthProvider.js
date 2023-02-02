@@ -132,11 +132,11 @@ export function AuthProvider({ children }) {
     router.push("/");
   }
 
-  function editUser(nickname) {
+  function editUser(formData) {
     setLoading(true);
 
     api
-      .editUser(user.id, nickname)
+      .editUser(user.id, formData)
       .then((at) => {
         setUser((oldUser) => ({ ...oldUser, ...at }));
       })
