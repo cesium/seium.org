@@ -49,7 +49,6 @@ export function withAuth(WrappedComponent) {
           ![
             "/sponsor/scanner",
             "/attendees/[uuid]",
-            "/sponsor/remote/dashboard",
             "/manager/badges",
             "/sponsor/visitors",
           ].includes(router.pathname)

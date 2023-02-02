@@ -71,8 +71,8 @@ function addDate(date, days) {
 }
 
 function Leaderboard() {
-  const min_date = "2022/02/15";
-  const max_date = "2022/02/20";
+  const min_date = "2023/01/28";
+  const max_date = "2023/02/20";
 
   const _today = new Date();
   const today =
@@ -118,7 +118,7 @@ function Leaderboard() {
       description="Check the users with the highest number of badges"
     >
       <div className="mt-12 grid grid-cols-1 justify-items-center gap-y-10 overflow-hidden md:gap-y-20 2xl:grid-cols-2">
-        <div className="col-span-1">
+        <div className="col-span-1 w-full">
           {!hallOfFame ? (
             <Day
               date={date}
@@ -126,6 +126,7 @@ function Leaderboard() {
               previousDay={previous_day}
               nextDay={next_day}
               fontSize="lg"
+              className=""
             />
           ) : (
             <h2 className="text-center font-iextrabold text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
@@ -138,7 +139,7 @@ function Leaderboard() {
             <button
               className={`font-iregular bg-${
                 hallOfFame ? "white" : "quinary"
-              } h-12 items-center rounded-full px-4 py-1 text-center`}
+              } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateHallOfFame(false);
               }}
@@ -148,7 +149,7 @@ function Leaderboard() {
             <button
               className={`font-iregular bg-${
                 hallOfFame ? "quinary" : "white"
-              } h-12 items-center rounded-full px-4 py-1 text-center`}
+              } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateHallOfFame(true);
               }}

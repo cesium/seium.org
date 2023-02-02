@@ -6,7 +6,7 @@ import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
 interface Props {}
 
-const navigation = ["scanner", "dashboard", "visitors"];
+const navigation = ["scanner", "visitors"];
 
 const SponsorBadges: React.FC<Props> = () => {
   const { user } = useAuth();

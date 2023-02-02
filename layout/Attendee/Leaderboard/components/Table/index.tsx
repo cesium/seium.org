@@ -59,7 +59,7 @@ export default function Table({ list, user, maxUsersToShow }) {
 
   return (
     <div className="overflow-hidden">
-      <div className="mt-12 h-8 grid-cols-3 pt-2">
+      <div className="mt-12 h-8 grid-cols-3 pt-2 ">
         <div className="col-span-1 float-left w-1/3 text-left font-iregular">
           Rank
         </div>

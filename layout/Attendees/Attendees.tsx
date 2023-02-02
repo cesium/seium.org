@@ -1,39 +1,15 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth } from "@context/Auth";
 
-import Dashboard from "@components/Dashboard";
-import Heading from "@components/Heading";
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";
+
+import Dashboard from "./components/Dashboard";
+import Heading from "@components/Heading";
 import { getAttendee, isAttendeeRegistered } from "@lib/api";
 
-export async function getServerSideProps({ query }) {
-  const { uuid } = query;
-
-  const { is_registered } = await isAttendeeRegistered(uuid)
-    .then((response) => {
-      return response.data;
-    })
-    .catch((errors) => {
-      return errors.response;
-    });
-
-  if (is_registered) {
-    return {
-      props: {},
-    };
-  }
-
-  return {
-    redirect: {
-      destination: `/register/${uuid}`,
-      permanent: false,
-    },
-  };
-}
-
-function Attendees() {
+function Profile() {
   const [attendee, updateAttendee] = useState(null);
   const router = useRouter();
   const { uuid } = router.query;
@@ -48,27 +24,37 @@ function Attendees() {
   }, []);
 
   if (!attendee) return null;
-
   return (
-    <Dashboard href="profile" title={`Welcome to ${attendee.name}'s profile!`}>
+    <Dashboard
+      href="profile"
+      title={`Welcome to ${attendee.name}'s profile!`}
+      description={`Welcome to your profile!`}
+    >
       <div className="mt-12 grid-cols-2 overflow-hidden">
         <div className="col-span-1 float-left w-full xl:w-1/2">
-          <Heading text="User Profile" />
+          <Heading text="User Profile"></Heading>
           <div className="pl-6">
-            <img
-              src={`${attendee.avatar}`}
-              className="overflow-hidden rounded-full"
-              width="220"
-              height="220"
-            />
+            <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full hover:border-2 hover:border-quinary">
+              <img
+                src={attendee.avatar}
+                alt="Avatar Photo"
+                className="rounded-full"
+              />
+            </div>
           </div>
         </div>
 
         <div className="col-span-1 float-right w-full xl:w-1/2 xl:pl-6">
           <div>
-            <Heading text="Achievements"></Heading>
-
-            <div className="grid-cols-2 overflow-hidden">
+            <Heading text="Achievements">
+              <button
+                className="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary opacity-0 shadow-sm"
+                type="submit"
+                form="profile-form"
+                disabled
+              ></button>
+            </Heading>
+            <div className="grid-cols-2 overflow-hidden text-white">
               <div className="col-span-1 float-left w-1/2 font-iregular">
                 🏅 {attendee.badge_count} Badges
               </div>
@@ -76,7 +62,6 @@ function Attendees() {
           </div>
         </div>
       </div>
-
       <div className="mt-10">
         <Heading text="Badges"></Heading>
         <div className="mt-5 flex flex-auto space-x-5">
@@ -95,4 +80,4 @@ function Attendees() {
   );
 }
 
-export default withAuth(Attendees);
+export default withAuth(Profile);

@@ -33,7 +33,7 @@ const userNavigation = (type) => {
     case USER.ROLES.SPONSOR:
       return [
         { name: "Scanner", slug: "/sponsor/scanner" },
-        { name: "Dashboard", slug: "/sponsor/remote/dashboard" },
+        { name: "Visitors", slug: "/sponsor/visitors" },
       ];
 
     default:
@@ -88,14 +88,17 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
                           <div>
-                            <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm ring-2 ring-quinary ring-offset-2 focus:outline-none">
+                            <Menu.Button className="flex max-w-xs items-center rounded-full bg-primary text-sm ring-2 ring-white ring-offset-2 focus:outline-none">
                               <span className="sr-only">Open user menu</span>
-                              {user && (
+                              {user?.avatar ? (
                                 <img
                                   className="h-10 w-10 rounded-full"
                                   src={user.avatar}
-                                  alt="Avatar"
                                 />
+                              ) : (
+                                <span className="flex h-10 w-10 items-center justify-center rounded-full">
+                                  <img src="/images/mascot-head.png" />
+                                </span>
                               )}
                             </Menu.Button>
                           </div>

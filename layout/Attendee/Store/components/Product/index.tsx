@@ -19,8 +19,8 @@ export default function Product({ name, id, image, price, enabled }) {
         </div>
 
         <div className="mt-4 text-center">
-          <p className="font-ibold text-lg text-primary">{name}</p>
-          <p className="font-imedium text-lg text-tertiary"> 💰 {price}</p>
+          <p className="font-ibold text-lg text-white">{name}</p>
+          <p className="font-imedium text-lg text-white"> 💰 {price}</p>
         </div>
       </a>
     </Link>

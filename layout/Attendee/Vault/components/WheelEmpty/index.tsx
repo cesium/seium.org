@@ -5,7 +5,7 @@ export default function WheelEmpty({ products }) {
         <div className="text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="mx-auto h-12 w-12 text-gray-400"
+            className="mx-auto h-12 w-12 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -17,15 +17,15 @@ export default function WheelEmpty({ products }) {
               d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
             />
           </svg>
-          <h2 className="mt-2 text-lg font-medium text-gray-900">Win Prizes</h2>
-          <p className="mt-1 text-sm text-gray-500">
+          <h2 className="mt-2 text-lg font-medium text-white">Win Prizes</h2>
+          <p className="mt-1 text-sm text-white">
             You haven’t won any prizes from the wheel yet. Gamble your tokens
             wisely.
           </p>
         </div>
       </div>
       <div className="mt-10">
-        <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-white">
           Prizes that you can still win
         </h3>
         <ul
@@ -50,7 +50,7 @@ export default function WheelEmpty({ products }) {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-gray-900">
+                      <p className="truncate text-sm font-medium text-white">
                         {product.name}
                       </p>
                     </div>

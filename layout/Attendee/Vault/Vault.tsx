@@ -33,7 +33,7 @@ function Vault() {
         <button
           className={`font-iregular bg-${
             tab ? "quinary" : "white"
-          } h-12 items-center rounded-full px-4 py-1 text-center`}
+          } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
           onClick={(e) => {
             updateTab(true);
           }}
@@ -43,7 +43,7 @@ function Vault() {
         <button
           className={`font-iregular bg-${
             tab ? "white" : "quinary"
-          } ml-12 h-12 items-center rounded-full px-4 py-1 text-center`}
+          } ml-12 h-12 items-center rounded-full px-4 py-1 text-center text-black`}
           onClick={(e) => {
             updateTab(false);
           }}

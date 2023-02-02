@@ -91,7 +91,7 @@ function Badges() {
         </div>
       ) : (
         <>
-          <div className="pt-10 xl:flex xl:flex-auto">
+          <div className="pt-10 text-white xl:flex xl:flex-auto">
             <div className="flex flex-auto space-x-5">
               <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
 
@@ -106,7 +106,7 @@ function Badges() {
                 }}
                 name="search"
                 id="search"
-                className="mt-1 w-full rounded-full border border-quinary py-2 pl-3 pr-10 text-sm ring-quinary focus:border-quinary"
+                className="mt-1 w-full rounded-full border-2 border-pink-500 py-2 pl-3 pr-10 text-sm text-black focus:border-pink-500"
               />
             </div>
           </div>
@@ -121,11 +121,11 @@ function Badges() {
               .map((badge, index) => (
                 <div
                   key={index}
-                  className="h-full w-full cursor-pointer"
+                  className="h-full w-full cursor-pointer text-white"
                   onClick={() => handleBadgeSelected(badge)}
                 >
                   <img src={badge.avatar} alt={badge.name} />
-                  <div className="flex flex-col justify-items-center text-center font-iregular">
+                  <div className="flex flex-col justify-items-center text-center font-iregular text-white">
                     <div>{badge.name}</div>
                     <div>{badge.tokens} 💰 </div>
                   </div>

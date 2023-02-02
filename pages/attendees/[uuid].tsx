@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from "@layout/Attendees";
+export { default } from "@layout/Attendees";

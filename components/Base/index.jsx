@@ -122,7 +122,7 @@ export default function Dashboard({
         logout={logout}
       />
 
-      <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">
+      <div className="hidden border-r-2 lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">
         <div className="flex min-h-0 flex-1 flex-col bg-secondary">
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
@@ -167,13 +167,11 @@ export default function Dashboard({
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <main className="min-h-screen flex-1 bg-white">
+        <main className="min-h-screen flex-1 bg-primary">
           <div className="py-6">
             <div className="max-w-7xl px-4 sm:px-6 lg:mx-20 lg:px-8">
-              <p className="font-ibold text-5xl text-secondary lg:pt-20">
-                {title}
-              </p>
-              <p className="pt-2 font-iregular text-lg text-black">
+              <p className="font-ibold text-5xl text-white lg:pt-20">{title}</p>
+              <p className="pt-2 font-iregular text-lg text-white">
                 {description}
               </p>
               {children}
