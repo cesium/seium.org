@@ -204,7 +204,7 @@
         "endTime": "11:00",
         "activityType": "Workshop",
         "summary": "Salesforce Tech Session",
-        "description": " Explicar o que é Salesforce, a importância da adoção de soluções como Salesforce na transformação digital e transição para a cloud; o trabalho realizado pela Accenture em Salesforce e demonstrações práticas das potencialidades da plataforma.",
+        "description": "Accenture - Explicar o que é Salesforce, a importância da adoção de soluções como Salesforce na transformação digital e transição para a cloud; o trabalho realizado pela Accenture em Salesforce e demonstrações práticas das potencialidades da plataforma.",
         "author": "Alexandre Gomes",
         "location": "",
         "hyperlink": ""
@@ -215,7 +215,17 @@
         "activityType": "Workshop",
         "summary": "Glintt - From Zero to Hero : how to build a product from scratch",
         "description": "Neste workshop terão a oportunidade de entender o processo de desenvolvimento de um produto tecnológico.",
-        "author": "",
+        "author": "André Mota & Catarina Caçote",
+        "location": "",
+        "hyperlink": ""
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "activityType": "Workshop",
+        "summary": "Checkmarx - The role of AI in assisting Application Development and Security",
+        "description": "Artificial Intelligence (AI) is proven to enhance and assist human efforts to produce software faster. Also, it can leverage the detection of software vulnerabilities, explain how to prevent their exploitation and, going forward, remediate these issues on its own. But, does this mean that AI will completely replace humans in these areas? There are pros and cons, and a clear answer to that question. In this workshop we will talk about modern application development, modern application security and the role that recent AI approaches play in these areas. Together, we will look for the answer to that fundamental question, with examples and interactive exercises.",
+        "author": "Rui Gomes & Raphael Silva",
         "location": "",
         "hyperlink": ""
       },

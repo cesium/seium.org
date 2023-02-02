@@ -181,6 +181,30 @@
     "date": "2023/2/16",
     "speakers": [
       {
+        "id": "raphaelsilva",
+        "name": "Raphael Silva",
+        "role": "Application Security Analyst",
+        "company": "Checkmarx",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "ruigomes",
+        "name": "Rui Gomes",
+        "role": "Software Team Leader",
+        "company": "Checkmarx",
+        "talk": "Workshop. 9h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
         "id": "andremota",
         "name": "André Mota",
         "role": "Tech Lead",
