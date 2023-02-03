@@ -27,6 +27,18 @@
         "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é, adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).   Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan School of Management US) e da Singularity University (US) – Exponential Medicine."
       },
       {
+        "id": "michaelmatias",
+        "name": "Michael Matias",
+        "role": "Security Architect",
+        "company": "Checkmarx",
+        "talk": "Talk. 15h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Starting from the Web, going onto game development, followed by mobile development and security engineering and landing on an application security architect. My career has been a rollercoaster which led to a diversified experience giving me the necessary knowledge to excel at my current position! My passion currently sits with application security management and architecture."
+      },
+      {
         "id": "ruilopes",
         "name": "Rui Lopes",
         "role": "Software Engineering Student",
