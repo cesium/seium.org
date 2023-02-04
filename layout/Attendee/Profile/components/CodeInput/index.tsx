@@ -38,7 +38,7 @@ export default function CodeInput() {
         onChange={(e) => setCode(e.currentTarget.value)}
         type="text"
         placeholder="CODE"
-        className="h-10 w-full max-w-lg rounded-full border border-quinary pl-4 pr-28 font-iregular"
+        className="h-10 w-full max-w-lg rounded-full border border-quinary pl-4 pr-28 font-iregular text-black"
       />
       <button
         className="-ml-28 h-10 w-28 rounded-full bg-quinary font-iregular"

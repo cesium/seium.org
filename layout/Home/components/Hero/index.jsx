@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
           {isAuthenticated || (
             <div className="absolute right-0 block lg:hidden">
-              <JoinUs button="quinary" fgColor="black" />
+              <JoinUs button="quinary" fgColor="white" />
             </div>
           )}
         </div>
