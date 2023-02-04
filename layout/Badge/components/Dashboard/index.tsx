@@ -11,18 +11,35 @@ import { useAuth } from "@context/Auth";
 
 import Return from "@components/Return";
 
-const navigation = [
-  "profile",
-  "wheel",
-  "badgedex",
-  "leaderboard",
-  "store",
-  "vault",
-];
+const navigation = ["scanner", "visitors"];
 
 export default function Dashboard({ title, href, description, children }) {
   const { logout, user } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  let navigation;
+  let app;
+  console.log(user);
+  if (user.type == "sponsor") {
+    navigation = ["scanner", "visitors"];
+    app = "sponsor";
+  } else if (user.type == "attendee") {
+    navigation = [
+      "profile",
+      "wheel",
+      "badgedex",
+      "leaderboard",
+      "store",
+      "vault",
+    ];
+    app = "attendee";
+  } else if (user.type == "admin") {
+    navigation = ["scanner", "visitors", "badges", "users", "events"];
+    app = "admin";
+  } else if (user.type == "manager") {
+    navigation = ["badges", "prizes", "identifier"];
+    app = "manager";
+  }
 
   const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
     return (
@@ -72,8 +89,14 @@ export default function Dashboard({ title, href, description, children }) {
                   </button>
                 </div>
                 <nav className="flex-1">
+                  <div className="text-md my-6 px-4 text-white">
+                    <p className="font-ibold">You have:</p>
+                    <p className="font-iregular">
+                      💰 {user.token_balance} Tokens
+                    </p>
+                  </div>
                   {navigation.map((item) => (
-                    <Link key={item} href={`/attendee/${item}`} passHref>
+                    <Link key={item} href={`/${app}/${item}`} passHref>
                       <a
                         className={classNames(
                           item == href
@@ -122,13 +145,19 @@ export default function Dashboard({ title, href, description, children }) {
             <div className="mt-20 mb-2 flex flex-shrink-0 items-center px-4">
               <Image src="/images/sei-logo.svg" width="220" height="120" />
             </div>
-            <div className="text-md my-6 px-4 text-white">
-              <p className="font-ibold">You have:</p>
-              <p className="font-iregular">💰 {user.token_balance} Tokens</p>
-            </div>
             <nav className="flex-1">
+              {user?.type == "attendee" ? (
+                <div className="text-md my-6 px-4 text-white">
+                  <p className="font-ibold">You have:</p>
+                  <p className="font-iregular">
+                    💰 {user.token_balance} Tokens
+                  </p>
+                </div>
+              ) : (
+                <></>
+              )}
               {navigation.map((item) => (
-                <Link key={item} href={`/attendee/${item}`} passHref>
+                <Link key={item} href={`/${app}/${item}`} passHref>
                   <a
                     key={item}
                     className={classNames(

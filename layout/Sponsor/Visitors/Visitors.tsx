@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { withAuth, useAuth } from "@context/Auth";
 import Base from "../components/Base";
+import Pagination from "../components/Pagination";
 import { getCompanyVisitors } from "@lib/api";
 
 interface Props {}
@@ -12,11 +13,22 @@ interface Visitor {
   avatar: string;
 }
 
-const navigation = ["scanner", "dashboard", "visitors"];
+const navigation = ["scanner", "visitors"];
 
 const SponsorVisitors: React.FC<Props> = () => {
   const { user } = useAuth();
   const [visitors, setVisitors] = useState<Visitor[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [visitorsPerPage] = useState(30);
+
+  const indexOfLastVisitor = currentPage * visitorsPerPage;
+  const indexOfFirstVisitor = indexOfLastVisitor - visitorsPerPage;
+  const currentVisitors = visitors.slice(
+    indexOfFirstVisitor,
+    indexOfLastVisitor
+  );
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   useEffect(() => {
     getCompanyVisitors(user.id)
@@ -36,22 +48,28 @@ const SponsorVisitors: React.FC<Props> = () => {
       navigation={navigation}
     >
       <div className="mt-5 h-screen text-white">
-        <div className="grid grid-cols-3 lg:grid-cols-5">
-          {visitors.map((visitor) => (
+        <div className="grid grid-cols-1 lg:grid-cols-4">
+          {currentVisitors.map((visitor) => (
             <a
               href={`/attendees/${visitor.id}`}
-              className="m-2 mb-4 flex flex-col items-center justify-center rounded-lg border-2 p-2"
+              className="hover:b-4 m-2 mb-4 flex flex-col items-center justify-center rounded-lg p-2 hover:border-blue-500"
             >
               <img
                 src={visitor.avatar}
-                width={100}
-                height={100}
-                className="rounded-full"
+                className="mb-2 h-40 w-40 rounded-full border-2 border-white object-cover hover:border-pink-500"
               />
               <p className="text-center">{visitor.name}</p>
               <p className="text-center">{visitor.email}</p>
             </a>
           ))}
+        </div>
+        <div className="mt-5">
+          <Pagination
+            visitorsPerPage={visitorsPerPage}
+            totalVisitors={visitors.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
         </div>
       </div>
     </Base>

@@ -128,7 +128,7 @@ function Profile() {
               name="name"
               value={user.name || ""}
               bgColor="white"
-              fgColor="black"
+              fgColor="white"
               enabled={false}
             />
             <Input
@@ -137,7 +137,7 @@ function Profile() {
               name="username"
               value={username}
               bgColor="white"
-              fgColor="black"
+              fgColor="white"
               enabled={editing}
               onChange={(e) => setUsername(e.currentTarget.value)}
             />
@@ -156,9 +156,17 @@ function Profile() {
 
         <div className="col-span-1 float-right w-full xl:w-1/2 xl:pl-6">
           <div>
-            <Heading text="Achievements"></Heading>
-
-            <div className="grid-cols-2 overflow-hidden">
+            <Heading text="Achievements">
+              <button
+                className="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary opacity-0 shadow-sm"
+                type="submit"
+                form="profile-form"
+                disabled
+              >
+                {editing ? "Save Changes" : "Edit"}
+              </button>
+            </Heading>
+            <div className="grid-cols-2 overflow-hidden text-white">
               <div className="col-span-1 float-left w-1/2 font-iregular">
                 💰 {user.token_balance} Tokens
               </div>
@@ -167,7 +175,7 @@ function Profile() {
               </div>
             </div>
 
-            <div className="mt-4 grid-cols-2 overflow-hidden">
+            <div className="mt-4 grid-cols-2 overflow-hidden text-white">
               <div className="col-span-1 float-left w-1/2 font-iregular">
                 🏆 {user.entries} Entries Final Draw
               </div>
@@ -177,7 +185,7 @@ function Profile() {
             </div>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 text-white">
             <Heading text="Checkpoints"></Heading>
             <p className="font-iregular">
               <b className="font-ibold">Level 1</b> 5 companies &rarr; +
@@ -199,7 +207,7 @@ function Profile() {
             <CheckpointTracker checkpoints={4} progress={level} />
 
             {level != 4 && (
-              <p className="font-iregular">
+              <p className="font-iregular text-white">
                 You just need {neededBadges} more badges to go to Level{" "}
                 {level + 1} (and win +{levelEntries[level]} entries to the final
                 draw). Hurry!
@@ -207,14 +215,14 @@ function Profile() {
             )}
           </div>
 
-          <div className="my-10">
+          <div className="my-10 text-white">
             <Heading text="Redeem referral code" />
             <p className="font-iregular">Redeem a badge using a unique code</p>
 
             <CodeInput />
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 text-white">
             <Heading text="Upload CV" />
             <p className="font-iregular">
               Get a chance to win a spot at the Corporate dinner by submiting

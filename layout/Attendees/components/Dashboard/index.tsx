@@ -11,14 +11,7 @@ import { useAuth } from "@context/Auth";
 
 import Return from "@components/Return";
 
-const navigation = [
-  "profile",
-  "wheel",
-  "badgedex",
-  "leaderboard",
-  "store",
-  "vault",
-];
+const navigation = ["scanner", "visitors"];
 
 export default function Dashboard({ title, href, description, children }) {
   const { logout, user } = useAuth();
@@ -73,7 +66,7 @@ export default function Dashboard({ title, href, description, children }) {
                 </div>
                 <nav className="flex-1">
                   {navigation.map((item) => (
-                    <Link key={item} href={`/attendee/${item}`} passHref>
+                    <Link key={item} href={`/sponsor/${item}`} passHref>
                       <a
                         className={classNames(
                           item == href
@@ -122,13 +115,9 @@ export default function Dashboard({ title, href, description, children }) {
             <div className="mt-20 mb-2 flex flex-shrink-0 items-center px-4">
               <Image src="/images/sei-logo.svg" width="220" height="120" />
             </div>
-            <div className="text-md my-6 px-4 text-white">
-              <p className="font-ibold">You have:</p>
-              <p className="font-iregular">💰 {user.token_balance} Tokens</p>
-            </div>
             <nav className="flex-1">
               {navigation.map((item) => (
-                <Link key={item} href={`/attendee/${item}`} passHref>
+                <Link key={item} href={`/sponsor/${item}`} passHref>
                   <a
                     key={item}
                     className={classNames(

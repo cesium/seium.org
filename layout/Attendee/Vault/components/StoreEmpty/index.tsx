@@ -5,7 +5,7 @@ export default function StoreEmpty({ products }) {
         <div className="text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="mx-auto h-12 w-12 text-gray-400"
+            className="mx-auto h-12 w-12 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -17,15 +17,15 @@ export default function StoreEmpty({ products }) {
               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
             />
           </svg>
-          <h2 className="mt-2 text-lg font-medium text-gray-900">Buy Prizes</h2>
-          <p className="mt-1 text-sm text-gray-500">
+          <h2 className="mt-2 text-lg font-medium text-white">Buy Prizes</h2>
+          <p className="mt-1 text-sm text-white">
             You haven’t purchased any prizes from the store yet. Spen your
             tokens wisely.
           </p>
         </div>
       </div>
       <div className="mt-10">
-        <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-white">
           Prizes that you can still purchase
         </h3>
         <ul
@@ -50,10 +50,10 @@ export default function StoreEmpty({ products }) {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-gray-900">
+                      <p className="truncate text-sm font-medium text-white">
                         {product.name}
                       </p>
-                      <p className="truncate text-sm font-medium text-gray-500">
+                      <p className="truncate text-sm font-medium text-white">
                         {" "}
                         💰 {product.price}{" "}
                       </p>

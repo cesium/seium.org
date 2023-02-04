@@ -176,7 +176,7 @@ function WheelPage() {
       title="Wheel"
       description="Spin the wheel and win awards!"
     >
-      <div className="mt-12 grid-cols-1 overflow-hidden 2xl:grid-cols-2">
+      <div className="mt-12 grid-cols-1 overflow-hidden text-white 2xl:grid-cols-2">
         <div className="col-span-1 float-left h-full w-full 2xl:w-1/2">
           <Heading text="Achievements">
             <div className="h-full w-40 pt-1">

@@ -62,7 +62,7 @@ export default function Day(props) {
         </div>
 
         <div className={`-mt-8 md:-mt-10 ${styles.dateWrapper}`}>
-          <h5 className={`font-ibold text-2xl text-quinary md:text-3xl`}>
+          <h5 className={`font-ibold text-2xl text-white md:text-3xl`}>
             {date_string}
           </h5>
           <h2
