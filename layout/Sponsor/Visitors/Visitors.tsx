@@ -30,10 +30,13 @@ const SponsorVisitors: React.FC<Props> = () => {
   );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const [downloading, setDownloading] = useState<boolean>(false);
 
   const downloadCVs = () => {
-    downloadCVInBulk(user.id).then((response) => {
-      /*
+    setDownloading(true);
+    downloadCVInBulk(user.id)
+      .then((response) => {
+        /*
       The way the download works is by creating a temporary
       URL for the zip file the backend returns to live in, and
       then forcing a download by programmatically click a link
@@ -41,19 +44,20 @@ const SponsorVisitors: React.FC<Props> = () => {
 
       Source: https://stackoverflow.com/questions/41938718/how-to-download-files-using-axios
        */
-      const href = URL.createObjectURL(response);
-      const link = document.createElement("a");
-      //Make sure the element is not visible
-      link.classList.add("hidden");
-      link.href = href;
-      link.setAttribute("download", "sei_cvs.zip");
-      document.body.appendChild(link);
-      link.click();
+        const href = URL.createObjectURL(response);
+        const link = document.createElement("a");
+        //Make sure the element is not visible
+        link.classList.add("hidden");
+        link.href = href;
+        link.setAttribute("download", "sei_cvs.zip");
+        document.body.appendChild(link);
+        link.click();
 
-      //clean up
-      document.body.removeChild(link);
-      URL.revokeObjectURL(href);
-    });
+        //clean up
+        document.body.removeChild(link);
+        URL.revokeObjectURL(href);
+      })
+      .finally(() => setDownloading(false));
   };
 
   useEffect(() => {
@@ -75,10 +79,10 @@ const SponsorVisitors: React.FC<Props> = () => {
     >
       <div className="mt-5 h-screen text-white">
         <button
-            className="m-auto mb-5 block rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
-            onClick={downloadCVs}
-          >
-            Download All CV&apos;s
+          className="m-auto mb-5 block rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
+          onClick={downloadCVs}
+        >
+          {downloading ? "Downloading" : "Download All CV's"}
         </button>
         <div className="grid grid-cols-1 lg:grid-cols-4">
           {currentVisitors.map((visitor) => (
