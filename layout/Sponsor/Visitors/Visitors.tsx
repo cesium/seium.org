@@ -78,12 +78,14 @@ const SponsorVisitors: React.FC<Props> = () => {
       navigation={navigation}
     >
       <div className="mt-5 h-screen text-white">
-        <button
-          className="m-auto mb-5 block rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
-          onClick={downloadCVs}
-        >
-          {downloading ? "Downloading" : "Download All CV's"}
-        </button>
+        {visitors.filter((v) => v.cv != null).length > 0 && (
+          <button
+            className="m-auto mb-5 block rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
+            onClick={downloadCVs}
+          >
+            {downloading ? "Downloading" : "Download All CV's"}
+          </button>
+        )}
         <div className="grid grid-cols-1 lg:grid-cols-4">
           {currentVisitors.map((visitor) => (
             <div
