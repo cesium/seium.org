@@ -13,7 +13,6 @@ function isTouchDevice() {
 let touch = isTouchDevice();
 
 const Animation = (props) => {
-
   var [path1_backup, path2_backup, path3_backup] = PointSetChooser(props.type);
 
   function getHighestPoint(list) {

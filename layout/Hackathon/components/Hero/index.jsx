@@ -7,13 +7,15 @@ import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
 
-const Animation = dynamic(() => import("@components/Animation"), { ssr: false });
+const Animation = dynamic(() => import("@components/Animation"), {
+  ssr: false,
+});
 
 export default function Hero() {
   return (
     <div className="overflow-hidden bg-secondary">
       <div className="spacing relative z-20 pb-32">
-        <Animation type="1"/>
+        <Animation type="1" />
         <div className="pt-2">
           <Title />
         </div>

@@ -67,8 +67,10 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     <div className="flex flex-auto gap-x-20">
                       <div
                         className={`grid ${
-                          isAuthenticated ? "grid-cols-3" : "grid-cols-4"
-                        } gap-x-20 gap-y-6 xl:gap-y-0`}
+                          isAuthenticated
+                            ? "grid-cols-3 gap-y-8"
+                            : "grid-cols-4 gap-y-4"
+                        } gap-x-20`}
                       >
                         {navigation.map((item) => (
                           <Link key={item.slug} href={item.slug} passHref>
