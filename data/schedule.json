@@ -103,7 +103,8 @@
         "summary": "Yari Labs - Blockchain 101: Assets Digitais - Tokens, NFTs e Smart-Contracts",
         "description": "Vamos apresentar conceitos de Tokens Fungíveis, Não fungíveis e Aplicações Descentralizadas. Os participantes irão sair do workshop com um ambiente de desenvolvimento em Python para criar DApps na blockchain de Algorand. Vamos criar tokens, NFTs utilizando IPFS (Interplanetary Filesystem) e Smart-contracts. No final todos participantes irão receber uma paper wallet contendo um NFT com um certificado de participação que poderão importar para a wallets utilizadas durante o workshop!",
         "author": "Emanuel Mota & Pedro Costa",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-blockchain-101-assets-digitais-tokens-nfts-e-smart-contracts-529582735217"
       },
       {
         "startTime": "09:00",
@@ -112,7 +113,8 @@
         "summary": "Deloitte - How to detect a data breach by an authorized user",
         "description": "Simulate a suspicious behaviour of an authorised user in a corporate application that is downloading a large amount of very sensitive information outside business hours. See how a Data Masking and Data Logging platform can help to detect this type of attacks and rapidly start an investigation and block these activities.⁣",
         "author": "André Sousa",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-how-to-detect-a-data-breach-executed-by-an-authorized-user-529505865297"
       },
       {
         "startTime": "09:00",
@@ -121,7 +123,8 @@
         "summary": "XPand IT - Unleash Data Visualization with Tableau",
         "description": "",
         "author": "Margarida Cunha",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-unleash-data-visualization-with-tableau-531472447397"
       },
       {
         "activityType": "Coffee Break",
@@ -203,11 +206,11 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Salesforce Tech Session",
+        "summary": "Accenture - Salesforce Tech Session",
         "description": "Accenture - Explicar o que é Salesforce, a importância da adoção de soluções como Salesforce na transformação digital e transição para a cloud; o trabalho realizado pela Accenture em Salesforce e demonstrações práticas das potencialidades da plataforma.",
         "author": "Alexandre Gomes",
         "location": "",
-        "hyperlink": ""
+        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-salesforce-tech-session-529528071717"
       },
       {
         "startTime": "09:00",
@@ -217,7 +220,7 @@
         "description": "Neste workshop terão a oportunidade de entender o processo de desenvolvimento de um produto tecnológico.",
         "author": "André Mota & Catarina Caçote",
         "location": "",
-        "hyperlink": ""
+        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-from-zero-to-hero-how-to-build-a-product-from-scratch-529526868117"
       },
       {
         "startTime": "09:00",
@@ -227,7 +230,7 @@
         "description": "Artificial Intelligence (AI) is proven to enhance and assist human efforts to produce software faster. Also, it can leverage the detection of software vulnerabilities, explain how to prevent their exploitation and, going forward, remediate these issues on its own. But, does this mean that AI will completely replace humans in these areas? There are pros and cons, and a clear answer to that question. In this workshop we will talk about modern application development, modern application security and the role that recent AI approaches play in these areas. Together, we will look for the answer to that fundamental question, with examples and interactive exercises.",
         "author": "Rui Gomes & Raphael Silva",
         "location": "",
-        "hyperlink": ""
+        "hyperlink": "https://www.eventbrite.com/e/bilhetes-workshop-the-role-of-ai-in-assisting-application-development-and-security-534493864537"
       },
       {
         "activityType": "Coffee Break",
@@ -312,7 +315,7 @@
         "description": "",
         "author": "Filipa Coelho & Osvaldo Ferreira",
         "location": "",
-        "hyperlink": ""
+        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-how-to-improve-your-cv-app-development-digital-transformation-529534922207"
       },
       {
         "startTime": "09:00",
@@ -322,7 +325,7 @@
         "description": "",
         "author": "João Ferreiro",
         "location": "",
-        "hyperlink": ""
+        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-introduction-to-mobile-web3-development-with-react-native-529540037507"
       },
       {
         "startTime": "09:00",
