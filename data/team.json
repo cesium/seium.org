@@ -3,11 +3,11 @@
     "title": "Main Organization",
     "list": [
       {
-        "avatar": "mascote.png",
+        "avatar": "beatrizrodrigues.png",
         "name": "Beatriz Rodrigues"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "goncalorodrigues.png",
         "name": "Gonçalo Rodrigues"
       }
     ]
@@ -16,23 +16,23 @@
     "title": "Marketing",
     "list": [
       {
-        "avatar": "mascote.png",
+        "avatar": "gabrielaprata.png",
         "name": "Gabriela Prata"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "gustavopereira.png",
         "name": "Gustavo Pereira"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "alexandreneves.png",
         "name": "Alexandre Neves"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "adrianafrazao.png",
         "name": "Adriana Frazão"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "juliopinto.png",
         "name": "Júlio Pinto"
       }
     ]
@@ -41,11 +41,11 @@
     "title": "Program",
     "list": [
       {
-        "avatar": "mascote.png",
+        "avatar": "millenafreitas.png",
         "name": "Millena Freitas"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "ritavaz.png",
         "name": "Rita Vaz"
       }
     ]
@@ -54,15 +54,15 @@
     "title": "Sponsorships",
     "list": [
       {
-        "avatar": "mascote.png",
+        "avatar": "dianateixeira.png",
         "name": "Diana Teixeira"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "afonsomagalhaes.png",
         "name": "Afonso Magalhães"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "franciscotoldy.png",
         "name": "Francisco Toldy"
       }
     ]
@@ -71,43 +71,35 @@
     "title": "Tech",
     "list": [
       {
-        "avatar": "mascote.png",
+        "avatar": "filipefelicio.png",
         "name": "Filipe Felicio"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "ruioliveira.png",
         "name": "Rui Oliveira"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "ruilopes.png",
         "name": "Rui Lopes"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "tiagobacelar.png",
         "name": "Tiago Bacelar"
       },
       {
-        "avatar": "mascote.png",
-        "name": "Ruben Adão"
-      },
-      {
-        "avatar": "mascote.png",
+        "avatar": "arturleite.png",
         "name": "Artur Leite"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "guilhermefernandes.png",
         "name": "Guilherme Fernandes"
       },
       {
-        "avatar": "mascote.png",
+        "avatar": "enzovieira.png",
         "name": "Enzo Vieira"
       },
       {
-        "avatar": "mascote.png",
-        "name": "Rodrigo Pereira"
-      },
-      {
-        "avatar": "mascote.png",
+        "avatar": "mariorodrigues.png",
         "name": "Mário Rodrigues"
       }
     ]
@@ -116,8 +108,21 @@
     "title": "Merch",
     "list": [
       {
-        "avatar": "mascote.png",
+        "avatar": "gersonjunior.png",
         "name": "Gerson Júnior"
+      }
+    ]
+  },
+  "media": {
+    "title": "Media",
+    "list": [
+      {
+        "avatar": "rafaellopes.png",
+        "name": "Rafael Lopes"
+      },
+      {
+        "avatar": "pedrogil.png",
+        "name": "Pedro Gil"
       }
     ]
   }
