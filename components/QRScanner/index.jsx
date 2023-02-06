@@ -39,13 +39,13 @@ function QRScanner({
 
   return (
     <div className="grid-cols-1, grid gap-6">
-      <div className="m-auto block flex h-16  w-1/2 items-center justify-center rounded-2xl bg-quinary text-black">
+      <div className="m-auto flex h-16  w-1/2 items-center justify-center rounded-2xl bg-quinary text-black">
         <p className="font-ibold font-bold">{text}</p>
       </div>
       <BarebonesQRScanner handleCode={handleCode} pauseRef={pauseRef} />
       <div className="w-auto">
         <div
-          className={`${feedback.color} m-auto block flex h-16 w-full items-center justify-center rounded-2xl`}
+          className={`${feedback.color} m-auto flex h-16 w-full items-center justify-center rounded-2xl`}
         >
           <p className="font-ibold font-bold">{feedback.message}</p>
         </div>
