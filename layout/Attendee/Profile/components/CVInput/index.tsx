@@ -10,11 +10,18 @@ export default function CVInput({ cv, onSubmit }) {
     setConsent(!consent);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    if (consent) {
-      e.preventDefault();
-      onSubmit(file);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!consent) {
+      return;
+    }
+
+    try {
+      await onSubmit(file);
       alert("CV sent successfully");
+    } catch (error) {
+      alert("Error sending CV, please try again later");
     }
   };
 
