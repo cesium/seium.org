@@ -10,7 +10,8 @@ import Balance from "@components/Balance";
 import Dashboard from "@components/Dashboard";
 
 function ProductSlug() {
-  const [product, updateProduct] = useState({});
+  // TODO: add type to product
+  const [product, updateProduct] = useState<any>({});
   const router = useRouter();
   const { user, refetchUser } = useAuth();
 
@@ -22,7 +23,7 @@ function ProductSlug() {
         updateProduct(response.data.data);
       })
       .catch((_) => router.replace("/404"));
-  }, [needsUpdate]);
+  }, [router, needsUpdate]);
 
   const message =
     product.can_buy != 0
@@ -36,18 +37,18 @@ function ProductSlug() {
         badge_count={user.badge_count}
       />
 
-      <div className="bg-white">
+      <div className="bg-primary">
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           {/* Product details */}
           <div className="lg:max-w-lg lg:self-end">
             <Link href="/attendee/store">
-              <a className="text-center font-imedium text-secondary">
+              <a className="text-center font-imedium text-quinary">
                 &lt; Back to store
               </a>
             </Link>
 
             <div className="mt-4">
-              <h1 className="font-iextrabold text-6xl tracking-tight text-primary">
+              <h1 className="font-iextrabold text-6xl tracking-tight text-white">
                 {product.name}
               </h1>
             </div>
@@ -61,7 +62,7 @@ function ProductSlug() {
 
           {/* Product image */}
           <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-            <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
+            <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-white">
               <img
                 src={product.image}
                 alt={product.name}
@@ -80,8 +81,8 @@ function ProductSlug() {
               <div className="mt-10">
                 {product.can_buy > 0 && product.stock > 0 && (
                   <button
-                    onClick={(e) =>
-                      buyProduct(product.id).then((response) => {
+                    onClick={() =>
+                      buyProduct(product.id).then(() => {
                         updateProductInfo((needsUpdate) => !needsUpdate);
                         refetchUser();
                       })
@@ -94,10 +95,10 @@ function ProductSlug() {
                 )}
               </div>
               <div className="mt-6 text-center">
-                <p className="font-ibold font-bold">
+                <p className="font-ibold font-bold text-white">
                   {product.stock} available
                 </p>
-                <p className="font-iregular">{message}</p>
+                <p className="font-iregular text-white">{message}</p>
               </div>
             </section>
           </div>
