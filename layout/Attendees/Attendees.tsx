@@ -20,7 +20,9 @@ function Profile() {
       .then((response) => {
         updateAttendee(response.data);
       })
-      .catch((_) => router.replace("/404"));
+      .catch((error) => {
+        router.replace("/404");
+      });
   }, []);
 
   if (!attendee) return null;
