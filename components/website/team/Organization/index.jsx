@@ -108,6 +108,10 @@ export default function Organization() {
         title={team["merch"].title}
         list={sortListMembers(team["merch"].list)}
       />
+      <Team
+        title={team["media"].title}
+        list={sortListMembers(team["media"].list)}
+      />
     </section>
   );
 }
