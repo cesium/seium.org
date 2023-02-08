@@ -105,6 +105,7 @@ const MobileNavbar = ({
 export default function Dashboard({
   title,
   href,
+  baseHref = "/manager",
   description,
   navigation,
   children,
@@ -131,7 +132,7 @@ export default function Dashboard({
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
-                <Link key={item} href={`/manager/${item}`} passHref>
+                <Link key={item} href={`${baseHref}/${item}`} passHref>
                   <a
                     key={item}
                     className={classNames(
