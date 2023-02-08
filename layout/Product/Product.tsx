@@ -95,7 +95,8 @@ function ProductSlug() {
                         refetchUser();
                       })
                     }
-                    className="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75"
+                    className="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:opacity-75"
+                    disabled={user.token_balance < product.price}
                   >
                     <p className="font-ibold font-bold">REDEEM</p>
                     <p className="font-iregular">{product.price} tokens 💰</p>
