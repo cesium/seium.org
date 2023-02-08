@@ -81,15 +81,6 @@
         "description": "",
         "author": "Paulo Dimas & Rui Lopes & Henrique Pereira",
         "location": ""
-      },
-      {
-        "startTime": "21:00",
-        "endTime": "00:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
-        "location": ""
       }
     ]
   },
@@ -326,16 +317,6 @@
         "author": "João Ferreiro",
         "location": "",
         "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-introduction-to-mobile-web3-development-with-react-native-529540037507"
-      },
-      {
-        "startTime": "09:00",
-        "endTime": "11:00",
-        "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "",
-        "hyperlink": ""
       },
       {
         "activityType": "Coffee Break",
