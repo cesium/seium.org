@@ -7,9 +7,16 @@ import { getProduct, buyProduct } from "@lib/api";
 import { withAuth, useAuth } from "@context/Auth";
 
 import Balance from "@components/Balance";
-import Base from "@components/Base";
+import Base from "layout/Product/components/Base.jsx";
 
-const navigation = ["dashboard", "spotlight"];
+const navigation = [
+  "profile",
+  "wheel",
+  "badgedex",
+  "leaderboard",
+  "store",
+  "vault",
+];
 
 function ProductSlug() {
   // TODO: add type to product
