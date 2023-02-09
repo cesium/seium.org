@@ -16,8 +16,10 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@context/*": ["context/*"],
       "@components/*": ["components/*"],
       "@data/*": ["data/*"],
+      "@layout/*": ["layout/*"],
       "@lib/*": ["lib/*"]
     }
   },

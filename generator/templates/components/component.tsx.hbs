@@ -1,0 +1,13 @@
+{{#if shouldAddStyles}}
+import styles from "./style.module.css";
+
+{{/if}}
+type {{pascalCase name}}Props = {};
+
+export default function {{pascalCase name}}(props: {{pascalCase name}}Props) {
+  return (
+    <div {{#if shouldAddStyles}}className={styles.container}{{/if}}>
+      <h1>{{pascalCase name}}</h1>
+    </div>
+  );
+}
