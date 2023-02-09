@@ -68,12 +68,12 @@ const MobileNavbar = ({
               </div>
               <nav className="mt-5 flex-1">
                 {navigation.map((item) => (
-                  <Link key={item} href={`/manager/${item}`} passHref>
+                  <Link key={item} href={`/${item}`} passHref>
                     <a
                       className={classNames(
                         item == href
-                          ? "bg-primary text-quinary"
-                          : "text-white hover:bg-primary hover:bg-opacity-50",
+                          ? "bg-secondary text-quinary"
+                          : "text-white hover:bg-secondary hover:bg-opacity-50",
                         "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
                       )}
                     >
@@ -105,7 +105,6 @@ const MobileNavbar = ({
 export default function Dashboard({
   title,
   href,
-  baseHref = "/manager",
   description,
   navigation,
   children,
@@ -123,8 +122,8 @@ export default function Dashboard({
         logout={logout}
       />
 
-      <div className="hidden border-r-2 lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">
-        <div className="flex min-h-0 flex-1 flex-col bg-secondary">
+      <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">
+        <div className="flex min-h-0 flex-1 flex-col border-r-2 bg-secondary">
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
             <div className="mt-20 flex flex-shrink-0 items-center px-4">
@@ -132,13 +131,13 @@ export default function Dashboard({
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
-                <Link key={item} href={`${baseHref}/${item}`} passHref>
+                <Link key={item} href={`/attendee/${item}`} passHref>
                   <a
                     key={item}
                     className={classNames(
                       item == href
-                        ? "bg-primary text-quinary"
-                        : "text-white hover:bg-primary hover:bg-opacity-50",
+                        ? "bg-secondary text-quinary"
+                        : "text-white hover:bg-secondary hover:bg-opacity-50",
                       "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
                     )}
                   >
@@ -158,18 +157,18 @@ export default function Dashboard({
         </div>
       </div>
       <div className="flex flex-1 flex-col lg:pl-64">
-        <div className="sticky top-0 z-10 flex justify-end bg-primary pt-1 pl-1 sm:pl-3 sm:pt-3 lg:hidden">
+        <div className="sticky top-0 z-10 flex justify-end pt-1 pl-1 sm:pl-3 sm:pt-3 lg:hidden">
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
             onClick={() => setSidebarOpen(true)}
           >
             <span className="sr-only">Open sidebar</span>
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <main className="min-h-screen flex-1 bg-primary">
-          <div className="py-6">
+        <main className="flex-1 bg-secondary">
+          <div className="py-6 ">
             <div className="max-w-7xl px-4 sm:px-6 lg:mx-20 lg:px-8">
               <p className="font-ibold text-5xl text-white lg:pt-20">{title}</p>
               <p className="pt-2 font-iregular text-lg text-white">
