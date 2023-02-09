@@ -13,14 +13,14 @@
     "preview": "netlify deploy --build --context deploy-preview",
     "deploy": "netlify deploy --build --prod",
     "fmt": "npx npm-run-all format",
-    "format": "npx prettier --ignore-path .gitignore '!**/*.hbs' --write .",
+    "format": "npx prettier --ignore-path .gitignore --write .",
     "test": "npm-run-all test:*",
     "test:lint": "npm-run-all test:lint:*",
     "test:lint:js": "next lint",
     "test:format": "npx prettier --check . --ignore-path .gitignore '!**/*.hbs'"
   },
   "lint-staged": {
-    "**/!(*.hbs)": "prettier --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown"
   },
   "engines": {
     "node": ">=16.0.0",
