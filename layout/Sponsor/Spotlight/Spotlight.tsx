@@ -33,7 +33,7 @@ const Spotlight: React.FC<Props> = () => {
           </div>
 
           <div className="mt-5 ml-3  w-3/4">
-            <SpotlightButton sponsor="Subvisual" />
+            {/*<SpotlightButton sponsor="Subvisual" />*/}
           </div>
         </div>
       </div>
