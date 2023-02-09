@@ -40,13 +40,7 @@ function ProductSlug() {
       : "You already reached the redeem limit";
 
   return (
-    <Base
-      href="store"
-      baseHref="/product"
-      title="Store"
-      description=""
-      navigation={navigation}
-    >
+    <Base href="store" title="Store" description="" navigation={navigation}>
       <Balance
         token_balance={user.token_balance}
         badge_count={user.badge_count}

@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from "react";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
-  customStyle: string;
+  customStyle?: string;
 }
 
 export default function Button({

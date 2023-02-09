@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from "./Attendees";
+export { default } from "./Attendees";
