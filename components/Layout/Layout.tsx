@@ -8,15 +8,12 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { useAuth } from "@context/Auth";
 
-// TODO: The navigation should become a parameter passed to the component
-const navigation = [
-  "profile",
-  "wheel",
-  "badgedex",
-  "leaderboard",
-  "store",
-  "vault",
-];
+const navigation = {
+  sponsor: ["scanner", "visitors"],
+  attendee: ["profile", "wheel", "badgedex", "leaderboard", "store", "vault"],
+  admin: ["scanner", "visitors", "badges", "users", "events"],
+  manager: ["badges", "prizes", "identifier"],
+};
 
 type LayoutProps = {
   title?: string;
@@ -43,8 +40,9 @@ export default function Layout({ title, description, children }: LayoutProps) {
     <div className="text-white lg:flex">
       <MobileNavbar
         isOpen={isNavbarOpen}
-        onClose={closeNavbar}
+        links={navigation[user.type]}
         currentHref={currentHref}
+        onClose={closeNavbar}
         onLogout={logout}
       />
 
@@ -66,12 +64,14 @@ export default function Layout({ title, description, children }: LayoutProps) {
             />
           </div>
 
-          <div className="text-md mt-2 mb-4 text-white">
-            <p className="font-ibold">You have:</p>
-            <p className="font-iregular">💰 {user.token_balance} Tokens</p>
-          </div>
+          {user.type === "attendee" && (
+            <div className="text-md mt-2 mb-4 text-white">
+              <p className="font-ibold">You have:</p>
+              <p className="font-iregular">💰 {user.token_balance} Tokens</p>
+            </div>
+          )}
 
-          {navigation.map((link) => (
+          {navigation[user.type].map((link) => (
             <ActiveLink key={link} link={link} href={currentHref} />
           ))}
         </nav>
@@ -107,6 +107,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
 
 interface IMobileNavbarProps {
   isOpen: boolean;
+  links: string[];
   currentHref: string;
   onClose: () => void;
   onLogout: () => void;
@@ -114,6 +115,7 @@ interface IMobileNavbarProps {
 
 function MobileNavbar({
   isOpen,
+  links,
   currentHref,
   onClose,
   onLogout,
@@ -162,7 +164,7 @@ function MobileNavbar({
                 </div>
 
                 <nav className="flex flex-col">
-                  {navigation.map((link) => (
+                  {links.map((link) => (
                     <ActiveLink key={link} link={link} href={currentHref} />
                   ))}
                 </nav>

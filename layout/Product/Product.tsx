@@ -10,15 +10,6 @@ import Balance from "@components/Balance";
 
 import Layout from "@components/Layout";
 
-const navigation = [
-  "profile",
-  "wheel",
-  "badgedex",
-  "leaderboard",
-  "store",
-  "vault",
-];
-
 function ProductSlug() {
   // TODO: add type to product
   const [product, updateProduct] = useState<any>({});

@@ -5,7 +5,7 @@ import { withAuth } from "@context/Auth";
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";
 
-import Dashboard from "./components/Dashboard";
+import Layout from "@components/Layout";
 import Heading from "@components/Heading";
 import { getAttendee, isAttendeeRegistered } from "@lib/api";
 
@@ -27,8 +27,7 @@ function Profile() {
 
   if (!attendee) return null;
   return (
-    <Dashboard
-      href="profile"
+    <Layout
       title={`Welcome to ${attendee.name}'s profile!`}
       description={`Welcome to your profile!`}
     >
@@ -78,7 +77,7 @@ function Profile() {
             ))}
         </div>
       </div>
-    </Dashboard>
+    </Layout>
   );
 }
 
