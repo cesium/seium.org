@@ -47,7 +47,7 @@ function Animation({ text }: IAnimationProps) {
         >
           <div className={`-mt-6 ${styles.cardfooter}`}>
             <Card
-              img="/images/mascot-footer.svg"
+              img="/images/void.svg"
               alt="MascotFooter"
               inverted={false}
             >
@@ -86,9 +86,8 @@ export default function Footer(props: IFooterProps) {
 
   return (
     <div
-      className={`spacing ${styles.bgTransition} bg-${props.color}`}
+      className={`spacing ${styles.bgTransition} bg-black`}
       ref={observe}
-      style={{ ...color, overflowY: "hidden" }}
     >
       <div className="justify-center lg:flex">
         <div className="flex-1">
