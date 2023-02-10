@@ -5,7 +5,7 @@ import { withAuth, useAuth } from "@context/Auth";
 import Form from "@components/Form";
 import Input from "@components/Input";
 
-import Dashboard from "../components/Dashboard";
+import Layout from "@components/Layout";
 import Heading from "@components/Heading";
 
 import { CheckpointTracker, CodeInput } from "./components";
@@ -81,8 +81,7 @@ function Profile() {
   };
 
   return (
-    <Dashboard
-      href="profile"
+    <Layout
       title={`Hello, ${getFirstName(user.name)} 👋`}
       description={`Welcome to your profile!`}
     >
@@ -232,7 +231,7 @@ function Profile() {
           </div>
         </div>
       </div>
-    </Dashboard>
+    </Layout>
   );
 }
 

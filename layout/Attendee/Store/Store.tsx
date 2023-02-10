@@ -4,7 +4,8 @@ import { withAuth, useAuth } from "@context/Auth";
 
 import * as api from "@lib/api";
 
-import Dashboard from "../components/Dashboard";
+// import Dashboard from "../components/Dashboard";
+import Layout from "@components/Layout";
 
 import Balance from "@components/Balance";
 import { Product } from "./components";
@@ -21,8 +22,8 @@ function Store() {
   }, []);
 
   return (
-    <Dashboard
-      href="store"
+    <Layout
+      // href="store"
       title="Store"
       description="Buy products with your collected tokens"
     >
@@ -66,7 +67,7 @@ function Store() {
               </div>
             ))}
       </div>
-    </Dashboard>
+    </Layout>
   );
 }
 

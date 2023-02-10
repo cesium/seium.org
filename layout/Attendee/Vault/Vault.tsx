@@ -6,7 +6,7 @@ import * as api from "@lib/api";
 
 import { Prizes, Redeemables, StoreEmpty, WheelEmpty } from "./components";
 
-import Dashboard from "../components/Dashboard";
+import Layout from "@components/Layout";
 import Balance from "@components/Balance";
 
 function Vault() {
@@ -24,8 +24,7 @@ function Vault() {
   }, []);
 
   return (
-    <Dashboard
-      href="vault"
+    <Layout
       title="Vault"
       description="Check the prizes that you have accumulated throughout the week"
     >
@@ -76,7 +75,7 @@ function Vault() {
           )}
         </div>
       )}
-    </Dashboard>
+    </Layout>
   );
 }
 

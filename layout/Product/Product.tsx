@@ -7,7 +7,8 @@ import { getProduct, buyProduct } from "@lib/api";
 import { withAuth, useAuth } from "@context/Auth";
 
 import Balance from "@components/Balance";
-import Base from "layout/Product/components/Base.jsx";
+
+import Layout from "@components/Layout";
 
 const navigation = [
   "profile",
@@ -40,7 +41,7 @@ function ProductSlug() {
       : "You already reached the redeem limit";
 
   return (
-    <Base href="store" title="Store" description="" navigation={navigation}>
+    <Layout title="Store">
       <Balance
         token_balance={user.token_balance}
         badge_count={user.badge_count}
@@ -114,7 +115,7 @@ function ProductSlug() {
           </div>
         </div>
       </div>
-    </Base>
+    </Layout>
   );
 }
 
