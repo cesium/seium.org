@@ -183,10 +183,11 @@
         "startTime": "21:00",
         "endTime": "23:00",
         "activityType": "Social",
-        "summary": "TBA",
+        "summary": "Subvisual Meetup",
         "description": "",
         "author": "",
-        "location": ""
+        "location": "Polo de Negócios de Braga, Av. Dom João II 404 4º andar, Sala 45, 4715-275 Braga",
+        "hyperlink": "https://forms.gle/7Gmq4ZsHh1ife1mE7"
       }
     ]
   },
@@ -326,9 +327,9 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Saber - Creating the biggest Open-World AAA video games in Portugal",
+        "description": "“Creating the biggest Open-World AAA vídeo games in Portugal” pretende ilustrar a evolução do estúdio português (Bigmoon / Saber Interactive Porto), os desafios e ferramentas desenvolvidas para desenvolver os maiores mapas Open-World para videojogos, bem como explicar a estratégia do estúdio, para se tornar num importante polo de desenvolvimento de videojogos AAA, em Portugal.",
+        "author": "Paulo J. Gomes",
         "location": ""
       },
       {
@@ -339,7 +340,7 @@
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "DevOps Talks",
+        "summary": "Accenture - DevOps Talks",
         "description": "Comecei a minha carreira profissional há cerca de 15 anos em Lisboa como Consultor em Change and Configuration Management e desde então esta area evoluiu para o DevOps como conhecemos hoje. Aluno de dissertação na Universidade Do Minho em Mestrado de Engenharia Informática, iniciei a minha carreira profissional há cerca 2 anos na Accenture, na àrea de DevOps, neste periodo trabalhei sempre em projectos na àrea da cloud. ",
         "author": "Rui Oliveira & Ricardo Dias",
         "location": ""
