@@ -308,6 +308,16 @@
         "linkedin": "",
         "href": "",
         "description": ""
+      },
+      {
+        "id": "brunodias",
+        "name": "Bruno Dias",
+        "role": "Professor",
+        "company": "University of Minho",
+        "talk": "Talk. 17h",
+        "linkedin": "",
+        "href": "",
+        "description": ""
       }
     ]
   },
