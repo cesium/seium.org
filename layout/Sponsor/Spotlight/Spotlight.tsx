@@ -1,17 +1,20 @@
 import { withAuth } from "@context/Auth";
-import Base from "../components/Base";
+
 import SpotlightButton from "@layout/moonstone/sponsor/spotlight/SpotlightButton";
+
+import Layout from "@components/Layout";
 
 interface Props {}
 
 const Spotlight: React.FC<Props> = () => {
   const navigation = ["scanner", "dashboard", "spotlight", "visitors"];
+
   return (
-    <Base
-      href="spotlight"
+    <Layout
       title="Spotlight"
       description="Coloque a sua empresa em destaque"
       navigation={navigation}
+      basePath="sponsor"
     >
       <div>
         <div className="mt-8 md:mt-16">
@@ -37,7 +40,7 @@ const Spotlight: React.FC<Props> = () => {
           </div>
         </div>
       </div>
-    </Base>
+    </Layout>
   );
 };
 

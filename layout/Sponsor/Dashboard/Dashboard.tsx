@@ -1,7 +1,9 @@
 import React from "react";
 import { withAuth } from "@context/Auth";
-import Base from "../components/Base";
+
 import Heading from "@components/Heading";
+import Layout from "@components/Layout";
+
 import SponsorPrizeButton from "@layout/moonstone/sponsor/dashboard/SponsorPrizeButton";
 import SponsorBadgeButton from "@layout/moonstone/sponsor/dashboard/SponsorBadgeButton";
 import ParticipantSelector from "@layout/moonstone/sponsor/dashboard/ParticipantSelector";
@@ -15,11 +17,11 @@ const SponsorDashboard: React.FC<Props> = () => {
   const navigation = ["scanner", "dashboard", "visitors"];
 
   return (
-    <Base
-      href="dashboard"
+    <Layout
       title="Dashboard"
       description="Neste local, pode dar badges ao participantes que se encontram no seu stand"
       navigation={navigation}
+      basePath="sponsor"
     >
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
         <div className="mr-3 w-full">
@@ -52,7 +54,7 @@ const SponsorDashboard: React.FC<Props> = () => {
           </div>
         </div>
       </div>
-    </Base>
+    </Layout>
   );
 };
 

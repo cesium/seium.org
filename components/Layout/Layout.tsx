@@ -8,7 +8,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { useAuth } from "@context/Auth";
 
-const navigation = {
+const roleNavigations = {
   sponsor: ["scanner", "visitors"],
   attendee: ["profile", "wheel", "badgedex", "leaderboard", "store", "vault"],
   admin: ["scanner", "visitors", "badges", "users", "events"],
@@ -18,15 +18,24 @@ const navigation = {
 type LayoutProps = {
   title?: string;
   description?: string;
+  basePath?: string;
+  navigation?: string[];
   children: ReactNode;
 };
 
-export default function Layout({ title, description, children }: LayoutProps) {
+export default function Layout({
+  title,
+  description,
+  basePath = "attendee",
+  navigation,
+  children,
+}: LayoutProps) {
   const { user, logout } = useAuth();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const router = useRouter();
 
   const currentHref = router.asPath;
+  const links = navigation || roleNavigations[user.type];
 
   const openNavbar = () => {
     setIsNavbarOpen(true);
@@ -40,7 +49,8 @@ export default function Layout({ title, description, children }: LayoutProps) {
     <div className="text-white lg:flex">
       <MobileNavbar
         isOpen={isNavbarOpen}
-        links={navigation[user.type]}
+        links={links}
+        basePath={basePath}
         currentHref={currentHref}
         onClose={closeNavbar}
         onLogout={logout}
@@ -48,33 +58,40 @@ export default function Layout({ title, description, children }: LayoutProps) {
 
       {/* NAVBAR */}
       <aside className="inset-y-0 hidden w-72 overflow-y-scroll border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
-        <nav className="mt-10 flex flex-col">
-          <Link href="/">
-            <a className="font-iregular text-quinary">
-              &lt; Back to SEI website
-            </a>
-          </Link>
+        <div className="flex flex-1">
+          <nav className="mt-10 flex flex-col">
+            <Link href="/">
+              <a className="font-iregular text-quinary">
+                &lt; Back to SEI website
+              </a>
+            </Link>
 
-          <div className="my-4">
-            <Image
-              src="/images/sei-logo.svg"
-              alt="SEI"
-              width="220"
-              height="120"
-            />
-          </div>
-
-          {user.type === "attendee" && (
-            <div className="text-md mt-2 mb-4 text-white">
-              <p className="font-ibold">You have:</p>
-              <p className="font-iregular">💰 {user.token_balance} Tokens</p>
+            <div className="my-4">
+              <Image
+                src="/images/sei-logo.svg"
+                alt="SEI"
+                width="220"
+                height="120"
+              />
             </div>
-          )}
 
-          {navigation[user.type].map((link) => (
-            <ActiveLink key={link} link={link} href={currentHref} />
-          ))}
-        </nav>
+            {user.type === "attendee" && (
+              <div className="text-md mt-2 mb-4 text-white">
+                <p className="font-ibold">You have:</p>
+                <p className="font-iregular">💰 {user.token_balance} Tokens</p>
+              </div>
+            )}
+
+            {links.map((link) => (
+              <ActiveLink
+                key={link}
+                link={link}
+                basePath={basePath}
+                href={currentHref}
+              />
+            ))}
+          </nav>
+        </div>
 
         <button
           onClick={() => logout()}
@@ -109,6 +126,7 @@ interface IMobileNavbarProps {
   isOpen: boolean;
   links: string[];
   currentHref: string;
+  basePath: string;
   onClose: () => void;
   onLogout: () => void;
 }
@@ -117,6 +135,7 @@ function MobileNavbar({
   isOpen,
   links,
   currentHref,
+  basePath,
   onClose,
   onLogout,
 }: IMobileNavbarProps) {
@@ -165,7 +184,12 @@ function MobileNavbar({
 
                 <nav className="flex flex-col">
                   {links.map((link) => (
-                    <ActiveLink key={link} link={link} href={currentHref} />
+                    <ActiveLink
+                      key={link}
+                      link={link}
+                      basePath={basePath}
+                      href={currentHref}
+                    />
                   ))}
                 </nav>
               </div>
@@ -187,13 +211,14 @@ function MobileNavbar({
 interface IActiveLinkProps {
   link: string;
   href: string;
+  basePath: string;
 }
 
-function ActiveLink({ link, href }: IActiveLinkProps) {
-  const activeStyle = href === `/attendee/${link}` && "text-quinary";
+function ActiveLink({ link, href, basePath }: IActiveLinkProps) {
+  const activeStyle = href === `/${basePath}/${link}` && "text-quinary";
 
   return (
-    <Link href={`/attendee/${link}`}>
+    <Link href={`/${basePath}/${link}`}>
       <a
         className={`py-8 font-ibold text-xs uppercase transition duration-200 hover:text-quinary ${activeStyle}`}
       >
