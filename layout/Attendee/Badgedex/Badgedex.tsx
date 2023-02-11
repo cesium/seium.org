@@ -3,7 +3,7 @@ import { withAuth, useAuth } from "@context/Auth";
 
 import { getAllBadges } from "@lib/api";
 
-import Dashboard from "../components/Dashboard";
+import Layout from "@components/Layout";
 
 import ErrorMessage from "@components/ErrorMessage";
 import Badge from "@components/Badge";
@@ -25,11 +25,7 @@ function Badgedex() {
   }, []);
 
   return (
-    <Dashboard
-      href="badgedex"
-      title="BadgeDex"
-      description="Explore all existing badges"
-    >
+    <Layout title="BadgeDex" description="Explore all existing badges">
       <div className="border-slate-400 pt-10 text-white xl:flex xl:flex-auto">
         <div className="m-auto flex flex-auto space-x-5">
           <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
@@ -77,7 +73,7 @@ function Badgedex() {
               .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
       </div>
       {error && <ErrorMessage />}
-    </Dashboard>
+    </Layout>
   );
 }
 

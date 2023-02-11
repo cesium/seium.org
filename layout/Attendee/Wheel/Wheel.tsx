@@ -3,7 +3,7 @@ import { withAuth, useAuth } from "@context/Auth";
 
 import Heading from "@components/Heading";
 
-import Dashboard from "../components/Dashboard";
+import Layout from "@components/Layout";
 
 import {
   ListItem3Cols,
@@ -171,11 +171,7 @@ function WheelPage() {
     />
   ));
   return (
-    <Dashboard
-      href="wheel"
-      title="Wheel"
-      description="Spin the wheel and win awards!"
-    >
+    <Layout title="Wheel" description="Spin the wheel and win awards!">
       <div className="mt-12 grid-cols-1 overflow-hidden text-white 2xl:grid-cols-2">
         <div className="col-span-1 float-left h-full w-full 2xl:w-1/2">
           <Heading text="Achievements">
@@ -236,7 +232,7 @@ function WheelPage() {
       </div>
       {error && <ErrorMessage />}
       {wheelMessage}
-    </Dashboard>
+    </Layout>
   );
 }
 

@@ -5,7 +5,7 @@ import * as api from "@lib/api";
 
 import { withAuth } from "@context/Auth";
 
-import Base from "@components/Base";
+import Layout from "@components/Layout";
 import Button from "@components/Button";
 
 const navigation = ["badges", "prizes", "identifier"];
@@ -58,11 +58,11 @@ function Prize() {
   };
 
   return (
-    <Base
-      href="prizes"
+    <Layout
       title="Prizes"
       description="Mark a prize as redeemed"
       navigation={navigation}
+      basePath="manager"
     >
       <div className="mt-5">
         <button
@@ -177,7 +177,7 @@ function Prize() {
           </ul>
         </div>
       )}
-    </Base>
+    </Layout>
   );
 }
 

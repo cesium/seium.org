@@ -4,7 +4,7 @@ import { getAllBadges, giveBadge } from "@lib/api";
 
 import { withAuth } from "@context/Auth";
 
-import Base from "@components/Base";
+import Layout from "@components/Layout";
 import ErrorMessage from "@components/ErrorMessage";
 import Filter from "@components/BadgeFilter";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
@@ -71,11 +71,11 @@ function Badges() {
   };
 
   return (
-    <Base
-      href="badges"
+    <Layout
       title="Badges"
       description="Award a badge"
       navigation={navigation}
+      basePath="manager"
     >
       {showScanner ? (
         <div className="mt-5">
@@ -135,7 +135,7 @@ function Badges() {
         </>
       )}
       {error && <ErrorMessage />}
-    </Base>
+    </Layout>
   );
 }
 

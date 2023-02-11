@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { withAuth, useAuth } from "@context/Auth";
-import Base from "../components/Base";
+
 import Pagination from "../components/Pagination";
+import Layout from "@components/Layout";
+
 import { downloadCVInBulk, getCompanyVisitors } from "@lib/api";
 
 interface Props {}
@@ -71,11 +73,11 @@ const SponsorVisitors: React.FC<Props> = () => {
   }, [user]);
 
   return (
-    <Base
-      href="visitors"
+    <Layout
       title="Visitantes"
       description="Veja quem está a visitar a sua empresa e já recebeu o seu badge"
       navigation={navigation}
+      basePath="sponsor"
     >
       <div className="mt-5 h-screen text-white">
         {visitors.filter((v) => v.cv != null).length > 0 && (
@@ -123,7 +125,7 @@ const SponsorVisitors: React.FC<Props> = () => {
           />
         </div>
       </div>
-    </Base>
+    </Layout>
   );
 };
 

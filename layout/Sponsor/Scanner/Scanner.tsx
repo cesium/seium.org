@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { giveBadge } from "@lib/api";
 import { withAuth, useAuth } from "@context/Auth";
-import Base from "../components/Base";
+
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
+import Layout from "@components/Layout";
 
 interface Props {}
 
@@ -47,11 +48,11 @@ const SponsorBadges: React.FC<Props> = () => {
   };
 
   return (
-    <Base
-      href="scanner"
+    <Layout
       title="Scanner"
       description="Recompensa os teus visitantes com o badge"
       navigation={navigation}
+      basePath="sponsor"
     >
       <div className="mt-5">
         <QRScanner
@@ -64,7 +65,7 @@ const SponsorBadges: React.FC<Props> = () => {
           removeClose={true}
         />
       </div>
-    </Base>
+    </Layout>
   );
 };
 
