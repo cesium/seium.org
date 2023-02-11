@@ -64,11 +64,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
                     <div className="flex">
-                      <div
-                        className={`mr-6 grid grid-cols-3 pt-4 ${
-                          isAuthenticated ? "gap-y-8" : "gap-y-4"
-                        } gap-x-20`}
-                      >
+                      <div className="mr-6 grid grid-cols-3 gap-y-4 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link key={item.slug} href={item.slug} passHref>
                             <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
@@ -86,7 +82,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
-                          <div>
+                          <div className="py-8">
                             <Menu.Button className="flex max-w-xs items-center rounded-full bg-primary text-sm ring-2 ring-white ring-offset-2 focus:outline-none">
                               <span className="sr-only">Open user menu</span>
                               {user?.avatar ? (
