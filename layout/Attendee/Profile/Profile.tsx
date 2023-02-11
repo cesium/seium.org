@@ -101,18 +101,18 @@ function Profile() {
 
           <Form onSubmit={handleSubmitForm} id="profile-form">
             <div className="pl-6">
-              <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full">
+              <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full border-2 border-white hover:border-quinary">
                 {photoFileUrl == null ? (
                   <img
                     src="/images/mascot-head.png"
                     alt="Avatar Photo"
-                    className="rounded-full border-2 border-white hover:border-quinary"
+                    className="h-[220px] w-[220px]"
                   />
                 ) : (
                   <img
                     src={photoFileUrl}
                     alt="Avatar Photo"
-                    className="rounded-full border-2 border-white hover:border-quinary"
+                    className="h-[220px] w-[220px]"
                   />
                 )}
 
