@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { withAuth, useAuth } from "@context/Auth";
 
-import Dashboard from "../components/Dashboard";
+import Layout from "@components/Layout";
 import { Table } from "./components";
 
 import Day from "@components/Schedule/Day";
@@ -112,8 +112,7 @@ function Leaderboard() {
   };
 
   return (
-    <Dashboard
-      href="leaderboard"
+    <Layout
       title="Leaderboard"
       description="Check the users with the highest number of badges"
     >
@@ -161,7 +160,7 @@ function Leaderboard() {
           <Table list={leaderboard} user={user.id} maxUsersToShow={5} />
         </div>
       </div>
-    </Dashboard>
+    </Layout>
   );
 }
 

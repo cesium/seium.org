@@ -23,9 +23,6 @@ function filterElem(filters) {
       case "Workshop":
         result = isSelected(filters, "Workshops");
         break;
-      case "Hackathon":
-        result = isSelected(filters, "Hackathons");
-        break;
       default:
         break;
     }

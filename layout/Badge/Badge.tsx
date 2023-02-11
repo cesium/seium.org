@@ -6,7 +6,7 @@ import { getBadge } from "@lib/api";
 
 import { withAuth, useAuth } from "@context/Auth";
 
-import Dashboard from "./components/Dashboard";
+import Layout from "@components/Layout";
 import Heading from "@components/Heading";
 import Badge from "@components/Badge";
 
@@ -53,8 +53,7 @@ const BadgeSlug: React.FC = () => {
   console.log(badge);
 
   return (
-    <Dashboard
-      href=""
+    <Layout
       title={`${badge?.name} Badge`}
       description="Check who already has this badge"
     >
@@ -94,7 +93,7 @@ const BadgeSlug: React.FC = () => {
           </div>
         </div>
       </div>
-    </Dashboard>
+    </Layout>
   );
 };
 

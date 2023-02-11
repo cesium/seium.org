@@ -14,7 +14,6 @@ import styles from "./style.module.css";
 
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
-  { name: "Hackathon", slug: "/hackathon" },
   { name: "Team", slug: "/team" },
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
