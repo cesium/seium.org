@@ -45,12 +45,8 @@ function Animation({ text }: IAnimationProps) {
           animate={{ y: -15, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className={`-mt-6 ${styles.cardfooter}`}>
-            <Card
-              img="/images/mascot-footer.svg"
-              alt="MascotFooter"
-              inverted={false}
-            >
+          <div className={`-mt-6 ${styles.cardfooter} border-b-2 border-white`}>
+            <Card img="/images/void.svg" alt="MascotFooter" inverted={false}>
               {text}
             </Card>
           </div>
@@ -86,12 +82,11 @@ export default function Footer(props: IFooterProps) {
 
   return (
     <div
-      className={`spacing ${styles.bgTransition} bg-${props.color}`}
+      className={`spacing ${styles.bgTransition} bg-secondary`}
       ref={observe}
-      style={{ ...color, overflowY: "hidden" }}
     >
       <div className="justify-center lg:flex">
-        <div className="flex-1">
+        <div className="py- flex-1">
           <div className="flex justify-center font-ibold lg:justify-start">
             {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image
@@ -109,7 +104,7 @@ export default function Footer(props: IFooterProps) {
           </div>
         </div>
         <div className="flex-2 py-10">
-          <div className="grid grid-rows-2 justify-items-center gap-10 font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-end">
+          <div className="grid grid-rows-2 justify-items-center gap-8 font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-end">
             <Link passHref href="https://2021.seium.org/">
               <a className="text-white hover:underline">Previous Edition</a>
             </Link>

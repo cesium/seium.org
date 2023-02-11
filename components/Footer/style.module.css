@@ -5,7 +5,3 @@
     order: 2;
   }
 }
-
-.bgTransition {
-  transition: background-color 0.5s;
-}

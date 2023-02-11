@@ -5,6 +5,7 @@ import Title from "./Title";
 const Animation = dynamic(() => import("@components/Animation"), {
   ssr: false,
 });
+
 export default function Hero() {
   return (
     <div className=" bg-secondary">

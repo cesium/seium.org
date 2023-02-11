@@ -52,7 +52,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
               <div className="relative z-50 flex flex-auto">
                 <div className="grid w-full grid-cols-4">
                   <Link href="/" passHref>
-                    <div className={styles.logo}>
+                    <div className={`${styles.logo} pt-4 lg:pt-8`}>
                       <Image
                         className="cursor-pointer opacity-60 hover:opacity-100"
                         src="/images/sei-logo.svg"
@@ -63,14 +63,8 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </div>
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
-                    <div className="flex flex-auto gap-x-20">
-                      <div
-                        className={`grid ${
-                          isAuthenticated
-                            ? "grid-cols-3 gap-y-8"
-                            : "grid-cols-4 gap-y-4"
-                        } gap-x-20`}
-                      >
+                    <div className="flex">
+                      <div className="mr-6 grid grid-cols-3 gap-y-4 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link key={item.slug} href={item.slug} passHref>
                             <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
@@ -88,7 +82,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
-                          <div>
+                          <div className="py-8">
                             <Menu.Button className="flex max-w-xs items-center rounded-full bg-primary text-sm ring-2 ring-white ring-offset-2 focus:outline-none">
                               <span className="sr-only">Open user menu</span>
                               {user?.avatar ? (
