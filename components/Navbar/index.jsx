@@ -63,12 +63,10 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </div>
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
-                    <div className="flex flex-auto gap-x-20">
+                    <div className="flex">
                       <div
-                        className={`grid ${
-                          isAuthenticated
-                            ? "grid-cols-3 gap-y-8"
-                            : "grid-cols-4 gap-y-4"
+                        className={`mr-6 grid grid-cols-3 pt-4 ${
+                          isAuthenticated ? "gap-y-8" : "gap-y-4"
                         } gap-x-20`}
                       >
                         {navigation.map((item) => (

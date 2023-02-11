@@ -9,7 +9,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
   return (
-    <div className="mt-4 grid grid-cols-5 justify-items-center gap-x-4">
+    <div className="mt-4 grid grid-cols-5 justify-items-center gap-x-3 md:gap-x-6">
       <a
         className="w-5 opacity-50 hover:opacity-100"
         href="https://github.com/cesium/seium.org"
