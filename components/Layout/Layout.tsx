@@ -112,7 +112,7 @@ export default function Layout({
       </button>
 
       {/* CONTENT */}
-      <main className="w-full px-20 pb-6 pt-20 lg:ml-72">
+      <main className="w-full px-4 pb-6 pt-20 lg:ml-72 lg:px-20">
         <h2 className="font-ibold text-5xl">{title}</h2>
         <p className="mt-2 font-iregular text-lg">{description}</p>
 
