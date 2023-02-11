@@ -43,7 +43,7 @@ export default function Social() {
         <FontAwesomeIcon icon={faLinkedinIn} />
       </a>
       <a
-        className="w-5 pt-0.5 opacity-50 hover:opacity-100"
+        className="w-5 opacity-50 hover:opacity-100"
         href="mailto:geral@seium.org"
         target="_blank"
         rel="noreferrer"
