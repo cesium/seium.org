@@ -25,11 +25,11 @@ export default function Filters(props) {
             key={i}
             onClick={onClick(f)}
             className={`text-md m-1 items-center rounded-full border px-12 py-2 text-center font-ibold
-                                text-white opacity-50 shadow-sm
+                                text-white shadow-sm
                                ${
                                  isSelected(props.filters, f)
                                    ? "border-quinary bg-quinary text-primary opacity-100"
-                                   : "hover:border-quinary hover:bg-secondary hover:text-quinary hover:opacity-80"
+                                   : "opacity-50 hover:border-quinary hover:bg-secondary hover:text-quinary hover:opacity-80"
                                }
                                `}
           >

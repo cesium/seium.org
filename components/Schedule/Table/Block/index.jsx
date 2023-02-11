@@ -25,7 +25,7 @@ function BlockItem({
       className={`mx-2 h-full border-t-2 border-white p-2 ${styles.gridBlock}`}
     >
       {coffeeBreak && (
-        <div className="relative float-right mr-6 h-10 w-10">
+        <div className="relative float-right mr-5 h-10 w-10">
           <Image src="/images/Coffee.svg" layout="fill" />
         </div>
       )}

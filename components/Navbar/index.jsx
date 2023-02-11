@@ -52,7 +52,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
               <div className="relative z-50 flex flex-auto">
                 <div className="grid w-full grid-cols-4">
                   <Link href="/" passHref>
-                    <div className={styles.logo}>
+                    <div className={`${styles.logo} pt-4 lg:pt-8`}>
                       <Image
                         className="cursor-pointer opacity-60 hover:opacity-100"
                         src="/images/sei-logo.svg"

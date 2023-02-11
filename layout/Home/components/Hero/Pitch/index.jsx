@@ -7,11 +7,11 @@ export default function Pitch() {
         We gather speakers, attract parterns and give our imagination wings, all
         for this to be your favorite week.
       </h2>
-      <div className="mt-8 w-56">
+      <div className="mt-8 flex w-56">
         <a href="/team">
           <Button
             text="MEET THE TEAM"
-            customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
+            customStyle="hover:text-quinary hover:border-quinary"
           />
         </a>
       </div>

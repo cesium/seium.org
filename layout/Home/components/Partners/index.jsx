@@ -4,7 +4,7 @@ import partners from "/data/partners";
 
 export default function Partners() {
   return (
-    <div className="spacing w-full bg-secondary pt-10 pb-10">
+    <div className="spacing w-full bg-secondary pt-20 pb-20">
       <h2 className="py-10 text-center font-iextrabold text-5xl text-white lg:text-6xl">
         Partners who made this possible
       </h2>
