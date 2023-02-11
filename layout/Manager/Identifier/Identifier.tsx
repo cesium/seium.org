@@ -4,7 +4,7 @@ import { getAttendee } from "@lib/api";
 
 import { withAuth } from "@context/Auth";
 
-import Base from "@components/Base";
+import Layout from "@components/Layout";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
 const navigation = ["badges", "prizes", "identifier"];
@@ -51,11 +51,11 @@ function Identifier() {
   };
 
   return (
-    <Base
-      href="identifier"
+    <Layout
       title="Identifier"
       description="Identify an attendee"
       navigation={navigation}
+      basePath="manager"
     >
       <div className="mt-5">
         <QRScanner
@@ -68,7 +68,7 @@ function Identifier() {
           removeClose={true}
         />
       </div>
-    </Base>
+    </Layout>
   );
 }
 
