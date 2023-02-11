@@ -16,7 +16,7 @@ export default function Speakers() {
           <Link href="/speakers" passHref>
             <Button
               text="MEET THE SPEAKERS"
-              customStyle="text-white bg-secondary border-quaternary hover:border-quinary"
+              customStyle="text-white bg-secondary border-quaternary hover:border-quinary hover:bg-quinary "
             />
           </Link>
         </div>

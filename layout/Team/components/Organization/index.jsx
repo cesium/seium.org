@@ -36,11 +36,7 @@ function Animation() {
           transition={{ duration: 1 }}
         >
           <div className={`-mt-6 ${styles.cardfooter} border-b-2 border-white`}>
-            <Card
-              img="/images/mascot-footer.svg"
-              alt="MascotFooter"
-              inverted={false}
-            >
+            <Card img="/images/void.svg" alt="MascotFooter" inverted={false}>
               I am also very important to the team. Actually I should be in
               first place
             </Card>

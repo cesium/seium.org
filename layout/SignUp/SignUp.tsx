@@ -23,11 +23,7 @@ function Signup() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <Card
-              img="/images/mascot-footer.svg"
-              alt="MascotFooter"
-              inverted={false}
-            >
+            <Card img="/images/void.svg" alt="MascotFooter" inverted={false}>
               Very restricted area. You just need to fill the form.
             </Card>
           </Motion.div>

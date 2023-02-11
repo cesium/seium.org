@@ -35,11 +35,7 @@ function Login() {
             animate={{ y: -15, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <Card
-              img="/images/mascot-footer.svg"
-              alt="MascotFooter"
-              inverted={false}
-            >
+            <Card img="/images/void.svg" alt="MascotFooter" inverted={false}>
               Just really awesome people here. Please login and prepare to be
               amazed. 🔮
             </Card>

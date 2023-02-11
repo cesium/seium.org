@@ -102,11 +102,19 @@ function Profile() {
           <Form onSubmit={handleSubmitForm} id="profile-form">
             <div className="pl-6">
               <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full">
-                <img
-                  src={photoFileUrl}
-                  alt="Avatar Photo"
-                  className="rounded-full"
-                />
+                {photoFileUrl == null ? (
+                  <img
+                    src="/images/mascot-head.png"
+                    alt="Avatar Photo"
+                    className="rounded-full border-2 border-white hover:border-quinary"
+                  />
+                ) : (
+                  <img
+                    src={photoFileUrl}
+                    alt="Avatar Photo"
+                    className="rounded-full border-2 border-white hover:border-quinary"
+                  />
+                )}
 
                 {editing && (
                   <label className="absolute top-0 left-0 flex h-[220px] w-[220px] cursor-pointer items-center justify-center rounded-full bg-quinary text-white opacity-50 transition-all ease-linear hover:opacity-90">
