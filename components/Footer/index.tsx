@@ -108,7 +108,7 @@ export default function Footer(props: IFooterProps) {
             <Link passHref href="https://2022.seium.org/">
               <a className="text-white hover:underline">Previous Edition</a>
             </Link>
-            <Link passHref href="/404">
+            <Link passHref href="/docs/regulamento.pdf">
               <a className="hover:underline">General Regulation</a>
             </Link>
             <Link
