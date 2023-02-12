@@ -41,7 +41,7 @@ function Profile() {
     neededBadges = 0;
   }
 
-  const levelEntries = [10, 30, 60, 100];
+  const levelEntries = [10, 30, 60, 100, 150];
 
   const onResetPassword = () => {
     resetPassword(user.email)
@@ -207,13 +207,17 @@ function Profile() {
               {levelEntries[2]} entries
             </p>
             <p className="font-iregular">
-              <b className="font-ibold">Level 4</b> 19 companies &rarr; +
+              <b className="font-ibold">Level 4</b> 20 companies &rarr; +
               {levelEntries[3]} entries
+            </p>
+            <p className="font-iregular">
+              <b className="font-ibold">Level 5</b> 24 companies &rarr; +
+              {levelEntries[4]} entries
             </p>
 
             <CheckpointTracker checkpoints={4} progress={level} />
 
-            {level != 4 && (
+            {level != 5 && (
               <p className="font-iregular text-white">
                 You just need {neededBadges} more badges to go to Level{" "}
                 {level + 1} (and win +{levelEntries[level]} entries to the final

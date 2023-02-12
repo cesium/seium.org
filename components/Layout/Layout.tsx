@@ -57,7 +57,7 @@ export default function Layout({
       />
 
       {/* NAVBAR */}
-      <aside className="inset-y-0 hidden w-72 overflow-y-scroll border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
+      <aside className="inset-y-0 hidden w-72 border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
         <div className="flex flex-1">
           <nav className="mt-10 flex flex-col">
             <Link href="/">
