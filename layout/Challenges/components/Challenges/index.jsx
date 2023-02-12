@@ -45,9 +45,6 @@ export default function Challenges() {
           })}
         </div>
       </div>
-      <p className="flex justify-center text-[6px] text-white">
-        Reprovaste a algoritmos.
-      </p>
     </div>
   );
 }
