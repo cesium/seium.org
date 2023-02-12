@@ -1,5 +1,5 @@
-import { AuthProvider } from "@components/Auth";
-import Header from "@components/utils/Header";
+import { AuthProvider } from "@context/Auth";
+import Header from "@components/Header";
 
 import "../styles/globals.css";
 
