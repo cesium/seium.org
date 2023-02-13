@@ -66,7 +66,7 @@ export default function Day(props) {
             {date_string}
           </h5>
           <h2
-            className={`font-iextrabold text-${
+            className={`font-terminal-uppercase text-${
               props.fg_color == undefined ? "white" : props.fg_color
             }`}
           >

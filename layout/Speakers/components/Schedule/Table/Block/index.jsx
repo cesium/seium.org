@@ -39,7 +39,7 @@ export default function Block({
         <div className="ml-4 flex w-full flex-col justify-between">
           <div className="flex justify-between">
             <div>
-              <h2 className="font-iextrabold text-xl">{name}</h2>
+              <h2 className="font-terminal-uppercase text-xl">{name}</h2>
               <p className="">{role}</p>
               <p className="">{company}</p>
             </div>
@@ -80,12 +80,14 @@ export default function Block({
 
           <div className="z-50 flex items-center justify-end">
             <p className="grow text-gray-400">{talk}</p>
-            <button
-              className="w-16 rounded-full border border-gray-500 bg-tertiary px-2 font-iextrabold text-xl text-white"
-              onClick={() => setShowSpeaker(!showSpeaker)}
-            >
-              {showSpeaker ? "+" : "-"}
-            </button>
+            {description && (
+              <button
+                className="w-16 rounded-full border border-gray-500 bg-tertiary px-2 font-iextrabold text-xl text-white"
+                onClick={() => setShowSpeaker(!showSpeaker)}
+              >
+                {showSpeaker ? "+" : "-"}
+              </button>
+            )}
           </div>
         </div>
       </div>

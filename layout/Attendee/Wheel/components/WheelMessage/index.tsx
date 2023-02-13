@@ -13,7 +13,7 @@ export default function WheelMessage({ title, description, onExit }) {
       >
         <Dialog.Overlay />
 
-        <Dialog.Title className="font-iextrabold text-6xl text-primary">
+        <Dialog.Title className="font-terminal-uppercase text-6xl text-primary">
           {title}
         </Dialog.Title>
         <Dialog.Description className="mt-10 font-iregular text-lg">

@@ -44,6 +44,7 @@ module.exports = {
         ilight: ["Inter-Light"],
         iextralight: ["Inter-ExtraLight"],
         ithin: ["Inter-Thin"],
+        terminal: ["Terminal"],
       },
     },
   },

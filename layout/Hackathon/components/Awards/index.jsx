@@ -17,7 +17,7 @@ function Prize({ place, prize, description }) {
 
   return (
     <div className="mt-10 text-center font-ibold">
-      <h3 className="font-iextrabold text-3xl md:text-5xl">
+      <h3 className="font-terminal-uppercase text-3xl md:text-5xl">
         {place}
         <sup>{abbreviation}</sup> Place
       </h3>

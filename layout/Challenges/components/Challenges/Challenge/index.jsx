@@ -16,7 +16,7 @@ export default function Challenge({ title, description, prizes, button }) {
   return (
     <div className="sticky top-60">
       <div>
-        <h2 className="font-iextrabold text-3xl text-white md:text-4xl xl:text-5xl">
+        <h2 className="font-terminal-uppercase text-3xl text-white md:text-4xl xl:text-5xl">
           {title}
         </h2>
         <p className="mt-10 font-iregular text-white">{description}</p>

@@ -19,7 +19,7 @@ export default function Title({ text }) {
           height="141"
         />
       </div>
-      <p className="my-8 text-center font-iextrabold text-4xl text-quinary sm:text-5xl">
+      <p className="font-terminal-uppercase my-8 text-center text-4xl text-quinary sm:text-5xl">
         {text}
       </p>
     </>

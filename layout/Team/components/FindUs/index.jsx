@@ -4,11 +4,15 @@ const Map = dynamic(() => import("./Map"), {
   ssr: false,
 });
 
+const email = "cesium@di.uminho.pt";
+
 export default function FindUs() {
   return (
     <section className="spacing flex flex-col bg-primary py-20 lg:flex-row lg:justify-between">
       <div className="mb-10 mr-10 flex flex-col text-white">
-        <h2 className="mb-2 font-iextrabold text-6xl">How to find us</h2>
+        <h2 className="font-terminal-uppercase mb-2 text-6xl">
+          How to find us
+        </h2>
 
         <p className="mb-8 font-iregular">
           The SEI is free for participants and is organized by volunteers from
@@ -19,7 +23,9 @@ export default function FindUs() {
           Centro de Estudantes de Engenharia Informática
         </p>
         <ul className="list-inside list-disc font-iregular">
-          <li className="">E-mail: cesium@di.uminho.pt</li>
+          <a href={`mailto:${email}`}>
+            <li className="">{`E-mail: ${email}`}</li>
+          </a>
           <li className="">Phone: +351 253 604 448</li>
         </ul>
       </div>
