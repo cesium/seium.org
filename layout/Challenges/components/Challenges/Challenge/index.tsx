@@ -1,4 +1,5 @@
 import Button from "@components/Button";
+import Link from "next/link";
 
 function Action({ text, url }) {
   return (
@@ -12,22 +13,55 @@ function Action({ text, url }) {
   );
 }
 
-export default function Challenge({ title, description, prizes, button }) {
+interface IPrize {
+  name:string
+  url?:string
+}
+
+interface IHref {
+  name?:string
+  url:string
+}
+
+interface IProps {
+  title:string
+  description:string
+  hrefs?:IHref[]
+  prizes:IPrize[]
+  button?:any
+}
+
+export default function Challenge(props:IProps) {
   return (
     <div className="sticky top-60">
       <div>
         <h2 className="font-terminal-uppercase text-3xl text-white md:text-4xl xl:text-5xl">
-          {title}
+          {props.title}
         </h2>
-        <p className="mt-10 font-iregular text-white">{description}</p>
+        <p className="mt-10 font-iregular text-white">{props.description}</p>
+        <div className="flex flex-col mt-3">
+          { props.hrefs &&
+            props.hrefs.map((href, i) => (
+              <a
+                href={href.url}
+                key={i}
+                target="_blank"
+                rel="noreferrer"
+                className="font-iregular text-quinary hover:underline"
+              >
+                {href.name ?? href.url}
+              </a>
+            ))
+          }
+        </div>
         <div>
-          {prizes && (
+          {props.prizes && (
             <h3 className="text-ibold md:text-md xl:text-md mt-5 mb-3 text-xl text-white ">
               Awards 🏆
             </h3>
           )}
-          {prizes &&
-            prizes.map((prize, index) => {
+          {props.prizes &&
+            props.prizes.map((prize, index) => {
               let ordinal = "";
               switch (index + 1) {
                 case 1:
@@ -45,16 +79,16 @@ export default function Challenge({ title, description, prizes, button }) {
               return (
                 <p key={index}>
                   <a
-                    href={prizes[index].url}
+                    href={props.prizes[index].url}
                     className="text-iregular text-quinary"
                   >
                     {index + 1}
-                    <sup>{ordinal}</sup> place - {prizes[index].name}
+                    <sup>{ordinal}</sup> place - {props.prizes[index].name}
                   </a>
                 </p>
               );
             })}
-          {button != null && <Action text={button.text} url={button.url} />}
+          {props.button != null && <Action text={props.button.text} url={props.button.url} />}
         </div>
       </div>
     </div>
