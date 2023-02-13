@@ -9,7 +9,7 @@
   package = "@netlify/plugin-nextjs"
 
 [context.production.environment]
-  NEXT_PUBLIC_API_URL = "https://sei23-staging.herokuapp.com"
+  NEXT_PUBLIC_API_URL = "https://sei23-production.herokuapp.com"
 
 [context.deploy-preview.environment]
-  NEXT_PUBLIC_API_URL = "https://sei23-staging.herokuapp.com"
+  NEXT_PUBLIC_API_URL = "https://sei23-production.herokuapp.com"
