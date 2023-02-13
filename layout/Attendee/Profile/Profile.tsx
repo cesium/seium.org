@@ -106,13 +106,13 @@ function Profile() {
                   <img
                     src="/images/mascot-head.png"
                     alt="Avatar Photo"
-                    className="h-[220px] w-[220px]"
+                    className="h-[220px] w-[220px] object-cover"
                   />
                 ) : (
                   <img
                     src={photoFileUrl}
                     alt="Avatar Photo"
-                    className="h-[220px] w-[220px]"
+                    className="h-[220px] w-[220px] object-cover"
                   />
                 )}
 

@@ -49,7 +49,7 @@ function ProductSlug() {
             </Link>
 
             <div className="mt-4">
-              <h1 className="font-iextrabold text-6xl tracking-tight text-white">
+              <h1 className="font-terminal-uppercase text-6xl tracking-tight text-white">
                 {product.name}
               </h1>
             </div>

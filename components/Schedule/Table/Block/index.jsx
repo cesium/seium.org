@@ -31,13 +31,13 @@ function BlockItem({
       )}
 
       {!coffeeBreak && (
-        <p className="text-l font-iextrabold text-white xs:text-xl">
+        <p className="text-l font-ibold text-white xs:text-xl">
           {startTime}-{endTime}
         </p>
       )}
 
-      <p className={`font-imedium text-xl text-white`}>
-        <span className="font-iextrabold">{`${activityType} `}</span>
+      <p className={`font-iregular text-xl text-white`}>
+        <span className="font-ibold">{`${activityType} `}</span>
         {summary}
       </p>
 
@@ -80,7 +80,7 @@ function BlockItem({
                 <a
                   href={hyperlink}
                   target="_blank"
-                  className={`${styles.hyperlink} -mr-3 font-ibold text-lg text-quinary sm:mr-1`}
+                  className={`${styles.hyperlink} -mr-3 font-iregular text-lg text-quinary sm:mr-1`}
                   rel="noreferrer"
                 >
                   Enroll

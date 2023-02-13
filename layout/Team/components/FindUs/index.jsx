@@ -8,7 +8,9 @@ export default function FindUs() {
   return (
     <section className="spacing flex flex-col bg-primary py-20 lg:flex-row lg:justify-between">
       <div className="mb-10 mr-10 flex flex-col text-white">
-        <h2 className="mb-2 font-iextrabold text-6xl">How to find us</h2>
+        <h2 className="font-terminal-uppercase mb-2 text-6xl">
+          How to find us
+        </h2>
 
         <p className="mb-8 font-iregular">
           The SEI is free for participants and is organized by volunteers from

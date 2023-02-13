@@ -128,7 +128,7 @@ function Leaderboard() {
               className=""
             />
           ) : (
-            <h2 className="text-center font-iextrabold text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
+            <h2 className="font-terminal-uppercase text-center text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
               All Time
             </h2>
           )}

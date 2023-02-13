@@ -64,7 +64,7 @@ export default function UnderlineAnimation({
   }, [scrollDown, scrollUp, st]);
 
   return (
-    <span className="relative z-10 inline-block h-auto w-auto leading-none md:mt-4">
+    <span className="relative z-10 inline-block h-auto w-auto">
       <span
         className="relative z-10 inline-block h-auto border-white md:border-b-8"
         onMouseEnter={() =>
@@ -85,7 +85,11 @@ export default function UnderlineAnimation({
           style={{ marginTop: `${st.margin}px` }}
         >
           <Card img="/images/void.svg" alt="MascotFooter" inverted={true}>
-            <h5 className={`font-ithin ${styles.cardText}`}>{text}</h5>
+            <h5
+              className={`font-ithin normal-case leading-none ${styles.cardText}`}
+            >
+              {text}
+            </h5>
           </Card>
         </div>
       </div>

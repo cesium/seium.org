@@ -5,10 +5,10 @@ export default function Hackathon() {
     <div className="spacing bg-tertiary py-20">
       <div className="mx-auto max-w-screen-xl">
         <div className="px-5">
-          <p className="font-iextrabold text-2xl text-quinary">
+          <p className="font-terminal-uppercase text-2xl text-quinary">
             Hackathon 2022
           </p>
-          <p className="font-iextrabold text-4xl text-white xs:text-5xl md:text-6xl lg:text-8xl">
+          <p className="font-terminal-uppercase text-4xl text-white xs:text-5xl md:text-6xl lg:text-8xl">
             Create products, train skills and learn new technologies
           </p>
           <div className="pt-6 sm:flex sm:pt-4">

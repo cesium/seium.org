@@ -60,7 +60,7 @@ export default function Day(props) {
           Happening on{" "}
         </h5>
         <h2
-          className={`m-auto font-iextrabold text-5xl text-white sm:text-8xl`}
+          className={`font-terminal-uppercase m-auto text-5xl text-white sm:text-8xl`}
         >
           {" "}
           {date_string}{" "}
