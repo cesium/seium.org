@@ -14,24 +14,24 @@ function Action({ text, url }) {
 }
 
 interface IPrize {
-  name:string
-  url?:string
+  name: string;
+  url?: string;
 }
 
 interface IHref {
-  name?:string
-  url:string
+  name?: string;
+  url: string;
 }
 
 interface IProps {
-  title:string
-  description:string
-  hrefs?:IHref[]
-  prizes:IPrize[]
-  button?:any
+  title: string;
+  description: string;
+  hrefs?: IHref[];
+  prizes: IPrize[];
+  button?: any;
 }
 
-export default function Challenge(props:IProps) {
+export default function Challenge(props: IProps) {
   return (
     <div className="sticky top-60">
       <div>
@@ -39,8 +39,8 @@ export default function Challenge(props:IProps) {
           {props.title}
         </h2>
         <p className="mt-10 font-iregular text-white">{props.description}</p>
-        <div className="flex flex-col mt-3">
-          { props.hrefs &&
+        <div className="mt-3 flex flex-col">
+          {props.hrefs &&
             props.hrefs.map((href, i) => (
               <a
                 href={href.url}
@@ -51,8 +51,7 @@ export default function Challenge(props:IProps) {
               >
                 {href.name ?? href.url}
               </a>
-            ))
-          }
+            ))}
         </div>
         <div>
           {props.prizes && (
@@ -88,7 +87,9 @@ export default function Challenge(props:IProps) {
                 </p>
               );
             })}
-          {props.button != null && <Action text={props.button.text} url={props.button.url} />}
+          {props.button != null && (
+            <Action text={props.button.text} url={props.button.url} />
+          )}
         </div>
       </div>
     </div>
