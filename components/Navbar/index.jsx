@@ -72,15 +72,13 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             </a>
                           </Link>
                         ))}
-                        {
-                          isAuthenticated ? null : <></> /*(
+                        {isAuthenticated ? null : (
                           <Link key="login" href="/login" passHref>
                             <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
                               Login
                             </a>
                           </Link>
-                        )*/
-                        }
+                        )}
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
@@ -177,18 +175,17 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </Link>
                   </Disclosure.Button>
                 ))}
-              {
-                !isAuthenticated ? null : <></>
-                // <Disclosure.Button
-                //   key="login"
-                //   as="a"
-                //   className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
-                // >
-                //   <Link key="login" href="/login" passHref>
-                //     Login
-                //   </Link>
-                // </Disclosure.Button>
-              }
+              {!isAuthenticated && (
+                <Disclosure.Button
+                  key="login"
+                  as="a"
+                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                >
+                  <Link key="login" href="/login" passHref>
+                    Login
+                  </Link>
+                </Disclosure.Button>
+              )}
               {isAuthenticated && (
                 <Disclosure.Button
                   key="login"
