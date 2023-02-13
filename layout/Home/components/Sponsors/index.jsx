@@ -22,7 +22,7 @@ export default function Sponsors(props) {
 
   return (
     <div className="spacing bg-tertiary py-20 text-white">
-      <h2 className="flex justify-center py-10 text-center font-iextrabold text-4xl xs:text-5xl sm:text-6xl md:text-8xl">
+      <h2 className="font-terminal-uppercase flex justify-center py-10 text-center text-4xl xs:text-5xl sm:text-6xl md:text-8xl">
         Our amazing sponsors
       </h2>
       <div className="mt-10 flex justify-center">
@@ -50,7 +50,7 @@ export default function Sponsors(props) {
               } w-[100%] lg:w-1/2`}
             >
               <div className="grid w-full grid-cols-1 place-items-center py-[5%] lg:py-0 lg:px-[10%]">
-                <p className="pb-10 font-iextrabold text-2xl text-quinary lg:text-3xl">
+                <p className="font-terminal-uppercase pb-10 text-2xl text-quinary lg:text-3xl">
                   {!val
                     ? key == 0
                       ? "Exclusive"
