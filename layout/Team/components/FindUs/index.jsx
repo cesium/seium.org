@@ -4,6 +4,8 @@ const Map = dynamic(() => import("./Map"), {
   ssr: false,
 });
 
+const email = "cesium@di.uminho.pt";
+
 export default function FindUs() {
   return (
     <section className="spacing flex flex-col bg-primary py-20 lg:flex-row lg:justify-between">
@@ -19,7 +21,9 @@ export default function FindUs() {
           Centro de Estudantes de Engenharia Informática
         </p>
         <ul className="list-inside list-disc font-iregular">
-          <li className="">E-mail: cesium@di.uminho.pt</li>
+          <a href={`mailto:${email}`}>
+            <li className="">{`E-mail: ${email}`}</li>
+          </a>
           <li className="">Phone: +351 253 604 448</li>
         </ul>
       </div>
