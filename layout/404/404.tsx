@@ -22,11 +22,12 @@ export default function Error() {
               </h1>
             </div>
             <div className="relative z-50 mt-5 w-1/2 lg:mt-7">
-              <Button
+              <button
                 onClick={(e) => (window.location.href = "/")}
-                text="Back to Homepage"
-                customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
-              />
+                className="w-full items-center rounded-full px-4 py-4 text-center font-iregular text-sm shadow-sm text-white border-tertiary hover:text-quinary"
+              >
+                Back to Homepage
+              </button>
             </div>
           </div>
         </Navbar>

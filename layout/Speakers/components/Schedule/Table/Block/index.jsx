@@ -80,12 +80,14 @@ export default function Block({
 
           <div className="z-50 flex items-center justify-end">
             <p className="grow text-gray-400">{talk}</p>
+          {description && (
             <button
               className="w-16 rounded-full border border-gray-500 bg-tertiary px-2 font-iextrabold text-xl text-white"
               onClick={() => setShowSpeaker(!showSpeaker)}
             >
               {showSpeaker ? "+" : "-"}
             </button>
+          )}
           </div>
         </div>
       </div>

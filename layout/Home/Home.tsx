@@ -10,7 +10,9 @@ function Home() {
   return (
     <Navbar bgColor="secondary" button="quinary" fgColor="white">
       <Hero />
-      <Schedule />
+      <Schedule color="tertiary" detailed={true}>
+        <div className="pb-24" />
+      </Schedule>
       <Sponsors />
       <Speakers />
       <Partners />
