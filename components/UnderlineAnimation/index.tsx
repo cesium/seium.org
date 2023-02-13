@@ -81,7 +81,7 @@ export default function UnderlineAnimation({
       </span>
       <div className="absolute top-full z-10 h-52 overflow-y-hidden overflow-x-visible md:w-96">
         <div
-          className="absolute top-0 z-0 hidden h-3/6 overflow-visible pt-3 md:block lg:left-20"
+          className="absolute top-0 z-0 hidden h-3/6 overflow-visible pt-3 md:block lg:left-10"
           style={{ marginTop: `${st.margin}px` }}
         >
           <Card img="/images/void.svg" alt="MascotFooter" inverted={true}>
