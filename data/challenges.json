@@ -85,7 +85,21 @@
   },
   "6": {
     "name": "Programming Contest",
-    "descriptions": "",
+    "descriptions": "Do you have top programming skills? Now is your chance to prove it! The contest will be three challenges, each harder than the last, released one every day. Do you have what it takes?",
+    "hrefs": [
+      {
+        "name": "Day 1",
+        "url": "https://www.hackerrank.com/sei-2023-dia-1"
+      },
+      {
+        "name": "Day 2",
+        "url": "https://www.hackerrank.com/sei-2023-dia-2"
+      },
+      {
+        "name": "Day 3",
+        "url": "https://www.hackerrank.com/sei-2023-dia-3"
+      }
+    ],
     "prizes": [
       {
         "name": "Ducky One 2 Pro Mini"

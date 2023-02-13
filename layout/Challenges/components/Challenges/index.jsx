@@ -28,6 +28,7 @@ export default function Challenges() {
             prizes={challenges[k].prizes}
             description={challenges[k].descriptions}
             button={challenges[k].button}
+            hrefs={challenges[k].hrefs}
           />
         </div>
         <div className="block xl:hidden">
