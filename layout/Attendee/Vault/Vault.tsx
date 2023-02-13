@@ -28,7 +28,7 @@ function Vault() {
       title="Vault"
       description="Check the prizes that you have accumulated throughout the week"
     >
-      <div className="mt-5">
+      <div className="my-5">
         <button
           className={`font-iregular bg-${
             tab ? "quinary" : "white"
