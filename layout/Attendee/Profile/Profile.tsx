@@ -117,7 +117,7 @@ function Profile() {
                 )}
 
                 {editing && (
-                  <label className="absolute top-0 left-0 flex h-[220px] w-[220px] cursor-pointer items-center justify-center rounded-full bg-quinary text-white opacity-50 transition-all ease-linear hover:opacity-90">
+                  <label className="absolute top-0 left-0 flex h-[220px] w-[220px] cursor-pointer items-center justify-center rounded-full bg-quinary text-black opacity-50 transition-all ease-linear hover:opacity-90">
                     <input
                       type="file"
                       className="hidden"

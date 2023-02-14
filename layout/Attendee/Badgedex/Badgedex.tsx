@@ -34,6 +34,10 @@ function Badgedex() {
   );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  if (currentBadges.length === 0 && currentPage !== 1) {
+    paginate(0);
+  }
+
 
   useEffect(() => {
     getAllBadges()
@@ -54,9 +58,8 @@ function Badgedex() {
           <div className="my-auto text-2xl">Show</div>
           <div className="flex flex-row-reverse gap-x-8">
             <button
-              className={`font-iregular bg-${
-                all ? "white" : "quinary"
-              } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
+              className={`font-iregular bg-${all ? "white" : "quinary"
+                } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateAll(false);
               }}
@@ -64,9 +67,8 @@ function Badgedex() {
               MINE
             </button>
             <button
-              className={`font-iregular bg-${
-                all ? "quinary" : "white"
-              } ml-12 h-12 items-center rounded-full px-4 py-1 text-center text-black`}
+              className={`font-iregular bg-${all ? "quinary" : "white"
+                } ml-12 h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateAll(true);
               }}
@@ -79,25 +81,26 @@ function Badgedex() {
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {all
           ? currentBadges
-              .filter((badge) => badge.type == filter || filter == null)
-              .map((badge) => (
-                <Badge
-                  key={badge.id}
-                  owned={user.badges.map((b) => b.id).includes(badge.id)}
-                  {...badge}
-                />
-              ))
+            .filter((badge) => badge.type == filter || filter == null)
+            .map((badge) => (
+              <Badge
+                key={badge.id}
+                owned={user.badges.map((b) => b.id).includes(badge.id)}
+                {...badge}
+              />
+            ))
           : user.badges
-              .filter((badge) => badge.type == filter || filter == null)
-              .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
+            .filter((badge) => badge.type == filter || filter == null)
+            .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
       </div>
       <div className="mt-5">
         <Pagination
           badgesPerPage={badgesPerPage}
-          totalBadges={allBadges.length}
+          totalBadges={currentBadges.length}
           paginate={paginate}
           currentPage={currentPage}
         />
+
       </div>
       {error && <ErrorMessage />}
     </Layout>
