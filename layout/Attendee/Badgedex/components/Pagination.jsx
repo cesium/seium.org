@@ -1,10 +1,5 @@
-const Pagination = ({
-  visitorsPerPage,
-  totalVisitors,
-  paginate,
-  currentPage,
-}) => {
-  const totalPages = Math.ceil(totalVisitors / visitorsPerPage);
+const Pagination = ({ badgesPerPage, totalBadges, paginate, currentPage }) => {
+  const totalPages = Math.ceil(totalBadges / badgesPerPage);
   const pageNumbers = [
     ...new Set(
       [1, currentPage - 1, currentPage, currentPage + 1, totalPages].filter(

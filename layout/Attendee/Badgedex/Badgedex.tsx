@@ -24,11 +24,11 @@ function Badgedex() {
   const [filter, updateFilter] = useState(null);
   const [error, setError] = useState();
   const [currentPage, setCurrentPage] = useState(1);
-  const [visitorsPerPage] = useState(10);
+  const [badgesPerPage] = useState(10);
 
-  const indexOfLastVisitor = currentPage * visitorsPerPage;
-  const indexOfFirstVisitor = indexOfLastVisitor - visitorsPerPage;
-  const currentVisitors = allBadges.slice(
+  const indexOfLastVisitor = currentPage * badgesPerPage;
+  const indexOfFirstVisitor = indexOfLastVisitor - badgesPerPage;
+  const currentBadges: any = allBadges.slice(
     indexOfFirstVisitor,
     indexOfLastVisitor
   );
@@ -78,7 +78,7 @@ function Badgedex() {
       </div>
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {all
-          ? currentVisitors
+          ? currentBadges
               .filter((badge) => badge.type == filter || filter == null)
               .map((badge) => (
                 <Badge
@@ -93,8 +93,8 @@ function Badgedex() {
       </div>
       <div className="mt-5">
         <Pagination
-          visitorsPerPage={visitorsPerPage}
-          totalVisitors={allBadges.length}
+          badgesPerPage={badgesPerPage}
+          totalBadges={allBadges.length}
           paginate={paginate}
           currentPage={currentPage}
         />
