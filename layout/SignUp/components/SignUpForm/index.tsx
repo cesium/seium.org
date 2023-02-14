@@ -18,34 +18,54 @@ export default function SignUpForm() {
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
 
+  const [local_error, updateError] = useState("");
   const [scanned, updateScanned] = useState(false);
   const [scanning, updateScanning] = useState(false);
   const pauseRef = useRef(false);
   pauseRef.current = false;
 
-  const onFinish = (e) => {
-    e.preventDefault();
-    sign_up({
-      name,
-      email,
-      password,
-      password_confirmation,
-      nickname,
-      uuid,
-    });
+  const validateName = (name) => {
+    return name.match(/^[a-zA-Z ]{1,15}$/);
   };
 
-  useEffect(() => {
-    console.log("scanning", scanning);
-  }, [scanning]);
+  const validateNickname = (nickname) => {
+    return nickname.match(/^[a-zA-Z0-9_\-]{1,15}$/);
+  };
 
-  useEffect(() => {
-    console.log("scanned", scanned);
-  }, [scanned]);
+  const validatePassword = (password) => {
+    return password.match(/^[a-zA-Z0-9]{9,15}$/);
+  };
 
-  useEffect(() => {
-    console.log("uuid", uuid);
-  }, [uuid]);
+  const onFinish = (e) => {
+    e.preventDefault();
+
+    if (password !== password_confirmation) {
+      updateError("The passwords must match");
+    } else if (!uuid) {
+      updateError("You must have a scanned QR code");
+    } else if (!validateName(name)) {
+      updateError("Your name must be at most 15 letters");
+    } else if (!validateNickname(nickname)) {
+      updateError(
+        "Your nickname must be at most 15 alphanumeric, underscore or hyphen characters"
+      );
+    } else if (!validatePassword(password)) {
+      updateError(
+        "Your password must be between 9 and 15 alphanumeric characters"
+      );
+    } else {
+      updateError("");
+
+      sign_up({
+        name,
+        email,
+        password,
+        password_confirmation,
+        nickname,
+        uuid,
+      });
+    }
+  };
 
   return (
     <>
@@ -127,9 +147,9 @@ export default function SignUpForm() {
           text={isLoading ? "Registering..." : "LET'S GO"}
           customStyle="text-secondary bg-quinary border-quinary"
         />
-        {errors && (
+        {(local_error || (!isLoading && errors)) && (
           <p className="mt-3 font-iregular text-lg text-red-400">
-            An error occured while registering.
+            {local_error || (!isLoading && errors)}
           </p>
         )}
       </Form>
