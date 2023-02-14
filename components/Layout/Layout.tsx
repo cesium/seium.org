@@ -169,12 +169,16 @@ function MobileNavbar({
             <aside className="flex h-full flex-col justify-between">
               <div>
                 <div className="flex justify-between">
-                  <Image
-                    src="/images/sei-logo.svg"
-                    alt="SEI"
-                    width="48"
-                    height="32"
-                  />
+                  <Link href="/">
+                    <a className="font-iregular text-quinary">
+                      <Image
+                        src="/images/sei-logo.svg"
+                        alt="SEI"
+                        width="48"
+                        height="32"
+                      />
+                    </a>
+                  </Link>
 
                   <button type="button" onClick={onClose} className="h-12 w-12">
                     <span className="sr-only">Close sidebar</span>
