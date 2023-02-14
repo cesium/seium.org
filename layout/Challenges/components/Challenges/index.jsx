@@ -6,14 +6,14 @@ import { useState } from "react";
 export default function Challenges() {
   const [k, setKey] = useState(0);
   return (
-    <div className="spacing flex w-full flex-col bg-secondary px-40 py-10">
+    <div className="spacing relative z-20 flex w-full flex-col px-40 py-10">
       <div className="mb-24 grid grid-cols-1 gap-20 xl:grid-cols-2">
         <div className="hidden xl:flex">
           <ul className="font-ibold text-xl">
             {Object.keys(challenges).map((i) => (
               <li
                 key={i}
-                className={`relative z-50 mb-6 ${
+                className={`mb-6 ${
                   i == k ? "ml-8 text-white" : "text-white text-opacity-20"
                 }`}
               >
@@ -40,6 +40,7 @@ export default function Challenges() {
                   prizes={challenges[k].prizes}
                   description={challenges[k].descriptions}
                   button={challenges[k].button}
+                  hrefs={challenges[k].hrefs}
                 />
               </section>
             );
