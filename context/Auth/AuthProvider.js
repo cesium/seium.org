@@ -75,8 +75,8 @@ export function AuthProvider({ children }) {
           }
         });
       })
-      .catch((_) => {
-        setErrors("Something went wrong. Please try again later");
+      .catch((e) => {
+        setErrors("Something went wrong. Check your input and try again"); //e.message
         setUser(undefined);
         setLoading(false);
       });
