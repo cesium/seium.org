@@ -5,16 +5,35 @@ import { getAllBadges } from "@lib/api";
 
 import Layout from "@components/Layout";
 
+import Pagination from "./components/Pagination";
 import ErrorMessage from "@components/ErrorMessage";
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";
 
+interface Badges {
+  id: string;
+  type: string;
+  name: string;
+  description: string;
+}
+
 function Badgedex() {
   const { user } = useAuth();
-  const [allBadges, updateAllBadges] = useState([]);
+  const [allBadges, updateAllBadges] = useState<Badges[]>([]);
   const [all, updateAll] = useState(true);
   const [filter, updateFilter] = useState(null);
   const [error, setError] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [badgesPerPage] = useState(10);
+
+  const indexOfLastVisitor = currentPage * badgesPerPage;
+  const indexOfFirstVisitor = indexOfLastVisitor - badgesPerPage;
+  const currentBadges: any = allBadges.slice(
+    indexOfFirstVisitor,
+    indexOfLastVisitor
+  );
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   useEffect(() => {
     getAllBadges()
@@ -59,7 +78,7 @@ function Badgedex() {
       </div>
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {all
-          ? allBadges
+          ? currentBadges
               .filter((badge) => badge.type == filter || filter == null)
               .map((badge) => (
                 <Badge
@@ -71,6 +90,14 @@ function Badgedex() {
           : user.badges
               .filter((badge) => badge.type == filter || filter == null)
               .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
+      </div>
+      <div className="mt-5">
+        <Pagination
+          badgesPerPage={badgesPerPage}
+          totalBadges={allBadges.length}
+          paginate={paginate}
+          currentPage={currentPage}
+        />
       </div>
       {error && <ErrorMessage />}
     </Layout>
