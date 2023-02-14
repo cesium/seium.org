@@ -38,14 +38,6 @@ const SponsorVisitors: React.FC<Props> = () => {
     setDownloading(true);
     downloadCVInBulk(user.id)
       .then((response) => {
-        /*
-      The way the download works is by creating a temporary
-      URL for the zip file the backend returns to live in, and
-      then forcing a download by programmatically click a link
-      (a tag) to that URL
-
-      Source: https://stackoverflow.com/questions/41938718/how-to-download-files-using-axios
-       */
         const href = URL.createObjectURL(response);
         const link = document.createElement("a");
         //Make sure the element is not visible
