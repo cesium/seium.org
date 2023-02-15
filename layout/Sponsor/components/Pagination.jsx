@@ -11,7 +11,9 @@ const Pagination = ({
         (x) => x >= 1 && x <= totalPages
       )
     ),
-  ]; // Filter in range [1..totalPages]
+  ]; 
+
+  console.log(pageNumbers);
 
   const pageComponents = [];
   for (let i = 1; i <= pageNumbers.length; i++) {
