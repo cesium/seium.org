@@ -6,10 +6,13 @@ const Pagination = ({ badgesPerPage, totalBadges, paginate, currentPage }) => {
         (x) => x >= 1 && x <= totalPages
       )
     ),
-  ]; // Filter in range [1..totalPages]
+  ]; 
+  console.log(pageNumbers);
+
 
   const pageComponents = [];
-  for (let i = 1; i <= pageNumbers.length; i++) {
+  for (let i = 1; i <= pageNumbers.length ; i++) {
+    console.log(i);
     if (i > 1 && pageNumbers[i - 1] - 1 > pageNumbers[i - 2])
       pageComponents.push(<>..</>);
     pageComponents.push(

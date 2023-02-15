@@ -28,10 +28,10 @@ function Badgedex() {
 
   const indexOfLastVisitor = currentPage * badgesPerPage;
   const indexOfFirstVisitor = indexOfLastVisitor - badgesPerPage;
-  const currentBadges: any = allBadges.slice(
-    indexOfFirstVisitor,
-    indexOfLastVisitor
-  );
+  const currentBadges: any = allBadges
+    .filter((badge) => badge.type == filter || filter == null)
+    .slice(indexOfFirstVisitor, indexOfLastVisitor);
+
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -42,6 +42,8 @@ function Badgedex() {
         setError(errors);
       });
   }, []);
+
+
 
   return (
     <Layout title="BadgeDex" description="Explore all existing badges">
@@ -54,9 +56,8 @@ function Badgedex() {
           <div className="my-auto text-2xl">Show</div>
           <div className="flex flex-row-reverse gap-x-8">
             <button
-              className={`font-iregular bg-${
-                all ? "white" : "quinary"
-              } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
+              className={`font-iregular bg-${all ? "white" : "quinary"
+                } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateAll(false);
               }}
@@ -64,9 +65,8 @@ function Badgedex() {
               MINE
             </button>
             <button
-              className={`font-iregular bg-${
-                all ? "quinary" : "white"
-              } ml-12 h-12 items-center rounded-full px-4 py-1 text-center text-black`}
+              className={`font-iregular bg-${all ? "quinary" : "white"
+                } ml-12 h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateAll(true);
               }}
@@ -79,17 +79,18 @@ function Badgedex() {
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {all
           ? currentBadges
-              .filter((badge) => badge.type == filter || filter == null)
-              .map((badge) => (
-                <Badge
-                  key={badge.id}
-                  owned={user.badges.map((b) => b.id).includes(badge.id)}
-                  {...badge}
-                />
-              ))
+            .filter((badge) => badge.type == filter || filter == null)
+            .map((badge) => (
+              <Badge
+                key={badge.id}
+                owned={user.badges.map((b) => b.id).includes(badge.id)}
+                {...badge}
+              />
+            )
+            )
           : user.badges
-              .filter((badge) => badge.type == filter || filter == null)
-              .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
+            .filter((badge) => badge.type == filter || filter == null)
+            .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
       </div>
       <div className="mt-5">
         <Pagination
@@ -98,6 +99,7 @@ function Badgedex() {
           paginate={paginate}
           currentPage={currentPage}
         />
+
       </div>
       {error && <ErrorMessage />}
     </Layout>
