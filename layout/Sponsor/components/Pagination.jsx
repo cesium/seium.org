@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 const Pagination = ({
   visitorsPerPage,
   totalVisitors,
@@ -12,36 +15,18 @@ const Pagination = ({
 
   return (
     <nav>
-      <ul className="pagination flex flex-row justify-center">
-        {currentPage !== 1 && (
-          <li className="page-item mr-1">
-            <button
-              onClick={() => paginate(currentPage - 1)}
-              className="page-link"
-            >
-              <i className="fas fa-chevron-left">Prev</i>
+      <ul className="flex flex-row justify-center">
+        {totalVisitors !== 0 && currentPage !== 1 && (
+          <li className="mx-1">
+            <button onClick={() => paginate(currentPage - 1)}>
+              <FontAwesomeIcon icon={faArrowLeft} />
             </button>
           </li>
         )}
-        {pageNumbers.map((number) => (
-          <li
-            key={number}
-            className={`page-item mr-1 ${
-              currentPage === number ? "active text-quinary" : ""
-            }`}
-          >
-            <button onClick={() => paginate(number)} className="page-link">
-              {number}
-            </button>
-          </li>
-        ))}
-        {currentPage !== pageNumbers.length && (
-          <li className="page-item mr-1">
-            <button
-              onClick={() => paginate(currentPage + 1)}
-              className="page-link"
-            >
-              <i className="fas fa-chevron-right">Next</i>
+        {totalVisitors !== 0 && currentPage !== pageNumbers.length && (
+          <li className="mx-1">
+            <button onClick={() => paginate(currentPage + 1)}>
+              <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </li>
         )}
