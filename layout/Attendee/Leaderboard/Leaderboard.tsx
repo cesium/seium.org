@@ -74,13 +74,8 @@ function Leaderboard() {
   const min_date = "2023/02/14";
   const max_date = "2023/02/17";
 
-  const _today = new Date();
-  const today =
-    _today.getFullYear() +
-    "-" +
-    (_today.getMonth() + 1) +
-    "-" +
-    _today.getDate();
+  const _today = new Date().toISOString().split("T")[0];
+  const today = _today.replace(/-/g, "/");
   const defaultDate = isAfter(today, min_date) ? today : min_date;
 
   const { user } = useAuth();
