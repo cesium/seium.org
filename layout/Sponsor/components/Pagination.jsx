@@ -12,14 +12,14 @@ const Pagination = ({
 
   return (
     <nav>
-      <ul className="pagination flex flex-row">
+      <ul className="pagination flex flex-row justify-center">
         {currentPage !== 1 && (
           <li className="page-item mr-1">
             <button
               onClick={() => paginate(currentPage - 1)}
               className="page-link"
             >
-              Prev
+              <i className="fas fa-chevron-left">Prev</i>
             </button>
           </li>
         )}
@@ -41,7 +41,7 @@ const Pagination = ({
               onClick={() => paginate(currentPage + 1)}
               className="page-link"
             >
-              Next
+              <i className="fas fa-chevron-right">Next</i>
             </button>
           </li>
         )}
