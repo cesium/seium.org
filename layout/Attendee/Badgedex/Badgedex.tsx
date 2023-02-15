@@ -34,6 +34,9 @@ function Badgedex() {
   );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  if (currentBadges.length === 0 && currentPage !== 1) {
+    paginate(0);
+  }
 
   useEffect(() => {
     getAllBadges()

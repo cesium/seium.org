@@ -117,7 +117,7 @@ function Profile() {
                 )}
 
                 {editing && (
-                  <label className="absolute top-0 left-0 flex h-[220px] w-[220px] cursor-pointer items-center justify-center rounded-full bg-quinary text-white opacity-50 transition-all ease-linear hover:opacity-90">
+                  <label className="absolute top-0 left-0 flex h-[220px] w-[220px] cursor-pointer items-center justify-center rounded-full bg-quinary text-black opacity-50 transition-all ease-linear hover:opacity-90">
                     <input
                       type="file"
                       className="hidden"
@@ -235,10 +235,6 @@ function Profile() {
 
           <div className="mt-10 text-white">
             <Heading text="Upload CV" />
-            <p className="font-iregular">
-              Get a chance to win a spot at the Corporate dinner by submiting
-              you CV!
-            </p>
             <CVInput cv={user?.cv} onSubmit={submitCV}></CVInput>
           </div>
         </div>
