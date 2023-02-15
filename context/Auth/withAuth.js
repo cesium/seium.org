@@ -23,6 +23,7 @@ export function withAuth(WrappedComponent) {
             "/attendee/leaderboard",
             "/attendee/store",
             "/attendee/vault",
+            "/attendee/identifier",
             "/attendees/[uuid]",
             "/badge/[slug]",
             "/product/[slug]",

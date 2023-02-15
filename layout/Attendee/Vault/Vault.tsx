@@ -60,7 +60,7 @@ function Vault() {
 
       {tab ? (
         <div>
-          {user.redeemables.length != 0 ? (
+          {user.redeemables.length !== 0 ? (
             <Redeemables products={user.redeemables} />
           ) : (
             <StoreEmpty products={products} />
@@ -68,7 +68,7 @@ function Vault() {
         </div>
       ) : (
         <div>
-          {user.redeemables.length != 0 ? (
+          {user.prizes.length !== 0 ? (
             <Prizes products={user.prizes} />
           ) : (
             <WheelEmpty products={prizes} />

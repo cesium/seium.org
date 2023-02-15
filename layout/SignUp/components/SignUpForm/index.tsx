@@ -24,16 +24,16 @@ export default function SignUpForm() {
   const pauseRef = useRef(false);
   pauseRef.current = false;
 
-  const validateName = (name) => {
-    return name.match(/^[a-zA-Z ]{1,15}$/);
-  };
-
   const validateNickname = (nickname) => {
-    return nickname.match(/^[a-zA-Z0-9_\-]{1,15}$/);
+    return (
+      nickname.length >= 2 &&
+      nickname.length <= 15 &&
+      nickname.match(/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-)[a-zA-Z0-9])*[a-zA-Z0-9]+$/)
+    );
   };
 
   const validatePassword = (password) => {
-    return password.match(/^[a-zA-Z0-9]{9,15}$/);
+    return password.length >= 8;
   };
 
   const onFinish = (e) => {
@@ -43,16 +43,12 @@ export default function SignUpForm() {
       updateError("The passwords must match");
     } else if (!uuid) {
       updateError("You must have a scanned QR code");
-    } else if (!validateName(name)) {
-      updateError("Your name must be at most 15 letters");
     } else if (!validateNickname(nickname)) {
       updateError(
-        "Your nickname must be at most 15 alphanumeric, underscore or hyphen characters"
+        "Your nickname must be between 2 and 15 alphanumeric characters and can only contain underscores and dashes"
       );
     } else if (!validatePassword(password)) {
-      updateError(
-        "Your password must be between 9 and 15 alphanumeric characters"
-      );
+      updateError("Your password must be at least 8 characters long");
     } else {
       updateError("");
 
