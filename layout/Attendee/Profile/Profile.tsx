@@ -235,10 +235,6 @@ function Profile() {
 
           <div className="mt-10 text-white">
             <Heading text="Upload CV" />
-            <p className="font-iregular">
-              Get a chance to win a spot at the Corporate dinner by submiting
-              you CV!
-            </p>
             <CVInput cv={user?.cv} onSubmit={submitCV}></CVInput>
           </div>
         </div>
