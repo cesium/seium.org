@@ -21,17 +21,6 @@ const navigation = ["scanner", "visitors"];
 const SponsorVisitors: React.FC<Props> = () => {
   const { user } = useAuth();
   const [visitors, setVisitors] = useState<Visitor[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [visitorsPerPage] = useState(30);
-
-  const indexOfLastVisitor = currentPage * visitorsPerPage;
-  const indexOfFirstVisitor = indexOfLastVisitor - visitorsPerPage;
-  const currentVisitors = visitors.slice(
-    indexOfFirstVisitor,
-    indexOfLastVisitor
-  );
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [downloading, setDownloading] = useState<boolean>(false);
 
   const downloadCVs = () => {
@@ -89,7 +78,7 @@ const SponsorVisitors: React.FC<Props> = () => {
           </button>
         )}
         <div className="grid grid-cols-1 lg:grid-cols-4">
-          {currentVisitors.map((visitor) => (
+          {visitors.map((visitor) => (
             <div
               key={visitor.id}
               className="hover:b-4 m-2 mb-4 flex flex-col items-center justify-center rounded-lg p-2 hover:border-blue-500"
