@@ -30,7 +30,13 @@ class Map extends Component {
         <Marker
           latitude={41.5599239}
           longitude={-8.3963955}
-          style = {{cursor: 'pointer', 'background-color': '#F52AB1', 'width': '20px', 'height': '20px', 'border-radius': '50%'}}
+          style={{
+            cursor: "pointer",
+            "background-color": "#F52AB1",
+            width: "20px",
+            height: "20px",
+            "border-radius": "50%",
+          }}
         ></Marker>
       </ReactMapGL>
     );

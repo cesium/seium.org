@@ -11,7 +11,7 @@ const Pagination = ({
         (x) => x >= 1 && x <= totalPages
       )
     ),
-  ]; 
+  ];
 
   console.log(pageNumbers);
 
