@@ -13,8 +13,6 @@ const Pagination = ({
     ),
   ];
 
-  console.log(pageNumbers);
-
   const pageComponents = [];
   for (let i = 1; i <= pageNumbers.length; i++) {
     if (i > 1 && pageNumbers[i - 1] - 1 > pageNumbers[i - 2])
