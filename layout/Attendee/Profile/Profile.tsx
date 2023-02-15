@@ -33,11 +33,14 @@ function Profile() {
   } else if (companyBadges < 15) {
     level = 2;
     neededBadges = 15 - companyBadges;
-  } else if (companyBadges < 19) {
+  } else if (companyBadges < 20) {
     level = 3;
-    neededBadges = 19 - companyBadges;
-  } else {
+    neededBadges = 20 - companyBadges;
+  } else if (companyBadges < 24) {
     level = 4;
+    neededBadges = 24 - companyBadges;
+  } else {
+    level = 5;
     neededBadges = 0;
   }
 
