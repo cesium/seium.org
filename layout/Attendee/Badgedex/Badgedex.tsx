@@ -94,14 +94,16 @@ function Badgedex() {
               .filter((badge) => badge.type == filter || filter == null)
               .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
       </div>
-      <div className="mt-5">
-        <Pagination
-          badgesPerPage={badgesPerPage}
-          totalBadges={allBadges.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
-      </div>
+      {all && (
+        <div className="mt-5">
+          <Pagination
+            badgesPerPage={badgesPerPage}
+            totalBadges={allBadges.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
+        </div>
+      )}
       {error && <ErrorMessage />}
     </Layout>
   );

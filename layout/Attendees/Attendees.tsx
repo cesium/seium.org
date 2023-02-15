@@ -11,6 +11,7 @@ import { getAttendee, isAttendeeRegistered } from "@lib/api";
 
 function Profile() {
   const [attendee, updateAttendee] = useState(null);
+  const [avatar, setAvatar] = useState(null);
   const router = useRouter();
   const { uuid } = router.query;
   const [filter, updateFilter] = useState(null);
@@ -35,12 +36,20 @@ function Profile() {
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile"></Heading>
           <div className="pl-6">
-            <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full hover:border-2 hover:border-quinary">
-              <img
-                src={attendee.avatar}
-                alt="Avatar Photo"
-                className="rounded-full"
-              />
+            <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+              {attendee.avatar == null ? (
+                <img
+                  src="/images/mascot-head.png"
+                  alt="Avatar Photo"
+                  className="h-[220px] w-[220px] object-cover"
+                />
+              ) : (
+                <img
+                  src={attendee.avatar}
+                  alt="Avatar Photo"
+                  className="h-[220px] w-[220px] object-cover"
+                />
+              )}
             </div>
           </div>
         </div>

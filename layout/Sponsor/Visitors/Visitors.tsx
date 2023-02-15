@@ -116,14 +116,6 @@ const SponsorVisitors: React.FC<Props> = () => {
             </div>
           ))}
         </div>
-        <div className="mt-5">
-          <Pagination
-            visitorsPerPage={visitorsPerPage}
-            totalVisitors={currentVisitors.length}
-            paginate={paginate}
-            currentPage={currentPage}
-          />
-        </div>
       </div>
     </Layout>
   );
