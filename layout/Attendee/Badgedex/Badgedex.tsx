@@ -93,8 +93,8 @@ function Badgedex() {
       </div>
       <div className="mt-5">
         <Pagination
-          badgesPerPage={badgesPerPage}
-          totalBadges={allBadges.length}
+          visitorsPerPage={badgesPerPage}
+          totalVisitors={allBadges.length}
           paginate={paginate}
           currentPage={currentPage}
         />

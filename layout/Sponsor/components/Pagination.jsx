@@ -4,54 +4,44 @@ const Pagination = ({
   paginate,
   currentPage,
 }) => {
-  const totalPages = Math.ceil(totalVisitors / visitorsPerPage);
-  const pageNumbers = [
-    ...new Set(
-      [1, currentPage - 1, currentPage, currentPage + 1, totalPages].filter(
-        (x) => x >= 1 && x <= totalPages
-      )
-    ),
-  ];
+  const pageNumbers = [];
 
-  const pageComponents = [];
-  for (let i = 1; i <= pageNumbers.length; i++) {
-    if (i > 1 && pageNumbers[i - 1] - 1 > pageNumbers[i - 2])
-      pageComponents.push(<>..</>);
-    pageComponents.push(
-      <li
-        key={i}
-        className={`page-item m-auto px-2 ${
-          currentPage === i ? "active text-quinary" : ""
-        }`}
-      >
-        <button onClick={() => paginate(i)} className="page-link">
-          {i}
-        </button>
-      </li>
-    );
+  for (let i = 1; i <= Math.ceil(totalVisitors / visitorsPerPage); i++) {
+    pageNumbers.push(i);
   }
 
   return (
-    <nav className="m-auto w-fit">
+    <nav>
       <ul className="pagination flex flex-row">
         {currentPage !== 1 && (
           <li className="page-item mr-1">
             <button
               onClick={() => paginate(currentPage - 1)}
-              className="page-link mr-4"
+              className="page-link"
             >
-              &larr;
+              Prev
             </button>
           </li>
         )}
-        {pageComponents}
-        {currentPage !== totalPages && (
+        {pageNumbers.map((number) => (
+          <li
+            key={number}
+            className={`page-item mr-1 ${
+              currentPage === number ? "active text-quinary" : ""
+            }`}
+          >
+            <button onClick={() => paginate(number)} className="page-link">
+              {number}
+            </button>
+          </li>
+        ))}
+        {currentPage !== pageNumbers.length && (
           <li className="page-item mr-1">
             <button
               onClick={() => paginate(currentPage + 1)}
-              className="page-link ml-4"
+              className="page-link"
             >
-              &rarr;
+              Next
             </button>
           </li>
         )}
