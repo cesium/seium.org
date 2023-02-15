@@ -10,7 +10,6 @@ const Pagination = ({ badgesPerPage, totalBadges, paginate, currentPage }) => {
 
   const pageComponents = [];
   for (let i = 1; i <= pageNumbers.length; i++) {
-    console.log(i);
     if (i > 1 && pageNumbers[i - 1] - 1 > pageNumbers[i - 2])
       pageComponents.push(<>..</>);
     pageComponents.push(
