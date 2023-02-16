@@ -69,8 +69,8 @@ export default function Sponsors(props) {
                       <a key={i} href={sponsor.link}>
                         <Image
                           src={`/images/sponsors/${sponsor.image}.svg`}
-                          width={150}
-                          height={40}
+                          width={250}
+                          height={60}
                           alt={sponsor.image}
                         />
                       </a>
