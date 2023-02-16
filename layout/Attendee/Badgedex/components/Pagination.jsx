@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/solid";
 
 const Pagination = ({ badgesPerPage, totalBadges, paginate, currentPage }) => {
   const pageNumbers = [];
@@ -14,14 +13,14 @@ const Pagination = ({ badgesPerPage, totalBadges, paginate, currentPage }) => {
         {totalBadges !== 0 && currentPage !== 1 && (
           <li className="page-item mr-1">
             <button onClick={() => paginate(currentPage - 1)}>
-              <FontAwesomeIcon icon={faArrowLeft} />
+              <ArrowLeftIcon className="h-5 w-5" />
             </button>
           </li>
         )}
         {totalBadges !== 0 && currentPage !== pageNumbers.length && (
           <li className="mx-1">
             <button onClick={() => paginate(currentPage + 1)}>
-              <FontAwesomeIcon icon={faArrowRight} />
+              <ArrowRightIcon className="h-5 w-5" />
             </button>
           </li>
         )}
