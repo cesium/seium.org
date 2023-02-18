@@ -19,8 +19,8 @@ const roleNavigations = {
     "vault",
     "identifier",
   ],
-  admin: ["scanner", "visitors", "badges", "users", "events"],
-  manager: ["badges", "prizes", "identifier"],
+  admin: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
+  manager: ["badges", "leaderboard", "prizes", "identifier"],
 };
 
 type LayoutProps = {
