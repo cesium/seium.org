@@ -9,7 +9,7 @@ export function withAuth(WrappedComponent) {
     const { user } = useAuth();
 
     if (!user) {
-      router.replace("/login");
+      router.replace("/signup");
       return null;
     }
 
