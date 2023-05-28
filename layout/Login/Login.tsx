@@ -19,7 +19,7 @@ function Login() {
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
       <img
         className="absolute -left-[380px] bottom-0 hidden w-[750px] xl:block"
-        src="/images/mascot-head.png"
+        src="/images/void.svg"
       />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Log in" />
