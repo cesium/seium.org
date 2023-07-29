@@ -13,3 +13,10 @@
 
 [context.deploy-preview.environment]
   NEXT_PUBLIC_API_URL = "https://sei23-production.herokuapp.com"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
