@@ -46,8 +46,8 @@ function BlockItem({
       >
         {author && (
           <li className={styles.listElem}>
-            <Link href={`speakers?speaker=${author}`}>
-              <a className={styles.author}> {author} </a>
+            <Link href={`speakers?speaker=${author}`} className={styles.author}>
+              {author}
             </Link>
           </li>
         )}
@@ -91,8 +91,11 @@ function BlockItem({
               {description &&
                 detailed &&
                 (focused ? (
-                  <Link href={{ hash: "_" }}>
-                    <a className={`mx-auto ${styles.expand}`}>-</a>
+                  <Link
+                    href={{ hash: "_" }}
+                    className={`mx-auto ${styles.expand}`}
+                  >
+                    -
                   </Link>
                 ) : (
                   <span className={`mx-auto ${styles.expand}`}>+</span>
@@ -107,9 +110,7 @@ function BlockItem({
   return (
     <div className={skipLink ? "" : styles.clickable}>
       {!skipLink && (
-        <Link href={`schedule/#${id}`}>
-          <a className="absolute h-full w-full" />
-        </Link>
+        <Link href={`schedule/#${id}`} className="absolute h-full w-full" />
       )}
       {block}
     </div>

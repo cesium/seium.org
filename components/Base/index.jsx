@@ -68,17 +68,18 @@ const MobileNavbar = ({
               </div>
               <nav className="mt-5 flex-1">
                 {navigation.map((item) => (
-                  <Link key={item} href={`/manager/${item}`} passHref>
-                    <a
-                      className={classNames(
-                        item == href
-                          ? "bg-primary text-quinary"
-                          : "text-white hover:bg-primary hover:bg-opacity-50",
-                        "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                      )}
-                    >
-                      {item.toUpperCase()}
-                    </a>
+                  <Link
+                    key={item}
+                    href={`/manager/${item}`}
+                    className={classNames(
+                      item == href
+                        ? "bg-primary text-quinary"
+                        : "text-white hover:bg-primary hover:bg-opacity-50",
+                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                    )}
+                    passHref
+                  >
+                    {item.toUpperCase()}
                   </Link>
                 ))}
               </nav>
@@ -132,18 +133,18 @@ export default function Dashboard({
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
-                <Link key={item} href={`${baseHref}/${item}`} passHref>
-                  <a
-                    key={item}
-                    className={classNames(
-                      item == href
-                        ? "bg-primary text-quinary"
-                        : "text-white hover:bg-primary hover:bg-opacity-50",
-                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                    )}
-                  >
-                    {item.toUpperCase()}
-                  </a>
+                <Link
+                  key={item}
+                  href={`${baseHref}/${item}`}
+                  passHref
+                  className={classNames(
+                    item == href
+                      ? "bg-primary text-quinary"
+                      : "text-white hover:bg-primary hover:bg-opacity-50",
+                    "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                  )}
+                >
+                  {item.toUpperCase()}
                 </Link>
               ))}
             </nav>
