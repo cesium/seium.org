@@ -129,7 +129,12 @@ export default function Dashboard({
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
             <div className="mt-20 flex flex-shrink-0 items-center px-4">
-              <Image src="/images/sei-logo.svg" width="220" height="120" />
+              <Image
+                src="/images/sei-logo.svg"
+                width="220"
+                height="120"
+                alt="SEI Logo"
+              />
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (

@@ -75,7 +75,7 @@ export default function Layout({
             <div className="my-4">
               <Image
                 src="/images/sei-logo.svg"
-                alt="SEI"
+                alt="SEI Logo"
                 width="220"
                 height="120"
               />
@@ -178,7 +178,7 @@ function MobileNavbar({
                   <Link href="/" className="font-iregular text-quinary">
                     <Image
                       src="/images/sei-logo.svg"
-                      alt="SEI"
+                      alt="SEI Logo"
                       width="48"
                       height="32"
                     />

@@ -94,6 +94,7 @@ export default function Footer(props: IFooterProps) {
               src="/images/sei-logo.svg"
               width="100"
               height="100"
+              alt="SEI Logo"
             />
             <p className="pt-4 pl-6 text-white lg:flex-1">
               Semana da <br />

@@ -123,7 +123,7 @@ export default function Dashboard(props) {
                 src="/images/sponsors/accenture.svg"
                 width="220"
                 height="120"
-                alt=""
+                alt="Accenture"
               />
             </div>
             <nav className="mt-5 flex-1">

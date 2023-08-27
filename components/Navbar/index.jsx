@@ -58,7 +58,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                         src="/images/sei-logo.svg"
                         width="50"
                         height="40"
-                        alt="SEIUM"
+                        alt="SEI Logo"
                       />
                     </div>
                   </Link>
@@ -95,10 +95,14 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                                 <img
                                   className="h-10 w-10 rounded-full"
                                   src={user.avatar}
+                                  alt="Avatar"
                                 />
                               ) : (
                                 <span className="flex h-10 w-10 items-center justify-center rounded-full">
-                                  <img src="/images/mascot-head.png" />
+                                  <img
+                                    src="/images/mascot-head.png"
+                                    alt="Mascote"
+                                  />
                                 </span>
                               )}
                             </Menu.Button>

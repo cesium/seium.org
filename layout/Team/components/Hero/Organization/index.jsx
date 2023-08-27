@@ -6,7 +6,12 @@ export default function Organization() {
       <h5 className="font-terminal-uppercase text-sm text-white">
         Organization
       </h5>
-      <Image src="/images/cesium-logo.svg" width="120" height="41" alt="" />
+      <Image
+        src="/images/cesium-logo.svg"
+        width="120"
+        height="41"
+        alt="CeSIUM"
+      />
     </div>
   );
 }

@@ -26,7 +26,7 @@ function BlockItem({
     >
       {coffeeBreak && (
         <div className="relative float-right mr-5 h-10 w-10">
-          <Image src="/images/Coffee.svg" layout="fill" />
+          <Image src="/images/Coffee.svg" layout="fill" alt="Coffee Break" />
         </div>
       )}
 
