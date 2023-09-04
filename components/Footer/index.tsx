@@ -88,15 +88,13 @@ export default function Footer(props: IFooterProps) {
       <div className="justify-center lg:flex">
         <div className="py- flex-1">
           <div className="flex justify-center font-ibold lg:justify-start">
-            {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image
-              className="lg:flex-1"
               src="/images/sei-logo.svg"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
               alt="SEI Logo"
             />
-            <p className="pt-4 pl-6 text-white lg:flex-1">
+            <p className="pl-6 text-white lg:flex-1">
               Semana da <br />
               Engenharia
               <br />
