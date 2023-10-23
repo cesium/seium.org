@@ -19,7 +19,7 @@ export default function StoreEmpty({ products }) {
           </svg>
           <h2 className="mt-2 text-lg font-medium text-white">Buy Prizes</h2>
           <p className="mt-1 text-sm text-white">
-            You haven’t purchased any prizes from the store yet. Spen your
+            You haven’t purchased any prizes from the store yet. Spend your
             tokens wisely.
           </p>
         </div>
