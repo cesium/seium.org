@@ -25,7 +25,7 @@ function Vault() {
 
   return (
     <Layout
-      title="Vault"
+      title="Inventory"
       description="Check the prizes that you have accumulated throughout the week"
     >
       <div className="my-5">
