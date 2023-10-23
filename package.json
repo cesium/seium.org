@@ -44,7 +44,8 @@
     "react-dom": "18.2.0",
     "react-map-gl": "^6.1.17",
     "react-p5": "^1.3.21",
-    "sharp": "^0.30.0"
+    "sharp": "^0.30.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "18.7.18",
