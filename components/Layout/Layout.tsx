@@ -70,7 +70,7 @@ export default function Layout({
           <nav className="mt-10 flex flex-col">
             <Link href="/">
               <a className="font-iregular text-quinary">
-                &lt; Back to SEI website
+                &lt;
               </a>
             </Link>
 
