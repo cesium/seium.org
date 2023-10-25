@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useAuth } from "./useAuth";
+import { useAuth } from ".";
 import * as USER from "/lib/user";
 
 export function withAuth(WrappedComponent) {

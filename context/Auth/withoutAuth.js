@@ -1,6 +1,6 @@
 import { faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 import { Router, useRouter } from "next/router";
-import { useAuth } from "./useAuth";
+import { useAuth } from ".";
 
 export function withoutAuth(WrappedComponent) {
   // eslint-disable-next-line react/display-name

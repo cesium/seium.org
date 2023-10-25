@@ -1,12 +1,46 @@
-import { createContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import API from "/lib/api";
-import * as api from "/lib/api";
-import * as USER from "/lib/user";
+import API from "../../lib/api";
+import * as api from "../../lib/api";
+import * as USER from "../../lib/user";
 
-export const AuthContext = createContext();
+interface ILoginDTO {
+  email: string;
+  password: string;
+}
+
+// FIXME: Change this types from any
+type IAttendee = any;
+type ISopnsor = any;
+type IManager = any;
+
+type IUser = IAttendee | ISopnsor | IManager;
+
+interface IAuthContext {
+  user: IUser;
+  errors?: string;
+
+  // Booleans
+  isAuthenticated: boolean;
+  isLoading: boolean;
+
+  // Updates user in state
+  updateUser: (user: IUser) => void;
+  refetchUser: () => void;
+
+  // Api calls
+  login: (params: ILoginDTO) => void;
+  logout: () => void;
+  editUser: (username: string) => void;
+  sign_up: (fields: any) => void;
+}
+
+export const AuthContext = createContext({} as IAuthContext);
 
 const TOKEN_KEY_NAME = "safira_token";
+
+// Function that consumes the context
+export const useAuth = () => useContext(AuthContext);
 
 export function AuthProvider({ children }) {
   const router = useRouter();
@@ -84,6 +118,7 @@ export function AuthProvider({ children }) {
 
   function login({ email, password }) {
     setLoading(true);
+
     api
       .sign_in({ email, password })
       .then(({ jwt }) => {
@@ -107,8 +142,10 @@ export function AuthProvider({ children }) {
         });
       })
       .catch((errors) => {
-        if (errors.response) {
-          setErrors("Invalid credentials");
+        if (errors.response?.data?.error) {
+          setErrors(errors.response.data.error);
+        } else if (errors.response) {
+          setErrors("Request denied by the server");
         } else if (errors.request) {
           setErrors(
             "No connection to the server. Please check your internet connection and try again later"
@@ -118,7 +155,6 @@ export function AuthProvider({ children }) {
             "Something went wrong :/ Please check your internet connection and try again later"
           );
         }
-
         setUser(undefined);
         setLoading(false);
       });
@@ -132,11 +168,11 @@ export function AuthProvider({ children }) {
     router.push("/");
   }
 
-  function editUser(formData) {
+  function editUser(nickname) {
     setLoading(true);
 
     api
-      .editUser(user.id, formData)
+      .editUser(user.id, nickname)
       .then((at) => {
         setUser((oldUser) => ({ ...oldUser, ...at }));
       })
@@ -152,26 +188,25 @@ export function AuthProvider({ children }) {
     setRefetch((needsRefetch) => !needsRefetch);
   }
 
-  // Make the provider update only when it should
-  const values = useMemo(
-    () => ({
-      user,
-      isAuthenticated,
-      isLoading,
-      setUser,
-      errors,
-      login,
-      logout,
-      editUser,
-      refetchUser,
-      sign_up,
-    }),
-    // eslint-disable-next-line
-    [user, isAuthenticated, isLoading, errors]
-  );
+  function updateUser(updatedUser: IUser) {
+    setUser(updatedUser);
+  }
 
   return (
-    <AuthContext.Provider value={values}>
+    <AuthContext.Provider
+      value={{
+        user,
+        isAuthenticated,
+        isLoading,
+        updateUser: updateUser,
+        errors,
+        login,
+        logout,
+        editUser,
+        refetchUser,
+        sign_up,
+      }}
+    >
       {!isFirstLoading && children}
     </AuthContext.Provider>
   );
