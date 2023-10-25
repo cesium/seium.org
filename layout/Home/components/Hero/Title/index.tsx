@@ -24,7 +24,10 @@ export default function Title() {
               .start();
           }}
           options={{
-            delay: 25,
+            delay: 50,
+            cursor: "_",
+            cursorClassName:
+              "text-5xl animate-[typewriter-cursor-pulse_1s_steps(1)_infinite] sm:text-5xl md-text-6xl lg:text-7xl",
           }}
         />
       </h1>
