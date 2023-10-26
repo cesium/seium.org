@@ -192,15 +192,15 @@ function WheelPage() {
             </div>
             <button
               className={`${
-                canSpin()
+                canSpin() && !isSpinning
                   ? "cursor-pointer bg-quinary"
                   : "bg-gray-400 opacity-50"
               } m-auto mt-10 block h-20 w-64 rounded-full`}
               disabled={!canSpin() || isSpinning}
               onClick={spinTheWheel}
             >
-              <p className="font-ibold font-bold">SPIN THE WHEEL</p>
-              <p className="font-iregular">20 tokens💰</p>
+              <p className="select-none font-ibold font-bold">SPIN THE WHEEL</p>
+              <p className="select-none font-iregular">20 tokens💰</p>
             </button>
           </div>
         </div>
