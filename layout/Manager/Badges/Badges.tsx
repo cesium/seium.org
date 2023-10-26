@@ -101,6 +101,7 @@ function Badges() {
               <input
                 type="text"
                 value={searchInput}
+                placeholder = "Search by name"
                 onChange={(e) => {
                   setSearchInput(e.target.value);
                 }}
