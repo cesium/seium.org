@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import API from "../../lib/api";
-import * as api from "../../lib/api";
-import * as USER from "../../lib/user";
+import API from "@lib/api";
+import * as api from "@lib/api";
+import * as USER from "@lib/user";
 
 interface ILoginDTO {
   email: string;
@@ -148,11 +148,11 @@ export function AuthProvider({ children }) {
           setErrors("Request denied by the server");
         } else if (errors.request) {
           setErrors(
-            "No connection to the server. Please check your internet connection and try again later"
+            "No connection to the server. Please check your internet connection and try again later",
           );
         } else {
           setErrors(
-            "Something went wrong :/ Please check your internet connection and try again later"
+            "Something went wrong :/ Please check your internet connection and try again later",
           );
         }
         setUser(undefined);
@@ -179,7 +179,7 @@ export function AuthProvider({ children }) {
       .catch((errors) => {
         setUser(undefined);
         setErrors(
-          "Something went wrong :/ Please check your internet connection and try again later"
+          "Something went wrong :/ Please check your internet connection and try again later",
         );
       });
   }
