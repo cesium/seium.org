@@ -48,8 +48,8 @@ export default function Wheel({ steps, angle }) {
       >
         {borders}
       </div>
-      <div className="absolute w-full h-full top-0 flex justify-center flex-wrap content-center select-none">
-        <img className="w-12 h-12 mb-6 " src="/images/wheel-arrow.svg" />
+      <div className="absolute top-0 flex h-full w-full select-none flex-wrap content-center justify-center">
+        <img className="mb-6 h-12 w-12 " src="/images/wheel-arrow.svg" />
       </div>
     </div>
   );
