@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 
+import Link from "next/link";
+
 import { useAuth } from "@context/Auth";
 
 import Button from "@components/Button";
+import Checkbox from "@components/Checkbox";
 import Form from "@components/Form";
 import Input from "@components/Input";
 
@@ -16,6 +19,7 @@ export default function SignUpForm() {
   const [nickname, updateNickname] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
+  const [terms, setTerms] = useState(false);
   const [uuid, setUUID] = useState();
 
   const [local_error, updateError] = useState("");
@@ -26,9 +30,9 @@ export default function SignUpForm() {
 
   const validateNickname = (nickname) => {
     return (
-      nickname.length >= 2 &&
+      nickname.length >= 3 &&
       nickname.length <= 15 &&
-      nickname.match(/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-)[a-zA-Z0-9])*[a-zA-Z0-9]+$/)
+      nickname.match(/^[\w\d-_]{3,15}$/)
     );
   };
 
@@ -50,16 +54,17 @@ export default function SignUpForm() {
     } else if (!validatePassword(password)) {
       updateError("Your password must be at least 8 characters long");
     } else {
-      updateError("");
-
-      sign_up({
-        name,
-        email,
-        password,
-        password_confirmation,
-        nickname,
-        uuid,
-      });
+      updateError(terms ? "" : "You need to accept the privacy policy");
+      if (terms) {
+        sign_up({
+          name,
+          email,
+          password,
+          password_confirmation,
+          nickname,
+          uuid,
+        });
+      }
     }
   };
 
@@ -138,6 +143,14 @@ export default function SignUpForm() {
             />
           </div>
         )}
+        <Checkbox onChange={(_) => setTerms(!terms)}>
+          <label className="ml-2 font-iregular text-white">
+            I have read and agreed to the{" "}
+            <Link href="/docs/privacy.pdf" passHref>
+              <a>privacy policy</a>
+            </Link>
+          </label>
+        </Checkbox>
         <Button
           type="submit"
           text={isLoading ? "Registering..." : "LET'S GO"}

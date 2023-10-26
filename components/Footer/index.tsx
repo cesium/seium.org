@@ -111,11 +111,8 @@ export default function Footer(props: IFooterProps) {
             <Link passHref href="/docs/regulamento.pdf">
               <a className="hover:underline">General Regulation</a>
             </Link>
-            <Link
-              passHref
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdV1bSyW2tcLuTC_jJCGdZ5NZHUlgETK7nQkOmyDzwb7eFS4Q/viewform"
-            >
-              <a className="hover:underline">Report a Problem</a>
+            <Link passHref href="/docs/privacy.pdf">
+              <a className="hover:underline">Privacy Policy</a>
             </Link>
             <Link passHref href="/docs/survival.pdf">
               <a className="hover:underline">Survival Guide</a>
