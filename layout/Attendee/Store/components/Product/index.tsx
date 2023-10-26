@@ -7,7 +7,6 @@ export default function Product({ name, id, image, price, enabled }) {
       className={`group relative cursor-pointer ${
         enabled ? "opacity-100" : "opacity-50"
       }`}
-      passHref
     >
       <div className={enabled ? "opacity-100" : "opacity-50"}>
         <div className="min-h-80 aspect-w-1 aspect-h-1 lg:aspect-none w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-80">

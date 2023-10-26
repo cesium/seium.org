@@ -77,7 +77,6 @@ const MobileNavbar = ({
                         : "text-white hover:bg-primary hover:bg-opacity-50",
                       "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
                     )}
-                    passHref
                   >
                     {item.toUpperCase()}
                   </Link>
@@ -141,7 +140,6 @@ export default function Dashboard({
                 <Link
                   key={item}
                   href={`${baseHref}/${item}`}
-                  passHref
                   className={classNames(
                     item == href
                       ? "bg-primary text-quinary"

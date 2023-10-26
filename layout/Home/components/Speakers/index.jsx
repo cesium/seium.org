@@ -13,7 +13,7 @@ export default function Speakers() {
           Here’s a selection of this year’s speakers
         </h2>
         <div className="xs:w-70 w-60 sm:w-80">
-          <Link href="/speakers" passHref>
+          <Link href="/speakers">
             <Button
               text="MEET THE SPEAKERS"
               customStyle="text-white bg-secondary border-quaternary hover:border-quinary hover:bg-quinary "

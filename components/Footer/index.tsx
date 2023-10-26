@@ -105,31 +105,21 @@ export default function Footer(props: IFooterProps) {
         <div className="flex-2 py-10">
           <div className="grid grid-rows-2 justify-items-center gap-8 font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-end">
             <Link
-              passHref
               href="https://2022.seium.org/"
               className="text-white hover:underline"
             >
               Previous Edition
             </Link>
-            <Link
-              passHref
-              href="/docs/regulamento.pdf"
-              className="hover:underline"
-            >
+            <Link href="/docs/regulamento.pdf" className="hover:underline">
               General Regulation
             </Link>
             <Link
-              passHref
               href="https://docs.google.com/forms/d/e/1FAIpQLSdV1bSyW2tcLuTC_jJCGdZ5NZHUlgETK7nQkOmyDzwb7eFS4Q/viewform"
               className="hover:underline"
             >
               Report a Problem
             </Link>
-            <Link
-              passHref
-              href="/docs/survival.pdf"
-              className="hover:underline"
-            >
+            <Link href="/docs/survival.pdf" className="hover:underline">
               Survival Guide
             </Link>
           </div>
