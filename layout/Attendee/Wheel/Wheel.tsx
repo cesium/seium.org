@@ -116,7 +116,6 @@ function WheelPage() {
               />
             );
           } else {
-            //TODO:: CHANGE THIS MESSAGE
             updateWheelMessage(
               <WheelMessage
                 title={`You won a ${response.prize.name}!`}
