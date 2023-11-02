@@ -69,9 +69,7 @@ export default function Layout({
         <div className="flex flex-1">
           <nav className="mt-10 flex flex-col">
             <Link href="/">
-              <a className="font-iregular text-quinary">
-                &lt;
-              </a>
+              <a className="font-iregular text-quinary">&lt;</a>
             </Link>
 
             <div className="my-4">
