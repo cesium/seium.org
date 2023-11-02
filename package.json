@@ -10,8 +10,6 @@
     "lint": "next lint",
     "generate": "plop --plopfile generator/plopfile.js",
     "prepare": "husky install",
-    "preview": "netlify deploy --build --context deploy-preview",
-    "deploy": "netlify deploy --build --prod",
     "fmt": "npx npm-run-all format",
     "format": "npx prettier --ignore-path .gitignore '!**/*.hbs' --write .",
     "test": "npm-run-all test:*",
