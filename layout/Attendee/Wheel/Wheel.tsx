@@ -14,7 +14,12 @@ import {
 
 import ErrorMessage from "@components/ErrorMessage";
 
-import { getWheelPrizes, getWheelLatestWins, spinWheel } from "@lib/api";
+import {
+  getWheelPrizes,
+  getWheelPrice,
+  getWheelLatestWins,
+  spinWheel,
+} from "@lib/api";
 
 /*
 Gets how long ago the given date/time was in a user friendly way (10 seconds ago, 1 minute ago, etc)
@@ -55,6 +60,7 @@ function WheelPage() {
   const { user, refetchUser } = useAuth();
 
   const [prizes, updatePrizes] = useState([]);
+  const [price, updatePrice] = useState(null);
   const [latestWins, updateLatestWins] = useState([]);
   const [error, updateError] = useState(false);
   const [wheelMessage, updateWheelMessage] = useState(<></>);
@@ -65,6 +71,10 @@ function WheelPage() {
       .then((response) => updatePrizes(response.data))
       .catch((_) => updateError(true));
 
+    getWheelPrice()
+      .then((response) => updatePrice(response.price))
+      .catch((_) => updateError(true));
+
     getWheelLatestWins()
       .then((response) => updateLatestWins(response.data))
       .catch((_) => updateError(true));
@@ -73,13 +83,13 @@ function WheelPage() {
   useEffect(requestAllInfo, []);
 
   const canSpin = () => {
-    return user.token_balance >= 20 && !isSpinning;
+    return user.token_balance >= price && !isSpinning;
   };
 
   const spinTheWheel = () => {
     setIsSpinning(true);
     updateState({ angle: 0, speed: angleSpeed });
-    user.token_balance -= 20;
+    user.token_balance -= price;
     setTimeout(() => {
       spinWheel()
         .then((response) => {
@@ -202,7 +212,7 @@ function WheelPage() {
               onClick={spinTheWheel}
             >
               <p className="select-none font-ibold font-bold">SPIN THE WHEEL</p>
-              <p className="select-none font-iregular">20 tokens💰</p>
+              <p className="select-none font-iregular">{price} tokens💰</p>
             </button>
           </div>
         </div>
