@@ -123,7 +123,7 @@ export default function Dashboard(props) {
                 src="/images/sponsors/accenture.svg"
                 width="220"
                 height="120"
-                alt=""
+                alt="Accenture"
               />
             </div>
             <nav className="mt-5 flex-1">
@@ -142,8 +142,8 @@ export default function Dashboard(props) {
                 </a>
               ))}
             </nav>
-            <Link href="/" passHref>
-              <a className="px-4 font-iregular text-quinary">Log out 👋</a>
+            <Link href="/" className="px-4 font-iregular text-quinary">
+              Log out 👋
             </Link>
           </div>
         </div>

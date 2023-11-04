@@ -11,7 +11,7 @@ export default function Regulations() {
           </h2>
         </div>
         <div className="mt-6 sm:mt-0 sm:w-80">
-          <Link href={"/docs/hackathon.pdf"} passHref>
+          <Link href={"/docs/hackathon.pdf"}>
             <Button
               text="READ THE RULES"
               customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"

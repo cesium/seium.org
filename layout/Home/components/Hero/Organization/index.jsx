@@ -5,7 +5,12 @@ export default function Organization() {
     <div className="grid grid-rows-2">
       <h5 className="font-imedium text-sm text-white">Organization</h5>
       <a href="https://cesium.di.uminho.pt">
-        <Image src="/images/cesium-logo.svg" width="120" height="41" alt="" />
+        <Image
+          src="/images/cesium-logo.svg"
+          width="120"
+          height="41"
+          alt="CeSIUM"
+        />
       </a>
     </div>
   );

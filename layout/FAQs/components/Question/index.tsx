@@ -23,10 +23,11 @@ export default function Question({
       </h2>
       {showQuestion && <p>{description}</p>}
       <div className="flex items-center justify-end">
-        <Link href={href}>
-          <a className="font-terminal-uppercase mr-4 text-sm text-quinary">
-            {link}
-          </a>
+        <Link
+          href={href}
+          className="font-terminal-uppercase mr-4 text-sm text-quinary"
+        >
+          {link}
         </Link>
         <button
           className="font-terminal-uppercase w-16 rounded-full bg-quinary px-2 text-xl text-white"

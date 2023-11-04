@@ -97,14 +97,12 @@ export default function ResetPasswordForm() {
             Password reset successfully!
           </p>
           <div className="w-96">
-            <Link href="/login" passHref>
-              <a>
-                <Button
-                  type="button"
-                  text="BACK TO LOGIN"
-                  customStyle="text-secondary bg-quinary border-quinary"
-                />
-              </a>
+            <Link href="/login">
+              <Button
+                type="button"
+                text="BACK TO LOGIN"
+                customStyle="text-secondary bg-quinary border-quinary"
+              />
             </Link>
           </div>
         </>

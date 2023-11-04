@@ -51,14 +51,14 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
             <div className="flex h-16 items-center justify-between">
               <div className="relative z-50 flex flex-auto">
                 <div className="grid w-full grid-cols-4">
-                  <Link href="/" passHref>
+                  <Link href="/">
                     <div className={`${styles.logo} pt-4 lg:pt-8`}>
                       <Image
                         className="cursor-pointer opacity-60 hover:opacity-100"
                         src="/images/sei-logo.svg"
                         width="50"
                         height="40"
-                        alt="SEIUM"
+                        alt="SEI Logo"
                       />
                     </div>
                   </Link>
@@ -66,17 +66,21 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     <div className="flex">
                       <div className="mr-6 grid grid-cols-3 gap-y-4 gap-x-20 pt-4">
                         {navigation.map((item) => (
-                          <Link key={item.slug} href={item.slug} passHref>
-                            <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
-                              {item.name}
-                            </a>
+                          <Link
+                            key={item.slug}
+                            href={item.slug}
+                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                          >
+                            {item.name}
                           </Link>
                         ))}
                         {isAuthenticated ? null : (
-                          <Link key="login" href="/login" passHref>
-                            <a className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100">
-                              Login
-                            </a>
+                          <Link
+                            key="login"
+                            href="/login"
+                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                          >
+                            Login
                           </Link>
                         )}
                       </div>
@@ -89,10 +93,14 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                                 <img
                                   className="h-10 w-10 rounded-full"
                                   src={user.avatar}
+                                  alt="Avatar"
                                 />
                               ) : (
                                 <span className="flex h-10 w-10 items-center justify-center rounded-full">
-                                  <img src="/images/mascot-head.png" />
+                                  <img
+                                    src="/images/mascot-head.png"
+                                    alt="Mascote"
+                                  />
                                 </span>
                               )}
                             </Menu.Button>
@@ -110,10 +118,11 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                               {user &&
                                 userNavigation(user.type).map((item) => (
                                   <Menu.Item key={item.name}>
-                                    <Link passHref href={item.slug}>
-                                      <a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                        {item.name}
-                                      </a>
+                                    <Link
+                                      href={item.slug}
+                                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    >
+                                      {item.name}
                                     </Link>
                                   </Menu.Item>
                                 ))}
@@ -157,7 +166,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   as="a"
                   className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                 >
-                  <Link key={item.slug} href={item.slug} passHref>
+                  <Link key={item.slug} href={item.slug}>
                     {item.name}
                   </Link>
                 </Disclosure.Button>
@@ -170,7 +179,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     as="a"
                     className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                   >
-                    <Link key={item.slug} href={item.slug} passHref>
+                    <Link key={item.slug} href={item.slug}>
                       {item.name}
                     </Link>
                   </Disclosure.Button>
@@ -181,7 +190,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   as="a"
                   className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
                 >
-                  <Link key="login" href="/login" passHref>
+                  <Link key="login" href="/login">
                     Login
                   </Link>
                 </Disclosure.Button>

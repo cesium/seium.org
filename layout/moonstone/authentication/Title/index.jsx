@@ -6,7 +6,7 @@ export default function Title({ text }) {
       <div className="hidden sm:block">
         <Image
           src="/images/sei-logo.svg"
-          alt="SEIUM"
+          alt="SEI Logo"
           width="362"
           height="141"
         />
@@ -14,7 +14,7 @@ export default function Title({ text }) {
       <div className="block sm:hidden">
         <Image
           src="/images/sei-logo.svg"
-          alt="SEIUM"
+          alt="SEI Logo"
           width="270"
           height="141"
         />
