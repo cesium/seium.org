@@ -1,1 +1,1 @@
-export { default } from "@layout/Manager/Leaderboard";
+export { default } from "@layout/shared/Leaderboard";

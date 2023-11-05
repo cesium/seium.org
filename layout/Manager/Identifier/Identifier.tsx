@@ -7,8 +7,6 @@ import { withAuth } from "@context/Auth";
 import Layout from "@components/Layout";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
-const navigation = ["badges", "prizes", "identifier"];
-
 function Identifier() {
   const pauseRef = useRef(false);
   const [text, setText] = useState("None");
@@ -54,7 +52,6 @@ function Identifier() {
     <Layout
       title="Identifier"
       description="Identify an attendee"
-      navigation={navigation}
       basePath="manager"
     >
       <div className="mt-5">
