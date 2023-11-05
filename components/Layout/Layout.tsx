@@ -35,7 +35,6 @@ export default function Layout({
   title,
   description,
   basePath = "attendee",
-  navigation,
   children,
 }: LayoutProps) {
   const { user, logout } = useAuth();
@@ -43,7 +42,7 @@ export default function Layout({
   const router = useRouter();
 
   const currentHref = router.asPath;
-  const links = navigation || roleNavigations[user.type];
+  const links = roleNavigations[user.type];
 
   const openNavbar = () => {
     setIsNavbarOpen(true);

@@ -1,19 +1,12 @@
 import { withAuth } from "@context/Auth";
 
-import SpotlightButton from "@layout/moonstone/sponsor/spotlight/SpotlightButton";
-
 import Layout from "@components/Layout";
 
-interface Props {}
-
-const Spotlight: React.FC<Props> = () => {
-  const navigation = ["scanner", "dashboard", "spotlight", "visitors"];
-
+const Spotlight: React.FC = () => {
   return (
     <Layout
       title="Spotlight"
       description="Coloque a sua empresa em destaque"
-      navigation={navigation}
       basePath="sponsor"
     >
       <div>
