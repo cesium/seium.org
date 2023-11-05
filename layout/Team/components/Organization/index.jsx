@@ -100,7 +100,6 @@ export default function Organization() {
         title={team["activities"].title}
         list={sortListMembers(team["activities"].list)}
       />
-
       <Team
         title={team["merch"].title}
         list={sortListMembers(team["merch"].list)}

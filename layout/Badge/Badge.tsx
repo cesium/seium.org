@@ -57,10 +57,11 @@ const BadgeSlug: React.FC = () => {
       title={`${badge?.name} Badge`}
       description="Check who already has this badge"
     >
-      <Link href="/attendee/badgedex">
-        <a className="text-center font-imedium text-secondary">
-          &lt; Back to badgedex
-        </a>
+      <Link
+        href="/attendee/badgedex"
+        className="text-center font-imedium text-secondary"
+      >
+        &lt; Back to badgedex
       </Link>
 
       <div className="mt-5 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2">
