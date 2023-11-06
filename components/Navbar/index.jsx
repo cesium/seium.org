@@ -26,6 +26,7 @@ const userNavigation = (type) => {
       return [{ name: "Dashboard", slug: "/attendee/profile" }];
     case USER.ROLES.MANAGER:
       return [
+        { name: "Leaderboard", slug: "/manager/leaderboard" },
         { name: "Give Badges", slug: "/manager/badges" },
         { name: "Give Prizes", slug: "/manager/prizes" },
       ];
