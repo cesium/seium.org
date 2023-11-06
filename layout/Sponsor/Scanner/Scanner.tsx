@@ -47,7 +47,6 @@ const SponsorBadges: React.FC = () => {
     <Layout
       title="Scanner"
       description="Recompensa os teus visitantes com o badge"
-      basePath="sponsor"
     >
       <div className="mt-5">
         <QRScanner

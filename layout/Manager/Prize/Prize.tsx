@@ -56,11 +56,7 @@ function Prize() {
   };
 
   return (
-    <Layout
-      title="Prizes"
-      description="Mark a prize as redeemed"
-      basePath="manager"
-    >
+    <Layout title="Prizes" description="Mark a prize as redeemed">
       <div className="my-5">
         <button
           className={`font-iregular bg-${

@@ -31,18 +31,18 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-export default function Layout({
-  title,
-  description,
-  basePath = "attendee",
-  children,
-}: LayoutProps) {
+export default function Layout({ title, description, children }: LayoutProps) {
   const { user, logout } = useAuth();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const router = useRouter();
 
   const currentHref = router.asPath;
-  const links = roleNavigations[user.type];
+  // FIXME: normalize user type between moonstone and safira
+  const links =
+    user.type === "company"
+      ? roleNavigations["sponsor"]
+      : roleNavigations[user.type];
+  const basePath = user.type === "company" ? "sponsor" : user.type;
 
   const openNavbar = () => {
     setIsNavbarOpen(true);
