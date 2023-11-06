@@ -4,11 +4,7 @@ import Layout from "@components/Layout";
 
 const Spotlight: React.FC = () => {
   return (
-    <Layout
-      title="Spotlight"
-      description="Coloque a sua empresa em destaque"
-      basePath="sponsor"
-    >
+    <Layout title="Spotlight" description="Coloque a sua empresa em destaque">
       <div>
         <div className="mt-8 md:mt-16">
           <h1 className="text-iextrabold font-ibold text-4xl text-white sm:text-5xl">

@@ -60,7 +60,6 @@ const SponsorVisitors: React.FC = () => {
     <Layout
       title="Visitantes"
       description="Veja quem está a visitar a sua empresa e já recebeu o seu badge"
-      basePath="sponsor"
     >
       <div className="mt-5 h-screen text-white">
         {visitors.filter((v) => v.cv != null).length > 0 && (

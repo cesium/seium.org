@@ -18,11 +18,7 @@ function Prizes() {
   };
 
   return (
-    <Layout
-      title="Prizes"
-      description="Mark a prize as redeemed"
-      basePath="manager"
-    >
+    <Layout title="Prizes" description="Mark a prize as redeemed">
       <div className="mt-5">
         <QRScanner
           handleCode={handleUUID}

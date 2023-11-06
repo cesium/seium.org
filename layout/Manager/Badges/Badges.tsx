@@ -69,7 +69,7 @@ function Badges() {
   };
 
   return (
-    <Layout title="Badges" description="Award a badge" basePath="manager">
+    <Layout title="Badges" description="Award a badge">
       {showScanner ? (
         <div className="mt-5">
           <QRScanner

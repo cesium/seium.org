@@ -49,11 +49,7 @@ function Identifier() {
   };
 
   return (
-    <Layout
-      title="Identifier"
-      description="Identify an attendee"
-      basePath="manager"
-    >
+    <Layout title="Identifier" description="Identify an attendee">
       <div className="mt-5">
         <QRScanner
           handleCode={handleUUID}

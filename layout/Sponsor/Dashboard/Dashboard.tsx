@@ -17,7 +17,6 @@ const SponsorDashboard: React.FC = () => {
     <Layout
       title="Dashboard"
       description="Neste local, pode dar badges ao participantes que se encontram no seu stand"
-      basePath="sponsor"
     >
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
         <div className="mr-3 w-full">
