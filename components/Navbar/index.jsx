@@ -24,11 +24,11 @@ const userNavigation = (type) => {
   switch (type) {
     case USER.ROLES.ATTENDEE:
       return [{ name: "Dashboard", slug: "/attendee/profile" }];
-    case USER.ROLES.MANAGER:
+    case USER.ROLES.STAFF:
       return [
-        { name: "Leaderboard", slug: "/manager/leaderboard" },
-        { name: "Give Badges", slug: "/manager/badges" },
-        { name: "Give Prizes", slug: "/manager/prizes" },
+        { name: "Leaderboard", slug: "/staff/leaderboard" },
+        { name: "Give Badges", slug: "/staff/badges" },
+        { name: "Give Prizes", slug: "/staff/prizes" },
       ];
     case USER.ROLES.SPONSOR:
       return [
