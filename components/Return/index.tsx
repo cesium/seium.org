@@ -6,12 +6,11 @@ interface Props {
 
 export default function Return({ componentStyle }: Props) {
   return (
-    <Link href="/">
-      <a
-        className={`${componentStyle} flex items-center justify-center font-iregular text-quinary sm:absolute`}
-      >
-        &lt; Back to SEI website
-      </a>
+    <Link
+      href="/"
+      className={`${componentStyle} flex items-center justify-center font-iregular text-quinary sm:absolute`}
+    >
+      &lt; Back to SEI website
     </Link>
   );
 }

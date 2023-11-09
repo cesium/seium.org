@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { withAuth, useAuth } from "@context/Auth";
 
-import Pagination from "../components/Pagination";
 import Layout from "@components/Layout";
 
 import { downloadCVInBulk, getCompanyVisitors } from "@lib/api";
-
-interface Props {}
 
 interface Visitor {
   id: string;
@@ -16,9 +13,7 @@ interface Visitor {
   cv: string;
 }
 
-const navigation = ["scanner", "visitors"];
-
-const SponsorVisitors: React.FC<Props> = () => {
+const SponsorVisitors: React.FC = () => {
   const { user } = useAuth();
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [downloading, setDownloading] = useState<boolean>(false);
@@ -65,8 +60,6 @@ const SponsorVisitors: React.FC<Props> = () => {
     <Layout
       title="Visitantes"
       description="Veja quem está a visitar a sua empresa e já recebeu o seu badge"
-      navigation={navigation}
-      basePath="sponsor"
     >
       <div className="mt-5 h-screen text-white">
         {visitors.filter((v) => v.cv != null).length > 0 && (

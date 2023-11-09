@@ -6,8 +6,6 @@ import { withAuth, useAuth } from "@context/Auth";
 import Layout from "@components/Layout";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
-const navigation = ["badges", "prizes", "identifier"];
-
 function Prizes() {
   const { user } = useAuth();
   const router = useRouter();
@@ -20,12 +18,7 @@ function Prizes() {
   };
 
   return (
-    <Layout
-      title="Prizes"
-      description="Mark a prize as redeemed"
-      navigation={navigation}
-      basePath="manager"
-    >
+    <Layout title="Prizes" description="Mark a prize as redeemed">
       <div className="mt-5">
         <QRScanner
           handleCode={handleUUID}

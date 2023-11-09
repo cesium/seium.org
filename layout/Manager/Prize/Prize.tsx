@@ -8,8 +8,6 @@ import { withAuth } from "@context/Auth";
 import Layout from "@components/Layout";
 import Button from "@components/Button";
 
-const navigation = ["badges", "prizes", "identifier"];
-
 function Prize() {
   const router = useRouter();
   const { uuid } = router.query;
@@ -58,12 +56,7 @@ function Prize() {
   };
 
   return (
-    <Layout
-      title="Prizes"
-      description="Mark a prize as redeemed"
-      navigation={navigation}
-      basePath="manager"
-    >
+    <Layout title="Prizes" description="Mark a prize as redeemed">
       <div className="my-5">
         <button
           className={`font-iregular bg-${

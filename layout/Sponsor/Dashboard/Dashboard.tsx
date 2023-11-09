@@ -8,20 +8,15 @@ import SponsorPrizeButton from "@layout/moonstone/sponsor/dashboard/SponsorPrize
 import SponsorBadgeButton from "@layout/moonstone/sponsor/dashboard/SponsorBadgeButton";
 import ParticipantSelector from "@layout/moonstone/sponsor/dashboard/ParticipantSelector";
 
-interface Props {}
-
-const SponsorDashboard: React.FC<Props> = () => {
+const SponsorDashboard: React.FC = () => {
   const participants: string[] = ["Nome 1", "Nome 2", "Nome 3", "Nome 4"];
 
   const onParticipantChange = (p: string) => {};
-  const navigation = ["scanner", "dashboard", "visitors"];
 
   return (
     <Layout
       title="Dashboard"
       description="Neste local, pode dar badges ao participantes que se encontram no seu stand"
-      navigation={navigation}
-      basePath="sponsor"
     >
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
         <div className="mr-3 w-full">

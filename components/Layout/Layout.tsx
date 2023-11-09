@@ -19,8 +19,8 @@ const roleNavigations = {
     "vault",
     "identifier",
   ],
-  admin: ["scanner", "visitors", "badges", "users", "events"],
-  manager: ["badges", "prizes", "identifier"],
+  admin: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
+  manager: ["badges", "leaderboard", "prizes", "identifier"],
 };
 
 type LayoutProps = {
@@ -31,19 +31,18 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-export default function Layout({
-  title,
-  description,
-  basePath = "attendee",
-  navigation,
-  children,
-}: LayoutProps) {
+export default function Layout({ title, description, children }: LayoutProps) {
   const { user, logout } = useAuth();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const router = useRouter();
 
   const currentHref = router.asPath;
-  const links = navigation || roleNavigations[user.type];
+  // FIXME: normalize user type between moonstone and safira
+  const links =
+    user.type === "company"
+      ? roleNavigations["sponsor"]
+      : roleNavigations[user.type];
+  const basePath = user.type === "company" ? "sponsor" : user.type;
 
   const openNavbar = () => {
     setIsNavbarOpen(true);
@@ -68,16 +67,14 @@ export default function Layout({
       <aside className="inset-y-0 hidden w-72 overflow-y-scroll border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
         <div className="flex flex-1">
           <nav className="mt-10 flex flex-col">
-            <Link href="/">
-              <a className="font-iregular text-quinary">
-                &lt; Back to SEI website
-              </a>
+            <Link href="/" className="font-iregular text-quinary">
+              &lt; Back to SEI website
             </Link>
 
             <div className="my-4">
               <Image
                 src="/images/sei-logo.svg"
-                alt="SEI"
+                alt="SEI Logo"
                 width="220"
                 height="120"
               />
@@ -177,15 +174,13 @@ function MobileNavbar({
             <aside className="flex h-full flex-col justify-between">
               <div>
                 <div className="flex justify-between">
-                  <Link href="/">
-                    <a className="font-iregular text-quinary">
-                      <Image
-                        src="/images/sei-logo.svg"
-                        alt="SEI"
-                        width="48"
-                        height="32"
-                      />
-                    </a>
+                  <Link href="/" className="font-iregular text-quinary">
+                    <Image
+                      src="/images/sei-logo.svg"
+                      alt="SEI Logo"
+                      width="48"
+                      height="32"
+                    />
                   </Link>
 
                   <button type="button" onClick={onClose} className="h-12 w-12">
@@ -230,12 +225,11 @@ function ActiveLink({ link, href, basePath }: IActiveLinkProps) {
   const activeStyle = href === `/${basePath}/${link}` && "text-quinary";
 
   return (
-    <Link href={`/${basePath}/${link}`}>
-      <a
-        className={`py-8 font-ibold text-xs uppercase transition duration-200 hover:text-quinary ${activeStyle}`}
-      >
-        {link}
-      </a>
+    <Link
+      href={`/${basePath}/${link}`}
+      className={`py-8 font-ibold text-xs uppercase transition duration-200 hover:text-quinary ${activeStyle}`}
+    >
+      {link}
     </Link>
   );
 }
