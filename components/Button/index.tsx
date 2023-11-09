@@ -1,12 +1,14 @@
 import { ButtonHTMLAttributes } from "react";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
+  title: string;
+  description: string;
   customStyle?: string;
 }
 
 export default function Button({
-  text,
+  title,
+  description,
   type,
   disabled,
   onClick,
@@ -19,9 +21,10 @@ export default function Button({
       disabled={disabled}
       className={`${
         customStyle || ""
-      } w-full items-center rounded-full border px-4 py-4 text-center font-iregular text-sm shadow-sm`}
+      } m-auto block h-20 rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75`}
     >
-      {text}
+      <p className="font-ibold font-bold">{title}</p>
+      <p className="font-iregular">{description}</p>
     </button>
   );
 }
