@@ -70,7 +70,7 @@ const MobileNavbar = ({
                 {navigation.map((item) => (
                   <Link
                     key={item}
-                    href={`/manager/${item}`}
+                    href={`/staff/${item}`}
                     className={classNames(
                       item == href
                         ? "bg-primary text-quinary"
@@ -105,7 +105,7 @@ const MobileNavbar = ({
 export default function Dashboard({
   title,
   href,
-  baseHref = "/manager",
+  baseHref = "/staff",
   description,
   navigation,
   children,

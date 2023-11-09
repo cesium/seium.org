@@ -14,7 +14,7 @@ function Prizes() {
   const [showScanner, setScanner] = useState(true);
 
   const handleUUID = (uuid) => {
-    router.push(`/manager/prizes/${uuid}`);
+    router.push(`/staff/prizes/${uuid}`);
   };
 
   return (
