@@ -22,7 +22,7 @@ export function withAuth(WrappedComponent) {
             "/attendee/badgedex",
             "/attendee/leaderboard",
             "/attendee/store",
-            "/attendee/vault",
+            "/attendee/inventory",
             "/attendee/identifier",
             "/attendees/[uuid]",
             "/badge/[slug]",

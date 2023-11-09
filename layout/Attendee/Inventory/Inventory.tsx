@@ -9,7 +9,7 @@ import { Prizes, Redeemables, StoreEmpty, WheelEmpty } from "./components";
 import Layout from "@components/Layout";
 import Balance from "@components/Balance";
 
-function Vault() {
+function Inventory() {
   const { user } = useAuth();
 
   const [tab, updateTab] = useState(true);
@@ -25,7 +25,7 @@ function Vault() {
 
   return (
     <Layout
-      title="Vault"
+      title="Inventory"
       description="Check the prizes that you have accumulated throughout the week"
     >
       <div className="my-5">
@@ -79,4 +79,4 @@ function Vault() {
   );
 }
 
-export default withAuth(Vault);
+export default withAuth(Inventory);
