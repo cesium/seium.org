@@ -17,7 +17,12 @@ export default function Member({
 }) {
   return (
     <div className="text-white">
-      <Image src={`/images/team/${avatar}`} width="210" height="210" />
+      <Image
+        src={`/images/team/${avatar}`}
+        width="210"
+        height="210"
+        alt={name}
+      />
       <p className="text-md font-terminal-uppercase mb-1"> {name} </p>
       <div className="flex">
         {linkedin && (

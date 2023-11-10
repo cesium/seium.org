@@ -9,8 +9,6 @@ import ErrorMessage from "@components/ErrorMessage";
 import Filter from "@components/BadgeFilter";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
-const navigation = ["badges", "prizes", "identifier"];
-
 function Badges() {
   const [allBadges, updateAllBadges] = useState([]);
   const [filter, updateFilter] = useState(null);
@@ -71,12 +69,7 @@ function Badges() {
   };
 
   return (
-    <Layout
-      title="Badges"
-      description="Award a badge"
-      navigation={navigation}
-      basePath="manager"
-    >
+    <Layout title="Badges" description="Award a badge">
       {showScanner ? (
         <div className="mt-5">
           <QRScanner
@@ -101,6 +94,7 @@ function Badges() {
               <input
                 type="text"
                 value={searchInput}
+                placeholder="Search by name"
                 onChange={(e) => {
                   setSearchInput(e.target.value);
                 }}

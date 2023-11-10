@@ -32,13 +32,14 @@ export function withAuth(WrappedComponent) {
           return router.replace("/404");
         }
         break;
-      case USER.ROLES.MANAGER:
+      case USER.ROLES.STAFF:
         if (
           ![
-            "/manager/badges",
-            "/manager/prizes",
-            "/manager/prizes/[uuid]",
-            "/manager/identifier",
+            "/staff/badges",
+            "/staff/prizes",
+            "/staff/prizes/[uuid]",
+            "/staff/identifier",
+            "/staff/leaderboard",
             "/attendees/[uuid]",
           ].includes(router.pathname)
         ) {
@@ -50,7 +51,7 @@ export function withAuth(WrappedComponent) {
           ![
             "/sponsor/scanner",
             "/attendees/[uuid]",
-            "/manager/badges",
+            "/staff/badges",
             "/sponsor/visitors",
           ].includes(router.pathname)
         ) {

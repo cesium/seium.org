@@ -10,7 +10,7 @@
 [figma-design-2021]: https://www.figma.com/file/1phER5eukGFC5p9tFGnfk7/SEI
 [figma-badge-2021]: https://img.shields.io/badge/-figma21-s?style=flat&logo=figma&color=black
 
-# ![SEI Banner](.github/brand/sei-banner.png)
+# ![SEI Banner](.github/brand/sei-banner24.png)
 
 [![Netlify Status][netlify-status]][netlify-deploys]
 [![CI Style][ci-style-status]][ci-style-workflow]
@@ -38,7 +38,7 @@ documentation](https://nextjs.org/docs/deployment) for more details.
 <img src=".github/brand/cesium-DARK.svg#gh-light-mode-only" width="300">
 <img src=".github/brand/cesium-LIGHT.svg#gh-dark-mode-only" width="300">
 
-Copyright (c) 2021, CeSIUM.
+Copyright (c) 2023, CeSIUM.
 
 This project is licensed under the MIT License - see the [LICENSE][license]
 file for details.

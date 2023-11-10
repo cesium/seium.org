@@ -67,8 +67,8 @@ export function AuthProvider({ children }) {
             case USER.ROLES.SPONSOR:
               router.push("/sponsor/scanner");
               break;
-            case USER.ROLES.MANAGER:
-              router.push("/manager/badges");
+            case USER.ROLES.STAFF:
+              router.push("/staff/badges");
               break;
             default:
               throw new Error(`Unknown USER TYPE: ${response.type}`);
@@ -98,8 +98,8 @@ export function AuthProvider({ children }) {
             case USER.ROLES.SPONSOR:
               router.push("/sponsor/scanner");
               break;
-            case USER.ROLES.MANAGER:
-              router.push("/manager/badges");
+            case USER.ROLES.STAFF:
+              router.push("/staff/badges");
               break;
             default:
               throw new Error(`Unknown USER TYPE: ${response.type}`);
