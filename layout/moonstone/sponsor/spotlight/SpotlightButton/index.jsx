@@ -5,7 +5,7 @@ export default function SpotlightButton() {
     <div className="mt-8 w-auto">
       <Button
         customStyle="m-auto block h-16 w-full rounded-full bg-quinary"
-        text="Ativar Spotlight"
+        title="Ativar Spotlight"
       />
     </div>
   );

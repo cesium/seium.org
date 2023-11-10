@@ -212,6 +212,7 @@ function WheelPage() {
               onClick={spinTheWheel}
               title="SPIN THE WHEEL"
               description={`${price} tokens💰`}
+              bold={true}
             />
           </div>
         </div>

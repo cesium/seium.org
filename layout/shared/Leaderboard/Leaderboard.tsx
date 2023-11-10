@@ -5,6 +5,7 @@ import { withAuth, useAuth } from "@context/Auth";
 import Layout from "@components/Layout";
 import { Table } from "./components";
 
+import Button from "@components/Button";
 import Day from "@components/Schedule/Day";
 import ErrorMessage from "@components/ErrorMessage";
 
@@ -130,26 +131,25 @@ function Leaderboard() {
         </div>
         <div className="col-span-1 w-full 2xl:pl-24">
           <div className="flex justify-center gap-6 xs:gap-10 md:gap-24">
-            <button
-              className={`font-iregular bg-${
+            <Button
+              customStyle={`font-iregular bg-${
                 hallOfFame ? "white" : "quinary"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateHallOfFame(false);
               }}
-            >
-              LEADERBOARD
-            </button>
-            <button
-              className={`font-iregular bg-${
+              title="LEADERBOARD"
+            />
+
+            <Button
+              customStyle={`font-iregular bg-${
                 hallOfFame ? "quinary" : "white"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateHallOfFame(true);
               }}
-            >
-              HALL OF FAME
-            </button>
+              title="HALL OF FAME"
+            />
           </div>
           {error && <ErrorMessage />}
           <Table list={leaderboard} user={user.id} maxUsersToShow={5} />

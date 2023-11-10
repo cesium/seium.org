@@ -93,6 +93,7 @@ function ProductSlug() {
                     disabled={user.token_balance < product.price}
                     title="REDEEM"
                     description={`${product.price} tokens 💰`}
+                    bold={true}
                   />
                 )}
               </div>

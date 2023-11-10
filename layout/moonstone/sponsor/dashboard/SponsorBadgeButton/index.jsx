@@ -12,7 +12,7 @@ export default function SponsorBadgeButton({ sponsor, all }) {
     <div className="mt-8 w-auto">
       <Button
         customStyle="m-auto block h-16 w-full rounded-full bg-quinary"
-        text="🏅 Dar Badge {text}"
+        title="🏅 Dar Badge {text}"
       />
     </div>
   );

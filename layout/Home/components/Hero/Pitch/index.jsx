@@ -10,8 +10,9 @@ export default function Pitch() {
       <div className="mt-8 flex w-56">
         <a href="/team">
           <Button
-            text="MEET THE TEAM"
-            customStyle="hover:text-quinary hover:border-quinary"
+            title="MEET THE TEAM"
+            customStyle="w-56 h-20 border-2 text-white border-white hover:text-quinary hover:border-quinary"
+            bold={false}
           />
         </a>
       </div>

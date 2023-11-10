@@ -15,8 +15,9 @@ export default function Speakers() {
         <div className="xs:w-70 w-60 sm:w-80">
           <Link href="/speakers">
             <Button
-              text="MEET THE SPEAKERS"
-              customStyle="text-white bg-secondary border-quaternary hover:border-quinary hover:bg-quinary "
+              title="MEET THE SPEAKERS"
+              customStyle="text-white border-white border-4 h-20 w-full hover:border-quinary hover:bg-quinary"
+              bold={true}
             />
           </Link>
         </div>

@@ -2,8 +2,9 @@ import { ButtonHTMLAttributes } from "react";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
-  description: string;
+  description?: string;
   customStyle?: string;
+  bold?: boolean;
 }
 
 export default function Button({
@@ -13,6 +14,7 @@ export default function Button({
   disabled,
   onClick,
   customStyle,
+  bold,
 }: Props) {
   return (
     <button
@@ -21,9 +23,11 @@ export default function Button({
       disabled={disabled}
       className={`${
         customStyle || ""
-      } m-auto block h-20 rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75`}
+      } m-auto block rounded-full hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75`}
     >
-      <p className="font-ibold font-bold">{title}</p>
+      <p className={bold ? "font-ibold font-ibold" : "font-iregular"}>
+        {title}
+      </p>
       <p className="font-iregular">{description}</p>
     </button>
   );
