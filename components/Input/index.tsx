@@ -1,4 +1,4 @@
-import { forwardRef, InputHTMLAttributes } from "react";
+import { forwardRef, InputHTMLAttributes, ReactNode } from "react";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   text: string;
@@ -6,6 +6,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   fgColor: string;
   bgColor: string;
   enabled?: boolean;
+  right?: ReactNode;
 }
 
 export default forwardRef<HTMLInputElement, Props>(function Input(
@@ -20,6 +21,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
     bgColor,
     onChange,
     enabled,
+    right,
     ...rest
   },
   ref
@@ -43,7 +45,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
       >
         {text}
       </label>
-      <div className="mt-2">
+      <div className={`flex mt-2 text-iregular ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}>
         <input
           id={id}
           name={name}
@@ -51,7 +53,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
           autoComplete={autocomplete}
           value={value}
           required
-          className={`text-iregular ${textColor} ${backColor} block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm focus:outline-none sm:text-sm`}
+          className="bg-transparent w-full outline-none"
           onChange={onChange}
           disabled={enabled == false}
           ref={ref}
