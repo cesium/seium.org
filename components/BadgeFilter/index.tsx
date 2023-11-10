@@ -10,7 +10,7 @@ export default function BadgeFilter({ onChange }) {
         defaultValue="All"
         onChange={(e) => {
           const badge = badgeTypes.find(
-            (type) => type.name == e.currentTarget.value
+            (type) => type.name == e.currentTarget.value,
           );
           onChange(badge ? badge.id : null);
         }}

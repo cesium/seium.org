@@ -9,7 +9,7 @@ const SponsorBadges: React.FC = () => {
   const { user } = useAuth();
   const pauseRef = useRef(false);
   const [feedback, setFeedback] = useState<typeof FEEDBACK.SCANNING>(
-    FEEDBACK.SCANNING
+    FEEDBACK.SCANNING,
   );
 
   useEffect(() => {

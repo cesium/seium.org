@@ -50,8 +50,8 @@ function Profile() {
     resetPassword(user.email)
       .then((_) =>
         alert(
-          "An email has been sent to your account for you to recover your password"
-        )
+          "An email has been sent to your account for you to recover your password",
+        ),
       )
       .catch((_) => alert("An error occured"));
   };

@@ -111,11 +111,11 @@ export function AuthProvider({ children }) {
           setErrors("Invalid credentials");
         } else if (errors.request) {
           setErrors(
-            "No connection to the server. Please check your internet connection and try again later"
+            "No connection to the server. Please check your internet connection and try again later",
           );
         } else {
           setErrors(
-            "Something went wrong :/ Please check your internet connection and try again later"
+            "Something went wrong :/ Please check your internet connection and try again later",
           );
         }
 
@@ -143,7 +143,7 @@ export function AuthProvider({ children }) {
       .catch((errors) => {
         setUser(undefined);
         setErrors(
-          "Something went wrong :/ Please check your internet connection and try again later"
+          "Something went wrong :/ Please check your internet connection and try again later",
         );
       });
   }
@@ -167,7 +167,7 @@ export function AuthProvider({ children }) {
       sign_up,
     }),
     // eslint-disable-next-line
-    [user, isAuthenticated, isLoading, errors]
+    [user, isAuthenticated, isLoading, errors],
   );
 
   return (

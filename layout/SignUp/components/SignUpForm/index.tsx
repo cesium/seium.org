@@ -45,7 +45,7 @@ export default function SignUpForm() {
       updateError("You must have a scanned QR code");
     } else if (!validateNickname(nickname)) {
       updateError(
-        "Your nickname must be between 2 and 15 alphanumeric characters and can only contain underscores and dashes"
+        "Your nickname must be between 2 and 15 alphanumeric characters and can only contain underscores and dashes",
       );
     } else if (!validatePassword(password)) {
       updateError("Your password must be at least 8 characters long");

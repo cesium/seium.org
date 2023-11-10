@@ -13,7 +13,7 @@ import styles from "./style.module.css";
 
 function sortListMembers(members) {
   return members.sort((a, b) =>
-    getFirstName(a.name).localeCompare(getFirstName(b.name))
+    getFirstName(a.name).localeCompare(getFirstName(b.name)),
   );
 }
 

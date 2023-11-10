@@ -74,7 +74,7 @@ const BadgeSlug: React.FC = () => {
               avatar={badge?.avatar}
               tokens={badge.tokens}
               owned={badge.attendees.some(
-                (attendee) => attendee.id === user.id
+                (attendee) => attendee.id === user.id,
               )}
             />
           )}
@@ -88,7 +88,7 @@ const BadgeSlug: React.FC = () => {
                   (attendee, i) =>
                     i < maxUsersToShow && (
                       <Owner key={attendee.id} attendee={attendee} />
-                    )
+                    ),
                 )
               : null}
           </div>

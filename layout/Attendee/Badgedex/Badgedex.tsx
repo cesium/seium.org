@@ -30,7 +30,7 @@ function Badgedex() {
   const indexOfFirstVisitor = indexOfLastVisitor - badgesPerPage;
   const currentBadges: any = allBadges.slice(
     indexOfFirstVisitor,
-    indexOfLastVisitor
+    indexOfLastVisitor,
   );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);

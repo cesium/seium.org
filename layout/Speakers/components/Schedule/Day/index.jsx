@@ -15,7 +15,7 @@ function getDayDescriptor(year, month, day) {
   const today = new Date(
     _today.getFullYear(),
     _today.getMonth(),
-    _today.getDate()
+    _today.getDate(),
   );
 
   const day_difference =

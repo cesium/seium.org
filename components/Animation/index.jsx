@@ -27,7 +27,7 @@ const Animation = (props) => {
 
   //concatenate the three paths into one
   let highestPoint = getHighestPoint(
-    path1_backup.concat(path2_backup).concat(path3_backup)
+    path1_backup.concat(path2_backup).concat(path3_backup),
   );
 
   let height_cost = 100;

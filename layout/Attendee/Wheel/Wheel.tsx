@@ -99,7 +99,7 @@ function WheelPage() {
                 title="You won tokens!"
                 description={`Congratulations! You won ${response.tokens} tokens!`}
                 onExit={(_) => updateWheelMessage(null)}
-              />
+              />,
             );
           } else if (response.badge) {
             updateWheelMessage(
@@ -107,7 +107,7 @@ function WheelPage() {
                 title="You won a badge!"
                 description={`Congratulations! You won the ${response.badge.name} badge. Go check it out in the badgedex tab.`}
                 onExit={(_) => updateWheelMessage(null)}
-              />
+              />,
             );
           } else if (response.entries) {
             updateWheelMessage(
@@ -115,7 +115,7 @@ function WheelPage() {
                 title="You won entries to the final draw!"
                 description={`Congratulations! You won ${response.entries} entries for the final draw!`}
                 onExit={(_) => updateWheelMessage(null)}
-              />
+              />,
             );
           } else if (response.prize.name == "Nada") {
             updateWheelMessage(
@@ -123,7 +123,7 @@ function WheelPage() {
                 title="You didn't win anything!"
                 description="Better luck next time."
                 onExit={(_) => updateWheelMessage(null)}
-              />
+              />,
             );
           } else {
             updateWheelMessage(
@@ -131,7 +131,7 @@ function WheelPage() {
                 title={`You won a ${response.prize.name}!`}
                 description={`Congratulations! You won a ${response.prize.name}!`}
                 onExit={(_) => updateWheelMessage(null)}
-              />
+              />,
             );
           }
         })
@@ -141,7 +141,7 @@ function WheelPage() {
               title="You don't have tokens!"
               description="You do not have enough tokens to spin the wheel."
               onExit={(_) => updateWheelMessage(null)}
-            />
+            />,
           );
         })
         .finally(() => {

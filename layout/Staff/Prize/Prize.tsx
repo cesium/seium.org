@@ -160,7 +160,7 @@ function Prize() {
                       onClick={() => {
                         redeemWheelRedeemables(
                           product.id,
-                          product.not_redeemed
+                          product.not_redeemed,
                         );
                       }}
                     />

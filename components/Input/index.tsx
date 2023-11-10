@@ -22,7 +22,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
     enabled,
     ...rest
   },
-  ref
+  ref,
 ) {
   let textColor = `text-${fgColor}`;
   let backColor = `bg-${bgColor}`;

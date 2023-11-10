@@ -25,7 +25,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
       })
       .catch((e) => {
         setError(
-          "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
+          "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it.",
         );
         video.srcObject = undefined;
       });
@@ -84,25 +84,25 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
           canvas2D,
           code.location.topLeftCorner,
           code.location.topRightCorner,
-          "#78f400"
+          "#78f400",
         );
         drawLine(
           canvas2D,
           code.location.topRightCorner,
           code.location.bottomRightCorner,
-          "#78f400"
+          "#78f400",
         );
         drawLine(
           canvas2D,
           code.location.bottomRightCorner,
           code.location.bottomLeftCorner,
-          "#78f400"
+          "#78f400",
         );
         drawLine(
           canvas2D,
           code.location.bottomLeftCorner,
           code.location.topLeftCorner,
-          "#78f400"
+          "#78f400",
         );
 
         if (!pauseRef.current) {

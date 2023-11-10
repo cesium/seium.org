@@ -110,7 +110,7 @@ function Badges() {
               .filter(
                 (badge) =>
                   searchInput == "" ||
-                  badge.name.toLowerCase().includes(searchInput.toLowerCase())
+                  badge.name.toLowerCase().includes(searchInput.toLowerCase()),
               )
               .map((badge, index) => (
                 <div

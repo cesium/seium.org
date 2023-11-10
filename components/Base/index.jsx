@@ -75,7 +75,7 @@ const MobileNavbar = ({
                       item == href
                         ? "bg-primary text-quinary"
                         : "text-white hover:bg-primary hover:bg-opacity-50",
-                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs",
                     )}
                   >
                     {item.toUpperCase()}
@@ -144,7 +144,7 @@ export default function Dashboard({
                     item == href
                       ? "bg-primary text-quinary"
                       : "text-white hover:bg-primary hover:bg-opacity-50",
-                    "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                    "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs",
                   )}
                 >
                   {item.toUpperCase()}
