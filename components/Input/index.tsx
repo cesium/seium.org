@@ -45,7 +45,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
       >
         {text}
       </label>
-      <div className={`flex mt-2 text-iregular ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}>
+      <div className={`flex items-center mt-2 text-iregular ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}>
         <input
           id={id}
           name={name}
@@ -59,6 +59,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
           ref={ref}
           {...rest}
         />
+        {right}
       </div>
     </div>
   );

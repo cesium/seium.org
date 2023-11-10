@@ -8,6 +8,9 @@ import Input from "@components/Input";
 
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
 export default function SignUpForm() {
   const { sign_up, isLoading, errors } = useAuth();
 
@@ -17,6 +20,9 @@ export default function SignUpForm() {
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
+
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
 
   const [local_error, updateError] = useState("");
   const [scanned, updateScanned] = useState(false);
@@ -63,6 +69,14 @@ export default function SignUpForm() {
     }
   };
 
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible)
+  }
+
+  const toggleConfirmPasswordVisibility = () => {
+    setIsConfirmPasswordVisible(!isConfirmPasswordVisible)
+  }
+
   return (
     <>
       <Form onSubmit={onFinish}>
@@ -96,21 +110,35 @@ export default function SignUpForm() {
           text="PASSWORD"
           id="password"
           name="password"
-          type="password"
+          type={isPasswordVisible ? "text" : "password"}
           autoComplete="current-password"
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePassword(e.currentTarget.value)}
+          right={
+            <FontAwesomeIcon
+              className="mx-2"
+              onClick={togglePasswordVisibility}
+              icon={isPasswordVisible ? faEyeSlash : faEye}
+            />
+          }
         />
         <Input
           text="CONFIRM PASSWORD"
           id="password"
           name="password"
-          type="password"
+          type={isConfirmPasswordVisible ? "text" : "password"}
           autoComplete="current-password"
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
+          right={
+            <FontAwesomeIcon
+              className="mx-2"
+              onClick={toggleConfirmPasswordVisibility}
+              icon={isConfirmPasswordVisible ? faEyeSlash : faEye}
+            />
+          }
         />
         <Button
           text={scanning ? "STOP SCANNING" : "SCAN QR"}

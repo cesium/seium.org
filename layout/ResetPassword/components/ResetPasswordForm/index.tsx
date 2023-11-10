@@ -11,6 +11,9 @@ import ImageButton from "@components/ImageButton";
 import Form from "@components/Form";
 import Input from "@components/Input";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
 export default function ResetPasswordForm() {
   const router = useRouter();
   const { token } = router.query;
@@ -20,6 +23,8 @@ export default function ResetPasswordForm() {
   const passwordRef = useRef(null);
   const passwordConfirmationRef = useRef(null);
   const [errorMsg, updateErrorMsg] = useState(null);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
 
   function onSubmit(event) {
     event.preventDefault();
@@ -47,6 +52,14 @@ export default function ResetPasswordForm() {
       });
   }
 
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible)
+  }
+
+  const toggleConfirmPasswordVisibility = () => {
+    setIsConfirmPasswordVisible(!isConfirmPasswordVisible)
+  }
+
   return (
     <>
       {success === null && (
@@ -55,20 +68,34 @@ export default function ResetPasswordForm() {
             text="PASSWORD"
             id="password"
             name="password"
-            type="password"
+            type={isPasswordVisible ? "text" : "password"}
             autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
+            right={
+              <FontAwesomeIcon
+                className="mx-2"
+                onClick={togglePasswordVisibility}
+                icon={isPasswordVisible ? faEyeSlash : faEye}
+              />
+            }
             ref={passwordRef}
           />
           <Input
             text="CONFIRM PASSWORD"
             id="confirm"
             name="confirm"
-            type="password"
+            type={isConfirmPasswordVisible ? "text" : "password"}
             autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
+            right={
+              <FontAwesomeIcon
+                className="mx-2"
+                onClick={toggleConfirmPasswordVisibility}
+                icon={isConfirmPasswordVisible ? faEyeSlash : faEye}
+              />
+            }
             ref={passwordConfirmationRef}
           />
           <p className="mt-10 mb-10 text-center font-iregular text-failure">
