@@ -16,7 +16,7 @@ const roleNavigations = {
     "badgedex",
     "leaderboard",
     "store",
-    "vault",
+    "inventory",
     "identifier",
   ],
   admin: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
