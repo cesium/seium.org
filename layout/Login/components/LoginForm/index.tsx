@@ -15,7 +15,7 @@ export default function LoginForm() {
   const { errors, login, isLoading } = useAuth();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const onFinish = (event) => {
     event.preventDefault();
@@ -27,8 +27,8 @@ export default function LoginForm() {
   };
 
   const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible)
-  }
+    setIsPasswordVisible(!isPasswordVisible);
+  };
 
   return (
     <div className="mt-8">
@@ -48,7 +48,7 @@ export default function LoginForm() {
             text="YOUR PASSWORD"
             id="password"
             name="password"
-            type={isPasswordVisible ? "text" : "password"} 
+            type={isPasswordVisible ? "text" : "password"}
             fgColor="white"
             bgColor="primary"
             autoComplete="current-password"

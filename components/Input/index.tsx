@@ -45,7 +45,9 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
       >
         {text}
       </label>
-      <div className={`flex items-center mt-2 text-iregular ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}>
+      <div
+        className={`text-iregular mt-2 flex items-center ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
+      >
         <input
           id={id}
           name={name}
@@ -53,7 +55,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
           autoComplete={autocomplete}
           value={value}
           required
-          className="bg-transparent w-full outline-none"
+          className="w-full bg-transparent outline-none"
           onChange={onChange}
           disabled={enabled == false}
           ref={ref}

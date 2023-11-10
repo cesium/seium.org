@@ -23,8 +23,9 @@ export default function ResetPasswordForm() {
   const passwordRef = useRef(null);
   const passwordConfirmationRef = useRef(null);
   const [errorMsg, updateErrorMsg] = useState(null);
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
-  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
+    useState(false);
 
   function onSubmit(event) {
     event.preventDefault();
@@ -53,12 +54,12 @@ export default function ResetPasswordForm() {
   }
 
   const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible)
-  }
+    setIsPasswordVisible(!isPasswordVisible);
+  };
 
   const toggleConfirmPasswordVisibility = () => {
-    setIsConfirmPasswordVisible(!isConfirmPasswordVisible)
-  }
+    setIsConfirmPasswordVisible(!isConfirmPasswordVisible);
+  };
 
   return (
     <>

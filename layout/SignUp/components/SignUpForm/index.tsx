@@ -21,8 +21,9 @@ export default function SignUpForm() {
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
 
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
-  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
+    useState(false);
 
   const [local_error, updateError] = useState("");
   const [scanned, updateScanned] = useState(false);
@@ -70,12 +71,12 @@ export default function SignUpForm() {
   };
 
   const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible)
-  }
+    setIsPasswordVisible(!isPasswordVisible);
+  };
 
   const toggleConfirmPasswordVisibility = () => {
-    setIsConfirmPasswordVisible(!isConfirmPasswordVisible)
-  }
+    setIsConfirmPasswordVisible(!isConfirmPasswordVisible);
+  };
 
   return (
     <>
