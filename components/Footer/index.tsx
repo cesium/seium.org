@@ -85,24 +85,38 @@ export default function Footer(props: IFooterProps) {
       className={`spacing ${styles.bgTransition} bg-secondary`}
       ref={observe}
     >
-      <div className="justify-center lg:flex">
-        <div className="py- flex-1">
-          <div className="flex justify-center font-ibold lg:justify-start">
-            <Image
-              src="/images/sei-logo.svg"
-              width={100}
-              height={100}
-              alt="SEI Logo"
-            />
-            <p className="pl-6 text-white lg:flex-1">
-              Semana da <br />
-              Engenharia
-              <br />
-              Informática
-            </p>
-          </div>
+      <div className="flex flex-col lg:flex-row justify-between gap-16 py-10">
+
+        <div className="flex justify-center items-start font-ibold lg:justify-start">
+          <Image
+            src="/images/sei-logo.svg"
+            width={100}
+            height={100}
+            alt="SEI Logo"
+          />
+          <p className="pl-6 text-white lg:flex-1">
+            Semana da <br />
+            Engenharia
+            <br />
+            Informática
+          </p>
         </div>
-        <div className="flex-2 py-10">
+
+        <div className="hidden lg:flex mt-20 mx-2 justify-center pb-10">
+          <Animation
+            text={
+              props.footerAnimationText != undefined ? (
+                props.footerAnimationText
+              ) : (
+                <DefaultAnimation />
+              )
+            }
+          >
+            {props.children}
+          </Animation>
+        </div>
+
+        <div className="flex-2">
           <div className="grid grid-rows-2 justify-items-center gap-8 font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-end">
             <Link
               href="https://2022.seium.org/"
@@ -129,19 +143,6 @@ export default function Footer(props: IFooterProps) {
             </div>
           </div>
         </div>
-      </div>
-      <div className="invisible -mt-20 flex justify-center pb-10 lg:visible">
-        <Animation
-          text={
-            props.footerAnimationText != undefined ? (
-              props.footerAnimationText
-            ) : (
-              <DefaultAnimation />
-            )
-          }
-        >
-          {props.children}
-        </Animation>
       </div>
     </div>
   );
