@@ -31,7 +31,7 @@ interface IAuthContext {
   // Api calls
   login: (params: ILoginDTO) => void;
   logout: () => void;
-  editUser: (username: string) => void;
+  editUser: (username: FormData) => void;
   sign_up: (fields: any) => void;
 }
 
