@@ -32,4 +32,4 @@ function ForgotPassword() {
   );
 }
 
-export default withoutAuth(ForgotPassword);
+export default ForgotPassword;

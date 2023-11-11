@@ -124,21 +124,21 @@ export function AuthProvider({ children }) {
       .then(({ jwt }) => {
         localStorage.setItem(TOKEN_KEY_NAME, jwt);
         API.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
-        api.getCurrentUser().then((response) => {
-          setUser(response);
-          switch (response.type) {
-            case USER.ROLES.ATTENDEE:
-              router.push("/attendee/profile");
-              break;
-            case USER.ROLES.SPONSOR:
-              router.push("/sponsor/scanner");
-              break;
-            case USER.ROLES.STAFF:
-              router.push("/staff/badges");
-              break;
-            default:
-              throw new Error(`Unknown USER TYPE: ${response.type}`);
+        api.getCurrentUser().then(async (response) => {
+          if (router.query.from == undefined) {
+            switch (response.type) {
+              case USER.ROLES.ATTENDEE:
+                await router.push({ query: { from: "/attendee/profile" } });
+                break;
+              case USER.ROLES.SPONSOR:
+                await router.push({ query: { from: "/sponsor/scanner" } });
+                break;
+              case USER.ROLES.STAFF:
+                await router.push({ query: { from: "/staff/badges" } });
+                break;
+            }
           }
+          setUser(response);
         });
       })
       .catch((errors) => {
@@ -148,11 +148,11 @@ export function AuthProvider({ children }) {
           setErrors("Request denied by the server");
         } else if (errors.request) {
           setErrors(
-            "No connection to the server. Please check your internet connection and try again later",
+            "No connection to the server. Please check your internet connection and try again later"
           );
         } else {
           setErrors(
-            "Something went wrong :/ Please check your internet connection and try again later",
+            "Something went wrong :/ Please check your internet connection and try again later"
           );
         }
         setUser(undefined);
@@ -164,8 +164,7 @@ export function AuthProvider({ children }) {
     setLoading(true);
     localStorage.clear();
     delete API.defaults.headers.common["Authorization"];
-    setUser(undefined);
-    router.push("/");
+    router.push("/").finally(() => setUser(undefined));
   }
 
   function editUser(nickname) {
@@ -179,7 +178,7 @@ export function AuthProvider({ children }) {
       .catch((errors) => {
         setUser(undefined);
         setErrors(
-          "Something went wrong :/ Please check your internet connection and try again later",
+          "Something went wrong :/ Please check your internet connection and try again later"
         );
       });
   }

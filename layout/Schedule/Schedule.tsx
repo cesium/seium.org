@@ -18,4 +18,4 @@ function Index() {
   );
 }
 
-export default withoutAuth(Index);
+export default Index;

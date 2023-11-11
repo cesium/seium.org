@@ -40,4 +40,4 @@ function Faq() {
   );
 }
 
-export default withoutAuth(Faq);
+export default Faq;

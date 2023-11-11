@@ -33,4 +33,4 @@ function Signup({ courses }) {
   );
 }
 
-export default withoutAuth(Signup);
+export default Signup;

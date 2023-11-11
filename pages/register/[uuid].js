@@ -143,4 +143,4 @@ function Register({ courses }) {
   );
 }
 
-export default withoutAuth(Register);
+export default Register;

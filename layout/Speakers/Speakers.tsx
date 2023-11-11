@@ -18,4 +18,4 @@ function Speakers() {
   );
 }
 
-export default withoutAuth(Speakers);
+export default Speakers;

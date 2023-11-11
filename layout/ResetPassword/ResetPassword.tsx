@@ -43,4 +43,4 @@ function Reset() {
   );
 }
 
-export default withoutAuth(Reset);
+export default Reset;
