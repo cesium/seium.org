@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { useAuth } from "@context/Auth";
-import Return from "@components/Return";
 
 const roleNavigations = {
   sponsor: ["scanner", "visitors"],
