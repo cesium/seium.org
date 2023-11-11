@@ -10,7 +10,7 @@ export default function Return({ componentStyle }: Props) {
       href="/"
       className={`${componentStyle} flex items-center justify-center font-iregular text-quinary sm:absolute`}
     >
-      &lt;
+      &lt; Back to SEI website
     </Link>
   );
 }

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { useAuth } from "@context/Auth";
+import Return from "@components/Return";
 
 const roleNavigations = {
   sponsor: ["scanner", "visitors"],
@@ -66,26 +67,15 @@ export default function Layout({ title, description, children }: LayoutProps) {
       {/* NAVBAR */}
       <aside className="inset-y-0 hidden w-72 overflow-y-scroll border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
         <div className="flex flex-1">
-          <nav className="mt-10 flex flex-col">
-            <Link href="/">
-              <a className="font-iregular text-quinary">&lt;</a>
-            </Link>
-
-            <div className="my-4">
+          <nav className="mt-8 flex flex-col">
+            <Link href="/" className="pb-8">
               <Image
                 src="/images/sei-logo.svg"
                 alt="SEI Logo"
                 width="220"
                 height="120"
               />
-            </div>
-
-            {user.type === "attendee" && (
-              <div className="text-md mt-2 mb-4 text-white">
-                <p className="font-ibold">You have:</p>
-                <p className="font-iregular">💰 {user.token_balance} Tokens</p>
-              </div>
-            )}
+            </Link>
 
             {links.map((link) => (
               <ActiveLink
@@ -173,7 +163,7 @@ function MobileNavbar({
           >
             <aside className="flex h-full flex-col justify-between">
               <div>
-                <div className="flex justify-between">
+                <div className="flex items-center justify-between">
                   <Link href="/" className="font-iregular text-quinary">
                     <Image
                       src="/images/sei-logo.svg"
