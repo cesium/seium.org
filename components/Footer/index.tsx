@@ -116,13 +116,13 @@ export default function Footer(props: IFooterProps) {
         </div>
 
         <div className="flex-2">
-          <div className="grid grid-rows-2 justify-items-center gap-8 font-iregular text-sm text-white whitespace-nowrap lg:grid-cols-2 lg:justify-items-start">
+          <div className="grid grid-rows-2 justify-items-center gap-8 whitespace-nowrap font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-start">
             <Link
               href="https://2022.seium.org/"
               className="text-white hover:underline"
             >
               Previous Edition
-            </Link> 
+            </Link>
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSdV1bSyW2tcLuTC_jJCGdZ5NZHUlgETK7nQkOmyDzwb7eFS4Q/viewform"
               className="hover:underline"
