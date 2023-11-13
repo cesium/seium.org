@@ -46,7 +46,7 @@ export default forwardRef<HTMLInputElement, Props>(function PasswordInput(
       autoComplete="current-password"
       right={
         <FontAwesomeIcon
-          className="mx-2"
+          className="mx-2 cursor-pointer"
           onClick={togglePasswordVisibility}
           icon={isPasswordVisible ? faEyeSlash : faEye}
         />
