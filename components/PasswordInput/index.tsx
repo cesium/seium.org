@@ -5,7 +5,6 @@ import Input from "@components/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   text?: string;
   autocomplete?: string;
@@ -27,7 +26,6 @@ export default forwardRef<HTMLInputElement, Props>(function PasswordInput(
   },
   ref
 ) {
-
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {

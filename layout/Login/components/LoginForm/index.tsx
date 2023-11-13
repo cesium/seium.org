@@ -23,7 +23,6 @@ export default function LoginForm() {
     login({ email, password });
   };
 
-
   return (
     <div className="mt-8">
       <Form onSubmit={onFinish}>

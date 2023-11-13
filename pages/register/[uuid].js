@@ -69,11 +69,7 @@ function Register() {
             bgColor="primary"
             onChange={(e) => updateNickname(e.currentTarget.value)}
           />
-          <PasswordInput
-            text="PASSWORD"
-            fgColor="white"
-            bgColor="primary"
-          />
+          <PasswordInput text="PASSWORD" fgColor="white" bgColor="primary" />
           <PasswordInput
             text="CONFIRM PASSWORD"
             fgColor="white"
