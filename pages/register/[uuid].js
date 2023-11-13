@@ -9,12 +9,10 @@ import Card from "@components/Card";
 import Return from "@components/Return";
 import Form from "@components/Form";
 import Input from "@components/Input";
+import PasswordInput from "@components/PasswordInput";
 
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 function Register() {
   const { sign_up, errors, isLoading } = useAuth();
@@ -26,10 +24,6 @@ function Register() {
   const [nickname, updateNickname] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
-
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
-    useState(false);
 
   const onFinish = (e) => {
     e.preventDefault();
@@ -75,39 +69,15 @@ function Register() {
             bgColor="primary"
             onChange={(e) => updateNickname(e.currentTarget.value)}
           />
-          <Input
+          <PasswordInput
             text="PASSWORD"
-            id="password"
-            name="password"
-            type={isPasswordVisible ? "text" : "password"}
-            autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
-            onChange={(e) => updatePassword(e.currentTarget.value)}
-            right={
-              <FontAwesomeIcon
-                className="mx-2"
-                onClick={togglePasswordVisibility}
-                icon={isPasswordVisible ? faEyeSlash : faEye}
-              />
-            }
           />
-          <Input
+          <PasswordInput
             text="CONFIRM PASSWORD"
-            id="password"
-            name="password"
-            type={isConfirmPasswordVisible ? "text" : "password"}
-            autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
-            onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
-            right={
-              <FontAwesomeIcon
-                className="mx-2"
-                onClick={toggleConfirmPasswordVisibility}
-                icon={isConfirmPasswordVisible ? faEyeSlash : faEye}
-              />
-            }
           />
           <Button
             type="submit"

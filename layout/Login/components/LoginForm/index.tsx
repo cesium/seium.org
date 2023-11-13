@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 import { useAuth } from "@context/Auth";
 
@@ -7,15 +7,12 @@ import Text from "@layout/moonstone/authentication/Text";
 
 import Form from "@components/Form";
 import Input from "@components/Input";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import PasswordInput from "@components/PasswordInput";
 
 export default function LoginForm() {
   const { errors, login, isLoading } = useAuth();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const onFinish = (event) => {
     event.preventDefault();
@@ -26,9 +23,6 @@ export default function LoginForm() {
     login({ email, password });
   };
 
-  const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible);
-  };
 
   return (
     <div className="mt-8">
@@ -44,21 +38,10 @@ export default function LoginForm() {
           ref={emailRef}
         />
         <div>
-          <Input
+          <PasswordInput
             text="YOUR PASSWORD"
-            id="password"
-            name="password"
-            type={isPasswordVisible ? "text" : "password"}
             fgColor="white"
             bgColor="primary"
-            autoComplete="current-password"
-            right={
-              <FontAwesomeIcon
-                className="mx-2"
-                onClick={togglePasswordVisibility}
-                icon={isPasswordVisible ? faEyeSlash : faEye}
-              />
-            }
             ref={passwordRef}
           />
         </div>
