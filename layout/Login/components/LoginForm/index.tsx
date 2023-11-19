@@ -36,14 +36,14 @@ export default function LoginForm() {
           autoComplete="email"
           ref={emailRef}
         />
-        <div>
-          <PasswordInput
-            text="YOUR PASSWORD"
-            fgColor="white"
-            bgColor="primary"
-            ref={passwordRef}
-          />
-        </div>
+        <PasswordInput
+          text="YOUR PASSWORD"
+          id="password"
+          name="password"
+          fgColor="white"
+          bgColor="primary"
+          ref={passwordRef}
+        />
         <Text
           padding="6"
           text="Forgot your password?"

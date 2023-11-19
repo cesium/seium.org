@@ -53,6 +53,8 @@ export default function ResetPasswordForm() {
         <Form onSubmit={onSubmit}>
           <PasswordInput
             text="PASSWORD"
+            name="password"
+            type="password"
             fgColor="white"
             bgColor="primary"
             ref={passwordRef}

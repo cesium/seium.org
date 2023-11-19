@@ -95,12 +95,16 @@ export default function SignUpForm() {
         />
         <PasswordInput
           text="PASSWORD"
+          id="password"
+          name="password"
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePassword(e.currentTarget.value)}
         />
         <PasswordInput
           text="CONFIRM PASSWORD"
+          name="confirm"
+          type="confirm"
           fgColor="white"
           bgColor="primary"
         />
