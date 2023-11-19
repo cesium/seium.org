@@ -7,7 +7,6 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   text?: string;
-  autocomplete?: string;
   fgColor: string;
   bgColor: string;
   enabled?: boolean;
@@ -16,10 +15,8 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 export default forwardRef<HTMLInputElement, Props>(function PasswordInput(
   {
     text = "PASSWORD",
-    id = "password",
-    name = "password",
     type = "password",
-    autocomplete = "current-password",
+    autoComplete = "current-password",
     fgColor,
     bgColor,
     ...rest
@@ -36,12 +33,10 @@ export default forwardRef<HTMLInputElement, Props>(function PasswordInput(
     <Input
       {...rest}
       text={text}
-      id={id}
-      name={name}
       type={isPasswordVisible ? "text" : "password"}
       fgColor="white"
       bgColor="primary"
-      autoComplete="current-password"
+      autoComplete={autoComplete}
       right={
         <FontAwesomeIcon
           className="mx-2 cursor-pointer"

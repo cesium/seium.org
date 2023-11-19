@@ -93,7 +93,12 @@ export default function SignUpForm() {
           bgColor="primary"
           onChange={(e) => updateNickname(e.currentTarget.value)}
         />
-        <PasswordInput text="PASSWORD" fgColor="white" bgColor="primary" />
+        <PasswordInput
+          text="PASSWORD"
+          fgColor="white"
+          bgColor="primary"
+          onChange={(e) => updatePassword(e.currentTarget.value)}
+        />
         <PasswordInput
           text="CONFIRM PASSWORD"
           fgColor="white"
