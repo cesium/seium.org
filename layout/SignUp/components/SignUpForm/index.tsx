@@ -103,10 +103,11 @@ export default function SignUpForm() {
         />
         <PasswordInput
           text="CONFIRM PASSWORD"
+          id="confirm"
           name="confirm"
-          type="confirm"
           fgColor="white"
           bgColor="primary"
+          onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
         />
         <Button
           text={scanning ? "STOP SCANNING" : "SCAN QR"}

@@ -2,7 +2,6 @@ import { forwardRef, InputHTMLAttributes } from "react";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   text: string;
-  autocomplete?: string;
   fgColor: string;
   bgColor: string;
   enabled?: boolean;
@@ -38,7 +37,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
     name,
     type,
     value,
-    autocomplete,
+    autoComplete,
     fgColor,
     bgColor,
     onChange,
@@ -60,7 +59,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
           id={id}
           name={name}
           type={type}
-          autoComplete={autocomplete}
+          autoComplete={autoComplete}
           value={value}
           required
           className="w-full bg-transparent outline-none"

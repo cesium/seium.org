@@ -71,16 +71,16 @@ function Register() {
           />
           <PasswordInput
             text="PASSWORD"
+            id="confirm"
             name="password"
-            type="password"
             fgColor="white"
             bgColor="primary"
             onChange={(e) => updatePassword(e.currentTarget.value)}
           />
           <PasswordInput
             text="CONFIRM PASSWORD"
+            id="confirm"
             name="confirm"
-            type="confirm"
             fgColor="white"
             bgColor="primary"
             onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}

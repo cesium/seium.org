@@ -43,17 +43,17 @@ export default forwardRef<HTMLInputElement, Props>(function PasswordInput(
       </label>
       <div className={inputStyle(fgColor, bgColor, enabled)}>
         <input
-          {...rest}
-          type={isPasswordVisible ? "text" : "password"}
-          autoComplete={autoComplete}
           id={id}
           name={name}
+          type={isPasswordVisible ? "text" : "password"}
+          autoComplete={autoComplete}
           value={value}
           required
           className="w-full bg-transparent outline-none"
           onChange={onChange}
           disabled={enabled == false}
           ref={ref}
+          {...rest}
         />
         <FontAwesomeIcon
           className="mx-2 cursor-pointer"
