@@ -55,7 +55,6 @@ export default function ResetPasswordForm() {
             text="PASSWORD"
             id="password"
             name="password"
-            type="password"
             fgColor="white"
             bgColor="primary"
             ref={passwordRef}
