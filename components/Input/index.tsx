@@ -1,4 +1,4 @@
-import { forwardRef, InputHTMLAttributes, ReactNode } from "react";
+import { forwardRef, InputHTMLAttributes } from "react";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   text: string;
@@ -6,8 +6,30 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   fgColor: string;
   bgColor: string;
   enabled?: boolean;
-  right?: ReactNode;
 }
+
+/*
+ * This function exists to prevent other Input similar components (like PasswordInput) to have different styles
+ * if somebody forget to edit the styles across all components
+ */
+export const inputStyle = (
+  fgColor: string,
+  bgColor: string,
+  enabled: boolean
+) => {
+  let textColor = `text-${fgColor}`;
+  let backColor = `bg-${bgColor}`;
+
+  if (enabled === false) {
+    textColor = "text-gray-500";
+    backColor = "bg-gray-100";
+  } else if (enabled === true) {
+    textColor = `bg-${fgColor}`;
+    backColor = `bg-${bgColor}`;
+  }
+
+  return `text-iregular mt-2 flex items-center ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`;
+};
 
 export default forwardRef<HTMLInputElement, Props>(function Input(
   {
@@ -21,22 +43,10 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
     bgColor,
     onChange,
     enabled,
-    right,
     ...rest
   },
   ref
 ) {
-  let textColor = `text-${fgColor}`;
-  let backColor = `bg-${bgColor}`;
-
-  if (enabled === false) {
-    textColor = "text-gray-500";
-    backColor = "bg-gray-100";
-  } else if (enabled === true) {
-    textColor = `bg-${fgColor}`;
-    backColor = `bg-${bgColor}`;
-  }
-
   return (
     <div>
       <label
@@ -45,9 +55,7 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
       >
         {text}
       </label>
-      <div
-        className={`text-iregular mt-2 flex items-center ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
-      >
+      <div className={inputStyle(fgColor, bgColor, enabled)}>
         <input
           id={id}
           name={name}
@@ -61,7 +69,6 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
           ref={ref}
           {...rest}
         />
-        {right}
       </div>
     </div>
   );
