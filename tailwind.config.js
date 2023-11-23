@@ -46,7 +46,15 @@ module.exports = {
         ithin: ["Inter-Thin"],
         terminal: ["Terminal"],
       },
+      animation: {
+        wave: "wave 5s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+      },
       keyframes: {
+        wave: {
+          "6%, 12%": { transform: "rotate(15deg)" },
+          "9%, 15%": { transform: "rotate(-15deg)" },
+          "21%": { transform: "rotate(0deg)" },
+        },
         "typewriter-cursor-pulse": {
           "50%": { opacity: 0 },
         },
