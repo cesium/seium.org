@@ -5,38 +5,33 @@ import { getAllBadges } from "@lib/api";
 
 import Layout from "@components/Layout";
 
-import Pagination from "./components/Pagination";
 import ErrorMessage from "@components/ErrorMessage";
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";
 
-interface Badges {
-  id: string;
-  type: string;
-  name: string;
-  description: string;
+export interface Badges {
+  avatar: string
+  begin: string
+  description: string
+  end: string
+  id: number
+  name: string
+  tokens: number
+  type: number
+}
+
+interface UserWithBadges {
+  user: {
+    badges: Badges[]
+  }
 }
 
 function Badgedex() {
-  const { user } = useAuth();
+  const { user }: UserWithBadges  = useAuth();
   const [allBadges, updateAllBadges] = useState<Badges[]>([]);
   const [all, updateAll] = useState(true);
   const [filter, updateFilter] = useState(null);
   const [error, setError] = useState();
-  const [currentPage, setCurrentPage] = useState(1);
-  const [badgesPerPage] = useState(10);
-
-  const indexOfLastVisitor = currentPage * badgesPerPage;
-  const indexOfFirstVisitor = indexOfLastVisitor - badgesPerPage;
-  const currentBadges: any = allBadges.slice(
-    indexOfFirstVisitor,
-    indexOfLastVisitor
-  );
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  if (currentBadges.length === 0 && currentPage !== 1) {
-    paginate(0);
-  }
 
   useEffect(() => {
     getAllBadges()
@@ -81,7 +76,7 @@ function Badgedex() {
       </div>
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {all
-          ? currentBadges
+          ? allBadges
               .filter((badge) => badge.type == filter || filter == null)
               .map((badge) => (
                 <Badge
@@ -94,16 +89,7 @@ function Badgedex() {
               .filter((badge) => badge.type == filter || filter == null)
               .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
       </div>
-      {all && (
-        <div className="mt-5">
-          <Pagination
-            badgesPerPage={badgesPerPage}
-            totalBadges={allBadges.length}
-            paginate={paginate}
-            currentPage={currentPage}
-          />
-        </div>
-      )}
+
       {error && <ErrorMessage />}
     </Layout>
   );
