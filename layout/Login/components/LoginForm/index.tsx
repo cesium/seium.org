@@ -7,6 +7,7 @@ import Text from "@layout/moonstone/authentication/Text";
 
 import Form from "@components/Form";
 import Input from "@components/Input";
+import PasswordInput from "@components/PasswordInput";
 
 export default function LoginForm() {
   const { errors, login, isLoading } = useAuth();
@@ -35,14 +36,12 @@ export default function LoginForm() {
           autoComplete="email"
           ref={emailRef}
         />
-        <Input
+        <PasswordInput
           text="YOUR PASSWORD"
           id="password"
           name="password"
-          type="password"
           fgColor="white"
           bgColor="primary"
-          autoComplete="current-password"
           ref={passwordRef}
         />
         <Text

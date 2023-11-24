@@ -5,6 +5,7 @@ import { useAuth } from "@context/Auth";
 import Button from "@components/Button";
 import Form from "@components/Form";
 import Input from "@components/Input";
+import PasswordInput from "@components/PasswordInput";
 
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
 
@@ -92,22 +93,18 @@ export default function SignUpForm() {
           bgColor="primary"
           onChange={(e) => updateNickname(e.currentTarget.value)}
         />
-        <Input
+        <PasswordInput
           text="PASSWORD"
           id="password"
           name="password"
-          type="password"
-          autoComplete="current-password"
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePassword(e.currentTarget.value)}
         />
-        <Input
+        <PasswordInput
           text="CONFIRM PASSWORD"
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
+          id="confirm"
+          name="confirm"
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
