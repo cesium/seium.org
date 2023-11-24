@@ -10,8 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
-      # Link PR to Trello    
+    steps:
+      # Link PR to Trello
       - name: Link to Trello
         uses: rematocorp/trello-integration-action@v7.1.0
         with:
