@@ -25,7 +25,7 @@ export default function Sponsors(props) {
       <h2 className="font-terminal-uppercase flex justify-center py-10 text-center text-4xl xs:text-5xl sm:text-6xl md:text-8xl">
         Our amazing sponsors
       </h2>
-      <div className="mt-10 flex justify-center">
+      <div className="mt-10 flex items-end justify-center">
         <Tab
           tabName="Exclusive & Gold"
           selected={!val}
