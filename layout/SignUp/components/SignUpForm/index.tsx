@@ -5,8 +5,13 @@ import { useAuth } from "@context/Auth";
 import Button from "@components/Button";
 import Form from "@components/Form";
 import Input from "@components/Input";
+import Select from "@components/Select";
+
+import courses from "@data/courses.json";
 
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
+
+courses.push("None");
 
 export default function SignUpForm() {
   const { sign_up, isLoading, errors } = useAuth();
@@ -14,6 +19,7 @@ export default function SignUpForm() {
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
+  const [course, updateCourse] = useState("Engenharia Informática");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
@@ -59,6 +65,7 @@ export default function SignUpForm() {
         password_confirmation,
         nickname,
         uuid,
+        course,
       });
     }
   };
@@ -91,6 +98,15 @@ export default function SignUpForm() {
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updateNickname(e.currentTarget.value)}
+        />
+        <Select
+          text="COURSE"
+          id="course"
+          fgColor="white"
+          bgColor="primary"
+          defaultValue="Engenharia Informática"
+          options={courses}
+          onChange={(e) => updateCourse(e.currentTarget.value)}
         />
         <Input
           text="PASSWORD"

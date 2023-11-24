@@ -27,14 +27,6 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
   let textColor = `text-${fgColor}`;
   let backColor = `bg-${bgColor}`;
 
-  if (enabled === false) {
-    textColor = "text-gray-500";
-    backColor = "bg-gray-100";
-  } else if (enabled === true) {
-    textColor = `bg-${fgColor}`;
-    backColor = `bg-${bgColor}`;
-  }
-
   return (
     <div>
       <label
@@ -51,7 +43,9 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
           autoComplete={autocomplete}
           value={value}
           required
-          className={`text-iregular ${textColor} ${backColor} block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm focus:outline-none sm:text-sm`}
+          className={`text-iregular ${
+            enabled == false ? "text-gray-500" : textColor
+          } ${backColor} block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm focus:outline-none sm:text-sm`}
           onChange={onChange}
           disabled={enabled == false}
           ref={ref}

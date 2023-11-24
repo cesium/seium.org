@@ -32,7 +32,7 @@ function Register() {
       password,
       password_confirmation,
       nickname,
-      uuid,
+      course,
     });
   };
 
