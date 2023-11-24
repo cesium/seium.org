@@ -1,30 +1,26 @@
-import { forwardRef, InputHTMLAttributes, ReactNode } from "react";
+import { forwardRef, InputHTMLAttributes } from "react";
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputBaseProps
+  extends Pick<InputHTMLAttributes<HTMLDivElement>, "id" | "children"> {
   text: string;
   fgColor: string;
   bgColor: string;
   enabled?: boolean;
-  right?: ReactNode;
 }
 
-export default forwardRef<HTMLInputElement, Props>(function Input(
-  {
-    text,
-    id,
-    name,
-    type,
-    value,
-    autoComplete,
-    fgColor,
-    bgColor,
-    onChange,
-    enabled,
-    right,
-    ...rest
-  },
-  ref
-) {
+export interface InputDefaultProps
+  extends InputBaseProps,
+    InputHTMLAttributes<HTMLInputElement> {}
+
+// A wrapper to the <input> to standardize styles for the container
+export function InputBase({
+  text,
+  id,
+  fgColor,
+  bgColor,
+  enabled,
+  children,
+}: InputBaseProps) {
   let textColor = `text-${fgColor}`;
   let backColor = `bg-${bgColor}`;
 
@@ -47,21 +43,49 @@ export default forwardRef<HTMLInputElement, Props>(function Input(
       <div
         className={`text-iregular mt-2 flex items-center ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
       >
-        <input
-          id={id}
-          name={name}
-          type={type}
-          autoComplete={autoComplete}
-          value={value}
-          required
-          className="w-full bg-transparent outline-none"
-          onChange={onChange}
-          disabled={enabled == false}
-          ref={ref}
-          {...rest}
-        />
-        {right}
+        {children}
       </div>
     </div>
+  );
+}
+
+export default forwardRef<HTMLInputElement, InputDefaultProps>(function Input(
+  {
+    text,
+    id,
+    name,
+    type,
+    value,
+    autoComplete,
+    fgColor,
+    bgColor,
+    onChange,
+    enabled,
+    ...rest
+  },
+  ref
+) {
+  return (
+    <InputBase
+      text={text}
+      id={id}
+      fgColor={fgColor}
+      bgColor={bgColor}
+      enabled={enabled}
+    >
+      <input
+        id={id}
+        name={name}
+        type={type}
+        autoComplete={autoComplete}
+        value={value}
+        required
+        className="w-full bg-transparent outline-none"
+        onChange={onChange}
+        disabled={enabled == false}
+        ref={ref}
+        {...rest}
+      />
+    </InputBase>
   );
 });
