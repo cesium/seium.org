@@ -41,7 +41,7 @@ export default function Select({
           disabled={disabled}
           className={`text-iregular ${
             disabled ? "text-gray-500" : textColor
-          } ${backColor} block w-full appearance-none rounded-full px-3 pl-6 placeholder-gray-400 opacity-100 focus:outline-none sm:text-sm`}
+          } ${backColor} block w-full appearance-none rounded-full px-3 pr-10 pl-6 placeholder-gray-400 opacity-100 focus:outline-none sm:text-sm`}
           {...rest}
         >
           {options.map((option) => (

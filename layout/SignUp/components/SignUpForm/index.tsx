@@ -19,7 +19,9 @@ export default function SignUpForm() {
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
-  const [course, updateCourse] = useState("Engenharia Informática");
+  const [course, updateCourse] = useState(
+    "Licenciatura em Engenharia Informática"
+  );
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
@@ -104,7 +106,7 @@ export default function SignUpForm() {
           id="course"
           fgColor="white"
           bgColor="primary"
-          defaultValue="Engenharia Informática"
+          defaultValue="Licenciatura em Engenharia Informática"
           options={courses}
           onChange={(e) => updateCourse(e.currentTarget.value)}
         />
