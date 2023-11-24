@@ -25,8 +25,7 @@ export default function GoToTop() {
   return (
     <FontAwesomeIcon
       icon={faArrowCircleUp}
-      className={"fixed right-5 bottom-5 cursor-pointer text-3xl"}
-      visibility={showButton ? "visible" : "hidden"}
+      className={`fixed right-5 bottom-5 cursor-pointer text-3xl transition-translate duration-300 ${showButton ? "" : "translate-y-52"}`}
       onClick={goToTop}
     />
   );
