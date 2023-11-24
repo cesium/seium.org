@@ -1,6 +1,6 @@
 import { forwardRef, InputHTMLAttributes, useState } from "react";
 
-import { inputStyle } from "@components/Input";
+import Input from "@components/Input";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -17,13 +17,8 @@ export default forwardRef<HTMLInputElement, Props>(function PasswordInput(
     text = "PASSWORD",
     type = "password",
     autoComplete = "current-password",
-    id,
-    name,
-    value,
     fgColor,
     bgColor,
-    onChange,
-    enabled,
     ...rest
   },
   ref
@@ -33,34 +28,23 @@ export default forwardRef<HTMLInputElement, Props>(function PasswordInput(
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
+
   return (
-    <div>
-      <label
-        htmlFor={id}
-        className={`pl-6 font-iregular text-${fgColor} mt-5 block text-sm`}
-      >
-        {text}
-      </label>
-      <div className={inputStyle(fgColor, bgColor, enabled)}>
-        <input
-          id={id}
-          name={name}
-          type={isPasswordVisible ? "text" : "password"}
-          autoComplete={autoComplete}
-          value={value}
-          required
-          className="w-full bg-transparent outline-none"
-          onChange={onChange}
-          disabled={enabled == false}
-          ref={ref}
-          {...rest}
-        />
+    <Input
+      {...rest}
+      text={text}
+      type={isPasswordVisible ? "text" : "password"}
+      fgColor="white"
+      bgColor="primary"
+      autoComplete={autoComplete}
+      right={
         <FontAwesomeIcon
           className="mx-2 cursor-pointer"
           onClick={togglePasswordVisibility}
           icon={isPasswordVisible ? faEyeSlash : faEye}
         />
-      </div>
-    </div>
+      }
+      ref={ref}
+    />
   );
 });
