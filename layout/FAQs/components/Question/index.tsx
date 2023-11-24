@@ -21,7 +21,13 @@ export default function Question({
       <h2 className="font-terminal-uppercase mb-4 text-2xl md:text-4xl">
         {title}
       </h2>
-      {showQuestion && <p>{description}</p>}
+      <div
+        className={`transition-max-height overflow-hidden duration-300 ${
+          showQuestion ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        {description && <p>{description}</p>}
+      </div>
       <div className="flex items-center justify-end">
         <Link
           href={href}
@@ -30,7 +36,7 @@ export default function Question({
           {link}
         </Link>
         <button
-          className="font-terminal-uppercase w-16 rounded-full bg-quinary px-2 text-xl text-white"
+          className="font-terminal-uppercase w-16 transform rounded-full bg-quinary px-2 text-xl text-white transition-transform duration-300 hover:scale-110"
           onClick={() =>
             setShowQuestion((prevShowQuestion) => !prevShowQuestion)
           }
