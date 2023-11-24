@@ -11,7 +11,7 @@ interface BadgeProps {
 
 export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
   const imageOnError: ReactEventHandler<HTMLImageElement> = (e) => {
-    e.currentTarget.src = "/images/badges/badge-template.png";
+    e.currentTarget.src = "/images/badges/badge-template.svg";
   };
 
   return (
