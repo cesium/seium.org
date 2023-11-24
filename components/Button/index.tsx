@@ -7,6 +7,11 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   bold?: boolean;
 }
 
+interface ButtonTitleProps {
+  title: string;
+  bold?: boolean;
+}
+
 export default function Button({
   title,
   description,
@@ -15,9 +20,11 @@ export default function Button({
   onClick,
   customStyle,
   bold,
+  ...rest
 }: Props) {
   return (
     <button
+      {...rest}
       onClick={onClick}
       type={type}
       disabled={disabled}
@@ -25,10 +32,14 @@ export default function Button({
         customStyle || ""
       } m-auto block rounded-full hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75`}
     >
-      <p className={bold ? "font-ibold font-ibold" : "font-iregular"}>
-        {title}
-      </p>
+      <ButtonTitle title={title} bold={bold} />
       <p className="font-iregular">{description}</p>
     </button>
+  );
+}
+
+function ButtonTitle({ title, bold }: ButtonTitleProps) {
+  return (
+    <p className={bold ? "font-ibold font-ibold" : "font-iregular"}>{title}</p>
   );
 }
