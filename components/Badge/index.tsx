@@ -2,17 +2,17 @@ import Link from "next/link";
 import { ReactEventHandler } from "react";
 
 interface BadgeProps {
-  name: string
-  id: string | number
-  avatar: string
-  tokens: string | number
-  owned: boolean
+  name: string;
+  id: string | number;
+  avatar: string;
+  tokens: string | number;
+  owned: boolean;
 }
 
 export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
   const imageOnError: ReactEventHandler<HTMLImageElement> = (e) => {
-    e.currentTarget.src='/images/badges/badge-template.png' 
-  }
+    e.currentTarget.src = "/images/badges/badge-template.png";
+  };
 
   return (
     <Link

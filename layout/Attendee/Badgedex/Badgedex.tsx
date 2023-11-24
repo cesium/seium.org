@@ -8,26 +8,27 @@ import Layout from "@components/Layout";
 import ErrorMessage from "@components/ErrorMessage";
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";
+import GoToTop from "@components/GoToTop";
 
 export interface Badges {
-  avatar: string
-  begin: string
-  description: string
-  end: string
-  id: number
-  name: string
-  tokens: number
-  type: number
+  avatar: string;
+  begin: string;
+  description: string;
+  end: string;
+  id: number;
+  name: string;
+  tokens: number;
+  type: number;
 }
 
 interface UserWithBadges {
   user: {
-    badges: Badges[]
-  }
+    badges: Badges[];
+  };
 }
 
 function Badgedex() {
-  const { user }: UserWithBadges  = useAuth();
+  const { user }: UserWithBadges = useAuth();
   const [allBadges, updateAllBadges] = useState<Badges[]>([]);
   const [all, updateAll] = useState(true);
   const [filter, updateFilter] = useState(null);
@@ -91,6 +92,7 @@ function Badgedex() {
       </div>
 
       {error && <ErrorMessage />}
+      <GoToTop />
     </Layout>
   );
 }
