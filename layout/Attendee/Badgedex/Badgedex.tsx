@@ -33,6 +33,7 @@ function Badgedex() {
   const [all, updateAll] = useState(true);
   const [filter, updateFilter] = useState(null);
   const [error, setError] = useState();
+  const [currentBadges, setCurrentBadges] = useState(allBadges);
 
   useEffect(() => {
     getAllBadges()
@@ -41,6 +42,13 @@ function Badgedex() {
         setError(errors);
       });
   }, []);
+
+  useEffect(() => {
+    const badges = all ? allBadges : user.badges;
+    setCurrentBadges(
+      badges.filter((badge) => badge.type == filter || filter == null)
+    );
+  }, [user, allBadges, filter, all]);
 
   return (
     <Layout title="BadgeDex" description="Explore all existing badges">
@@ -76,20 +84,22 @@ function Badgedex() {
         </div>
       </div>
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-        {all
-          ? allBadges
-              .filter((badge) => badge.type == filter || filter == null)
-              .map((badge) => (
-                <Badge
-                  key={badge.id}
-                  owned={user.badges.map((b) => b.id).includes(badge.id)}
-                  {...badge}
-                />
-              ))
-          : user.badges
-              .filter((badge) => badge.type == filter || filter == null)
-              .map((badge) => <Badge key={badge.id} owned={true} {...badge} />)}
+        {currentBadges.map((badge) => (
+          <Badge
+            key={badge.id}
+            owned={!all || user.badges.map((b) => b.id).includes(badge.id)}
+            {...badge}
+          />
+        ))}
       </div>
+
+      {currentBadges.length == 0 && (
+        <div className="flex h-full w-full items-center justify-center">
+          <h2 className="mt-2 text-lg font-medium text-white">
+            No Badges to show!
+          </h2>
+        </div>
+      )}
 
       {error && <ErrorMessage />}
       <GoToTop />
