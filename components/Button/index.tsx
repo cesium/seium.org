@@ -39,7 +39,6 @@ export default function Button({
 }
 
 function ButtonTitle({ title, bold }: ButtonTitleProps) {
-  return (
-    <p className={bold ? "font-ibold font-ibold" : "font-iregular"}>{title}</p>
-  );
+  const className = bold ? "font-ibold" : "font-iregular";
+  return <div className={className}>{title}</div>;
 }
