@@ -95,7 +95,6 @@ function Profile() {
             <div className="w-auto">
               <Button
                 customStyle="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
-                form="profile-form"
                 title={editing ? "Save Changes" : "Edit"}
               />
             </div>
