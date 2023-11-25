@@ -1,14 +1,17 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  title: string;
+interface Props {
+  title: ReactNode;
   description?: string;
   customStyle?: string;
   bold?: boolean;
+  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
 interface ButtonTitleProps {
-  title: string;
+  title: ReactNode;
   bold?: boolean;
 }
 
