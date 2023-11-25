@@ -7,7 +7,7 @@ interface Props {
   bold?: boolean;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
 }
 
 interface ButtonTitleProps {
