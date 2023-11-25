@@ -7,6 +7,7 @@ import Input from "@components/Input";
 
 import Layout from "@components/Layout";
 import Heading from "@components/Heading";
+import ResetPassword from "@components/ResetPassword";
 
 import { CheckpointTracker, CodeInput } from "./components";
 import CVInput from "./components/CVInput";
@@ -45,16 +46,6 @@ function Profile() {
   }
 
   const levelEntries = [10, 30, 60, 100, 150];
-
-  const onResetPassword = () => {
-    resetPassword(user.email)
-      .then((_) =>
-        alert(
-          "An email has been sent to your account for you to recover your password"
-        )
-      )
-      .catch((_) => alert("An error occured"));
-  };
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
@@ -152,15 +143,7 @@ function Profile() {
               onChange={(e) => setUsername(e.currentTarget.value)}
             />
 
-            <button
-              className="inline-block h-auto pl-6 pb-5 text-quinary underline"
-              onClick={(e) => {
-                e.preventDefault();
-                onResetPassword();
-              }}
-            >
-              Reset Password
-            </button>
+            <ResetPassword user={user} />
           </Form>
         </div>
 
