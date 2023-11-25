@@ -16,8 +16,6 @@ import CVInput from "./components/CVInput";
 import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
 
-courses.push("None");
-
 function Profile() {
   const { user, editUser } = useAuth();
   const [avatar, setAvatar] = useState(null);

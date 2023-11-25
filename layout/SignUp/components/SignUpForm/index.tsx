@@ -11,8 +11,6 @@ import courses from "@data/courses.json";
 
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
 
-courses.push("None");
-
 export default function SignUpForm() {
   const { sign_up, isLoading, errors } = useAuth();
 
