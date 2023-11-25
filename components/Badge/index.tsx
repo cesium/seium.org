@@ -20,7 +20,7 @@ export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
       className={`h-full w-full ${owned ? "opacity-100" : "opacity-30"}`}
     >
       <div>
-        <img src={avatar} onError={imageOnError} alt="Badge Image"></img>
+        <img src={avatar} onError={imageOnError} alt={name}></img>
       </div>
 
       <div className="flex flex-col justify-items-center text-center font-iregular">
