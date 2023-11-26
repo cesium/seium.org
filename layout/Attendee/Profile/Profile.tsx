@@ -6,6 +6,7 @@ import Form from "@components/Form";
 import Input from "@components/Input";
 
 import Layout from "@components/Layout";
+import Button from "@components/Button";
 import Heading from "@components/Heading";
 
 import { CheckpointTracker, CodeInput } from "./components";
@@ -92,13 +93,10 @@ function Profile() {
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile">
             <div className="w-auto">
-              <button
-                className="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
-                type="submit"
-                form="profile-form"
-              >
-                {editing ? "Save Changes" : "Edit"}
-              </button>
+              <Button
+                customStyle="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
+                title={editing ? "Save Changes" : "Edit"}
+              />
             </div>
           </Heading>
 

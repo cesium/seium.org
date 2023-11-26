@@ -110,8 +110,8 @@ export default function SignUpForm() {
           onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
         />
         <Button
-          text={scanning ? "STOP SCANNING" : "SCAN QR"}
-          customStyle="text-secondary bg-quinary border-quinary"
+          title={scanning ? "STOP SCANNING" : "SCAN QR"}
+          customStyle="w-full h-12 text-secondary bg-quinary border-quinary"
           onClick={(e) => {
             e.preventDefault();
             updateScanning(!scanning);
@@ -137,8 +137,8 @@ export default function SignUpForm() {
         )}
         <Button
           type="submit"
-          text={isLoading ? "Registering..." : "LET'S GO"}
-          customStyle="text-secondary bg-quinary border-quinary"
+          title={isLoading ? "Registering..." : "LET'S GO"}
+          customStyle="w-full h-12 text-secondary bg-quinary border-quinary"
         />
         {(local_error || (!isLoading && errors)) && (
           <p className="mt-3 font-iregular text-lg text-red-400">

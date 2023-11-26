@@ -15,7 +15,7 @@ export default function Hackathon() {
             <span className="w-56 self-center">
               <a href="https://forms.gle/8aSEUubkjei1Dpym6">
                 <Button
-                  text="REGISTER YOUR TEAM"
+                  title="REGISTER YOUR TEAM"
                   customStyle="text-white bg-secondary border-quaternary hover:border-quinary"
                 />
               </a>{" "}
