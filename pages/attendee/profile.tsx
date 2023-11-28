@@ -5,7 +5,7 @@ import { getCourses } from "@lib/api";
 export async function getServerSideProps(context) {
   context.res.setHeader(
     "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
+    "public, s-maxage=3600, stale-while-revalidate=3600"
   );
 
   const courses = await getCourses().then((response) =>

@@ -104,6 +104,8 @@ function Profile({ courses }) {
               <Button
                 customStyle="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
                 title={editing ? "Save Changes" : "Edit"}
+                form="profile-form"
+                type="submit"
               />
             </div>
           </Heading>

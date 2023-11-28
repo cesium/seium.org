@@ -31,8 +31,11 @@ export function InputBase({
         className={`pl-6 font-iregular text-${fgColor} mt-5 block text-sm`}
       >
         {text}
+      </label>
       <div
-        className={`text-iregular mt-2 flex items-center  ${enabled == false ? "text-gray-500" : textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
+        className={`text-iregular mt-2 flex items-center  ${
+          enabled == false ? "text-gray-500" : textColor
+        } ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
       >
         {children}
       </div>
