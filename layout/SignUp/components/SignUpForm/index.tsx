@@ -7,8 +7,6 @@ import Form from "@components/Form";
 import Input from "@components/Input";
 import Select from "@components/Select";
 
-import { getCourses } from "@lib/api";
-
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
 
 interface Course {
@@ -16,15 +14,12 @@ interface Course {
   name: string;
 }
 
-export default function SignUpForm() {
+export default function SignUpForm({ courses }) {
   const { sign_up, isLoading, errors } = useAuth();
 
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
-  const [courses, updateCourses] = useState<Course[]>([
-    { id: "", name: "None" },
-  ]);
   const [course, updateCourse] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
@@ -47,12 +42,6 @@ export default function SignUpForm() {
   const validatePassword = (password) => {
     return password.length >= 8;
   };
-
-  useEffect(() => {
-    getCourses().then((response) =>
-      updateCourses(response.data.concat(courses))
-    );
-  }, []);
 
   const onFinish = (e) => {
     e.preventDefault();

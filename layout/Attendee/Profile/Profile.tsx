@@ -11,7 +11,7 @@ import Heading from "@components/Heading";
 
 import { CheckpointTracker, CodeInput } from "./components";
 import CVInput from "./components/CVInput";
-import { resetPassword, getCourses } from "@lib/api";
+import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
 
 interface Course {
@@ -19,14 +19,11 @@ interface Course {
   name: string;
 }
 
-function Profile() {
+function Profile({ courses }) {
   const { user, editUser } = useAuth();
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
-  const [courses, updateCourses] = useState<Course[]>([
-    { id: "", name: "None" },
-  ]);
   const [course, setCourse] = useState(user.course || "");
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
@@ -93,12 +90,6 @@ function Profile() {
     formData.append("attendee[cv]", f);
     editUser(formData);
   };
-
-  useEffect(() => {
-    getCourses().then((response) =>
-      updateCourses(response.data.concat(courses))
-    );
-  }, []);
 
   return (
     <Layout

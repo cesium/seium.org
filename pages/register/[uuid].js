@@ -16,7 +16,20 @@ import Select from "@components/Select";
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
 
-function Register() {
+export async function getServerSideProps(context) {
+  context.res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
+
+  const courses = await getCourses().then((response) =>
+    response.data.concat({ id: "", name: "None" })
+  );
+
+  return { props: { courses: courses } };
+}
+
+function Register({ courses }) {
   const { sign_up, errors, isLoading } = useAuth();
   const router = useRouter();
   const { uuid } = router.query;
@@ -24,7 +37,6 @@ function Register() {
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
-  const [courses, updateCourses] = useState([{ id: "null", name: "None" }]);
   const [course, updateCourse] = useState("0");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
@@ -41,12 +53,6 @@ function Register() {
       course,
     });
   };
-
-  useEffect(() => {
-    getCourses().then((response) =>
-      updateCourses(response.data.concat(courses))
-    );
-  }, []);
 
   return (
     <div className="min-h-screen overflow-hidden bg-secondary">
