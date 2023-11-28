@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion as Motion } from "framer-motion";
 
 import { withoutAuth, useAuth } from "@context/Auth";
+
+import { getCourses } from "@lib/api";
 
 import Button from "@components/Button";
 import Card from "@components/Card";
 import Return from "@components/Return";
 import Form from "@components/Form";
 import Input from "@components/Input";
+import Select from "@components/Select";
 
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
@@ -21,6 +24,8 @@ function Register() {
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
+  const [courses, updateCourses] = useState([{ id: "null", name: "None" }]);
+  const [course, updateCourse] = useState("0");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
 
@@ -32,9 +37,16 @@ function Register() {
       password,
       password_confirmation,
       nickname,
+      uuid,
       course,
     });
   };
+
+  useEffect(() => {
+    getCourses().then((response) =>
+      updateCourses(response.data.concat(courses))
+    );
+  }, []);
 
   return (
     <div className="min-h-screen overflow-hidden bg-secondary">
@@ -67,6 +79,18 @@ function Register() {
             fgColor="white"
             bgColor="primary"
             onChange={(e) => updateNickname(e.currentTarget.value)}
+          />
+          <Select
+            text="COURSE"
+            id="course"
+            fgColor="white"
+            bgColor="primary"
+            defaultValue={0}
+            options={courses.map((course) => ({
+              key: course.id,
+              name: course.name,
+            }))}
+            onChange={(e) => updateCourse(e.currentTarget.value)}
           />
           <Input
             text="PASSWORD"

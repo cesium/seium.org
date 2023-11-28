@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { withAuth, useAuth } from "@context/Auth";
 
@@ -9,18 +9,24 @@ import Select from "@components/Select";
 import Layout from "@components/Layout";
 import Heading from "@components/Heading";
 
-import courses from "@data/courses.json";
-
 import { CheckpointTracker, CodeInput } from "./components";
 import CVInput from "./components/CVInput";
-import { resetPassword } from "@lib/api";
+import { resetPassword, getCourses } from "@lib/api";
 import { getFirstName } from "@lib/naming";
+
+interface Course {
+  id: any;
+  name: string;
+}
 
 function Profile() {
   const { user, editUser } = useAuth();
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
+  const [courses, updateCourses] = useState<Course[]>([
+    { id: "", name: "None" },
+  ]);
   const [course, setCourse] = useState(user.course || "");
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
@@ -64,7 +70,7 @@ function Profile() {
     e.preventDefault();
     const formData = new FormData();
     formData.append("attendee[nickname]", username);
-    formData.append("attendee[course]", course);
+    formData.append("attendee[course_id]", course);
     formData.append("attendee[avatar]", avatar);
 
     if (editing) {
@@ -87,6 +93,12 @@ function Profile() {
     formData.append("attendee[cv]", f);
     editUser(formData);
   };
+
+  useEffect(() => {
+    getCourses().then((response) =>
+      updateCourses(response.data.concat(courses))
+    );
+  }, []);
 
   return (
     <Layout
@@ -162,7 +174,10 @@ function Profile() {
               bgColor="primary"
               fgColor="white"
               value={course}
-              options={courses}
+              options={courses.map((course) => ({
+                key: course.id,
+                name: course.name,
+              }))}
               enabled={editing}
               onChange={(e) => setCourse(e.currentTarget.value)}
             />

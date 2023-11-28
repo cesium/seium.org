@@ -2,9 +2,14 @@ import { SelectHTMLAttributes } from "react";
 
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
+interface Option {
+  key: any;
+  name: string;
+}
+
 interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
   text: string;
-  options: string[];
+  options: Option[];
   customStyle?: string;
   fgColor: string;
   bgColor: string;
@@ -45,7 +50,7 @@ export default function Select({
           {...rest}
         >
           {options.map((option) => (
-            <option key={option}>{option}</option>
+            <option value={option.key}>{option.name}</option>
           ))}
         </select>
         <ChevronDownIcon
