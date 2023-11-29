@@ -24,14 +24,6 @@ export function InputBase({
   let textColor = `text-${fgColor}`;
   let backColor = `bg-${bgColor}`;
 
-  if (enabled === false) {
-    textColor = "text-gray-500";
-    backColor = "bg-gray-100";
-  } else if (enabled === true) {
-    textColor = `bg-${fgColor}`;
-    backColor = `bg-${bgColor}`;
-  }
-
   return (
     <div>
       <label
@@ -41,7 +33,9 @@ export function InputBase({
         {text}
       </label>
       <div
-        className={`text-iregular mt-2 flex items-center ${textColor} ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
+        className={`text-iregular mt-2 flex items-center  ${
+          enabled == false ? "text-gray-500" : textColor 
+        } ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
       >
         {children}
       </div>

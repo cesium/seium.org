@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { withAuth, useAuth } from "@context/Auth";
 
 import Form from "@components/Form";
 import Input from "@components/Input";
+import Select from "@components/Select";
 
 import Layout from "@components/Layout";
 import Button from "@components/Button";
@@ -14,11 +15,17 @@ import CVInput from "./components/CVInput";
 import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
 
-function Profile() {
+interface Course {
+  id: any;
+  name: string;
+}
+
+function Profile({ courses }) {
   const { user, editUser } = useAuth();
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
+  const [course, setCourse] = useState(user.course || "");
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
@@ -61,6 +68,7 @@ function Profile() {
     e.preventDefault();
     const formData = new FormData();
     formData.append("attendee[nickname]", username);
+    formData.append("attendee[course_id]", course);
     formData.append("attendee[avatar]", avatar);
 
     if (editing) {
@@ -96,6 +104,8 @@ function Profile() {
               <Button
                 customStyle="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
                 title={editing ? "Save Changes" : "Edit"}
+                form="profile-form"
+                type="submit"
               />
             </div>
           </Heading>
@@ -135,7 +145,7 @@ function Profile() {
               id="name"
               name="name"
               value={user.name || ""}
-              bgColor="white"
+              bgColor="primary"
               fgColor="white"
               enabled={false}
             />
@@ -144,10 +154,23 @@ function Profile() {
               id="username"
               name="username"
               value={username}
-              bgColor="white"
+              bgColor="primary"
               fgColor="white"
               enabled={editing}
               onChange={(e) => setUsername(e.currentTarget.value)}
+            />
+            <Select
+              text="COURSE"
+              id="course"
+              bgColor="primary"
+              fgColor="white"
+              value={course}
+              options={courses.map((course) => ({
+                key: course.id,
+                name: course.name,
+              }))}
+              enabled={editing}
+              onChange={(e) => setCourse(e.currentTarget.value)}
             />
 
             <button
