@@ -54,7 +54,7 @@ export default function LoginForm() {
           title={isLoading ? "Authenticating..." : "LET'S GO"}
           disabled={isLoading}
           type="submit"
-          customStyle="text-secondary bg-quinary border-quinary w-full h-16"
+          className="text-secondary bg-quinary border-quinary w-full h-16"
         />
         {errors && <p className="text-center text-failure">{errors}</p>}
       </Form>

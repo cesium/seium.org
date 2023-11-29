@@ -11,8 +11,8 @@ export default function Pitch() {
         <a href="/team">
           <Button
             title="MEET THE TEAM"
-            customStyle="w-56 h-20 border-2 text-white border-white hover:text-quinary hover:border-quinary"
-            bold={false}
+            className="w-56 h-20 border-2 text-white border-white hover:text-quinary hover:border-quinary"
+            bold={true}
           />
         </a>
       </div>
