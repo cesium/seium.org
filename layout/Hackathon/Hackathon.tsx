@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import { Hero, Awards, Regulations } from "./components";
 
 import PeopleShowcase from "@components/PeopleShowcase";

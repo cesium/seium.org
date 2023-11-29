@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import { Hero } from "./components";
 
 import Navbar from "@components/Navbar";

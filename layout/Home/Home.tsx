@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import { Hero, Sponsors, Hackathon, Speakers, Partners } from "./components";
 
 import Navbar from "@components/Navbar";
