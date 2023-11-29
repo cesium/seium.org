@@ -21,7 +21,7 @@ function BlockItem({
 
   const block = (
     <div
-      id={`B${id}`}
+      id={`${id}`}
       className={`mx-2 h-full border-t-2 border-white p-2 ${styles.gridBlock}`}
     >
       {coffeeBreak && (
