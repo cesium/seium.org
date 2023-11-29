@@ -97,7 +97,7 @@ export default function ResetPasswordForm() {
               <Button
                 type="button"
                 title="BACK TO LOGIN"
-                className="text-secondary bg-quinary border-quinary"
+                className="border-quinary bg-quinary text-secondary"
               />
             </Link>
           </div>

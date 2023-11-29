@@ -10,10 +10,7 @@ export default function SponsorBadgeButton({ sponsor, all }) {
   );
   return (
     <div className="mt-8 w-auto">
-      <Button
-        className="h-16 w-full bg-quinary"
-        title="🏅 Dar Badge {text}"
-      />
+      <Button className="h-16 w-full bg-quinary" title="🏅 Dar Badge {text}" />
     </div>
   );
 }
