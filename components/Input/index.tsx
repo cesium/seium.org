@@ -34,7 +34,7 @@ export function InputBase({
       </label>
       <div
         className={`text-iregular mt-2 flex items-center  ${
-          enabled == false ? "text-gray-500" : textColor
+          enabled ? textColor : "text-gray-500"
         } ${backColor} appearance-none rounded-full border border-gray-300 px-3 py-2 pl-6 placeholder-gray-400 shadow-sm sm:text-sm`}
       >
         {children}
