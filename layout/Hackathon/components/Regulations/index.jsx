@@ -13,7 +13,7 @@ export default function Regulations() {
         <div className="mt-6 sm:mt-0 sm:w-80">
           <Link href={"/docs/hackathon.pdf"}>
             <Button
-              text="READ THE RULES"
+              title="READ THE RULES"
               customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
             />
           </Link>

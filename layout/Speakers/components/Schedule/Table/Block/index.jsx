@@ -91,8 +91,15 @@ export default function Block({
           </div>
         </div>
       </div>
-
-      <p className={showSpeaker ? "hidden" : ""}>{description}</p>
+      <div>
+        <p
+          className={`transition-max-height overflow-hidden duration-300 max-h-${
+            showSpeaker ? "0" : "96"
+          }`}
+        >
+          {description}
+        </p>
+      </div>
     </div>
   );
 }

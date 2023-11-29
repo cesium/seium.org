@@ -24,7 +24,7 @@ export default function Hero() {
             <span className="inline-block w-56 content-center items-center text-center align-middle">
               <a href="https://forms.gle/eFft9LTLSQzJjTG29">
                 <Button
-                  text="REGISTER YOUR TEAM"
+                  title="REGISTER YOUR TEAM"
                   customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
                 />
               </a>

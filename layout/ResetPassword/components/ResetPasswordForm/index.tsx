@@ -9,7 +9,7 @@ import Button from "@components/Button";
 import ImageButton from "@components/ImageButton";
 
 import Form from "@components/Form";
-import Input from "@components/Input";
+import PasswordInput from "@components/PasswordInput";
 
 export default function ResetPasswordForm() {
   const router = useRouter();
@@ -51,22 +51,18 @@ export default function ResetPasswordForm() {
     <>
       {success === null && (
         <Form onSubmit={onSubmit}>
-          <Input
+          <PasswordInput
             text="PASSWORD"
             id="password"
             name="password"
-            type="password"
-            autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
             ref={passwordRef}
           />
-          <Input
+          <PasswordInput
             text="CONFIRM PASSWORD"
             id="confirm"
             name="confirm"
-            type="password"
-            autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
             ref={passwordConfirmationRef}
@@ -100,7 +96,7 @@ export default function ResetPasswordForm() {
             <Link href="/login">
               <Button
                 type="button"
-                text="BACK TO LOGIN"
+                title="BACK TO LOGIN"
                 customStyle="text-secondary bg-quinary border-quinary"
               />
             </Link>

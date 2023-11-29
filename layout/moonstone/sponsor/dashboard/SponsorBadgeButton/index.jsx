@@ -1,3 +1,5 @@
+import Button from "@components/Button";
+
 export default function SponsorBadgeButton({ sponsor, all }) {
   let text = all ? (
     <>
@@ -8,9 +10,10 @@ export default function SponsorBadgeButton({ sponsor, all }) {
   );
   return (
     <div className="mt-8 w-auto">
-      <button className="m-auto block h-16 w-full rounded-full bg-quinary">
-        <p className="font-iregular"> 🏅 Dar Badge {text} </p>
-      </button>
+      <Button
+        customStyle="m-auto block h-16 w-full rounded-full bg-quinary"
+        title="🏅 Dar Badge {text}"
+      />
     </div>
   );
 }

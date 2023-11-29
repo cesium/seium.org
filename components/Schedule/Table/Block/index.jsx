@@ -55,8 +55,9 @@ function BlockItem({
 
       {description && (
         <div
-          className={styles.description}
-          style={{ display: focused ? "block" : "none" }}
+          className={`transition-max-height overflow-hidden duration-300 ${
+            focused ? "max-h-96" : "max-h-0"
+          }`}
         >
           {description.split("\n").map((text, i) => (
             <p key={i} className={`mb-2 font-iregular text-lg text-white`}>

@@ -113,7 +113,7 @@ function Prize() {
                   </div>
                   <div className="w-32">
                     <Button
-                      text={`REDEEM ${product.not_redeemed}`}
+                      title={`REDEEM ${product.not_redeemed}`}
                       onClick={() => {
                         redeemRedeemables(product.id, product.not_redeemed);
                       }}
@@ -156,7 +156,7 @@ function Prize() {
                   </div>
                   <div className="w-32">
                     <Button
-                      text={`REDEEM ${product.not_redeemed}`}
+                      title={`REDEEM ${product.not_redeemed}`}
                       onClick={() => {
                         redeemWheelRedeemables(
                           product.id,
