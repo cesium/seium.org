@@ -1,4 +1,4 @@
-import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
@@ -23,10 +23,13 @@ export default function GoToTop() {
   };
 
   return (
-    <FontAwesomeIcon
-      icon={faArrowCircleUp}
-      className={`fixed right-5 bottom-5 cursor-pointer text-3xl transition-translate duration-300 ${showButton ? "" : "translate-y-52"}`}
+    <button
+      className={`fixed right-5 bottom-5 cursor-pointer w-12 h-12 bg-white rounded-full transition-translate duration-300 ${
+        showButton ? "" : "translate-y-52"
+      }`}
       onClick={goToTop}
-    />
+    >
+      <FontAwesomeIcon icon={faArrowUp} className="text-3xl text-black" />
+    </button>
   );
 }
