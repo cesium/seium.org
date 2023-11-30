@@ -1,4 +1,3 @@
-import Filters from "./Filters";
 import styles from "./style.module.css";
 
 function getDayDescriptor(year, month, day) {
@@ -16,7 +15,7 @@ function getDayDescriptor(year, month, day) {
   const today = new Date(
     _today.getFullYear(),
     _today.getMonth(),
-    _today.getDate()
+    _today.getDate(),
   );
 
   const day_difference =
@@ -48,10 +47,10 @@ export default function Day(props) {
   const date_descriptor = getDayDescriptor(
     parseInt(date[0]),
     parseInt(date[1]),
-    parseInt(date[2])
+    parseInt(date[2]),
   );
 
-  const Ans = () => (
+  return (
     <div className="flex w-full justify-center">
       <div className="flex w-full justify-between text-4xl xs:text-5xl sm:text-7xl lg:text-8xl xl:mx-20 xl:text-7xl">
         <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
@@ -83,20 +82,4 @@ export default function Day(props) {
       </div>
     </div>
   );
-
-  if (props.showFilters) {
-    return (
-      <>
-        <Ans />
-
-        <Filters
-          key="key"
-          filters={props.filters}
-          updateFilters={props.updateFilters}
-        />
-      </>
-    );
-  }
-
-  return <Ans />;
 }

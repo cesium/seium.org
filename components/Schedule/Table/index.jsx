@@ -1,34 +1,8 @@
+import { useSearchParams } from "next/navigation";
+
 import Block from "./Block";
-import { isSelected } from "../Day/Filters";
 
 import schedule from "/data/schedule.json";
-
-function filterElem(filters) {
-  return function (elem) {
-    if (filters == "") return true;
-
-    let result = elem.activity.author == filters;
-    if (result) return true;
-
-    switch (elem.activity.activityType) {
-      case "Coffee Break":
-        result = isSelected(filters, "Breaks");
-        break;
-      case "Talk":
-        result = isSelected(filters, "Talks");
-        break;
-      case "Pitch":
-        result = isSelected(filters, "Pitch");
-        break;
-      case "Workshop":
-        result = isSelected(filters, "Workshops");
-        break;
-      default:
-        break;
-    }
-    return result;
-  };
-}
 
 /*
  *  Groups the activities into arrays. Two elements will be in the same array if they happen at the same
@@ -55,13 +29,9 @@ function group(list) {
   return result;
 }
 
-export default function Table({
-  date,
-  updateHasFocused,
-  hash,
-  filters,
-  detailed,
-}) {
+export default function Table({ date, updateHasFocused, hash, detailed }) {
+  const searchParams = useSearchParams();
+
   const obj = schedule.find((obj) => obj.date == date);
 
   if (obj === undefined || obj.activities === undefined) {
@@ -75,7 +45,34 @@ export default function Table({
       id: id,
       focused: hash == `${date}-${id}`,
     }))
-    .filter(filterElem(filters));
+    .filter(({ activity }) => {
+      const currentSelectedFilters =
+        searchParams.get("filter")?.split(",") ?? [];
+
+      // when query params are: filter = []
+      if (currentSelectedFilters.length === 0) return true;
+
+      // When query params are: filter = [""]
+      if (
+        currentSelectedFilters.length === 1 &&
+        currentSelectedFilters[0] === ""
+      )
+        return true;
+
+      // When query params are for example: filter = ["Pitch"]; or for example: filter = ["", "Pitch"]
+      switch (activity.activityType) {
+        case "Coffee Break":
+          return currentSelectedFilters.includes("Breaks");
+        case "Talk":
+          return currentSelectedFilters.includes("Talks");
+        case "Pitch":
+          return currentSelectedFilters.includes("Pitch");
+        case "Workshop":
+          return currentSelectedFilters.includes("Workshops");
+        default:
+          break;
+      }
+    });
 
   updateHasFocused(filtered.filter((activity) => activity.focused).length != 0);
 
