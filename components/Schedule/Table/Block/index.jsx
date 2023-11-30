@@ -1,11 +1,11 @@
 import styles from "./style.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 
 function BlockItem({
   id,
   coffeeBreak,
+  date,
   startTime,
   endTime,
   activityType,
@@ -46,7 +46,16 @@ function BlockItem({
       >
         {author && (
           <li className={styles.listElem}>
-            <Link href={`speakers?speaker=${author}`} className={styles.author}>
+            <Link
+              href={{
+                pathname: "speakers",
+                query: {
+                  speaker: author,
+                  date,
+                },
+              }}
+              className={styles.author}
+            >
               {author}
             </Link>
           </li>
@@ -127,6 +136,7 @@ export default function Block({ date, detailed, elems }) {
           id={`${date}-${elem.id}`}
           focused={elem.focused}
           detailed={detailed}
+          date={date}
           {...elem.activity}
         />
       ))}

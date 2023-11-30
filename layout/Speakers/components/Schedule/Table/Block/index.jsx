@@ -25,7 +25,7 @@ export default function Block({
   const [showSpeaker, setShowSpeaker] = useState(true);
 
   return (
-    <div key={id} className="border-t-2 border-white py-4 text-white">
+    <div id={name} key={id} className="border-t-2 border-white py-4 text-white">
       <div className="mb-2 flex">
         <div className="w-[210px]">
           <Image
