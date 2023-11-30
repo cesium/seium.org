@@ -6,7 +6,7 @@ function Action({ text, url }) {
     <div className="mt-5 w-60">
       <Button
         onClick={(e) => (window.location.href = url)}
-        text={text}
+        title={text}
         customStyle="text-white bg-primary border-tertiary hover:bg-tertiary"
       />
     </div>

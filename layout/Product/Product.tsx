@@ -7,7 +7,7 @@ import { getProduct, buyProduct } from "@lib/api";
 import { withAuth, useAuth } from "@context/Auth";
 
 import Balance from "@components/Balance";
-
+import Button from "@components/Button";
 import Layout from "@components/Layout";
 
 function ProductSlug() {
@@ -82,19 +82,19 @@ function ProductSlug() {
 
               <div className="mt-10">
                 {product.can_buy > 0 && product.stock > 0 && (
-                  <button
+                  <Button
                     onClick={() =>
                       buyProduct(product.id).then(() => {
                         updateProductInfo((needsUpdate) => !needsUpdate);
                         refetchUser();
                       })
                     }
-                    className="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:opacity-75"
+                    customStyle="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75"
                     disabled={user.token_balance < product.price}
-                  >
-                    <p className="font-ibold font-bold">REDEEM</p>
-                    <p className="font-iregular">{product.price} tokens 💰</p>
-                  </button>
+                    title="REDEEM"
+                    description={`${product.price} tokens 💰`}
+                    bold={true}
+                  />
                 )}
               </div>
               <div className="mt-6 text-center">

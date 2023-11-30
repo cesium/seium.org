@@ -5,16 +5,23 @@ import { useAuth } from "@context/Auth";
 import Button from "@components/Button";
 import Form from "@components/Form";
 import Input from "@components/Input";
+import Select from "@components/Select";
 import PasswordInput from "@components/PasswordInput";
 
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
 
-export default function SignUpForm() {
+interface Course {
+  id: any;
+  name: string;
+}
+
+export default function SignUpForm({ courses }) {
   const { sign_up, isLoading, errors } = useAuth();
 
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
+  const [course, updateCourse] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
@@ -60,6 +67,7 @@ export default function SignUpForm() {
         password_confirmation,
         nickname,
         uuid,
+        course,
       });
     }
   };
@@ -93,6 +101,18 @@ export default function SignUpForm() {
           bgColor="primary"
           onChange={(e) => updateNickname(e.currentTarget.value)}
         />
+        <Select
+          text="COURSE"
+          id="course"
+          fgColor="white"
+          bgColor="primary"
+          defaultValue={0}
+          options={courses.map((course) => ({
+            key: course.id,
+            name: course.name,
+          }))}
+          onChange={(e) => updateCourse(e.currentTarget.value)}
+        />
         <PasswordInput
           text="PASSWORD"
           id="password"
@@ -110,8 +130,8 @@ export default function SignUpForm() {
           onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
         />
         <Button
-          text={scanning ? "STOP SCANNING" : "SCAN QR"}
-          customStyle="text-secondary bg-quinary border-quinary"
+          title={scanning ? "STOP SCANNING" : "SCAN QR"}
+          customStyle="w-full h-12 text-secondary bg-quinary border-quinary"
           onClick={(e) => {
             e.preventDefault();
             updateScanning(!scanning);
@@ -137,8 +157,8 @@ export default function SignUpForm() {
         )}
         <Button
           type="submit"
-          text={isLoading ? "Registering..." : "LET'S GO"}
-          customStyle="text-secondary bg-quinary border-quinary"
+          title={isLoading ? "Registering..." : "LET'S GO"}
+          customStyle="w-full h-12 text-secondary bg-quinary border-quinary"
         />
         {(local_error || (!isLoading && errors)) && (
           <p className="mt-3 font-iregular text-lg text-red-400">

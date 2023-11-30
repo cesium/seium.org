@@ -174,7 +174,7 @@ function MobileNavbar({
 
                   <button type="button" onClick={onClose} className="h-12 w-12">
                     <span className="sr-only">Close sidebar</span>
-                    <FontAwesomeIcon icon={faTimes} />
+                    title={<FontAwesomeIcon icon={faTimes} />}
                   </button>
                 </div>
 
