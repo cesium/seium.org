@@ -70,7 +70,7 @@ export default function ForgotPasswordForm() {
         <Text
           text="Don’t have an account?"
           link="Register here"
-          href="https://sei23.eventbrite.pt"
+          href="/signup"
         />
       )}
     </>
