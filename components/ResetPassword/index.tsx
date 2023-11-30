@@ -1,34 +1,40 @@
+import { useState, useEffect } from "react";
 import { resetPassword } from "@lib/api";
-import Swal from "sweetalert2";
+import Notification from "@components/Notification";
 
-const onResetPassword = (user: any) => {
-  resetPassword(user.email)
-    .then((_) =>
-      Swal.fire({
-        icon: "success",
-        title: "Password Reset",
-        text: "An email has been sent to your account for you to recover your password!",
+export default function ResetPassword(user: any) {
+  const [showNotification, setShowNotification] = useState(false);
+
+  const onResetPassword = (user: any) => {
+    resetPassword(user.email)
+      .then((_) => {
+        setShowNotification(true);
       })
-    )
-    .catch((_) => {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Something went wrong!",
+      .catch((_) => {
+        setShowNotification(false);
       });
-    });
-};
+  };
 
-export default function ResetPassword(user) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNotification(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  });
+
   return (
-    <button
-      className="inline-block h-auto pl-6 pb-5 text-quinary underline"
-      onClick={(e) => {
-        e.preventDefault();
-        onResetPassword(user);
-      }}
-    >
-      Reset Password
-    </button>
+    <>
+      <button
+        className="inline-block h-auto pl-6 pb-5 text-quinary underline"
+        onClick={(e) => {
+          e.preventDefault();
+          onResetPassword(user);
+        }}
+      >
+        Reset Password
+      </button>
+      {showNotification && <Notification title="Password reset email sent" />}
+    </>
   );
 }

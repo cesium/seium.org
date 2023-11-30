@@ -50,7 +50,9 @@ export default function Select({
           {...rest}
         >
           {options.map((option) => (
-            <option key={option.key} value={option.key}>{option.name}</option>
+            <option key={option.key} value={option.key}>
+              {option.name}
+            </option>
           ))}
         </select>
         <ChevronDownIcon
