@@ -44,22 +44,28 @@ function BlockItem({
       <ul
         className={`${styles.authors} flex font-iregular text-sm text-gray-400`}
       >
-        {author && (
-          <li className={styles.listElem}>
-            <Link
-              href={{
-                pathname: "speakers",
-                query: {
-                  speaker: author,
-                  date,
-                },
-              }}
-              className={styles.author}
-            >
-              {author}
-            </Link>
-          </li>
-        )}
+        {author &&
+          author.split(" & ").map((uniqueAuthor, uniqueAuthorIndex) => (
+            <li key={uniqueAuthor} className={styles.listElem}>
+              <Link
+                href={{
+                  pathname: "speakers",
+                  query: {
+                    speaker: uniqueAuthor,
+                    date,
+                  },
+                }}
+                className={styles.author}
+              >
+                {uniqueAuthor}
+              </Link>
+
+              {/* Separates each author name with a ' & ' */}
+              {uniqueAuthorIndex < author.split(" & ").length - 1 && (
+                <span>&nbsp;&amp;&nbsp;</span>
+              )}
+            </li>
+          ))}
       </ul>
 
       {description && (
