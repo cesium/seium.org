@@ -249,14 +249,6 @@ function Profile({ courses }) {
               </p>
             )}
           </div>
-
-          <div className="my-10 text-white">
-            <Heading text="Redeem referral code" />
-            <p className="font-iregular">Redeem a badge using a unique code</p>
-
-            <CodeInput />
-          </div>
-
           <div className="mt-10 text-white">
             <Heading text="Upload CV" />
             <CVInput cv={user?.cv} onSubmit={submitCV}></CVInput>
