@@ -5,7 +5,6 @@ interface INotificationProps {
 }
 
 export default function Notification({ title }: INotificationProps) {
-  console.log("Notification");
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
