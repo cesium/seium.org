@@ -86,8 +86,8 @@ function Register() {
             onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
           />
           <Button
-            title="Submit"
-            text={isLoading ? "Registering..." : "LET'S GO"}
+            type="submit"
+            title={isLoading ? "Registering..." : "LET'S GO"}
             className="h-12 w-full border-quinary bg-quinary text-secondary"
           />
           {errors && (
