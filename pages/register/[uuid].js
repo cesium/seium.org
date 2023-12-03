@@ -1,20 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion as Motion } from "framer-motion";
 
 import { withoutAuth, useAuth } from "@context/Auth";
+
+import { getCourses } from "@lib/api";
 
 import Button from "@components/Button";
 import Card from "@components/Card";
 import Return from "@components/Return";
 import Form from "@components/Form";
 import Input from "@components/Input";
+import Select from "@components/Select";
 import PasswordInput from "@components/PasswordInput";
 
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
 
-function Register() {
+export async function getServerSideProps(context) {
+  context.res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=3600, stale-while-revalidate=3600"
+  );
+
+  const courses = await getCourses().then((response) =>
+    response.data.concat({ id: "", name: "None" })
+  );
+
+  return { props: { courses: courses } };
+}
+
+function Register({ courses }) {
   const { sign_up, errors, isLoading } = useAuth();
   const router = useRouter();
   const { uuid } = router.query;
@@ -22,6 +38,7 @@ function Register() {
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
+  const [course, updateCourse] = useState("0");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
 
@@ -34,6 +51,7 @@ function Register() {
       password_confirmation,
       nickname,
       uuid,
+      course,
     });
   };
 
@@ -68,6 +86,18 @@ function Register() {
             fgColor="white"
             bgColor="primary"
             onChange={(e) => updateNickname(e.currentTarget.value)}
+          />
+          <Select
+            text="COURSE"
+            id="course"
+            fgColor="white"
+            bgColor="primary"
+            defaultValue={0}
+            options={courses.map((course) => ({
+              key: course.id,
+              name: course.name,
+            }))}
+            onChange={(e) => updateCourse(e.currentTarget.value)}
           />
           <PasswordInput
             text="PASSWORD"
