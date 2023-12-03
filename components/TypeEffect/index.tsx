@@ -1,6 +1,6 @@
 import TypeWriter from "typewriter-effect";
 
-export default function TypeEffect() {
+export const TypeEffect = () => {
     return (
         <TypeWriter
             aria-hidden

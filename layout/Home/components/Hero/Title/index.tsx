@@ -1,4 +1,4 @@
-import TypeEffect from "@components/TypeEffect";
+import { TypeEffect } from "@components/TypeEffect";
 
 export default function Title() {
 
@@ -14,7 +14,7 @@ export default function Title() {
         className="font-terminal-uppercase h-72 w-11/12 text-4xl text-white xs:text-5xl sm:text-6xl md:h-96 md:w-full md:text-7xl lg:text-8xl 2xl:w-5/6 2xl:leading-[6.5rem]"
       >
         <div>
-          {TypeEffect()}
+          <TypeEffect />
         </div>
       </h1>
     </div>
