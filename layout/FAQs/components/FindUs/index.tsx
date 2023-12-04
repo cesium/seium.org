@@ -15,7 +15,7 @@ export default function FindUs() {
           CeSIUM and from the university community.
         </p>
         <p className="mb-8 font-iregular">
-          This years event will take place at Pedagocic Complex 2, Gualtar
+          This years event will take place at Pedagogic Complex 2, Gualtar
           Campus.
         </p>
         <p className="mb-2 font-ibold">
