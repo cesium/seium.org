@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ReactEventHandler } from "react";
+import { ReactEventHandler, useState } from "react";
 
 interface BadgeProps {
   name: string;
@@ -10,8 +10,11 @@ interface BadgeProps {
 }
 
 export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
+  const [badgeLoaded, setBadgeLoaded] = useState(false);
+
   const imageOnError: ReactEventHandler<HTMLImageElement> = (e) => {
     e.currentTarget.src = "/images/badges/badge-not-found.svg";
+    setBadgeLoaded(true)
   };
 
   return (
@@ -19,8 +22,16 @@ export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
       href={`/badge/${id}`}
       className={`h-full w-full ${owned ? "opacity-100" : "opacity-30"}`}
     >
-      <div>
-        <img src={avatar} onError={imageOnError} alt={name}></img>
+      <div className="flex justify-center items-center w-full aspect-square">
+
+        {!badgeLoaded && <BadgeSkeleton />}
+
+        <img
+          src={avatar}
+          alt={name}
+          onLoad={() => setBadgeLoaded(true)}
+          onError={imageOnError}
+        />
       </div>
 
       <div className="flex flex-col justify-items-center text-center font-iregular">
@@ -30,3 +41,9 @@ export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
     </Link>
   );
 }
+
+const BadgeSkeleton = () => {
+  return (
+    <div className="w-10/12 aspect-square rounded-full bg-gray-500 animate-pulse opacity-10"/>
+  );
+};
