@@ -10,7 +10,7 @@ import questions from "@data/faqs.json";
 function Faq() {
   return (
     <>
-      <Navbar bgColor="primary" button={"quinary"} fgColor={"white"}>
+      <Navbar bgColor="primary" button="quinary" fgColor="white">
         <div className="spacing flex flex-col justify-between bg-primary py-20 lg:h-3/4 lg:flex-row">
           <div className="mb-10 text-white lg:w-2/5">
             <h1 className="font-terminal-uppercase mb-4 text-4xl font-bold lg:text-6xl">
