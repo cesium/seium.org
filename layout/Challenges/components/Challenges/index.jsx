@@ -9,7 +9,7 @@ export default function Challenges() {
     <div className="spacing relative z-20 flex w-full flex-col px-40 py-10">
       <div className="mb-24 grid grid-cols-1 gap-20 xl:grid-cols-2">
         <div className="hidden xl:flex">
-          <ul className="font-terminal-uppercase text-xl">
+          <ul className="font-terminal-uppercase select-none text-xl">
             {Object.keys(challenges).map((i) => (
               <li
                 key={i}

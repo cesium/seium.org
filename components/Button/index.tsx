@@ -31,7 +31,7 @@ export default function Button({
       disabled={disabled}
       className={`${
         customStyle || ""
-      } m-auto block rounded-full hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75`}
+      } m-auto block select-none rounded-full hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75`}
     >
       <ButtonTitle title={title} bold={bold} />
       <p className="font-iregular">{description}</p>

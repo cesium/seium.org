@@ -107,7 +107,7 @@ export default function Schedule(props) {
 
   return (
     <section className="spacing relative bg-secondary pb-20 lg:pt-10 2xl:grid 2xl:grid-cols-2">
-      <div className="relative z-50 mb-10 grid place-items-center text-white sm:flex sm:flex-col md:mr-10 md:place-items-start">
+      <div className="relative z-50 mb-10 grid select-none place-items-center text-white sm:flex sm:flex-col md:mr-10 md:place-items-start">
         <Day date={date} previousDay={previous_day} nextDay={next_day} />
         <p className="text-md mt-10 w-5/6 font-iregular md:px-20">
           During this week, you have the opportunity to interact with many
