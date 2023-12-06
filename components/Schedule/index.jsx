@@ -1,5 +1,6 @@
 import Table from "./Table";
 import Day from "./Day";
+import Filters from "./Filters";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -89,7 +90,6 @@ function addDate(date, days) {
 export default function Schedule(props) {
   const min_date = "2023/2/14";
   const max_date = "2023/2/17";
-  const defaultFilter = props.filters === undefined ? "" : props.filters;
 
   //calculate default date
   const _today = new Date();
@@ -104,7 +104,6 @@ export default function Schedule(props) {
 
   const [date, updateDate] = useState(default_date);
   const [hash, updateHash] = useState("");
-  const [filters, updateFilters] = useState(defaultFilter);
   const [hasFocusedElem, updateHasFocused] = useState(false);
 
   if (props.updateHasFocused !== undefined)
@@ -167,9 +166,9 @@ export default function Schedule(props) {
             nextDay={next_day}
             hasFocusedElem={hasFocusedElem}
             showFilters={props.detailed}
-            filters={filters}
-            updateFilters={props.detailed ? updateFilters : () => {}}
           />
+
+          <Filters />
         </div>
       </div>
       <div className="z-50">
@@ -177,7 +176,6 @@ export default function Schedule(props) {
           detailed={props.detailed}
           date={date}
           hash={hash}
-          filters={filters}
           updateHasFocused={updateHasFocused}
         />
       </div>
