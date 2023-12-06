@@ -89,7 +89,7 @@ function ProductSlug() {
                         refetchUser();
                       })
                     }
-                    customStyle="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75"
+                    className="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75"
                     disabled={user.token_balance < product.price}
                     title="REDEEM"
                     description={`${product.price} tokens 💰`}

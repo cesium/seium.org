@@ -131,7 +131,7 @@ function Leaderboard() {
         <div className="col-span-1 w-full 2xl:pl-24">
           <div className="flex justify-center gap-6 xs:gap-10 md:gap-24">
             <Button
-              customStyle={`font-iregular bg-${
+              className={`font-iregular bg-${
                 hallOfFame ? "white" : "quinary"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
@@ -141,7 +141,7 @@ function Leaderboard() {
             />
 
             <Button
-              customStyle={`font-iregular bg-${
+              className={`font-iregular bg-${
                 hallOfFame ? "quinary" : "white"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
