@@ -11,10 +11,18 @@ interface BadgeProps {
 
 export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
   const [badgeLoaded, setBadgeLoaded] = useState(false);
+  const [fallbackRan, setFallbackRan] = useState(false)
 
   const imageOnError: ReactEventHandler<HTMLImageElement> = (e) => {
+    // prevent infinite loop fallback
+    if (fallbackRan) {
+      setBadgeLoaded(true);
+      return
+    }
+
+    setBadgeLoaded(false);
     e.currentTarget.src = "/images/badges/badge-not-found.svg";
-    setBadgeLoaded(true)
+    setFallbackRan(true)
   };
 
   return (

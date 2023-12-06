@@ -24,7 +24,7 @@ export default function GoToTop() {
 
   return (
     <button
-      className={`fixed right-5 bottom-5 cursor-pointer w-12 h-12 bg-white rounded-full transition-translate duration-300 ${
+      className={`transition-translate fixed right-5 bottom-5 h-12 w-12 cursor-pointer rounded-full bg-white duration-300 ${
         showButton ? "" : "translate-y-52"
       }`}
       onClick={goToTop}
