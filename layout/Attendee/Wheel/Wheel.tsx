@@ -203,11 +203,11 @@ function WheelPage() {
               <WheelComponent steps={16} angle={st.angle} />
             </div>
             <Button
-              customStyle={`${
+              className={`${
                 canSpin()
                   ? "cursor-pointer bg-quinary"
                   : "bg-gray-400 opacity-50"
-              } m-auto mt-10 block h-20 w-64 rounded-full`}
+              } mt-10 block h-20 w-64`}
               disabled={!canSpin()}
               onClick={spinTheWheel}
               title="SPIN THE WHEEL"
