@@ -160,7 +160,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
           </div>
 
           <Disclosure.Panel className={`lg:hidden bg-${bgColor}`}>
-            <div className="relative z-50 min-h-screen object-cover px-2 pt-12">
+            <div className="relative z-50 min-h-screen select-none object-cover px-2 pt-12">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.slug}

@@ -112,7 +112,7 @@ function Profile({ courses }) {
 
           <Form onSubmit={handleSubmitForm} id="profile-form">
             <div className="pl-6">
-              <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white hover:border-quinary">
                 {photoFileUrl == null ? (
                   <img
                     src="/images/mascot-head.png"
@@ -174,7 +174,7 @@ function Profile({ courses }) {
             />
 
             <button
-              className="inline-block h-auto pl-6 pb-5 text-quinary underline"
+              className="inline-block h-auto select-none pl-6 pb-5 text-quinary underline"
               onClick={(e) => {
                 e.preventDefault();
                 onResetPassword();
@@ -251,7 +251,7 @@ function Profile({ courses }) {
           </div>
           <div className="mt-10 text-white">
             <Heading text="Upload CV" />
-            <CVInput cv={user?.cv} onSubmit={submitCV}></CVInput>
+            <CVInput cv={user?.cv} onSubmit={submitCV} />
           </div>
         </div>
       </div>

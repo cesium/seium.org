@@ -50,7 +50,7 @@ function Identifier() {
 
   return (
     <Layout title="Identifier" description="Identify an attendee">
-      <div className="mt-5">
+      <div className="mt-5 select-none">
         <QRScanner
           handleCode={handleUUID}
           pauseRef={pauseRef}

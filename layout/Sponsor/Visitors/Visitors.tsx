@@ -64,7 +64,7 @@ const SponsorVisitors: React.FC = () => {
       <div className="mt-5 h-screen text-white">
         {visitors.filter((v) => v.cv != null).length > 0 && (
           <button
-            className="m-auto mb-5 block rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
+            className="m-auto mb-5 block select-none rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
             onClick={downloadCVs}
           >
             {downloading ? "Downloading" : "Download All CV's"}
@@ -79,7 +79,7 @@ const SponsorVisitors: React.FC = () => {
               <img
                 alt={visitor.name}
                 src={visitor.avatar}
-                className="mb-2 h-40 w-40 rounded-full border-2 border-white object-cover hover:border-pink-500"
+                className="mb-2 h-40 w-40 select-none rounded-full border-2 border-white object-cover hover:border-pink-500"
               />
               <p className="text-center">{visitor.name}</p>
               <p className="text-center">{visitor.email}</p>

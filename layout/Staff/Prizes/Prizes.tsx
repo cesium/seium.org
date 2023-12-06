@@ -19,7 +19,7 @@ function Prizes() {
 
   return (
     <Layout title="Prizes" description="Mark a prize as redeemed">
-      <div className="mt-5">
+      <div className="mt-5 select-none">
         <QRScanner
           handleCode={handleUUID}
           pauseRef={pauseRef}
