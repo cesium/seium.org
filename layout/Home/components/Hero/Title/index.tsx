@@ -1,27 +1,21 @@
 import TypeWriter from "typewriter-effect";
 import schedule from "@data/schedule.json";
+import dayjs from "dayjs";
 
 export default function Title() {
   /* Parse event dates info from schedule data */
   const dates = schedule.map((day) => day.date).sort();
-  const firstDayData = dates[0].split("/");
 
-  /* Parse year */
-  const year = firstDayData[0];
+  const firstDayDate = dayjs(dates[0], "YYYY/M/D");
+  const lastDayDate = dayjs(dates[dates.length - 1], "YYYY/M/D");
 
-  /* Parse month */
-  const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(
-    new Date().setMonth(parseInt(firstDayData[1]) - 1)
-  );
-
-  /* Parse first and last day of the event */
-  const firstDay = firstDayData.pop();
-  const lastDay = dates.pop().split("/").pop();
+  const month = firstDayDate.format("MMMM");
+  const year = firstDayDate.format("YYYY");
 
   return (
     <div className="relative z-20 font-bold">
       <h5 className="font-terminal-uppercase m-1 text-2xl text-quinary">
-        {firstDay}-{lastDay} {month} {year}
+        {firstDayDate.format("D")}-{lastDayDate.format("D")} {month} {year}
       </h5>
       {/* 2xl:leading-[6.5rem] is intended to only work with the following font - Terminal */}
       <h1
