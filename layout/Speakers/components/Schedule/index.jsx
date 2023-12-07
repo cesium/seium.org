@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 import Day from "./Day";
 import Table from "./Table";
@@ -61,6 +62,8 @@ function addDate(date, days) {
 }
 
 export default function Schedule(props) {
+  const router = useRouter();
+
   const min_date = "2023/2/14";
   const max_date = "2023/2/17";
 
@@ -92,6 +95,33 @@ export default function Schedule(props) {
       window.removeEventListener("hashchange", onHashChanged);
     };
   }, []);
+
+  // change date based on URL query params
+  // and scroll to selected speaker
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const { date, speaker } = router.query;
+    if (date) {
+      updateDate(date);
+    }
+
+    if (speaker) {
+      const targetElement = document?.getElementById(speaker);
+      if (!targetElement) return;
+
+      const elementPosition = targetElement.getBoundingClientRect().top;
+
+      const scroll = () => {
+        window.scrollTo({
+          top: elementPosition,
+          behavior: "smooth",
+        });
+      };
+
+      requestAnimationFrame(scroll);
+    }
+  }, [router.query, date]);
 
   const previous_day = () => {
     const new_date = addDate(date, -1);

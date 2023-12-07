@@ -1,11 +1,11 @@
 import styles from "./style.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 
 function BlockItem({
   id,
   coffeeBreak,
+  date,
   startTime,
   endTime,
   activityType,
@@ -21,7 +21,7 @@ function BlockItem({
 
   const block = (
     <div
-      id={`B${id}`}
+      id={`${id}`}
       className={`mx-2 h-full border-t-2 border-white p-2 ${styles.gridBlock}`}
     >
       {coffeeBreak && (
@@ -44,13 +44,28 @@ function BlockItem({
       <ul
         className={`${styles.authors} flex font-iregular text-sm text-gray-400`}
       >
-        {author && (
-          <li className={styles.listElem}>
-            <Link href={`speakers?speaker=${author}`} className={styles.author}>
-              {author}
-            </Link>
-          </li>
-        )}
+        {author &&
+          author.split(" & ").map((uniqueAuthor, uniqueAuthorIndex) => (
+            <li key={uniqueAuthor} className={styles.listElem}>
+              <Link
+                href={{
+                  pathname: "speakers",
+                  query: {
+                    speaker: uniqueAuthor,
+                    date,
+                  },
+                }}
+                className={styles.author}
+              >
+                {uniqueAuthor}
+              </Link>
+
+              {/* Separates each author name with a ' & ' */}
+              {uniqueAuthorIndex < author.split(" & ").length - 1 && (
+                <span>&nbsp;&amp;&nbsp;</span>
+              )}
+            </li>
+          ))}
       </ul>
 
       {description && (
@@ -127,6 +142,7 @@ export default function Block({ date, detailed, elems }) {
           id={`${date}-${elem.id}`}
           focused={elem.focused}
           detailed={detailed}
+          date={date}
           {...elem.activity}
         />
       ))}

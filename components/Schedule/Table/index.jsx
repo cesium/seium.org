@@ -2,6 +2,7 @@ import Block from "./Block";
 import { isSelected } from "../Day/Filters";
 
 import schedule from "/data/schedule.json";
+import { useEffect } from "react";
 
 function filterElem(filters) {
   return function (elem) {
@@ -62,6 +63,23 @@ export default function Table({
   filters,
   detailed,
 }) {
+  useEffect(() => {
+    if (!(typeof window === "undefined")) {
+      const targetElement = document?.getElementById(hash);
+      if (!targetElement) return;
+
+      const elementPosition = targetElement.getBoundingClientRect().top;
+
+      const scroll = () => {
+        window.scrollTo({
+          top: elementPosition,
+        });
+      };
+
+      requestAnimationFrame(scroll);
+    }
+  }, [hash]);
+
   const obj = schedule.find((obj) => obj.date == date);
 
   if (obj === undefined || obj.activities === undefined) {
