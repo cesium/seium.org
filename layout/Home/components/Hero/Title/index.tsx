@@ -1,10 +1,21 @@
 import TypeWriter from "typewriter-effect";
+import schedule from "@data/schedule.json";
+import dayjs from "dayjs";
 
 export default function Title() {
+  /* Parse event dates info from schedule data */
+  const dates = schedule.map((day) => day.date).sort();
+
+  const firstDayDate = dayjs(dates[0], "YYYY/M/D");
+  const lastDayDate = dayjs(dates[dates.length - 1], "YYYY/M/D");
+
+  const month = firstDayDate.format("MMMM");
+  const year = firstDayDate.format("YYYY");
+
   return (
     <div className="relative z-20 font-bold">
       <h5 className="font-terminal-uppercase m-1 text-2xl text-quinary">
-        14-17 February 2023
+        {firstDayDate.format("D")}-{lastDayDate.format("D")} {month} {year}
       </h5>
       {/* 2xl:leading-[6.5rem] is intended to only work with the following font - Terminal */}
       <h1
