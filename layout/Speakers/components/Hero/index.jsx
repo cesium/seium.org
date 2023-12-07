@@ -8,7 +8,7 @@ const Animation = dynamic(() => import("@components/Animation"), {
 
 export default function Hero() {
   return (
-    <div className="spacing bg-secondary pb-40">
+    <div className="spacing select-none bg-secondary pb-40">
       <div className="relative z-20">
         <Animation type="2" />
         <div className="pt-2">

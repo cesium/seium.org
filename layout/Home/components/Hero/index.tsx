@@ -21,7 +21,7 @@ export default function Hero() {
     <div className="bg-secondary">
       <div className="spacing relative z-40 pb-32">
         <Animation type="1" />
-        <div className="pt-2">
+        <div className="select-none pt-2">
           <Title />
         </div>
         <div className="relative mt-20 grid grid-cols-2">
@@ -36,7 +36,7 @@ export default function Hero() {
             <Organization />
           </div>
           {isAuthenticated || (
-            <div className="absolute right-0 block lg:hidden">
+            <div className="absolute right-0 block select-none lg:hidden">
               <JoinUs button="quinary" fgColor="white" />
             </div>
           )}

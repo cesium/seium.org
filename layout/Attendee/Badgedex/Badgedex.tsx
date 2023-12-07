@@ -53,13 +53,13 @@ function Badgedex() {
   return (
     <Layout title="BadgeDex" description="Explore all existing badges">
       <div className="border-slate-400 pt-10 text-white xl:flex xl:flex-auto">
-        <div className="m-auto flex flex-auto space-x-5">
+        <div className="m-auto flex flex-auto select-none space-x-5">
           <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
           <BadgeFilter onChange={updateFilter} />
         </div>
         <div className="flex w-auto font-bold lg:w-1/2 xl:w-auto">
-          <div className="my-auto text-2xl">Show</div>
-          <div className="flex flex-row-reverse gap-x-8">
+          <div className="my-auto select-none text-2xl">Show</div>
+          <div className="flex select-none flex-row-reverse gap-x-8">
             <button
               className={`font-iregular bg-${
                 all ? "white" : "quinary"

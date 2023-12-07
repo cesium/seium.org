@@ -30,7 +30,7 @@ export default function Badge({ name, id, avatar, tokens, owned }: BadgeProps) {
       href={`/badge/${id}`}
       className={`h-full w-full ${owned ? "opacity-100" : "opacity-30"}`}
     >
-      <div className="flex justify-center items-center w-full aspect-square">
+      <div className="flex justify-center items-center w-full aspect-square select-none">
 
         {!badgeLoaded && <BadgeSkeleton />}
 

@@ -86,7 +86,7 @@ export default function Footer(props: IFooterProps) {
       ref={observe}
     >
       <div className="flex flex-col justify-between gap-16 py-10 lg:flex-row">
-        <div className="flex items-start justify-center font-ibold lg:justify-start">
+        <div className="flex select-none items-start justify-center font-ibold lg:justify-start">
           <Image
             src="/images/sei-logo.svg"
             width={100}
@@ -101,7 +101,7 @@ export default function Footer(props: IFooterProps) {
           </p>
         </div>
 
-        <div className="mx-2 mt-20 hidden justify-center pb-10 lg:flex">
+        <div className="mx-2 mt-20 hidden select-none justify-center pb-10 lg:flex">
           <Animation
             text={
               props.footerAnimationText != undefined ? (
@@ -116,7 +116,7 @@ export default function Footer(props: IFooterProps) {
         </div>
 
         <div className="flex-2">
-          <div className="grid grid-rows-2 justify-items-center gap-8 whitespace-nowrap font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-start">
+          <div className="grid select-none grid-rows-2 justify-items-center gap-8 whitespace-nowrap font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-start">
             <Link
               href="https://2022.seium.org/"
               className="text-white hover:underline"

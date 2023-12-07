@@ -22,6 +22,7 @@ export default function Member({
         width="210"
         height="210"
         alt={name}
+        className="select-none"
       />
       <p className="text-md font-terminal-uppercase mb-1"> {name} </p>
       <div className="flex">

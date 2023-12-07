@@ -5,6 +5,7 @@ import { withAuth, useAuth } from "@context/Auth";
 import Layout from "@components/Layout";
 import { Table } from "./components";
 
+import Button from "@components/Button";
 import Day from "@components/Schedule/Day";
 import ErrorMessage from "@components/ErrorMessage";
 
@@ -120,36 +121,34 @@ function Leaderboard() {
               previousDay={previous_day}
               nextDay={next_day}
               fontSize="lg"
-              className=""
             />
           ) : (
-            <h2 className="font-terminal-uppercase text-center text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
+            <h2 className="font-terminal-uppercase select-none text-center text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
               All Time
             </h2>
           )}
         </div>
         <div className="col-span-1 w-full 2xl:pl-24">
           <div className="flex justify-center gap-6 xs:gap-10 md:gap-24">
-            <button
+            <Button
               className={`font-iregular bg-${
                 hallOfFame ? "white" : "quinary"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateHallOfFame(false);
               }}
-            >
-              LEADERBOARD
-            </button>
-            <button
+              title="LEADERBOARD"
+            />
+
+            <Button
               className={`font-iregular bg-${
                 hallOfFame ? "quinary" : "white"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
                 updateHallOfFame(true);
               }}
-            >
-              HALL OF FAME
-            </button>
+              title="HALL OF FAME"
+            />
           </div>
           {error && <ErrorMessage />}
           <Table list={leaderboard} user={user.id} maxUsersToShow={5} />

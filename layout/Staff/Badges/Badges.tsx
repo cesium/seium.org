@@ -86,7 +86,9 @@ function Badges() {
         <>
           <div className="pt-10 text-white xl:flex xl:flex-auto">
             <div className="flex flex-auto space-x-5">
-              <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
+              <p className="mb-10 select-none text-2xl font-bold xl:mb-0">
+                Filter by
+              </p>
 
               <Filter onChange={updateFilter} />
             </div>

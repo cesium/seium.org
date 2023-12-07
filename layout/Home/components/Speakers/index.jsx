@@ -9,14 +9,15 @@ export default function Speakers() {
   return (
     <div className="spacing flex flex-col justify-around bg-secondary pt-20 lg:flex-row">
       <div className="mb-10 lg:w-1/2">
-        <h2 className="font-terminal-uppercase mb-8 text-4xl text-white xs:text-5xl lg:text-6xl">
+        <h2 className="font-terminal-uppercase mb-8 select-none text-4xl text-white xs:text-5xl lg:text-6xl">
           Here’s a selection of this year’s speakers
         </h2>
         <div className="xs:w-70 w-60 sm:w-80">
           <Link href="/speakers">
             <Button
-              text="MEET THE SPEAKERS"
-              customStyle="text-white bg-secondary border-quaternary hover:border-quinary hover:bg-quinary "
+              title="MEET THE SPEAKERS"
+              className="h-20 w-full border-4 border-white text-white hover:border-quinary hover:bg-quinary select-none"
+              bold={true}
             />
           </Link>
         </div>
