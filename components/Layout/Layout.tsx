@@ -64,7 +64,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
       />
 
       {/* NAVBAR */}
-      <aside className="inset-y-0 hidden w-72 overflow-y-scroll border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
+      <aside className="inset-y-0 hidden w-72 select-none overflow-y-scroll border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
         <div className="flex flex-1">
           <nav className="mt-8 flex flex-col">
             <Link href="/" className="pb-8">
@@ -107,7 +107,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
 
       {/* CONTENT */}
       <main className="w-full px-4 pb-6 pt-20 lg:ml-72 lg:px-20">
-        <h2 className="font-ibold text-5xl">{title}</h2>
+        <h2 className="select-none font-ibold text-5xl">{title}</h2>
         <p className="mt-2 font-iregular text-lg">{description}</p>
 
         {children}
@@ -160,7 +160,7 @@ function MobileNavbar({
             leaveTo="-translate-x-full"
             className="z-1 absolute h-full w-full justify-between bg-secondary p-8 "
           >
-            <aside className="flex h-full flex-col justify-between">
+            <aside className="flex h-full select-none flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between">
                   <Link href="/" className="font-iregular text-quinary">

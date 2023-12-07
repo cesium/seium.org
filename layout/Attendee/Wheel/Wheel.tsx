@@ -224,7 +224,7 @@ function WheelPage() {
 
           <div className="mt-10">
             <Heading text="Awards"></Heading>
-            <div className="mb-5 grid w-full grid-cols-6 pb-3">
+            <div className="mb-5 grid w-full select-none grid-cols-6 pb-3">
               <div className="text-center">
                 <p className="text-iregular pr-4">Image</p>
               </div>

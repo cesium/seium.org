@@ -121,10 +121,9 @@ function Leaderboard() {
               previousDay={previous_day}
               nextDay={next_day}
               fontSize="lg"
-              className=""
             />
           ) : (
-            <h2 className="font-terminal-uppercase text-center text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
+            <h2 className="font-terminal-uppercase select-none text-center text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
               All Time
             </h2>
           )}

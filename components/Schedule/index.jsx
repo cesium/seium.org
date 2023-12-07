@@ -162,7 +162,7 @@ export default function Schedule(props) {
 
   return (
     <div
-      className={`px-5 md:px-32 xl:grid xl:grid-cols-2 xl:px-16 2xl:px-32 bg-${props.color} relative pt-20`}
+      className={`px-5 md:px-32 xl:grid xl:grid-cols-2 xl:px-16 2xl:px-32 bg-${props.color} relative select-none pt-20`}
     >
       <div className="mb-20 xl:mb-0">
         <div className="sticky top-12 z-50">

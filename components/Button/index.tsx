@@ -20,7 +20,7 @@ export default function Button({
   return (
     <button
       {...rest}
-      className={`m-auto block rounded-full hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75 ${
+      className={`m-auto block select-none rounded-full hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75 ${
         rest.className || ""
       }`}
     >

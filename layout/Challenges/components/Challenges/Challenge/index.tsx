@@ -41,7 +41,7 @@ export default function Challenge(props: IProps) {
     >
       <div className="sticky top-60">
         <div>
-          <h2 className="font-terminal-uppercase text-3xl text-white md:text-4xl xl:text-5xl">
+          <h2 className="font-terminal-uppercase select-none text-3xl text-white md:text-4xl xl:text-5xl">
             {props.title}
           </h2>
           <p className="mt-10 font-iregular text-white">{props.description}</p>
