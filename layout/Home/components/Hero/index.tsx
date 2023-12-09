@@ -20,7 +20,6 @@ export default function Hero() {
   return (
     <div className="bg-secondary">
       <div className="spacing relative z-40 pb-32">
-        <Animation type="1" />
         <div className="select-none pt-2">
           <Title />
         </div>
