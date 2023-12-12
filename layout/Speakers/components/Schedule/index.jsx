@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Day from "./Day";
 import Table from "./Table";
 
+import scheduleData from "/data/schedule.json";
+
 function isAfter(date1, date2) {
   // equivalent to date1 > date2
   const arr1 = date1.split("/");
@@ -61,8 +63,10 @@ function addDate(date, days) {
 }
 
 export default function Schedule(props) {
-  const min_date = "2023/2/14";
-  const max_date = "2023/2/17";
+  /* Fetch first and last day of the event from schedule data */
+  const eventDates = scheduleData.map((day) => day.date).sort();
+  const min_date = eventDates[0];
+  const max_date = eventDates[eventDates.length - 1];
 
   //calculate default date
   const _today = new Date();
