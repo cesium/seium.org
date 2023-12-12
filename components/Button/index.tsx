@@ -1,27 +1,36 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
-  customStyle?: string;
+interface Props extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "title"> {
+  title: ReactNode;
+  description?: string;
+  bold?: boolean;
+}
+
+interface ButtonTitleProps {
+  title: ReactNode;
+  bold?: boolean;
 }
 
 export default function Button({
-  text,
-  type,
-  disabled,
-  onClick,
-  customStyle,
+  title,
+  description,
+  bold = false,
+  ...rest
 }: Props) {
   return (
     <button
-      onClick={onClick}
-      type={type}
-      disabled={disabled}
-      className={`${
-        customStyle || ""
-      } w-full items-center rounded-full border px-4 py-4 text-center font-iregular text-sm shadow-sm`}
+      {...rest}
+      className={`m-auto block select-none rounded-full hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75 ${
+        rest.className || ""
+      }`}
     >
-      {text}
+      <ButtonTitle title={title} bold={bold} />
+      <p className="font-iregular">{description}</p>
     </button>
   );
+}
+
+function ButtonTitle({ title, bold }: ButtonTitleProps) {
+  const className = bold ? "font-ibold" : "font-iregular";
+  return <div className={className}>{title}</div>;
 }

@@ -5,11 +5,7 @@ import { withAuth, useAuth } from "@context/Auth";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 import Layout from "@components/Layout";
 
-interface Props {}
-
-const navigation = ["scanner", "visitors"];
-
-const SponsorBadges: React.FC<Props> = () => {
+const SponsorBadges: React.FC = () => {
   const { user } = useAuth();
   const pauseRef = useRef(false);
   const [feedback, setFeedback] = useState<typeof FEEDBACK.SCANNING>(
@@ -51,10 +47,8 @@ const SponsorBadges: React.FC<Props> = () => {
     <Layout
       title="Scanner"
       description="Recompensa os teus visitantes com o badge"
-      navigation={navigation}
-      basePath="sponsor"
     >
-      <div className="mt-5">
+      <div className="mt-5 select-none">
         <QRScanner
           handleCode={handleUUID}
           pauseRef={pauseRef}

@@ -68,17 +68,17 @@ const MobileNavbar = ({
               </div>
               <nav className="mt-5 flex-1">
                 {navigation.map((item) => (
-                  <Link key={item} href={`/manager/${item}`} passHref>
-                    <a
-                      className={classNames(
-                        item == href
-                          ? "bg-primary text-quinary"
-                          : "text-white hover:bg-primary hover:bg-opacity-50",
-                        "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                      )}
-                    >
-                      {item.toUpperCase()}
-                    </a>
+                  <Link
+                    key={item}
+                    href={`/staff/${item}`}
+                    className={classNames(
+                      item == href
+                        ? "bg-primary text-quinary"
+                        : "text-white hover:bg-primary hover:bg-opacity-50",
+                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                    )}
+                  >
+                    {item.toUpperCase()}
                   </Link>
                 ))}
               </nav>
@@ -105,7 +105,7 @@ const MobileNavbar = ({
 export default function Dashboard({
   title,
   href,
-  baseHref = "/manager",
+  baseHref = "/staff",
   description,
   navigation,
   children,
@@ -128,22 +128,26 @@ export default function Dashboard({
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
             <div className="mt-20 flex flex-shrink-0 items-center px-4">
-              <Image src="/images/sei-logo.svg" width="220" height="120" />
+              <Image
+                src="/images/sei-logo.svg"
+                width="220"
+                height="120"
+                alt="SEI Logo"
+              />
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
-                <Link key={item} href={`${baseHref}/${item}`} passHref>
-                  <a
-                    key={item}
-                    className={classNames(
-                      item == href
-                        ? "bg-primary text-quinary"
-                        : "text-white hover:bg-primary hover:bg-opacity-50",
-                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                    )}
-                  >
-                    {item.toUpperCase()}
-                  </a>
+                <Link
+                  key={item}
+                  href={`${baseHref}/${item}`}
+                  className={classNames(
+                    item == href
+                      ? "bg-primary text-quinary"
+                      : "text-white hover:bg-primary hover:bg-opacity-50",
+                    "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                  )}
+                >
+                  {item.toUpperCase()}
                 </Link>
               ))}
             </nav>

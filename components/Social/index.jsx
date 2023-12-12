@@ -12,22 +12,6 @@ export default function Social() {
     <div className="mt-4 grid grid-cols-5 justify-items-center gap-x-3 md:gap-x-6">
       <a
         className="w-5 opacity-50 hover:opacity-100"
-        href="https://github.com/cesium/seium.org"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <FontAwesomeIcon icon={faGithubAlt} />
-      </a>
-      <a
-        className="w-5 opacity-50 hover:opacity-100"
-        href="https://www.facebook.com/SEI.UMinho/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <FontAwesomeIcon icon={faFacebook} />
-      </a>
-      <a
-        className="w-5 opacity-50 hover:opacity-100"
         href="https://www.instagram.com/sei.uminho"
         target="_blank"
         rel="noreferrer"
@@ -41,6 +25,22 @@ export default function Social() {
         rel="noreferrer"
       >
         <FontAwesomeIcon icon={faLinkedinIn} />
+      </a>
+      <a
+        className="w-5 opacity-50 hover:opacity-100"
+        href="https://github.com/cesium/seium.org"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FontAwesomeIcon icon={faGithubAlt} />
+      </a>
+      <a
+        className="w-5 opacity-50 hover:opacity-100"
+        href="https://www.facebook.com/SEI.UMinho/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FontAwesomeIcon icon={faFacebook} />
       </a>
       <a
         className="w-5 opacity-50 hover:opacity-100"

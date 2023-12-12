@@ -15,7 +15,7 @@ function Step({ count, progress, checkpoints }) {
 export default function CheckpointTracker({ checkpoints, progress }) {
   const ml = (progress / checkpoints) * 100 + "%";
   return (
-    <div className="w-80 py-5">
+    <div className="w-80 select-none py-5">
       <div>
         <span className="font-iregular" style={{ marginLeft: ml }}>
           🏁

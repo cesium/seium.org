@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { withAuth, useAuth } from "@context/Auth";
 
 import Heading from "@components/Heading";
-
+import Button from "@components/Button";
 import Layout from "@components/Layout";
 
 import {
@@ -14,7 +14,12 @@ import {
 
 import ErrorMessage from "@components/ErrorMessage";
 
-import { getWheelPrizes, getWheelLatestWins, spinWheel } from "@lib/api";
+import {
+  getWheelPrizes,
+  getWheelPrice,
+  getWheelLatestWins,
+  spinWheel,
+} from "@lib/api";
 
 /*
 Gets how long ago the given date/time was in a user friendly way (10 seconds ago, 1 minute ago, etc)
@@ -55,6 +60,7 @@ function WheelPage() {
   const { user, refetchUser } = useAuth();
 
   const [prizes, updatePrizes] = useState([]);
+  const [price, updatePrice] = useState(null);
   const [latestWins, updateLatestWins] = useState([]);
   const [error, updateError] = useState(false);
   const [wheelMessage, updateWheelMessage] = useState(<></>);
@@ -65,6 +71,10 @@ function WheelPage() {
       .then((response) => updatePrizes(response.data))
       .catch((_) => updateError(true));
 
+    getWheelPrice()
+      .then((response) => updatePrice(response.price))
+      .catch((_) => updateError(true));
+
     getWheelLatestWins()
       .then((response) => updateLatestWins(response.data))
       .catch((_) => updateError(true));
@@ -73,71 +83,73 @@ function WheelPage() {
   useEffect(requestAllInfo, []);
 
   const canSpin = () => {
-    return user.token_balance >= 20;
+    return user.token_balance >= price && !isSpinning;
   };
 
   const spinTheWheel = () => {
     setIsSpinning(true);
     updateState({ angle: 0, speed: angleSpeed });
-    spinWheel()
-      .then((response) => {
-        if (response.tokens) {
+    user.token_balance -= price;
+    setTimeout(() => {
+      spinWheel()
+        .then((response) => {
+          if (response.tokens) {
+            updateWheelMessage(
+              <WheelMessage
+                title="You won tokens!"
+                description={`Congratulations! You won ${response.tokens} tokens!`}
+                onExit={(_) => updateWheelMessage(null)}
+              />
+            );
+          } else if (response.badge) {
+            updateWheelMessage(
+              <WheelMessage
+                title="You won a badge!"
+                description={`Congratulations! You won the ${response.badge.name} badge. Go check it out in the badgedex tab.`}
+                onExit={(_) => updateWheelMessage(null)}
+              />
+            );
+          } else if (response.entries) {
+            updateWheelMessage(
+              <WheelMessage
+                title="You won entries to the final draw!"
+                description={`Congratulations! You won ${response.entries} entries for the final draw!`}
+                onExit={(_) => updateWheelMessage(null)}
+              />
+            );
+          } else if (response.prize.name == "Nada") {
+            updateWheelMessage(
+              <WheelMessage
+                title="You didn't win anything!"
+                description="Better luck next time."
+                onExit={(_) => updateWheelMessage(null)}
+              />
+            );
+          } else {
+            updateWheelMessage(
+              <WheelMessage
+                title={`You won a ${response.prize.name}!`}
+                description={`Congratulations! You won a ${response.prize.name}!`}
+                onExit={(_) => updateWheelMessage(null)}
+              />
+            );
+          }
+        })
+        .catch((_) => {
           updateWheelMessage(
             <WheelMessage
-              title="You won tokens!"
-              description={`Congratulations! You won ${response.tokens} tokens!`}
+              title="You don't have tokens!"
+              description="You do not have enough tokens to spin the wheel."
               onExit={(_) => updateWheelMessage(null)}
             />
           );
-        } else if (response.badge) {
-          updateWheelMessage(
-            <WheelMessage
-              title="You won a badge!"
-              description={`Congratulations! You won the ${response.badge.name} badge. Go check it out in the badgedex tab.`}
-              onExit={(_) => updateWheelMessage(null)}
-            />
-          );
-        } else if (response.entries) {
-          updateWheelMessage(
-            <WheelMessage
-              title="You won entries to the final draw!"
-              description={`Congratulations! You won ${response.entries} entries for the final draw!`}
-              onExit={(_) => updateWheelMessage(null)}
-            />
-          );
-        } else if (response.prize.name == "Nada") {
-          updateWheelMessage(
-            <WheelMessage
-              title="You didn't win anything!"
-              description="Better luck next time."
-              onExit={(_) => updateWheelMessage(null)}
-            />
-          );
-        } else {
-          //TODO:: CHANGE THIS MESSAGE
-          updateWheelMessage(
-            <WheelMessage
-              title={`You won a ${response.prize.name}!`}
-              description={`Congratulations! You won a ${response.prize.name}!`}
-              onExit={(_) => updateWheelMessage(null)}
-            />
-          );
-        }
-      })
-      .catch((_) => {
-        updateWheelMessage(
-          <WheelMessage
-            title="You don't have tokens!"
-            description="You do not have enough tokens to spin the wheel."
-            onExit={(_) => updateWheelMessage(null)}
-          />
-        );
-      })
-      .finally(() => {
-        requestAllInfo();
-        refetchUser();
-        setIsSpinning(false);
-      });
+        })
+        .finally(() => {
+          requestAllInfo();
+          refetchUser();
+          setIsSpinning(false);
+        });
+    }, 5000);
   };
 
   const changeState = () => {
@@ -190,18 +202,18 @@ function WheelPage() {
             <div className="m-auto h-72 w-72 xs:h-80 xs:w-80 sm:h-96 sm:w-96">
               <WheelComponent steps={16} angle={st.angle} />
             </div>
-            <button
+            <Button
               className={`${
                 canSpin()
                   ? "cursor-pointer bg-quinary"
                   : "bg-gray-400 opacity-50"
-              } m-auto mt-10 block h-20 w-64 rounded-full`}
-              disabled={!canSpin() || isSpinning}
+              } mt-10 block h-20 w-64`}
+              disabled={!canSpin()}
               onClick={spinTheWheel}
-            >
-              <p className="font-ibold font-bold">SPIN THE WHEEL</p>
-              <p className="font-iregular">20 tokens💰</p>
-            </button>
+              title="SPIN THE WHEEL"
+              description={`${price} tokens💰`}
+              bold={true}
+            />
           </div>
         </div>
         <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">
@@ -212,7 +224,7 @@ function WheelPage() {
 
           <div className="mt-10">
             <Heading text="Awards"></Heading>
-            <div className="mb-5 grid w-full grid-cols-6 pb-3">
+            <div className="mb-5 grid w-full select-none grid-cols-6 pb-3">
               <div className="text-center">
                 <p className="text-iregular pr-4">Image</p>
               </div>

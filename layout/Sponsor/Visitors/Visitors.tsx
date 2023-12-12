@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { withAuth, useAuth } from "@context/Auth";
 
-import Pagination from "../components/Pagination";
 import Layout from "@components/Layout";
 
 import { downloadCVInBulk, getCompanyVisitors } from "@lib/api";
-
-interface Props {}
 
 interface Visitor {
   id: string;
@@ -16,9 +13,7 @@ interface Visitor {
   cv: string;
 }
 
-const navigation = ["scanner", "visitors"];
-
-const SponsorVisitors: React.FC<Props> = () => {
+const SponsorVisitors: React.FC = () => {
   const { user } = useAuth();
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [downloading, setDownloading] = useState<boolean>(false);
@@ -65,13 +60,11 @@ const SponsorVisitors: React.FC<Props> = () => {
     <Layout
       title="Visitantes"
       description="Veja quem está a visitar a sua empresa e já recebeu o seu badge"
-      navigation={navigation}
-      basePath="sponsor"
     >
       <div className="mt-5 h-screen text-white">
         {visitors.filter((v) => v.cv != null).length > 0 && (
           <button
-            className="m-auto mb-5 block rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
+            className="m-auto mb-5 block select-none rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
             onClick={downloadCVs}
           >
             {downloading ? "Downloading" : "Download All CV's"}
@@ -86,7 +79,7 @@ const SponsorVisitors: React.FC<Props> = () => {
               <img
                 alt={visitor.name}
                 src={visitor.avatar}
-                className="mb-2 h-40 w-40 rounded-full border-2 border-white object-cover hover:border-pink-500"
+                className="mb-2 h-40 w-40 select-none rounded-full border-2 border-white object-cover hover:border-pink-500"
               />
               <p className="text-center">{visitor.name}</p>
               <p className="text-center">{visitor.email}</p>

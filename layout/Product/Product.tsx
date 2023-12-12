@@ -7,7 +7,7 @@ import { getProduct, buyProduct } from "@lib/api";
 import { withAuth, useAuth } from "@context/Auth";
 
 import Balance from "@components/Balance";
-
+import Button from "@components/Button";
 import Layout from "@components/Layout";
 
 function ProductSlug() {
@@ -41,11 +41,12 @@ function ProductSlug() {
       <div className="bg-primary">
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           {/* Product details */}
-          <div className="lg:max-w-lg lg:self-end">
-            <Link href="/attendee/store">
-              <a className="text-center font-imedium text-quinary">
-                &lt; Back to store
-              </a>
+          <div className="select-none lg:max-w-lg lg:self-end">
+            <Link
+              href="/attendee/store"
+              className="text-center font-imedium text-quinary"
+            >
+              &lt; Back to store
             </Link>
 
             <div className="mt-4">
@@ -67,7 +68,7 @@ function ProductSlug() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full select-none object-cover object-center"
               />
             </div>
           </div>
@@ -81,19 +82,19 @@ function ProductSlug() {
 
               <div className="mt-10">
                 {product.can_buy > 0 && product.stock > 0 && (
-                  <button
+                  <Button
                     onClick={() =>
                       buyProduct(product.id).then(() => {
                         updateProductInfo((needsUpdate) => !needsUpdate);
                         refetchUser();
                       })
                     }
-                    className="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:opacity-75"
+                    className="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75"
                     disabled={user.token_balance < product.price}
-                  >
-                    <p className="font-ibold font-bold">REDEEM</p>
-                    <p className="font-iregular">{product.price} tokens 💰</p>
-                  </button>
+                    title="REDEEM"
+                    description={`${product.price} tokens 💰`}
+                    bold={true}
+                  />
                 )}
               </div>
               <div className="mt-6 text-center">

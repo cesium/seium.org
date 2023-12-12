@@ -5,15 +5,23 @@ import { useAuth } from "@context/Auth";
 import Button from "@components/Button";
 import Form from "@components/Form";
 import Input from "@components/Input";
+import Select from "@components/Select";
+import PasswordInput from "@components/PasswordInput";
 
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
 
-export default function SignUpForm() {
+interface Course {
+  id: any;
+  name: string;
+}
+
+export default function SignUpForm({ courses }) {
   const { sign_up, isLoading, errors } = useAuth();
 
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [nickname, updateNickname] = useState("");
+  const [course, updateCourse] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
   const [uuid, setUUID] = useState();
@@ -59,6 +67,7 @@ export default function SignUpForm() {
         password_confirmation,
         nickname,
         uuid,
+        course,
       });
     }
   };
@@ -92,29 +101,37 @@ export default function SignUpForm() {
           bgColor="primary"
           onChange={(e) => updateNickname(e.currentTarget.value)}
         />
-        <Input
+        <Select
+          text="COURSE"
+          id="course"
+          fgColor="white"
+          bgColor="primary"
+          defaultValue={0}
+          options={courses.map((course) => ({
+            key: course.id,
+            name: course.name,
+          }))}
+          onChange={(e) => updateCourse(e.currentTarget.value)}
+        />
+        <PasswordInput
           text="PASSWORD"
           id="password"
           name="password"
-          type="password"
-          autoComplete="current-password"
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePassword(e.currentTarget.value)}
         />
-        <Input
+        <PasswordInput
           text="CONFIRM PASSWORD"
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
+          id="confirm"
+          name="confirm"
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
         />
         <Button
-          text={scanning ? "STOP SCANNING" : "SCAN QR"}
-          customStyle="text-secondary bg-quinary border-quinary"
+          title={scanning ? "STOP SCANNING" : "SCAN QR"}
+          className="h-12 w-full border-quinary bg-quinary text-secondary"
           onClick={(e) => {
             e.preventDefault();
             updateScanning(!scanning);
@@ -140,8 +157,8 @@ export default function SignUpForm() {
         )}
         <Button
           type="submit"
-          text={isLoading ? "Registering..." : "LET'S GO"}
-          customStyle="text-secondary bg-quinary border-quinary"
+          title={isLoading ? "Registering..." : "LET'S GO"}
+          className="h-12 w-full border-quinary bg-quinary text-secondary"
         />
         {(local_error || (!isLoading && errors)) && (
           <p className="mt-3 font-iregular text-lg text-red-400">

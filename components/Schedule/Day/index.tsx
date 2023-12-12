@@ -52,7 +52,7 @@ export default function Day(props) {
   );
 
   const Ans = () => (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full select-none justify-center">
       <div className="flex w-full justify-between text-4xl xs:text-5xl sm:text-7xl lg:text-8xl xl:mx-20 xl:text-7xl">
         <div className={`${styles.leftArrow} ${styles.arrowWrapper}`}>
           <button
@@ -62,7 +62,9 @@ export default function Day(props) {
         </div>
 
         <div className={`-mt-8 md:-mt-10 ${styles.dateWrapper}`}>
-          <h5 className={`font-ibold text-2xl text-quinary md:text-3xl`}>
+          <h5
+            className={`font-terminal-uppercase text-2xl text-quinary md:text-3xl`}
+          >
             {date_string}
           </h5>
           <h2

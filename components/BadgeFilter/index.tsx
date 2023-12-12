@@ -6,7 +6,7 @@ export default function BadgeFilter({ onChange }) {
       <select
         id="location"
         name="location"
-        className="mt-1 block w-full rounded-full border-2 border-quinary bg-white py-2 pl-3 pr-10 text-black ring-quinary focus:border-quinary"
+        className="mt-1 block w-full select-none rounded-full border-2 border-quinary bg-white py-2 pl-3 pr-10 text-black ring-quinary focus:border-quinary"
         defaultValue="All"
         onChange={(e) => {
           const badge = badgeTypes.find(

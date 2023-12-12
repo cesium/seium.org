@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { withAuth, useAuth } from "@context/Auth";
 
 import Form from "@components/Form";
 import Input from "@components/Input";
+import Select from "@components/Select";
 
 import Layout from "@components/Layout";
+import Button from "@components/Button";
 import Heading from "@components/Heading";
 
 import { CheckpointTracker, CodeInput } from "./components";
@@ -13,11 +15,17 @@ import CVInput from "./components/CVInput";
 import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
 
-function Profile() {
+interface Course {
+  id: any;
+  name: string;
+}
+
+function Profile({ courses }) {
   const { user, editUser } = useAuth();
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
+  const [course, setCourse] = useState(user.course || "");
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
@@ -60,6 +68,7 @@ function Profile() {
     e.preventDefault();
     const formData = new FormData();
     formData.append("attendee[nickname]", username);
+    formData.append("attendee[course_id]", course);
     formData.append("attendee[avatar]", avatar);
 
     if (editing) {
@@ -92,19 +101,18 @@ function Profile() {
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile">
             <div className="w-auto">
-              <button
-                className="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
+              <Button
+                title={editing ? "Save Changes" : "Edit"}
+                className="w-full items-center border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
                 type="submit"
                 form="profile-form"
-              >
-                {editing ? "Save Changes" : "Edit"}
-              </button>
+              />
             </div>
           </Heading>
 
           <Form onSubmit={handleSubmitForm} id="profile-form">
             <div className="pl-6">
-              <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white hover:border-quinary">
                 {photoFileUrl == null ? (
                   <img
                     src="/images/mascot-head.png"
@@ -137,7 +145,7 @@ function Profile() {
               id="name"
               name="name"
               value={user.name || ""}
-              bgColor="white"
+              bgColor="primary"
               fgColor="white"
               enabled={false}
             />
@@ -146,14 +154,27 @@ function Profile() {
               id="username"
               name="username"
               value={username}
-              bgColor="white"
+              bgColor="primary"
               fgColor="white"
               enabled={editing}
               onChange={(e) => setUsername(e.currentTarget.value)}
             />
+            <Select
+              text="COURSE"
+              id="course"
+              bgColor="primary"
+              fgColor="white"
+              value={course}
+              options={courses.map((course) => ({
+                key: course.id,
+                name: course.name,
+              }))}
+              enabled={editing}
+              onChange={(e) => setCourse(e.currentTarget.value)}
+            />
 
             <button
-              className="inline-block h-auto pl-6 pb-5 text-quinary underline"
+              className="inline-block h-auto select-none pl-6 pb-5 text-quinary underline"
               onClick={(e) => {
                 e.preventDefault();
                 onResetPassword();
@@ -228,17 +249,9 @@ function Profile() {
               </p>
             )}
           </div>
-
-          <div className="my-10 text-white">
-            <Heading text="Redeem referral code" />
-            <p className="font-iregular">Redeem a badge using a unique code</p>
-
-            <CodeInput />
-          </div>
-
           <div className="mt-10 text-white">
             <Heading text="Upload CV" />
-            <CVInput cv={user?.cv} onSubmit={submitCV}></CVInput>
+            <CVInput cv={user?.cv} onSubmit={submitCV} />
           </div>
         </div>
       </div>

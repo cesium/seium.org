@@ -26,7 +26,7 @@ function BlockItem({
     >
       {coffeeBreak && (
         <div className="relative float-right mr-5 h-10 w-10">
-          <Image src="/images/Coffee.svg" layout="fill" />
+          <Image src="/images/coffee.png" layout="fill" alt="Coffee Break" />
         </div>
       )}
 
@@ -46,8 +46,8 @@ function BlockItem({
       >
         {author && (
           <li className={styles.listElem}>
-            <Link href={`speakers?speaker=${author}`}>
-              <a className={styles.author}> {author} </a>
+            <Link href={`speakers?speaker=${author}`} className={styles.author}>
+              {author}
             </Link>
           </li>
         )}
@@ -55,8 +55,9 @@ function BlockItem({
 
       {description && (
         <div
-          className={styles.description}
-          style={{ display: focused ? "block" : "none" }}
+          className={`transition-max-height overflow-hidden duration-300 ${
+            focused ? "max-h-96" : "max-h-0"
+          }`}
         >
           {description.split("\n").map((text, i) => (
             <p key={i} className={`mb-2 font-iregular text-lg text-white`}>
@@ -91,8 +92,11 @@ function BlockItem({
               {description &&
                 detailed &&
                 (focused ? (
-                  <Link href={{ hash: "_" }}>
-                    <a className={`mx-auto ${styles.expand}`}>-</a>
+                  <Link
+                    href={{ hash: "_" }}
+                    className={`mx-auto ${styles.expand}`}
+                  >
+                    -
                   </Link>
                 ) : (
                   <span className={`mx-auto ${styles.expand}`}>+</span>
@@ -107,9 +111,7 @@ function BlockItem({
   return (
     <div className={skipLink ? "" : styles.clickable}>
       {!skipLink && (
-        <Link href={`schedule/#${id}`}>
-          <a className="absolute h-full w-full" />
-        </Link>
+        <Link href={`schedule/#${id}`} className="absolute h-full w-full" />
       )}
       {block}
     </div>
