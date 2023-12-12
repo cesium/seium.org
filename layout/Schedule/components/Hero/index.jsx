@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 
 import Title from "./Title";
+import SpotlightShape from "@components/SpotlightShape";
 
 const Animation = dynamic(() => import("@components/Animation"), {
   ssr: false,
@@ -9,8 +10,8 @@ const Animation = dynamic(() => import("@components/Animation"), {
 export default function Hero() {
   return (
     <div className="bg-tertiary">
+      <SpotlightShape />
       <div className="spacing relative z-20 select-none pb-32">
-        <Animation type="3" />
         <div className="pt-2">
           <Title />
         </div>

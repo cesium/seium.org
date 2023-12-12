@@ -10,6 +10,7 @@ import Title from "./Title";
 import Organization from "./Organization";
 import ExpectList from "./ExpectList";
 import Pitch from "./Pitch";
+import SpotlightShape from "@components/SpotlightShape";
 
 const Animation = dynamic(() => import("@components/Animation"), {
   ssr: false,
@@ -19,6 +20,7 @@ export default function Hero() {
   const { isAuthenticated } = useAuth();
   return (
     <div className="bg-secondary">
+      <SpotlightShape />
       <div className="spacing relative z-40 pb-32">
         <div className="select-none pt-2">
           <Title />
