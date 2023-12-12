@@ -12,11 +12,7 @@ function Speakers() {
   return (
     <Navbar bgColor="secondary" button="quinary" fgColor="white">
       <Hero />
-      <Schedule
-        color="secondary"
-        detailed={false}
-        filters={router.query.speaker}
-      />
+      <Schedule detailed={false} filters={router.query.speaker} />
       <Footer color="secondary" />
     </Navbar>
   );

@@ -16,7 +16,7 @@ export default function Speakers() {
           <Link href="/speakers">
             <Button
               title="MEET THE SPEAKERS"
-              className="h-20 w-full border-4 border-white text-white hover:border-quinary hover:bg-quinary select-none"
+              className="h-20 w-full select-none border-4 border-white text-white hover:border-quinary hover:text-quinary"
               bold={true}
             />
           </Link>

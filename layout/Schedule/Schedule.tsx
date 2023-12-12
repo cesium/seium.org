@@ -10,7 +10,7 @@ function Index() {
   return (
     <Navbar bgColor="tertiary" button="quinary" fgColor="white">
       <Hero />
-      <Schedule color="tertiary" detailed={true}>
+      <Schedule detailed={true}>
         <div className="pb-24" />
       </Schedule>
       <Footer color="tertiary" />
