@@ -10,9 +10,9 @@ function Home() {
   return (
     <Navbar bgColor="secondary" button="quinary" fgColor="white">
       <Hero />
-      <Schedule />
-      <Sponsors />
-      <Speakers />
+      {/*<Schedule />*/}
+      {/*<Sponsors />*/}
+      {/*<Speakers />*/}
       <Partners />
       <Footer color="secondary" />
     </Navbar>

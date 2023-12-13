@@ -51,14 +51,14 @@ function Animation() {
 
 export default function Organization() {
   return (
-    <section className="spacing grid grid-cols-1 gap-x-32 gap-y-8 bg-primary py-20 lg:grid-cols-2">
+    <section className="spacing relative grid grid-cols-1 gap-x-32 gap-y-8 py-20 lg:grid-cols-2">
       <div className="text-white">
         <h2 className="font-terminal-uppercase mb-4 select-none text-4xl font-bold">
           Organization
         </h2>
         <p className="font-imedium">
           They walk around, full of work, gathering speakers, attracting
-          partners and giving their imaginations wings, all for this to be your
+          partners and giving their imagination wings, all for this to be your
           favorite week.
         </p>
       </div>
@@ -66,26 +66,14 @@ export default function Organization() {
       <Team
         title={team["organization"].title}
         list={sortListMembers(team["organization"].list)}
+        cols={3}
       />
 
       <Team
         title={team["marketing"].title}
-        list={sortListMembers(team["marketing"].list).slice(0, 2)}
+        list={sortListMembers(team["marketing"].list)}
       />
 
-      <div className="hidden select-none items-center justify-center lg:flex">
-        <Animation />
-      </div>
-
-      <div className="flex h-full flex-col">
-        <Team
-          title=""
-          list={sortListMembers(team["marketing"].list).slice(2, 6)}
-        />
-        <div className="hidden h-full justify-center lg:flex">
-          <SeiAnimation />
-        </div>
-      </div>
       <Team
         title={team["tech"].title}
         list={sortListMembers(team["tech"].list)}
@@ -104,10 +92,10 @@ export default function Organization() {
         title={team["merch"].title}
         list={sortListMembers(team["merch"].list)}
       />
-      <Team
-        title={team["media"].title}
-        list={sortListMembers(team["media"].list)}
-      />
+
+      <div className="hidden select-none grid-cols-3 items-center justify-center lg:flex">
+        <SeiAnimation />
+      </div>
     </section>
   );
 }

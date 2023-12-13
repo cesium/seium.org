@@ -13,10 +13,10 @@ import JoinUs from "@components/JoinUs";
 import styles from "./style.module.css";
 
 const navigation = [
-  { name: "Schedule", slug: "/schedule" },
+  /*{ name: "Schedule", slug: "/schedule" },*/
   { name: "Team", slug: "/team" },
-  { name: "Challenges", slug: "/challenges" },
-  { name: "Speakers", slug: "/speakers" },
+  /*{ name: "Challenges", slug: "/challenges" },*/
+  /*{ name: "Speakers", slug: "/speakers" },*/
   { name: "FAQs", slug: "/faqs" },
 ];
 
@@ -55,7 +55,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Link href="/">
                     <div className={`${styles.logo} select-none pt-4 lg:pt-8`}>
                       <Image
-                        className="cursor-pointer opacity-60 hover:opacity-100"
+                        className="cursor-pointer transition-colors duration-75 ease-in hover:text-quinary"
                         src="/images/sei-logo.svg"
                         width="50"
                         height="40"
@@ -70,7 +70,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           <Link
                             key={item.slug}
                             href={item.slug}
-                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                            className="font-iregular text-sm text-white transition-colors duration-75 ease-in hover:text-quinary"
                           >
                             {item.name}
                           </Link>
@@ -79,7 +79,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           <Link
                             key="login"
                             href="/login"
-                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                            className="font-iregular text-sm text-white transition-colors duration-75 ease-in hover:text-quinary"
                           >
                             Login
                           </Link>
@@ -141,7 +141,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           </Transition>
                         </Menu>
                       ) : (
-                        <JoinUs fgColor={fgColor} button={button} />
+                        <>{/*<JoinUs fgColor={fgColor} button={button} />*/}</>
                       )}
                     </div>
                   </div>
