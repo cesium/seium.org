@@ -15,9 +15,9 @@ function DefaultAnimation() {
     <span>
       Psst. Have you checked out the{" "}
       <Link href="/faqs" className="text-primary underline">
-        FAQs?
-      </Link>{" "}
-      Just saying.
+        FAQs
+      </Link>
+      &nbsp;yet? Just saying.
     </span>
   );
 }
