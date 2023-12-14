@@ -79,6 +79,10 @@ export default function Organization() {
         list={sortListMembers(team["tech"].list)}
       />
 
+      <div className="hidden select-none grid-cols-3 items-center justify-center lg:flex">
+        <SeiAnimation />
+      </div>
+
       <Team
         title={team["program"].title}
         list={sortListMembers(team["program"].list)}
@@ -92,10 +96,6 @@ export default function Organization() {
         title={team["merch"].title}
         list={sortListMembers(team["merch"].list)}
       />
-
-      <div className="hidden select-none grid-cols-3 items-center justify-center lg:flex">
-        <SeiAnimation />
-      </div>
     </section>
   );
 }
