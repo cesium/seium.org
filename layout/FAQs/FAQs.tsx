@@ -35,7 +35,10 @@ function Faq() {
         </div>
       </Navbar>
       <FindUs />
-      <Footer color="primary" />
+      <Footer
+        color="primary"
+        footerAnimationText="A lot of stuff to be revealed yet... 🤫"
+      />
     </>
   );
 }
