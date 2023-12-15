@@ -165,7 +165,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key={item.slug}
                   as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
                   <Link key={item.slug} href={item.slug}>
                     {item.name}
@@ -178,7 +178,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Disclosure.Button
                     key={item.slug}
                     as="a"
-                    className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                    className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                   >
                     <Link key={item.slug} href={item.slug}>
                       {item.name}
@@ -189,7 +189,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key="login"
                   as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
                   <Link key="login" href="/login">
                     Login
@@ -200,7 +200,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key="login"
                   as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
                   <button onClick={() => logout()}>Log Out</button>
                 </Disclosure.Button>
