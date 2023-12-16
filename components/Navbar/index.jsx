@@ -75,7 +75,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             {item.name}
                           </Link>
                         ))}
-                        {isAuthenticated ? null : (
+                        {/*isAuthenticated ? null : (
                           <Link
                             key="login"
                             href="/login"
@@ -83,7 +83,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           >
                             Login
                           </Link>
-                        )}
+                        )*/}
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
@@ -185,7 +185,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </Link>
                   </Disclosure.Button>
                 ))}
-              {!isAuthenticated && (
+              {/*!isAuthenticated && (
                 <Disclosure.Button
                   key="login"
                   as="a"
@@ -195,7 +195,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     Login
                   </Link>
                 </Disclosure.Button>
-              )}
+              )*/}
               {isAuthenticated && (
                 <Disclosure.Button
                   key="login"
