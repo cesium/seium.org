@@ -79,7 +79,6 @@ function WheelPage() {
       .then((response) => updateLatestWins(response.data))
       .catch((_) => updateError(true));
   };
-
   useEffect(requestAllInfo, []);
 
   const canSpin = () => {

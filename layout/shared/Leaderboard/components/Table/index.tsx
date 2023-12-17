@@ -2,26 +2,24 @@ import Link from "next/link";
 
 export default function Table({ list, user, maxUsersToShow }) {
   const toShow = list.slice(0, Math.min(maxUsersToShow, list.length));
+
   const rows = toShow.map((entry, id) => (
     <div key={id} className=" flex h-auto border-t-2 border-t-slate-300 p-4">
       <div
-        className={`w-1/3 text-left font-iregular ${
-          entry.id == user ? "text-quinary" : ""
-        }`}
+        className={`w-1/3 text-left font-iregular ${entry.id == user ? "text-quinary" : ""
+          }`}
       >
         {id + 1}
       </div>
       <div
-        className={`w-1/3 text-center font-ibold ${
-          entry.id == user ? "text-quinary" : ""
-        }`}
+        className={`w-1/3 text-center font-ibold ${entry.id == user ? "text-quinary" : ""
+          }`}
       >
-        <Link href={`/attendees/${entry.id}`}>{entry.name}</Link>
+        <Link href={`/attendees/${entry.nickname}`}>{entry.name}</Link>
       </div>
       <div
-        className={`w-1/3 text-right font-iregular ${
-          entry.id == user ? "text-quinary" : ""
-        }`}
+        className={`w-1/3 text-right font-iregular ${entry.id == user ? "text-quinary" : ""
+          }`}
       >
         {entry.badges}
       </div>
@@ -56,6 +54,7 @@ export default function Table({ list, user, maxUsersToShow }) {
         </div>
       </div>
     );
+
 
   return (
     <div className="overflow-hidden">

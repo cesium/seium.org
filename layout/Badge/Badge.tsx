@@ -50,8 +50,6 @@ const BadgeSlug: React.FC = () => {
       .catch((_) => router.replace("/404"));
   }, [slug]);
 
-  console.log(badge);
-
   return (
     <Layout
       title={`${badge?.name} Badge`}
