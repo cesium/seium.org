@@ -16,12 +16,12 @@ import { LoginForm } from "./components";
 function Login() {
   return (
     <div className="min-h-screen select-none overflow-hidden bg-secondary">
-      <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
+      <Return componentStyle="sm:ml-20 mt-20 sm:mt-20 z-10 pl-10" />
       <img
         className="absolute -left-[380px] bottom-0 hidden w-[750px] xl:block"
         src="/images/void.svg"
       />
-      <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
+      <div className="mt-10 flex flex-col items-center justify-center sm:mt-40 z-8">
         <Title text="Log in" />
         <LoginForm />
         <Text
