@@ -202,18 +202,20 @@ function WheelPage() {
             <div className="m-auto h-72 w-72 xs:h-80 xs:w-80 sm:h-96 sm:w-96">
               <WheelComponent steps={16} angle={st.angle} />
             </div>
-            <Button
-              className={`${
-                canSpin()
-                  ? "cursor-pointer bg-quinary"
-                  : "bg-gray-400 opacity-50"
-              } mt-10 block h-20 w-64`}
-              disabled={!canSpin()}
-              onClick={spinTheWheel}
-              title="SPIN THE WHEEL"
-              description={`${price} tokens💰`}
-              bold={true}
-            />
+            {price != null && (
+              <Button
+                className={`${
+                  canSpin()
+                    ? "cursor-pointer bg-quinary"
+                    : "bg-gray-400 opacity-50"
+                } mt-10 block h-20 w-64`}
+                disabled={!canSpin()}
+                onClick={spinTheWheel}
+                title="SPIN THE WHEEL"
+                description={`${price} tokens💰`}
+                bold={true}
+              />
+            )}
           </div>
         </div>
         <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">
