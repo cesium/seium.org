@@ -1,7 +1,7 @@
 import { CheckIcon, ClockIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 
-export default function Redeemables({ product }) {
+export default function Redeemable({ product }) {
   return (
     <li key={product.id} className="flex py-6">
       <div className="flex-shrink-0">

@@ -1,10 +1,6 @@
-import { useState, useEffect } from "react";
-
 import { withAuth, useAuth } from "@context/Auth";
 
-import { getProducts, getWheelPrizes } from "@lib/api";
-
-import { Prize, Redeemable } from "./components";
+import { Prize, Redeemable, Empty } from "./components";
 
 import Layout from "@components/Layout";
 import Balance from "@components/Balance";
@@ -13,8 +9,9 @@ function Inventory() {
   const { user } = useAuth();
 
   const items = user.redeemables
-    .map((v) => ({ ...v, is_product: true }))
-    .concat(user.prizes.map((v) => ({ ...v, is_product: false })));
+    .map((product) => ({ ...product, is_product: true }))
+    .concat(user.prizes.map((prize) => ({ ...prize, is_product: false })))
+    .filter((item) => item.is_redeemable || item.is_product);
 
   return (
     <Layout
@@ -27,22 +24,24 @@ function Inventory() {
           badge_count={user.badge_count}
         />
       </div>
-      <div>
-        <ul
-          role="list"
-          className="mt-6 divide-y divide-gray-200 border-t border-b border-gray-200"
-        >
-          {items
-            .filter((item) => item.is_redeemable || item.is_product)
-            .map((item) =>
+      {items.length == 0 ? (
+        <Empty />
+      ) : (
+        <div>
+          <ul
+            role="list"
+            className="mt-6 divide-y divide-gray-200 border-t border-b border-gray-200"
+          >
+            {items.map((item) =>
               item.is_product ? (
                 <Redeemable product={item} />
               ) : (
                 <Prize product={item} />
               )
             )}
-        </ul>
-      </div>
+          </ul>
+        </div>
+      )}
     </Layout>
   );
 }

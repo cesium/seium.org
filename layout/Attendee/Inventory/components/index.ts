@@ -1,6 +1,5 @@
 import Prize from "./Prize";
 import Redeemable from "./Redeemable";
-import StoreEmpty from "./StoreEmpty";
-import WheelEmpty from "./WheelEmpty";
+import Empty from "./Empty";
 
-export { Prize, Redeemable, StoreEmpty, WheelEmpty };
+export { Prize, Redeemable, Empty };

@@ -1,6 +1,6 @@
 import { CheckIcon, ClockIcon } from "@heroicons/react/solid";
 
-export default function Prizes({ product }) {
+export default function Prize({ product }) {
   return (
     <li key={product.id} className="flex py-6">
       <div className="flex-shrink-0">
