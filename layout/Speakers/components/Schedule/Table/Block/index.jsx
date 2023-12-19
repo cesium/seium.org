@@ -27,7 +27,7 @@ export default function Block({
   return (
     <div key={id} className="border-t-2 border-white py-4 text-white">
       <div className="mb-2 flex">
-        <div className="w-[210px]">
+        <div className="w-[210px] select-none">
           <Image
             src={`/images/speakers/${id}.png`}
             width="210"
@@ -78,7 +78,7 @@ export default function Block({
             </div>
           </div>
 
-          <div className="z-50 flex items-center justify-end">
+          <div className="z-50 flex select-none items-center justify-end">
             <p className="grow text-gray-400">{talk}</p>
             {description && (
               <button

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Day from "./Day";
 import Table from "./Table";
 
+import scheduleData from "/data/schedule.json";
+
 function isAfter(date1, date2) {
   // equivalent to date1 > date2
   const arr1 = date1.split("/");
@@ -61,8 +63,10 @@ function addDate(date, days) {
 }
 
 export default function Schedule(props) {
-  const min_date = "2023/2/14";
-  const max_date = "2023/2/17";
+  /* Fetch first and last day of the event from schedule data */
+  const eventDates = scheduleData.map((day) => day.date).sort();
+  const min_date = eventDates[0];
+  const max_date = eventDates[eventDates.length - 1];
 
   //calculate default date
   const _today = new Date();
@@ -106,8 +110,8 @@ export default function Schedule(props) {
   };
 
   return (
-    <section className="spacing relative bg-secondary pb-20 lg:pt-10 2xl:grid 2xl:grid-cols-2">
-      <div className="relative z-50 mb-10 grid place-items-center text-white sm:flex sm:flex-col md:mr-10 md:place-items-start">
+    <section className="spacing relative pb-20 lg:pt-10 2xl:grid 2xl:grid-cols-2">
+      <div className="relative z-50 mb-10 grid select-none place-items-center text-white sm:flex sm:flex-col md:mr-10 md:place-items-start">
         <Day date={date} previousDay={previous_day} nextDay={next_day} />
         <p className="text-md mt-10 w-5/6 font-iregular md:px-20">
           During this week, you have the opportunity to interact with many

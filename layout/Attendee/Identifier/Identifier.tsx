@@ -12,7 +12,7 @@ function Identifier() {
       description="Scan this QR Code to identify yourself to the staff"
     >
       <div className="mt-12 grid-cols-2 overflow-hidden">
-        <div className="flex h-full justify-center overflow-hidden rounded-md lg:h-96">
+        <div className="flex h-full select-none justify-center overflow-hidden rounded-md lg:h-96">
           <QRCodeCanvas uuid={user.id} />
         </div>
       </div>

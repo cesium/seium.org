@@ -36,7 +36,7 @@ export default function CVInput({ cv, onSubmit }) {
     <>
       {uploading ? (
         <form onSubmit={handleSubmit} id="cv-form" className="mt-2">
-          <label className="m-auto inline-block w-full cursor-pointer rounded-lg border-2 border-quinary text-center duration-500 hover:bg-quinary hover:opacity-50">
+          <label className="m-auto inline-block w-full cursor-pointer select-none rounded-lg border-2 border-quinary text-center duration-500 hover:bg-quinary hover:opacity-50">
             <BookOpenIcon className="m-auto h-12 w-12 flex-shrink-0" />
 
             <input
@@ -64,7 +64,7 @@ export default function CVInput({ cv, onSubmit }) {
                 &#10003;
               </span>
             </label>
-            <label className="ml-2 text-sm">
+            <label className="ml-2 select-none text-sm">
               By submitting your CV you are consenting to it being shared with
               the companies you visit during the event
             </label>

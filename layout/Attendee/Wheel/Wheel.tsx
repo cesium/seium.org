@@ -203,11 +203,11 @@ function WheelPage() {
               <WheelComponent steps={16} angle={st.angle} />
             </div>
             <Button
-              customStyle={`${
+              className={`${
                 canSpin()
                   ? "cursor-pointer bg-quinary"
                   : "bg-gray-400 opacity-50"
-              } m-auto mt-10 block h-20 w-64 rounded-full`}
+              } mt-10 block h-20 w-64`}
               disabled={!canSpin()}
               onClick={spinTheWheel}
               title="SPIN THE WHEEL"
@@ -224,7 +224,7 @@ function WheelPage() {
 
           <div className="mt-10">
             <Heading text="Awards"></Heading>
-            <div className="mb-5 grid w-full grid-cols-6 pb-3">
+            <div className="mb-5 grid w-full select-none grid-cols-6 pb-3">
               <div className="text-center">
                 <p className="text-iregular pr-4">Image</p>
               </div>

@@ -8,6 +8,7 @@ export default function Speaker({ id, name, job, company }) {
         width="210"
         height="210"
         alt={name}
+        className="select-none"
       />
       <p className="text-md font-terminal-uppercase"> {name} </p>
       <p className="text-md font-imedium"> {job} </p>

@@ -11,6 +11,9 @@ import ErrorMessage from "@components/ErrorMessage";
 
 import { getLeaderboard } from "@lib/api";
 
+import scheduleData from "@data/schedule.json";
+import dayjs from "dayjs";
+
 function leapYear(year) {
   return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 }
@@ -72,8 +75,12 @@ function addDate(date, days) {
 }
 
 function Leaderboard() {
-  const min_date = "2023/02/14";
-  const max_date = "2023/02/17";
+  /* Fetch first and last day of the event from schedule data */
+  const eventDates = scheduleData.map((day) => day.date).sort();
+  const min_date = dayjs(eventDates[0]).format("YYYY/MM/DD");
+  const max_date = dayjs(eventDates[eventDates.length - 1]).format(
+    "YYYY/MM/DD"
+  );
 
   const _today = new Date().toISOString().split("T")[0];
   const today = _today.replace(/-/g, "/");
@@ -121,10 +128,9 @@ function Leaderboard() {
               previousDay={previous_day}
               nextDay={next_day}
               fontSize="lg"
-              className=""
             />
           ) : (
-            <h2 className="font-terminal-uppercase text-center text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
+            <h2 className="font-terminal-uppercase select-none text-center text-4xl text-quinary xs:text-5xl sm:text-7xl md:text-8xl">
               All Time
             </h2>
           )}
@@ -132,7 +138,7 @@ function Leaderboard() {
         <div className="col-span-1 w-full 2xl:pl-24">
           <div className="flex justify-center gap-6 xs:gap-10 md:gap-24">
             <Button
-              customStyle={`font-iregular bg-${
+              className={`font-iregular bg-${
                 hallOfFame ? "white" : "quinary"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {
@@ -142,7 +148,7 @@ function Leaderboard() {
             />
 
             <Button
-              customStyle={`font-iregular bg-${
+              className={`font-iregular bg-${
                 hallOfFame ? "quinary" : "white"
               } h-12 items-center rounded-full px-4 py-1 text-center text-black`}
               onClick={(e) => {

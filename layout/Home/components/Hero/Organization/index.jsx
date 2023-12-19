@@ -10,6 +10,7 @@ export default function Organization() {
           width="120"
           height="41"
           alt="CeSIUM"
+          className="select-none"
         />
       </a>
     </div>

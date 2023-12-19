@@ -36,7 +36,7 @@ function Profile() {
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile"></Heading>
           <div className="pl-6">
-            <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+            <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white hover:border-quinary">
               {attendee.avatar == null ? (
                 <img
                   src="/images/mascot-head.png"
@@ -75,7 +75,9 @@ function Profile() {
       <div className="mt-10">
         <Heading text="Badges"></Heading>
         <div className="mt-5 flex flex-auto space-x-5">
-          <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
+          <p className="mb-10 select-none text-2xl font-bold xl:mb-0">
+            Filter by
+          </p>
           <BadgeFilter onChange={updateFilter} />
         </div>
         <div className="mt-8 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">

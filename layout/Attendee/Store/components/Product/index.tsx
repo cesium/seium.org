@@ -13,7 +13,7 @@ export default function Product({ name, id, image, price, enabled }) {
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            className="h-full w-full select-none object-cover object-center lg:h-full lg:w-full"
           />
         </div>
       </div>

@@ -2,7 +2,7 @@ import Button from "@components/Button";
 
 export default function Pitch() {
   return (
-    <div className="xl:9/12 font-terminal-uppercase w-full text-white lg:w-9/12">
+    <div className="xl:9/12 font-terminal-uppercase w-full select-none tracking-wide text-white">
       <h2 className="text-4xl font-bold">
         We gather speakers, attract partners and give our imagination wings, all
         for this to be your favorite week.
@@ -11,8 +11,8 @@ export default function Pitch() {
         <a href="/team">
           <Button
             title="MEET THE TEAM"
-            customStyle="w-56 h-20 border-2 text-white border-white hover:text-quinary hover:border-quinary"
-            bold={false}
+            className="h-20 w-56 border-2 border-white text-white hover:border-quinary hover:text-quinary"
+            bold={true}
           />
         </a>
       </div>
