@@ -9,6 +9,7 @@ import ErrorMessage from "@components/ErrorMessage";
 import Filter from "@components/BadgeFilter";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 import Badge from "@components/Badge";
+import GoToTop from "@components/GoToTop";
 
 function Badges() {
   const [allBadges, updateAllBadges] = useState([]);
@@ -131,7 +132,9 @@ function Badges() {
           </div>
         </>
       )}
+
       {error && <ErrorMessage />}
+      <GoToTop />
     </Layout>
   );
 }
