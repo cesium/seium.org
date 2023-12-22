@@ -117,17 +117,17 @@ function Badges() {
                   badge.name.toLowerCase().includes(searchInput.toLowerCase())
               )
               .map((badge, index) => (
-                  <Badge
-                    key={index}
-                    id={badge.id}
-                    name={badge.name}
-                    avatar={badge.avatar}
-                    tokens={badge.tokens}
-                    owned={badge.owned}
-                    disableLink={true}
-                    disableOwnedHighlight={true}
-                    onClick={() => handleBadgeSelected(badge)}
-                  />
+                <Badge
+                  key={index}
+                  id={badge.id}
+                  name={badge.name}
+                  avatar={badge.avatar}
+                  tokens={badge.tokens}
+                  owned={badge.owned}
+                  disableLink={true}
+                  disableOwnedHighlight={true}
+                  onClick={() => handleBadgeSelected(badge)}
+                />
               ))}
           </div>
         </>
