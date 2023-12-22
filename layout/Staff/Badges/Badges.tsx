@@ -8,6 +8,7 @@ import Layout from "@components/Layout";
 import ErrorMessage from "@components/ErrorMessage";
 import Filter from "@components/BadgeFilter";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
+import Badge from "@components/Badge";
 
 function Badges() {
   const [allBadges, updateAllBadges] = useState([]);
@@ -115,17 +116,17 @@ function Badges() {
                   badge.name.toLowerCase().includes(searchInput.toLowerCase())
               )
               .map((badge, index) => (
-                <div
-                  key={index}
-                  className="h-full w-full cursor-pointer text-white"
-                  onClick={() => handleBadgeSelected(badge)}
-                >
-                  <img src={badge.avatar} alt={badge.name} />
-                  <div className="flex flex-col justify-items-center text-center font-iregular text-white">
-                    <div>{badge.name}</div>
-                    <div>{badge.tokens} 💰 </div>
-                  </div>
-                </div>
+                  <Badge
+                    key={index}
+                    id={badge.id}
+                    name={badge.name}
+                    avatar={badge.avatar}
+                    tokens={badge.tokens}
+                    owned={badge.owned}
+                    disableLink={true}
+                    disableOwnedHighlight={true}
+                    onClick={() => handleBadgeSelected(badge)}
+                  />
               ))}
           </div>
         </>
