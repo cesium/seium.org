@@ -25,6 +25,8 @@ const Badge: React.FC<BadgeProps> = ({
   const [badgeLoaded, setBadgeLoaded] = useState(false);
   const [fallbackRan, setFallbackRan] = useState(false);
 
+  const highlightBadge = owned || !disableOwnedHighlight || !badgeLoaded;
+
   const imageOnError: ReactEventHandler<HTMLImageElement> = (e) => {
     // prevent infinite loop fallback
     if (fallbackRan) {
@@ -40,9 +42,7 @@ const Badge: React.FC<BadgeProps> = ({
   return (
     <div
       className={`h-full w-full ${
-        owned || disableOwnedHighlight || !badgeLoaded
-          ? "opacity-100"
-          : "opacity-30"
+        highlightBadge ? "opacity-100" : "opacity-30"
       }`}
       id={id.toString()}
       {...rest}
