@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AllHTMLAttributes, ReactEventHandler, useState } from "react";
 
 interface BadgeProps
-  extends Omit<AllHTMLAttributes<HTMLDivElement>, "id" | "name"> {
+  extends Omit<AllHTMLAttributes<HTMLDivElement>, "id" | "name" | "type"> {
   name: string;
   id: string | number;
   avatar: string;
