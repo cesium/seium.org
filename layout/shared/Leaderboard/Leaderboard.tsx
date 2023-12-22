@@ -11,6 +11,9 @@ import ErrorMessage from "@components/ErrorMessage";
 
 import { getLeaderboard } from "@lib/api";
 
+import scheduleData from "@data/schedule.json";
+import dayjs from "dayjs";
+
 function leapYear(year) {
   return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 }
@@ -72,8 +75,12 @@ function addDate(date, days) {
 }
 
 function Leaderboard() {
-  const min_date = "2023/02/14";
-  const max_date = "2023/02/17";
+  /* Fetch first and last day of the event from schedule data */
+  const eventDates = scheduleData.map((day) => day.date).sort();
+  const min_date = dayjs(eventDates[0]).format("YYYY/MM/DD");
+  const max_date = dayjs(eventDates[eventDates.length - 1]).format(
+    "YYYY/MM/DD"
+  );
 
   const _today = new Date().toISOString().split("T")[0];
   const today = _today.replace(/-/g, "/");
