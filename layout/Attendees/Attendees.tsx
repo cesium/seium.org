@@ -7,7 +7,7 @@ import BadgeFilter from "@components/BadgeFilter";
 
 import Layout from "@components/Layout";
 import Heading from "@components/Heading";
-import { getAttendee, isAttendeeRegistered } from "@lib/api";
+import { getAttendeeByUsername, isAttendeeRegistered } from "@lib/api";
 
 function Profile() {
   const [attendee, updateAttendee] = useState(null);
@@ -17,7 +17,7 @@ function Profile() {
   const [filter, updateFilter] = useState(null);
 
   useEffect(() => {
-    getAttendee(uuid)
+    getAttendeeByUsername(uuid)
       .then((response) => {
         updateAttendee(response.data);
       })
@@ -25,7 +25,6 @@ function Profile() {
         router.replace("/404");
       });
   }, []);
-
   if (!attendee) return null;
   return (
     <Layout

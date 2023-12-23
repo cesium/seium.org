@@ -175,7 +175,8 @@ function WheelPage() {
   const latestWinsComponents = latestWins.map((entry, id) => (
     <ListItem3Cols
       key={id}
-      user={entry.attendee_name}
+      user_name={entry.attendee_name}
+      user_nickname={entry.attendee_nickname}
       prize={entry.prize}
       when={displayTimeSince(entry.date)}
       isLast={id == latestWins.length - 1}
