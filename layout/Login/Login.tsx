@@ -16,7 +16,7 @@ import { LoginForm } from "./components";
 function Login() {
   return (
     <div className="min-h-screen select-none overflow-hidden bg-secondary">
-      <Return componentStyle="sm:ml-20 mt-20 sm:mt-20 z-10 pl-10" />
+      <Return componentStyle="sm:ml-20 mt-20 sm:mt-20 z-10 pl-10 sm:pl-0" />
       <img
         className="absolute -left-[380px] bottom-0 hidden w-[750px] xl:block"
         src="/images/void.svg"
