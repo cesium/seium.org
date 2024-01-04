@@ -29,6 +29,7 @@ const userNavigation = (type) => {
         { name: "Leaderboard", slug: "/staff/leaderboard" },
         { name: "Give Badges", slug: "/staff/badges" },
         { name: "Give Prizes", slug: "/staff/prizes" },
+        { name: "Upload CV", slug: "/staff/cv" },
       ];
     case USER.ROLES.SPONSOR:
       return [
