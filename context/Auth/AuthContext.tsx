@@ -9,15 +9,58 @@ interface ILoginDTO {
   password: string;
 }
 
-// FIXME: Change this types from any
-type IAttendee = any;
-type ISopnsor = any;
-type IManager = any;
+interface IBadge {
+  begin: string;
+  description: string;
+  end: string;
+}
 
-type IUser = IAttendee | ISopnsor | IManager;
+interface IPrize {
+  avatar: string;
+  id: number;
+  is_redeemable: boolean;
+  name: string;
+  not_redeemed: number;
+}
+
+interface IAbstractUser {
+  email: string;
+  type: string;
+}
+
+interface IAttendee extends IAbstractUser {
+  avatar: string | null;
+  badge_count: number;
+  badges: IBadge[];
+  course: number;
+  cv: string | null;
+  entries: number;
+  id: string;
+  name: string;
+  nickname: string;
+  prizes: IPrize[];
+  redeemables: IPrize[];
+  token_balance: number;
+}
+
+interface IManager extends IAbstractUser {
+  id: number;
+}
+
+interface ISponsor extends IAbstractUser {
+  badge_id: number;
+  /** The id of the company */
+  id: number;
+  name: string;
+  sponsorship: string;
+  /** The id of the user */
+  user_id: number;
+}
+
+type IUser = IAttendee | ISponsor | IManager;
 
 interface IAuthContext {
-  user: IUser;
+  user: IUser | null;
   errors?: string;
 
   // Booleans
@@ -25,7 +68,7 @@ interface IAuthContext {
   isLoading: boolean;
 
   // Updates user in state
-  updateUser: (user: IUser) => void;
+  updateUser: (user: IUser | null) => void;
   refetchUser: () => void;
 
   // Api calls
@@ -78,7 +121,7 @@ export function AuthProvider({ children }) {
       })
       .catch((_errors) => {
         // It means the jwt is expired
-        localStorage.clear();
+        localStorage.removeItem(TOKEN_KEY_NAME);
         delete API.defaults.headers.common["Authorization"];
       })
       .finally(() => setFirstLoading(false));
@@ -111,7 +154,7 @@ export function AuthProvider({ children }) {
       })
       .catch((e) => {
         setErrors("Something went wrong. Check your input and try again"); //e.message
-        setUser(undefined);
+        setUser(null);
         setLoading(false);
       });
   }
@@ -155,16 +198,16 @@ export function AuthProvider({ children }) {
             "Something went wrong :/ Please check your internet connection and try again later"
           );
         }
-        setUser(undefined);
+        setUser(null);
         setLoading(false);
       });
   }
 
   function logout() {
     setLoading(true);
-    localStorage.clear();
+    localStorage.removeItem(TOKEN_KEY_NAME);
     delete API.defaults.headers.common["Authorization"];
-    router.push("/").finally(() => setUser(undefined));
+    router.push("/").finally(() => setUser(null));
   }
 
   function editUser(nickname) {
@@ -176,7 +219,7 @@ export function AuthProvider({ children }) {
         setUser((oldUser) => ({ ...oldUser, ...at }));
       })
       .catch((errors) => {
-        setUser(undefined);
+        setUser(null);
         setErrors(
           "Something went wrong :/ Please check your internet connection and try again later"
         );
@@ -187,7 +230,7 @@ export function AuthProvider({ children }) {
     setRefetch((needsRefetch) => !needsRefetch);
   }
 
-  function updateUser(updatedUser: IUser) {
+  function updateUser(updatedUser: IUser | null) {
     setUser(updatedUser);
   }
 
