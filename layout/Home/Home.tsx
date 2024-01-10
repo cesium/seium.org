@@ -11,7 +11,7 @@ function Home() {
     <Navbar bgColor="secondary" button="quinary" fgColor="white">
       <Hero />
       {/*<Schedule />*/}
-      {/*<Sponsors />*/}
+      <Sponsors />
       {/*<Speakers />*/}
       <Partners />
       <Footer color="secondary" />
