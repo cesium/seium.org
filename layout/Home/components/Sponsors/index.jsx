@@ -26,11 +26,7 @@ export default function Sponsors(props) {
         Our amazing sponsors
       </h2>
       <div className="mt-10 flex items-end justify-center">
-        <Tab
-          tabName="Gold"
-          selected={!val}
-          onSelect={() => setValue(0)}
-        />
+        <Tab tabName="Gold" selected={!val} onSelect={() => setValue(0)} />
         <Tab
           tabName="Silver & Bronze"
           selected={val}
@@ -51,13 +47,9 @@ export default function Sponsors(props) {
             >
               <div className="grid w-full grid-cols-1 place-items-center py-[5%] lg:py-0 lg:px-[10%]">
                 <p className="font-terminal-uppercase pb-10 text-2xl text-quinary lg:text-3xl">
-                  {!val
-                    ? "Gold"
-                    : key == 0 ? "Silver" : "Bronze"}
+                  {!val ? "Gold" : key == 0 ? "Silver" : "Bronze"}
                 </p>
-                <div
-                  className="grid grid-cols-2 gap-4 p-6 place-items-center lg:gap-10"
-                >
+                <div className="grid grid-cols-2 place-items-center gap-4 p-6 lg:gap-10">
                   {elem.map((sponsor, i) => {
                     return (
                       <a key={i} href={sponsor.link}>
