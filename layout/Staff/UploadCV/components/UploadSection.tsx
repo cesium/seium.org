@@ -54,7 +54,7 @@ export default function UploadSection({ cv, onSubmit }) {
 
   return (
     <>
-      {uploading ? (
+      {cv == null ? (
         <form onSubmit={handleSubmit} id="cv-form" className="mt-2">
           <label className="m-auto inline-block h-[50vh] w-full cursor-pointer select-none rounded-lg border-[3px] border-dashed border-quinary bg-quinary/5 text-center duration-500 hover:bg-quinary/10">
             <div
