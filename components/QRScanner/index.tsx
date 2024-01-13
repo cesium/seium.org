@@ -24,7 +24,20 @@ export const FEEDBACK = {
   },
 };
 
-function QRScanner({
+interface Props {
+  handleCode: (uuid: string) => void;
+  pauseRef: React.MutableRefObject<boolean>;
+  text: string;
+  feedback: {
+    message: string;
+    color: string;
+  };
+  showScanner: boolean;
+  setScanner: (show: boolean) => void;
+  removeClose?: boolean;
+}
+
+const QRScanner: React.FC<Props> = ({
   handleCode,
   pauseRef,
   text,
@@ -32,7 +45,7 @@ function QRScanner({
   showScanner,
   setScanner,
   removeClose,
-}) {
+}) => {
   if (!showScanner) {
     return null;
   }
@@ -60,6 +73,6 @@ function QRScanner({
       )}
     </div>
   );
-}
+};
 
 export default QRScanner;

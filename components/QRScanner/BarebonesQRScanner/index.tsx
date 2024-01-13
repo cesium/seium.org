@@ -1,11 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import jsQR from "jsqr";
+import { Point } from "jsqr/dist/locator";
 
-function BarebonesQRScanner({ handleCode, pauseRef }) {
-  const canvasRef = useRef(null);
-  const videoRef = useRef(null);
-  const wrapperRef = useRef(null);
-  const animationFrameRef = useRef();
+interface Props {
+  handleCode: (uuid: string) => void;
+  pauseRef: React.MutableRefObject<boolean>;
+}
+
+const BarebonesQRScanner: React.FC<Props> = ({ handleCode, pauseRef }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const animationFrameRef = useRef<number>();
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -13,51 +19,36 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
 
     navigator.mediaDevices
       .getUserMedia({ video: { facingMode: "environment" } })
-      .then(function (stream) {
+      .then((stream) => {
         //to prevent AbortError on Firefox in strict mode
         if (!video.srcObject) {
           setError("");
           video.srcObject = stream;
-          video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+          video.setAttribute("playsinline", "true"); // required to tell iOS safari we don't want fullscreen
           video.play();
           animationFrameRef.current = requestAnimationFrame(tick);
         }
       })
       .catch((e) => {
-        setError(
-          "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
-        );
-        video.srcObject = undefined;
+        if (!video.srcObject) {
+          setError(
+            "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
+          );
+          video.srcObject = undefined;
+        }
       });
 
     return () => {
       if (video.srcObject) {
-        video.srcObject.getTracks().forEach((track) => track.stop());
+        (video.srcObject as MediaStream)
+          .getTracks()
+          .forEach((track) => track.stop());
         video.srcObject = undefined;
       }
     };
   }, []);
 
-  function drawLine(canvas, begin, end, color) {
-    canvas.beginPath();
-    canvas.moveTo(begin.x, begin.y);
-    canvas.lineTo(end.x, end.y);
-    canvas.lineWidth = 4;
-    canvas.strokeStyle = color;
-    canvas.stroke();
-  }
-
-  function parseURL(url) {
-    try {
-      const url_obj = new URL(url);
-      if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) return null;
-      return url_obj.pathname.split("/").at(-1);
-    } catch {
-      return null;
-    }
-  }
-
-  function tick() {
+  const tick = () => {
     const video = videoRef.current;
     const canvas = canvasRef.current;
 
@@ -116,7 +107,7 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
       }
     }
     animationFrameRef.current = requestAnimationFrame(tick);
-  }
+  };
 
   return (
     <>
@@ -131,6 +122,30 @@ function BarebonesQRScanner({ handleCode, pauseRef }) {
       </div>
     </>
   );
-}
+};
 
 export default BarebonesQRScanner;
+
+const drawLine = (
+  canvas: CanvasRenderingContext2D,
+  begin: Point,
+  end: Point,
+  color: string
+) => {
+  canvas.beginPath();
+  canvas.moveTo(begin.x, begin.y);
+  canvas.lineTo(end.x, end.y);
+  canvas.lineWidth = 4;
+  canvas.strokeStyle = color;
+  canvas.stroke();
+};
+
+const parseURL = (url: string) => {
+  try {
+    const url_obj = new URL(url);
+    if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) return null;
+    return url_obj.pathname.split("/").at(-1);
+  } catch {
+    return null;
+  }
+};
