@@ -1,38 +1,38 @@
 [
   {
-    "id": "filipeborges",
-    "name": "Filipe Borges",
-    "job": "Team Owner",
-    "company": "Riot Games"
+    "id": "filipesantiago",
+    "name": "Filipe Santiago",
+    "job": "Software Engineer",
+    "company": "Aston Martin F1 Team"
   },
   {
-    "id": "saravieira",
-    "name": "Sara Vieira",
-    "job": "Frontend Engineer",
-    "company": "Remote"
+    "id": "alekseykladov",
+    "name": "Aleksey Kladov",
+    "job": "Software Engineer",
+    "company": "TigerBeetle"
   },
   {
-    "id": "filipacastro",
-    "name": "Filipa Castro",
+    "id": "tba",
+    "name": "To be announced",
     "job": "",
     "company": ""
   },
   {
-    "id": "marcelosousa",
-    "name": "Marcelo Sousa",
-    "job": "Founder",
-    "company": "Reviewpad"
-  },
-  {
-    "id": "antoniomurta",
-    "name": "António Murta",
-    "role": "",
+    "id": "tba",
+    "name": "To be announced",
+    "job": "",
     "company": ""
   },
   {
-    "id": "barbaravieira",
-    "name": "Bárbara Vieira",
-    "role": "Senior Software Engineer",
-    "company": "AWS"
+    "id": "tba",
+    "name": "To be announced",
+    "job": "",
+    "company": ""
+  },
+  {
+    "id": "tba",
+    "name": "To be announced",
+    "job": "",
+    "company": ""
   }
 ]

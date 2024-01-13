@@ -14,6 +14,9 @@ function filterElem(filters) {
       case "Coffee Break":
         result = isSelected(filters, "Breaks");
         break;
+      case "Lunch Break":
+        result = isSelected(filters, "Breaks");
+        break;
       case "Talk":
         result = isSelected(filters, "Talks");
         break;
