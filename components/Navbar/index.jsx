@@ -141,7 +141,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           </Transition>
                         </Menu>
                       ) : (
-                        <div className="pl-10 pt-4">
+                        <div className="pl-8 pt-4">
                           <JoinUs fgColor={fgColor} button={button} />
                         </div>
                       )}
