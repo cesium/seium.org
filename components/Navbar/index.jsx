@@ -64,7 +64,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </div>
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
-                    <div className="flex select-none">
+                    <div className="flex select-none items-center">
                       <div className="mr-6 grid grid-cols-4 gap-y-4 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link
@@ -141,7 +141,9 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           </Transition>
                         </Menu>
                       ) : (
-                        <>{/*<JoinUs fgColor={fgColor} button={button} />*/}</>
+                        <div className="pl-8 pt-4">
+                          <JoinUs fgColor={fgColor} button={button} />
+                        </div>
                       )}
                     </div>
                   </div>
