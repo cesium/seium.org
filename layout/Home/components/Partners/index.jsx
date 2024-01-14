@@ -11,7 +11,7 @@ export default function Partners() {
       <div className="my-10 flex flex-wrap items-center justify-center gap-10">
         {partners.map((partner, i) => (
           <div
-            className="m-auto w-40 select-none grayscale filter hover:filter-none"
+            className="m-auto w-40 select-none grayscale filter transition-all hover:filter-none"
             key={i}
           >
             <a href={partner.url} target="_blank" rel="noreferrer">

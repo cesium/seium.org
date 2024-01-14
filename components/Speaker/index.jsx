@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Speaker({ id, name, job, company }) {
   return (
-    <div className="z-30 text-white grayscale filter hover:text-quinary hover:filter-none">
+    <div className="z-30 text-white grayscale filter transition-all hover:text-quinary hover:filter-none">
       <Image
         src={`/images/speakers/${id}.png`}
         width="210"

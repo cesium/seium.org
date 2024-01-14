@@ -21,7 +21,8 @@
 }
 
 .clickable:hover .gridBlock {
-  @apply border-quinary bg-quinary;
+  @apply bg-white/10;
+  @apply transition-colors;
 }
 
 .clickable .gridBlock a {
@@ -49,6 +50,10 @@
 
 .author:hover {
   text-decoration: underline;
+}
+
+.clickable:hover .author {
+  @apply text-white;
 }
 
 .description {
@@ -97,11 +102,11 @@
 }
 
 .expand {
-  @apply items-center rounded-full border border-white text-center font-ibold text-3xl text-white shadow-sm;
+  @apply items-center rounded-full border border-white text-center font-ibold text-3xl text-white shadow-sm hover:bg-white/20;
   display: inline-block;
   width: 5rem;
 }
 
 .clickable:hover .expand {
-  @apply border-primary text-primary;
+  @apply border-white bg-quinary text-white;
 }
