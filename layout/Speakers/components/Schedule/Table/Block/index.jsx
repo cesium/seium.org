@@ -9,6 +9,7 @@ import {
   faGithubAlt,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 export default function Block({
   id,
@@ -73,6 +74,16 @@ export default function Block({
                   rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faTwitter} />
+                </a>
+              )}
+              {href && (
+                <a
+                  href={`${href}`}
+                  className="mr-3 w-4"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGlobe} />
                 </a>
               )}
             </div>
