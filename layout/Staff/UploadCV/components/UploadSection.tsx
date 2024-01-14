@@ -54,7 +54,7 @@ export default function UploadSection({ cv, onSubmit }) {
 
   return (
     <>
-      {cv == null ? (
+      {cv == null || uploading ? (
         <form onSubmit={handleSubmit} id="cv-form" className="mt-2">
           <label className="m-auto inline-block h-[50vh] w-full cursor-pointer select-none rounded-lg border-[3px] border-dashed border-quinary bg-quinary/5 text-center duration-500 hover:bg-quinary/10">
             <div
@@ -121,20 +121,30 @@ export default function UploadSection({ cv, onSubmit }) {
           ></input>
         </form>
       ) : (
-        <div>
-          <p className="mt-2 font-iregular text-sm">
-            You have already submitted your CV.
+        <div className="m-auto flex w-full flex-col flex-wrap content-center justify-center pt-10">
+          <div className="flex justify-center">
+            <CheckCircleIcon className="h-12 w-12 flex-shrink-0" />
+          </div>
+          <p className="mt-2 text-center font-iregular text-lg">
+            You have already submitted your curriculum!
+          </p>
+          <p className="mt-2 text-center font-iregular text-lg">
+            Feel free to download it{" "}
             <a
-              href={cv}
-              className="ml-2 cursor-pointer text-blue-700 underline"
+              className="text-quinary underline"
               target="_blank"
               rel="noreferrer"
+              href={cv}
             >
-              Your CV
+              here
             </a>
+            .
+          </p>
+          <p className="mt-2 text-center font-iregular text-lg">
+            Event sponsors are able to see it.
           </p>
           <button
-            className="m-auto mt-4 block h-10 w-28 rounded-full bg-quinary font-iregular"
+            className="m-auto mt-4 block h-10 w-28 select-none rounded-full bg-quinary font-iregular"
             onClick={(_) => setUploading(true)}
           >
             Resubmit

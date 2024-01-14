@@ -6,23 +6,24 @@ import UploadSection from "./components/UploadSection";
 
 function UploadCV() {
   const { user, setUser } = useAuth();
-  const [cv, setCV] = useState(null);
+  const [staff, setStaff] = useState(null);
 
   useEffect(() => {
-    getStaffCV(user.id).then((response) => setCV(response.cv));
+    getStaffCV(user.id).then((response) => setStaff(response));
   }, []);
 
   const submitCV = (f: File) => {
     const formData = new FormData();
     formData.append("staff[cv]", f);
-    uploadStaffCV(user.id, formData);
+    setStaff(null);
+    uploadStaffCV(user.id, formData).then((response) => {
+      setStaff(response);
+    });
   };
 
   return (
     <Layout title="Upload CV" description="Upload your curriculum">
-      <div>
-        <UploadSection cv={cv} onSubmit={submitCV} />
-      </div>
+      <div>{staff && <UploadSection cv={staff.cv} onSubmit={submitCV} />}</div>
     </Layout>
   );
 }
