@@ -33,6 +33,11 @@ export default function Table(props) {
   else
     return (
       <div className="flex flex-col">
+        {obj.speakers.length == 0 && (
+          <div className="text-center text-white">
+            <p className="font-terminal-uppercase text-2xl">To be announced!</p>
+          </div>
+        )}
         {obj.speakers.map((speaker) => (
           <Block key={speaker} {...speaker} />
         ))}

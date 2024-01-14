@@ -13,10 +13,10 @@ import JoinUs from "@components/JoinUs";
 import styles from "./style.module.css";
 
 const navigation = [
-  /*{ name: "Schedule", slug: "/schedule" },*/
+  { name: "Schedule", slug: "/schedule" },
   { name: "Team", slug: "/team" },
   /*{ name: "Challenges", slug: "/challenges" },*/
-  /*{ name: "Speakers", slug: "/speakers" },*/
+  { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faqs" },
 ];
 
@@ -65,7 +65,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
                     <div className="flex select-none items-center">
-                      <div className="mr-6 grid grid-cols-2 gap-y-4 gap-x-20 pt-4">
+                      <div className="mr-6 grid grid-cols-4 gap-y-4 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link
                             key={item.slug}

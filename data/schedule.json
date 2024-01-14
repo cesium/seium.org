@@ -27,32 +27,31 @@
       {
         "startTime": "12:00",
         "endTime": "13:00",
-        "activityType": "Talk",
-        "summary": "Multicloud: uma quebra de paradigma com desafios e oportunidades.",
-        "description": "Ricardo is a founding partner of Retail Consult, with more than 20 years of experience working with retailers across the globe, to deliver end-to-end integrated solutions as part of digital transformation programs. During this extensive career he played distinct roles, from technical consultancy to leading complex architectures design and implementation, in different business domains such as merchandising, supply chain, omni-channel, planning and optimization.",
-        "author": "Ricardo Rocha",
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
+        "author": "",
         "location": ""
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
-        "activityType": "Talk",
-        "summary": "Aplicações Clínicas de Machine Learning: Uma Introdução",
-        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é, adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo⁣ Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um⁣ MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).⁣ Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan⁣ School of Management US) e da Singularity University (US) – Exponential Medicine.",
-        "author": "António Murta",
+        "activityType": "TBA",
+        "summary": "",
+        "author": "",
         "location": ""
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
-        "activityType": "Talk",
-        "summary": "Checkmarx - The Role of an Application Security Architect",
+        "activityType": "TBA",
+        "summary": "",
         "description": "",
-        "author": "Michael Matias",
+        "author": "",
         "location": ""
       },
       {
@@ -62,24 +61,22 @@
       {
         "startTime": "16:30",
         "endTime": "16:45",
-        "activityType": "Pitch",
-        "summary": "Bosch",
+        "activityType": "TBA",
+        "summary": "",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
-        "activityType": "Pitch",
-        "summary": "KPMG",
+        "activityType": "TBA",
+        "summary": "",
         "location": ""
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "Panel Discussion",
-        "summary": "Periférico ao vivo",
-        "description": "",
-        "author": "Paulo Dimas & Rui Lopes & Henrique Pereira",
+        "activityType": "TBA",
+        "summary": "",
         "location": ""
       }
     ]
@@ -91,31 +88,28 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Yari Labs - Blockchain 101: Assets Digitais - Tokens, NFTs e Smart-Contracts",
-        "description": "Vamos apresentar conceitos de Tokens Fungíveis, Não fungíveis e Aplicações Descentralizadas. Os participantes irão sair do workshop com um ambiente de desenvolvimento em Python para criar DApps na blockchain de Algorand. Vamos criar tokens, NFTs utilizando IPFS (Interplanetary Filesystem) e Smart-contracts. No final todos participantes irão receber uma paper wallet contendo um NFT com um certificado de participação que poderão importar para a wallets utilizadas durante o workshop!",
-        "author": "Emanuel Mota & Pedro Costa",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-blockchain-101-assets-digitais-tokens-nfts-e-smart-contracts-529582735217"
-      },
-      {
-        "startTime": "09:00",
-        "endTime": "11:00",
-        "activityType": "Workshop",
-        "summary": "Deloitte - How to detect a data breach by an authorized user",
-        "description": "Simulate a suspicious behaviour of an authorised user in a corporate application that is downloading a large amount of very sensitive information outside business hours. See how a Data Masking and Data Logging platform can help to detect this type of attacks and rapidly start an investigation and block these activities.⁣",
-        "author": "André Sousa",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-how-to-detect-a-data-breach-executed-by-an-authorized-user-529505865297"
-      },
-      {
-        "startTime": "09:00",
-        "endTime": "11:00",
-        "activityType": "Workshop",
-        "summary": "XPand IT - Unleash Data Visualization with Tableau",
+        "summary": "TBA",
         "description": "",
-        "author": "Margarida Cunha",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-unleash-data-visualization-with-tableau-531472447397"
+        "author": "",
+        "location": ""
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "activityType": "Workshop",
+        "summary": "TBA",
+        "description": "",
+        "author": "",
+        "location": ""
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "activityType": "Workshop",
+        "summary": "TBA",
+        "description": "",
+        "author": "",
+        "location": ""
       },
       {
         "activityType": "Coffee Break",
@@ -125,31 +119,31 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "Automation on wheels - How software helps me monitoring my fleets",
-        "description": "I'm Inês Xavier, a backend developer who has a passion for technology. I completed my master's degree in telecommunications and computer engineering at the University of Minho, in Guimarães, I started my career as a software engineer at Multicert. My name is Lars Frische and I am passionate about developing IT solutions to help Continentals business grow. I studied information technology with a major in software engineering and graduated with a master's degree from Queensland University of Technology in Brisbane.",
-        "author": "Lars Frische & Inês Xavier",
+        "summary": "Tech behind Trends: Da Ideia à Prateleira",
+        "description": "Conheces o termo “fast-fashion”? Já pensaste como algumas das marcas mais famosas do planeta conseguem lançar coleções completas em apenas semanas?  Vem conhecer a tecnologia por detrás deste negócio e como revoluciona e otimiza o processo do ciclo de vida dos artigos de moda: garantindo uma colaboração eficiente, centralizando informações o otimizando processos, desde a conceção até ao armazém.",
+        "author": "Paulo Lopes",
         "location": ""
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "Keep Calm, I'm a Security Engineer",
-        "description": "A security engineer sees a lot, learns a lot and forgets a lot. They're incredibly obsessed with security and work relentlessly every day to make every software system a little bit more secure. This is a challenging, rewarding and gratifying task. This talk introduces Security Engineering and addresses some fun facts about this job.",
-        "author": "Bárbara Vieira",
+        "summary": "Como o software ajuda numa equipa de Fórmula 1",
+        "description": "A composição de uma equipa de Fórmula 1 é algo bastante complexo e subdividido em diversos departamentos. Cada um deles é suportado por software desenhado à medida tendo em conta as necessidades, os desenvolvimentos ou as ideias futuristas requisitadas por algum dos génios envolvido em todo o processo. Há uma grande necessidade de software resiliente e rápido que possa responder a todas as questões em pequenas frações de tempo como uma paragem nas boxes. O maior desafio é lidar com uma grande quantidade de dados em tempo real e em simulação em simultâneo. O papel de um developer é entender um pouco de cada área para que possa dar com resolver com mais efectividade as questões e necessidades do utilizador. Seja na área de UX/UI seja no desenvolvimento de outra interface para suprir as constantes evoluções no regulamento. Os bons padrões de desenvolvimento são essenciais e fazem toda a diferença quando o assunto é evitar problemas quando há uma equipa completa na pista do outro lado do mundo, num fuso-horário completamente diferente.",
+        "author": "Filipe Santiago",
         "location": ""
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
-        "activityType": "Talk",
-        "summary": "My quest to help software developers: from where you are to start-up founder",
-        "description": "It has never been more exciting to be a software developer. The code that we produce impacts millions of people across the world. Yet, the lack of support and knowledge that we have when we are modifying code is quickly becoming a threat to the world as we know it. In this talk, I will share my journey from a student at UMinho to start-up founder and my quest to help software developers safely collaborate as fast as possible. I will also share some insights I wish I knew when I attended this conference over 10 years ago.",
-        "author": "Marcelo Sousa",
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
+        "author": "",
         "location": ""
       },
       {
@@ -159,35 +153,34 @@
       {
         "startTime": "16:30",
         "endTime": "16:45",
-        "activityType": "Pitch",
-        "summary": "IT Sector",
+        "activityType": "TBA",
+        "summary": "",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
-        "activityType": "Pitch",
-        "summary": "RetailConsult",
+        "activityType": "TBA",
+        "summary": "",
         "location": ""
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "Panel Discussion",
-        "summary": "Women In Tech",
+        "activityType": "TBA",
+        "summary": "",
         "description": "",
-        "author": "Filipa Castro & Sara Vieira & Bárbara Vieira",
+        "author": "",
         "location": ""
       },
       {
         "startTime": "21:00",
         "endTime": "23:00",
-        "activityType": "Social",
-        "summary": "Subvisual Meetup",
+        "activityType": "TBA",
+        "summary": "",
         "description": "",
         "author": "",
-        "location": "Polo de Negócios de Braga, Av. Dom João II 404 4º andar, Sala 45, 4715-275 Braga",
-        "hyperlink": "https://forms.gle/7Gmq4ZsHh1ife1mE7"
+        "location": ""
       }
     ]
   },
@@ -198,31 +191,28 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Accenture - Salesforce Tech Session",
-        "description": "Accenture - Explicar o que é Salesforce, a importância da adoção de soluções como Salesforce na transformação digital e transição para a cloud; o trabalho realizado pela Accenture em Salesforce e demonstrações práticas das potencialidades da plataforma.",
-        "author": "Alexandre Gomes",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-salesforce-tech-session-529528071717"
+        "summary": "TBA",
+        "description": "",
+        "author": "",
+        "location": ""
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Glintt - From Zero to Hero : how to build a product from scratch",
-        "description": "Neste workshop terão a oportunidade de entender o processo de desenvolvimento de um produto tecnológico.",
-        "author": "André Mota & Catarina Caçote",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-from-zero-to-hero-how-to-build-a-product-from-scratch-529526868117"
+        "summary": "TBA",
+        "description": "",
+        "author": "",
+        "location": ""
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Checkmarx - The role of AI in assisting Application Development and Security",
-        "description": "Artificial Intelligence (AI) is proven to enhance and assist human efforts to produce software faster. Also, it can leverage the detection of software vulnerabilities, explain how to prevent their exploitation and, going forward, remediate these issues on its own. But, does this mean that AI will completely replace humans in these areas? There are pros and cons, and a clear answer to that question. In this workshop we will talk about modern application development, modern application security and the role that recent AI approaches play in these areas. Together, we will look for the answer to that fundamental question, with examples and interactive exercises.",
-        "author": "Rui Gomes & Raphael Silva",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.com/e/bilhetes-workshop-the-role-of-ai-in-assisting-application-development-and-security-534493864537"
+        "summary": "TBA",
+        "description": "",
+        "author": "",
+        "location": ""
       },
       {
         "activityType": "Coffee Break",
@@ -231,32 +221,32 @@
       {
         "startTime": "11:30",
         "endTime": "12:30",
-        "activityType": "Talk",
-        "summary": "IT Sector - Microsserviços e a Transformação Digital na área da banca",
-        "description": "João Laranjeira iniciou a sua carreira na área de investigação, mais concretamente em sistemas de apoio à tomada de decisão. Em 2013 juntou-se à ITSector, fazendo toda a sua carreira ligada à banca, onde integrou equipas de evolução tecnológica de sistemas de apoio à decisão na área de crédito. Atualmente, além de Arquiteto de Sistemas de Informação também desempenha funções de Gestor de Projeto, liderando uma equipa de atualização tecnológica para uma arquitetura moderna baseada em microsserviços.",
-        "author": "João Laranjeira",
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
+        "author": "",
         "location": ""
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
-        "activityType": "Talk",
-        "summary": "Not all those who wander are lost, a journey into the World of Esports",
-        "description": "I'm a highly experienced esports focused Product Manager, having spent the last 6 years working full time in esports. After graduating from University of Coimbra with a Masters in Industrial Engineering and Management, I quickly turned my passion for esports into a career, bringing my formal education and grassroots experience together. Throughout my career I was fortunate to work in multiple roles, from being a Player, Coach, Product Manager, University Lecturer and Team Owner which now grants me a holistic perspective of the EMEA League of Legends Regional ecosystem I currently manage at Riot Games.",
-        "author": "Filipe Borges",
-        "location": "CP2-B1"
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
+        "author": "",
+        "location": ""
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "Rust for the rest of us",
-        "description": "Sara Vieira is a founding engineer on axo.dev. Originally from Portugal, she now lives in Berlin doing some JavaScript and Rust. She's also a speaker and book author. In her spare time, she loves retro games and B movies.",
-        "author": "Sara Vieira",
+        "summary": "Modern Systems Programming: Rust and Zig",
+        "description": "Systems programming is changing: after a relatively calm period dominated by ANSI C and C++98, a new era was heralded by C++11, Rust, and Zig. Unthinkable happened --- Linux kernel admitted a second language in addition to C. Safety and security requirements are much more strict now, but they are matched by advances in language design. In this lecture, we will look at a snapshot of systems programming landscape as of early 2024 through the lens of Rust and Zig --- the two most innovative languages of the recent years.",
+        "author": "Aleksey Kladov",
         "location": ""
       },
       {
@@ -266,32 +256,23 @@
       {
         "startTime": "16:30",
         "endTime": "16:45",
-        "activityType": "Pitch",
-        "summary": "Eurotux",
+        "activityType": "TBA",
+        "summary": "",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
-        "activityType": "Pitch",
-        "summary": "Continental",
+        "activityType": "TBA",
+        "summary": "",
         "location": ""
       },
       {
-        "startTime": "17:00",
-        "endTime": "18:00",
-        "activityType": "Panel Discussion",
-        "summary": "Arquivo Confidencial",
-        "description": "A tertúlia Arquivo Confidencial reúne alguns dos professores mais emblemáticos do Departamento de Informática para discutir as suas experiências, percalços e vitórias no decurso da sua carreira profissional!",
-        "author": "José Nuno Oliveira & JBB & Orlando Belo && Bruno Dias",
-        "location": ""
-      },
-      {
-        "startTime": "20:00",
+        "startTime": "21:00",
         "endTime": "00:00",
-        "activityType": "Social",
-        "summary": "Corporate Dinner",
-        "description": "TBA",
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
         "location": ""
       }
     ]
@@ -303,21 +284,28 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Fujitsu - How to improve your CV, Application Development and Digital Transformation and Tech Quiz",
+        "summary": "TBA",
         "description": "",
-        "author": "Filipa Coelho & Osvaldo Ferreira",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-how-to-improve-your-cv-app-development-digital-transformation-529534922207"
+        "author": "",
+        "location": ""
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Subvisual - Introduction to Mobile Web3 development with React Native",
+        "summary": "TBA",
         "description": "",
-        "author": "João Ferreiro",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-introduction-to-mobile-web3-development-with-react-native-529540037507"
+        "author": "",
+        "location": ""
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "activityType": "Workshop",
+        "summary": "TBA",
+        "description": "",
+        "author": "",
+        "location": ""
       },
       {
         "activityType": "Coffee Break",
@@ -326,32 +314,32 @@
       {
         "startTime": "11:30",
         "endTime": "12:30",
-        "activityType": "Talk",
-        "summary": "Saber - Creating the biggest Open-World AAA video games in Portugal",
-        "description": "“Creating the biggest Open-World AAA vídeo games in Portugal” pretende ilustrar a evolução do estúdio português (Bigmoon / Saber Interactive Porto), os desafios e ferramentas desenvolvidas para desenvolver os maiores mapas Open-World para videojogos, bem como explicar a estratégia do estúdio, para se tornar num importante polo de desenvolvimento de videojogos AAA, em Portugal.",
-        "author": "Paulo J. Gomes",
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
+        "author": "",
         "location": ""
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
-        "activityType": "Talk",
-        "summary": "Accenture - DevOps Talks",
-        "description": "Comecei a minha carreira profissional há cerca de 15 anos em Lisboa como Consultor em Change and Configuration Management e desde então esta area evoluiu para o DevOps como conhecemos hoje. Aluno de dissertação na Universidade Do Minho em Mestrado de Engenharia Informática, iniciei a minha carreira profissional há cerca 2 anos na Accenture, na àrea de DevOps, neste periodo trabalhei sempre em projectos na àrea da cloud. ",
-        "author": "Rui Oliveira & Ricardo Dias",
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
+        "author": "",
         "location": ""
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
-        "activityType": "Talk",
-        "summary": "Subvisual - Competitive Coding Strategies",
-        "description": "Miguel Palhas e José Resende estudaram Engenharia Informática na Universidade do Minho, tendo iniciado as suas carreiras na Subvisual (fka Group Buddies) e Finiam respectivamente. Especialistas em desenvolvimento em Web3. Contribuem todos os dias para um mundo mais descentralizado.",
-        "author": "Miguel Palhas & José Resende",
+        "activityType": "TBA",
+        "summary": "",
+        "description": "",
+        "author": "",
         "location": ""
       },
       {
@@ -361,22 +349,22 @@
       {
         "startTime": "16:30",
         "endTime": "16:45",
-        "activityType": "Pitch",
-        "summary": "Subvisual",
-        "location": "TBA"
+        "activityType": "TBA",
+        "summary": "",
+        "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
-        "activityType": "Pitch",
-        "summary": "Farfetch",
-        "location": "TBA"
+        "activityType": "TBA",
+        "summary": "",
+        "location": ""
       },
       {
         "startTime": "17:00",
-        "endTime": "18:00",
+        "endTime": "18:30",
         "activityType": "",
-        "summary": "Closing Session and Prize Announcement",
+        "summary": "Closing Session and Prize Announcements 🏆",
         "description": "",
         "author": "",
         "location": ""
