@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import Link from "next/link";
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,7 +25,10 @@ export default function Block({
   const [showSpeaker, setShowSpeaker] = useState(true);
 
   return (
-    <div key={id} className="border-t-2 border-white py-4 text-white">
+    <div
+      key={id}
+      className="border-t-2 border-white py-4 text-white transition-all"
+    >
       <div className="mb-2 flex">
         <div className="w-[210px] select-none">
           <Image
@@ -93,7 +95,7 @@ export default function Block({
             <p className="grow text-gray-400">{talk}</p>
             {description && (
               <button
-                className="w-16 rounded-full border border-gray-500 bg-tertiary px-2 font-iextrabold text-xl text-white"
+                className="w-16 rounded-full border border-gray-500 px-2 font-iextrabold text-xl text-white transition-colors hover:bg-white/20"
                 onClick={() => setShowSpeaker(!showSpeaker)}
               >
                 {showSpeaker ? "+" : "-"}
