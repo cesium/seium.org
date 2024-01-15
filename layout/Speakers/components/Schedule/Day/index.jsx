@@ -158,7 +158,7 @@ export default function Day(props) {
       </div>
 
       <div className={`-mt-10 flex flex-col ${styles.dateWrapper}`}>
-        <h5 className="m-auto font-ibold text-3xl text-quinary">
+        <h5 className="font-terminal-uppercase m-auto text-3xl text-quinary">
           {" "}
           Happening on{" "}
         </h5>
