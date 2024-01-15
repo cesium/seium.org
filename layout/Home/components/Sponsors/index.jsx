@@ -6,11 +6,13 @@ import sponsors from "/data/sponsors.json";
 
 function Tab({ tabName, selected, onSelect }) {
   const classes1 =
-    "text-center w-60 font-medium text-white text-lg md:text-2xl pt-3 cursor-pointer transition-colors pb-4 border-b-[10px] border-white/10 hover:border-white/30 border-solid";
+    "text-center w-60 font-medium text-white text-lg md:text-2xl pt-3 cursor-pointer transition-colors pb-4 border-b-[10px] border-white/10 border-solid";
 
   return (
     <div
-      className={classes1 + (selected && ` border-white/100`)}
+      className={
+        classes1 + (selected ? ` border-white/100` : ` hover:border-white/30`)
+      }
       onClick={onSelect}
     >
       {tabName}
