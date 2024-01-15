@@ -65,7 +65,7 @@ function BlockItem({
       {description && (
         <div
           className={`transition-max-height overflow-hidden duration-300 ${
-            focused ? "max-h-[34rem]" : "max-h-0"
+            focused ? "max-h-[38rem]" : "max-h-0"
           }`}
         >
           {description.split("\n").map((text, i) => (

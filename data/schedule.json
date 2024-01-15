@@ -120,7 +120,7 @@
         "endTime": "12:30",
         "activityType": "Talk",
         "summary": "Tech behind Trends: Da Ideia à Prateleira",
-        "description": "Conheces o termo “fast-fashion”? Já pensaste como algumas das marcas mais famosas do planeta conseguem lançar coleções completas em apenas semanas?  Vem conhecer a tecnologia por detrás deste negócio e como revoluciona e otimiza o processo do ciclo de vida dos artigos de moda: garantindo uma colaboração eficiente, centralizando informações o otimizando processos, desde a conceção até ao armazém.",
+        "description": "Conheces o termo “fast-fashion”? Já pensaste como algumas das marcas mais famosas do planeta conseguem lançar coleções completas em apenas semanas?\n  Vem conhecer a tecnologia por detrás deste negócio e como revoluciona e otimiza o processo do ciclo de vida dos artigos de moda: garantindo uma colaboração eficiente, centralizando informações o otimizando processos, desde a conceção até ao armazém.",
         "author": "Paulo Lopes",
         "location": ""
       },
@@ -133,7 +133,7 @@
         "endTime": "15:00",
         "activityType": "Talk",
         "summary": "Como o software ajuda numa equipa de Fórmula 1",
-        "description": "A composição de uma equipa de Fórmula 1 é algo bastante complexo e subdividido em diversos departamentos. Cada um deles é suportado por software desenhado à medida tendo em conta as necessidades, os desenvolvimentos ou as ideias futuristas requisitadas por algum dos génios envolvido em todo o processo. Há uma grande necessidade de software resiliente e rápido que possa responder a todas as questões em pequenas frações de tempo como uma paragem nas boxes. O maior desafio é lidar com uma grande quantidade de dados em tempo real e em simulação em simultâneo. O papel de um developer é entender um pouco de cada área para que possa dar com resolver com mais efectividade as questões e necessidades do utilizador. Seja na área de UX/UI seja no desenvolvimento de outra interface para suprir as constantes evoluções no regulamento. Os bons padrões de desenvolvimento são essenciais e fazem toda a diferença quando o assunto é evitar problemas quando há uma equipa completa na pista do outro lado do mundo, num fuso-horário completamente diferente.",
+        "description": "A composição de uma equipa de Fórmula 1 é algo bastante complexo e subdividido em diversos departamentos. Cada um deles é suportado por software desenhado à medida tendo em conta as necessidades, os desenvolvimentos ou as ideias futuristas requisitadas por algum dos génios envolvido em todo o processo.\n Há uma grande necessidade de software resiliente e rápido que possa responder a todas as questões em pequenas frações de tempo como uma paragem nas boxes. O maior desafio é lidar com uma grande quantidade de dados em tempo real e em simulação em simultâneo.\n O papel de um developer é entender um pouco de cada área para que possa dar com resolver com mais efectividade as questões e necessidades do utilizador. Seja na área de UX/UI seja no desenvolvimento de outra interface para suprir as constantes evoluções no regulamento.\n Os bons padrões de desenvolvimento são essenciais e fazem toda a diferença quando o assunto é evitar problemas quando há uma equipa completa na pista do outro lado do mundo, num fuso-horário completamente diferente.",
         "author": "Filipe Santiago",
         "location": ""
       },
@@ -234,10 +234,10 @@
       {
         "startTime": "14:00",
         "endTime": "15:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "A Firewall morreu!",
+        "description": "The Firewall is DEAD! – A SASE tale\nNos últimos anos, a interação entre pessoas e tecnologia sofreu uma profunda alteração: a informação, recursos e serviços e o seu consumo e processamento, deslocalizou-se, quer geograficamente quer a nível dos dispositivos utilizados. É comum, ao dia de hoje, as organizações terem uma força de trabalho geograficamente dispersa, sendo que em muitas situações os colaboradores trabalham fora das instalações da empresa de forma regular e a própria informação e serviços estão também dispersos. O trabalho colaborativo passou também a acontecer de forma deslocalizada e em tempo real, seja pela utilização de serviços Cloud para processamento de informação, seja pela utilização de diversos canais de comunicação.\n A tradicional arquitetura de segurança de informação não consegue ser ágil na proteção de dados neste tipo de contextos; o Edge já não é apenas a ligação da rede corporativa á internet ou aos serviços a consumir e, esses mesmos serviços, já não estão apenas no Data Center. Hoje, cada utilizador e cada serviço é um Edge, e deve ser tratado como tal, removendo toda a confiança tácita em dispositivos ou utilizadores e utilizando critérios de compliance e comportamentais para entregar um serviço a um utilizador.\n Com esta apresentação, iremos mostrar como uma arquitetura SASE (Secure Access Service Edge) pode simplificar o workflow de trabalho numa organização, garantindo ao mesmo tempo a qualidade de serviço e a segurança da informação em qualquer geografia ou dispositivo.",
+        "author": "Adelino Correia",
         "location": ""
       },
       {
@@ -245,7 +245,7 @@
         "endTime": "16:00",
         "activityType": "Talk",
         "summary": "Modern Systems Programming: Rust and Zig",
-        "description": "Systems programming is changing: after a relatively calm period dominated by ANSI C and C++98, a new era was heralded by C++11, Rust, and Zig. Unthinkable happened --- Linux kernel admitted a second language in addition to C. Safety and security requirements are much more strict now, but they are matched by advances in language design. In this lecture, we will look at a snapshot of systems programming landscape as of early 2024 through the lens of Rust and Zig --- the two most innovative languages of the recent years.",
+        "description": "Systems programming is changing: after a relatively calm period dominated by ANSI C and C++98, a new era was heralded by C++11, Rust, and Zig. Unthinkable happened --- Linux kernel admitted a second language in addition to C. Safety and security requirements are much more strict now, but they are matched by advances in language design.\n In this lecture, we will look at a snapshot of systems programming landscape as of early 2024 through the lens of Rust and Zig --- the two most innovative languages of the recent years.",
         "author": "Aleksey Kladov",
         "location": ""
       },

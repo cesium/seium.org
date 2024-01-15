@@ -36,6 +36,18 @@
     "date": "2024/2/8",
     "speakers": [
       {
+        "id": "adelinocorreia",
+        "name": "Adelino Correia",
+        "role": "Manager Information and Communication Systems",
+        "company": "INL",
+        "talk": " A Firewall morreu! 14h",
+        "linkedin": "adelino-correia-796350171",
+        "github": "",
+        "twitter": "",
+        "href": "https://inl.int/community/adelino-correia/",
+        "description": "Com background académico e profissional em TI, Adelino desempenha o cargo de IT Manager no INL, onde tem como principal objetivo potenciar a excelência da investigação do Laboratório."
+      },
+      {
         "id": "alekseykladov",
         "name": "Aleksey Kladov",
         "role": "Software Engineer",
