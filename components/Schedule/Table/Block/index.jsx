@@ -45,7 +45,11 @@ function BlockItem({
         </p>
       )}
 
-      <p className={`font-iregular text-xl text-white`}>
+      <p
+        className={`font-iregular text-xl text-white ${
+          isBreak && "flex h-full items-center"
+        }`}
+      >
         <span className="font-ibold">{`${activityType} `}</span>
         {summary}
       </p>
