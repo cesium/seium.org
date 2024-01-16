@@ -11,8 +11,8 @@ export default function Speaker({ id, name, job, company }) {
         className="select-none"
       />
       <p className="text-md font-terminal-uppercase"> {name} </p>
-      <p className="text-md w-[210px] font-imedium"> {job} </p>
-      <p className="text-md w-[210px] font-imedium"> {company} </p>
+      <p className="text-md max-w-[210px] font-imedium"> {job} </p>
+      <p className="text-md max-w-[210px] font-imedium"> {company} </p>
     </div>
   );
 }
