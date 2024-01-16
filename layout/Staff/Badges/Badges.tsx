@@ -88,13 +88,13 @@ function Badges() {
         <>
           <div className="pt-10 text-white xl:flex xl:flex-auto">
             <div className="flex flex-auto space-x-5">
-              <p className="mb-10 select-none text-2xl font-bold xl:mb-0">
+              <p className="select-none text-2xl font-bold xl:mb-0">
                 Filter by
               </p>
 
               <Filter onChange={updateFilter} />
             </div>
-            <div className="relative mt-1 rounded-md shadow-sm">
+            <div className="relative my-10 rounded-md shadow-sm">
               <input
                 type="text"
                 value={searchInput}
