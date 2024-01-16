@@ -1,15 +1,19 @@
 import { AuthProvider } from "@context/Auth";
 import Header from "@components/Header";
 
+import { FeatureFlagsProvider } from "@context/FeatureFlags/FeatureFlagsProvider";
+
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <AuthProvider>
-      <Header />
-      <Component {...pageProps} />
-    </AuthProvider>
+    <FeatureFlagsProvider>
+      <AuthProvider>
+        <Header />
+        <Component {...pageProps} />
+      </AuthProvider>
+    </FeatureFlagsProvider>
   );
 }
 
-export default MyApp;
+export default App;
