@@ -7,8 +7,7 @@ import BadgeFilter from "@components/BadgeFilter";
 
 import Layout from "@components/Layout";
 import Heading from "@components/Heading";
-import { getAttendeeByID, getAttendeeByUsername, isAttendeeRegistered } from "@lib/api";
-import { get } from "http";
+import { getAttendeeByID, getAttendeeByUsername } from "@lib/api";
 
 function Profile() {
   const [attendee, updateAttendee] = useState(null);
@@ -17,30 +16,27 @@ function Profile() {
   const { uuid } = router.query;
   const [filter, updateFilter] = useState(null);
 
-
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await getAttendeeByID(uuid);
-      updateAttendee(response.data);
-    } catch (error) {
-      if (error.response && error.response.status === 400) {
-        try {
-          const response = await getAttendeeByUsername(uuid);
-          updateAttendee(response.data);
-        } catch (usernameError) {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getAttendeeByID(uuid);
+        updateAttendee(response.data);
+      } catch (error) {
+        if (error.response && error.response.status === 400) {
+          try {
+            const response = await getAttendeeByUsername(uuid);
+            updateAttendee(response.data);
+          } catch (usernameError) {
+            router.replace("/404");
+          }
+        } else {
           router.replace("/404");
         }
-      } else {
-        router.replace("/404");
       }
-    }
-  };
+    };
 
-  fetchData();
-}, [uuid, router, updateAttendee]);
-
-
+    fetchData();
+  }, [uuid, router, updateAttendee]);
 
   if (!attendee) return null;
   return (
