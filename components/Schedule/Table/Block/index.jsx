@@ -45,7 +45,11 @@ function BlockItem({
         </p>
       )}
 
-      <p className={`font-iregular text-xl text-white`}>
+      <p
+        className={`font-iregular text-xl text-white ${
+          isBreak && "flex h-full items-center"
+        }`}
+      >
         <span className="font-ibold">{`${activityType} `}</span>
         {summary}
       </p>
@@ -69,7 +73,12 @@ function BlockItem({
           }`}
         >
           {description.split("\n").map((text, i) => (
-            <p key={i} className={`mb-2 font-iregular text-lg text-white`}>
+            <p
+              key={i}
+              className={`mb-2 font-iregular text-lg ${
+                focused ? "text-white" : "text-transparent"
+              }`}
+            >
               {text}
             </p>
           ))}

@@ -63,6 +63,19 @@
   },
   {
     "date": "2024/2/9",
-    "speakers": []
+    "speakers": [
+      {
+        "id": "vitorribeiro",
+        "name": "Vítor Ribeiro",
+        "role": "Software Developer",
+        "company": "Cegid",
+        "talk": "Workshop | Cegid: AI for Business. 9h",
+        "linkedin": "vitor-ribeiro-b63245b6",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      }
+    ]
   }
 ]

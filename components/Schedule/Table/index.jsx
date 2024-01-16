@@ -58,6 +58,27 @@ function group(list) {
   return result;
 }
 
+/*
+ * If not on a mobile screen and a group of activities has a focused element, hide the other elements.
+ */
+function hideOtherItemsOnFocus(list) {
+  if (window.innerWidth < 768) return list;
+
+  function findFocusedItem(arr) {
+    return arr.find((item) => item.focused);
+  }
+
+  return list
+    .map((subArr) => {
+      if (subArr.length > 1) {
+        const focusedItem = findFocusedItem(subArr);
+        return focusedItem ? [focusedItem] : subArr;
+      }
+      return subArr;
+    })
+    .filter((subArr) => subArr.length > 0);
+}
+
 export default function Table({
   date,
   updateHasFocused,
@@ -83,6 +104,7 @@ export default function Table({
   updateHasFocused(filtered.filter((activity) => activity.focused).length != 0);
 
   filtered = group(filtered);
+  filtered = hideOtherItemsOnFocus(filtered);
 
   return filtered.map((elem, id) => (
     <Block
