@@ -69,7 +69,12 @@ function BlockItem({
           }`}
         >
           {description.split("\n").map((text, i) => (
-            <p key={i} className={`mb-2 font-iregular text-lg text-white`}>
+            <p
+              key={i}
+              className={`mb-2 font-iregular text-lg text-white ${
+                focused ? "text-white" : "text-transparent"
+              }`}
+            >
               {text}
             </p>
           ))}
