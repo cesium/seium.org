@@ -37,6 +37,11 @@ const userNavigation = (type) => {
         { name: "Scanner", slug: "/sponsor/scanner" },
         { name: "Visitors", slug: "/sponsor/visitors" },
       ];
+    case USER.ROLES.ADMIN:
+      return [ //TODO
+        { name: "Scanner", slug: "/sponsor/scanner" },
+        { name: "Visitors", slug: "/sponsor/visitors" },
+      ];
 
     default:
       throw new Error(`Unknown USER TYPE: ${type}`);

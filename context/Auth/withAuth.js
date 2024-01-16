@@ -64,6 +64,8 @@ export function withAuth(WrappedComponent) {
         break;
     }
 
+    //TODO: admin
+
     return <WrappedComponent {...props} />;
   };
 }

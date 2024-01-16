@@ -7,10 +7,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { useAuth } from "@context/Auth";
+import { ROLES } from "@lib/user";
+
+// FIXME: normalize user type between moonstone and safira
+const basePaths = {
+  [ROLES.SPONSOR]: "sponsor",
+  [ROLES.ATTENDEE]: "attendee",
+  [ROLES.ADMIN]: "admin",
+  [ROLES.STAFF]: "staff",
+}
 
 const roleNavigations = {
-  sponsor: ["scanner", "visitors"],
-  attendee: [
+  [ROLES.SPONSOR]: ["scanner", "visitors"],
+  [ROLES.ATTENDEE]: [
     "profile",
     "wheel",
     "badgedex",
@@ -19,8 +28,8 @@ const roleNavigations = {
     "inventory",
     "identifier",
   ],
-  admin: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
-  staff: ["badges", "leaderboard", "prizes", "identifier", "cv"],
+  [ROLES.ADMIN]: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
+  [ROLES.STAFF]: ["badges", "leaderboard", "prizes", "identifier", "cv"],
 };
 
 type LayoutProps = {
@@ -37,12 +46,8 @@ export default function Layout({ title, description, children }: LayoutProps) {
   const router = useRouter();
 
   const currentHref = router.asPath;
-  // FIXME: normalize user type between moonstone and safira
-  const links =
-    user.type === "company"
-      ? roleNavigations["sponsor"]
-      : roleNavigations[user.type];
-  const basePath = user.type === "company" ? "sponsor" : user.type;
+  const links = roleNavigations[user.type];
+  const basePath = basePaths[user.type];
 
   const openNavbar = () => {
     setIsNavbarOpen(true);

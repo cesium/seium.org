@@ -10,7 +10,7 @@ const Canvas = ({ uuid }: IProps) => {
   const [src, setSrc] = useState("");
 
   useEffect(() => {
-    QRCode.toDataURL(`https://seium.org/attendees/${uuid}`).then(setSrc);
+    QRCode.toDataURL(`https://seium.org/attendees/${uuid}`).then(setSrc); //TODO: env var
   }, [uuid]);
 
   return <img src={src} alt="qrcode" className="w-full object-contain"></img>;
