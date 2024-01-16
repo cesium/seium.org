@@ -62,7 +62,6 @@ function group(list) {
  * If not on a mobile screen and a group of activities has a focused element, hide the other elements.
  */
 function hideOtherItemsOnFocus(list) {
-  console.log(screen.width);
   if (window.innerWidth < 768) return list;
 
   function findFocusedItem(arr) {
