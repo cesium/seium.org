@@ -56,6 +56,7 @@ const Badge: React.FC<BadgeProps> = ({
             alt={name}
             onLoad={() => setBadgeLoaded(true)}
             onError={imageOnError}
+            hidden={!badgeLoaded}
           />
         </div>
 
