@@ -293,9 +293,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "How to build a blockchain in Python",
+        "description": "Blockchain é considerado por muitos como a tecnologia revolucionária que estará na base de toda a troca e armazenamento de valor no futuro. Mas será o bicho-de-sete-cabeças que aparenta?\nNeste workshop, procurar-se-á desmistificar esta ideia implementando alguns aspetos chave desta tecnologia em Python. Serão explorados conceitos como hashing, consenso distribuído, entre muitos outros. O tutorial apenas assume alguma familiaridade com linguagens de programação.\nSe sempre tiveste curiosidade sobre blockchain mas nunca tiveste a oportunidade de aprofundar o teu conhecimento sobre os mecanismos fundamentais que a fazem funcionar, este é o momento. Este será o primeiro passo na tua jornada para fazeres parte da revolução financeira que lentamente mas seguramente está a acontecer.",
+        "author": "João Folha",
         "location": ""
       },
       {

@@ -75,6 +75,18 @@
         "twitter": "",
         "href": "",
         "description": ""
+      },
+      {
+        "id": "joaofolha",
+        "name": "João Folha",
+        "role": "Data Scientist",
+        "company": "Uphold",
+        "talk": "Workshop | How to build a blockchain in Python. 9h",
+        "linkedin": "joão-folha",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "A data driven professional, I thrive when I achieve goals by using my logic, quantitative and problem-solving skills. My experience includes working as a Research Analyst, diving into market data to identify industry trends or to conduct competitive and product expansion strategies. Having also worked in a blockchain/cryptocurrency company, with relevant certifications, I’ve helped companies to improve efficiencies and use data to make smart decisions."
       }
     ]
   }
