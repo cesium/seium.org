@@ -9,13 +9,18 @@ interface ILoginDTO {
   password: string;
 }
 
-interface IBadge {
+export interface IBadge {
+  avatar: string | null;
   begin: string;
   description: string;
   end: string;
+  id: number;
+  name: string;
+  tokens: number;
+  type: number;
 }
 
-interface IPrize {
+export interface IPrize {
   avatar: string;
   id: number;
   is_redeemable: boolean;
@@ -23,12 +28,12 @@ interface IPrize {
   not_redeemed: number;
 }
 
-interface IAbstractUser {
+export interface IAbstractUser {
   email: string;
   type: string;
 }
 
-interface IAttendee extends IAbstractUser {
+export interface IAttendee extends IAbstractUser {
   avatar: string | null;
   badge_count: number;
   badges: IBadge[];
@@ -43,11 +48,11 @@ interface IAttendee extends IAbstractUser {
   token_balance: number;
 }
 
-interface IManager extends IAbstractUser {
+export interface IStaff extends IAbstractUser {
   id: number;
 }
 
-interface ISponsor extends IAbstractUser {
+export interface ISponsor extends IAbstractUser {
   badge_id: number;
   /** The id of the company */
   id: number;
@@ -57,7 +62,7 @@ interface ISponsor extends IAbstractUser {
   user_id: number;
 }
 
-type IUser = IAttendee | ISponsor | IManager;
+export type IUser = IAttendee | ISponsor | IStaff;
 
 interface IAuthContext {
   user: IUser | null;
@@ -96,6 +101,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     if (user) {
+      console.log(user);
       setAuthenticated(true);
     } else {
       setAuthenticated(false);

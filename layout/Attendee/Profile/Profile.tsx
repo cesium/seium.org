@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import Form from "@components/Form";
 import Input from "@components/Input";
@@ -21,11 +21,14 @@ interface Course {
 }
 
 function Profile({ courses }) {
-  const { user, editUser } = useAuth();
+  const { user, editUser } = useAuth() as {
+    user: IAttendee;
+    editUser: (username: FormData) => void;
+  };
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
-  const [course, setCourse] = useState(user.course || "");
+  const [course, setCourse] = useState(user.course.toString() || "");
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 

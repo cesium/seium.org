@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import Heading from "@components/Heading";
 import Button from "@components/Button";
@@ -57,7 +57,10 @@ function WheelPage() {
   const angleSpeed = 20;
   const [st, updateState] = useState(defaultState);
 
-  const { user, refetchUser } = useAuth();
+  const { user, refetchUser } = useAuth() as {
+    user: IAttendee;
+    refetchUser: () => void;
+  };
 
   const [prizes, updatePrizes] = useState([]);
   const [price, updatePrice] = useState(null);

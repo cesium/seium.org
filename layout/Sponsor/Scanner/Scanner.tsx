@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import { giveBadge } from "@lib/api";
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, ISponsor } from "@context/Auth";
 
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 import Layout from "@components/Layout";
 
 const SponsorBadges: React.FC = () => {
-  const { user } = useAuth();
+  const { user } = useAuth() as { user: ISponsor };
   const pauseRef = useRef(false);
   const [feedback, setFeedback] = useState<typeof FEEDBACK.SCANNING>(
     FEEDBACK.SCANNING
