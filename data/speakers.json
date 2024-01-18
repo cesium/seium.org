@@ -55,6 +55,18 @@
         "description": "Com uma sólida experiência no campo da Cibersegurança, o Alfredo atualmente exerce a função de Tech Lead na área de Segurança na direção de Business Information Technology (BIT) da MC Sonae, sendo responsável pela área de “Segurança Ofensiva”.\nPara além disso, tem um forte compromisso com a partilha de conhecimento, lecionando na Licenciatura de Segurança de Redes e Computadores na ESTGF (Politécnico do Porto), onde partilha a sua experiência em disciplinas como “Auditoria Informática” e “Testes de Penetração e Hacking Ético”."
       },
       {
+        "id": "tiagopinto",
+        "name": "Tiago Pinto",
+        "role": "COO & Co-Founder",
+        "company": "CodeSec",
+        "talk": "Workshop | How to protect your web applications. A practical guide from exploring to mitigating it. 9h",
+        "linkedin": "tiagoavpinto",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "I am a certified Application Security Architect with a demonstrated history of working in the managed security industry and with a background in software development.\nDuring the last 5 years, while working in managed security services companies, I’ve worn the security architect and manager hats. I provided consultancy and managed the implementation of security programs in various organizations, including large enterprise companies, in different verticals. \nMy goal in my current role at CodSec is to help software development organizations to transform their AppSec program with Practical Secure Software Development Life Cycle (SDLC) as a Service. I’m focused on partnering with developers to help them design and implement security into SDLC. I love sharing my practical experience in threat modeling, security testing, code reviews, vulnerability management, and cloud-based security.\nMy passion is to leverage technologies for process automation - to automate the monitoring, alerting, and mitigation/prevention of risks associated with the Software Development Life Cycle."
+      },
+      {
         "id": "paulolopes",
         "name": "Paulo Lopes",
         "role": "Senior Solution Architect",
