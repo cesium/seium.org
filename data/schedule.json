@@ -88,9 +88,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Platform Engineering Roadmap & Security Analysis and Vulnerability Management",
+        "description": "Platform Engineering Roadmap:\nWorkshop sobre interação autónoma (modo self-service) da atividade de um developer com os serviços tecnológicos da plataforma, necessários para uma determinada aplicação e disponibilização de forma automatizada da aplicação com as componentes de infraestrutura tecnológica subjacentes.\nSecurity Analysis and Vulnerability Management:\nWorkshop de exploração e análise de vulnerabilidades usando a plataforma de virtualização VirtualBox, o Kali Linux e uma máquina alvo vulnerável. O Workshop terá como objetivo experimentar a enumeração de serviços e a deteção e exploração de vulnerabilidades usando ferramentas especificas da distribuição Kali, como o Nmap, Hydra e Metasploit.",
+        "author": "José Carlos Alves, Tiago Ferreira, Ricardo Martins e Alfredo França",
         "location": ""
       },
       {

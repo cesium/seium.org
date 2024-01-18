@@ -7,6 +7,54 @@
     "date": "2024/2/7",
     "speakers": [
       {
+        "id": "josecarlosalves",
+        "name": "José Carlos Alves",
+        "role": "IT Infrastructure Area Manager",
+        "company": "MC Sonae",
+        "talk": "Workshop | Platform Engineering Roadmap 9h",
+        "linkedin": "josé-carlos-alves-5424a94",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "O José Carlos é licenciado em Engenharia de Sistemas e Informática pela Universidade do Minho. Com mais de 20 anos de experiência na área de gestão TI, atualmente tem a liderança das áreas que fazem o desenho, implementação, gestão e operação de todos os serviços de infraestrutura de TI (on-premises e/ou  cloud) e que são a base e o suporte de todos os serviços e soluções de tecnologia que suportam os sistemas de informação da MC Sonae. Contribui de forma ativa para transformar soluções tecnológicas de infraestrutura em vantagem competitiva para a organização, desafiando e potenciando o trabalho em equipa."
+      },
+      {
+        "id": "tiagoferreira",
+        "name": "Tiago Ferreira",
+        "role": "Architecture & Infrastructure Tech Lead",
+        "company": "MC Sonae",
+        "talk": "Workshop | Platform Engineering Roadmap 9h",
+        "linkedin": "tiago-ferreira-399340a",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "O Tiago Ferreira é licenciado em Engenharia de Sistemas e Informática pela Universidade do Minho. Depois de ter passado pelo desenvolvimento de software, há mais de 10 anos, tem feito um percurso mais ligado às áreas de infraestruturas de TI apoiando de perto as equipas de desenvolvimento, sendo visto como uma referência. Atualmente exerce a função de Tech Lead na área de Architecture&Infrastructure na direção de Business Information Technology (BIT) da MC Sonae."
+      },
+      {
+        "id": "ricardomartins",
+        "name": "Ricardo Martins",
+        "role": "Security Strategy and Architecture Area Manager",
+        "company": "MC Sonae",
+        "talk": "Workshop | Security Analysis and Vulnerability Management 9h",
+        "linkedin": "ricardo3tm",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "O Ricardo Martins é Licenciado e Mestre em Engenharia de Electrónica e de Telecomunicações, frequentando atualmente o Programa Doutoral em Engenharia Informática pela Universidade de Aveiro. Com 26 anos de experiência na área de suporte e gestão TIC, o Ricardo especializou-se em Cibersegurança nos últimos 6 anos, sendo atualmente responsável pela área de Estratégia e Arquitetura de Segurança na direção de Business Information Technology (BIT) da MC Sonae."
+      },
+      {
+        "id": "alfredofranca",
+        "name": "Alfredo França",
+        "role": "Operation Security Coordinator",
+        "company": "MC Sonae",
+        "talk": "Workshop | Security Analysis and Vulnerability Management 9h",
+        "linkedin": "alfredofranca",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Com uma sólida experiência no campo da Cibersegurança, o Alfredo atualmente exerce a função de Tech Lead na área de Segurança na direção de Business Information Technology (BIT) da MC Sonae, sendo responsável pela área de “Segurança Ofensiva”.\nPara além disso, tem um forte compromisso com a partilha de conhecimento, lecionando na Licenciatura de Segurança de Redes e Computadores na ESTGF (Politécnico do Porto), onde partilha a sua experiência em disciplinas como “Auditoria Informática” e “Testes de Penetração e Hacking Ético”."
+      },
+      {
         "id": "paulolopes",
         "name": "Paulo Lopes",
         "role": "Senior Solution Architect",
