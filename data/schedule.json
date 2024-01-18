@@ -97,9 +97,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "How to protect your web applications. A practical guide from exploring to mitigating it",
+        "description": "Organizations all over the world are on a steady path to adopt security by design within their software development and operational processes, as the need for increased levels of security is becoming even more apparent.\nIn this workshop we will explain some basic principles for Secure Development on Web applications, from the actual exploit of some security vulnerabilities to mitigate them.\nWe will also be sharing some tips and best practices on how to implement security measures throughout your software development life cycle (SDLC).",
+        "author": "Tiago Pinto",
         "location": ""
       },
       {
