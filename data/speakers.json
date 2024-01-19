@@ -1,7 +1,32 @@
 [
   {
     "date": "2024/2/6",
-    "speakers": []
+    "speakers": [
+      {
+        "id": "hurmatzeeshan",
+        "name": "Hurmat Zeeshan",
+        "role": "DevOps Specialist",
+        "company": "Accenture",
+        "talk": "READY! SET! CLOUD! 14h",
+        "linkedin": "",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": " I'm an Advanced App Engineering Specialist from Accenture’s Braga Office. I like to work in  SysOps, DevSecOps and DevOps areas. Relevant experience on AWS, GCP, Azure, Oracle Cloud and Digital Ocean."
+      },
+      {
+        "id": "joaotravanca",
+        "name": "João Travanca",
+        "role": "DevOps Engineer",
+        "company": "Accenture",
+        "talk": "READY! SET! CLOUD! 14h",
+        "linkedin": "joão-travanca-254906a5",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "I'm an Custom Software Engineering Analyst from Accenture’s Braga Office. I like to work in DevOps. Mainly experienced on GCP and Terraform."
+      }
+    ]
   },
   {
     "date": "2024/2/7",

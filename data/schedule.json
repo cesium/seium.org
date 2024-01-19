@@ -40,9 +40,10 @@
       {
         "startTime": "14:00",
         "endTime": "15:00",
-        "activityType": "TBA",
-        "summary": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "READY! SET! CLOUD!",
+        "description": "Generic to advanced discussion on multiple topics (automation & security) by considering multiple cloud providers.\nApplication of DevOps in our modern world, pros and cons.",
+        "author": "Hurmat Zeeshan, João Travanca",
         "location": ""
       },
       {
