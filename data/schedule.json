@@ -107,9 +107,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Code Rumble: #Analytics #FinancialRisk #InterestRateRisk",
+        "description": "Join us in this friendly coding competition. In this challenge we’re going to take you through the technical aspects of financial risk and how these reflect the current market conditions in banking, namely the volatility seen in the current interest rates. Bring your own laptop and ensure you have your preferred coding tools installed to write simple algorithms and interact with a REST API!",
+        "author": "Cristiano Silva Sousa",
         "location": ""
       },
       {
