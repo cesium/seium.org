@@ -92,6 +92,18 @@
         "description": "I am a certified Application Security Architect with a demonstrated history of working in the managed security industry and with a background in software development.\nDuring the last 5 years, while working in managed security services companies, I’ve worn the security architect and manager hats. I provided consultancy and managed the implementation of security programs in various organizations, including large enterprise companies, in different verticals. \nMy goal in my current role at CodSec is to help software development organizations to transform their AppSec program with Practical Secure Software Development Life Cycle (SDLC) as a Service. I’m focused on partnering with developers to help them design and implement security into SDLC. I love sharing my practical experience in threat modeling, security testing, code reviews, vulnerability management, and cloud-based security.\nMy passion is to leverage technologies for process automation - to automate the monitoring, alerting, and mitigation/prevention of risks associated with the Software Development Life Cycle."
       },
       {
+        "id": "cristianosilvasousa",
+        "name": "Cristiano Silva Sousa",
+        "role": "Manager",
+        "company": "Deloitte",
+        "talk": "Workshop | Code Rumble: #Analytics #FinancialRisk #InterestRateRisk",
+        "linkedin": "cristianosilvasousa",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Cristiano is a Manager at Deloitte's Risk Advisory division for Financial Services and regional lead of the Risk Advisory Implement Service Line team, based in Braga.  Straight from University, he joined Deloitte in 2014 having in December 2021 relocated to Braga.\nHis main focus has been in the systems and architecture design, implementation and delivery of Financial Risk projects using, among others, SAS and Microsoft technologies, managing engagements and liaising with Director and C-level stakeholders as well as cultivating relationships and new business opportunities.\nResearch interests include: multi-core and many-core system architectures, high performance computing, efficient algorithmic and data structure design, platform-independent design of parallel algorithms, static verification of source code, correct software advocacy, graph theory and algorithms."
+      },
+      {
         "id": "paulolopes",
         "name": "Paulo Lopes",
         "role": "Senior Solution Architect",
