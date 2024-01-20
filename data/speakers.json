@@ -126,6 +126,54 @@
         "twitter": "",
         "href": "",
         "description": "Apaixonado por tecnologia e pelo desporto motorizado, o Filipe encontrou a fórmula 1 como a união perfeita dos dois mundos."
+      },
+      {
+        "id": "brunofernandes",
+        "name": "Bruno Fernandes",
+        "role": "Professor and Researcher",
+        "company": "University of Minho",
+        "talk": "O Futuro Universitário com a Inteligência Artificial. 17h",
+        "linkedin": "brunofernandescv",
+        "github": "",
+        "twitter": "",
+        "href": "https://www4.di.uminho.pt/~jno/sitedi/nm_8347.html",
+        "description": "Bruno Fernandes holds a B.Sc. and M.Sc. in Informatics Engineering from the University of Minho. He concluded his PhD in Informatics, in 2021, at the same university, with the maximum grade of Very Good (unanimously). Bruno is an AI/ML researcher at the ALGORITMI center (since 2017), a research unit of the School of Engineering of the University of Minho, and a professor at the Department of Informatics of the same university (since 2018), lecturing Machine Learning and Artificial Intelligence to the master's courses in Informatics Engineering, Systems Engineering, and Mathematics and Computation. He has been working as a software engineer for more than 8 years. He has published more than 20 scientific papers and book chapters in relevant scientific journals and conference proceedings, receiving multiple awards for his research. He is also an invited reviewer of some of the most important international journals and scientific conferences of the area. To date, he has supervised 19 MSc and has been responsible for multiple research projects. He has conceived and deployed multiple solutions specimens applied to traffic flow, personality assessment, deep image clustering, and wastewater treatment plants, among others, based on disruptive methods related to machine and deep learning, sensorization, ambient intelligence, and affective computing. He is now focused on his research and on allowing the world, and our society, to take the next big step towards a better future."
+      },
+      {
+        "id": "josecarlosramalho",
+        "name": "José Carlos Ramalho",
+        "role": "Professor and Researcher",
+        "company": "University of Minho",
+        "talk": "O Futuro Universitário com a Inteligência Artificial. 17h",
+        "linkedin": "jcramalho",
+        "github": "",
+        "twitter": "",
+        "href": "https://www.di.uminho.pt/~jcr/thesup-v2.php",
+        "description": "José Carlos Ramalho graduated in 1991 as a Systems and Informatics Engineer. During his graduation he has worked as a freelancer software developer and as a network technician for Apple. During this time he also taught several courses about computer programming for several public institutions. In 1991 he joined the Department of Informatics as an Assistent and started his MSc work. He has worked as a teacher since 1991 until the present. He also has been a researcher of Algoritmi's Research since then. He finishes his Phd in 2000 under the subject \"Structured Documents Semantics\". From 1996 until the present he has been researching in Structured Documents area (currently he is coordinating several projects in Digital Archives and Libraries field). He was responsible for the creation of the conference series called XATA (starting in 2003 until now). He wrote three books and many articles presented in internacional and nacional conferences. During 2008, together with two former post-graduation students he launches KEEP Solutions, a spin-off software company focusing Information Archiving, Information Management, Information Access and Information Deployment. In the last years, his focus was in Digital Preservation and Web Semantic where he was involved in projects like: RODA, SCAPE and E-ARK."
+      },
+      {
+        "id": "josenunooliveira",
+        "name": "José Nuno Oliveira",
+        "role": "Professor and Researcher",
+        "company": "University of Minho",
+        "talk": "O Futuro Universitário com a Inteligência Artificial. 17h",
+        "linkedin": "jose-nuno-oliveira-608aa81",
+        "github": "",
+        "twitter": "",
+        "href": "https://www.di.uminho.pt/~jno/",
+        "description": "Sou professor no Departamento de Informática da Universidade do Minho e investigador do HASLab / INESC TEC. Também sou membro do IFIP WG 2.1 (Algorithmic Languages and Calculi) e da Associação Formal Methods Europe (FME). Faço parte do conselho editorial da revista Formal Aspects of Computing da Springer."
+      },
+      {
+        "id": "orlandobelo",
+        "name": "Orlando Belo",
+        "role": "Professor",
+        "company": "University of Minho",
+        "talk": "O Futuro Universitário com a Inteligência Artificial. 17h",
+        "linkedin": "orlando-belo-9431942a",
+        "github": "",
+        "twitter": "",
+        "href": "https://www.di.uminho.pt/~omb/Orlando_Belo/Home.html",
+        "description": "Orlando Belo is Associate Professor, with Habilitation, in the Department of Informatics at University of Minho, Portugal. He is a member of the Department of Informatics at University of Minho since 1986, and a member of the ALGORITMI R&D Centre, at the same university, working in Business Intelligence and Business Analytics, with particular emphasis in areas involving Databases, Data Warehousing Systems, Data Analysis, and Data Visualization."
       }
     ]
   },
