@@ -15,9 +15,10 @@ import styles from "./style.module.css";
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
   { name: "Team", slug: "/team" },
-  /*{ name: "Challenges", slug: "/challenges" },*/
+  { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faqs" },
+  { name: "Join Staff", slug: "https://forms.gle/wUPHFsZXP85hHdnEA" },
 ];
 
 const userNavigation = (type) => {
@@ -65,7 +66,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
                     <div className="flex select-none items-center">
-                      <div className="mr-6 grid grid-cols-4 gap-y-4 gap-x-20 pt-4">
+                      <div className="grid grid-cols-3 gap-y-8 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link
                             key={item.slug}
@@ -141,7 +142,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           </Transition>
                         </Menu>
                       ) : (
-                        <div className="pl-8 pt-4">
+                        <div className="pl-20 pt-4">
                           <JoinUs fgColor={fgColor} button={button} />
                         </div>
                       )}

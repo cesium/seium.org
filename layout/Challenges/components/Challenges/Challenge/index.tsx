@@ -93,6 +93,11 @@ export default function Challenge(props: IProps) {
                   </p>
                 );
               })}
+            {!props.prizes && (
+              <h2 className="font-terminal-uppercase mt-10 w-full text-center text-2xl text-white">
+                Awards to be announced!
+              </h2>
+            )}
             {props.button != null && (
               <Action text={props.button.text} url={props.button.url} />
             )}
