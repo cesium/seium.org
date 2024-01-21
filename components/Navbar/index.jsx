@@ -53,7 +53,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
               <div className="relative z-50 flex flex-auto">
                 <div className="grid w-full grid-cols-4">
                   <Link href="/">
-                    <div className={`${styles.logo} pt-4 lg:pt-8`}>
+                    <div className={`${styles.logo} select-none pt-4 lg:pt-8`}>
                       <Image
                         className="cursor-pointer opacity-60 hover:opacity-100"
                         src="/images/sei-logo.svg"
@@ -64,7 +64,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </div>
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
-                    <div className="flex">
+                    <div className="flex select-none">
                       <div className="mr-6 grid grid-cols-3 gap-y-4 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link
@@ -160,7 +160,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
           </div>
 
           <Disclosure.Panel className={`lg:hidden bg-${bgColor}`}>
-            <div className="relative z-50 min-h-screen object-cover px-2 pt-12">
+            <div className="relative z-50 select-none object-cover px-2 pt-12">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.slug}

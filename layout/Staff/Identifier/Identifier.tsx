@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-import { getAttendee } from "@lib/api";
+import { getAttendeeByID } from "@lib/api";
 
 import { withAuth } from "@context/Auth";
 
@@ -36,7 +36,7 @@ function Identifier() {
   }, [feedback]);
 
   const handleUUID = (uuid) => {
-    getAttendee(uuid)
+    getAttendeeByID(uuid)
       .then((response) => {
         setText(`${response.data.name} | ${response.data.email}`);
         setFeedback(FEEDBACK.SUCCESS);
@@ -50,7 +50,7 @@ function Identifier() {
 
   return (
     <Layout title="Identifier" description="Identify an attendee">
-      <div className="mt-5">
+      <div className="mt-5 select-none">
         <QRScanner
           handleCode={handleUUID}
           pauseRef={pauseRef}

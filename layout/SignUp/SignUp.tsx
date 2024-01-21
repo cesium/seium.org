@@ -11,7 +11,7 @@ import Text from "@layout/moonstone/authentication/Text";
 
 function Signup({ courses }) {
   return (
-    <div className="min-h-screen overflow-hidden bg-secondary">
+    <div className="min-h-screen select-none overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20 mb-6" />
       <div className="flex flex-col items-center justify-center sm:mt-16">
         <Title text="Sign up" />

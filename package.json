@@ -33,6 +33,7 @@
     "@heroicons/react": "^1.0.5",
     "@netlify/plugin-nextjs": "^4.40.1",
     "axios": "^1.6.2",
+    "dayjs": "^1.11.10",
     "framer-motion": "^7.5.3",
     "jsqr": "^1.4.0",
     "lottie-web": "^5.8.1",

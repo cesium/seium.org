@@ -7,7 +7,7 @@ export default function Error() {
   return (
     <>
       <div className="absolute z-0 h-screen w-screen bg-secondary"></div>
-      <div className="spacing relative z-10 bg-secondary">
+      <div className="spacing relative z-10 select-none bg-secondary">
         <div className="secondary invisible absolute left-0 xl:visible xl:h-screen xl:w-full">
           {<Image src="/images/ponto.svg" layout="fill" alt="Question mark" />}
         </div>

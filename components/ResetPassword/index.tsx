@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { resetPassword } from "@lib/api";
 import Notification from "@components/Notification";
 
@@ -15,13 +15,9 @@ export default function ResetPassword(user: any) {
       });
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowNotification(false);
-    }, 2500);
-
-    return () => clearTimeout(timer);
-  });
+  const handleNotificationClose = () => {
+    setShowNotification(false);
+  };
 
   return (
     <>
@@ -34,7 +30,12 @@ export default function ResetPassword(user: any) {
       >
         Reset Password
       </button>
-      {showNotification && <Notification title="Password reset email sent" />}
+      {showNotification && (
+        <Notification
+          title="Password reset email sent"
+          onClose={handleNotificationClose}
+        />
+      )}
     </>
   );
 }

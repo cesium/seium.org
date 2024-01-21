@@ -15,7 +15,7 @@ import { LoginForm } from "./components";
 
 function Login() {
   return (
-    <div className="min-h-screen overflow-hidden bg-secondary">
+    <div className="min-h-screen select-none overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
       <img
         className="absolute -left-[380px] bottom-0 hidden w-[750px] xl:block"
@@ -27,7 +27,7 @@ function Login() {
         <Text
           text="Don’t have an account?"
           link="Register here"
-          href="https://sei23.eventbrite.pt"
+          href="/signup"
         />
         <div className="absolute bottom-0 right-60 hidden lg:block xl:hidden">
           <Motion.div

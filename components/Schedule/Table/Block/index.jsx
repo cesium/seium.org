@@ -26,7 +26,7 @@ function BlockItem({
     >
       {coffeeBreak && (
         <div className="relative float-right mr-5 h-10 w-10">
-          <Image src="/images/Coffee.svg" layout="fill" alt="Coffee Break" />
+          <Image src="/images/coffee.png" layout="fill" alt="Coffee Break" />
         </div>
       )}
 
@@ -42,7 +42,7 @@ function BlockItem({
       </p>
 
       <ul
-        className={`${styles.authors} flex font-iregular text-sm text-gray-400`}
+        className={`${styles.authors} flex font-iregular text-sm text-gray-400 group-hover:text-primary`}
       >
         {author && (
           <li className={styles.listElem}>
@@ -109,7 +109,7 @@ function BlockItem({
   );
 
   return (
-    <div className={skipLink ? "" : styles.clickable}>
+    <div className={`group ${skipLink ? "" : styles.clickable}`}>
       {!skipLink && (
         <Link href={`schedule/#${id}`} className="absolute h-full w-full" />
       )}

@@ -1,23 +1,18 @@
-import { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 interface INotificationProps {
   title: string;
+  onClose: () => void;
 }
 
-export default function Notification({ title }: INotificationProps) {
-  const [visible, setVisible] = useState(true);
-
+const Notification: React.FC<INotificationProps> = ({ title, onClose }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      setVisible(false);
+      onClose();
     }, 2500);
 
     return () => clearTimeout(timer);
-  }, []);
-
-  if (!visible) {
-    return null;
-  }
+  }, [onClose]);
 
   return (
     <div className="fixed right-4 top-0 z-50 h-16 w-72">
@@ -30,7 +25,7 @@ export default function Notification({ title }: INotificationProps) {
             </div>
             <div className="ml-4 flex flex-shrink-0">
               <button
-                onClick={() => setVisible(false)}
+                onClick={onClose}
                 className="inline-flex rounded-md bg-quinary text-white hover:text-primary focus:outline-none"
               >
                 <span className="sr-only">Close</span>
@@ -42,4 +37,6 @@ export default function Notification({ title }: INotificationProps) {
       </div>
     </div>
   );
-}
+};
+
+export default Notification;

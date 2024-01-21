@@ -79,7 +79,6 @@ function WheelPage() {
       .then((response) => updateLatestWins(response.data))
       .catch((_) => updateError(true));
   };
-
   useEffect(requestAllInfo, []);
 
   const canSpin = () => {
@@ -176,7 +175,8 @@ function WheelPage() {
   const latestWinsComponents = latestWins.map((entry, id) => (
     <ListItem3Cols
       key={id}
-      user={entry.attendee_name}
+      user_name={entry.attendee_name}
+      user_nickname={entry.attendee_nickname}
       prize={entry.prize}
       when={displayTimeSince(entry.date)}
       isLast={id == latestWins.length - 1}
@@ -202,18 +202,20 @@ function WheelPage() {
             <div className="m-auto h-72 w-72 xs:h-80 xs:w-80 sm:h-96 sm:w-96">
               <WheelComponent steps={16} angle={st.angle} />
             </div>
-            <Button
-              customStyle={`${
-                canSpin()
-                  ? "cursor-pointer bg-quinary"
-                  : "bg-gray-400 opacity-50"
-              } m-auto mt-10 block h-20 w-64 rounded-full`}
-              disabled={!canSpin()}
-              onClick={spinTheWheel}
-              title="SPIN THE WHEEL"
-              description={`${price} tokens💰`}
-              bold={true}
-            />
+            {price != null && (
+              <Button
+                className={`${
+                  canSpin()
+                    ? "cursor-pointer bg-quinary"
+                    : "bg-gray-400 opacity-50"
+                } mt-10 block h-20 w-64`}
+                disabled={!canSpin()}
+                onClick={spinTheWheel}
+                title="SPIN THE WHEEL"
+                description={`${price} tokens💰`}
+                bold={true}
+              />
+            )}
           </div>
         </div>
         <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">
@@ -224,7 +226,7 @@ function WheelPage() {
 
           <div className="mt-10">
             <Heading text="Awards"></Heading>
-            <div className="mb-5 grid w-full grid-cols-6 pb-3">
+            <div className="mb-5 grid w-full select-none grid-cols-6 pb-3">
               <div className="text-center">
                 <p className="text-iregular pr-4">Image</p>
               </div>

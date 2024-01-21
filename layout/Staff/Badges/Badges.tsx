@@ -8,6 +8,8 @@ import Layout from "@components/Layout";
 import ErrorMessage from "@components/ErrorMessage";
 import Filter from "@components/BadgeFilter";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
+import Badge from "@components/Badge";
+import GoToTop from "@components/GoToTop";
 
 function Badges() {
   const [allBadges, updateAllBadges] = useState([]);
@@ -86,7 +88,9 @@ function Badges() {
         <>
           <div className="pt-10 text-white xl:flex xl:flex-auto">
             <div className="flex flex-auto space-x-5">
-              <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
+              <p className="mb-10 select-none text-2xl font-bold xl:mb-0">
+                Filter by
+              </p>
 
               <Filter onChange={updateFilter} />
             </div>
@@ -113,22 +117,24 @@ function Badges() {
                   badge.name.toLowerCase().includes(searchInput.toLowerCase())
               )
               .map((badge, index) => (
-                <div
+                <Badge
                   key={index}
-                  className="h-full w-full cursor-pointer text-white"
+                  id={badge.id}
+                  name={badge.name}
+                  avatar={badge.avatar}
+                  tokens={badge.tokens}
+                  owned={badge.owned}
+                  disableLink={true}
+                  disableOwnedHighlight={true}
                   onClick={() => handleBadgeSelected(badge)}
-                >
-                  <img src={badge.avatar} alt={badge.name} />
-                  <div className="flex flex-col justify-items-center text-center font-iregular text-white">
-                    <div>{badge.name}</div>
-                    <div>{badge.tokens} 💰 </div>
-                  </div>
-                </div>
+                />
               ))}
           </div>
         </>
       )}
+
       {error && <ErrorMessage />}
+      <GoToTop />
     </Layout>
   );
 }

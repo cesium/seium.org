@@ -93,17 +93,17 @@ function Profile({ courses }) {
           <Heading text="User Profile">
             <div className="w-auto">
               <Button
-                customStyle="w-full items-center rounded-full border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
                 title={editing ? "Save Changes" : "Edit"}
-                form="profile-form"
+                className="w-full items-center border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
                 type="submit"
+                form="profile-form"
               />
             </div>
           </Heading>
 
           <Form onSubmit={handleSubmitForm} id="profile-form">
             <div className="pl-6">
-              <div className="relative h-[220px] w-[220px] overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white hover:border-quinary">
                 {photoFileUrl == null ? (
                   <img
                     src="/images/mascot-head.png"
@@ -163,7 +163,6 @@ function Profile({ courses }) {
               enabled={editing}
               onChange={(e) => setCourse(e.currentTarget.value)}
             />
-
             <ResetPassword user={user} />
           </Form>
         </div>
@@ -234,7 +233,7 @@ function Profile({ courses }) {
           </div>
           <div className="mt-10 text-white">
             <Heading text="Upload CV" />
-            <CVInput cv={user?.cv} onSubmit={submitCV}></CVInput>
+            <CVInput cv={user?.cv} onSubmit={submitCV} />
           </div>
         </div>
       </div>

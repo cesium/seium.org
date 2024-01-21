@@ -28,7 +28,7 @@ export function InputBase({
     <div>
       <label
         htmlFor={id}
-        className={`pl-6 font-iregular text-${fgColor} mt-5 block text-sm`}
+        className={`pl-6 font-iregular text-${fgColor} mt-5 block select-none text-sm`}
       >
         {text}
       </label>

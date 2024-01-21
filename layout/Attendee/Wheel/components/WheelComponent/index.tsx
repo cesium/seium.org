@@ -11,7 +11,7 @@ export default function Wheel({ steps, angle }) {
     colors.push((255.0 * i) / (steps - 1));
   }
 
-  colors = colors.map((entry) => "#F52AB1" + toHex(entry));
+  colors = colors.map((entry) => "#FF800D" + toHex(entry));
 
   const styleGlobal = {
     background: "conic-gradient(" + colors.join(",") + ")",

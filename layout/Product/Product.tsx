@@ -41,7 +41,7 @@ function ProductSlug() {
       <div className="bg-primary">
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           {/* Product details */}
-          <div className="lg:max-w-lg lg:self-end">
+          <div className="select-none lg:max-w-lg lg:self-end">
             <Link
               href="/attendee/store"
               className="text-center font-imedium text-quinary"
@@ -68,7 +68,7 @@ function ProductSlug() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full select-none object-cover object-center"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ function ProductSlug() {
                         refetchUser();
                       })
                     }
-                    customStyle="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75"
+                    className="m-auto block h-20 w-full rounded-full bg-quinary hover:opacity-75 disabled:bg-gray-400 disabled:opacity-75"
                     disabled={user.token_balance < product.price}
                     title="REDEEM"
                     description={`${product.price} tokens 💰`}

@@ -53,7 +53,7 @@ export default function Organization() {
   return (
     <section className="spacing grid grid-cols-1 gap-x-32 gap-y-8 bg-primary py-20 lg:grid-cols-2">
       <div className="text-white">
-        <h2 className="font-terminal-uppercase mb-4 text-4xl font-bold">
+        <h2 className="font-terminal-uppercase mb-4 select-none text-4xl font-bold">
           Organization
         </h2>
         <p className="font-imedium">
@@ -73,7 +73,7 @@ export default function Organization() {
         list={sortListMembers(team["marketing"].list).slice(0, 2)}
       />
 
-      <div className="hidden items-center justify-center lg:flex">
+      <div className="hidden select-none items-center justify-center lg:flex">
         <Animation />
       </div>
 

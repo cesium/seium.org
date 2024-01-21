@@ -131,7 +131,7 @@ export default function SignUpForm({ courses }) {
         />
         <Button
           title={scanning ? "STOP SCANNING" : "SCAN QR"}
-          customStyle="w-full h-12 text-secondary bg-quinary border-quinary"
+          className="h-12 w-full border-quinary bg-quinary text-secondary"
           onClick={(e) => {
             e.preventDefault();
             updateScanning(!scanning);
@@ -158,7 +158,7 @@ export default function SignUpForm({ courses }) {
         <Button
           type="submit"
           title={isLoading ? "Registering..." : "LET'S GO"}
-          customStyle="w-full h-12 text-secondary bg-quinary border-quinary"
+          className="h-12 w-full border-quinary bg-quinary text-secondary"
         />
         {(local_error || (!isLoading && errors)) && (
           <p className="mt-3 font-iregular text-lg text-red-400">
