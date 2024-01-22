@@ -203,6 +203,30 @@
         "twitter": "",
         "href": "https://matklad.github.io/",
         "description": "Hi I'm Alexsey Kladov, I used to do math. Although I no longer do mathematics daily, it is the basis I use to think about programming. I like writing code just for the sake of it. I like deleting code even more. I like short, simple, robust and beautiful code, which not only gets the job done, but does it in an obviously correct way."
+      },
+      {
+        "id": "monicacasanova",
+        "name": "Mónica Casanova",
+        "role": "Software Developer",
+        "company": "Checkmarx",
+        "talk": "Workshop | Software Supply Chain Security: An Introduction. 9h",
+        "linkedin": "mónica-casanova-339a3a113",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "ruigomes",
+        "name": "Rui Gomes",
+        "role": "Software Team Leader",
+        "company": "Checkmarx",
+        "talk": "Workshop | Software Supply Chain Security: An Introduction. 9h",
+        "linkedin": "ruihgomes",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
       }
     ]
   },

@@ -192,9 +192,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Software Supply Chain Security: An Introduction",
+        "description": "Software applications are no longer built entirely from custom code. Instead, they are made up of a complex web of open-source components and libraries, most of which inherit functionality from other third-party sources. The software supply chain is then made up of everything and everyone that touches your code in the software development lifecycle, from application development to the CI/CD pipeline and deployment. Insufficient software security opens the door to potential supply chain attacks, wherein a threat actor seeks to infiltrate an organization's software and cloud environments. In this workshop we will talk about what is software supply chain, examples of real attacks that have taken place and what we can do to mitigate them, with examples and interactive exercises.",
+        "author": "Mónica Casanova, Rui Gomes",
         "location": ""
       },
       {
