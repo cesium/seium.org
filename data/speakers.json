@@ -108,7 +108,7 @@
         "name": "Ricardo Martins",
         "role": "Security Strategy and Architecture Area Manager",
         "company": "MC Sonae",
-        "talk": "Workshop | Security Analysis and Vulnerability Management 9h",
+        "talk": "Workshop | Security Analysis and Vulnerability Management. 9h",
         "linkedin": "ricardo3tm",
         "github": "",
         "twitter": "",
@@ -120,7 +120,7 @@
         "name": "Alfredo França",
         "role": "Operation Security Coordinator",
         "company": "MC Sonae",
-        "talk": "Workshop | Security Analysis and Vulnerability Management 9h",
+        "talk": "Workshop | Security Analysis and Vulnerability Management. 9h",
         "linkedin": "alfredofranca",
         "github": "",
         "twitter": "",
@@ -251,6 +251,18 @@
         "twitter": "",
         "href": "",
         "description": ""
+      },
+      {
+        "id": "joaorovira",
+        "name": "João Rovira",
+        "role": "Talent Acquisition Senior Analyst & Employer Branding",
+        "company": "Accenture",
+        "talk": "Workshop | How to make an awesome CV? 9h",
+        "linkedin": "joaorovira",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "My name is João Rovira and I´m passionate about the Human Resources area! I´ve already had experience in Recruitment and Employer Branding activities in the Tech Industry. I was responsible for all the Employer Branding strategy of Accenture and I´ve recruited about a hundred people for several Tech Roles. \nBesides that, I´ve worked as an HR Consultant and my main responsibilities were related to the Global Design of some HR Departments from Multinational Companies and I got the HR Local and Legal requirements from those HR Departments to map to the Global Templates. One thing that you have to know about me it´s the fact that I´m proud of being a scout for many years because it gave me a lot of interpersonal, leadership, communication, and autonomy skills."
       },
       {
         "id": "adelinocorreia",
