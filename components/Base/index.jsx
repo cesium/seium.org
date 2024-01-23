@@ -84,13 +84,13 @@ const MobileNavbar = ({
               </nav>
             </div>
             <div className="flex flex-shrink-0 border-t border-quaternary p-4">
-              <a
-                href="#"
+              <Link
+                href="/"
                 onClick={() => logout()}
                 className="px-4 font-iregular text-quinary"
               >
                 Log out 👋
-              </a>
+              </Link>
             </div>
           </div>
         </Transition.Child>
@@ -151,13 +151,13 @@ export default function Dashboard({
                 </Link>
               ))}
             </nav>
-            <a
-              href="#"
+            <Link
+              href="/"
               onClick={() => logout()}
               className="px-4 font-iregular text-quinary"
             >
               Log out 👋
-            </a>
+            </Link>
           </div>
         </div>
       </div>

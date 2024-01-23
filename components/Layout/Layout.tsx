@@ -87,12 +87,13 @@ export default function Layout({ title, description, children }: LayoutProps) {
           </nav>
         </div>
 
-        <button
+        <Link
+          href="/"
           onClick={() => logout()}
           className="mt-4 w-full text-left font-iregular text-quinary"
         >
           Log out 👋
-        </button>
+        </Link>
       </aside>
 
       {/* OPEN SIDEBAR ON MOBILE */}
@@ -190,12 +191,13 @@ function MobileNavbar({
                 </nav>
               </div>
 
-              <button
+              <Link
+                href="/"
                 onClick={onLogout}
                 className="w-full border-t border-quaternary pt-4 text-left font-iregular text-quinary"
               >
                 Log out 👋
-              </button>
+              </Link>
             </aside>
           </Transition.Child>
         </Dialog.Panel>
