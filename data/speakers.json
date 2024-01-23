@@ -181,6 +181,30 @@
     "date": "2024/2/8",
     "speakers": [
       {
+        "id": "monicacasanova",
+        "name": "Mónica Casanova",
+        "role": "Software Developer",
+        "company": "Checkmarx",
+        "talk": "Workshop | Software Supply Chain Security: An Introduction. 9h",
+        "linkedin": "mónica-casanova-339a3a113",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "ruigomes",
+        "name": "Rui Gomes",
+        "role": "Software Team Leader",
+        "company": "Checkmarx",
+        "talk": "Workshop | Software Supply Chain Security: An Introduction. 9h",
+        "linkedin": "ruihgomes",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
         "id": "adelinocorreia",
         "name": "Adelino Correia",
         "role": "Manager Information and Communication Systems",
