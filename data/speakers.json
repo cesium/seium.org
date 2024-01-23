@@ -181,30 +181,6 @@
     "date": "2024/2/8",
     "speakers": [
       {
-        "id": "adelinocorreia",
-        "name": "Adelino Correia",
-        "role": "Manager Information and Communication Systems",
-        "company": "INL",
-        "talk": " A Firewall morreu! 14h",
-        "linkedin": "adelino-c-50a113101",
-        "github": "",
-        "twitter": "",
-        "href": "https://inl.int/community/adelino-correia/",
-        "description": "Com background académico e profissional em TI, Adelino desempenha o cargo de IT Manager no INL, onde tem como principal objetivo potenciar a excelência da investigação do Laboratório."
-      },
-      {
-        "id": "alekseykladov",
-        "name": "Aleksey Kladov",
-        "role": "Software Engineer",
-        "company": "TigerBeetle & Top Rust Contributor",
-        "talk": " Modern Systems Programming: Rust and Zig. 15h",
-        "linkedin": "",
-        "github": "matklad",
-        "twitter": "",
-        "href": "https://matklad.github.io/",
-        "description": "Hi I'm Alexsey Kladov, I used to do math. Although I no longer do mathematics daily, it is the basis I use to think about programming. I like writing code just for the sake of it. I like deleting code even more. I like short, simple, robust and beautiful code, which not only gets the job done, but does it in an obviously correct way."
-      },
-      {
         "id": "monicacasanova",
         "name": "Mónica Casanova",
         "role": "Software Developer",
@@ -227,6 +203,30 @@
         "twitter": "",
         "href": "",
         "description": ""
+      },
+      {
+        "id": "adelinocorreia",
+        "name": "Adelino Correia",
+        "role": "Manager Information and Communication Systems",
+        "company": "INL",
+        "talk": " A Firewall morreu! 14h",
+        "linkedin": "adelino-c-50a113101",
+        "github": "",
+        "twitter": "",
+        "href": "https://inl.int/community/adelino-correia/",
+        "description": "Com background académico e profissional em TI, Adelino desempenha o cargo de IT Manager no INL, onde tem como principal objetivo potenciar a excelência da investigação do Laboratório."
+      },
+      {
+        "id": "alekseykladov",
+        "name": "Aleksey Kladov",
+        "role": "Software Engineer",
+        "company": "TigerBeetle & Top Rust Contributor",
+        "talk": " Modern Systems Programming: Rust and Zig. 15h",
+        "linkedin": "",
+        "github": "matklad",
+        "twitter": "",
+        "href": "https://matklad.github.io/",
+        "description": "Hi I'm Alexsey Kladov, I used to do math. Although I no longer do mathematics daily, it is the basis I use to think about programming. I like writing code just for the sake of it. I like deleting code even more. I like short, simple, robust and beautiful code, which not only gets the job done, but does it in an obviously correct way."
       }
     ]
   },
