@@ -124,7 +124,7 @@ export default function Footer(props: IFooterProps) {
               Previous Edition
             </Link>
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdV1bSyW2tcLuTC_jJCGdZ5NZHUlgETK7nQkOmyDzwb7eFS4Q/viewform"
+              href="https://forms.gle/AmWefKeDN3XNtVh57"
               className="hover:underline"
             >
               Report a Problem
