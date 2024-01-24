@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import { Hero, Sponsors, Hackathon, Speakers, Partners } from "./components";
 
 import Navbar from "@components/Navbar";
@@ -19,4 +17,4 @@ function Home() {
   );
 }
 
-export default withoutAuth(Home);
+export default Home;

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useAuth } from "./useAuth";
+import { useAuth } from ".";
 import * as USER from "/lib/user";
 
 export function withAuth(WrappedComponent) {
@@ -9,7 +9,7 @@ export function withAuth(WrappedComponent) {
     const { user } = useAuth();
 
     if (!user) {
-      router.replace("/signup");
+      router.replace(`/login?from=${encodeURIComponent(router.asPath)}`);
       return null;
     }
 
@@ -29,7 +29,8 @@ export function withAuth(WrappedComponent) {
             "/product/[slug]",
           ].includes(router.pathname)
         ) {
-          return router.replace("/404");
+          router.replace("/404");
+          return null;
         }
         break;
       case USER.ROLES.STAFF:
@@ -43,7 +44,8 @@ export function withAuth(WrappedComponent) {
             "/attendees/[uuid]",
           ].includes(router.pathname)
         ) {
-          return router.replace("/404");
+          router.replace("/404");
+          return null;
         }
         break;
       case USER.ROLES.SPONSOR:
@@ -55,7 +57,8 @@ export function withAuth(WrappedComponent) {
             "/sponsor/visitors",
           ].includes(router.pathname)
         ) {
-          return router.replace("/404");
+          router.replace("/404");
+          return null;
         }
         break;
     }
