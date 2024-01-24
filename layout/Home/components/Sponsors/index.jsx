@@ -54,12 +54,19 @@ export default function Sponsors(props) {
                 </p>
                 <div className="grid grid-cols-2 place-items-center gap-4 p-6 lg:gap-10">
                   {elem.map((sponsor, i) => {
+                    const imageSize = !val
+                            ? { width: 250, height: 60 }
+                            : key == 0
+                            ? { width: 200, height: 60 }
+                            : { width: 175, height: 60 };
+
+
                     return (
                       <a key={i} href={sponsor.link}>
                         <Image
                           src={`/images/sponsors/${sponsor.image}.svg`}
-                          width={250}
-                          height={60}
+                          width={imageSize.width}
+                          height={imageSize.height}
                           alt={sponsor.image}
                         />
                       </a>
