@@ -38,9 +38,12 @@ const userNavigation = (type) => {
         { name: "Visitors", slug: "/sponsor/visitors" },
       ];
     case USER.ROLES.ADMIN:
-      return [ //TODO
-        { name: "Scanner", slug: "/sponsor/scanner" },
-        { name: "Visitors", slug: "/sponsor/visitors" },
+      return [
+        { name: "Leaderboard", slug: "/admin/leaderboard" },
+        { name: "Give Badges", slug: "/admin/badges" },
+        { name: "Give Prizes", slug: "/admin/prizes" },
+        { name: "History", slug: "/admin/badgehistory" },
+        { name: "Activate Spotlight", slug: "/admin/spotlight" },
       ];
 
     default:

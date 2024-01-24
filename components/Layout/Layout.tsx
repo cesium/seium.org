@@ -15,7 +15,7 @@ const basePaths = {
   [ROLES.ATTENDEE]: "attendee",
   [ROLES.ADMIN]: "admin",
   [ROLES.STAFF]: "staff",
-}
+};
 
 const roleNavigations = {
   [ROLES.SPONSOR]: ["scanner", "visitors"],
@@ -28,8 +28,16 @@ const roleNavigations = {
     "inventory",
     "identifier",
   ],
-  [ROLES.ADMIN]: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
-  [ROLES.STAFF]: ["badges", "leaderboard", "prizes", "identifier", "cv"],
+  [ROLES.STAFF]: ["leaderboard", "badges", "prizes", "identifier", "cv"],
+  [ROLES.ADMIN]: [
+    "leaderboard",
+    "badges",
+    "prizes",
+    "identifier",
+    "badgehistory",
+    "redeemhistory",
+    "spotlight",
+  ],
 };
 
 type LayoutProps = {

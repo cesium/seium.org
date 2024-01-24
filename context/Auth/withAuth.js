@@ -62,9 +62,24 @@ export function withAuth(WrappedComponent) {
           return null;
         }
         break;
+      case USER.ROLES.ADMIN:
+        if (
+          ![
+            "/admin/badges",
+            "/admin/prizes",
+            "/admin/prizes/[uuid]",
+            "/admin/identifier",
+            "/admin/leaderboard",
+            "/admin/badgehistory",
+            "/admin/redeemhistory",
+            "/admin/spotlight",
+            "/attendees/[uuid]",
+          ].includes(router.pathname)
+        ) {
+          return router.replace("/404");
+        }
+        break;
     }
-
-    //TODO: admin
 
     return <WrappedComponent {...props} />;
   };
