@@ -222,10 +222,10 @@
       {
         "startTime": "11:30",
         "endTime": "12:30",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "Decoding the Future: Exploring Bitcoin, Blockchain, and DeFi Innovations",
+        "description": "Unveiling the Crypto Canvas: From Bitcoin Genesis to DeFi Domination. In this talk, we'll demystify the origins and intricacies of Bitcoin, explore the advantages of decentralized networks, delve into various types of blockchains, and finally, navigate the explosive landscape of DeFi as the predominant use case.",
+        "author": "João Folha",
         "location": ""
       },
       {
@@ -315,10 +315,10 @@
       {
         "startTime": "11:30",
         "endTime": "12:30",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
+        "description": "São diários os desafios de qualquer organização no âmbito de engenharia de dados e no desenvolvimento de software. A Critical Techworks, que recentemente abriu um hub em Braga, é uma joint-venture da BMW Group e Critical Software que lida com estes desafios. Nesta talk serão apresentados dois projetos, um maioritariamente desenvolvido em JAVA e outro com o foco em processamento de dados (Process Mining).",
+        "author": "Rita Faria e José Antunes",
         "location": ""
       },
       {

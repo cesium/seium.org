@@ -265,6 +265,18 @@
         "description": "My name is João Rovira and I´m passionate about the Human Resources area! I´ve already had experience in Recruitment and Employer Branding activities in the Tech Industry. I was responsible for all the Employer Branding strategy of Accenture and I´ve recruited about a hundred people for several Tech Roles. \nBesides that, I´ve worked as an HR Consultant and my main responsibilities were related to the Global Design of some HR Departments from Multinational Companies and I got the HR Local and Legal requirements from those HR Departments to map to the Global Templates. One thing that you have to know about me it´s the fact that I´m proud of being a scout for many years because it gave me a lot of interpersonal, leadership, communication, and autonomy skills."
       },
       {
+        "id": "joaofolha",
+        "name": "João Folha",
+        "role": "Data Scientist",
+        "company": "Uphold",
+        "talk": "Decoding the Future: Exploring Bitcoin, Blockchain, and DeFi Innovations",
+        "linkedin": "joão-folha",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "A data driven professional, I thrive when I achieve goals by using my logic, quantitative and problem-solving skills. My experience includes working as a Research Analyst, diving into market data to identify industry trends or to conduct competitive and product expansion strategies. Having also worked in a blockchain/cryptocurrency company, with relevant certifications, I’ve helped companies to improve efficiencies and use data to make smart decisions."
+      },
+      {
         "id": "adelinocorreia",
         "name": "Adelino Correia",
         "role": "Manager Information and Communication Systems",
@@ -316,6 +328,30 @@
         "twitter": "",
         "href": "",
         "description": "A data driven professional, I thrive when I achieve goals by using my logic, quantitative and problem-solving skills. My experience includes working as a Research Analyst, diving into market data to identify industry trends or to conduct competitive and product expansion strategies. Having also worked in a blockchain/cryptocurrency company, with relevant certifications, I’ve helped companies to improve efficiencies and use data to make smart decisions."
+      },
+      {
+        "id": "ritafaria",
+        "name": "Rita Faria",
+        "role": "Chief Technical Titan",
+        "company": "Critical TechWorks",
+        "talk": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
+        "linkedin": "rivfaria",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Formada em Engenharia Informática pela Universidade do Minho. Atualmente faz parte da equipa de engenharia da Critical Techworks, empresa responsável pelo desenvolvimento de software de excelência para uma das maiores empresas da área automóvel."
+      },
+      {
+        "id": "joseantunes",
+        "name": "José Antunes",
+        "role": "Data Engineer",
+        "company": "Critical TechWorks",
+        "talk": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
+        "linkedin": "josemantunes",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Licenciado em Engenharia e Gestão de Sistemas de Informação pela Universidade do Minho com 15 anos de experiência diversificada em IT. Atualmente faz parte da equipa de engenharia da Critical Techworks, empresa responsável pelo desenvolvimento de software de excelência para uma das maiores empresas da área automóvel."
       }
     ]
   }
