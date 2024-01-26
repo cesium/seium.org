@@ -83,6 +83,7 @@ function Badgedex() {
           </div>
         </div>
       </div>
+
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {currentBadges.map((badge) => (
           <Badge

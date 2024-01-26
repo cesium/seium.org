@@ -86,29 +86,29 @@ function Badges() {
         </div>
       ) : (
         <>
-          <div className="pt-10 text-white xl:flex xl:flex-auto">
-            <div className="flex flex-auto space-x-5">
-              <p className="select-none text-2xl font-bold xl:mb-0">
-                Filter by
-              </p>
-
+          <div className="border-slate-400 pt-10 text-white xl:flex xl:flex-auto">
+            <div className="m-auto flex flex-auto select-none space-x-5">
+              <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
               <Filter onChange={updateFilter} />
             </div>
-            <div className="relative my-10 rounded-md shadow-sm">
-              <input
-                type="text"
-                value={searchInput}
-                placeholder="Search by name"
-                onChange={(e) => {
-                  setSearchInput(e.target.value);
-                }}
-                name="search"
-                id="search"
-                className="mt-1 w-full rounded-full border-2 border-pink-500 py-2 pl-3 pr-10 text-sm text-black focus:border-pink-500"
-              />
+            <div className="flex w-auto font-bold lg:w-1/2 xl:w-auto">
+              <div className="flex w-full select-none flex-row-reverse gap-x-8">
+                <input
+                  type="text"
+                  value={searchInput}
+                  placeholder="Search by name"
+                  onChange={(e) => {
+                    setSearchInput(e.target.value);
+                  }}
+                  name="search"
+                  id="search"
+                  className="mt-1 w-full rounded-full border-2 border-quinary py-2 pl-3 pr-10 text-sm text-black outline-none focus:border-quinary/50"
+                />
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
+
+          <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {allBadges
               .filter((badge) => badge.type == filter || filter == null)
               .filter(
