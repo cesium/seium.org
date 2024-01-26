@@ -25,7 +25,7 @@ const Badge: React.FC<BadgeProps> = ({
   const [badgeLoaded, setBadgeLoaded] = useState(false);
   const [badge404, setBadge404] = useState(false);
 
-  const highlightBadge = owned || !disableOwnedHighlight || !badgeLoaded;
+  const highlightBadge = owned || disableOwnedHighlight || !badgeLoaded;
 
   return (
     <div
@@ -50,7 +50,7 @@ const Badge: React.FC<BadgeProps> = ({
             src={avatar}
             alt={name}
             onLoad={() => setBadgeLoaded(true)}
-            onError={() => setBadge404(true)}
+            onError={() => { setBadge404(true); setBadgeLoaded(true); }}
             hidden={!badgeLoaded || badge404}
           />
         </div>
