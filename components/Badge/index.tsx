@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AllHTMLAttributes, ReactEventHandler, useState } from "react";
+import { AllHTMLAttributes, memo, useState } from "react";
 
 interface BadgeProps
   extends Omit<AllHTMLAttributes<HTMLDivElement>, "id" | "name" | "type"> {
@@ -23,21 +23,9 @@ const Badge: React.FC<BadgeProps> = ({
   ...rest
 }) => {
   const [badgeLoaded, setBadgeLoaded] = useState(false);
-  const [fallbackRan, setFallbackRan] = useState(false);
+  const [badge404, setBadge404] = useState(false);
 
   const highlightBadge = owned || !disableOwnedHighlight || !badgeLoaded;
-
-  const imageOnError: ReactEventHandler<HTMLImageElement> = (e) => {
-    // prevent infinite loop fallback
-    if (fallbackRan) {
-      setBadgeLoaded(true);
-      return;
-    }
-
-    setBadgeLoaded(false);
-    e.currentTarget.src = "/images/badges/badge-not-found.svg";
-    setFallbackRan(true);
-  };
 
   return (
     <div
@@ -51,12 +39,19 @@ const Badge: React.FC<BadgeProps> = ({
         <div className="flex aspect-square w-full select-none items-center justify-center">
           {!badgeLoaded && <BadgeSkeleton />}
 
+          {badge404 &&
+            <img
+              src={"/images/badges/badge-not-found.svg"}
+              alt={name}
+            />
+          }
+
           <img
             src={avatar}
             alt={name}
             onLoad={() => setBadgeLoaded(true)}
-            onError={imageOnError}
-            hidden={!badgeLoaded}
+            onError={() => setBadge404(true)}
+            hidden={!badgeLoaded || badge404}
           />
         </div>
 
@@ -69,7 +64,7 @@ const Badge: React.FC<BadgeProps> = ({
   );
 };
 
-export default Badge;
+export default memo(Badge);
 
 const BadgeSkeleton = () => {
   return (
