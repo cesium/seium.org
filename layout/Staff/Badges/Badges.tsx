@@ -123,7 +123,7 @@ function Badges() {
                   name={badge.name}
                   avatar={badge.avatar}
                   tokens={badge.tokens}
-                  owned={badge.owned}
+                  owned={true}
                   disableLink={true}
                   disableOwnedHighlight={true}
                   onClick={() => handleBadgeSelected(badge)}

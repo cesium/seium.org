@@ -7,7 +7,7 @@ interface BadgeProps
   id: string | number;
   avatar: string;
   tokens: string | number;
-  owned?: boolean;
+  owned: boolean;
   disableLink?: boolean;
   disableOwnedHighlight?: boolean;
 }
