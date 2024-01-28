@@ -265,6 +265,42 @@
         "description": "My name is João Rovira and I´m passionate about the Human Resources area! I´ve already had experience in Recruitment and Employer Branding activities in the Tech Industry. I was responsible for all the Employer Branding strategy of Accenture and I´ve recruited about a hundred people for several Tech Roles. \nBesides that, I´ve worked as an HR Consultant and my main responsibilities were related to the Global Design of some HR Departments from Multinational Companies and I got the HR Local and Legal requirements from those HR Departments to map to the Global Templates. One thing that you have to know about me it´s the fact that I´m proud of being a scout for many years because it gave me a lot of interpersonal, leadership, communication, and autonomy skills."
       },
       {
+        "id": "emanuelmota",
+        "name": "Emanuel Mota",
+        "role": "CEO",
+        "company": "Yari Labs",
+        "talk": "Workshop | Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js. 9h",
+        "linkedin": "emanuel-mota-7371613",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Entrepreneur and Software Engineer with a degree in Mathematics and Computer Science. During the last 17 years has developed software in a variety of areas, including banking and financial systems, retail, distributed and decentralised systems. With 9 years of banking experience working as both Software Developer and Information Systems Auditor for 2 portuguese banks. Currently focusing extensively on developing technology around cryptocurrencies and blockchain technology applied to financial services."
+      },
+      {
+        "id": "pedrolima",
+        "name": "Pedro Lima",
+        "role": "Software Developer",
+        "company": "Yari Labs",
+        "talk": "Workshop | Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js. 9h",
+        "linkedin": "pedro-lima-1693a7153",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "joaomartins",
+        "name": "João Martins",
+        "role": "Software Developer",
+        "company": "Yari Labs",
+        "talk": "Workshop | Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js. 9h",
+        "linkedin": "joão-martins-bb3142288",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
         "id": "joaofolha",
         "name": "João Folha",
         "role": "Data Scientist",
