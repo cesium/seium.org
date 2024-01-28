@@ -210,9 +210,9 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js",
+        "description": "Aprende a criar um jogo dinâmico e interativo explorando Elixir, Phoenix Channels e Vue.js. Vamos dividir em equipas de backend e frontend, onde poderás contribuir para o desenvolvimento de partes específicas do jogo. Não é necessária experiência prévia, apenas conhecimentos básicos de programação. No final, terás um jogo funcional em tempo real. Acompanha-nos nesta empolgante viagem de aprendizagem!\nRequisitos técnicos: Elixir 1.12 ou superior; Phoenix Framework; Node.js e NPM (para Vue.js); Git; Ambiente de desenvolvimento de sua escolha; Conhecimento básico de programação (preferencialmente em Elixir e JavaScript).",
+        "author": "Emanuel Mota, Pedro Lima e João Martins",
         "location": ""
       },
       {
