@@ -300,15 +300,6 @@
         "location": ""
       },
       {
-        "startTime": "09:00",
-        "endTime": "11:00",
-        "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": ""
-      },
-      {
         "activityType": "Coffee Break",
         "coffeeBreak": true
       },
