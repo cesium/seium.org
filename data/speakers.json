@@ -3,6 +3,18 @@
     "date": "2024/2/6",
     "speakers": [
       {
+        "id": "marcelopereira",
+        "name": "Marcelo Pereira",
+        "role": "Head of Application Security Engineering",
+        "company": "Checkmarx",
+        "talk": "Application Security sem comprometer Developer Efficiency. 12h",
+        "linkedin": "marcgp",
+        "github": "marcgp",
+        "twitter": "",
+        "href": "",
+        "description": "Two decades of wide-ranging experience in designing, developing, and testing mission critical full-stack applications. Strong communicator, able to build and strengthen relationships across functions to drive cohesive, strategic operations. Trained leader capable of mentoring teams to achieve and exceed corporate goals. Multilingual in Portuguese, English, and Spanish languages."
+      },
+      {
         "id": "hurmatzeeshan",
         "name": "Hurmat Zeeshan",
         "role": "DevOps Specialist",
@@ -12,7 +24,7 @@
         "github": "",
         "twitter": "",
         "href": "",
-        "description": " I'm an Advanced App Engineering Specialist from Accenture’s Braga Office. I like to work in  SysOps, DevSecOps and DevOps areas. Relevant experience on AWS, GCP, Azure, Oracle Cloud and Digital Ocean."
+        "description": "I'm an Advanced App Engineering Specialist from Accenture’s Braga Office. I like to work in  SysOps, DevSecOps and DevOps areas. Relevant experience on AWS, GCP, Azure, Oracle Cloud and Digital Ocean."
       },
       {
         "id": "joaotravanca",
