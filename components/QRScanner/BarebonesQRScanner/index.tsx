@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import jsQR from "jsqr";
+import { FEEDBACK, FeedbackType } from "@components/QRScanner";
 
 const CAPTURE_OPTIONS = {
   audio: false,
@@ -7,11 +8,12 @@ const CAPTURE_OPTIONS = {
 };
 
 interface Props {
-  handleCode: (uuid: string) => void;
-  pauseRef: React.MutableRefObject<boolean>;
+  handleQRCode: (uuid: string) => void;
+  pauseScanRef: React.MutableRefObject<boolean>;
+  setScanFeedback?: (scanFeedback: FeedbackType) => void;
 }
 
-const BarebonesQRScanner: React.FC<Props> = ({ handleCode, pauseRef }) => {
+const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setScanFeedback = (_) => {} }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number>();
@@ -90,18 +92,33 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleCode, pauseRef }) => {
         canvas2D.strokeStyle = "#78f400";
         canvas2D.stroke();
 
-        if (!pauseRef.current) {
+        if (!pauseScanRef.current) {
           const uuid = parseURL(code.data);
 
           if (uuid) {
-            pauseRef.current = true;
-            handleCode(uuid);
+            pauseScanRef.current = true;
+            handleQRCode(uuid);
           }
         }
       }
     }
 
     animationFrameRef.current = requestAnimationFrame(drawQRBoundingBox);
+  };
+
+  const parseURL = (url: string) => {
+    try {
+      const url_obj = new URL(url);
+
+      if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) {
+        setScanFeedback(FEEDBACK.INVALID_QR);
+        return null;
+      };
+
+      return url_obj.pathname.split("/").at(-1);
+    } catch {
+      return null;
+    }
   };
 
   return (
@@ -122,13 +139,3 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleCode, pauseRef }) => {
 };
 
 export default BarebonesQRScanner;
-
-const parseURL = (url: string) => {
-  try {
-    const url_obj = new URL(url);
-    if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) return null;
-    return url_obj.pathname.split("/").at(-1);
-  } catch {
-    return null;
-  }
-};

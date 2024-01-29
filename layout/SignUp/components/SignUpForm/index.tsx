@@ -24,13 +24,13 @@ export default function SignUpForm({ courses }) {
   const [course, updateCourse] = useState("");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
-  const [uuid, setUUID] = useState();
+  const [uuid, setUUID] = useState<string | undefined>();
 
   const [local_error, updateError] = useState("");
   const [scanned, updateScanned] = useState(false);
-  const [scanning, updateScanning] = useState(false);
-  const pauseRef = useRef(false);
-  pauseRef.current = false;
+  const [showQRScanner, setShowQRScanner] = useState(false);
+  const pauseScanRef = useRef(false);
+  pauseScanRef.current = false;
 
   const validateNickname = (nickname) => {
     return (
@@ -130,11 +130,11 @@ export default function SignUpForm({ courses }) {
           onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
         />
         <Button
-          title={scanning ? "STOP SCANNING" : "SCAN QR"}
+          title={showQRScanner ? "STOP SCANNING" : "SCAN QR"}
           className="h-12 w-full border-quinary bg-quinary text-secondary"
           onClick={(e) => {
             e.preventDefault();
-            updateScanning(!scanning);
+            setShowQRScanner(!showQRScanner);
           }}
         />
         {scanned && (
@@ -142,13 +142,13 @@ export default function SignUpForm({ courses }) {
             QR Code scanned successfully: {uuid}
           </p>
         )}
-        {scanning && (
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        {showQRScanner && (
+          <div className="fixed top-1/2 left-1/2 max-w-[512px] max-h-[512px] w-full h-full p-2 -translate-x-1/2 -translate-y-1/2">
             <BarebonesQRScanner
-              pauseRef={pauseRef}
-              handleCode={(code) => {
-                pauseRef.current = false;
-                updateScanning(false);
+              pauseScanRef={pauseScanRef}
+              handleQRCode={(code: string) => {
+                pauseScanRef.current = false;
+                setShowQRScanner(false);
                 updateScanned(true);
                 setUUID(code);
               }}

@@ -9,11 +9,11 @@ import QRScanner, { FEEDBACK } from "@components/QRScanner";
 function Prizes() {
   const { user } = useAuth() as { user: IStaff };
   const router = useRouter();
-  const pauseRef = useRef(false);
-  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
-  const [showScanner, setScanner] = useState(true);
+  const pauseScanRef = useRef(false);
+  const [scanFeedback, setScanFeedback] = useState(FEEDBACK.SCANNING);
+  const [showQRScanner, setShowQRScanner] = useState(true);
 
-  const handleUUID = (uuid) => {
+  const handleUUID = (uuid:String) => {
     router.push(`/staff/prizes/${uuid}`);
   };
 
@@ -21,13 +21,14 @@ function Prizes() {
     <Layout title="Prizes" description="Mark a prize as redeemed">
       <div className="mt-5 select-none">
         <QRScanner
-          handleCode={handleUUID}
-          pauseRef={pauseRef}
-          text={user.email}
-          feedback={feedback}
-          showScanner={showScanner}
-          setScanner={setScanner}
-          removeClose={true}
+          topText={user.email}
+          handleQRCode={handleUUID}
+          pauseScanRef={pauseScanRef}
+          scanFeedback={scanFeedback}
+          setScanFeedback={setScanFeedback}
+          showScanner={showQRScanner}
+          setShowScanner={setShowQRScanner}
+          removeCloseButton={true}
         />
       </div>
     </Layout>
