@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import Form from "@components/Form";
 import Input from "@components/Input";
@@ -9,6 +9,7 @@ import Select from "@components/Select";
 import Layout from "@components/Layout";
 import Button from "@components/Button";
 import Heading from "@components/Heading";
+import ResetPassword from "@components/ResetPassword";
 
 import { CheckpointTracker, CodeInput } from "./components";
 import CVInput from "./components/CVInput";
@@ -21,11 +22,14 @@ interface Course {
 }
 
 function Profile({ courses }) {
-  const { user, editUser } = useAuth();
+  const { user, editUser } = useAuth() as {
+    user: IAttendee;
+    editUser: (username: FormData) => void;
+  };
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
-  const [course, setCourse] = useState(user.course || "");
+  const [course, setCourse] = useState(user.course.toString() || "");
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
@@ -53,16 +57,6 @@ function Profile({ courses }) {
   }
 
   const levelEntries = [10, 30, 60, 100, 150];
-
-  const onResetPassword = () => {
-    resetPassword(user.email)
-      .then((_) =>
-        alert(
-          "An email has been sent to your account for you to recover your password"
-        )
-      )
-      .catch((_) => alert("An error occured"));
-  };
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
@@ -172,16 +166,7 @@ function Profile({ courses }) {
               enabled={editing}
               onChange={(e) => setCourse(e.currentTarget.value)}
             />
-
-            <button
-              className="inline-block h-auto select-none pl-6 pb-5 text-quinary underline"
-              onClick={(e) => {
-                e.preventDefault();
-                onResetPassword();
-              }}
-            >
-              Reset Password
-            </button>
+            <ResetPassword user={user} />
           </Form>
         </div>
 

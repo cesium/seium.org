@@ -9,27 +9,15 @@ import ErrorMessage from "@components/ErrorMessage";
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";
 import GoToTop from "@components/GoToTop";
-
-export interface Badges {
-  avatar: string;
-  begin: string;
-  description: string;
-  end: string;
-  id: number;
-  name: string;
-  tokens: number;
-  type: number;
-}
+import { IBadge } from "@context/Auth";
 
 interface UserWithBadges {
-  user: {
-    badges: Badges[];
-  };
+  badges: IBadge[];
 }
 
 function Badgedex() {
-  const { user }: UserWithBadges = useAuth();
-  const [allBadges, updateAllBadges] = useState<Badges[]>([]);
+  const { user } = useAuth() as { user: UserWithBadges };
+  const [allBadges, updateAllBadges] = useState<IBadge[]>([]);
   const [all, updateAll] = useState(true);
   const [filter, updateFilter] = useState(null);
   const [error, setError] = useState();
@@ -83,6 +71,7 @@ function Badgedex() {
           </div>
         </div>
       </div>
+
       <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 text-white xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {currentBadges.map((badge) => (
           <Badge

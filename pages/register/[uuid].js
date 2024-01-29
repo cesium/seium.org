@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion as Motion } from "framer-motion";
 
-import { withoutAuth, useAuth } from "@context/Auth";
+import { useAuth } from "@context/Auth";
 
 import { getCourses } from "@lib/api";
 
@@ -143,4 +143,4 @@ function Register({ courses }) {
   );
 }
 
-export default withoutAuth(Register);
+export default Register;
