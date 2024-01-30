@@ -98,7 +98,7 @@
 }
 
 .clickable:hover .hyperlink {
-  @apply text-primary;
+  @apply font-semibold text-quinary;
 }
 
 .expand {
