@@ -76,9 +76,11 @@
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "TBA",
-        "summary": "",
-        "location": ""
+        "activityType": "Gameshow",
+        "summary": "SEI ou Não SEI",
+        "description": "Put your tech knowledge to good use in our live gameshow SEI ou Não SEI, a jeopardy-style contest where you can test your expertise on IT! The more questions you answer correctly, the more tokens you'll get! And you already know that more tokens = more incredible prizes...",
+        "location": "",
+        "hyperlink": "https://forms.gle/KBKCmk5ZeFDWQtDVA"
       }
     ]
   },
