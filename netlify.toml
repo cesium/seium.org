@@ -5,15 +5,8 @@
 [build.environment]
   NODE_VERSION = "18.12.0"
 
-[context.production.environment]
-  NEXT_PUBLIC_API_URL = "https://sei23-production.herokuapp.com"
-
-[context.deploy-preview.environment]
-  NEXT_PUBLIC_API_URL = "https://sei23-production.herokuapp.com"
-
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-

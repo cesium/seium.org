@@ -1,10 +1,10 @@
-import { useAuth, withAuth } from "@context/Auth";
+import { IAttendee, useAuth, withAuth } from "@context/Auth";
 
 import Layout from "@components/Layout";
 import QRCodeCanvas from "@components/QRCodeCanvas";
 
 function Identifier() {
-  const { user } = useAuth();
+  const { user } = useAuth() as { user: IAttendee };
 
   return (
     <Layout

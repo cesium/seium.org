@@ -3,9 +3,10 @@
 
 import { motion as Motion } from "framer-motion";
 
-import { withoutAuth } from "@context/Auth";
+import { useAuth } from "@context/Auth";
 
 import Card from "@components/Card";
+import { Router, useRouter } from "next/router";
 
 import Return from "@components/Return";
 
@@ -14,6 +15,17 @@ import Text from "@layout/moonstone/authentication/Text";
 import { LoginForm } from "./components";
 
 function Login() {
+  const router = useRouter();
+  const { user } = useAuth();
+
+  if (user) {
+    router.replace(
+      (router.query.from && decodeURIComponent(router.query.from as string)) ??
+        "/"
+    );
+    return null;
+  }
+
   return (
     <div className="min-h-screen select-none overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-20 mt-20 sm:mt-20" />
@@ -46,4 +58,4 @@ function Login() {
   );
 }
 
-export default withoutAuth(Login);
+export default Login;

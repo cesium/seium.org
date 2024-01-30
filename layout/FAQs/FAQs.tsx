@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 
@@ -40,4 +38,4 @@ function Faq() {
   );
 }
 
-export default withoutAuth(Faq);
+export default Faq;

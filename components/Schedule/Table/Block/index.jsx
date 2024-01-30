@@ -42,7 +42,7 @@ function BlockItem({
       </p>
 
       <ul
-        className={`${styles.authors} flex font-iregular text-sm text-gray-400`}
+        className={`${styles.authors} flex font-iregular text-sm text-gray-400 group-hover:text-primary`}
       >
         {author && (
           <li className={styles.listElem}>
@@ -109,7 +109,7 @@ function BlockItem({
   );
 
   return (
-    <div className={skipLink ? "" : styles.clickable}>
+    <div className={`group ${skipLink ? "" : styles.clickable}`}>
       {!skipLink && (
         <Link href={`schedule/#${id}`} className="absolute h-full w-full" />
       )}
