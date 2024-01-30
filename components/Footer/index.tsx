@@ -133,10 +133,10 @@ export default function Footer(props: IFooterProps) {
             <Link href="/docs/survival.pdf" className="hover:underline">
               Survival Guide
             </Link>
-            <Link href="/docs/regulamento.pdf" className="hover:underline">
+            */}
+            <Link href="/docs/regulation.pdf" className="hover:underline">
               General Regulation
             </Link>
-            */}
           </div>
           <div className="flex justify-center lg:justify-end">
             <div className="mt-10 text-white sm:w-1/2 lg:mt-0">
