@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IStaff } from "@context/Auth";
 import { getStaffCV, uploadStaffCV } from "@lib/api";
 import Layout from "@components/Layout";
 import UploadSection from "./components/UploadSection";
 
 function UploadCV() {
-  const { user, setUser } = useAuth();
+  const { user } = useAuth() as { user: IStaff };
   const [staff, setStaff] = useState(null);
 
   useEffect(() => {

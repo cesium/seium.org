@@ -29,10 +29,8 @@ function Register() {
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
 
-  const [courses, setCourses] = useState([
-    { id: "", name: "None" }
-  ]);
-  
+  const [courses, setCourses] = useState([{ id: "", name: "None" }]);
+
   useEffect(() => {
     getCourses().then((response) => {
       setCourses(response.data.concat(courses));

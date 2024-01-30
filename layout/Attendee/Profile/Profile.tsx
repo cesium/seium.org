@@ -31,9 +31,7 @@ function Profile() {
   const [username, setUsername] = useState(user.nickname || "");
   const [course, setCourse] = useState(user.course.toString() || "");
 
-  const [courses, setCourses] = useState<Course[]>([
-    { id: "", name: "None" },
-  ]);
+  const [courses, setCourses] = useState<Course[]>([{ id: "", name: "None" }]);
 
   useEffect(() => {
     getCourses().then((response) => {
