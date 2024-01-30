@@ -11,17 +11,17 @@ import Button from "@components/Button";
 import Heading from "@components/Heading";
 import ResetPassword from "@components/ResetPassword";
 
-import { CheckpointTracker, CodeInput } from "./components";
+import { CheckpointTracker } from "./components";
 import CVInput from "./components/CVInput";
-import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
+import { getCourses } from "@lib/api";
 
 interface Course {
   id: any;
   name: string;
 }
 
-function Profile({ courses }) {
+function Profile() {
   const { user, editUser } = useAuth() as {
     user: IAttendee;
     editUser: (username: FormData) => void;
@@ -30,6 +30,16 @@ function Profile({ courses }) {
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
   const [course, setCourse] = useState(user.course.toString() || "");
+
+  const [courses, setCourses] = useState<Course[]>([
+    { id: "", name: "None" },
+  ]);
+
+  useEffect(() => {
+    getCourses().then((response) => {
+      setCourses(response.data.concat(courses));
+    });
+  }, []);
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
