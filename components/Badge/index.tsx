@@ -39,18 +39,18 @@ const Badge: React.FC<BadgeProps> = ({
         <div className="flex aspect-square w-full select-none items-center justify-center">
           {!badgeLoaded && <BadgeSkeleton />}
 
-          {badge404 &&
-            <img
-              src={"/images/badges/badge-not-found.svg"}
-              alt={name}
-            />
-          }
+          {badge404 && (
+            <img src={"/images/badges/badge-not-found.svg"} alt={name} />
+          )}
 
           <img
             src={avatar}
             alt={name}
             onLoad={() => setBadgeLoaded(true)}
-            onError={() => { setBadge404(true); setBadgeLoaded(true); }}
+            onError={() => {
+              setBadge404(true);
+              setBadgeLoaded(true);
+            }}
             hidden={!badgeLoaded || badge404}
           />
         </div>
