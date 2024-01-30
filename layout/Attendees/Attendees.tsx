@@ -11,10 +11,10 @@ import { getAttendeeByID, getAttendeeByUsername } from "@lib/api";
 
 function Profile() {
   const [attendee, updateAttendee] = useState(null);
-  const [avatar, setAvatar] = useState(null);
+  const [filter, updateFilter] = useState(null);
+
   const router = useRouter();
   const { uuid } = router.query;
-  const [filter, updateFilter] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +36,7 @@ function Profile() {
     };
 
     fetchData();
-  }, [uuid, router, updateAttendee]);
+  }, []);
 
   if (!attendee) return null;
   return (
