@@ -20,7 +20,7 @@ const roleNavigations = {
     "identifier",
   ],
   admin: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
-  staff: ["badges", "leaderboard", "prizes", "identifier"],
+  staff: ["badges", "leaderboard", "prizes", "identifier", "cv"],
 };
 
 type LayoutProps = {

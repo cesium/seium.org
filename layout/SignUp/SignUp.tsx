@@ -16,9 +16,7 @@ interface Course {
 }
 
 function Signup() {
-  const [courses, setCourses] = useState<Course[]>([
-    { id: "", name: "None" },
-  ]);
+  const [courses, setCourses] = useState<Course[]>([{ id: "", name: "None" }]);
 
   useEffect(() => {
     getCourses().then((response) => {

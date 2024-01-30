@@ -41,6 +41,7 @@ export function withAuth(WrappedComponent) {
             "/staff/prizes/[uuid]",
             "/staff/identifier",
             "/staff/leaderboard",
+            "/staff/cv",
             "/attendees/[uuid]",
           ].includes(router.pathname)
         ) {
