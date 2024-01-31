@@ -1,4 +1,4 @@
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import { Prize, Redeemable, Empty } from "./components";
 
@@ -6,7 +6,7 @@ import Layout from "@components/Layout";
 import Balance from "@components/Balance";
 
 function Inventory() {
-  const { user } = useAuth();
+  const { user } = useAuth() as { user: IAttendee };
 
   const items = user.redeemables
     .map((product) => ({ ...product, is_product: true }))

@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import { motion as Motion } from "framer-motion";
 
 import Card from "@components/Card";
@@ -43,4 +41,4 @@ function Reset() {
   );
 }
 
-export default withoutAuth(Reset);
+export default Reset;

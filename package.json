@@ -31,7 +31,6 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
-    "@netlify/plugin-nextjs": "^4.40.1",
     "axios": "^1.6.2",
     "dayjs": "^1.11.10",
     "framer-motion": "^7.5.3",
