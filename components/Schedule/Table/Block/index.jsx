@@ -6,6 +6,7 @@ import { useEffect } from "react";
 function BlockItem({
   id,
   coffeeBreak,
+  lunchBreak,
   startTime,
   endTime,
   activityType,
@@ -17,7 +18,9 @@ function BlockItem({
   detailed,
   hyperlink,
 }) {
-  const skipLink = coffeeBreak || focused;
+  const isBreak = coffeeBreak || lunchBreak;
+
+  const skipLink = isBreak || focused;
 
   const block = (
     <div
@@ -30,19 +33,29 @@ function BlockItem({
         </div>
       )}
 
-      {!coffeeBreak && (
+      {lunchBreak && (
+        <div className="relative float-right mr-5 h-10 w-10">
+          <Image src="/images/lunch.png" layout="fill" alt="Lunch Break" />
+        </div>
+      )}
+
+      {!isBreak && (
         <p className="text-l font-ibold text-white xs:text-xl">
           {startTime}-{endTime}
         </p>
       )}
 
-      <p className={`font-iregular text-xl text-white`}>
+      <p
+        className={`font-iregular text-xl text-white ${
+          isBreak && "flex h-full items-center"
+        }`}
+      >
         <span className="font-ibold">{`${activityType} `}</span>
         {summary}
       </p>
 
       <ul
-        className={`${styles.authors} flex font-iregular text-sm text-gray-400`}
+        className={`${styles.authors} flex font-iregular text-sm text-gray-400 group-hover:text-primary`}
       >
         {author && (
           <li className={styles.listElem}>
@@ -56,19 +69,24 @@ function BlockItem({
       {description && (
         <div
           className={`transition-max-height overflow-hidden duration-300 ${
-            focused ? "max-h-96" : "max-h-0"
+            focused ? "max-h-[38rem]" : "max-h-0"
           }`}
         >
           {description.split("\n").map((text, i) => (
-            <p key={i} className={`mb-2 font-iregular text-lg text-white`}>
+            <p
+              key={i}
+              className={`mb-2 font-iregular text-lg ${
+                focused ? "text-white" : "text-transparent"
+              }`}
+            >
               {text}
             </p>
           ))}
         </div>
       )}
 
-      {!coffeeBreak && <div className="h-20 w-2"></div>}
-      {!coffeeBreak && (
+      {!isBreak && <div className="h-20 w-2"></div>}
+      {!isBreak && (
         <div className="absolute bottom-0 mt-auto w-full py-3">
           <div className="flex flex-wrap justify-center">
             <div className="flex w-auto items-center">
@@ -109,7 +127,7 @@ function BlockItem({
   );
 
   return (
-    <div className={skipLink ? "" : styles.clickable}>
+    <div className={`group ${skipLink ? "" : styles.clickable}`}>
       {!skipLink && (
         <Link href={`schedule/#${id}`} className="absolute h-full w-full" />
       )}

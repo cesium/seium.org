@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 
@@ -35,9 +33,12 @@ function Faq() {
         </div>
       </Navbar>
       <FindUs />
-      <Footer color="primary" />
+      <Footer
+        color="primary"
+        footerAnimationText="A lot of stuff to be revealed yet... 🤫"
+      />
     </>
   );
 }
 
-export default withoutAuth(Faq);
+export default Faq;

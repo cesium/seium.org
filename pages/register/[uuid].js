@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion as Motion } from "framer-motion";
 
-import { withoutAuth, useAuth } from "@context/Auth";
+import { useAuth } from "@context/Auth";
 
 import { getCourses } from "@lib/api";
 
@@ -17,20 +17,7 @@ import PasswordInput from "@components/PasswordInput";
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
 
-export async function getServerSideProps(context) {
-  context.res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=3600, stale-while-revalidate=3600"
-  );
-
-  const courses = await getCourses().then((response) =>
-    response.data.concat({ id: "", name: "None" })
-  );
-
-  return { props: { courses: courses } };
-}
-
-function Register({ courses }) {
+function Register() {
   const { sign_up, errors, isLoading } = useAuth();
   const router = useRouter();
   const { uuid } = router.query;
@@ -41,6 +28,14 @@ function Register({ courses }) {
   const [course, updateCourse] = useState("0");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
+
+  const [courses, setCourses] = useState([{ id: "", name: "None" }]);
+
+  useEffect(() => {
+    getCourses().then((response) => {
+      setCourses(response.data.concat(courses));
+    });
+  }, []);
 
   const onFinish = (e) => {
     e.preventDefault();
@@ -143,4 +138,4 @@ function Register({ courses }) {
   );
 }
 
-export default withoutAuth(Register);
+export default Register;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import * as api from "@lib/api";
 
@@ -11,7 +11,7 @@ import Balance from "@components/Balance";
 import { Product } from "./components";
 
 function Store() {
-  const { user } = useAuth();
+  const { user } = useAuth() as { user: IAttendee };
 
   const [products, setProducts] = useState(null);
 

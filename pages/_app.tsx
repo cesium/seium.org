@@ -3,7 +3,7 @@ import Header from "@components/Header";
 
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <AuthProvider>
       <Header />
@@ -12,4 +12,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default App;

@@ -30,7 +30,7 @@ export default function Challenges() {
           <Challenge
             title={challenges[key].name}
             prizes={challenges[key].prizes}
-            description={challenges[key].descriptions}
+            description={challenges[key].description}
             button={challenges[key].button}
             hrefs={challenges[key].hrefs}
           />
@@ -42,7 +42,7 @@ export default function Challenges() {
                 <Challenge
                   title={challenges[key].name}
                   prizes={challenges[key].prizes}
-                  description={challenges[key].descriptions}
+                  description={challenges[key].description}
                   button={challenges[key].button}
                   hrefs={challenges[key].hrefs}
                   key={key}

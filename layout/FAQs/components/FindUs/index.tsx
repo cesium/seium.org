@@ -5,8 +5,8 @@ const email = "cesium@di.uminho.pt";
 export default function FindUs() {
   return (
     <section className="spacing flex flex-col bg-primary py-20 lg:flex-row lg:justify-between">
-      <div className="mb-10 mr-10 flex flex-col text-white">
-        <h2 className="font-terminal-uppercase mb-2 select-none text-6xl">
+      <div className="z-40 mb-10 mr-10 flex flex-col text-white">
+        <h2 className="font-terminal-uppercase mb-2 select-none text-6xl font-bold">
           How to find us
         </h2>
 

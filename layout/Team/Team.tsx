@@ -1,5 +1,3 @@
-import { withoutAuth } from "@context/Auth";
-
 import { Hero, Organization } from "./components";
 
 import Navbar from "@components/Navbar";
@@ -15,4 +13,4 @@ function Index() {
   );
 }
 
-export default withoutAuth(Index);
+export default Index;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import Heading from "@components/Heading";
 import Button from "@components/Button";
@@ -57,7 +57,10 @@ function WheelPage() {
   const angleSpeed = 20;
   const [st, updateState] = useState(defaultState);
 
-  const { user, refetchUser } = useAuth();
+  const { user, refetchUser } = useAuth() as {
+    user: IAttendee;
+    refetchUser: () => void;
+  };
 
   const [prizes, updatePrizes] = useState([]);
   const [price, updatePrice] = useState(null);
@@ -79,7 +82,6 @@ function WheelPage() {
       .then((response) => updateLatestWins(response.data))
       .catch((_) => updateError(true));
   };
-
   useEffect(requestAllInfo, []);
 
   const canSpin = () => {
@@ -176,7 +178,8 @@ function WheelPage() {
   const latestWinsComponents = latestWins.map((entry, id) => (
     <ListItem3Cols
       key={id}
-      user={entry.attendee_name}
+      user_name={entry.attendee_name}
+      user_nickname={entry.attendee_nickname}
       prize={entry.prize}
       when={displayTimeSince(entry.date)}
       isLast={id == latestWins.length - 1}

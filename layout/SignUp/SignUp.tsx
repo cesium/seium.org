@@ -1,15 +1,29 @@
-import { withoutAuth } from "@context/Auth";
+import { useEffect, useState } from "react";
 
 import { motion as Motion } from "framer-motion";
 
 import Card from "@components/Card";
 import Return from "@components/Return";
 import { SignUpForm } from "./components";
-
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
 
-function Signup({ courses }) {
+import { getCourses } from "@lib/api";
+
+interface Course {
+  id: any;
+  name: string;
+}
+
+function Signup() {
+  const [courses, setCourses] = useState<Course[]>([{ id: "", name: "None" }]);
+
+  useEffect(() => {
+    getCourses().then((response) => {
+      setCourses(response.data.concat(courses));
+    });
+  }, []);
+
   return (
     <div className="min-h-screen select-none overflow-hidden bg-secondary">
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20 mb-6" />
@@ -33,4 +47,4 @@ function Signup({ courses }) {
   );
 }
 
-export default withoutAuth(Signup);
+export default Signup;

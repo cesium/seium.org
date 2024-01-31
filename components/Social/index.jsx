@@ -2,17 +2,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
-  faGithubAlt,
+  faGithub,
   faLinkedinIn,
-  faTwitter
 } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
   return (
-    <div className="mt-4 flex items-center space-x-3 md:space-x-6">
+    <div className="mt-4 flex items-center space-x-3 md:space-x-4">
       <a
-        className="w-5 opacity-50 hover:opacity-100"
+        className="w-5 transition-colors duration-75 ease-in hover:text-quinary"
         href="https://www.instagram.com/sei.uminho"
         target="_blank"
         rel="noreferrer"
@@ -20,7 +20,7 @@ export default function Social() {
         <FontAwesomeIcon icon={faInstagram} />
       </a>
       <a
-        className="w-5 opacity-50 hover:opacity-100"
+        className="w-5 transition-colors duration-75 ease-in hover:text-quinary"
         href="https://www.linkedin.com/company/sei-cesium"
         target="_blank"
         rel="noreferrer"
@@ -28,23 +28,23 @@ export default function Social() {
         <FontAwesomeIcon icon={faLinkedinIn} />
       </a>
       <a
-        className="w-5 opacity-50 hover:opacity-100"
+        className="w-5 transition-colors duration-75 ease-in hover:text-quinary"
         href="https://github.com/cesium/seium.org"
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={faGithubAlt} />
+        <FontAwesomeIcon icon={faGithub} />
       </a>
       <a
-        className="w-5 opacity-50 hover:opacity-100"
-        href="https://twitter.com/cesiuminho"
+        className="w-5 transition-colors duration-75 ease-in hover:text-quinary"
+        href="https://x.com/cesiuminho"
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={faTwitter} />
+        <FontAwesomeIcon icon={faXTwitter} />
       </a>
       <a
-        className="w-5 opacity-50 hover:opacity-100"
+        className="w-5 transition-colors duration-75 ease-in hover:text-quinary"
         href="https://www.facebook.com/SEI.UMinho/"
         target="_blank"
         rel="noreferrer"
@@ -52,7 +52,7 @@ export default function Social() {
         <FontAwesomeIcon icon={faFacebook} />
       </a>
       <a
-        className="w-5 opacity-50 hover:opacity-100"
+        className="w-5 transition-colors duration-75 ease-in hover:text-quinary"
         href="mailto:geral@seium.org"
         target="_blank"
         rel="noreferrer"

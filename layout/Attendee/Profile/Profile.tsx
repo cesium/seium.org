@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import Form from "@components/Form";
 import Input from "@components/Input";
@@ -9,23 +9,35 @@ import Select from "@components/Select";
 import Layout from "@components/Layout";
 import Button from "@components/Button";
 import Heading from "@components/Heading";
+import ResetPassword from "@components/ResetPassword";
 
-import { CheckpointTracker, CodeInput } from "./components";
+import { CheckpointTracker } from "./components";
 import CVInput from "./components/CVInput";
-import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
+import { getCourses } from "@lib/api";
 
 interface Course {
   id: any;
   name: string;
 }
 
-function Profile({ courses }) {
-  const { user, editUser } = useAuth();
+function Profile() {
+  const { user, editUser } = useAuth() as {
+    user: IAttendee;
+    editUser: (username: FormData) => void;
+  };
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
-  const [course, setCourse] = useState(user.course || "");
+  const [course, setCourse] = useState(user.course.toString() || "");
+
+  const [courses, setCourses] = useState<Course[]>([{ id: "", name: "None" }]);
+
+  useEffect(() => {
+    getCourses().then((response) => {
+      setCourses(response.data.concat(courses));
+    });
+  }, []);
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
@@ -53,16 +65,6 @@ function Profile({ courses }) {
   }
 
   const levelEntries = [10, 30, 60, 100, 150];
-
-  const onResetPassword = () => {
-    resetPassword(user.email)
-      .then((_) =>
-        alert(
-          "An email has been sent to your account for you to recover your password"
-        )
-      )
-      .catch((_) => alert("An error occured"));
-  };
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,22 +99,26 @@ function Profile({ courses }) {
       title={`Hello, ${getFirstName(user.name)} 👋`}
       description={`Welcome to your profile!`}
     >
-      <div className="mt-12 grid-cols-2 overflow-hidden">
+      <div className="mt-12 grid-cols-2">
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile">
             <div className="w-auto">
               <Button
                 title={editing ? "Save Changes" : "Edit"}
-                className="w-full items-center border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
+                className="w-full items-center border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-white shadow-sm"
                 type="submit"
                 form="profile-form"
               />
             </div>
           </Heading>
 
-          <Form onSubmit={handleSubmitForm} id="profile-form">
-            <div className="pl-6">
-              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+          <Form
+            onSubmit={handleSubmitForm}
+            id="profile-form"
+            className="flex flex-col justify-center sm:justify-start"
+          >
+            <div className="flex w-auto justify-center pl-0 sm:block sm:w-full sm:pl-6">
+              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white">
                 {photoFileUrl == null ? (
                   <img
                     src="/images/mascot-head.png"
@@ -140,48 +146,43 @@ function Profile({ courses }) {
               </div>
             </div>
 
-            <Input
-              text="NAME"
-              id="name"
-              name="name"
-              value={user.name || ""}
-              bgColor="primary"
-              fgColor="white"
-              enabled={false}
-            />
-            <Input
-              text="USERNAME"
-              id="username"
-              name="username"
-              value={username}
-              bgColor="primary"
-              fgColor="white"
-              enabled={editing}
-              onChange={(e) => setUsername(e.currentTarget.value)}
-            />
-            <Select
-              text="COURSE"
-              id="course"
-              bgColor="primary"
-              fgColor="white"
-              value={course}
-              options={courses.map((course) => ({
-                key: course.id,
-                name: course.name,
-              }))}
-              enabled={editing}
-              onChange={(e) => setCourse(e.currentTarget.value)}
-            />
-
-            <button
-              className="inline-block h-auto select-none pl-6 pb-5 text-quinary underline"
-              onClick={(e) => {
-                e.preventDefault();
-                onResetPassword();
-              }}
-            >
-              Reset Password
-            </button>
+            <div className="w-full sm:w-96">
+              <Input
+                text="NAME"
+                id="name"
+                name="name"
+                value={user.name || ""}
+                bgColor="primary"
+                fgColor="white"
+                enabled={false}
+              />
+              <Input
+                text="USERNAME"
+                id="username"
+                name="username"
+                value={username}
+                bgColor="primary"
+                fgColor="white"
+                enabled={editing}
+                onChange={(e) => setUsername(e.currentTarget.value)}
+              />
+              <Select
+                text="COURSE"
+                id="course"
+                bgColor="primary"
+                fgColor="white"
+                value={course}
+                options={courses.map((course) => ({
+                  key: course.id,
+                  name: course.name,
+                }))}
+                enabled={editing}
+                onChange={(e) => setCourse(e.currentTarget.value)}
+              />
+              <div className="mt-4">
+                <ResetPassword user={user} />
+              </div>
+            </div>
           </Form>
         </div>
 
