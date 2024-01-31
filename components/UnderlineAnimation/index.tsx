@@ -66,7 +66,7 @@ export default function UnderlineAnimation({
   return (
     <span className="relative z-10 inline-block h-auto w-auto">
       <span
-        className="relative z-10 inline-block h-auto border-white md:border-b-8"
+        className="relative z-10 inline-block h-auto border-b-4 border-white md:border-b-8"
         onMouseEnter={() =>
           updateState((oldState) => ({ ...oldState, status: 1 }))
         }

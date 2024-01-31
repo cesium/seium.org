@@ -19,6 +19,7 @@ const navigation = [
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faqs" },
+  { name: "Join Staff", slug: "https://forms.gle/wUPHFsZXP85hHdnEA" },
 ];
 
 const userNavigation = (type) => {
@@ -57,7 +58,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Link href="/">
                     <div className={`${styles.logo} select-none pt-4 lg:pt-8`}>
                       <Image
-                        className="cursor-pointer opacity-60 hover:opacity-100"
+                        className="cursor-pointer transition-colors duration-75 ease-in hover:text-quinary"
                         src="/images/sei-logo.svg"
                         width="50"
                         height="40"
@@ -66,13 +67,13 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </div>
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
-                    <div className="flex select-none">
-                      <div className="mr-6 grid grid-cols-3 gap-y-4 gap-x-20 pt-4">
+                    <div className="flex select-none items-center">
+                      <div className="grid grid-cols-3 gap-y-8 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link
                             key={item.slug}
                             href={item.slug}
-                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                            className="font-iregular text-sm text-white transition-colors duration-75 ease-in hover:text-quinary"
                           >
                             {item.name}
                           </Link>
@@ -145,7 +146,9 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           </Transition>
                         </Menu>
                       ) : (
-                        <JoinUs fgColor={fgColor} button={button} />
+                        <div className="pl-20 pt-4">
+                          <JoinUs fgColor={fgColor} button={button} />
+                        </div>
                       )}
                     </div>
                   </div>
@@ -169,7 +172,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key={item.slug}
                   as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
                   <Link key={item.slug} href={item.slug}>
                     {item.name}
@@ -182,7 +185,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Disclosure.Button
                     key={item.slug}
                     as="a"
-                    className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                    className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                   >
                     <Link key={item.slug} href={item.slug}>
                       {item.name}
@@ -206,7 +209,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key="login"
                   as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
                   <button onClick={() => logout()}>Log Out</button>
                 </Disclosure.Button>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import Link from "next/link";
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +8,7 @@ import {
   faGithubAlt,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 export default function Block({
   id,
@@ -25,7 +25,10 @@ export default function Block({
   const [showSpeaker, setShowSpeaker] = useState(true);
 
   return (
-    <div key={id} className="border-t-2 border-white py-4 text-white">
+    <div
+      key={id}
+      className="border-t-2 border-white py-4 text-white transition-all"
+    >
       <div className="mb-2 flex">
         <div className="w-[210px] select-none">
           <Image
@@ -44,7 +47,7 @@ export default function Block({
               <p className="">{company}</p>
             </div>
 
-            <div className="flex">
+            <div className="ml-4 flex">
               {linkedin && (
                 <a
                   href={`https://www.linkedin.com/in/${linkedin}`}
@@ -75,14 +78,24 @@ export default function Block({
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
               )}
+              {href && (
+                <a
+                  href={`${href}`}
+                  className="mr-3 w-4"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGlobe} />
+                </a>
+              )}
             </div>
           </div>
 
           <div className="z-50 flex select-none items-center justify-end">
-            <p className="grow text-gray-400">{talk}</p>
+            <p className="w-28 grow text-gray-400">{talk}</p>
             {description && (
               <button
-                className="w-16 rounded-full border border-gray-500 bg-tertiary px-2 font-iextrabold text-xl text-white"
+                className="ml-4 w-16 rounded-full border border-gray-500 px-2 font-iextrabold text-xl text-white transition-colors hover:bg-white/20"
                 onClick={() => setShowSpeaker(!showSpeaker)}
               >
                 {showSpeaker ? "+" : "-"}

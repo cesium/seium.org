@@ -2,108 +2,122 @@
   [
     [
       {
-        "image": "subvisual",
-        "link": "https://subvisual.com/"
-      }
-    ],
-    [
+        "image": "accenture",
+        "link": "https://accenture.com/"
+      },
+      {
+        "image": "agentifai",
+        "link": "https://agentifai.com/"
+      },
       {
         "image": "checkmarx",
         "link": "https://checkmarx.com/"
       },
       {
-        "image": "itsector",
-        "link": "http://www.itsector.pt/"
+        "image": "critical-techworks",
+        "link": "https://www.criticaltechworks.com/"
       },
       {
-        "image": "accenture",
-        "link": "https://www.accenture.com/pt-pt"
-      },
-      {
-        "image": "continental",
-        "link": "https://www.continental-pneus.pt"
-      },
-      {
-        "image": "retailconsult",
+        "image": "retail-consult",
         "link": "https://www.retail-consult.com/"
+      },
+      {
+        "image": "uphold",
+        "link": "https://uphold.com/"
       }
     ]
   ],
   [
     [
       {
-        "image": "eurotux",
-        "link": "https://eurotux.com/"
+        "image": "cegid",
+        "link": "https://www.cegid.com/"
       },
       {
-        "image": "glintt",
-        "link": "https://www.glintt.com/pt/Paginas/home.aspx"
+        "image": "codsec",
+        "link": "https://www.codsec.io/"
       },
       {
-        "image": "xpandit",
-        "link": "https://www.xpand-it.com/pt-pt/"
+        "image": "continental",
+        "link": "https://www.continental.com"
       },
       {
         "image": "deloitte",
-        "link": "https://www2.deloitte.com/pt/pt.html"
+        "link": "https://www2.deloitte.com/"
       },
       {
-        "image": "fujitsu",
-        "link": "https://www.fujitsu.com/pt/"
+        "image": "itsector",
+        "link": "https://www.itsector.pt/"
       },
       {
-        "image": "kpmg",
-        "link": "https://home.kpmg/pt/pt/home.html"
+        "image": "mcsonae",
+        "link": "https://mc.sonae.pt/"
       },
       {
-        "image": "bosch",
-        "link": "https://www.bosch.pt/"
+        "image": "optaresolutions",
+        "link": "https://optaresolutions.com/"
       },
       {
-        "image": "farfetch",
-        "link": "https://www.farfetch.com/br/"
-      }
-    ],
-    [
-      {
-        "image": "seegno",
-        "link": "https://seegno.com/"
+        "image": "xpandit",
+        "link": "https://www.xpand-it.com/"
       },
       {
         "image": "yarilabs",
         "link": "https://www.yarilabs.com/"
-      },
+      }
+    ],
+    [
       {
-        "image": "axians",
-        "link": "https://www.axians.pt/"
-      },
-      {
-        "image": "openvia",
-        "link": "https://openvia.io/pt/"
+        "image": "aptiv",
+        "link": "https://www.aptiv.com/"
       },
       {
         "image": "celfocus",
-        "link": "https://celfocus.com/home/"
+        "link": "https://www.celfocus.com/"
       },
       {
-        "image": "konkconsulting",
-        "link": "https://www.konkconsulting.com/EN"
+        "image": "dtx-colab",
+        "link": "https://www.dtx-colab.pt/"
+      },
+      {
+        "image": "eurotux",
+        "link": "https://eurotux.com"
+      },
+      {
+        "image": "ey",
+        "link": "https://www.ey.com/"
+      },
+      {
+        "image": "glintt",
+        "link": "https://www.glintt.com"
+      },
+      {
+        "image": "inovaria",
+        "link": "https://www.inova-ria.pt/"
+      },
+      {
+        "image": "kpmg",
+        "link": "https://kpmg.com"
       },
       {
         "image": "issuu",
         "link": "https://issuu.com/"
       },
       {
-        "image": "cegid",
-        "link": "https://www.cegid.com/pt/"
+        "image": "nttdata",
+        "link": "https://www.nttdata.com/"
       },
       {
-        "image": "saber",
-        "link": "https://saberporto.com/"
+        "image": "openvia",
+        "link": "https://www.openvia.io/"
       },
       {
-        "image": "ey",
-        "link": "https://www.ey.com/"
+        "image": "pixelmatters",
+        "link": "https://www.pixelmatters.com/"
+      },
+      {
+        "image": "seegno",
+        "link": "https://seegno.com/"
       }
     ]
   ]
