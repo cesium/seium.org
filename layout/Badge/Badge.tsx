@@ -51,41 +51,43 @@ const BadgeSlug: React.FC = () => {
   }, [slug]);
 
   return (
-    <Layout
-      title={`${badge?.name} Badge`}
-      description="Check who already has this badge"
-    >
-      <div className="mt-5 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2">
-        <div className="w-full">
-          <Heading text="Badge info" />
-          {badge && (
-            <Badge
-              name={badge.name}
-              id={badge.id}
-              avatar={badge?.avatar}
-              tokens={badge.tokens}
-              owned={badge.attendees.some(
-                (attendee) => attendee.id === user.id
-              )}
-            />
-          )}
-        </div>
+    badge && (
+      <Layout
+        title={`${badge?.name} Badge`}
+        description="Check who already has this badge"
+      >
+        <div className="mt-5 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2">
+          <div className="w-full">
+            <Heading text="Badge info" />
+            {badge && (
+              <Badge
+                name={badge.name}
+                id={badge.id}
+                avatar={badge?.avatar}
+                tokens={badge.tokens}
+                owned={badge.attendees.some(
+                  (attendee) => attendee.id === user.id
+                )}
+              />
+            )}
+          </div>
 
-        <div className="w-full">
-          <Heading text="Owners" />
-          <div className="mt-10">
-            {badge && badge.attendees
-              ? badge.attendees.map(
-                  (attendee, i) =>
-                    i < maxUsersToShow && (
-                      <Owner key={attendee.id} attendee={attendee} />
-                    )
-                )
-              : null}
+          <div className="w-full">
+            <Heading text="Owners" />
+            <div className="mt-10">
+              {badge && badge.attendees
+                ? badge.attendees.map(
+                    (attendee, i) =>
+                      i < maxUsersToShow && (
+                        <Owner key={attendee.id} attendee={attendee} />
+                      )
+                  )
+                : null}
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    )
   );
 };
 
