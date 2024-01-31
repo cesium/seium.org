@@ -53,6 +53,7 @@ const SponsorVisitors: React.FC = () => {
           setVisitors(response.data);
         }
       })
+      // FIXME: This should be displayed as a toast notification
       .catch((error) => console.log(error));
   }, [user]);
 

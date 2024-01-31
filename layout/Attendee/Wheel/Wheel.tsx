@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import Heading from "@components/Heading";
 import Button from "@components/Button";
@@ -57,7 +57,10 @@ function WheelPage() {
   const angleSpeed = 20;
   const [st, updateState] = useState(defaultState);
 
-  const { user, refetchUser } = useAuth();
+  const { user, refetchUser } = useAuth() as {
+    user: IAttendee;
+    refetchUser: () => void;
+  };
 
   const [prizes, updatePrizes] = useState([]);
   const [price, updatePrice] = useState(null);
@@ -79,7 +82,6 @@ function WheelPage() {
       .then((response) => updateLatestWins(response.data))
       .catch((_) => updateError(true));
   };
-
   useEffect(requestAllInfo, []);
 
   const canSpin = () => {
@@ -176,7 +178,8 @@ function WheelPage() {
   const latestWinsComponents = latestWins.map((entry, id) => (
     <ListItem3Cols
       key={id}
-      user={entry.attendee_name}
+      user_name={entry.attendee_name}
+      user_nickname={entry.attendee_nickname}
       prize={entry.prize}
       when={displayTimeSince(entry.date)}
       isLast={id == latestWins.length - 1}
@@ -202,18 +205,20 @@ function WheelPage() {
             <div className="m-auto h-72 w-72 xs:h-80 xs:w-80 sm:h-96 sm:w-96">
               <WheelComponent steps={16} angle={st.angle} />
             </div>
-            <Button
-              className={`${
-                canSpin()
-                  ? "cursor-pointer bg-quinary"
-                  : "bg-gray-400 opacity-50"
-              } mt-10 block h-20 w-64`}
-              disabled={!canSpin()}
-              onClick={spinTheWheel}
-              title="SPIN THE WHEEL"
-              description={`${price} tokens💰`}
-              bold={true}
-            />
+            {price != null && (
+              <Button
+                className={`${
+                  canSpin()
+                    ? "cursor-pointer bg-quinary"
+                    : "bg-gray-400 opacity-50"
+                } mt-10 block h-20 w-64`}
+                disabled={!canSpin()}
+                onClick={spinTheWheel}
+                title="SPIN THE WHEEL"
+                description={`${price} tokens💰`}
+                bold={true}
+              />
+            )}
           </div>
         </div>
         <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">

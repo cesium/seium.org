@@ -80,13 +80,11 @@ export default function Challenge(props: IProps) {
                 ordinal = "th";
             }
             return (
-              <p key={index}>
-                <a
-                  href={props.prizes[index].url}
-                  className="text-iregular text-quinary"
-                >
+              <p key={index} className="text-iregular">
+                <a href={props.prizes[index].url} className="text-quinary">
                   {index + 1}
-                  <sup>{ordinal}</sup> place - {props.prizes[index].name}
+                  <sup className="font-mono">{ordinal}</sup> place -{" "}
+                  {props.prizes[index].name}
                 </a>
               </p>
             );

@@ -27,10 +27,10 @@
       {
         "startTime": "12:00",
         "endTime": "13:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "Application Security sem comprometer Developer Efficiency",
+        "description": "Application Security é um requisito para a proteção de qualquer empresa. Entretanto vemos mais e mais equipas de desenvolvedores a reclamar do \"Result Fatigue\", noise e outros fatores que afetam a produtividade e eficiência. Durante esta talk, vamos focar na troca de experiências e soluções implantadas pela Checkmarx para a implantação de AppSec sem compromisso da eficiência dos desenvolvedores.",
+        "author": "Marcelo Pereira",
         "location": ""
       },
       {
@@ -49,10 +49,10 @@
       {
         "startTime": "15:00",
         "endTime": "16:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Panel Discussion",
+        "summary": "Motivation vs Consistency: Fueling Long-Term Success in Software Engineering",
+        "description": "\"Motivation vs Consistency: Fueling Long-Term Success in Software Engineering\" é o título que vai agitar a SEI’24, e não podíamos estar mais entusiasmados! 🚀\nOs quatro profissionais Nelson Estevão, Ricardo Castro, Diogo Couto e Filipe Cabaço, vão estar presentes para explorar os segredos por trás do sucesso a longo prazo na área da Engenharia Informática. 📈\nMarca na agenda, convida os teus colegas e prepara-te para uma discussão enriquecedora! 🗣️",
+        "author": "Diogo Couto, Filipe Cabaço, Nelson Estevão e Ricardo Castro",
         "location": ""
       },
       {
@@ -62,23 +62,25 @@
       {
         "startTime": "16:30",
         "endTime": "16:45",
-        "activityType": "TBA",
-        "summary": "",
+        "activityType": "Pitch",
+        "summary": "Xpand IT",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
-        "activityType": "TBA",
-        "summary": "",
+        "activityType": "Pitch",
+        "summary": "Retail Consult",
         "location": ""
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "TBA",
-        "summary": "",
-        "location": ""
+        "activityType": "Gameshow",
+        "summary": "SEI ou Não SEI",
+        "description": "Put your tech knowledge to good use in our live gameshow SEI ou Não SEI, a jeopardy-style contest where you can test your expertise on IT! The more questions you answer correctly, the more tokens you'll get! And you already know that more tokens = more incredible prizes...",
+        "location": "",
+        "hyperlink": "https://forms.gle/KBKCmk5ZeFDWQtDVA"
       }
     ]
   },
@@ -92,7 +94,8 @@
         "summary": "Platform Engineering Roadmap & Security Analysis and Vulnerability Management",
         "description": "Platform Engineering Roadmap:\nWorkshop sobre interação autónoma (modo self-service) da atividade de um developer com os serviços tecnológicos da plataforma, necessários para uma determinada aplicação e disponibilização de forma automatizada da aplicação com as componentes de infraestrutura tecnológica subjacentes.\nSecurity Analysis and Vulnerability Management:\nWorkshop de exploração e análise de vulnerabilidades usando a plataforma de virtualização VirtualBox, o Kali Linux e uma máquina alvo vulnerável. O Workshop terá como objetivo experimentar a enumeração de serviços e a deteção e exploração de vulnerabilidades usando ferramentas especificas da distribuição Kali, como o Nmap, Hydra e Metasploit.",
         "author": "José Carlos Alves, Tiago Ferreira, Ricardo Martins e Alfredo França",
-        "location": ""
+        "location": "CP2 - 0.14",
+        "hyperlink": "https://forms.gle/D39byEtHXgsH5B6T8"
       },
       {
         "startTime": "09:00",
@@ -101,7 +104,8 @@
         "summary": "How to protect your web applications. A practical guide from exploring to mitigating it",
         "description": "Organizations all over the world are on a steady path to adopt security by design within their software development and operational processes, as the need for increased levels of security is becoming even more apparent.\nIn this workshop we will explain some basic principles for Secure Development on Web applications, from the actual exploit of some security vulnerabilities to mitigate them.\nWe will also be sharing some tips and best practices on how to implement security measures throughout your software development life cycle (SDLC).",
         "author": "Tiago Pinto",
-        "location": ""
+        "location": "CP2 - 0.15",
+        "hyperlink": "https://forms.gle/M2UZM1Gen3XPmp9j7"
       },
       {
         "startTime": "09:00",
@@ -110,7 +114,8 @@
         "summary": "Code Rumble: #Analytics #FinancialRisk #InterestRateRisk",
         "description": "Join us in this friendly coding competition. In this challenge we’re going to take you through the technical aspects of financial risk and how these reflect the current market conditions in banking, namely the volatility seen in the current interest rates. Bring your own laptop and ensure you have your preferred coding tools installed to write simple algorithms and interact with a REST API!",
         "author": "Cristiano Silva Sousa",
-        "location": ""
+        "location": "CP2 - 0.17",
+        "hyperlink": "https://forms.gle/yxUVA85irP4Bn6VdA"
       },
       {
         "activityType": "Coffee Break",
@@ -154,8 +159,8 @@
       {
         "startTime": "16:30",
         "endTime": "16:45",
-        "activityType": "TBA",
-        "summary": "",
+        "activityType": "Pitch",
+        "summary": "ITSector",
         "location": ""
       },
       {
@@ -176,12 +181,12 @@
       },
       {
         "startTime": "21:00",
-        "endTime": "23:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
+        "endTime": "00:00",
+        "activityType": "Social",
+        "summary": "Corporate Dinner",
+        "description": "With SEI'24, you have a once-in-a-lifetime networking opportunity!\nWith this contest, you'll have access to our Corporate Dinner! Our Gold sponsors will look through the resumes submitted to our Resume Contest, choosing twelve lucky winners. You'll connect with our Gold sponsors' pros and hang out with your peers.",
         "author": "",
-        "location": ""
+        "location": "TBA"
       }
     ]
   },
@@ -192,28 +197,31 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": ""
+        "summary": "Software Supply Chain Security: An Introduction",
+        "description": "Software applications are no longer built entirely from custom code. Instead, they are made up of a complex web of open-source components and libraries, most of which inherit functionality from other third-party sources. The software supply chain is then made up of everything and everyone that touches your code in the software development lifecycle, from application development to the CI/CD pipeline and deployment. Insufficient software security opens the door to potential supply chain attacks, wherein a threat actor seeks to infiltrate an organization's software and cloud environments. In this workshop we will talk about what is software supply chain, examples of real attacks that have taken place and what we can do to mitigate them, with examples and interactive exercises.",
+        "author": "Mónica Casanova, Rui Gomes",
+        "location": "CP2 - 2.03",
+        "hyperlink": "https://forms.gle/3D6zjMc7jRqCjg7W7"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": ""
+        "summary": "How to make an awesome CV?",
+        "description": "Estás preparado para o mercado de trabalho? Vem aprender a enriquecer um CV para impressionares os Recrutadores e teres dicas de como te destacares!",
+        "author": "João Rovira",
+        "location": "CP2 - 1.11",
+        "hyperlink": "https://forms.gle/3HnVHg7Q6aFq7amN7"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": ""
+        "summary": "Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js",
+        "description": "Aprende a criar um jogo dinâmico e interativo explorando Elixir, Phoenix Channels e Vue.js. Vamos dividir em equipas de backend e frontend, onde poderás contribuir para o desenvolvimento de partes específicas do jogo. Não é necessária experiência prévia, apenas conhecimentos básicos de programação. No final, terás um jogo funcional em tempo real. Acompanha-nos nesta empolgante viagem de aprendizagem!\nRequisitos técnicos: Elixir 1.12 ou superior; Phoenix Framework; Node.js e NPM (para Vue.js); Git; Ambiente de desenvolvimento de sua escolha; Conhecimento básico de programação (preferencialmente em Elixir e JavaScript).",
+        "author": "Emanuel Mota, Pedro Lima e João Martins",
+        "location": "CP2 - 1.09",
+        "hyperlink": "https://forms.gle/XC1pXsG9tHJTU4mp8"
       },
       {
         "activityType": "Coffee Break",
@@ -222,10 +230,10 @@
       {
         "startTime": "11:30",
         "endTime": "12:30",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "Decoding the Future: Exploring Bitcoin, Blockchain, and DeFi Innovations",
+        "description": "Unveiling the Crypto Canvas: From Bitcoin Genesis to DeFi Domination. In this talk, we'll demystify the origins and intricacies of Bitcoin, explore the advantages of decentralized networks, delve into various types of blockchains, and finally, navigate the explosive landscape of DeFi as the predominant use case.",
+        "author": "João Folha",
         "location": ""
       },
       {
@@ -257,15 +265,15 @@
       {
         "startTime": "16:30",
         "endTime": "16:45",
-        "activityType": "TBA",
-        "summary": "",
+        "activityType": "Pitch",
+        "summary": "Critical Techworks",
         "location": ""
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
-        "activityType": "TBA",
-        "summary": "",
+        "activityType": "Pitch",
+        "summary": "Continental",
         "location": ""
       },
       {
@@ -288,7 +296,8 @@
         "summary": "Cegid: AI for Business",
         "description": "Perante a constante evolução tecnológica e a competitividade do mercado, as empresas têm de se ajustar constantemente e procurar as melhores e mais inovadoras soluções para os seus produtos. Nesse contexto, a Cegid destaca-se por dedicar recursos de alta qualidade, concentrando-se de maneira proeminente na incorporação da Inteligência Artificial nos seus produtos.\n Entra nesta jornada de IA ao serviço dos utilizadores, explorando exemplos como um ChatBot com linguagem natural e um modelo de Deteção de Anomalias no processamento de salários.",
         "author": "Vítor Ribeiro",
-        "location": ""
+        "location": "CP2 - 0.13",
+        "hyperlink": "https://forms.gle/397C4fA5HQYbhynR8"
       },
       {
         "startTime": "09:00",
@@ -297,16 +306,8 @@
         "summary": "How to build a blockchain in Python",
         "description": "Blockchain é considerado por muitos como a tecnologia revolucionária que estará na base de toda a troca e armazenamento de valor no futuro. Mas será o bicho-de-sete-cabeças que aparenta?\nNeste workshop, procurar-se-á desmistificar esta ideia implementando alguns aspetos chave desta tecnologia em Python. Serão explorados conceitos como hashing, consenso distribuído, entre muitos outros. O tutorial apenas assume alguma familiaridade com linguagens de programação.\nSe sempre tiveste curiosidade sobre blockchain mas nunca tiveste a oportunidade de aprofundar o teu conhecimento sobre os mecanismos fundamentais que a fazem funcionar, este é o momento. Este será o primeiro passo na tua jornada para fazeres parte da revolução financeira que lentamente mas seguramente está a acontecer.",
         "author": "João Folha",
-        "location": ""
-      },
-      {
-        "startTime": "09:00",
-        "endTime": "11:00",
-        "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": ""
+        "location": "CP2 - 0.17",
+        "hyperlink": "https://forms.gle/1dycPqhoavYKH1Dg9"
       },
       {
         "activityType": "Coffee Break",
@@ -315,10 +316,10 @@
       {
         "startTime": "11:30",
         "endTime": "12:30",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
+        "description": "São diários os desafios de qualquer organização no âmbito de engenharia de dados e no desenvolvimento de software. A Critical Techworks, que recentemente abriu um hub em Braga, é uma joint-venture da BMW Group e Critical Software que lida com estes desafios. Nesta talk serão apresentados dois projetos, um maioritariamente desenvolvido em JAVA e outro com o foco em processamento de dados (Process Mining).",
+        "author": "Rita Faria e José Antunes",
         "location": ""
       },
       {
@@ -357,8 +358,8 @@
       {
         "startTime": "16:45",
         "endTime": "17:00",
-        "activityType": "TBA",
-        "summary": "",
+        "activityType": "Pitch",
+        "summary": "Optare Solutions",
         "location": ""
       },
       {

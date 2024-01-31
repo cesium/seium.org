@@ -10,11 +10,19 @@ import Balance from "@components/Balance";
 import Button from "@components/Button";
 import Layout from "@components/Layout";
 
+interface IUserWithBalance {
+  token_balance: number;
+  badge_count: number;
+}
+
 function ProductSlug() {
   // TODO: add type to product
   const [product, updateProduct] = useState<any>({});
   const router = useRouter();
-  const { user, refetchUser } = useAuth();
+  const { user, refetchUser } = useAuth() as {
+    user: IUserWithBalance;
+    refetchUser: () => void;
+  };
 
   const [needsUpdate, updateProductInfo] = useState(false);
 

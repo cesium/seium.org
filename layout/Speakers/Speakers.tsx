@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { withoutAuth } from "@context/Auth";
 
 import { Hero, Schedule } from "./components";
 
@@ -18,4 +17,4 @@ function Speakers() {
   );
 }
 
-export default withoutAuth(Speakers);
+export default Speakers;

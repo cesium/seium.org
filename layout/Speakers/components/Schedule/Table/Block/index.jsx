@@ -47,7 +47,7 @@ export default function Block({
               <p className="">{company}</p>
             </div>
 
-            <div className="flex">
+            <div className="ml-4 flex">
               {linkedin && (
                 <a
                   href={`https://www.linkedin.com/in/${linkedin}`}
@@ -92,10 +92,10 @@ export default function Block({
           </div>
 
           <div className="z-50 flex select-none items-center justify-end">
-            <p className="grow text-gray-400">{talk}</p>
+            <p className="w-28 grow text-gray-400">{talk}</p>
             {description && (
               <button
-                className="w-16 rounded-full border border-gray-500 px-2 font-iextrabold text-xl text-white transition-colors hover:bg-white/20"
+                className="ml-4 w-16 rounded-full border border-gray-500 px-2 font-iextrabold text-xl text-white transition-colors hover:bg-white/20"
                 onClick={() => setShowSpeaker(!showSpeaker)}
               >
                 {showSpeaker ? "+" : "-"}

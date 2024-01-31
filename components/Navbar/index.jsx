@@ -11,6 +11,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "@context/Auth";
 import JoinUs from "@components/JoinUs";
 import styles from "./style.module.css";
+import BackOfficeWrapper from "@components/FeatureFlags/BackOfficeWrapper";
 
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
@@ -30,6 +31,7 @@ const userNavigation = (type) => {
         { name: "Leaderboard", slug: "/staff/leaderboard" },
         { name: "Give Badges", slug: "/staff/badges" },
         { name: "Give Prizes", slug: "/staff/prizes" },
+        { name: "Upload CV", slug: "/staff/cv" },
       ];
     case USER.ROLES.SPONSOR:
       return [
@@ -76,15 +78,17 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             {item.name}
                           </Link>
                         ))}
-                        {/*isAuthenticated ? null : (
-                          <Link
-                            key="login"
-                            href="/login"
-                            className="font-iregular text-sm text-white transition-colors duration-75 ease-in hover:text-quinary"
-                          >
-                            Login
-                          </Link>
-                        )*/}
+                        <BackOfficeWrapper>
+                          {isAuthenticated ? null : (
+                            <Link
+                              key="login"
+                              href="/login"
+                              className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                            >
+                              Login
+                            </Link>
+                          )}
+                        </BackOfficeWrapper>
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
@@ -163,7 +167,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
           </div>
 
           <Disclosure.Panel className={`lg:hidden bg-${bgColor}`}>
-            <div className="relative z-50 min-h-screen select-none object-cover px-2 pt-12">
+            <div className="relative z-50 select-none object-cover px-2 pt-12">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.slug}
@@ -188,17 +192,19 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </Link>
                   </Disclosure.Button>
                 ))}
-              {/*!isAuthenticated && (
-                <Disclosure.Button
-                  key="login"
-                  as="a"
-                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
-                >
-                  <Link key="login" href="/login">
-                    Login
-                  </Link>
-                </Disclosure.Button>
-              )*/}
+              <BackOfficeWrapper>
+                {!isAuthenticated && (
+                  <Disclosure.Button
+                    key="login"
+                    as="a"
+                    className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  >
+                    <Link key="login" href="/login">
+                      Login
+                    </Link>
+                  </Disclosure.Button>
+                )}
+              </BackOfficeWrapper>
               {isAuthenticated && (
                 <Disclosure.Button
                   key="login"

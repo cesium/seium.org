@@ -2,8 +2,7 @@ import { forwardRef, useState } from "react";
 
 import { InputBase, InputDefaultProps } from "@components/Input";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { EyeIcon, EyeOffIcon } from "@heroicons/react/solid";
 
 export default forwardRef<HTMLInputElement, InputDefaultProps>(
   function PasswordInput(
@@ -34,11 +33,17 @@ export default forwardRef<HTMLInputElement, InputDefaultProps>(
           ref={ref}
           {...rest}
         />
-        <FontAwesomeIcon
-          className="mx-2 cursor-pointer"
-          onClick={togglePasswordVisibility}
-          icon={isPasswordVisible ? faEyeSlash : faEye}
-        />
+        {isPasswordVisible ? (
+          <EyeOffIcon
+            className="mx-2 h-5 cursor-pointer"
+            onClick={togglePasswordVisibility}
+          />
+        ) : (
+          <EyeIcon
+            className="mx-2 h-5 cursor-pointer"
+            onClick={togglePasswordVisibility}
+          />
+        )}
       </InputBase>
     );
   }

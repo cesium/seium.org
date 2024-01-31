@@ -3,6 +3,18 @@
     "date": "2024/2/6",
     "speakers": [
       {
+        "id": "marcelopereira",
+        "name": "Marcelo Pereira",
+        "role": "Head of Application Security Engineering",
+        "company": "Checkmarx",
+        "talk": "Application Security sem comprometer Developer Efficiency. 12h",
+        "linkedin": "marcgp",
+        "github": "marcgp",
+        "twitter": "",
+        "href": "",
+        "description": "Two decades of wide-ranging experience in designing, developing, and testing mission critical full-stack applications. Strong communicator, able to build and strengthen relationships across functions to drive cohesive, strategic operations. Trained leader capable of mentoring teams to achieve and exceed corporate goals. Multilingual in Portuguese, English, and Spanish languages."
+      },
+      {
         "id": "hurmatzeeshan",
         "name": "Hurmat Zeeshan",
         "role": "DevOps Specialist",
@@ -12,7 +24,7 @@
         "github": "",
         "twitter": "",
         "href": "",
-        "description": " I'm an Advanced App Engineering Specialist from Accenture’s Braga Office. I like to work in  SysOps, DevSecOps and DevOps areas. Relevant experience on AWS, GCP, Azure, Oracle Cloud and Digital Ocean."
+        "description": "I'm an Advanced App Engineering Specialist from Accenture’s Braga Office. I like to work in  SysOps, DevSecOps and DevOps areas. Relevant experience on AWS, GCP, Azure, Oracle Cloud and Digital Ocean."
       },
       {
         "id": "joaotravanca",
@@ -25,6 +37,54 @@
         "twitter": "",
         "href": "",
         "description": "I'm an Custom Software Engineering Analyst from Accenture’s Braga Office. I like to work in DevOps. Mainly experienced on GCP and Terraform."
+      },
+      {
+        "id": "diogocouto",
+        "name": "Diogo Couto",
+        "role": "Software Engineer",
+        "company": "Kelvin Inc",
+        "talk": "Motivation vs Consistency: Fueling Long-Term Success in Software Engineering. 15h",
+        "linkedin": "djcouto",
+        "github": "djcouto",
+        "twitter": "",
+        "href": "",
+        "description": "At Kelvin, I work as a frontend engineer on a talented team that develops innovative and efficient software solutions for the energy sector."
+      },
+      {
+        "id": "filipecabaco",
+        "name": "Filipe Cabaço",
+        "role": "Software Engineer",
+        "company": "Supabase",
+        "talk": "Motivation vs Consistency: Fueling Long-Term Success in Software Engineering. 15h",
+        "linkedin": "filipecabaco",
+        "github": "filipecabaco",
+        "twitter": "",
+        "href": "https://filipecabaco.com/",
+        "description": "10+ years of experience in multiple contexts and focusing on Elixir for the last 7 years. Currently working at Supabase building Realtime but also releasing some open source libraries with ex_tauri, openapi_generator, francis and francis_htmx.\nEager to learn more and happy to share anything coding related!"
+      },
+      {
+        "id": "nelsonestevao",
+        "name": "Nelson Estevão",
+        "role": "Software Engineer",
+        "company": "Marmela",
+        "talk": "Motivation vs Consistency: Fueling Long-Term Success in Software Engineering. 15h",
+        "linkedin": "nelsonmestevao",
+        "github": "nelsonmestevao",
+        "twitter": "nelsonmestevao",
+        "href": "https://estevao.org",
+        "description": "I’m Nelson, and I am a Software Engineer at Marmela, specializing in Elixir with Phoenix and Phoenix LiveView to build robust and scalable applications that provide exceptional user experiences.\nMy academic background includes a degree in Economics and another in Software Engineering, both from the University of Minho, where I also did a one year specialization in Data Science and Distributed Systems.\nI’m a former President of the Software Engineering Students Association (CeSIUM), and I was an active member since my freshman year and will remain a lifelong associate. I have helped organize multiple editions of our Software Engineering Week (SEI), a five-day event with dozens of talks and a 48 hours hackathon over the weekend. I co-hosted one season of CeSIUM’s Podcast called “Periférico” which is available on most platforms.\nI co-organize the 2020 edition of ENEI, which happened at the Altice Forum Braga with 600 attendees and more than 30 companies. This national conference aims to bring together informatics, computer science and engineering students to learn, socialize and connect with each other and the business world.\nWhile I was an active member of CeSIUM, I have co-lead the CoderDojo at Braga since 2018, an open, non-profit, free movement which aims to teach programming to children and teenagers from 7 to 17.\nBack in 2017, I joined #include <braga>, a volunteering movement that directly impacted the local community through tech. While I was there, I helped organize two editions of Secret Santa, which involved more than 160 children, young and old in disadvantaged social conditions.\nIf you want to chat say hi at @nelsonmestevao or write me an email at nelson@estevao.org."
+      },
+      {
+        "id": "ricardocastro",
+        "name": "Ricardo Castro",
+        "role": "Principal Engineer, SRE",
+        "company": "FanDuel / Blip.pt",
+        "talk": "Motivation vs Consistency: Fueling Long-Term Success in Software Engineering. 15h",
+        "linkedin": "mccricardo",
+        "github": "mccricardo",
+        "twitter": "mccricardo",
+        "href": "https://mccricardo.com/",
+        "description": "Principal Engineer, SRE at FanDuel/Blip.pt. MSc in Computer Science by the University of Porto. CK{AD, A, S} by Cloud Native Computing Foundation (CNCF) | Linux Foundation. {Terraform, Consul, Vault} Associate by HashiCorp. Working daily to build high-performance, reliable and scalable systems. DevOps Porto meetup co-organizer and DevOpsDays Portugal co-organizer. A strong believer in culture and teamwork. Open source passionate, martial arts amateur, and metal lover."
       }
     ]
   },
@@ -60,7 +120,7 @@
         "name": "Ricardo Martins",
         "role": "Security Strategy and Architecture Area Manager",
         "company": "MC Sonae",
-        "talk": "Workshop | Security Analysis and Vulnerability Management 9h",
+        "talk": "Workshop | Security Analysis and Vulnerability Management. 9h",
         "linkedin": "ricardo3tm",
         "github": "",
         "twitter": "",
@@ -72,7 +132,7 @@
         "name": "Alfredo França",
         "role": "Operation Security Coordinator",
         "company": "MC Sonae",
-        "talk": "Workshop | Security Analysis and Vulnerability Management 9h",
+        "talk": "Workshop | Security Analysis and Vulnerability Management. 9h",
         "linkedin": "alfredofranca",
         "github": "",
         "twitter": "",
@@ -181,6 +241,90 @@
     "date": "2024/2/8",
     "speakers": [
       {
+        "id": "monicacasanova",
+        "name": "Mónica Casanova",
+        "role": "Software Developer",
+        "company": "Checkmarx",
+        "talk": "Workshop | Software Supply Chain Security: An Introduction. 9h",
+        "linkedin": "mónica-casanova-339a3a113",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "ruigomes",
+        "name": "Rui Gomes",
+        "role": "Software Team Leader",
+        "company": "Checkmarx",
+        "talk": "Workshop | Software Supply Chain Security: An Introduction. 9h",
+        "linkedin": "ruihgomes",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "joaorovira",
+        "name": "João Rovira",
+        "role": "Talent Acquisition Senior Analyst & Employer Branding",
+        "company": "Accenture",
+        "talk": "Workshop | How to make an awesome CV? 9h",
+        "linkedin": "joaorovira",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "My name is João Rovira and I´m passionate about the Human Resources area! I´ve already had experience in Recruitment and Employer Branding activities in the Tech Industry. I was responsible for all the Employer Branding strategy of Accenture and I´ve recruited about a hundred people for several Tech Roles. \nBesides that, I´ve worked as an HR Consultant and my main responsibilities were related to the Global Design of some HR Departments from Multinational Companies and I got the HR Local and Legal requirements from those HR Departments to map to the Global Templates. One thing that you have to know about me it´s the fact that I´m proud of being a scout for many years because it gave me a lot of interpersonal, leadership, communication, and autonomy skills."
+      },
+      {
+        "id": "emanuelmota",
+        "name": "Emanuel Mota",
+        "role": "CEO",
+        "company": "Yari Labs",
+        "talk": "Workshop | Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js. 9h",
+        "linkedin": "emanuel-mota-7371613",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Entrepreneur and Software Engineer with a degree in Mathematics and Computer Science. During the last 17 years has developed software in a variety of areas, including banking and financial systems, retail, distributed and decentralised systems. With 9 years of banking experience working as both Software Developer and Information Systems Auditor for 2 portuguese banks. Currently focusing extensively on developing technology around cryptocurrencies and blockchain technology applied to financial services."
+      },
+      {
+        "id": "pedrolima",
+        "name": "Pedro Lima",
+        "role": "Software Developer",
+        "company": "Yari Labs",
+        "talk": "Workshop | Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js. 9h",
+        "linkedin": "pedro-lima-1693a7153",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "joaomartins",
+        "name": "João Martins",
+        "role": "Software Developer",
+        "company": "Yari Labs",
+        "talk": "Workshop | Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js. 9h",
+        "linkedin": "joão-martins-bb3142288",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
+        "id": "joaofolha",
+        "name": "João Folha",
+        "role": "Data Scientist",
+        "company": "Uphold",
+        "talk": "Decoding the Future: Exploring Bitcoin, Blockchain, and DeFi Innovations",
+        "linkedin": "joão-folha",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "I've been working as a data scientist at Uphold for the past 3 years. Some of the projects I've worked on include a fraud prevention machine learning model and a crypto research bot using OpenAI's GPT. I've also crafted numerous dashboards and analyses across most of Uphold's product lines. My passion lies in bridging business and data, bringing insightful perspectives to support data-driven decision-making."
+      },
+      {
         "id": "adelinocorreia",
         "name": "Adelino Correia",
         "role": "Manager Information and Communication Systems",
@@ -231,7 +375,31 @@
         "github": "",
         "twitter": "",
         "href": "",
-        "description": "A data driven professional, I thrive when I achieve goals by using my logic, quantitative and problem-solving skills. My experience includes working as a Research Analyst, diving into market data to identify industry trends or to conduct competitive and product expansion strategies. Having also worked in a blockchain/cryptocurrency company, with relevant certifications, I’ve helped companies to improve efficiencies and use data to make smart decisions."
+        "description": "I've been working as a data scientist at Uphold for the past 3 years. Some of the projects I've worked on include a fraud prevention machine learning model and a crypto research bot using OpenAI's GPT. I've also crafted numerous dashboards and analyses across most of Uphold's product lines. My passion lies in bridging business and data, bringing insightful perspectives to support data-driven decision-making."
+      },
+      {
+        "id": "ritafaria",
+        "name": "Rita Faria",
+        "role": "Chief Technical Titan",
+        "company": "Critical TechWorks",
+        "talk": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
+        "linkedin": "rivfaria",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Formada em Engenharia Informática pela Universidade do Minho. Atualmente faz parte da equipa de engenharia da Critical Techworks, empresa responsável pelo desenvolvimento de software de excelência para uma das maiores empresas da área automóvel."
+      },
+      {
+        "id": "joseantunes",
+        "name": "José Antunes",
+        "role": "Data Engineer",
+        "company": "Critical TechWorks",
+        "talk": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
+        "linkedin": "josemantunes",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Licenciado em Engenharia e Gestão de Sistemas de Informação pela Universidade do Minho com 15 anos de experiência diversificada em IT. Atualmente faz parte da equipa de engenharia da Critical Techworks, empresa responsável pelo desenvolvimento de software de excelência para uma das maiores empresas da área automóvel."
       }
     ]
   }

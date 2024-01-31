@@ -38,7 +38,7 @@ documentation](https://nextjs.org/docs/deployment) for more details.
 <img src=".github/brand/cesium-DARK.svg#gh-light-mode-only" width="300">
 <img src=".github/brand/cesium-LIGHT.svg#gh-dark-mode-only" width="300">
 
-Copyright (c) 2023, CeSIUM.
+Copyright (c) 2024, CeSIUM.
 
 This project is licensed under the MIT License - see the [LICENSE][license]
 file for details.
