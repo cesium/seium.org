@@ -83,7 +83,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             <Link
                               key="login"
                               href="/login"
-                              className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                              className="font-iregular text-sm text-white transition-colors duration-75 ease-in hover:text-quinary"
                             >
                               Login
                             </Link>
@@ -91,7 +91,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                         </BackOfficeWrapper>
                       </div>
                       {isAuthenticated ? (
-                        <Menu as="div" className="relative z-50 ml-3">
+                        <Menu as="div" className="relative z-50 ml-20">
                           <div className="py-8">
                             <Menu.Button className="flex max-w-xs items-center rounded-full bg-primary text-sm ring-2 ring-white ring-offset-2 focus:outline-none">
                               <span className="sr-only">Open user menu</span>
@@ -106,6 +106,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                                   <img
                                     src="/images/mascot-head.png"
                                     alt="Mascote"
+                                    className="h-10 w-10 rounded-full"
                                   />
                                 </span>
                               )}
@@ -211,7 +212,9 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   as="a"
                   className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
-                  <button onClick={() => logout()}>Log Out</button>
+                  <button className="uppercase" onClick={() => logout()}>
+                    Log Out
+                  </button>
                 </Disclosure.Button>
               )}
             </div>

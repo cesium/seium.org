@@ -64,7 +64,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
       />
 
       {/* NAVBAR */}
-      <aside className="inset-y-0 hidden w-72 select-none overflow-y-scroll border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
+      <aside className="no-scrollbar inset-y-0 hidden w-72 select-none overflow-y-auto border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
         <div className="flex flex-1">
           <nav className="mt-8 flex flex-col">
             <Link href="/" className="pb-8">
@@ -158,7 +158,7 @@ function MobileNavbar({
             leave="transition ease-in-out duration-300 transform"
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
-            className="z-1 absolute h-full w-full justify-between bg-secondary p-8 "
+            className="z-1 no-scrollbar absolute h-full w-full justify-between overflow-y-scroll bg-secondary p-8 "
           >
             <aside className="flex h-full select-none flex-col justify-between">
               <div>

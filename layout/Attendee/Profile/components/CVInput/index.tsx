@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BookOpenIcon } from "@heroicons/react/solid";
+import { UploadIcon } from "@heroicons/react/solid";
 
 export default function CVInput({ cv, onSubmit }) {
   const [uploading, setUploading] = useState<boolean>(cv == null);
@@ -36,16 +36,24 @@ export default function CVInput({ cv, onSubmit }) {
     <>
       {uploading ? (
         <form onSubmit={handleSubmit} id="cv-form" className="mt-2">
-          <label className="m-auto inline-block w-full cursor-pointer select-none rounded-lg border-2 border-quinary text-center duration-500 hover:bg-quinary hover:opacity-50">
-            <BookOpenIcon className="m-auto h-12 w-12 flex-shrink-0" />
-
-            <input
-              type="file"
-              accept=".pdf"
-              className="hidden"
-              onChange={handleOnFileChange}
-            />
-            {file ? <span>{file.name}</span> : <span>Select PDF File</span>}
+          <label className="m-auto inline-block w-full cursor-pointer select-none rounded-lg border-[2px] border-dashed border-quinary bg-quinary/5 pr-2 text-center duration-500 hover:bg-quinary/10">
+            <div className="py-12">
+              <UploadIcon className="m-auto h-12 w-12 flex-shrink-0" />
+              <input
+                type="file"
+                accept=".pdf"
+                className="hidden"
+                onChange={handleOnFileChange}
+              />
+              {file ? (
+                <span>{file.name}</span>
+              ) : (
+                <span>
+                  <span className="text-quinary">Browse file</span> from your
+                  device
+                </span>
+              )}
+            </div>
           </label>
 
           <div className="mt-4 block">
@@ -71,7 +79,7 @@ export default function CVInput({ cv, onSubmit }) {
           </div>
 
           <input
-            className="m-auto block h-10 w-28 rounded-full bg-quinary font-iregular hover:cursor-pointer"
+            className="m-auto my-4 block h-10 w-28 rounded-full bg-quinary font-iregular hover:cursor-pointer"
             type="submit"
             value="Submit"
             disabled={!consent}
