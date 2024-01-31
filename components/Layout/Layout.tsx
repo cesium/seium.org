@@ -107,7 +107,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
 
       {/* CONTENT */}
       <main className="w-full px-4 pb-6 pt-20 lg:ml-72 lg:px-20">
-        <h2 className="select-none font-ibold text-5xl">{title}</h2>
+        <h2 className="select-none font-ibold text-4xl sm:text-5xl">{title}</h2>
         <p className="mt-2 font-iregular text-lg">{description}</p>
 
         {children}

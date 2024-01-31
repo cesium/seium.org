@@ -118,7 +118,7 @@ function Profile() {
             className="flex flex-col justify-center sm:justify-start"
           >
             <div className="flex w-auto justify-center pl-0 sm:block sm:w-full sm:pl-6">
-              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white">
                 {photoFileUrl == null ? (
                   <img
                     src="/images/mascot-head.png"

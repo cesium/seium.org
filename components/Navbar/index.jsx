@@ -92,7 +92,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-20">
-                          <div className="py-8">
+                          <div className="pt-8 pb-1">
                             <Menu.Button className="flex max-w-xs items-center rounded-full bg-primary text-sm ring-2 ring-white ring-offset-2 focus:outline-none">
                               <span className="sr-only">Open user menu</span>
                               {user?.avatar ? (
