@@ -5,8 +5,8 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedinIn,
-  faGithubAlt,
-  faTwitter,
+  faGithub,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
@@ -65,17 +65,17 @@ export default function Block({
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FontAwesomeIcon icon={faGithubAlt} />
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
               )}
               {twitter && (
                 <a
-                  href={`https://twitter.com/${twitter}`}
+                  href={`https://x.com/${twitter}`}
                   className="mr-3 w-4"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FontAwesomeIcon icon={faTwitter} />
+                  <FontAwesomeIcon icon={faXTwitter} />
                 </a>
               )}
               {href && (
