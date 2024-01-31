@@ -94,7 +94,8 @@
         "summary": "Platform Engineering Roadmap & Security Analysis and Vulnerability Management",
         "description": "Platform Engineering Roadmap:\nWorkshop sobre interação autónoma (modo self-service) da atividade de um developer com os serviços tecnológicos da plataforma, necessários para uma determinada aplicação e disponibilização de forma automatizada da aplicação com as componentes de infraestrutura tecnológica subjacentes.\nSecurity Analysis and Vulnerability Management:\nWorkshop de exploração e análise de vulnerabilidades usando a plataforma de virtualização VirtualBox, o Kali Linux e uma máquina alvo vulnerável. O Workshop terá como objetivo experimentar a enumeração de serviços e a deteção e exploração de vulnerabilidades usando ferramentas especificas da distribuição Kali, como o Nmap, Hydra e Metasploit.",
         "author": "José Carlos Alves, Tiago Ferreira, Ricardo Martins e Alfredo França",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/D39byEtHXgsH5B6T8"
       },
       {
         "startTime": "09:00",
@@ -103,7 +104,8 @@
         "summary": "How to protect your web applications. A practical guide from exploring to mitigating it",
         "description": "Organizations all over the world are on a steady path to adopt security by design within their software development and operational processes, as the need for increased levels of security is becoming even more apparent.\nIn this workshop we will explain some basic principles for Secure Development on Web applications, from the actual exploit of some security vulnerabilities to mitigate them.\nWe will also be sharing some tips and best practices on how to implement security measures throughout your software development life cycle (SDLC).",
         "author": "Tiago Pinto",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/M2UZM1Gen3XPmp9j7"
       },
       {
         "startTime": "09:00",
@@ -112,7 +114,8 @@
         "summary": "Code Rumble: #Analytics #FinancialRisk #InterestRateRisk",
         "description": "Join us in this friendly coding competition. In this challenge we’re going to take you through the technical aspects of financial risk and how these reflect the current market conditions in banking, namely the volatility seen in the current interest rates. Bring your own laptop and ensure you have your preferred coding tools installed to write simple algorithms and interact with a REST API!",
         "author": "Cristiano Silva Sousa",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/yxUVA85irP4Bn6VdA"
       },
       {
         "activityType": "Coffee Break",
@@ -197,7 +200,8 @@
         "summary": "Software Supply Chain Security: An Introduction",
         "description": "Software applications are no longer built entirely from custom code. Instead, they are made up of a complex web of open-source components and libraries, most of which inherit functionality from other third-party sources. The software supply chain is then made up of everything and everyone that touches your code in the software development lifecycle, from application development to the CI/CD pipeline and deployment. Insufficient software security opens the door to potential supply chain attacks, wherein a threat actor seeks to infiltrate an organization's software and cloud environments. In this workshop we will talk about what is software supply chain, examples of real attacks that have taken place and what we can do to mitigate them, with examples and interactive exercises.",
         "author": "Mónica Casanova, Rui Gomes",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/3D6zjMc7jRqCjg7W7"
       },
       {
         "startTime": "09:00",
@@ -206,7 +210,8 @@
         "summary": "How to make an awesome CV?",
         "description": "Estás preparado para o mercado de trabalho? Vem aprender a enriquecer um CV para impressionares os Recrutadores e teres dicas de como te destacares!",
         "author": "João Rovira",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/3HnVHg7Q6aFq7amN7"
       },
       {
         "startTime": "09:00",
@@ -215,7 +220,8 @@
         "summary": "Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js",
         "description": "Aprende a criar um jogo dinâmico e interativo explorando Elixir, Phoenix Channels e Vue.js. Vamos dividir em equipas de backend e frontend, onde poderás contribuir para o desenvolvimento de partes específicas do jogo. Não é necessária experiência prévia, apenas conhecimentos básicos de programação. No final, terás um jogo funcional em tempo real. Acompanha-nos nesta empolgante viagem de aprendizagem!\nRequisitos técnicos: Elixir 1.12 ou superior; Phoenix Framework; Node.js e NPM (para Vue.js); Git; Ambiente de desenvolvimento de sua escolha; Conhecimento básico de programação (preferencialmente em Elixir e JavaScript).",
         "author": "Emanuel Mota, Pedro Lima e João Martins",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/XC1pXsG9tHJTU4mp8"
       },
       {
         "activityType": "Coffee Break",
@@ -290,7 +296,8 @@
         "summary": "Cegid: AI for Business",
         "description": "Perante a constante evolução tecnológica e a competitividade do mercado, as empresas têm de se ajustar constantemente e procurar as melhores e mais inovadoras soluções para os seus produtos. Nesse contexto, a Cegid destaca-se por dedicar recursos de alta qualidade, concentrando-se de maneira proeminente na incorporação da Inteligência Artificial nos seus produtos.\n Entra nesta jornada de IA ao serviço dos utilizadores, explorando exemplos como um ChatBot com linguagem natural e um modelo de Deteção de Anomalias no processamento de salários.",
         "author": "Vítor Ribeiro",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/397C4fA5HQYbhynR8"
       },
       {
         "startTime": "09:00",
@@ -299,7 +306,8 @@
         "summary": "How to build a blockchain in Python",
         "description": "Blockchain é considerado por muitos como a tecnologia revolucionária que estará na base de toda a troca e armazenamento de valor no futuro. Mas será o bicho-de-sete-cabeças que aparenta?\nNeste workshop, procurar-se-á desmistificar esta ideia implementando alguns aspetos chave desta tecnologia em Python. Serão explorados conceitos como hashing, consenso distribuído, entre muitos outros. O tutorial apenas assume alguma familiaridade com linguagens de programação.\nSe sempre tiveste curiosidade sobre blockchain mas nunca tiveste a oportunidade de aprofundar o teu conhecimento sobre os mecanismos fundamentais que a fazem funcionar, este é o momento. Este será o primeiro passo na tua jornada para fazeres parte da revolução financeira que lentamente mas seguramente está a acontecer.",
         "author": "João Folha",
-        "location": ""
+        "location": "",
+        "hyperlink": "https://forms.gle/1dycPqhoavYKH1Dg9"
       },
       {
         "activityType": "Coffee Break",
