@@ -7,6 +7,7 @@ import Footer from "@components/Footer";
 function Home() {
   return (
     <Navbar bgColor="secondary" button="quinary" fgColor="white">
+      {/* FIXME: The parameter could probably be better in some way */}
       <Hero />
       <Schedule />
       <Sponsors />

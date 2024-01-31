@@ -11,6 +11,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "@context/Auth";
 import JoinUs from "@components/JoinUs";
 import styles from "./style.module.css";
+import BackOfficeWrapper from "@components/FeatureFlags/BackOfficeWrapper";
 
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
@@ -76,15 +77,17 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                             {item.name}
                           </Link>
                         ))}
-                        {isAuthenticated ? null : (
-                          <Link
-                            key="login"
-                            href="/login"
-                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
-                          >
-                            Login
-                          </Link>
-                        )}
+                        <BackOfficeWrapper>
+                          {isAuthenticated ? null : (
+                            <Link
+                              key="login"
+                              href="/login"
+                              className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                            >
+                              Login
+                            </Link>
+                          )}
+                        </BackOfficeWrapper>
                       </div>
                       {isAuthenticated ? (
                         <Menu as="div" className="relative z-50 ml-3">
@@ -186,17 +189,19 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </Link>
                   </Disclosure.Button>
                 ))}
-              {!isAuthenticated && (
-                <Disclosure.Button
-                  key="login"
-                  as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
-                >
-                  <Link key="login" href="/login">
-                    Login
-                  </Link>
-                </Disclosure.Button>
-              )}
+              <BackOfficeWrapper>
+                {!isAuthenticated && (
+                  <Disclosure.Button
+                    key="login"
+                    as="a"
+                    className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  >
+                    <Link key="login" href="/login">
+                      Login
+                    </Link>
+                  </Disclosure.Button>
+                )}
+              </BackOfficeWrapper>
               {isAuthenticated && (
                 <Disclosure.Button
                   key="login"
