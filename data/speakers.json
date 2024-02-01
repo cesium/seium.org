@@ -400,6 +400,18 @@
         "twitter": "",
         "href": "",
         "description": "Licenciado em Engenharia e Gestão de Sistemas de Informação pela Universidade do Minho com 15 anos de experiência diversificada em IT. Atualmente faz parte da equipa de engenharia da Critical Techworks, empresa responsável pelo desenvolvimento de software de excelência para uma das maiores empresas da área automóvel."
+      },
+      {
+        "id": "vaniagoncalves",
+        "name": "Vânia Gonçalves",
+        "role": "Research Program Manager",
+        "company": "Cloudflare",
+        "talk": "Securing the Internet in the Quantum Age",
+        "linkedin": "vaniagoncalves",
+        "github": "",
+        "twitter": "",
+        "href": "https://blog.cloudflare.com/author/vania",
+        "description": "Vânia Gonçalves is currently a Research Program Manager at Cloudflare. With over 20 years of international experience in technology, security, digital transformation and research across different industries, she is a passionate and driven leader who aims to leverage technology, research and innovation to create positive social impact. Vânia is also passionate about women’s empowerment, diversity and inclusion and throughout her career dedicates efforts on building a more diverse tech ecosystem while supporting women in tech to step up."
       }
     ]
   }
