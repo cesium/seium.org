@@ -34,7 +34,7 @@ export default function Hero() {
             <Organization />
           </div>
         </div>
-        <div className="mt-20 grid md:grid md:grid-cols-2">
+        <div className="relative mt-20 grid md:grid md:grid-cols-2">
           <ExpectList />
           <div className="h-20 md:hidden"></div> {/* just spacing */}
           <Pitch />
