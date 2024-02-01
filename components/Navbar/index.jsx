@@ -19,7 +19,6 @@ const navigation = [
   { name: "Challenges", slug: "/challenges" },
   { name: "Speakers", slug: "/speakers" },
   { name: "FAQs", slug: "/faqs" },
-  { name: "Join Staff", slug: "https://forms.gle/wUPHFsZXP85hHdnEA" },
 ];
 
 const userNavigation = (type) => {
@@ -198,7 +197,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Disclosure.Button
                     key="login"
                     as="a"
-                    className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                    className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                   >
                     <Link key="login" href="/login">
                       Login
