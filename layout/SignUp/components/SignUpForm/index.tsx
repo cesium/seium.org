@@ -9,6 +9,8 @@ import Select from "@components/Select";
 import PasswordInput from "@components/PasswordInput";
 
 import BarebonesQRScanner from "@components/QRScanner/BarebonesQRScanner";
+import Checkbox from "@components/Checkbox";
+import Link from "next/link";
 
 interface Course {
   id: any;
@@ -29,6 +31,8 @@ export default function SignUpForm({ courses }) {
   const [local_error, updateError] = useState("");
   const [scanned, updateScanned] = useState(false);
   const [scanning, updateScanning] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
   const pauseRef = useRef(false);
   pauseRef.current = false;
 
@@ -36,7 +40,7 @@ export default function SignUpForm({ courses }) {
     return (
       nickname.length >= 2 &&
       nickname.length <= 15 &&
-      nickname.match(/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-)[a-zA-Z0-9])*[a-zA-Z0-9]+$/)
+      nickname.match(/^[\w\d-_]{3,15}$/)
     );
   };
 
@@ -57,6 +61,8 @@ export default function SignUpForm({ courses }) {
       );
     } else if (!validatePassword(password)) {
       updateError("Your password must be at least 8 characters long");
+    } else if (!termsAccepted) {
+      updateError("You must accept the privacy policy and general regulation");
     } else {
       updateError("");
 
@@ -137,6 +143,19 @@ export default function SignUpForm({ courses }) {
             updateScanning(!scanning);
           }}
         />
+        <Checkbox
+          selected={termsAccepted}
+          onChange={(e) => setTermsAccepted(!termsAccepted)}
+        >
+          I have read and understood the &nbsp;
+          <Link href="/docs/privacy_policy.pdf" className="text-quinary">
+            privacy policy
+          </Link>{" "}
+          and the &nbsp;
+          <Link href="/docs/regulation.pdf" className="text-quinary">
+            general regulation
+          </Link>
+        </Checkbox>
         {scanned && (
           <p className="mt-3 font-iregular text-lg text-quinary">
             QR Code scanned successfully: {uuid}
