@@ -148,7 +148,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                         </Menu>
                       ) : (
                         <div className="pl-20 pt-4">
-                          <JoinUs fgColor={fgColor} button={button} />
+                          <JoinUs />
                         </div>
                       )}
                     </div>

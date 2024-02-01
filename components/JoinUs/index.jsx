@@ -1,4 +1,4 @@
-export default function JoinUs(props) {
+export default function JoinUs() {
   return (
     <a
       href="https://sei24.eventbrite.pt"
