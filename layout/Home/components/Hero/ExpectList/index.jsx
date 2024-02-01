@@ -1,6 +1,6 @@
 export default function ExpectList() {
   return (
-    <div className="mt-20 w-3/5 text-white sm:mt-0">
+    <div className="mt-20 text-white sm:mt-0">
       <h3 className="md:text5xl font-terminal-uppercase select-none text-4xl">
         What you can expect:
       </h3>

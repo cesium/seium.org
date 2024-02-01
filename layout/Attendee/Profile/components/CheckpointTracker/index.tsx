@@ -4,7 +4,7 @@ function Step({ count, progress, checkpoints }) {
   return (
     <div
       className={`${count < progress ? "bg-quinary" : "bg-white"}
-              border-white ${count != 0 ? "border-l" : ""} ${
+              border-quinary ${count != 0 ? "border-l" : ""} ${
         count != checkpoints - 1 ? "border-r" : ""
       } float-left h-full`}
       style={{ width: w }}

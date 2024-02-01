@@ -3,12 +3,16 @@
     "title": "Main Organization",
     "list": [
       {
-        "avatar": "beatrizrodrigues.png",
-        "name": "Beatriz Rodrigues"
+        "avatar": "gustavopereira.jpg",
+        "name": "Gustavo Pereira"
       },
       {
-        "avatar": "goncalorodrigues.png",
-        "name": "Gonçalo Rodrigues"
+        "avatar": "mariorodrigues.jpg",
+        "name": "Mário Rodrigues"
+      },
+      {
+        "avatar": "ruioliveira.jpg",
+        "name": "Rui Oliveira"
       }
     ]
   },
@@ -16,24 +20,32 @@
     "title": "Marketing",
     "list": [
       {
-        "avatar": "gabrielaprata.png",
-        "name": "Gabriela Prata"
-      },
-      {
-        "avatar": "gustavopereira.png",
-        "name": "Gustavo Pereira"
-      },
-      {
-        "avatar": "alexandreneves.png",
-        "name": "Alexandre Neves"
-      },
-      {
-        "avatar": "adrianafrazao.png",
+        "avatar": "adrianafrazao.jpg",
         "name": "Adriana Frazão"
       },
       {
-        "avatar": "juliopinto.png",
+        "avatar": "placeholder.png",
+        "name": "Eduardo Faria"
+      },
+      {
+        "avatar": "juliopinto.jpg",
         "name": "Júlio Pinto"
+      },
+      {
+        "avatar": "lararegina.jpg",
+        "name": "Lara Regina"
+      },
+      {
+        "avatar": "rafaelseara.jpg",
+        "name": "Rafael Seara"
+      },
+      {
+        "avatar": "ricardolucena.jpg",
+        "name": "Ricardo Lucena"
+      },
+      {
+        "avatar": "ritacamacho.jpg",
+        "name": "Rita Camacho"
       }
     ]
   },
@@ -41,12 +53,20 @@
     "title": "Program",
     "list": [
       {
-        "avatar": "millenafreitas.png",
-        "name": "Millena Freitas"
+        "avatar": "fernandopires.jpg",
+        "name": "Fernando Pires"
       },
       {
-        "avatar": "ritavaz.png",
-        "name": "Rita Vaz"
+        "avatar": "martimferreira.jpg",
+        "name": "Martim Ferreira"
+      },
+      {
+        "avatar": "pedrosousa.jpg",
+        "name": "Pedro Sousa"
+      },
+      {
+        "avatar": "salomefaria.jpg",
+        "name": "Salomé Faria"
       }
     ]
   },
@@ -54,15 +74,11 @@
     "title": "Sponsorships",
     "list": [
       {
-        "avatar": "dianateixeira.png",
-        "name": "Diana Teixeira"
+        "avatar": "placeholder.png",
+        "name": "Flávia Araújo"
       },
       {
-        "avatar": "afonsomagalhaes.png",
-        "name": "Afonso Magalhães"
-      },
-      {
-        "avatar": "franciscotoldy.png",
+        "avatar": "franciscotoldy.jpg",
         "name": "Francisco Toldy"
       }
     ]
@@ -71,36 +87,24 @@
     "title": "Tech",
     "list": [
       {
-        "avatar": "filipefelicio.png",
-        "name": "Filipe Felicio"
+        "avatar": "darioguimaraes.jpg",
+        "name": "Dário Guimarães"
       },
       {
-        "avatar": "ruioliveira.png",
-        "name": "Rui Oliveira"
-      },
-      {
-        "avatar": "ruilopes.png",
-        "name": "Rui Lopes"
-      },
-      {
-        "avatar": "tiagobacelar.png",
-        "name": "Tiago Bacelar"
-      },
-      {
-        "avatar": "arturleite.png",
-        "name": "Artur Leite"
-      },
-      {
-        "avatar": "guilhermefernandes.png",
-        "name": "Guilherme Fernandes"
-      },
-      {
-        "avatar": "enzovieira.png",
+        "avatar": "enzovieira.jpg",
         "name": "Enzo Vieira"
       },
       {
-        "avatar": "mariorodrigues.png",
-        "name": "Mário Rodrigues"
+        "avatar": "joaolobo.jpg",
+        "name": "João Lobo"
+      },
+      {
+        "avatar": "ruilopes.jpg",
+        "name": "Rui Lopes"
+      },
+      {
+        "avatar": "tiagobacelar.jpg",
+        "name": "Tiago Bacelar"
       }
     ]
   },
@@ -108,21 +112,12 @@
     "title": "Merch",
     "list": [
       {
-        "avatar": "gersonjunior.png",
-        "name": "Gerson Júnior"
-      }
-    ]
-  },
-  "media": {
-    "title": "Media",
-    "list": [
-      {
-        "avatar": "rafaellopes.png",
-        "name": "Rafael Lopes"
+        "avatar": "zitaduarte.jpg",
+        "name": "Zita Duarte"
       },
       {
-        "avatar": "pedrogil.png",
-        "name": "Pedro Gil"
+        "avatar": "miguelgramoso.jpg",
+        "name": "Miguel Gramoso"
       }
     ]
   }

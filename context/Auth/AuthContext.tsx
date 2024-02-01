@@ -101,7 +101,6 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     if (user) {
-      console.log(user);
       setAuthenticated(true);
     } else {
       setAuthenticated(false);

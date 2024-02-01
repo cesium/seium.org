@@ -17,20 +17,7 @@ import PasswordInput from "@components/PasswordInput";
 import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
 
-export async function getServerSideProps(context) {
-  context.res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=3600, stale-while-revalidate=3600"
-  );
-
-  const courses = await getCourses().then((response) =>
-    response.data.concat({ id: "", name: "None" })
-  );
-
-  return { props: { courses: courses } };
-}
-
-function Register({ courses }) {
+function Register() {
   const { sign_up, errors, isLoading } = useAuth();
   const router = useRouter();
   const { uuid } = router.query;
@@ -41,6 +28,14 @@ function Register({ courses }) {
   const [course, updateCourse] = useState("0");
   const [password, updatePassword] = useState("");
   const [password_confirmation, updatePasswordConfirmation] = useState("");
+
+  const [courses, setCourses] = useState([{ id: "", name: "None" }]);
+
+  useEffect(() => {
+    getCourses().then((response) => {
+      setCourses(response.data.concat(courses));
+    });
+  }, []);
 
   const onFinish = (e) => {
     e.preventDefault();
