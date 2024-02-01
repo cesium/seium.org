@@ -55,7 +55,7 @@ function BlockItem({
       </p>
 
       <ul
-        className={`${styles.authors} flex font-iregular text-sm text-gray-400 group-hover:text-primary`}
+        className={`${styles.authors} flex font-iregular text-sm text-gray-400`}
       >
         {author && (
           <li className={styles.listElem}>
