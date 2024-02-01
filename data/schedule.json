@@ -338,10 +338,10 @@
       {
         "startTime": "15:00",
         "endTime": "16:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
+        "activityType": "Talk",
+        "summary": "Securing the Internet in the Quantum Age",
+        "description": "This talk explores the imminent challenge posed by quantum computing to current cryptographic systems and delves into the emerging field of post-quantum cryptography to secure the Internet. The presentation aims to provide a succinct overview of how cryptography is evolving to safeguard the Internet in the quantum era, offering insights into ongoing research and industry initiatives dedicated to ensuring the resilience of digital communication in the face of quantum threats.",
+        "author": "Vânia Gonçalves",
         "location": ""
       },
       {

@@ -1,9 +1,9 @@
 [
   {
-    "id": "filipesantiago",
-    "name": "Filipe Santiago",
-    "job": "Software Engineer",
-    "company": "Aston Martin F1 Team"
+    "id": "adelinocorreia",
+    "name": "Adelino Correia",
+    "job": "Manager Information and Communication Systems",
+    "company": "INL"
   },
   {
     "id": "alekseykladov",
@@ -12,16 +12,16 @@
     "company": "TigerBeetle"
   },
   {
-    "id": "adelinocorreia",
-    "name": "Adelino Correia",
-    "job": "Manager Information and Communication Systems",
-    "company": "INL"
+    "id": "filipesantiago",
+    "name": "Filipe Santiago",
+    "job": "Software Engineer",
+    "company": "Aston Martin F1 Team"
   },
   {
-    "id": "tba",
-    "name": "To be announced",
-    "job": "",
-    "company": ""
+    "id": "vaniagoncalves",
+    "name": "Vânia Gonçalves",
+    "job": "Research Program Manager",
+    "company": "Cloudflare"
   },
   {
     "id": "tba",
