@@ -164,13 +164,6 @@
         "location": ""
       },
       {
-        "startTime": "16:45",
-        "endTime": "17:00",
-        "activityType": "TBA",
-        "summary": "",
-        "location": ""
-      },
-      {
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
@@ -323,6 +316,13 @@
         "location": ""
       },
       {
+        "startTime": "12:30",
+        "endTime": "12:45",
+        "activityType": "Pitch",
+        "summary": "AgentifAI",
+        "location": ""
+      },
+      {
         "activityType": "Lunch Break",
         "lunchBreak": true
       },
@@ -347,13 +347,6 @@
       {
         "activityType": "Coffee Break",
         "coffeeBreak": true
-      },
-      {
-        "startTime": "16:30",
-        "endTime": "16:45",
-        "activityType": "TBA",
-        "summary": "",
-        "location": ""
       },
       {
         "startTime": "16:45",
