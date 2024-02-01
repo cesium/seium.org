@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { IAttendee, withAuth } from "@context/Auth";
+import { withAuth } from "@context/Auth";
 
 import Badge from "@components/Badge";
 import BadgeFilter from "@components/BadgeFilter";
