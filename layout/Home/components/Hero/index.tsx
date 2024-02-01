@@ -11,7 +11,7 @@ import SpotlightShape from "@components/SpotlightShape";
 
 export default function Hero() {
   const { isAuthenticated } = useAuth();
-  
+
   return (
     <div className="mt-2">
       <SpotlightShape />

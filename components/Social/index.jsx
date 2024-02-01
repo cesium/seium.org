@@ -5,7 +5,7 @@ import {
   faGithub,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
