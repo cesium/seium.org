@@ -1,4 +1,4 @@
-import { Hero, Sponsors, Hackathon, Speakers, Partners } from "./components";
+import { Hero, Sponsors, Speakers, Partners } from "./components";
 
 import Navbar from "@components/Navbar";
 import Schedule from "@components/Schedule";
