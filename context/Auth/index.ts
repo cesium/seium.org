@@ -1,7 +1,9 @@
 export type {
   IBadge,
   IPrize,
+  IRedeemable,
   IAbstractUser,
+  IPublicAttendee,
   IAttendee,
   IStaff,
   ISponsor,

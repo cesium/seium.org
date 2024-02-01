@@ -6,39 +6,50 @@ import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import { useAuth } from "@context/Auth";
+import { IStaff, IUser, useAuth } from "@context/Auth";
 import { ROLES } from "@lib/user";
 
 // FIXME: normalize user type between moonstone and safira
 const basePaths = {
   [ROLES.SPONSOR]: "sponsor",
   [ROLES.ATTENDEE]: "attendee",
-  [ROLES.ADMIN]: "admin",
   [ROLES.STAFF]: "staff",
 };
 
-const roleNavigations = {
-  [ROLES.SPONSOR]: ["scanner", "visitors"],
-  [ROLES.ATTENDEE]: [
-    "profile",
-    "wheel",
-    "badgedex",
-    "leaderboard",
-    "store",
-    "inventory",
-    "identifier",
-  ],
-  [ROLES.STAFF]: ["leaderboard", "badges", "prizes", "identifier", "cv"],
-  [ROLES.ADMIN]: [
-    "leaderboard",
-    "badges",
-    "prizes",
-    "identifier",
-    "badgehistory",
-    "redeemhistory",
-    "spotlight",
-  ],
-};
+const roleNavigation = (user: IUser) => {
+  switch (user.type) {
+    case ROLES.SPONSOR:
+      return ["scanner", "visitors"];
+
+    case ROLES.ATTENDEE:
+      return [
+        "profile",
+        "wheel",
+        "badgedex",
+        "leaderboard",
+        "store",
+        "inventory",
+        "identifier",
+      ];
+
+    case ROLES.STAFF:
+      return [
+        "leaderboard",
+        "badges",
+        "prizes",
+        "identifier",
+        "cv",
+        ...((user as IStaff).is_admin ? [
+          "badgehistory",
+          "redeemhistory",
+          "spotlight",
+        ] : [])
+      ];
+
+    default:
+      throw new Error(`Unknown USER TYPE: ${user.type}`);
+  }
+}
 
 type LayoutProps = {
   title?: string;
@@ -54,7 +65,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
   const router = useRouter();
 
   const currentHref = router.asPath;
-  const links = roleNavigations[user.type];
+  const links = roleNavigation(user);
   const basePath = basePaths[user.type];
 
   const openNavbar = () => {

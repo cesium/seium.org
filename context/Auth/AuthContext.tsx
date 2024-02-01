@@ -28,12 +28,21 @@ export interface IPrize {
   not_redeemed: number;
 }
 
+export interface IRedeemable {
+  id: number;
+  image: string;
+  name: string;
+  not_redeemed: number;
+  price: number;
+  quantity: number;
+}
+
 export interface IAbstractUser {
   email: string;
   type: string;
 }
 
-export interface IAttendee extends IAbstractUser {
+export interface IPublicAttendee {
   avatar: string | null;
   badge_count: number;
   badges: IBadge[];
@@ -44,12 +53,15 @@ export interface IAttendee extends IAbstractUser {
   name: string;
   nickname: string;
   prizes: IPrize[];
-  redeemables: IPrize[];
+  redeemables: IRedeemable[];
   token_balance: number;
 }
 
+export interface IAttendee extends IAbstractUser, IPublicAttendee {}
+
 export interface IStaff extends IAbstractUser {
   id: number;
+  is_admin: boolean;
 }
 
 export interface ISponsor extends IAbstractUser {

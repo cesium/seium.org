@@ -43,6 +43,11 @@ export function withAuth(WrappedComponent) {
             "/staff/leaderboard",
             "/staff/cv",
             "/attendees/[uuid]",
+            ...(user.is_admin ? [
+              "/staff/badgehistory",
+              "/staff/redeemhistory",
+              "/staff/spotlight",
+            ] : [])
           ].includes(router.pathname)
         ) {
           router.replace("/404");
@@ -60,23 +65,6 @@ export function withAuth(WrappedComponent) {
         ) {
           router.replace("/404");
           return null;
-        }
-        break;
-      case USER.ROLES.ADMIN:
-        if (
-          ![
-            "/admin/badges",
-            "/admin/prizes",
-            "/admin/prizes/[uuid]",
-            "/admin/identifier",
-            "/admin/leaderboard",
-            "/admin/badgehistory",
-            "/admin/redeemhistory",
-            "/admin/spotlight",
-            "/attendees/[uuid]",
-          ].includes(router.pathname)
-        ) {
-          return router.replace("/404");
         }
         break;
     }

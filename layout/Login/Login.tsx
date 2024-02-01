@@ -14,15 +14,29 @@ import Title from "@layout/moonstone/authentication/Title";
 import Text from "@layout/moonstone/authentication/Text";
 import { LoginForm } from "./components";
 
+function decodePathname(from : string | string[]) {
+  if (from) {
+    const pathname : string = typeof from === "string" ? from : from[0];
+    try {
+      return decodeURIComponent(pathname as string).replace(/\[|\]/i,"");
+    } catch (e) {
+      if (!(e instanceof URIError)) {
+        throw e;
+      }
+    }
+  }
+
+  return "/";
+}
+
 function Login() {
   const router = useRouter();
   const { user } = useAuth();
 
   if (user) {
-    router.replace(
-      (router.query.from && decodeURIComponent(router.query.from as string)) ??
-        "/"
-    );
+    router.replace({
+       pathname: decodePathname(router.query.from)
+    });
     return null;
   }
 

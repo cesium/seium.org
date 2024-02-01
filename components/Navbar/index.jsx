@@ -21,8 +21,8 @@ const navigation = [
   { name: "FAQs", slug: "/faqs" },
 ];
 
-const userNavigation = (type) => {
-  switch (type) {
+const userNavigation = (user) => {
+  switch (user.type) {
     case USER.ROLES.ATTENDEE:
       return [{ name: "Dashboard", slug: "/attendee/profile" }];
     case USER.ROLES.STAFF:
@@ -31,23 +31,17 @@ const userNavigation = (type) => {
         { name: "Give Badges", slug: "/staff/badges" },
         { name: "Give Prizes", slug: "/staff/prizes" },
         { name: "Upload CV", slug: "/staff/cv" },
+        ...(user.is_admin ? [
+          { name: "Manage Spotlight", slug: "/staff/spotlight" },
+        ] : [])
       ];
     case USER.ROLES.SPONSOR:
       return [
         { name: "Scanner", slug: "/sponsor/scanner" },
         { name: "Visitors", slug: "/sponsor/visitors" },
       ];
-    case USER.ROLES.ADMIN:
-      return [
-        { name: "Leaderboard", slug: "/admin/leaderboard" },
-        { name: "Give Badges", slug: "/admin/badges" },
-        { name: "Give Prizes", slug: "/admin/prizes" },
-        { name: "History", slug: "/admin/badgehistory" },
-        { name: "Activate Spotlight", slug: "/admin/spotlight" },
-      ];
-
     default:
-      throw new Error(`Unknown USER TYPE: ${type}`);
+      throw new Error(`Unknown USER TYPE: ${user.type}`);
   }
 };
 
@@ -130,7 +124,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           >
                             <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                               {user &&
-                                userNavigation(user.type).map((item) => (
+                                userNavigation(user).map((item) => (
                                   <Menu.Item key={item.name}>
                                     <Link
                                       href={item.slug}
@@ -189,7 +183,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
               ))}
               {isAuthenticated &&
                 user &&
-                userNavigation(user.type).map((item) => (
+                userNavigation(user).map((item) => (
                   <Disclosure.Button
                     key={item.slug}
                     as="a"
