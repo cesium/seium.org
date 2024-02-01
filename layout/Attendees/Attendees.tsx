@@ -38,12 +38,18 @@ function Profile() {
     fetchData();
   }, []);
 
+  const getAttendeeDisplayName = (attendee): string => {
+    if (attendee.name.endsWith("s")) {
+      return `${attendee.name}'`;
+    }
+
+    return `${attendee.name}'s`;
+  };
+
   if (!attendee) return null;
+
   return (
-    <Layout
-      title={`Welcome to ${attendee.name}'s profile!`}
-      description={`Welcome to your profile!`}
-    >
+    <Layout title={`Welcome to ${getAttendeeDisplayName(attendee)} profile!`}>
       <div className="mt-12 grid-cols-2 overflow-hidden">
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile"></Heading>
