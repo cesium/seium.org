@@ -12,26 +12,26 @@ import { Machine } from "./components";
 function Slots() {
   const [isSpinning, setIsSpinning] = useState(false);
   const [bet, setBet] = useState(null);
-  const machineRef = useRef(null);
+  const machineRef = useRef<any>(null);
 
-  const { user, refetchUser } = useAuth() as {
+  const { user } = useAuth() as {
     user: IAttendee;
     refetchUser: () => void;
   };
 
-  const spinReels = () => {
+  const spinReels = async () => {
     console.log("====================================");
     console.log("HAS: " + user.token_balance);
     console.log("BET: " + bet);
     if (bet != null && bet > 0 && bet <= user.token_balance) {
       user.token_balance -= bet;
       setIsSpinning(true);
-      spinSlots(bet).then((response) => {
-        console.log(response);
-        setIsSpinning(false);
-        user.token_balance += response.tokens;
-        console.log("NOW HAS: " + user.token_balance);
-      });
+      const response = await spinSlots(bet);
+      await machineRef.current.rollAll(response.multiplier);
+      console.log(response);
+      setIsSpinning(false);
+      user.token_balance += response.tokens;
+      console.log("NOW HAS: " + user.token_balance);
     }
   };
 
@@ -47,7 +47,7 @@ function Slots() {
           <Machine ref={machineRef} />
         </div>
         <div className="row-start-2">
-          <div className="flex select-none rounded-full ring-2 ring-quinary">
+          <div className="m-auto flex w-64 select-none rounded-full ring-2 ring-quinary">
             <input
               value={bet}
               onChange={(e) => setBet(e.target.value.replace(/[^0-9]/g, ""))}
@@ -55,7 +55,7 @@ function Slots() {
               placeholder="Tokens"
             ></input>
             <Button
-              className="block h-16 w-24 cursor-pointer bg-quinary text-primary/40"
+              className="block h-16 w-full cursor-pointer bg-quinary text-primary/40"
               disabled={false}
               onClick={spinSlots}
               title="MAX"

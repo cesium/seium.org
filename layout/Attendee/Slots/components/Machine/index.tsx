@@ -1,4 +1,7 @@
-import { useRef } from "react";
+import { forwardRef, useRef, useImperativeHandle } from "react";
+import slots from "@data/slots.json";
+
+// TODO: Refactor 
 
 // Width of the icons
 var icon_width = 79,
@@ -11,8 +14,82 @@ var icon_width = 79,
   // Holds icon indexes
   indexes = [0, 0, 0];
 
-export default function Machine() {
+interface MachineProps {
+  
+}
+
+interface MachineRef {
+  rollAll: (multiplier: any) => Promise<void>;
+}
+
+// Get a random target that corresponds to the multiplier
+const getReelsTarget = (multiplier) => {
+  const combinations = slots.multipliers[multiplier];
+  return combinations[Math.floor(Math.random() * combinations.length)];
+}
+
+const Machine = forwardRef<MachineRef, MachineProps>((props, ref) => {
   const machineRef = useRef(null);
+
+  const rollAll = (multiplier) => {
+    return new Promise<void>(resolve => {
+
+      console.log("HAS RECEIVED: " + multiplier);
+      const reelsList = document.querySelectorAll(".slots > .reel");
+      const reelsTarget = getReelsTarget(multiplier);
+      const promises = [];
+
+      for (let i = 0; i < reelsList.length; i++) {
+        promises.push(roll(reelsList[i], i, reelsTarget[i]));
+      }
+
+      Promise.all(promises).then(() => {
+        resolve();
+      });
+    })
+  }
+
+  const roll = (reel, offset = 0, target) => {
+    // Minimum of 2 + the reel offset rounds
+    const delta = (offset + 2) * num_icons + Math.round(Math.random() * num_icons);
+
+    // Return promise so we can wait for all reels to finish
+    return new Promise((resolve, reject) => {
+      const style = getComputedStyle(reel),
+        // Current background position
+        backgroundPositionY = parseFloat(style["background-position-y"]),
+        // Target background position
+        targetBackgroundPositionY = backgroundPositionY + delta * icon_height,
+        // Normalized background position, for reset
+        normTargetBackgroundPositionY =
+          targetBackgroundPositionY % (num_icons * icon_height);
+  
+      // Delay animation with timeout, for some reason a delay in the animation property causes stutter
+      setTimeout(() => {
+        // Set transition properties ==> https://cubic-bezier.com/#.41,-0.01,.63,1.09
+        reel.style.transition = `background-position-y ${
+          (8 + 1 * delta) * time_per_icon
+        }ms cubic-bezier(.41,-0.01,.63,1.09)`;
+        // Set background position
+        reel.style.backgroundPositionY = `${
+          backgroundPositionY + delta * icon_height
+        }px`;
+      }, offset * 150);
+  
+      // After animation
+      setTimeout(() => {
+        // Reset position, so that it doesn't get higher without limit
+        reel.style.transition = `none`;
+        reel.style.backgroundPositionY = `${normTargetBackgroundPositionY}px`;
+        // Resolve this promise
+        resolve(delta % num_icons);
+      }, (8 + 1 * delta) * time_per_icon + offset * 150);
+    });
+  };
+
+  useImperativeHandle(ref, () => ({
+    rollAll: (multiplier) => rollAll(multiplier)
+  }));
 
   return (
     <div ref={machineRef}>
@@ -130,56 +207,6 @@ export default function Machine() {
         */}
     </div>
   );
-}
+});
 
-/**
- * Roll one reel
- */
-const roll = (reel, offset = 0) => {
-  // Minimum of 2 + the reel offset rounds
-  const delta =
-    (offset + 2) * num_icons + Math.round(Math.random() * num_icons);
-
-  // Return promise so we can wait for all reels to finish
-  return new Promise((resolve, reject) => {
-    const style = getComputedStyle(reel),
-      // Current background position
-      backgroundPositionY = parseFloat(style["background-position-y"]),
-      // Target background position
-      targetBackgroundPositionY = backgroundPositionY + delta * icon_height,
-      // Normalized background position, for reset
-      normTargetBackgroundPositionY =
-        targetBackgroundPositionY % (num_icons * icon_height);
-
-    // Delay animation with timeout, for some reason a delay in the animation property causes stutter
-    setTimeout(() => {
-      // Set transition properties ==> https://cubic-bezier.com/#.41,-0.01,.63,1.09
-      reel.style.transition = `background-position-y ${
-        (8 + 1 * delta) * time_per_icon
-      }ms cubic-bezier(.41,-0.01,.63,1.09)`;
-      // Set background position
-      reel.style.backgroundPositionY = `${
-        backgroundPositionY + delta * icon_height
-      }px`;
-    }, offset * 150);
-
-    // After animation
-    setTimeout(() => {
-      // Reset position, so that it doesn't get higher without limit
-      reel.style.transition = `none`;
-      reel.style.backgroundPositionY = `${normTargetBackgroundPositionY}px`;
-      // Resolve this promise
-      resolve(delta % num_icons);
-    }, (8 + 1 * delta) * time_per_icon + offset * 150);
-  });
-};
-
-function rollAll() {
-  const reelsList = document.querySelectorAll(".slots > .reel");
-
-  for (let i = 0; i < reelsList.length; i++) {
-    roll(reelsList[i], i);
-  }
-}
-
-setTimeout(rollAll, 1000);
+export default Machine;
