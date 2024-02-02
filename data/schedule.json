@@ -6,19 +6,13 @@
         "startTime": "10:00",
         "endTime": "11:00",
         "activityType": "Opening Session",
-        "summary": "",
-        "description": "",
-        "author": "",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "11:00",
         "endTime": "11:30",
         "activityType": "Prizes and Contests",
-        "summary": "",
-        "description": "",
-        "author": "",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -31,7 +25,7 @@
         "summary": "Application Security sem comprometer Developer Efficiency",
         "description": "Application Security é um requisito para a proteção de qualquer empresa. Entretanto vemos mais e mais equipas de desenvolvedores a reclamar do \"Result Fatigue\", noise e outros fatores que afetam a produtividade e eficiência. Durante esta talk, vamos focar na troca de experiências e soluções implantadas pela Checkmarx para a implantação de AppSec sem compromisso da eficiência dos desenvolvedores.",
         "author": "Marcelo Pereira",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
@@ -44,7 +38,7 @@
         "summary": "READY! SET! CLOUD!",
         "description": "Generic to advanced discussion on multiple topics (automation & security) by considering multiple cloud providers.\nApplication of DevOps in our modern world, pros and cons.",
         "author": "Hurmat Zeeshan, João Travanca",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",
@@ -53,7 +47,7 @@
         "summary": "Motivation vs Consistency: Fueling Long-Term Success in Software Engineering",
         "description": "\"Motivation vs Consistency: Fueling Long-Term Success in Software Engineering\" é o título que vai agitar a SEI’24, e não podíamos estar mais entusiasmados! 🚀\nOs quatro profissionais Nelson Estevão, Ricardo Castro, Diogo Couto e Filipe Cabaço, vão estar presentes para explorar os segredos por trás do sucesso a longo prazo na área da Engenharia Informática. 📈\nMarca na agenda, convida os teus colegas e prepara-te para uma discussão enriquecedora! 🗣️",
         "author": "Diogo Couto, Filipe Cabaço, Nelson Estevão e Ricardo Castro",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -64,14 +58,14 @@
         "endTime": "16:45",
         "activityType": "Pitch",
         "summary": "Xpand IT",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
         "summary": "Retail Consult",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "17:00",
@@ -79,7 +73,7 @@
         "activityType": "Gameshow",
         "summary": "SEI ou Não SEI",
         "description": "Put your tech knowledge to good use in our live gameshow SEI ou Não SEI, a jeopardy-style contest where you can test your expertise on IT! The more questions you answer correctly, the more tokens you'll get! And you already know that more tokens = more incredible prizes...",
-        "location": "",
+        "location": "CP2 - B1",
         "hyperlink": "https://forms.gle/KBKCmk5ZeFDWQtDVA"
       }
     ]
@@ -128,7 +122,7 @@
         "summary": "Tech behind Trends: Da Ideia à Prateleira",
         "description": "Conheces o termo “fast-fashion”? Já pensaste como algumas das marcas mais famosas do planeta conseguem lançar coleções completas em apenas semanas?\n  Vem conhecer a tecnologia por detrás deste negócio e como revoluciona e otimiza o processo do ciclo de vida dos artigos de moda: garantindo uma colaboração eficiente, centralizando informações o otimizando processos, desde a conceção até ao armazém.",
         "author": "Paulo Lopes",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
@@ -141,7 +135,7 @@
         "summary": "Como o software ajuda numa equipa de Fórmula 1",
         "description": "A composição de uma equipa de Fórmula 1 é algo bastante complexo e subdividido em diversos departamentos. Cada um deles é suportado por software desenhado à medida tendo em conta as necessidades, os desenvolvimentos ou as ideias futuristas requisitadas por algum dos génios envolvido em todo o processo.\n Há uma grande necessidade de software resiliente e rápido que possa responder a todas as questões em pequenas frações de tempo como uma paragem nas boxes. O maior desafio é lidar com uma grande quantidade de dados em tempo real e em simulação em simultâneo.\n O papel de um developer é entender um pouco de cada área para que possa dar com resolver com mais efectividade as questões e necessidades do utilizador. Seja na área de UX/UI seja no desenvolvimento de outra interface para suprir as constantes evoluções no regulamento.\n Os bons padrões de desenvolvimento são essenciais e fazem toda a diferença quando o assunto é evitar problemas quando há uma equipa completa na pista do outro lado do mundo, num fuso-horário completamente diferente.",
         "author": "Filipe Santiago",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",
@@ -150,7 +144,7 @@
         "summary": "Os videojogos como opção de carreira",
         "description": "Os videojogos como opção de carreira.\nNuma indústria em crescimento, competitiva e onde competências de engenharia são um activo precioso, parece que por cá ficamos aquém do resto da europa no que diz respeito a apostas em carreiras nos videojogos.",
         "author": "Ricardo Mota",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -161,7 +155,7 @@
         "endTime": "16:45",
         "activityType": "Pitch",
         "summary": "ITSector",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "17:00",
@@ -170,7 +164,7 @@
         "summary": "O Futuro Universitário com a Inteligência Artificial",
         "description": "É isso mesmo, estamos a falar da Inteligência Artificial! Com avanços cada vez mais rápidos, esta tecnologia traz um futuro incerto, com muito para explorar. Quatro docentes da UMinho juntam-se para debater O Futuro Universitário com a Inteligência Artificial numa tertúlia SEI-sacional! Junta-te aos professores José Carlos Ramalho, José Nuno Oliveira, Bruno Fernandes e Orlando Belo para ficares a conhecer mais sobre esse tema tão pertinente.",
         "author": "Bruno Fernandes, José Carlos Ramalho, José Nuno Oliveira e Orlando Belo",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "21:00",
@@ -178,8 +172,7 @@
         "activityType": "Social",
         "summary": "Corporate Dinner",
         "description": "With SEI'24, you have a once-in-a-lifetime networking opportunity!\nWith this contest, you'll have access to our Corporate Dinner! Our Gold sponsors will look through the resumes submitted to our Resume Contest, choosing twelve lucky winners. You'll connect with our Gold sponsors' pros and hang out with your peers.",
-        "author": "",
-        "location": "TBA"
+        "location": "Restaurante do Museu D. Diogo de Sousa"
       }
     ]
   },
@@ -227,7 +220,7 @@
         "summary": "Decoding the Future: Exploring Bitcoin, Blockchain, and DeFi Innovations",
         "description": "Unveiling the Crypto Canvas: From Bitcoin Genesis to DeFi Domination. In this talk, we'll demystify the origins and intricacies of Bitcoin, explore the advantages of decentralized networks, delve into various types of blockchains, and finally, navigate the explosive landscape of DeFi as the predominant use case.",
         "author": "João Folha",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
@@ -240,7 +233,7 @@
         "summary": "A Firewall morreu!",
         "description": "The Firewall is DEAD! – A SASE tale\nNos últimos anos, a interação entre pessoas e tecnologia sofreu uma profunda alteração: a informação, recursos e serviços e o seu consumo e processamento, deslocalizou-se, quer geograficamente quer a nível dos dispositivos utilizados. É comum, ao dia de hoje, as organizações terem uma força de trabalho geograficamente dispersa, sendo que em muitas situações os colaboradores trabalham fora das instalações da empresa de forma regular e a própria informação e serviços estão também dispersos. O trabalho colaborativo passou também a acontecer de forma deslocalizada e em tempo real, seja pela utilização de serviços Cloud para processamento de informação, seja pela utilização de diversos canais de comunicação.\n A tradicional arquitetura de segurança de informação não consegue ser ágil na proteção de dados neste tipo de contextos; o Edge já não é apenas a ligação da rede corporativa á internet ou aos serviços a consumir e, esses mesmos serviços, já não estão apenas no Data Center. Hoje, cada utilizador e cada serviço é um Edge, e deve ser tratado como tal, removendo toda a confiança tácita em dispositivos ou utilizadores e utilizando critérios de compliance e comportamentais para entregar um serviço a um utilizador.\n Com esta apresentação, iremos mostrar como uma arquitetura SASE (Secure Access Service Edge) pode simplificar o workflow de trabalho numa organização, garantindo ao mesmo tempo a qualidade de serviço e a segurança da informação em qualquer geografia ou dispositivo.",
         "author": "Adelino Correia",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",
@@ -249,7 +242,7 @@
         "summary": "Modern Systems Programming: Rust and Zig",
         "description": "Systems programming is changing: after a relatively calm period dominated by ANSI C and C++98, a new era was heralded by C++11, Rust, and Zig. Unthinkable happened --- Linux kernel admitted a second language in addition to C. Safety and security requirements are much more strict now, but they are matched by advances in language design.\n In this lecture, we will look at a snapshot of systems programming landscape as of early 2024 through the lens of Rust and Zig --- the two most innovative languages of the recent years.",
         "author": "Aleksey Kladov",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -260,14 +253,14 @@
         "endTime": "16:45",
         "activityType": "Pitch",
         "summary": "Critical Techworks",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
         "summary": "Continental",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "21:00",
@@ -314,14 +307,14 @@
         "summary": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
         "description": "São diários os desafios de qualquer organização no âmbito de engenharia de dados e no desenvolvimento de software. A Critical Techworks, que recentemente abriu um hub em Braga, é uma joint-venture da BMW Group e Critical Software que lida com estes desafios. Nesta talk serão apresentados dois projetos, um maioritariamente desenvolvido em JAVA e outro com o foco em processamento de dados (Process Mining).",
         "author": "Rita Faria e José Antunes",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "12:30",
         "endTime": "12:45",
         "activityType": "Pitch",
         "summary": "AgentifAI",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
@@ -343,7 +336,7 @@
         "summary": "Securing the Internet in the Quantum Age",
         "description": "This talk explores the imminent challenge posed by quantum computing to current cryptographic systems and delves into the emerging field of post-quantum cryptography to secure the Internet. The presentation aims to provide a succinct overview of how cryptography is evolving to safeguard the Internet in the quantum era, offering insights into ongoing research and industry initiatives dedicated to ensuring the resilience of digital communication in the face of quantum threats.",
         "author": "Vânia Gonçalves",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -354,16 +347,13 @@
         "endTime": "17:00",
         "activityType": "Pitch",
         "summary": "Optare Solutions",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "17:00",
         "endTime": "18:30",
-        "activityType": "",
-        "summary": "Closing Session and Prize Announcements 🏆",
-        "description": "",
-        "author": "",
-        "location": ""
+        "activityType": "Closing Session and Prize Announcements 🏆",
+        "location": "CP2 - B1"
       }
     ]
   }
