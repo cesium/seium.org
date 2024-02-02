@@ -272,10 +272,11 @@
       {
         "startTime": "21:00",
         "endTime": "00:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "location": ""
+        "activityType": "Social",
+        "summary": "Movie Night",
+        "description": "In collaboration with the incredible team at CineFOCUM, you will have an unforgettable movie night! We will be screening the movie Ex Machina (2014), a thrilling science fiction film that will leave you on the edge of your seat. Join us for a night of fun and great company!\n⚠️ Limited to 50 seats. Enroll yourself now!",
+        "location": "Building 7 - 1.06",
+        "hyperlink": ""
       }
     ]
   },
