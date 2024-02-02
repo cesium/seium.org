@@ -13,11 +13,11 @@ import styles from "./style.module.css";
 function DefaultAnimation() {
   return (
     <span>
-      Psst. Have you checked out the{" "}
-      <Link href="/faqs" className="text-primary underline">
-        FAQs
-      </Link>
-      &nbsp;yet? Just saying.
+      Psst. Have you checked the{" "}
+      <Link href="/challenges" className="text-primary underline">
+        challenges?
+      </Link>{" "}
+      Just saying.
     </span>
   );
 }
