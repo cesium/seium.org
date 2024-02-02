@@ -188,6 +188,17 @@
         "description": "Apaixonado por tecnologia e pelo desporto motorizado, o Filipe encontrou a fórmula 1 como a união perfeita dos dois mundos."
       },
       {
+        "id": "ricardomota",
+        "name": "Ricardo Mota",
+        "role": "Communications Manager",
+        "company": "PUBG",
+        "linkedin": "ricardo-mota-0b82123",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": "Ricardo Mota entrou no mundo dos videojogos através da escrita, escrevendo críticas de videojogos e eventos gaming para o Fraglíder e, posteriormente, o Rubber Chicken Games. Colaborou com a organização de eventos dedicados aos videojogos e foi um dos co-fundadores e organizadores do Indie X. Começou com o ensino em ações de formação e daí passou a lecionar sobre videojogos no IPMAIA e na Universidade Lusófona. Trabalhou como Relações Públicas e Community Manager na Bigmoon Studios e atualmente trabalha como Communications Manager para a KRAFTON, no estúdio da PUBG no Porto."
+      },
+      {
         "id": "brunofernandes",
         "name": "Bruno Fernandes",
         "role": "Professor and Researcher",
