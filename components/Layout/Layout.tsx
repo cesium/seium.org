@@ -2,25 +2,50 @@ import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import { useAuth } from "@context/Auth";
+import { IStaff, IUser, useAuth } from "@context/Auth";
+import { ROLES } from "@lib/user";
 
-const roleNavigations = {
-  sponsor: ["scanner", "visitors"],
-  attendee: [
-    "profile",
-    "wheel",
-    "badgedex",
-    "leaderboard",
-    "store",
-    "inventory",
-    "identifier",
-  ],
-  admin: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
-  staff: ["badges", "leaderboard", "prizes", "identifier", "cv"],
+// FIXME: Normalize user type between moonstone and safira
+const basePahts = {
+  [ROLES.ATTENDEE]: "attendee",
+  [ROLES.SPONSOR]: "sponsor",
+  [ROLES.STAFF]: "staff",
+};
+
+const roleNavigation = (user: IUser) => {
+  switch (user.type) {
+    case ROLES.SPONSOR:
+      return ["scanner", "visitors"];
+
+    case ROLES.ATTENDEE:
+      return [
+        "profile",
+        "wheel",
+        "badgedex",
+        "leaderboard",
+        "store",
+        "inventory",
+        "identifier",
+      ];
+
+    case ROLES.STAFF:
+      return [
+        "leaderboard",
+        "badges",
+        "prizes",
+        "identifier",
+        "cv",
+        ...((user as IStaff).is_admin ? ["spotlights"] : []),
+      ];
+
+    default:
+      throw new Error(`Unknown USER TYPE: ${user.type}`);
+  }
 };
 
 type LayoutProps = {
@@ -33,24 +58,15 @@ type LayoutProps = {
 
 export default function Layout({ title, description, children }: LayoutProps) {
   const { user, logout } = useAuth();
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const router = useRouter();
 
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const openNavbar = () => setIsNavbarOpen(true);
+  const closeNavbar = () => setIsNavbarOpen(false);
+
   const currentHref = router.asPath;
-  // FIXME: normalize user type between moonstone and safira
-  const links =
-    user.type === "company"
-      ? roleNavigations["sponsor"]
-      : roleNavigations[user.type];
-  const basePath = user.type === "company" ? "sponsor" : user.type;
-
-  const openNavbar = () => {
-    setIsNavbarOpen(true);
-  };
-
-  const closeNavbar = () => {
-    setIsNavbarOpen(false);
-  };
+  const links = roleNavigation(user);
+  const basePath = basePahts[user.type];
 
   return (
     <div className="text-white lg:flex">
@@ -116,14 +132,14 @@ export default function Layout({ title, description, children }: LayoutProps) {
   );
 }
 
-interface IMobileNavbarProps {
+type IMobileNavbarProps = {
   isOpen: boolean;
   links: string[];
   currentHref: string;
   basePath: string;
   onClose: () => void;
   onLogout: () => void;
-}
+};
 
 function MobileNavbar({
   isOpen,
@@ -204,11 +220,11 @@ function MobileNavbar({
   );
 }
 
-interface IActiveLinkProps {
+type IActiveLinkProps = {
   link: string;
   href: string;
   basePath: string;
-}
+};
 
 function ActiveLink({ link, href, basePath }: IActiveLinkProps) {
   const activeStyle = href === `/${basePath}/${link}` && "text-quinary";

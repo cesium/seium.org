@@ -43,6 +43,7 @@ export function withAuth(WrappedComponent) {
             "/staff/leaderboard",
             "/staff/cv",
             "/attendees/[uuid]",
+            ...(user.is_admin ? ["/staff/spotlights"] : []),
           ].includes(router.pathname)
         ) {
           router.replace("/404");
