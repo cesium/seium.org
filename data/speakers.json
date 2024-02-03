@@ -413,6 +413,18 @@
         "description": "Licenciado em Engenharia e Gestão de Sistemas de Informação pela Universidade do Minho com 15 anos de experiência diversificada em IT. Atualmente faz parte da equipa de engenharia da Critical Techworks, empresa responsável pelo desenvolvimento de software de excelência para uma das maiores empresas da área automóvel."
       },
       {
+        "id": "brunocarvalho",
+        "name": "Bruno Carvalho",
+        "role": "Software Engineer",
+        "company": "AgentifAI",
+        "talk": "Decoding AI Language Models: From Turing’s Dream to Today’s Reality. 14h",
+        "linkedin": "brunocarvalho17",
+        "github": "",
+        "twitter": "",
+        "href": "",
+        "description": ""
+      },
+      {
         "id": "vaniagoncalves",
         "name": "Vânia Gonçalves",
         "role": "Research Program Manager",
