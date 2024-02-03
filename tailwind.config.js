@@ -5,14 +5,14 @@ function fromTo(start, end) {
 }
 
 function concatFlatMap(first, ...args) {
-  var ans = Array.isArray(first) ? first.map((i) => i.toString()) : [first.toString()];
-  for (a in args) {
-    if (Array.isArray(a)) {
-      ans = ans.flatMap((i) => ans.map((s) => s + i.toString()), a);
-    } else {
-      ans.map((s) => s + a.toString());
-    }
-  }
+  const list = Array.isArray(first) ? first : [first];
+  var ans = list.map((i) => i.toString());
+
+  args.forEach((a) => {
+    const list = Array.isArray(a) ? a : [a];
+    ans = list.flatMap((i) => ans.map((s) => s + i.toString()));
+  });
+
   return ans;
 }
 

@@ -8,9 +8,9 @@ export enum Align {
 
 export function alignToCSS(align: Align): string {
   switch (+align) {
-    case Align.Left:    return "text-left justify-self-left";
-    case Align.Center:  return "text-center justify-self-center";
-    case Align.Right:   return "text-right justify-self-right";
+    case Align.Left:    return "text-left justify-start";
+    case Align.Center:  return "text-center justify-center";
+    case Align.Right:   return "text-right justify-end";
   }
 }
 
@@ -49,7 +49,7 @@ export function resolveProps<T>(props: TableColumnProps<T>): ResolvedTableColumn
 
 export function printHeader<T>(props : TableColumnProps<T>) {
   return (
-    <div key={props.key} className={`col-span-${props.colSpan} ${alignToCSS(props.headerAlign)}`}>
+    <div key={props.key} className={`flex col-span-${props.colSpan} ${alignToCSS(props.headerAlign)}`}>
       { props.header }
     </div>
   );

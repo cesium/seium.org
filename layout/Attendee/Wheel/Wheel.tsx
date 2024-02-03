@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import { withAuth, useAuth, IAttendee } from "@context/Auth";
 
 import Heading from "@components/Heading";
@@ -6,8 +6,6 @@ import Button from "@components/Button";
 import Layout from "@components/Layout";
 
 import {
-  ListItem3Cols,
-  ListItem4Cols,
   WheelComponent,
   WheelMessage,
 } from "./components";
@@ -20,6 +18,23 @@ import {
   getWheelLatestWins,
   spinWheel,
 } from "@lib/api";
+import Table, { Align, TableColumn } from "@components/Table";
+import AttendeeMention from "@components/AttendeeMention";
+
+interface IPrize {
+  avatar: string;
+  id: number;
+  max_amount_per_attendee: number;
+  name: string;
+  stock: number;
+}
+
+interface IWin {
+  attendee_name: string;
+  attendee_nickname: string;
+  date: string;
+  prize: IPrize;
+}
 
 /*
 Gets how long ago the given date/time was in a user friendly way (10 seconds ago, 1 minute ago, etc)
@@ -49,6 +64,10 @@ function displayTimeSince(dateString) {
   return value < 0 ? "Now" : string;
 }
 
+function displayQuantity(qt) {
+  return qt > 1000 ? "∞" : qt;
+}
+
 function WheelPage() {
   const defaultState = {
     angle: 0,
@@ -62,12 +81,12 @@ function WheelPage() {
     refetchUser: () => void;
   };
 
-  const [prizes, updatePrizes] = useState([]);
-  const [price, updatePrice] = useState(null);
-  const [latestWins, updateLatestWins] = useState([]);
-  const [error, updateError] = useState(false);
-  const [wheelMessage, updateWheelMessage] = useState(<></>);
-  const [isSpinning, setIsSpinning] = useState(false);
+  const [prizes, updatePrizes] = useState<IPrize[]>([]);
+  const [price, updatePrice] = useState<number>(null);
+  const [latestWins, updateLatestWins] = useState<IWin[]>([]);
+  const [error, updateError] = useState<boolean>(false);
+  const [wheelMessage, updateWheelMessage] = useState<ReactNode>(<></>);
+  const [isSpinning, setIsSpinning] = useState<boolean>(false);
 
   const requestAllInfo = () => {
     getWheelPrizes()
@@ -166,25 +185,6 @@ function WheelPage() {
     if (st.speed > 0) setTimeout(changeState, 1000 / 60);
   }, [st]);
 
-  const prizeComponents = prizes.map((entry, id) => (
-    <ListItem4Cols
-      img={entry.avatar}
-      key={id}
-      name={entry.name}
-      quantity={entry.stock}
-      maxQuantity={entry.max_amount_per_attendee}
-    />
-  ));
-  const latestWinsComponents = latestWins.map((entry, id) => (
-    <ListItem3Cols
-      key={id}
-      user_name={entry.attendee_name}
-      user_nickname={entry.attendee_nickname}
-      prize={entry.prize}
-      when={displayTimeSince(entry.date)}
-      isLast={id == latestWins.length - 1}
-    />
-  ));
   return (
     <Layout title="Wheel" description="Spin the wheel and win awards!">
       <div className="mt-12 grid-cols-1 overflow-hidden text-white 2xl:grid-cols-2">
@@ -224,26 +224,22 @@ function WheelPage() {
         <div className="col-span-1 float-right w-full 2xl:w-1/2 2xl:pl-6">
           <div>
             <Heading text="Latest Wins"></Heading>
-            <div className="h-auto">{latestWinsComponents}</div>
+            <Table elems={latestWins}>
+              <TableColumn<IWin> elemAlign={Align.Left} getter={(w) => <AttendeeMention attendee={{name: w.attendee_name, nickname: w.attendee_nickname}}/> } />
+              <TableColumn<IWin> elemAlign={Align.Right} getter={(w) => <img src={w.prize.avatar} className="h-8" /> } />
+              <TableColumn<IWin> elemAlign={Align.Left} colSpan={2} getter={(w) => <p className="ml-4">{w.prize.name}</p>} />
+              <TableColumn<IWin> elemAlign={Align.Right} elemPadding={4} getter={(w) => <p className="text-ibold font-bold text-quinary">{displayTimeSince(w.date)}</p> } />
+            </Table>
           </div>
 
           <div className="mt-10">
             <Heading text="Awards"></Heading>
-            <div className="mb-5 grid w-full select-none grid-cols-6 pb-3">
-              <div className="text-center">
-                <p className="text-iregular pr-4">Image</p>
-              </div>
-              <div className="col-span-3  text-left">
-                <p className="font-iregular">Name</p>
-              </div>
-              <div className="text-center">
-                <p className="text-iregular">Qt/pax</p>
-              </div>
-              <div className="text-center">
-                <p className="text-iregular pr-4">Qt</p>
-              </div>
-            </div>
-            {prizeComponents}
+            <Table elems={prizes}>
+              <TableColumn<IPrize> header="Image" getter={(p) => <img src={p.avatar} className="h-8" /> } />
+              <TableColumn<IPrize> header="Name" colSpan={3} headerAlign={Align.Left} elemAlign={Align.Left} getter={(p) => p.name } />
+              <TableColumn<IPrize> header="Qt/pax" getter={(p) => displayQuantity(p.max_amount_per_attendee) } />
+              <TableColumn<IPrize> header="Qt" getter={(p) => displayQuantity(p.stock) } />
+            </Table>
           </div>
         </div>
       </div>
