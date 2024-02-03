@@ -31,7 +31,7 @@ function Signup() {
         <Title text="Sign up" />
         <SignUpForm courses={courses} />
         <Text text="Already have an account?" link="Login here" href="/login" />
-        <div className="absolute bottom-0 right-60 hidden lg:block">
+        <div className="fixed bottom-0 right-60 hidden lg:block">
           <Motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
