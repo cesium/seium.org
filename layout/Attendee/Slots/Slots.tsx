@@ -58,7 +58,7 @@ function Slots() {
   };
 
   const setMaxBet = () => {
-    setBet(user.token_balance);
+    setBet(user.token_balance.toString());
   };
 
   const canSpin = () => {

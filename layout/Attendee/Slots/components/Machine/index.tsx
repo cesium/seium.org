@@ -19,9 +19,14 @@ interface MachineRef {
   rollAll: (multiplier: any) => Promise<void>;
 }
 
+// Check if an array contains an element
+const contains = (arr, elem) => {
+  return arr.some((e) => JSON.stringify(e) === JSON.stringify(elem));
+};
+
 const isTargetInMultipliers = (target) => {
   for (const multiplier in slots.multipliers) {
-    if (slots.multipliers[multiplier].includes(target)) {
+    if (contains(slots.multipliers[multiplier], target)) {
       return true;
     }
   }
