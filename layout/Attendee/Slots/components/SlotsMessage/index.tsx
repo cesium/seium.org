@@ -1,8 +1,6 @@
 import { Dialog } from "@headlessui/react";
-import { useRouter } from "next/router";
 
 export default function SlotsMessage({ title, description, onExit }) {
-  const router = useRouter();
   return (
     <>
       <div className="fixed inset-0 z-30 h-full w-screen bg-white opacity-70"></div>

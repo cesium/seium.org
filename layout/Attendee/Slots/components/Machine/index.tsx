@@ -13,8 +13,6 @@ const numIcons = slots.symbols;
 // Size of the icons
 var iconSize = 79;
 
-interface MachineProps {}
-
 interface MachineRef {
   rollAll: (multiplier: any) => Promise<void>;
 }
@@ -50,7 +48,7 @@ const getReelsTarget = (multiplier) => {
   return target;
 };
 
-const Machine = forwardRef<MachineRef, MachineProps>((props, ref) => {
+const Machine = forwardRef<MachineRef>((_, ref) => {
   const machineRef = useRef(null);
   const [indexes, setIndexes] = useState([1, 1, 1]);
 
