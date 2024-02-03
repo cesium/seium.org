@@ -2,17 +2,18 @@ import { useRef, useState } from "react";
 import { withAuth, useAuth, IAttendee } from "@context/Auth";
 import Layout from "@components/Layout";
 import Button from "@components/Button";
-import Input from "@components/Input";
-import Image from "next/image";
-
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { spinSlots } from "@lib/api";
 import Balance from "@components/Balance";
-import { Machine } from "./components";
+import { Machine, SlotsMessage } from "./components";
+import Paytable from "./components/Paytable";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Slots() {
   const [isSpinning, setIsSpinning] = useState(false);
   const [bet, setBet] = useState(null);
   const machineRef = useRef<any>(null);
+  const [slotsMessage, updateSlotsMessage] = useState(<></>);
 
   const { user } = useAuth() as {
     user: IAttendee;
@@ -20,19 +21,44 @@ function Slots() {
   };
 
   const spinReels = async () => {
-    console.log("====================================");
-    console.log("HAS: " + user.token_balance);
-    console.log("BET: " + bet);
     if (bet != null && bet > 0 && bet <= user.token_balance) {
       user.token_balance -= bet;
       setIsSpinning(true);
       const response = await spinSlots(bet);
       await machineRef.current.rollAll(response.multiplier);
-      console.log(response);
       setIsSpinning(false);
       user.token_balance += response.tokens;
-      console.log("NOW HAS: " + user.token_balance);
+      switch (response.multiplier) {
+        case 0:
+          break;
+        case 1:
+          updateSlotsMessage(
+            <SlotsMessage
+              title="Bet refunded!"
+              description={`Phew, your bet was refunded! Will you try your luck with another spin?`}
+              onExit={(_) => updateSlotsMessage(null)}
+            />
+          );
+          break;
+        default:
+          updateSlotsMessage(
+            <SlotsMessage
+              title="You won tokens!"
+              description={`Congratulations! You won ${response.tokens} tokens!`}
+              onExit={(_) => updateSlotsMessage(null)}
+            />
+          );
+          break;
+      }
     }
+  };
+
+  const showPaytable = () => {
+    updateSlotsMessage(<Paytable onExit={(_) => updateSlotsMessage(null)} />);
+  };
+
+  const setMaxBet = () => {
+    setBet(user.token_balance);
   };
 
   const canSpin = () => {
@@ -41,8 +67,13 @@ function Slots() {
 
   return (
     <Layout title="Slots" description="Try your luck and multiply your tokens!">
-      <div>💰 {user.token_balance} Tokens</div>
-      <div className="grid grid-cols-2 grid-rows-2 gap-4">
+      <div className="mt-4">
+        <Balance
+          token_balance={user.token_balance}
+          badge_count={user.badge_count}
+        />
+      </div>
+      <div className="mt-8 space-y-8">
         <div className="col-span-2">
           <Machine ref={machineRef} />
         </div>
@@ -57,7 +88,7 @@ function Slots() {
             <Button
               className="block h-16 w-full cursor-pointer bg-quinary text-primary/40"
               disabled={false}
-              onClick={spinSlots}
+              onClick={setMaxBet}
               title="MAX"
               bold={false}
             />
@@ -74,7 +105,17 @@ function Slots() {
             bold={true}
           />
         </div>
+        <div className="w-full text-center">
+          <a
+            className="cursor-pointer text-center text-quinary hover:underline"
+            onClick={showPaytable}
+          >
+            <FontAwesomeIcon className="px-2" icon={faArrowUpRightFromSquare} />
+            See Paytable
+          </a>
+        </div>
       </div>
+      {slotsMessage}
     </Layout>
   );
 }
