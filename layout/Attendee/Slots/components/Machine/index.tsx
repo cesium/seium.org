@@ -1,7 +1,7 @@
-import { forwardRef, useRef, useImperativeHandle } from "react";
+import { forwardRef, useRef, useImperativeHandle, useState } from "react";
 import slots from "@data/slots.json";
 
-// TODO: Refactor 
+// TODO: Refactor
 
 // Width of the icons
 var icon_width = 79,
@@ -10,30 +10,46 @@ var icon_width = 79,
   // Number of icons in the strip
   num_icons = 9,
   // Max-speed in ms for animating one icon down
-  time_per_icon = 100,
-  // Holds icon indexes
-  indexes = [0, 0, 0];
+  time_per_icon = 100;
 
-interface MachineProps {
-  
-}
+interface MachineProps {}
 
 interface MachineRef {
   rollAll: (multiplier: any) => Promise<void>;
 }
 
+const isTargetInMultipliers = (target) => {
+  for (const multiplier in slots.multipliers) {
+    if (slots.multipliers[multiplier].includes(target)) {
+      return true;
+    }
+  }
+  return false;
+};
+
 // Get a random target that corresponds to the multiplier
 const getReelsTarget = (multiplier) => {
-  const combinations = slots.multipliers[multiplier];
-  return combinations[Math.floor(Math.random() * combinations.length)];
-}
+  if (multiplier != 0) {
+    const combinations = slots.multipliers[multiplier];
+    return combinations[Math.floor(Math.random() * combinations.length)];
+  }
+
+  // Finds a random target that is not in the multipliers
+  let target;
+  do {
+    target = Array.from({ length: 3 }, () =>
+      Math.floor(Math.random() * num_icons)
+    );
+  } while (isTargetInMultipliers(target));
+  return target;
+};
 
 const Machine = forwardRef<MachineRef, MachineProps>((props, ref) => {
   const machineRef = useRef(null);
+  const [indexes, setIndexes] = useState([1, 1, 1]);
 
   const rollAll = (multiplier) => {
-    return new Promise<void>(resolve => {
-
+    return new Promise<void>((resolve) => {
       console.log("HAS RECEIVED: " + multiplier);
       const reelsList = document.querySelectorAll(".slots > .reel");
       const reelsTarget = getReelsTarget(multiplier);
@@ -46,12 +62,26 @@ const Machine = forwardRef<MachineRef, MachineProps>((props, ref) => {
       Promise.all(promises).then(() => {
         resolve();
       });
-    })
-  }
+    });
+  };
 
-  const roll = (reel, offset = 0, target) => {
-    // Minimum of 2 + the reel offset rounds
-    const delta = (offset + 2) * num_icons + Math.round(Math.random() * num_icons);
+  const roll = (reel, reelIndex, target) => {
+    // Number of reel rotations
+    const rotations = reelIndex + 2;
+    // Calculate the delta for the reels rotation
+    const rotationsDelta = rotations * num_icons;
+    // Delta for the target
+    const delta =
+      rotationsDelta +
+      (rotationsDelta + (indexes[reelIndex] % num_icons)) -
+      target;
+
+    // Sets the new index
+    setIndexes((prev) => {
+      const newIndexes = [...prev];
+      newIndexes[reelIndex] = target;
+      return newIndexes;
+    });
 
     // Return promise so we can wait for all reels to finish
     return new Promise((resolve, reject) => {
@@ -63,7 +93,7 @@ const Machine = forwardRef<MachineRef, MachineProps>((props, ref) => {
         // Normalized background position, for reset
         normTargetBackgroundPositionY =
           targetBackgroundPositionY % (num_icons * icon_height);
-  
+
       // Delay animation with timeout, for some reason a delay in the animation property causes stutter
       setTimeout(() => {
         // Set transition properties ==> https://cubic-bezier.com/#.41,-0.01,.63,1.09
@@ -74,8 +104,8 @@ const Machine = forwardRef<MachineRef, MachineProps>((props, ref) => {
         reel.style.backgroundPositionY = `${
           backgroundPositionY + delta * icon_height
         }px`;
-      }, offset * 150);
-  
+      }, reelIndex * 150);
+
       // After animation
       setTimeout(() => {
         // Reset position, so that it doesn't get higher without limit
@@ -83,12 +113,12 @@ const Machine = forwardRef<MachineRef, MachineProps>((props, ref) => {
         reel.style.backgroundPositionY = `${normTargetBackgroundPositionY}px`;
         // Resolve this promise
         resolve(delta % num_icons);
-      }, (8 + 1 * delta) * time_per_icon + offset * 150);
+      }, (8 + 1 * delta) * time_per_icon + reelIndex * 150);
     });
   };
 
   useImperativeHandle(ref, () => ({
-    rollAll: (multiplier) => rollAll(multiplier)
+    rollAll: (multiplier) => rollAll(multiplier),
   }));
 
   return (
