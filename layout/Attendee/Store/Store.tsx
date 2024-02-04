@@ -22,18 +22,16 @@ function Store() {
   }, []);
 
   return (
-    <Layout
-      // href="store"
-      title="Store"
-      description="Buy products with your collected tokens"
-    >
+    <Layout title="Store" description="Buy products with your collected tokens">
+      <div className="w-full font-semibold uppercase text-quinary">
+        <p>*subject to existing stock</p>
+      </div>
       <div className="mt-5 text-white">
         <Balance
           token_balance={user.token_balance}
           badge_count={user.badge_count}
         />
       </div>
-
       <div className="mt-10 grid grid-cols-1 justify-items-center gap-x-10 gap-y-14 text-white xs:grid-cols-2 md:gap-y-20 2xl:grid-cols-3">
         {products &&
           products
