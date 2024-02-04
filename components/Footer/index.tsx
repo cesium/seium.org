@@ -129,11 +129,9 @@ export default function Footer(props: IFooterProps) {
             >
               Report a Problem
             </Link>
-            {/*
             <Link href="/docs/survival.pdf" className="hover:underline">
               Survival Guide
             </Link>
-            */}
             <Link href="/docs/regulation.pdf" className="hover:underline">
               General Regulation
             </Link>
