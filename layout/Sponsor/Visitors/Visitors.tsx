@@ -59,7 +59,7 @@ const SponsorVisitors: React.FC = () => {
 
   return (
     <Layout
-      title= {`Visitantes ${visitors.length}`}
+      title={`Visitantes (${visitors.length})`}
       description="Veja quem está a visitar a sua empresa e já recebeu o seu badge"
     >
       <div className="mt-5 h-screen text-white">
