@@ -148,11 +148,19 @@ export default function SignUpForm({ courses }) {
           onChange={(e) => setTermsAccepted(!termsAccepted)}
         >
           I have read and understood the &nbsp;
-          <Link href="/docs/privacy_policy.pdf" target="_blank" className="text-quinary">
+          <Link
+            href="/docs/privacy_policy.pdf"
+            target="_blank"
+            className="text-quinary"
+          >
             privacy policy
           </Link>{" "}
           and the &nbsp;
-          <Link href="/docs/regulation.pdf" target="_blank" className="text-quinary">
+          <Link
+            href="/docs/regulation.pdf"
+            target="_blank"
+            className="text-quinary"
+          >
             general regulation
           </Link>
         </Checkbox>
