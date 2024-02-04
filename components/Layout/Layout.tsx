@@ -6,22 +6,50 @@ import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import { useAuth } from "@context/Auth";
+import { IStaff, IUser, useAuth } from "@context/Auth";
+import { ROLES } from "@lib/user";
 
-const roleNavigations = {
-  sponsor: ["scanner", "visitors"],
-  attendee: [
-    "profile",
-    "wheel",
-    "badgedex",
-    "leaderboard",
-    "store",
-    "inventory",
-    "identifier",
-  ],
-  admin: ["scanner", "visitors", "badges", "leaderboard", "users", "events"],
-  staff: ["badges", "leaderboard", "prizes", "identifier", "cv"],
+// FIXME: normalize user type between moonstone and safira
+const basePaths = {
+  [ROLES.SPONSOR]: "sponsor",
+  [ROLES.ATTENDEE]: "attendee",
+  [ROLES.STAFF]: "staff",
 };
+
+const roleNavigation = (user: IUser) => {
+  switch (user.type) {
+    case ROLES.SPONSOR:
+      return ["scanner", "visitors"];
+
+    case ROLES.ATTENDEE:
+      return [
+        "profile",
+        "wheel",
+        "badgedex",
+        "leaderboard",
+        "store",
+        "inventory",
+        "identifier",
+      ];
+
+    case ROLES.STAFF:
+      return [
+        "leaderboard",
+        "badges",
+        "prizes",
+        "identifier",
+        "cv",
+        ...((user as IStaff).is_admin ? [
+          "badgehistory",
+          "redeemhistory",
+          "spotlight",
+        ] : [])
+      ];
+
+    default:
+      throw new Error(`Unknown USER TYPE: ${user.type}`);
+  }
+}
 
 type LayoutProps = {
   title?: string;
@@ -37,12 +65,8 @@ export default function Layout({ title, description, children }: LayoutProps) {
   const router = useRouter();
 
   const currentHref = router.asPath;
-  // FIXME: normalize user type between moonstone and safira
-  const links =
-    user.type === "company"
-      ? roleNavigations["sponsor"]
-      : roleNavigations[user.type];
-  const basePath = user.type === "company" ? "sponsor" : user.type;
+  const links = roleNavigation(user);
+  const basePath = basePaths[user.type];
 
   const openNavbar = () => {
     setIsNavbarOpen(true);

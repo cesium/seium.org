@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IPublicAttendee } from "@context/Auth";
 
 import Layout from "@components/Layout";
-import { Table } from "./components";
 
 import Button from "@components/Button";
 import Day from "@components/Schedule/Day";
@@ -13,6 +12,8 @@ import { getLeaderboard } from "@lib/api";
 
 import scheduleData from "@data/schedule.json";
 import dayjs from "dayjs";
+import Table, { Align, TableColumn } from "@components/Table";
+import AttendeeMention from "@components/AttendeeMention";
 
 function leapYear(year) {
   return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
@@ -74,6 +75,16 @@ function addDate(date, days) {
   return year + "/" + month + "/" + day;
 }
 
+interface IToShow {
+  index: number;
+  id: string;
+  avatar: string | null;
+  name: string;
+  nickname: string;
+  badges: number;
+  token_balance: number;
+}
+
 function Leaderboard() {
   /* Fetch first and last day of the event from schedule data */
   const eventDates = scheduleData.map((day) => day.date).sort();
@@ -98,7 +109,7 @@ function Leaderboard() {
   const requestLeaderboard = () => {
     const args = hallOfFame ? "" : date.replaceAll("/", "-");
     getLeaderboard(args)
-      .then((response) => updateLeaderboard(response.data))
+      .then((response) => updateLeaderboard(response.data.map((l,i) => ({index: i, ...l}))))
       .catch((_) => updateError(true));
   };
 
@@ -113,6 +124,13 @@ function Leaderboard() {
     if (!isAfter(min_date, new_date) && !isAfter(new_date, max_date))
       updateDate(new_date);
   };
+
+  const maxUsers = 5;
+  const userIndex = leaderboard.findIndex((l) => l.id === user.id);
+  const toShow: IToShow[] = leaderboard.slice(0, Math.min(maxUsers, leaderboard.length)).concat(userIndex >= maxUsers ? [leaderboard[userIndex]] : []);
+  console.log(toShow);
+  console.log(userIndex);
+
 
   return (
     <Layout
@@ -158,7 +176,12 @@ function Leaderboard() {
             />
           </div>
           {error && <ErrorMessage />}
-          <Table list={leaderboard} user={user.id} maxUsersToShow={5} />
+
+          <Table elems={toShow}>
+            <TableColumn<IToShow> header="Rank" headerAlign={Align.Left} elemAlign={Align.Left} elemPadding={3} getter={(e) => e.index + 1 }/>
+            <TableColumn<IToShow> header="Name" headerAlign={Align.Center} elemAlign={Align.Center} getter={(e) => <AttendeeMention attendee={e} /> }/>
+            <TableColumn<IToShow> header="Badges" headerAlign={Align.Right} elemAlign={Align.Right} elemPadding={5} getter={(e) => e.badges }/>
+          </Table>
         </div>
       </div>
     </Layout>
