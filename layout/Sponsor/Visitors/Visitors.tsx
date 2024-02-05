@@ -91,7 +91,12 @@ const SponsorVisitors: React.FC = () => {
                 />
               )}
               <p className="text-center">{visitor.name}</p>
-              <p className="text-center">{visitor.email}</p>
+              <a
+                href={`mailto:${visitor.email}`}
+                className="text-center hover:text-quinary hover:underline"
+              >
+                {visitor.email}
+              </a>
               {visitor.cv ? (
                 <a
                   href={visitor.cv}
