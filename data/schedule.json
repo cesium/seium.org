@@ -323,11 +323,11 @@
       {
         "startTime": "14:00",
         "endTime": "15:00",
-        "activityType": "TBA",
-        "summary": "",
-        "description": "",
-        "author": "",
-        "location": ""
+        "activityType": "Talk",
+        "summary": "Decoding AI Language Models: From Turing’s Dream to Today’s Reality",
+        "description": "Large Language Models, despite their recent and well-deserved spotlight, boast a truly fascinating history. As we embark on this journey, let's delve into their inner workings, explore pivotal moments, and cap it off with an exciting discussion on Retrieval Augmented Generation – a cutting-edge approach to unleash the full potential of these linguistic powerhouses.",
+        "author": "Bruno Carvalho",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",

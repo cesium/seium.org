@@ -17,7 +17,7 @@ export default function Hero() {
       <SpotlightShape />
       <div className="spacing z-40 select-none pb-32">
         <Title />
-        <div className="relative mt-20 text-white">
+        <div className="relative mt-24 text-white">
           <div className="flex items-center justify-between">
             <h5 className="font-imedium">Follow us on</h5>
             {isAuthenticated || (
