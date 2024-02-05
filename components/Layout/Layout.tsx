@@ -29,6 +29,7 @@ const roleNavigation = (user: IUser) => {
     case ROLES.ATTENDEE:
       return [
         "profile",
+        "slots",
         "wheel",
         "badgedex",
         "leaderboard",
