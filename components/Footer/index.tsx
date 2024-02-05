@@ -137,7 +137,7 @@ export default function Footer(props: IFooterProps) {
             </Link>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <div className="mt-10 text-white sm:w-1/2 lg:mt-0">
+            <div className="mt-10 text-white lg:mt-0">
               <Social />
             </div>
           </div>
