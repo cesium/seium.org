@@ -18,6 +18,7 @@ export function withAuth(WrappedComponent) {
         if (
           ![
             "/attendee/profile",
+            "/attendee/slots",
             "/attendee/wheel",
             "/attendee/badgedex",
             "/attendee/leaderboard",

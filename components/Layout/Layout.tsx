@@ -12,6 +12,7 @@ const roleNavigations = {
   sponsor: ["scanner", "visitors"],
   attendee: [
     "profile",
+    "slots",
     "wheel",
     "badgedex",
     "leaderboard",
