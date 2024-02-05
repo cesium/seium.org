@@ -56,15 +56,18 @@ function Profile() {
   } else if (companyBadges < 20) {
     level = 3;
     neededBadges = 20 - companyBadges;
-  } else if (companyBadges < 24) {
+  } else if (companyBadges < 25) {
     level = 4;
-    neededBadges = 24 - companyBadges;
-  } else {
+    neededBadges = 25 - companyBadges;
+  } else if (companyBadges < 29) {
     level = 5;
+    neededBadges = 29 - companyBadges;
+  } else {
+    level = 6;
     neededBadges = 0;
   }
 
-  const levelEntries = [10, 30, 60, 100, 150];
+  const levelEntries = [10, 30, 60, 100, 120, 150];
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
@@ -236,11 +239,15 @@ function Profile() {
               {levelEntries[3]} entries
             </p>
             <p className="font-iregular">
-              <b className="font-ibold">Level 5</b> 24 companies &rarr; +
+              <b className="font-ibold">Level 5</b> 25 companies &rarr; +
               {levelEntries[4]} entries
             </p>
+            <p className="font-iregular">
+              <b className="font-ibold">Level 6</b> 29 companies &rarr; +
+              {levelEntries[5]} entries
+            </p>
 
-            <CheckpointTracker checkpoints={4} progress={level} />
+            <CheckpointTracker checkpoints={5} progress={level} />
 
             {level != 5 && (
               <p className="font-iregular text-white">
