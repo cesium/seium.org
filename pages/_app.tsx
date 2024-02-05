@@ -5,12 +5,15 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
 import "../styles/globals.css";
+import { NotifyProvider } from "@context/Notification";
 
 function App({ Component, pageProps }) {
   return (
     <AuthProvider>
-      <Header />
-      <Component {...pageProps} />
+      <NotifyProvider>
+        <Header />
+        <Component {...pageProps} />
+      </NotifyProvider>
     </AuthProvider>
   );
 }

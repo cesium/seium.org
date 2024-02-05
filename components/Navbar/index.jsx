@@ -1,17 +1,17 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import * as USER from "/lib/user";
-
-import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import { useAuth } from "@context/Auth";
+import { ROLES } from "@lib/user";
+import { useAuth, IUser, IStaff } from "@context/Auth";
 import JoinUs from "@components/JoinUs";
-import styles from "./style.module.css";
 import BackOfficeWrapper from "@components/FeatureFlags/BackOfficeWrapper";
+
+import styles from "./style.module.css";
 
 const navigation = [
   { name: "Schedule", slug: "/schedule" },
@@ -21,25 +21,30 @@ const navigation = [
   { name: "FAQs", slug: "/faqs" },
 ];
 
-const userNavigation = (type) => {
-  switch (type) {
-    case USER.ROLES.ATTENDEE:
+const roleNavigation = (user) => {
+  switch (user.type) {
+    case ROLES.ATTENDEE:
       return [{ name: "Dashboard", slug: "/attendee/profile" }];
-    case USER.ROLES.STAFF:
+
+    case ROLES.STAFF:
       return [
         { name: "Leaderboard", slug: "/staff/leaderboard" },
         { name: "Give Badges", slug: "/staff/badges" },
         { name: "Give Prizes", slug: "/staff/prizes" },
         { name: "Upload CV", slug: "/staff/cv" },
+        ...(user.is_admin
+          ? [{ name: "Spotlights", slug: "/staff/spotlights" }]
+          : []),
       ];
-    case USER.ROLES.SPONSOR:
+
+    case ROLES.SPONSOR:
       return [
         { name: "Scanner", slug: "/sponsor/scanner" },
         { name: "Visitors", slug: "/sponsor/visitors" },
       ];
 
     default:
-      throw new Error(`Unknown USER TYPE: ${type}`);
+      throw new Error(`Unknown USER TYPE: ${user.type}`);
   }
 };
 
@@ -122,7 +127,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           >
                             <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                               {user &&
-                                userNavigation(user.type).map((item) => (
+                                roleNavigation(user).map((item) => (
                                   <Menu.Item key={item.name}>
                                     <Link
                                       href={item.slug}
@@ -181,7 +186,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
               ))}
               {isAuthenticated &&
                 user &&
-                userNavigation(user.type).map((item) => (
+                roleNavigation(user).map((item) => (
                   <Disclosure.Button
                     key={item.slug}
                     as="a"

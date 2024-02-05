@@ -50,6 +50,7 @@ export interface IAttendee extends IAbstractUser {
 
 export interface IStaff extends IAbstractUser {
   id: number;
+  is_admin: boolean;
 }
 
 export interface ISponsor extends IAbstractUser {
