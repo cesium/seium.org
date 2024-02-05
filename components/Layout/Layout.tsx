@@ -73,7 +73,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
   const basePath = basePahts[user.type];
 
   return (
-    <div className="text-white lg:flex">
+    <div className="text-white">
       <Banner />
 
       <MobileNavbar
@@ -85,55 +85,59 @@ export default function Layout({ title, description, children }: LayoutProps) {
         onLogout={logout}
       />
 
-      {/* NAVBAR */}
-      <aside className="no-scrollbar inset-y-0 hidden w-72 select-none overflow-y-auto border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
-        <div className="flex flex-1">
-          <nav className="mt-8 flex flex-col">
-            <Link href="/" className="pb-8">
-              <Image
-                src="/images/sei-logo.svg"
-                alt="SEI Logo"
-                width="220"
-                height="120"
-              />
-            </Link>
+      <div className="relative lg:flex">
+        {/* NAVBAR */}
+        <aside className="no-scrollbar inset-y-0 hidden w-72 select-none overflow-y-auto border-r-2 bg-secondary px-8 py-5 lg:fixed lg:flex lg:flex-col">
+          <div className="flex flex-1">
+            <nav className="mt-8 flex flex-col">
+              <Link href="/" className="pb-8">
+                <Image
+                  src="/images/sei-logo.svg"
+                  alt="SEI Logo"
+                  width="220"
+                  height="120"
+                />
+              </Link>
 
-            {links.map((link) => (
-              <ActiveLink
-                key={link}
-                link={link}
-                basePath={basePath}
-                href={currentHref}
-              />
-            ))}
-          </nav>
-        </div>
+              {links.map((link) => (
+                <ActiveLink
+                  key={link}
+                  link={link}
+                  basePath={basePath}
+                  href={currentHref}
+                />
+              ))}
+            </nav>
+          </div>
 
+          <button
+            onClick={() => logout()}
+            className="mt-4 w-full text-left font-iregular text-quinary"
+          >
+            Log out 👋
+          </button>
+        </aside>
+
+        {/* OPEN SIDEBAR ON MOBILE */}
         <button
-          onClick={() => logout()}
-          className="mt-4 w-full text-left font-iregular text-quinary"
+          type="button"
+          onClick={openNavbar}
+          className="absolute top-4 right-4 text-gray-500 lg:hidden"
         >
-          Log out 👋
+          <span className="sr-only">Open sidebar</span>
+          <FontAwesomeIcon icon={faBars} />
         </button>
-      </aside>
 
-      {/* OPEN SIDEBAR ON MOBILE */}
-      <button
-        type="button"
-        onClick={openNavbar}
-        className="absolute top-4 right-4 text-gray-500 lg:hidden"
-      >
-        <span className="sr-only">Open sidebar</span>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
+        {/* CONTENT */}
+        <main className="w-full px-4 pb-6 pt-20 lg:ml-72 lg:px-20">
+          <h2 className="select-none font-ibold text-4xl sm:text-5xl">
+            {title}
+          </h2>
+          <p className="mt-2 font-iregular text-lg">{description}</p>
 
-      {/* CONTENT */}
-      <main className="w-full px-4 pb-6 pt-20 lg:ml-72 lg:px-20">
-        <h2 className="select-none font-ibold text-4xl sm:text-5xl">{title}</h2>
-        <p className="mt-2 font-iregular text-lg">{description}</p>
-
-        {children}
-      </main>
+          {children}
+        </main>
+      </div>
     </div>
   );
 }
