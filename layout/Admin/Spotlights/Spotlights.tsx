@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Layout from "@components/Layout";
 import { withAuth } from "@context/Auth";
+import { displayRemainingTime } from "@lib/time";
 import * as api from "@lib/api";
 
 type SpotlightProps = {
@@ -9,24 +10,6 @@ type SpotlightProps = {
   name: string;
   remaining: number;
   end?: string;
-};
-
-const displayRemainingTime = (end: string) => {
-  const now = new Date();
-  const endTime = new Date(end);
-  const timeDifference = endTime.getTime() - now.getTime();
-
-  if (timeDifference < 0) {
-    return "00:00";
-  }
-
-  const seconds = Math.floor((timeDifference / 1000) % 60);
-  const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
-
-  const formattedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-  const formattedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
-
-  return `${formattedMinutes}:${formattedSeconds}`;
 };
 
 export function Spotlights() {

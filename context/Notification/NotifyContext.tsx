@@ -20,17 +20,8 @@ export function NotifyProvider({ children }) {
 
       Object.keys(fetchers).forEach((key) => {
         s.on(key, (data) => {
-          console.log("New value for", key, "->", data);
           setValue({ ...value, [key]: data });
         });
-      });
-
-      s.on("connect", () => {
-        console.log("connect");
-      });
-
-      s.on("disconnect", () => {
-        console.log("disconnect");
       });
 
       setSocket(s);

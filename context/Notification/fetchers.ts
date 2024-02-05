@@ -8,9 +8,6 @@ const API = axios.create({
   },
 });
 
-API.defaults.headers.common["Authorization"] =
-  "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJzYWZpcmEiLCJleHAiOjE3MDk1MDg2MjQsImlhdCI6MTcwNzA4OTQyNCwiaXNzIjoic2FmaXJhIiwianRpIjoiZWYxNmY1YTYtMjZhYS00MzdmLTk3YjktZGRkODU4M2E2NzcyIiwibmJmIjoxNzA3MDg5NDIzLCJzdWIiOiIxIiwidHlwIjoiYWNjZXNzIn0.mE5u-eb8OjnzjPAc7gViOLUP3p7NLTmXxFEeHAVh8PlSS2hmZ-WMMEhDptEiv8z6qrw92Y3lulfFSp2fLmq28g";
-
 type Fetcher<T> = {
   fetch: () => Promise<T>;
   interval: number;
@@ -45,7 +42,7 @@ export interface ISpotlight {
 
 async function fetchSpotlight() {
   try {
-    return (await API.get("/api/spotlight")).data;
+    return (await API.get("/api/spotlight")).data.data;
   } catch (e) {
     if (e.response.status === 404) {
       return null;

@@ -1,7 +1,22 @@
 import { NotificationData, fetchers } from "@context/Notification/fetchers";
+import { AxiosError } from "axios";
 import { Server } from "socket.io";
 
 const serverData = {} as NotificationData;
+
+function handleError(e: any) {
+  var err: string;
+  if (e.response?.data?.error) {
+    err = "status code " + e.response.status + " - " + e.response.data.error;
+  } else if (e.response) {
+    err = "status code " + e.response.status;
+  } else if (e.request) {
+    err = "no connection";
+  } else {
+    err = "unknown error";
+  }
+  console.log("Error fetching notification data: " + err);
+}
 
 const ioHandler = async (req, res) => {
   if (!res.socket.server.io) {
@@ -14,20 +29,24 @@ const ioHandler = async (req, res) => {
     });
 
     for (const [key, fetcher] of Object.entries(fetchers)) {
-      console.log("Initial fetch for", key);
-      fetcher.fetch().then((value) => {
-        serverData[key] = value;
-        io.sockets.emit(key, value);
-      });
+      fetcher
+        .fetch()
+        .then((value) => {
+          serverData[key] = value;
+          io.sockets.emit(key, value);
+        })
+        .catch((e) => handleError(e));
 
-      setInterval(async () => {
-        console.log("Fetching", key);
-        const newValue = await fetcher.fetch();
-
-        if (JSON.stringify(serverData[key]) !== JSON.stringify(newValue)) {
-          serverData[key] = newValue;
-          io.sockets.emit(key, newValue);
-        }
+      setInterval(() => {
+        fetcher
+          .fetch()
+          .then((newValue) => {
+            if (JSON.stringify(serverData[key]) !== JSON.stringify(newValue)) {
+              serverData[key] = newValue;
+              io.sockets.emit(key, newValue);
+            }
+          })
+          .catch((e) => handleError(e));
       }, fetcher.interval);
     }
 
