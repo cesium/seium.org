@@ -4,6 +4,7 @@ import {
   faInstagram,
   faGithub,
   faLinkedinIn,
+  faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -50,6 +51,14 @@ export default function Social() {
         rel="noreferrer"
       >
         <FontAwesomeIcon icon={faFacebook} />
+      </a>
+      <a
+        className="w-5 transition-colors duration-75 ease-in hover:text-quinary"
+        href="https://discord.gg/stUtCjsnHx"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FontAwesomeIcon icon={faDiscord} />
       </a>
       <a
         className="w-5 transition-colors duration-75 ease-in hover:text-quinary"

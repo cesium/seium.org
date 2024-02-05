@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { UploadIcon, CheckCircleIcon } from "@heroicons/react/solid";
+import Checkbox from "@components/Checkbox";
 
 export default function UploadSection({ cv, onSubmit }) {
   const [uploading, setUploading] = useState<boolean>(cv == null);
@@ -92,25 +93,10 @@ export default function UploadSection({ cv, onSubmit }) {
             </div>
           </label>
           <div className="mt-4 block">
-            <label className="rounded-sm bg-quinary">
-              <input
-                className="hidden"
-                type="checkbox"
-                onChange={handleConsentChange}
-              ></input>
-              <span
-                className={`text-sm text-white ${
-                  consent ? "bg-quinary" : "bg-white"
-                } select-none border-2 border-quinary px-1 font-ibold`}
-              >
-                {" "}
-                &#10003;
-              </span>
-            </label>
-            <label className="ml-2 select-none text-sm">
+            <Checkbox selected={consent} onChange={handleConsentChange}>
               By submitting your CV you are consenting to it being shared with
               the companies present in the event.
-            </label>
+            </Checkbox>
           </div>
 
           <input
