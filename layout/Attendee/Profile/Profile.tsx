@@ -29,7 +29,7 @@ function Profile() {
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
-  const [course, setCourse] = useState(user.course.toString() || "");
+  const [course, setCourse] = useState(user.course?.toString() || "");
 
   const [courses, setCourses] = useState<Course[]>([{ id: "", name: "None" }]);
 
