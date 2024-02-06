@@ -90,6 +90,12 @@
       {
         "name": "Exclusive Badge"
       }
+    ],
+    "hrefs": [
+      {
+        "name": "CTF - 1st Day Challenge",
+        "url": "/docs/ctf/SEI24_day1.7z"
+      }
     ]
   }
 }
