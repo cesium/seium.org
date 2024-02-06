@@ -24,12 +24,12 @@ interface Course {
 function Profile() {
   const { user, editUser } = useAuth() as {
     user: IAttendee;
-    editUser: (username: FormData) => void;
+    editUser: (zz: FormData) => void;
   };
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
-  const [username, setUsername] = useState(user.nickname || "");
-  const [course, setCourse] = useState(user.course.toString() || "");
+  const [name, setName] = useState(user.name);
+  const [course, setCourse] = useState(user.course.toString());
 
   const [courses, setCourses] = useState<Course[]>([{ id: "", name: "None" }]);
 
@@ -72,7 +72,7 @@ function Profile() {
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("attendee[nickname]", username);
+    formData.append("attendee[name]", name);
     formData.append("attendee[course_id]", course);
     formData.append("attendee[avatar]", avatar);
 
@@ -151,23 +151,23 @@ function Profile() {
 
             <div className="w-full sm:w-96">
               <Input
-                text="NAME"
-                id="name"
-                name="name"
-                value={user.name || ""}
+                text="NICKNAME"
+                id="nickname"
+                name="nickname"
+                value={user.nickname}
                 bgColor="primary"
                 fgColor="white"
                 enabled={false}
               />
               <Input
-                text="USERNAME"
-                id="username"
-                name="username"
-                value={username}
+                text="NAME"
+                id="name"
+                name="name"
+                value={name}
                 bgColor="primary"
                 fgColor="white"
                 enabled={editing}
-                onChange={(e) => setUsername(e.currentTarget.value)}
+                onChange={(e) => setName(e.currentTarget.value)}
               />
               <Select
                 text="COURSE"
