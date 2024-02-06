@@ -20,7 +20,12 @@ function handleError(e: any) {
 
 const ioHandler = async (req, res) => {
   if (!res.socket.server.io) {
-    const io = new Server(res.socket.server);
+    const io = new Server(res.socket.server, {
+      cors: {
+        origin: "*",
+      },
+      addTrailingSlash: false 
+    });
 
     io.on("connection", (socket) => {
       Object.keys(fetchers).forEach((key) => {
