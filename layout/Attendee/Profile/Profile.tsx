@@ -42,29 +42,14 @@ function Profile() {
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
   const companyBadges = user.badges.filter((entry) => entry.type == 4).length;
-  let level = 0;
-  let neededBadges = 0;
-  if (companyBadges < 5) {
-    level = 0;
-    neededBadges = 5 - companyBadges;
-  } else if (companyBadges < 10) {
-    level = 1;
-    neededBadges = 10 - companyBadges;
-  } else if (companyBadges < 15) {
-    level = 2;
-    neededBadges = 15 - companyBadges;
-  } else if (companyBadges < 20) {
-    level = 3;
-    neededBadges = 20 - companyBadges;
-  } else if (companyBadges < 25) {
-    level = 4;
-    neededBadges = 25 - companyBadges;
-  } else if (companyBadges < 29) {
-    level = 5;
-    neededBadges = 29 - companyBadges;
+  let level = Math.floor(companyBadges / 5)
+  let neededBadges = 0
+  if (level == 5) {
+    neededBadges = 29 - companyBadges
+  } else if (level == 6) {
+    neededBadges = 0
   } else {
-    level = 6;
-    neededBadges = 0;
+    neededBadges = (level + 1) * 5 - companyBadges
   }
 
   const levelEntries = [10, 30, 60, 100, 120, 150];
