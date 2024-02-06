@@ -43,7 +43,9 @@ export default function Challenge(props: IProps) {
         {props.title}
       </h2>
       <div className="mt-10">
-        {props.description.split("\n").map((e) => (<p className="font-iregular text-white">{e}</p>))}
+        {props.description.split("\n").map((e) => (
+          <p className="font-iregular text-white">{e}</p>
+        ))}
       </div>
       <div className="mt-3 flex flex-col">
         {props.hrefs &&
