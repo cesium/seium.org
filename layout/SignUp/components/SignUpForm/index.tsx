@@ -57,7 +57,7 @@ export default function SignUpForm({ courses }) {
       updateError("You must have a scanned QR code");
     } else if (!validateNickname(nickname)) {
       updateError(
-        "Your username must be between 3 and 15 alphanumeric characters, underscores and dashes (no spaces allowed)"
+        "Your nickname must be between 3 and 15 alphanumeric characters, underscores and dashes (no spaces allowed)"
       );
     } else if (!validatePassword(password)) {
       updateError("Your password must be at least 8 characters long");
