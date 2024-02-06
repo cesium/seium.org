@@ -16,7 +16,7 @@ export function NotifyProvider({ children }) {
 
   useEffect(() => {
     fetch("/api/notifications").finally(() => {
-      const s = io();
+      const s = io("/");
 
       Object.keys(fetchers).forEach((key) => {
         s.on(key, (data) => {
