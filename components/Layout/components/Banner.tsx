@@ -5,7 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function PlainBanner({ spotlight }: { spotlight: ISpotlight }) {
-  const [remaining, setRemaining] = useState("");
+  const [remaining, setRemaining] = useState(
+    displayRemainingTime(spotlight.end)
+  );
 
   useEffect(() => {
     const timerID = setInterval(() => {
@@ -74,33 +76,31 @@ function PlainBanner({ spotlight }: { spotlight: ISpotlight }) {
 
 export default function Banner() {
   const { spotlight } = useNotify();
-  const [lastSpotlight, setLastSpotlight] = useState(null);
 
-  useEffect(() => {
-    if (spotlight) {
-      setLastSpotlight(spotlight);
+  if (spotlight) {
+    const dateDifferenceinMs: number =
+      new Date(spotlight.end).getTime() - new Date().getTime();
+
+    if (dateDifferenceinMs > 0) {
+      return (
+        <Motion.div
+          initial={{ y: -100, height: 0 }}
+          animate={{ y: 0, height: "auto" }}
+        >
+          <PlainBanner spotlight={spotlight} />
+        </Motion.div>
+      );
+    } else if (dateDifferenceinMs >= -1000) {
+      return (
+        <Motion.div
+          initial={{ y: 0, height: "auto" }}
+          animate={{ y: -100, height: 0 }}
+        >
+          <PlainBanner spotlight={spotlight} />
+        </Motion.div>
+      );
     }
-  }, [spotlight]);
-
-  if (!lastSpotlight) {
-    return null;
-  } else if (spotlight) {
-    return (
-      <Motion.div
-        initial={{ y: -100, height: 0 }}
-        animate={{ y: 0, height: "auto" }}
-      >
-        <PlainBanner spotlight={spotlight} />
-      </Motion.div>
-    );
-  } else {
-    return (
-      <Motion.div
-        initial={{ y: 0, height: "auto" }}
-        animate={{ y: -100, height: 0 }}
-      >
-        <PlainBanner spotlight={lastSpotlight} />
-      </Motion.div>
-    );
   }
+
+  return null;
 }

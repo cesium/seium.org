@@ -1,4 +1,4 @@
-export function displayRemainingTime(end) {
+export function displayRemainingTime(end: string) {
   const now = new Date();
   const endTime = new Date(end);
   const timeDifference = endTime.getTime() - now.getTime();
