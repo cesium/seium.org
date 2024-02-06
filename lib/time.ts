@@ -1,4 +1,4 @@
-export function displayRemainingTime(end) {
+export function displayRemainingTime(end: string) {
   const now = new Date();
   const endTime = new Date(end);
   const timeDifference = endTime.getTime() - now.getTime();
@@ -14,4 +14,10 @@ export function displayRemainingTime(end) {
   const formattedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
 
   return `${formattedMinutes}:${formattedSeconds}`;
+}
+
+export function compareDates(a: Date, b: Date) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+  return 0;
 }

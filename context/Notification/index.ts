@@ -1,2 +1,2 @@
-export type { ISpotlight } from "./fetchers";
+export type { ISpotlight } from "./NotifyContext";
 export { NotifyProvider, useNotify } from "./NotifyContext";
