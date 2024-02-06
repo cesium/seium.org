@@ -192,7 +192,7 @@ export function AuthProvider({ children }) {
       })
       .catch((errors) => {
         if (errors.response?.data?.error) {
-          setErrors(errors.response.data.error);
+          setErrors("Invalid email or password"); //errors.response.data.error
         } else if (errors.response) {
           setErrors("Request denied by the server");
         } else if (errors.request) {
@@ -216,11 +216,11 @@ export function AuthProvider({ children }) {
     router.push("/").finally(() => setUser(null));
   }
 
-  function editUser(nickname) {
+  function editUser(formData: FormData) {
     setLoading(true);
 
     api
-      .editUser(user.id, nickname)
+      .editUser(user.id, formData)
       .then((at) => {
         setUser((oldUser) => ({ ...oldUser, ...at }));
       })

@@ -38,7 +38,7 @@ export default function SignUpForm({ courses }) {
 
   const validateNickname = (nickname) => {
     return (
-      nickname.length >= 2 &&
+      nickname.length >= 3 &&
       nickname.length <= 15 &&
       nickname.match(/^[\w\d-_]{3,15}$/)
     );
@@ -57,7 +57,7 @@ export default function SignUpForm({ courses }) {
       updateError("You must have a scanned QR code");
     } else if (!validateNickname(nickname)) {
       updateError(
-        "Your nickname must be between 2 and 15 alphanumeric characters and can only contain underscores and dashes"
+        "Your nickname must be between 3 and 15 alphanumeric characters, underscores and dashes (no spaces allowed)"
       );
     } else if (!validatePassword(password)) {
       updateError("Your password must be at least 8 characters long");
@@ -82,14 +82,6 @@ export default function SignUpForm({ courses }) {
     <>
       <Form onSubmit={onFinish}>
         <Input
-          text="NAME"
-          id="name"
-          name="name"
-          fgColor="white"
-          bgColor="primary"
-          onChange={(e) => updateName(e.currentTarget.value)}
-        />
-        <Input
           text="EMAIL"
           id="email"
           name="email"
@@ -98,26 +90,6 @@ export default function SignUpForm({ courses }) {
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updateEmail(e.currentTarget.value)}
-        />
-        <Input
-          text="NICKNAME"
-          id="nickname"
-          name="nickname"
-          fgColor="white"
-          bgColor="primary"
-          onChange={(e) => updateNickname(e.currentTarget.value)}
-        />
-        <Select
-          text="COURSE"
-          id="course"
-          fgColor="white"
-          bgColor="primary"
-          defaultValue={0}
-          options={courses.map((course) => ({
-            key: course.id,
-            name: course.name,
-          }))}
-          onChange={(e) => updateCourse(e.currentTarget.value)}
         />
         <PasswordInput
           text="PASSWORD"
@@ -134,6 +106,34 @@ export default function SignUpForm({ courses }) {
           fgColor="white"
           bgColor="primary"
           onChange={(e) => updatePasswordConfirmation(e.currentTarget.value)}
+        />
+        <Input
+          text="NICKNAME"
+          id="nickname"
+          name="nickname"
+          fgColor="white"
+          bgColor="primary"
+          onChange={(e) => updateNickname(e.currentTarget.value)}
+        />
+        <Input
+          text="NAME"
+          id="name"
+          name="name"
+          fgColor="white"
+          bgColor="primary"
+          onChange={(e) => updateName(e.currentTarget.value)}
+        />
+        <Select
+          text="COURSE"
+          id="course"
+          fgColor="white"
+          bgColor="primary"
+          defaultValue={0}
+          options={courses.map((course) => ({
+            key: course.id,
+            name: course.name,
+          }))}
+          onChange={(e) => updateCourse(e.currentTarget.value)}
         />
         <Button
           title={scanning ? "STOP SCANNING" : "SCAN QR"}
