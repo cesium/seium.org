@@ -63,14 +63,12 @@ const SponsorVisitors: React.FC = () => {
       description="Veja quem está a visitar a sua empresa e já recebeu o seu badge"
     >
       <div className="mt-5 h-screen text-white">
-        {visitors.filter((v) => v.cv != null).length > 0 && (
-          <button
-            className="font-terminal-uppercase m-auto mb-5 block select-none rounded-full bg-quinary px-5 py-2 text-2xl text-white"
-            onClick={downloadCVs}
-          >
-            {downloading ? "Downloading" : "Download All CVs"}
-          </button>
-        )}
+        <button
+          className="font-terminal-uppercase m-auto mb-5 block select-none rounded-full bg-quinary px-5 py-2 text-2xl text-white"
+          onClick={downloadCVs}
+        >
+          {downloading ? "Downloading" : "Download All CVs"}
+        </button>
         <div className="grid grid-cols-1 lg:grid-cols-4">
           {visitors.map((visitor) => (
             <div
