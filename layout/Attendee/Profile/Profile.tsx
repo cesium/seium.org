@@ -24,7 +24,7 @@ interface Course {
 function Profile() {
   const { user, editUser } = useAuth() as {
     user: IAttendee;
-    editUser: (zz: FormData) => void;
+    editUser: (formData: FormData) => void;
   };
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
