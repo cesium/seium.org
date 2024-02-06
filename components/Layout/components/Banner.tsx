@@ -1,5 +1,5 @@
 import { ISpotlight, useNotify } from "@context/Notification";
-import { compareDates, displayRemainingTime } from "@lib/time";
+import { displayRemainingTime } from "@lib/time";
 import { motion as Motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
