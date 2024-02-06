@@ -66,7 +66,7 @@ export default function UnderlineAnimation({
   return (
     <span className="relative z-10 inline-block h-auto w-auto">
       <span
-        className="relative z-10 inline-block h-auto border-white md:border-b-8"
+        className="relative z-10 inline-block h-auto border-b-4 border-white md:border-b-8"
         onMouseEnter={() =>
           updateState((oldState) => ({ ...oldState, status: 1 }))
         }
@@ -79,7 +79,7 @@ export default function UnderlineAnimation({
       <span className="relative z-10 inline-block h-auto">
         &nbsp;{afterText ? afterText : ""}
       </span>
-      <div className="absolute top-full z-10 h-52 overflow-y-hidden overflow-x-visible md:w-96">
+      <div className="pointer-events-none	absolute top-full z-10 h-52 overflow-y-hidden overflow-x-visible md:w-96">
         <div
           className="absolute top-0 z-0 hidden h-3/6 overflow-visible pt-3 md:block lg:left-10"
           style={{ marginTop: `${st.margin}px` }}

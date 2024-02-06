@@ -53,21 +53,22 @@ const SponsorVisitors: React.FC = () => {
           setVisitors(response.data);
         }
       })
+      // FIXME: This should be displayed as a toast notification
       .catch((error) => console.log(error));
   }, [user]);
 
   return (
     <Layout
-      title="Visitantes"
+      title={`Visitantes (${visitors.length})`}
       description="Veja quem está a visitar a sua empresa e já recebeu o seu badge"
     >
       <div className="mt-5 h-screen text-white">
         {visitors.filter((v) => v.cv != null).length > 0 && (
           <button
-            className="m-auto mb-5 block select-none rounded-full bg-quinary px-5 py-2 font-ibold text-2xl text-white"
+            className="font-terminal-uppercase m-auto mb-5 block select-none rounded-full bg-quinary px-5 py-2 text-2xl text-white"
             onClick={downloadCVs}
           >
-            {downloading ? "Downloading" : "Download All CV's"}
+            {downloading ? "Downloading" : "Download All CVs"}
           </button>
         )}
         <div className="grid grid-cols-1 lg:grid-cols-4">
@@ -76,13 +77,26 @@ const SponsorVisitors: React.FC = () => {
               key={visitor.id}
               className="hover:b-4 m-2 mb-4 flex flex-col items-center justify-center rounded-lg p-2 hover:border-blue-500"
             >
-              <img
-                alt={visitor.name}
-                src={visitor.avatar}
-                className="mb-2 h-40 w-40 select-none rounded-full border-2 border-white object-cover hover:border-pink-500"
-              />
+              {visitor.avatar ? (
+                <img
+                  alt={visitor.name}
+                  src={visitor.avatar}
+                  className="mb-2 h-40 w-40 select-none rounded-full border-2 border-white object-cover"
+                />
+              ) : (
+                <img
+                  alt={visitor.name}
+                  src="/images/mascot-head.png"
+                  className="mb-2 h-40 w-40 select-none rounded-full border-2 border-white object-cover"
+                />
+              )}
               <p className="text-center">{visitor.name}</p>
-              <p className="text-center">{visitor.email}</p>
+              <a
+                href={`mailto:${visitor.email}`}
+                className="text-center hover:text-quinary hover:underline"
+              >
+                {visitor.email}
+              </a>
               {visitor.cv ? (
                 <a
                   href={visitor.cv}

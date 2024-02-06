@@ -18,6 +18,7 @@ export function withAuth(WrappedComponent) {
         if (
           ![
             "/attendee/profile",
+            "/attendee/slots",
             "/attendee/wheel",
             "/attendee/badgedex",
             "/attendee/leaderboard",
@@ -41,7 +42,9 @@ export function withAuth(WrappedComponent) {
             "/staff/prizes/[uuid]",
             "/staff/identifier",
             "/staff/leaderboard",
+            "/staff/cv",
             "/attendees/[uuid]",
+            ...(user.is_admin ? ["/staff/spotlights"] : []),
           ].includes(router.pathname)
         ) {
           router.replace("/404");

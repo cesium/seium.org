@@ -118,13 +118,13 @@ export default function Footer(props: IFooterProps) {
         <div className="flex-2">
           <div className="grid select-none grid-rows-2 justify-items-center gap-8 whitespace-nowrap font-iregular text-sm text-white lg:grid-cols-2 lg:justify-items-start">
             <Link
-              href="https://2022.seium.org/"
+              href="https://2023.seium.org/"
               className="text-white hover:underline"
             >
               Previous Edition
             </Link>
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdV1bSyW2tcLuTC_jJCGdZ5NZHUlgETK7nQkOmyDzwb7eFS4Q/viewform"
+              href="https://forms.gle/AmWefKeDN3XNtVh57"
               className="hover:underline"
             >
               Report a Problem
@@ -132,12 +132,12 @@ export default function Footer(props: IFooterProps) {
             <Link href="/docs/survival.pdf" className="hover:underline">
               Survival Guide
             </Link>
-            <Link href="/docs/regulamento.pdf" className="hover:underline">
+            <Link href="/docs/regulation.pdf" className="hover:underline">
               General Regulation
             </Link>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <div className="mt-10 text-white sm:w-1/2 lg:mt-0">
+            <div className="mt-10 text-white lg:mt-0">
               <Social />
             </div>
           </div>

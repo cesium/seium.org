@@ -6,19 +6,13 @@
         "startTime": "10:00",
         "endTime": "11:00",
         "activityType": "Opening Session",
-        "summary": "",
-        "description": "",
-        "author": "",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "startTime": "11:00",
         "endTime": "11:30",
         "activityType": "Prizes and Contests",
-        "summary": "",
-        "description": "",
-        "author": "",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -28,32 +22,32 @@
         "startTime": "12:00",
         "endTime": "13:00",
         "activityType": "Talk",
-        "summary": "Multicloud: uma quebra de paradigma com desafios e oportunidades.",
-        "description": "Ricardo is a founding partner of Retail Consult, with more than 20 years of experience working with retailers across the globe, to deliver end-to-end integrated solutions as part of digital transformation programs. During this extensive career he played distinct roles, from technical consultancy to leading complex architectures design and implementation, in different business domains such as merchandising, supply chain, omni-channel, planning and optimization.",
-        "author": "Ricardo Rocha",
-        "location": ""
+        "summary": "Application Security sem comprometer Developer Efficiency",
+        "description": "Application Security é um requisito para a proteção de qualquer empresa. Entretanto vemos mais e mais equipas de desenvolvedores a reclamar do \"Result Fatigue\", noise e outros fatores que afetam a produtividade e eficiência. Durante esta talk, vamos focar na troca de experiências e soluções implantadas pela Checkmarx para a implantação de AppSec sem compromisso da eficiência dos desenvolvedores.",
+        "author": "Marcelo Pereira",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "Aplicações Clínicas de Machine Learning: Uma Introdução",
-        "description": "António Murta é Managing Partner, Co-Fundador e CEO da Pathena. António Murta é, adicionalmente, Assessor do Conselho de Administração de várias empresas do Fundo⁣ Pathena. É licenciado em Engenharia de Sistemas pela Universidade do Minho, detém um⁣ MBA pela Porto Business School (Universidade do Porto) e um AMP pelo INSEAD (França).⁣ Possui ainda Pós-Graduações da ISEE / Universidade de Navarra (Espanha), do MIT (Sloan⁣ School of Management US) e da Singularity University (US) – Exponential Medicine.",
-        "author": "António Murta",
-        "location": ""
+        "summary": "READY! SET! CLOUD!",
+        "description": "Generic to advanced discussion on multiple topics (automation & security) by considering multiple cloud providers.\nApplication of DevOps in our modern world, pros and cons.",
+        "author": "Hurmat Zeeshan, João Travanca",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
-        "activityType": "Talk",
-        "summary": "Checkmarx - The Role of an Application Security Architect",
-        "description": "",
-        "author": "Michael Matias",
-        "location": ""
+        "activityType": "Panel Discussion",
+        "summary": "Motivation vs Consistency: Fueling Long-Term Success in Software Engineering",
+        "description": "\"Motivation vs Consistency: Fueling Long-Term Success in Software Engineering\" é o título que vai agitar a SEI’24, e não podíamos estar mais entusiasmados! 🚀\nOs quatro profissionais Nelson Estevão, Ricardo Castro, Diogo Couto e Filipe Cabaço, vão estar presentes para explorar os segredos por trás do sucesso a longo prazo na área da Engenharia Informática. 📈\nMarca na agenda, convida os teus colegas e prepara-te para uma discussão enriquecedora! 🗣️",
+        "author": "Diogo Couto, Filipe Cabaço, Nelson Estevão e Ricardo Castro",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -63,24 +57,24 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "summary": "Bosch",
-        "location": ""
+        "summary": "Xpand IT",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "summary": "KPMG",
-        "location": ""
+        "summary": "Retail Consult",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
-        "activityType": "Panel Discussion",
-        "summary": "Periférico ao vivo",
-        "description": "",
-        "author": "Paulo Dimas & Rui Lopes & Henrique Pereira",
-        "location": ""
+        "activityType": "Gameshow",
+        "summary": "SEI ou Não SEI",
+        "description": "Put your tech knowledge to good use in our live gameshow SEI ou Não SEI, a jeopardy-style contest where you can test your expertise on IT! The more questions you answer correctly, the more tokens you'll get! And you already know that more tokens = more incredible prizes...",
+        "location": "CP2 - B1",
+        "hyperlink": "https://forms.gle/KBKCmk5ZeFDWQtDVA"
       }
     ]
   },
@@ -91,31 +85,31 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Yari Labs - Blockchain 101: Assets Digitais - Tokens, NFTs e Smart-Contracts",
-        "description": "Vamos apresentar conceitos de Tokens Fungíveis, Não fungíveis e Aplicações Descentralizadas. Os participantes irão sair do workshop com um ambiente de desenvolvimento em Python para criar DApps na blockchain de Algorand. Vamos criar tokens, NFTs utilizando IPFS (Interplanetary Filesystem) e Smart-contracts. No final todos participantes irão receber uma paper wallet contendo um NFT com um certificado de participação que poderão importar para a wallets utilizadas durante o workshop!",
-        "author": "Emanuel Mota & Pedro Costa",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-blockchain-101-assets-digitais-tokens-nfts-e-smart-contracts-529582735217"
+        "summary": "Platform Engineering Roadmap & Security Analysis and Vulnerability Management",
+        "description": "Platform Engineering Roadmap:\nWorkshop sobre interação autónoma (modo self-service) da atividade de um developer com os serviços tecnológicos da plataforma, necessários para uma determinada aplicação e disponibilização de forma automatizada da aplicação com as componentes de infraestrutura tecnológica subjacentes.\nSecurity Analysis and Vulnerability Management:\nWorkshop de exploração e análise de vulnerabilidades usando a plataforma de virtualização VirtualBox, o Kali Linux e uma máquina alvo vulnerável. O Workshop terá como objetivo experimentar a enumeração de serviços e a deteção e exploração de vulnerabilidades usando ferramentas especificas da distribuição Kali, como o Nmap, Hydra e Metasploit.",
+        "author": "José Carlos Alves, Tiago Ferreira, Ricardo Martins e Alfredo França",
+        "location": "CP2 - 0.14",
+        "hyperlink": "https://forms.gle/D39byEtHXgsH5B6T8"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Deloitte - How to detect a data breach by an authorized user",
-        "description": "Simulate a suspicious behaviour of an authorised user in a corporate application that is downloading a large amount of very sensitive information outside business hours. See how a Data Masking and Data Logging platform can help to detect this type of attacks and rapidly start an investigation and block these activities.⁣",
-        "author": "André Sousa",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-how-to-detect-a-data-breach-executed-by-an-authorized-user-529505865297"
+        "summary": "How to protect your web applications. A practical guide from exploring to mitigating it",
+        "description": "Organizations all over the world are on a steady path to adopt security by design within their software development and operational processes, as the need for increased levels of security is becoming even more apparent.\nIn this workshop we will explain some basic principles for Secure Development on Web applications, from the actual exploit of some security vulnerabilities to mitigate them.\nWe will also be sharing some tips and best practices on how to implement security measures throughout your software development life cycle (SDLC).",
+        "author": "Tiago Pinto",
+        "location": "CP2 - 0.15",
+        "hyperlink": "https://forms.gle/M2UZM1Gen3XPmp9j7"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "XPand IT - Unleash Data Visualization with Tableau",
-        "description": "",
-        "author": "Margarida Cunha",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-unleash-data-visualization-with-tableau-531472447397"
+        "summary": "Code Rumble: #Analytics #FinancialRisk #InterestRateRisk",
+        "description": "Join us in this friendly coding competition. In this challenge we’re going to take you through the technical aspects of financial risk and how these reflect the current market conditions in banking, namely the volatility seen in the current interest rates. Bring your own laptop and ensure you have your preferred coding tools installed to write simple algorithms and interact with a REST API!",
+        "author": "Cristiano Silva Sousa",
+        "location": "CP2 - 0.17",
+        "hyperlink": "https://forms.gle/yxUVA85irP4Bn6VdA"
       },
       {
         "activityType": "Coffee Break",
@@ -125,32 +119,32 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "Automation on wheels - How software helps me monitoring my fleets",
-        "description": "I'm Inês Xavier, a backend developer who has a passion for technology. I completed my master's degree in telecommunications and computer engineering at the University of Minho, in Guimarães, I started my career as a software engineer at Multicert. My name is Lars Frische and I am passionate about developing IT solutions to help Continentals business grow. I studied information technology with a major in software engineering and graduated with a master's degree from Queensland University of Technology in Brisbane.",
-        "author": "Lars Frische & Inês Xavier",
-        "location": ""
+        "summary": "Tech behind Trends: Da Ideia à Prateleira",
+        "description": "Conheces o termo “fast-fashion”? Já pensaste como algumas das marcas mais famosas do planeta conseguem lançar coleções completas em apenas semanas?\n  Vem conhecer a tecnologia por detrás deste negócio e como revoluciona e otimiza o processo do ciclo de vida dos artigos de moda: garantindo uma colaboração eficiente, centralizando informações o otimizando processos, desde a conceção até ao armazém.",
+        "author": "Paulo Lopes",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "Keep Calm, I'm a Security Engineer",
-        "description": "A security engineer sees a lot, learns a lot and forgets a lot. They're incredibly obsessed with security and work relentlessly every day to make every software system a little bit more secure. This is a challenging, rewarding and gratifying task. This talk introduces Security Engineering and addresses some fun facts about this job.",
-        "author": "Bárbara Vieira",
-        "location": ""
+        "summary": "Como o software ajuda numa equipa de Fórmula 1",
+        "description": "A composição de uma equipa de Fórmula 1 é algo bastante complexo e subdividido em diversos departamentos. Cada um deles é suportado por software desenhado à medida tendo em conta as necessidades, os desenvolvimentos ou as ideias futuristas requisitadas por algum dos génios envolvido em todo o processo.\n Há uma grande necessidade de software resiliente e rápido que possa responder a todas as questões em pequenas frações de tempo como uma paragem nas boxes. O maior desafio é lidar com uma grande quantidade de dados em tempo real e em simulação em simultâneo.\n O papel de um developer é entender um pouco de cada área para que possa dar com resolver com mais efectividade as questões e necessidades do utilizador. Seja na área de UX/UI seja no desenvolvimento de outra interface para suprir as constantes evoluções no regulamento.\n Os bons padrões de desenvolvimento são essenciais e fazem toda a diferença quando o assunto é evitar problemas quando há uma equipa completa na pista do outro lado do mundo, num fuso-horário completamente diferente.",
+        "author": "Filipe Santiago",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "My quest to help software developers: from where you are to start-up founder",
-        "description": "It has never been more exciting to be a software developer. The code that we produce impacts millions of people across the world. Yet, the lack of support and knowledge that we have when we are modifying code is quickly becoming a threat to the world as we know it. In this talk, I will share my journey from a student at UMinho to start-up founder and my quest to help software developers safely collaborate as fast as possible. I will also share some insights I wish I knew when I attended this conference over 10 years ago.",
-        "author": "Marcelo Sousa",
-        "location": ""
+        "summary": "Os videojogos como opção de carreira",
+        "description": "Os videojogos como opção de carreira.\nNuma indústria em crescimento, competitiva e onde competências de engenharia são um activo precioso, parece que por cá ficamos aquém do resto da europa no que diz respeito a apostas em carreiras nos videojogos.",
+        "author": "Ricardo Mota",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -160,34 +154,25 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "summary": "IT Sector",
-        "location": ""
-      },
-      {
-        "startTime": "16:45",
-        "endTime": "17:00",
-        "activityType": "Pitch",
-        "summary": "RetailConsult",
-        "location": ""
+        "summary": "ITSector",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
-        "summary": "Women In Tech",
-        "description": "",
-        "author": "Filipa Castro & Sara Vieira & Bárbara Vieira",
-        "location": ""
+        "summary": "O Futuro Universitário com a Inteligência Artificial",
+        "description": "É isso mesmo, estamos a falar da Inteligência Artificial! Com avanços cada vez mais rápidos, esta tecnologia traz um futuro incerto, com muito para explorar. Quatro docentes da UMinho juntam-se para debater O Futuro Universitário com a Inteligência Artificial numa tertúlia SEI-sacional! Junta-te aos professores José Carlos Ramalho, José Nuno Oliveira, Bruno Fernandes e Orlando Belo para ficares a conhecer mais sobre esse tema tão pertinente.",
+        "author": "Bruno Fernandes, José Carlos Ramalho, José Nuno Oliveira e Orlando Belo",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "21:00",
-        "endTime": "23:00",
+        "endTime": "00:00",
         "activityType": "Social",
-        "summary": "Subvisual Meetup",
-        "description": "",
-        "author": "",
-        "location": "Polo de Negócios de Braga, Av. Dom João II 404 4º andar, Sala 45, 4715-275 Braga",
-        "hyperlink": "https://forms.gle/7Gmq4ZsHh1ife1mE7"
+        "summary": "Corporate Dinner",
+        "description": "With SEI'24, you have a once-in-a-lifetime networking opportunity!\nWith this contest, you'll have access to our Corporate Dinner! Our Gold sponsors will look through the resumes submitted to our Resume Contest, choosing twelve lucky winners. You'll connect with our Gold sponsors' pros and hang out with your peers.",
+        "location": "Restaurante do Museu D. Diogo de Sousa"
       }
     ]
   },
@@ -198,31 +183,31 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Accenture - Salesforce Tech Session",
-        "description": "Accenture - Explicar o que é Salesforce, a importância da adoção de soluções como Salesforce na transformação digital e transição para a cloud; o trabalho realizado pela Accenture em Salesforce e demonstrações práticas das potencialidades da plataforma.",
-        "author": "Alexandre Gomes",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-salesforce-tech-session-529528071717"
+        "summary": "Software Supply Chain Security: An Introduction",
+        "description": "Software applications are no longer built entirely from custom code. Instead, they are made up of a complex web of open-source components and libraries, most of which inherit functionality from other third-party sources. The software supply chain is then made up of everything and everyone that touches your code in the software development lifecycle, from application development to the CI/CD pipeline and deployment. Insufficient software security opens the door to potential supply chain attacks, wherein a threat actor seeks to infiltrate an organization's software and cloud environments. In this workshop we will talk about what is software supply chain, examples of real attacks that have taken place and what we can do to mitigate them, with examples and interactive exercises.",
+        "author": "Mónica Casanova, Rui Gomes",
+        "location": "CP2 - 2.03",
+        "hyperlink": "https://forms.gle/3D6zjMc7jRqCjg7W7"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Glintt - From Zero to Hero : how to build a product from scratch",
-        "description": "Neste workshop terão a oportunidade de entender o processo de desenvolvimento de um produto tecnológico.",
-        "author": "André Mota & Catarina Caçote",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-from-zero-to-hero-how-to-build-a-product-from-scratch-529526868117"
+        "summary": "How to make an awesome CV?",
+        "description": "Estás preparado para o mercado de trabalho? Vem aprender a enriquecer um CV para impressionares os Recrutadores e teres dicas de como te destacares!",
+        "author": "João Rovira",
+        "location": "CP2 - 1.11",
+        "hyperlink": "https://forms.gle/3HnVHg7Q6aFq7amN7"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Checkmarx - The role of AI in assisting Application Development and Security",
-        "description": "Artificial Intelligence (AI) is proven to enhance and assist human efforts to produce software faster. Also, it can leverage the detection of software vulnerabilities, explain how to prevent their exploitation and, going forward, remediate these issues on its own. But, does this mean that AI will completely replace humans in these areas? There are pros and cons, and a clear answer to that question. In this workshop we will talk about modern application development, modern application security and the role that recent AI approaches play in these areas. Together, we will look for the answer to that fundamental question, with examples and interactive exercises.",
-        "author": "Rui Gomes & Raphael Silva",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.com/e/bilhetes-workshop-the-role-of-ai-in-assisting-application-development-and-security-534493864537"
+        "summary": "Desenvolvimento de um Jogo REAL TIME - com Elixir, Phoenix Channels e Vue.js",
+        "description": "Aprende a criar um jogo dinâmico e interativo explorando Elixir, Phoenix Channels e Vue.js. Vamos dividir em equipas de backend e frontend, onde poderás contribuir para o desenvolvimento de partes específicas do jogo. Não é necessária experiência prévia, apenas conhecimentos básicos de programação. No final, terás um jogo funcional em tempo real. Acompanha-nos nesta empolgante viagem de aprendizagem!\nRequisitos técnicos: Elixir 1.12 ou superior; Phoenix Framework; Node.js e NPM (para Vue.js); Git; Ambiente de desenvolvimento de sua escolha; Conhecimento básico de programação (preferencialmente em Elixir e JavaScript).",
+        "author": "Emanuel Mota, Pedro Lima e João Martins",
+        "location": "CP2 - 1.09",
+        "hyperlink": "https://forms.gle/XC1pXsG9tHJTU4mp8"
       },
       {
         "activityType": "Coffee Break",
@@ -232,32 +217,32 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "IT Sector - Microsserviços e a Transformação Digital na área da banca",
-        "description": "João Laranjeira iniciou a sua carreira na área de investigação, mais concretamente em sistemas de apoio à tomada de decisão. Em 2013 juntou-se à ITSector, fazendo toda a sua carreira ligada à banca, onde integrou equipas de evolução tecnológica de sistemas de apoio à decisão na área de crédito. Atualmente, além de Arquiteto de Sistemas de Informação também desempenha funções de Gestor de Projeto, liderando uma equipa de atualização tecnológica para uma arquitetura moderna baseada em microsserviços.",
-        "author": "João Laranjeira",
-        "location": ""
+        "summary": "Decoding the Future: Exploring Bitcoin, Blockchain, and DeFi Innovations",
+        "description": "Unveiling the Crypto Canvas: From Bitcoin Genesis to DeFi Domination. In this talk, we'll demystify the origins and intricacies of Bitcoin, explore the advantages of decentralized networks, delve into various types of blockchains, and finally, navigate the explosive landscape of DeFi as the predominant use case.",
+        "author": "João Folha",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "Not all those who wander are lost, a journey into the World of Esports",
-        "description": "I'm a highly experienced esports focused Product Manager, having spent the last 6 years working full time in esports. After graduating from University of Coimbra with a Masters in Industrial Engineering and Management, I quickly turned my passion for esports into a career, bringing my formal education and grassroots experience together. Throughout my career I was fortunate to work in multiple roles, from being a Player, Coach, Product Manager, University Lecturer and Team Owner which now grants me a holistic perspective of the EMEA League of Legends Regional ecosystem I currently manage at Riot Games.",
-        "author": "Filipe Borges",
-        "location": "CP2-B1"
+        "summary": "A Firewall morreu!",
+        "description": "The Firewall is DEAD! – A SASE tale\nNos últimos anos, a interação entre pessoas e tecnologia sofreu uma profunda alteração: a informação, recursos e serviços e o seu consumo e processamento, deslocalizou-se, quer geograficamente quer a nível dos dispositivos utilizados. É comum, ao dia de hoje, as organizações terem uma força de trabalho geograficamente dispersa, sendo que em muitas situações os colaboradores trabalham fora das instalações da empresa de forma regular e a própria informação e serviços estão também dispersos. O trabalho colaborativo passou também a acontecer de forma deslocalizada e em tempo real, seja pela utilização de serviços Cloud para processamento de informação, seja pela utilização de diversos canais de comunicação.\n A tradicional arquitetura de segurança de informação não consegue ser ágil na proteção de dados neste tipo de contextos; o Edge já não é apenas a ligação da rede corporativa á internet ou aos serviços a consumir e, esses mesmos serviços, já não estão apenas no Data Center. Hoje, cada utilizador e cada serviço é um Edge, e deve ser tratado como tal, removendo toda a confiança tácita em dispositivos ou utilizadores e utilizando critérios de compliance e comportamentais para entregar um serviço a um utilizador.\n Com esta apresentação, iremos mostrar como uma arquitetura SASE (Secure Access Service Edge) pode simplificar o workflow de trabalho numa organização, garantindo ao mesmo tempo a qualidade de serviço e a segurança da informação em qualquer geografia ou dispositivo.",
+        "author": "Adelino Correia",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "Rust for the rest of us",
-        "description": "Sara Vieira is a founding engineer on axo.dev. Originally from Portugal, she now lives in Berlin doing some JavaScript and Rust. She's also a speaker and book author. In her spare time, she loves retro games and B movies.",
-        "author": "Sara Vieira",
-        "location": ""
+        "summary": "Modern Systems Programming: Rust and Zig",
+        "description": "Systems programming is changing: after a relatively calm period dominated by ANSI C and C++98, a new era was heralded by C++11, Rust, and Zig. Unthinkable happened --- Linux kernel admitted a second language in addition to C. Safety and security requirements are much more strict now, but they are matched by advances in language design.\n In this lecture, we will look at a snapshot of systems programming landscape as of early 2024 through the lens of Rust and Zig --- the two most innovative languages of the recent years.",
+        "author": "Aleksey Kladov",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
@@ -267,32 +252,24 @@
         "startTime": "16:30",
         "endTime": "16:45",
         "activityType": "Pitch",
-        "summary": "Eurotux",
-        "location": ""
+        "summary": "Critical Techworks",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
         "summary": "Continental",
-        "location": ""
+        "location": "CP2 - B1"
       },
       {
-        "startTime": "17:00",
-        "endTime": "18:00",
-        "activityType": "Panel Discussion",
-        "summary": "Arquivo Confidencial",
-        "description": "A tertúlia Arquivo Confidencial reúne alguns dos professores mais emblemáticos do Departamento de Informática para discutir as suas experiências, percalços e vitórias no decurso da sua carreira profissional!",
-        "author": "José Nuno Oliveira & JBB & Orlando Belo && Bruno Dias",
-        "location": ""
-      },
-      {
-        "startTime": "20:00",
+        "startTime": "21:00",
         "endTime": "00:00",
         "activityType": "Social",
-        "summary": "Corporate Dinner",
-        "description": "TBA",
-        "location": ""
+        "summary": "Movie Night",
+        "description": "In collaboration with the incredible team at CineFOCUM, you will have an unforgettable movie night! We will be screening the movie Ex Machina (2014), a thrilling science fiction film that will leave you on the edge of your seat. Join us for a night of fun and great company!\n⚠️ Limited to 50 seats. Enroll yourself now!",
+        "location": "Building 7 - 1.06",
+        "hyperlink": "https://forms.gle/smLSmJLvoracxTaP8"
       }
     ]
   },
@@ -303,21 +280,21 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Fujitsu - How to improve your CV, Application Development and Digital Transformation and Tech Quiz",
-        "description": "",
-        "author": "Filipa Coelho & Osvaldo Ferreira",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-how-to-improve-your-cv-app-development-digital-transformation-529534922207"
+        "summary": "Cegid: AI for Business",
+        "description": "Perante a constante evolução tecnológica e a competitividade do mercado, as empresas têm de se ajustar constantemente e procurar as melhores e mais inovadoras soluções para os seus produtos. Nesse contexto, a Cegid destaca-se por dedicar recursos de alta qualidade, concentrando-se de maneira proeminente na incorporação da Inteligência Artificial nos seus produtos.\n Entra nesta jornada de IA ao serviço dos utilizadores, explorando exemplos como um ChatBot com linguagem natural e um modelo de Deteção de Anomalias no processamento de salários.",
+        "author": "Vítor Ribeiro",
+        "location": "CP2 - 0.13",
+        "hyperlink": "https://forms.gle/397C4fA5HQYbhynR8"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "Subvisual - Introduction to Mobile Web3 development with React Native",
-        "description": "",
-        "author": "João Ferreiro",
-        "location": "",
-        "hyperlink": "https://www.eventbrite.pt/e/bilhetes-workshop-introduction-to-mobile-web3-development-with-react-native-529540037507"
+        "summary": "How to build a blockchain in Python",
+        "description": "Blockchain é considerado por muitos como a tecnologia revolucionária que estará na base de toda a troca e armazenamento de valor no futuro. Mas será o bicho-de-sete-cabeças que aparenta?\nNeste workshop, procurar-se-á desmistificar esta ideia implementando alguns aspetos chave desta tecnologia em Python. Serão explorados conceitos como hashing, consenso distribuído, entre muitos outros. O tutorial apenas assume alguma familiaridade com linguagens de programação.\nSe sempre tiveste curiosidade sobre blockchain mas nunca tiveste a oportunidade de aprofundar o teu conhecimento sobre os mecanismos fundamentais que a fazem funcionar, este é o momento. Este será o primeiro passo na tua jornada para fazeres parte da revolução financeira que lentamente mas seguramente está a acontecer.",
+        "author": "João Folha",
+        "location": "CP2 - 0.17",
+        "hyperlink": "https://forms.gle/1dycPqhoavYKH1Dg9"
       },
       {
         "activityType": "Coffee Break",
@@ -327,59 +304,56 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "Saber - Creating the biggest Open-World AAA video games in Portugal",
-        "description": "“Creating the biggest Open-World AAA vídeo games in Portugal” pretende ilustrar a evolução do estúdio português (Bigmoon / Saber Interactive Porto), os desafios e ferramentas desenvolvidas para desenvolver os maiores mapas Open-World para videojogos, bem como explicar a estratégia do estúdio, para se tornar num importante polo de desenvolvimento de videojogos AAA, em Portugal.",
-        "author": "Paulo J. Gomes",
-        "location": ""
+        "summary": "Desenvolvimento de Software e Engenharia de Dados no grupo BMW - Integração e Criação de valor",
+        "description": "São diários os desafios de qualquer organização no âmbito de engenharia de dados e no desenvolvimento de software. A Critical Techworks, que recentemente abriu um hub em Braga, é uma joint-venture da BMW Group e Critical Software que lida com estes desafios. Nesta talk serão apresentados dois projetos, um maioritariamente desenvolvido em JAVA e outro com o foco em processamento de dados (Process Mining).",
+        "author": "Rita Faria e José Antunes",
+        "location": "CP2 - B1"
+      },
+      {
+        "startTime": "12:30",
+        "endTime": "12:45",
+        "activityType": "Pitch",
+        "summary": "AgentifAI",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Lunch Break",
-        "coffeeBreak": true
+        "lunchBreak": true
       },
       {
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "Accenture - DevOps Talks",
-        "description": "Comecei a minha carreira profissional há cerca de 15 anos em Lisboa como Consultor em Change and Configuration Management e desde então esta area evoluiu para o DevOps como conhecemos hoje. Aluno de dissertação na Universidade Do Minho em Mestrado de Engenharia Informática, iniciei a minha carreira profissional há cerca 2 anos na Accenture, na àrea de DevOps, neste periodo trabalhei sempre em projectos na àrea da cloud. ",
-        "author": "Rui Oliveira & Ricardo Dias",
-        "location": ""
+        "summary": "Decoding AI Language Models: From Turing’s Dream to Today’s Reality",
+        "description": "Large Language Models, despite their recent and well-deserved spotlight, boast a truly fascinating history. As we embark on this journey, let's delve into their inner workings, explore pivotal moments, and cap it off with an exciting discussion on Retrieval Augmented Generation – a cutting-edge approach to unleash the full potential of these linguistic powerhouses.",
+        "author": "Bruno Carvalho",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "Subvisual - Competitive Coding Strategies",
-        "description": "Miguel Palhas e José Resende estudaram Engenharia Informática na Universidade do Minho, tendo iniciado as suas carreiras na Subvisual (fka Group Buddies) e Finiam respectivamente. Especialistas em desenvolvimento em Web3. Contribuem todos os dias para um mundo mais descentralizado.",
-        "author": "Miguel Palhas & José Resende",
-        "location": ""
+        "summary": "Securing the Internet in the Quantum Age",
+        "description": "This talk explores the imminent challenge posed by quantum computing to current cryptographic systems and delves into the emerging field of post-quantum cryptography to secure the Internet. The presentation aims to provide a succinct overview of how cryptography is evolving to safeguard the Internet in the quantum era, offering insights into ongoing research and industry initiatives dedicated to ensuring the resilience of digital communication in the face of quantum threats.",
+        "author": "Vânia Gonçalves",
+        "location": "CP2 - B1"
       },
       {
         "activityType": "Coffee Break",
         "coffeeBreak": true
       },
       {
-        "startTime": "16:30",
-        "endTime": "16:45",
-        "activityType": "Pitch",
-        "summary": "Subvisual",
-        "location": "TBA"
-      },
-      {
         "startTime": "16:45",
         "endTime": "17:00",
         "activityType": "Pitch",
-        "summary": "Farfetch",
-        "location": "TBA"
+        "summary": "Optare Solutions",
+        "location": "CP2 - B1"
       },
       {
         "startTime": "17:00",
-        "endTime": "18:00",
-        "activityType": "",
-        "summary": "Closing Session and Prize Announcement",
-        "description": "",
-        "author": "",
-        "location": ""
+        "endTime": "18:30",
+        "activityType": "Closing Session and Prize Announcements 🏆",
+        "location": "CP2 - B1"
       }
     ]
   }

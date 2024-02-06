@@ -11,17 +11,17 @@ import Button from "@components/Button";
 import Heading from "@components/Heading";
 import ResetPassword from "@components/ResetPassword";
 
-import { CheckpointTracker, CodeInput } from "./components";
+import { CheckpointTracker } from "./components";
 import CVInput from "./components/CVInput";
-import { resetPassword } from "@lib/api";
 import { getFirstName } from "@lib/naming";
+import { getCourses } from "@lib/api";
 
 interface Course {
   id: any;
   name: string;
 }
 
-function Profile({ courses }) {
+function Profile() {
   const { user, editUser } = useAuth() as {
     user: IAttendee;
     editUser: (username: FormData) => void;
@@ -29,7 +29,15 @@ function Profile({ courses }) {
   const [avatar, setAvatar] = useState(null);
   const [editing, setEditing] = useState(false);
   const [username, setUsername] = useState(user.nickname || "");
-  const [course, setCourse] = useState(user.course.toString() || "");
+  const [course, setCourse] = useState(user.course?.toString() || "");
+
+  const [courses, setCourses] = useState<Course[]>([{ id: "", name: "None" }]);
+
+  useEffect(() => {
+    getCourses().then((response) => {
+      setCourses(response.data.concat(courses));
+    });
+  }, []);
 
   const [photoFileUrl, setPhotoFileUrl] = useState<string>(user.avatar);
 
@@ -48,15 +56,18 @@ function Profile({ courses }) {
   } else if (companyBadges < 20) {
     level = 3;
     neededBadges = 20 - companyBadges;
-  } else if (companyBadges < 24) {
+  } else if (companyBadges < 25) {
     level = 4;
-    neededBadges = 24 - companyBadges;
-  } else {
+    neededBadges = 25 - companyBadges;
+  } else if (companyBadges < 29) {
     level = 5;
+    neededBadges = 29 - companyBadges;
+  } else {
+    level = 6;
     neededBadges = 0;
   }
 
-  const levelEntries = [10, 30, 60, 100, 150];
+  const levelEntries = [10, 30, 60, 100, 120, 150];
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
@@ -91,22 +102,26 @@ function Profile({ courses }) {
       title={`Hello, ${getFirstName(user.name)} 👋`}
       description={`Welcome to your profile!`}
     >
-      <div className="mt-12 grid-cols-2 overflow-hidden">
+      <div className="mt-12 grid-cols-2">
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile">
             <div className="w-auto">
               <Button
                 title={editing ? "Save Changes" : "Edit"}
-                className="w-full items-center border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-secondary shadow-sm"
+                className="w-full items-center border border-quinary bg-quinary py-2 px-4 text-center font-iregular text-sm text-white shadow-sm"
                 type="submit"
                 form="profile-form"
               />
             </div>
           </Heading>
 
-          <Form onSubmit={handleSubmitForm} id="profile-form">
-            <div className="pl-6">
-              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white hover:border-quinary">
+          <Form
+            onSubmit={handleSubmitForm}
+            id="profile-form"
+            className="flex flex-col justify-center sm:justify-start"
+          >
+            <div className="flex w-auto justify-center pl-0 sm:block sm:w-full sm:pl-6">
+              <div className="relative h-[220px] w-[220px] select-none overflow-hidden rounded-full border-2 border-white">
                 {photoFileUrl == null ? (
                   <img
                     src="/images/mascot-head.png"
@@ -134,39 +149,43 @@ function Profile({ courses }) {
               </div>
             </div>
 
-            <Input
-              text="NAME"
-              id="name"
-              name="name"
-              value={user.name || ""}
-              bgColor="primary"
-              fgColor="white"
-              enabled={false}
-            />
-            <Input
-              text="USERNAME"
-              id="username"
-              name="username"
-              value={username}
-              bgColor="primary"
-              fgColor="white"
-              enabled={editing}
-              onChange={(e) => setUsername(e.currentTarget.value)}
-            />
-            <Select
-              text="COURSE"
-              id="course"
-              bgColor="primary"
-              fgColor="white"
-              value={course}
-              options={courses.map((course) => ({
-                key: course.id,
-                name: course.name,
-              }))}
-              enabled={editing}
-              onChange={(e) => setCourse(e.currentTarget.value)}
-            />
-            <ResetPassword user={user} />
+            <div className="w-full sm:w-96">
+              <Input
+                text="NAME"
+                id="name"
+                name="name"
+                value={user.name || ""}
+                bgColor="primary"
+                fgColor="white"
+                enabled={false}
+              />
+              <Input
+                text="USERNAME"
+                id="username"
+                name="username"
+                value={username}
+                bgColor="primary"
+                fgColor="white"
+                enabled={editing}
+                onChange={(e) => setUsername(e.currentTarget.value)}
+              />
+              <Select
+                text="COURSE"
+                id="course"
+                bgColor="primary"
+                fgColor="white"
+                value={course}
+                options={courses.map((course) => ({
+                  key: course.id,
+                  name: course.name,
+                }))}
+                enabled={editing}
+                onChange={(e) => setCourse(e.currentTarget.value)}
+              />
+              <div className="mt-4">
+                <ResetPassword user={user} />
+              </div>
+            </div>
           </Form>
         </div>
 
@@ -220,11 +239,15 @@ function Profile({ courses }) {
               {levelEntries[3]} entries
             </p>
             <p className="font-iregular">
-              <b className="font-ibold">Level 5</b> 24 companies &rarr; +
+              <b className="font-ibold">Level 5</b> 25 companies &rarr; +
               {levelEntries[4]} entries
             </p>
+            <p className="font-iregular">
+              <b className="font-ibold">Level 6</b> 29 companies &rarr; +
+              {levelEntries[5]} entries
+            </p>
 
-            <CheckpointTracker checkpoints={4} progress={level} />
+            <CheckpointTracker checkpoints={5} progress={level} />
 
             {level != 5 && (
               <p className="font-iregular text-white">

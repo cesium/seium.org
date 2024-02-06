@@ -6,13 +6,16 @@ import sponsors from "/data/sponsors.json";
 
 function Tab({ tabName, selected, onSelect }) {
   const classes1 =
-    "text-center w-60 font-imedium text-white text-lg md:text-2xl pt-3 cursor-pointer";
-  const classes2 = "w-full pt-4 border-solid border-b-[10px]";
+    "text-center w-60 font-medium text-white text-lg md:text-2xl pt-3 cursor-pointer transition-colors pb-4 border-b-[10px] border-white/10 border-solid";
 
   return (
-    <div className={classes1} onClick={onSelect}>
+    <div
+      className={
+        classes1 + (selected ? ` border-white/100` : ` hover:border-white/30`)
+      }
+      onClick={onSelect}
+    >
       {tabName}
-      <div className={selected ? classes2 : `opacity-20 ${classes2}`} />
     </div>
   );
 }
@@ -26,11 +29,7 @@ export default function Sponsors(props) {
         Our amazing sponsors
       </h2>
       <div className="mt-10 flex items-end justify-center">
-        <Tab
-          tabName="Exclusive & Gold"
-          selected={!val}
-          onSelect={() => setValue(0)}
-        />
+        <Tab tabName="Gold" selected={!val} onSelect={() => setValue(0)} />
         <Tab
           tabName="Silver & Bronze"
           selected={val}
@@ -51,26 +50,22 @@ export default function Sponsors(props) {
             >
               <div className="grid w-full grid-cols-1 place-items-center py-[5%] lg:py-0 lg:px-[10%]">
                 <p className="font-terminal-uppercase pb-10 text-2xl text-quinary lg:text-3xl">
-                  {!val
-                    ? key == 0
-                      ? "Exclusive"
-                      : "Gold"
-                    : key == 0
-                    ? "Silver"
-                    : "Bronze"}
+                  {!val ? "Gold" : key == 0 ? "Silver" : "Bronze"}
                 </p>
-                <div
-                  className={`${
-                    !val && key == 0 ? "grid-cols-1" : "grid-cols-2"
-                  } grid gap-2 p-6 lg:gap-10`}
-                >
+                <div className="grid grid-cols-2 place-items-center gap-4 p-6 lg:gap-10">
                   {elem.map((sponsor, i) => {
+                    const imageSize = !val
+                      ? { width: 250, height: 60 }
+                      : key == 0
+                      ? { width: 200, height: 60 }
+                      : { width: 175, height: 60 };
+
                     return (
                       <a key={i} href={sponsor.link}>
                         <Image
                           src={`/images/sponsors/${sponsor.image}.svg`}
-                          width={250}
-                          height={60}
+                          width={imageSize.width}
+                          height={imageSize.height}
                           alt={sponsor.image}
                         />
                       </a>

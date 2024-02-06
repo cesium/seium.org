@@ -41,18 +41,6 @@ function Login() {
           link="Register here"
           href="/signup"
         />
-        <div className="absolute bottom-0 right-60 hidden lg:block xl:hidden">
-          <Motion.div
-            initial={{ opacity: 0 }}
-            animate={{ y: -15, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <Card img="/images/void.svg" alt="MascotFooter" inverted={false}>
-              Just really awesome people here. Please login and prepare to be
-              amazed. 🔮
-            </Card>
-          </Motion.div>
-        </div>
       </div>
     </div>
   );
