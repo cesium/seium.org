@@ -18,7 +18,7 @@ function Identifier() {
   useEffect(() => {
     if (!pauseScanRef.current) {
       setTopText(defaultTopText);
-    }
+      pauseScanRef.current}
   }, [pauseScanRef]);
 
 
