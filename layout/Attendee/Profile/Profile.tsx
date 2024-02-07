@@ -59,9 +59,9 @@ function Profile() {
   } else if (companyBadges < 25) {
     level = 4;
     neededBadges = 25 - companyBadges;
-  } else if (companyBadges < 29) {
+  } else if (companyBadges < 28) {
     level = 5;
-    neededBadges = 29 - companyBadges;
+    neededBadges = 28 - companyBadges;
   } else {
     level = 6;
     neededBadges = 0;
@@ -243,7 +243,7 @@ function Profile() {
               {levelEntries[4]} entries
             </p>
             <p className="font-iregular">
-              <b className="font-ibold">Level 6</b> 29 companies &rarr; +
+              <b className="font-ibold">Level 6</b> 28 companies &rarr; +
               {levelEntries[5]} entries
             </p>
 
