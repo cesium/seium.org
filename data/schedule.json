@@ -158,6 +158,13 @@
         "location": "CP2 - B1"
       },
       {
+        "startTime": "16:45",
+        "endTime": "17:00",
+        "activityType": "Pitch",
+        "summary": "Glintt Global",
+        "location": "CP2 - B1"
+      },
+      {
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
