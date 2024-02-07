@@ -95,6 +95,10 @@
       {
         "name": "CTF - 1st Day Challenge",
         "url": "/docs/ctf/SEI24_day1.7z"
+      },
+      {
+        "name": "CTF - 2nd Day Challenge",
+        "url": "/docs/ctf/SEI24_day2.7z"
       }
     ]
   }
