@@ -39,7 +39,7 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setSc
         .catch((err) => {
           if (!video?.srcObject && err instanceof DOMException) {
             setError(
-              "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
+              "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it or try to refresh the page."
             );
           }
         });
@@ -100,6 +100,10 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setSc
             handleQRCode(uuid);
           }
         }
+      }
+
+      if (!pauseScanRef.current) {
+          setScanFeedback(FEEDBACK.SCANNING);
       }
     }
 

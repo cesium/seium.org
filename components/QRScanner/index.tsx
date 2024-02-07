@@ -56,7 +56,7 @@ const QRScanner: React.FC<Props> = ({
   removeCloseButton = false,
 }) => {
 
-  // Clear Failure message after 0.7 seconds
+  // Unpause (so clear any message) after 700ms
   useEffect(() => {
     if (scanFeedback != FEEDBACK.SCANNING) {
       const timeoutId = setTimeout(() => {
