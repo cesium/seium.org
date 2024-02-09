@@ -247,9 +247,9 @@ function Profile() {
               {levelEntries[5]} entries
             </p>
 
-            <CheckpointTracker checkpoints={5} progress={level} />
+            <CheckpointTracker checkpoints={6} progress={level} />
 
-            {level != 5 && (
+            {level != 6 && (
               <p className="font-iregular text-white">
                 You just need {neededBadges} more badges to go to Level{" "}
                 {level + 1} (and win +{levelEntries[level]} entries to the final
