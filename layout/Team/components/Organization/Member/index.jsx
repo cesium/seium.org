@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTwitter,
+  faXTwitter,
   faGitlab,
-  faGithubAlt,
+  faGithub,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -43,7 +43,7 @@ export default function Member({
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faGithubAlt} />
+            <FontAwesomeIcon icon={faGithub} />
           </a>
         )}
         {gitlab && (
@@ -58,12 +58,12 @@ export default function Member({
         )}
         {twitter && (
           <a
-            href={`https://twitter.com/${twitter}`}
+            href={`https://x.com/${twitter}`}
             className="mr-3 w-4"
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faXTwitter} />
           </a>
         )}
       </div>

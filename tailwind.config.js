@@ -46,11 +46,6 @@ module.exports = {
         ithin: ["Inter-Thin"],
         terminal: ["Terminal"],
       },
-      keyframes: {
-        "typewriter-cursor-pulse": {
-          "50%": { opacity: 0 },
-        },
-      },
     },
   },
   variants: {

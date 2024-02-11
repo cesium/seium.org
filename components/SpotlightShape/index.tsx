@@ -1,6 +1,6 @@
 export default function SpotlightShape() {
   return (
-    <div className="absolute -top-[5vh] h-screen w-screen opacity-90 blur-md">
+    <div className="pointer-events-none absolute -top-[5vh] h-screen w-screen opacity-90 blur-md">
       {/* Desktop spotlight effect */}
       <div
         className="hidden h-full w-full bg-gradient-to-b from-[#330bff] to-transparent lg:block"

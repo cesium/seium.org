@@ -7,31 +7,49 @@ import BadgeFilter from "@components/BadgeFilter";
 
 import Layout from "@components/Layout";
 import Heading from "@components/Heading";
-import { getAttendee, isAttendeeRegistered } from "@lib/api";
+import { getAttendeeByID, getAttendeeByUsername } from "@lib/api";
 
 function Profile() {
   const [attendee, updateAttendee] = useState(null);
-  const [avatar, setAvatar] = useState(null);
-  const router = useRouter();
-  const { uuid } = router.query;
   const [filter, updateFilter] = useState(null);
 
+  const router = useRouter();
+  const { uuid } = router.query;
+
   useEffect(() => {
-    getAttendee(uuid)
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await getAttendeeByID(uuid);
         updateAttendee(response.data);
-      })
-      .catch((error) => {
-        router.replace("/404");
-      });
+      } catch (error) {
+        if (error.response && error.response.status === 400) {
+          try {
+            const response = await getAttendeeByUsername(uuid);
+            updateAttendee(response.data);
+          } catch (usernameError) {
+            router.replace("/404");
+          }
+        } else {
+          router.replace("/404");
+        }
+      }
+    };
+
+    fetchData();
   }, []);
 
+  const getAttendeeDisplayName = (attendee): string => {
+    if (attendee.name.endsWith("s")) {
+      return `${attendee.name}'`;
+    }
+
+    return `${attendee.name}'s`;
+  };
+
   if (!attendee) return null;
+
   return (
-    <Layout
-      title={`Welcome to ${attendee.name}'s profile!`}
-      description={`Welcome to your profile!`}
-    >
+    <Layout title={`Welcome to ${getAttendeeDisplayName(attendee)} profile!`}>
       <div className="mt-12 grid-cols-2 overflow-hidden">
         <div className="col-span-1 float-left w-full xl:w-1/2">
           <Heading text="User Profile"></Heading>

@@ -7,7 +7,7 @@ import { Dialog, Transition } from "@headlessui/react";
 
 import Return from "/components/Return";
 
-const navigation = ["dashboard", "spotlight"];
+const navigation = ["dashboard", "spotlights"];
 
 export default function Dashboard(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);

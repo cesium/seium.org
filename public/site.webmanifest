@@ -1,6 +1,6 @@
 {
-  "name": "SEI'22",
-  "short_name": "SEI'22",
+  "name": "SEI'24",
+  "short_name": "SEI'24",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#01253d",
-  "background_color": "#01253d",
-  "start_url": "https://www.seium.org",
+  "theme_color": "#04041C",
+  "background_color": "#04041C",
+  "start_url": "https://seium.org",
   "display": "standalone"
 }

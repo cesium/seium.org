@@ -1,13 +1,13 @@
 import { useState, useRef } from "react";
 import { useRouter } from "next/router";
 
-import { withAuth, useAuth } from "@context/Auth";
+import { withAuth, useAuth, IStaff } from "@context/Auth";
 
 import Layout from "@components/Layout";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
 function Prizes() {
-  const { user } = useAuth();
+  const { user } = useAuth() as { user: IStaff };
   const router = useRouter();
   const pauseRef = useRef(false);
   const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
@@ -23,7 +23,7 @@ function Prizes() {
         <QRScanner
           handleCode={handleUUID}
           pauseRef={pauseRef}
-          text={user.name}
+          text={user.email}
           feedback={feedback}
           showScanner={showScanner}
           setScanner={setScanner}

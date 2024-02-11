@@ -1,7 +1,6 @@
-import { withoutAuth } from "@context/Auth";
-
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
+import Link from "next/link";
 
 import { Hero, Challenges } from "./components";
 
@@ -18,4 +17,4 @@ function Index() {
   );
 }
 
-export default withoutAuth(Index);
+export default Index;

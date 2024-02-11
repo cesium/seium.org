@@ -1,15 +1,16 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import * as USER from "/lib/user";
-
-import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import { useAuth } from "@context/Auth";
+import { ROLES } from "@lib/user";
+import { useAuth, IUser, IStaff } from "@context/Auth";
 import JoinUs from "@components/JoinUs";
+import BackOfficeWrapper from "@components/FeatureFlags/BackOfficeWrapper";
+
 import styles from "./style.module.css";
 
 const navigation = [
@@ -20,24 +21,30 @@ const navigation = [
   { name: "FAQs", slug: "/faqs" },
 ];
 
-const userNavigation = (type) => {
-  switch (type) {
-    case USER.ROLES.ATTENDEE:
+const roleNavigation = (user) => {
+  switch (user.type) {
+    case ROLES.ATTENDEE:
       return [{ name: "Dashboard", slug: "/attendee/profile" }];
-    case USER.ROLES.STAFF:
+
+    case ROLES.STAFF:
       return [
         { name: "Leaderboard", slug: "/staff/leaderboard" },
         { name: "Give Badges", slug: "/staff/badges" },
         { name: "Give Prizes", slug: "/staff/prizes" },
+        { name: "Upload CV", slug: "/staff/cv" },
+        ...(user.is_admin
+          ? [{ name: "Spotlights", slug: "/staff/spotlights" }]
+          : []),
       ];
-    case USER.ROLES.SPONSOR:
+
+    case ROLES.SPONSOR:
       return [
         { name: "Scanner", slug: "/sponsor/scanner" },
         { name: "Visitors", slug: "/sponsor/visitors" },
       ];
 
     default:
-      throw new Error(`Unknown USER TYPE: ${type}`);
+      throw new Error(`Unknown USER TYPE: ${user.type}`);
   }
 };
 
@@ -55,7 +62,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                   <Link href="/">
                     <div className={`${styles.logo} select-none pt-4 lg:pt-8`}>
                       <Image
-                        className="cursor-pointer opacity-60 hover:opacity-100"
+                        className="cursor-pointer transition-colors duration-75 ease-in hover:text-quinary"
                         src="/images/sei-logo.svg"
                         width="50"
                         height="40"
@@ -64,30 +71,32 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                     </div>
                   </Link>
                   <div className="col-span-3 hidden justify-self-end lg:block">
-                    <div className="flex select-none">
-                      <div className="mr-6 grid grid-cols-3 gap-y-4 gap-x-20 pt-4">
+                    <div className="flex select-none items-center">
+                      <div className="grid grid-cols-3 gap-y-8 gap-x-20 pt-4">
                         {navigation.map((item) => (
                           <Link
                             key={item.slug}
                             href={item.slug}
-                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
+                            className="font-iregular text-sm text-white transition-colors duration-75 ease-in hover:text-quinary"
                           >
                             {item.name}
                           </Link>
                         ))}
-                        {isAuthenticated ? null : (
-                          <Link
-                            key="login"
-                            href="/login"
-                            className="font-iregular text-sm text-white text-opacity-40 hover:text-opacity-100"
-                          >
-                            Login
-                          </Link>
-                        )}
+                        <BackOfficeWrapper>
+                          {isAuthenticated ? null : (
+                            <Link
+                              key="login"
+                              href="/login"
+                              className="font-iregular text-sm text-white transition-colors duration-75 ease-in hover:text-quinary"
+                            >
+                              Login
+                            </Link>
+                          )}
+                        </BackOfficeWrapper>
                       </div>
                       {isAuthenticated ? (
-                        <Menu as="div" className="relative z-50 ml-3">
-                          <div className="py-8">
+                        <Menu as="div" className="relative z-50 ml-20">
+                          <div className="pt-8 pb-1">
                             <Menu.Button className="flex max-w-xs items-center rounded-full bg-primary text-sm ring-2 ring-white ring-offset-2 focus:outline-none">
                               <span className="sr-only">Open user menu</span>
                               {user?.avatar ? (
@@ -101,6 +110,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                                   <img
                                     src="/images/mascot-head.png"
                                     alt="Mascote"
+                                    className="h-10 w-10 rounded-full"
                                   />
                                 </span>
                               )}
@@ -117,7 +127,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           >
                             <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                               {user &&
-                                userNavigation(user.type).map((item) => (
+                                roleNavigation(user).map((item) => (
                                   <Menu.Item key={item.name}>
                                     <Link
                                       href={item.slug}
@@ -141,7 +151,9 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                           </Transition>
                         </Menu>
                       ) : (
-                        <JoinUs fgColor={fgColor} button={button} />
+                        <div className="pl-20 pt-4">
+                          <JoinUs />
+                        </div>
                       )}
                     </div>
                   </div>
@@ -165,7 +177,7 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
                 <Disclosure.Button
                   key={item.slug}
                   as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
                   <Link key={item.slug} href={item.slug}>
                     {item.name}
@@ -174,35 +186,39 @@ export default function Navbar({ bgColor, fgColor, button, children }) {
               ))}
               {isAuthenticated &&
                 user &&
-                userNavigation(user.type).map((item) => (
+                roleNavigation(user).map((item) => (
                   <Disclosure.Button
                     key={item.slug}
                     as="a"
-                    className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                    className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                   >
                     <Link key={item.slug} href={item.slug}>
                       {item.name}
                     </Link>
                   </Disclosure.Button>
                 ))}
-              {!isAuthenticated && (
-                <Disclosure.Button
-                  key="login"
-                  as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
-                >
-                  <Link key="login" href="/login">
-                    Login
-                  </Link>
-                </Disclosure.Button>
-              )}
+              <BackOfficeWrapper>
+                {!isAuthenticated && (
+                  <Disclosure.Button
+                    key="login"
+                    as="a"
+                    className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
+                  >
+                    <Link key="login" href="/login">
+                      Login
+                    </Link>
+                  </Disclosure.Button>
+                )}
+              </BackOfficeWrapper>
               {isAuthenticated && (
                 <Disclosure.Button
                   key="login"
                   as="a"
-                  className="block rounded-md py-6 text-center font-ibold text-3xl text-white hover:text-quinary"
+                  className="font-terminal-uppercase block rounded-md py-6 text-center text-3xl text-white hover:text-quinary"
                 >
-                  <button onClick={() => logout()}>Log Out</button>
+                  <button className="uppercase" onClick={() => logout()}>
+                    Log Out
+                  </button>
                 </Disclosure.Button>
               )}
             </div>
