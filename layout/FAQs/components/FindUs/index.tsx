@@ -1,6 +1,7 @@
 import { motion as Motion } from "framer-motion";
 
 const email = "cesium@di.uminho.pt";
+const tel = "+351 253 604 448";
 
 export default function FindUs() {
   return (
@@ -29,7 +30,9 @@ export default function FindUs() {
           <a href={`mailto:${email}`}>
             <li className="">{`E-mail: ${email}`}</li>
           </a>
-          <li className="">Phone: +351 253 604 448</li>
+          <a href={`tel:${tel}`}>
+            <li className="">{`Phone: ${tel}`}</li>
+          </a>
         </ul>
       </div>
       <div className="w-full select-none lg:w-3/5">
