@@ -13,7 +13,7 @@ function Prizes() {
   const [scanFeedback, setScanFeedback] = useState(FEEDBACK.SCANNING);
   const [showQRScanner, setShowQRScanner] = useState(true);
 
-  const handleUUID = (uuid:String) => {
+  const handleUUID = (uuid: String) => {
     router.push(`/staff/prizes/${uuid}`);
   };
 
@@ -23,7 +23,7 @@ function Prizes() {
         <QRScanner
           topText={user.email}
           handleQRCode={handleUUID}
-          pauseScanRef={pauseScanRef}
+          isScanPaused={pauseScanRef}
           scanFeedback={scanFeedback}
           setScanFeedback={setScanFeedback}
           showScanner={showQRScanner}

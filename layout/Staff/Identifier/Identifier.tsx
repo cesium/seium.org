@@ -10,17 +10,11 @@ import QRScanner, { FEEDBACK } from "@components/QRScanner";
 const defaultTopText = "No QR Code Found!";
 
 function Identifier() {
-  const pauseScanRef = useRef(false);
   const [topText, setTopText] = useState(defaultTopText);
-  const [scanFeedback, setScanFeedback] = useState(FEEDBACK.SCANNING);
   const [showQRScanner, setShowQRScanner] = useState(true);
 
-  useEffect(() => {
-    if (!pauseScanRef.current) {
-      setTopText(defaultTopText);
-      pauseScanRef.current}
-  }, [pauseScanRef]);
-
+  const isScanPaused = useRef(false);
+  const [scanFeedback, setScanFeedback] = useState(FEEDBACK.SCANNING);
 
   const handleUUID = (uuid: string) => {
     getAttendeeByID(uuid)
@@ -34,13 +28,25 @@ function Identifier() {
       });
   };
 
+  useEffect(() => {
+    if (scanFeedback == FEEDBACK.SCANNING) {
+      const timeoutID = setTimeout(() => {
+        setTopText(defaultTopText);
+      }, 3000);
+
+      return () => {
+        clearTimeout(timeoutID);
+      };
+    }
+  }, [scanFeedback]);
+
   return (
     <Layout title="Identifier" description="Identify an attendee">
       <div className="mt-5 select-none">
         <QRScanner
           topText={topText}
           handleQRCode={handleUUID}
-          pauseScanRef={pauseScanRef}
+          isScanPaused={isScanPaused}
           scanFeedback={scanFeedback}
           setScanFeedback={setScanFeedback}
           showScanner={showQRScanner}

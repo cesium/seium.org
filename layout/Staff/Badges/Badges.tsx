@@ -27,7 +27,7 @@ const Badges: React.FC = () => {
         updateAllBadges(response.data);
       })
       .catch((_) => updateError(true));
-  }, []); 
+  }, []);
 
   const handleBadgeSelected = (badge: string) => {
     badgeRef.current = badge;
@@ -64,7 +64,7 @@ const Badges: React.FC = () => {
         <div className="mt-5">
           <QRScanner
             handleQRCode={handleUUID}
-            pauseScanRef={pauseRef}
+            isScanPaused={pauseRef}
             topText={badgeRef?.current.name}
             scanFeedback={scanFeedback}
             setScanFeedback={setScanFeedback}
@@ -125,6 +125,6 @@ const Badges: React.FC = () => {
       <GoToTop />
     </Layout>
   );
-}
+};
 
 export default withAuth(Badges);

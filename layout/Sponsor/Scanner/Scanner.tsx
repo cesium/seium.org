@@ -8,7 +8,9 @@ import Layout from "@components/Layout";
 const SponsorBadges: React.FC = () => {
   const { user } = useAuth() as { user: ISponsor };
   const pauseScanRef = useRef(false);
-  const [scanFeedback, setScanFeedback] = useState<FeedbackType>(FEEDBACK.SCANNING);
+  const [scanFeedback, setScanFeedback] = useState<FeedbackType>(
+    FEEDBACK.SCANNING
+  );
 
   const handleUUID = (uuid: string) => {
     let feedback_var = FEEDBACK.FAILURE;
@@ -42,7 +44,7 @@ const SponsorBadges: React.FC = () => {
       <div className="mt-5 select-none">
         <QRScanner
           handleQRCode={handleUUID}
-          pauseScanRef={pauseScanRef}
+          isScanPaused={pauseScanRef}
           topText={user.name}
           scanFeedback={scanFeedback}
           setScanFeedback={setScanFeedback}

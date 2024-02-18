@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { MutableRefObject, useEffect, useState } from "react";
 import BarebonesQRScanner from "./BarebonesQRScanner";
 import Button from "@components/Button";
 
@@ -37,9 +37,9 @@ export const FEEDBACK = {
 interface Props {
   topText: string;
   handleQRCode: (uuid: string) => void;
-  pauseScanRef: React.MutableRefObject<boolean>;
+  isScanPaused: MutableRefObject<boolean>;
   scanFeedback: FeedbackType;
-  setScanFeedback: (scanFeedback: FeedbackType) => void;
+  setScanFeedback: (feedback: FeedbackType) => void;
   showScanner?: boolean;
   setShowScanner?: (show: boolean) => void;
   removeCloseButton?: boolean;
@@ -48,38 +48,29 @@ interface Props {
 const QRScanner: React.FC<Props> = ({
   topText,
   handleQRCode,
-  pauseScanRef,
+  isScanPaused,
   scanFeedback,
   setScanFeedback,
   showScanner = true,
   setShowScanner = (_) => {},
   removeCloseButton = false,
 }) => {
-
-  // Unpause (so clear any message) after 700ms
-  useEffect(() => {
-    if (scanFeedback != FEEDBACK.SCANNING) {
-      const timeoutId = setTimeout(() => {
-        pauseScanRef.current = false;
-        setScanFeedback(FEEDBACK.SCANNING);
-      }, 700);
-
-      return () => {
-        clearTimeout(timeoutId);
-      };
-    }
-  }, [scanFeedback]);
-
   if (!showScanner) {
     return <></>;
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 max-w-lg m-auto">
+    <div className="m-auto grid max-w-lg grid-cols-1 gap-6">
       <div className="m-auto flex h-16 w-full items-center justify-center rounded-2xl bg-quinary text-black">
         <p className="font-ibold">{topText}</p>
       </div>
-      <BarebonesQRScanner handleQRCode={handleQRCode} pauseScanRef={pauseScanRef} setScanFeedback={setScanFeedback}/>
+
+      <BarebonesQRScanner
+        handleQRCode={handleQRCode}
+        isScanPaused={isScanPaused}
+        setScanFeedback={setScanFeedback}
+      />
+
       <div className="w-auto">
         <div
           className={`${scanFeedback.color} m-auto flex h-16 w-full items-center justify-center rounded-2xl`}

@@ -32,7 +32,6 @@ export default function SignUpForm({ courses }) {
   const [scanned, updateScanned] = useState(false);
   const [showQRScanner, setShowQRScanner] = useState(false);
   const pauseScanRef = useRef(false);
-  pauseScanRef.current = false;
 
   const [termsAccepted, setTermsAccepted] = useState(false);
 
@@ -173,15 +172,15 @@ export default function SignUpForm({ courses }) {
           </p>
         )}
         {showQRScanner && (
-          <div className="fixed top-1/2 left-1/2 max-w-[512px] max-h-[512px] w-full h-full p-2 -translate-x-1/2 -translate-y-1/2">
+          <div className="fixed top-1/2 left-1/2 h-full max-h-[512px] w-full max-w-[512px] -translate-x-1/2 -translate-y-1/2 p-2">
             <BarebonesQRScanner
-              pauseScanRef={pauseScanRef}
               handleQRCode={(code: string) => {
                 pauseScanRef.current = false;
                 setShowQRScanner(false);
                 updateScanned(true);
                 setUUID(code);
               }}
+              isScanPaused={pauseScanRef}
             />
           </div>
         )}

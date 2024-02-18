@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, MutableRefObject } from "react";
 import jsQR from "jsqr";
 import { FEEDBACK, FeedbackType } from "@components/QRScanner";
 
@@ -9,14 +9,21 @@ const CAPTURE_OPTIONS = {
 
 interface Props {
   handleQRCode: (uuid: string) => void;
-  pauseScanRef: React.MutableRefObject<boolean>;
-  setScanFeedback?: (scanFeedback: FeedbackType) => void;
+  isScanPaused: MutableRefObject<boolean>;
+  unpauseTimeout?: number;
+  setScanFeedback?: (feedback: FeedbackType) => void;
 }
 
-const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setScanFeedback = (_) => {} }) => {
+const BarebonesQRScanner: React.FC<Props> = ({
+  handleQRCode,
+  isScanPaused,
+  unpauseTimeout = 700,
+  setScanFeedback = (_) => {},
+}) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number>();
+  const unpauseTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const [error, setError] = useState<string>("");
 
@@ -54,6 +61,15 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setSc
     };
   }, []);
 
+  useEffect(() => {
+    return () => {
+      if (unpauseTimeoutRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        clearTimeout(unpauseTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const drawQRBoundingBox = () => {
     const video = videoRef?.current;
     const canvas = canvasRef?.current;
@@ -64,6 +80,7 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setSc
     }
 
     const canvas2D = canvas.getContext("2d");
+    let successReadingCode = false;
 
     if (video.readyState === video.HAVE_ENOUGH_DATA) {
       canvas.height = video.videoHeight;
@@ -71,14 +88,24 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setSc
 
       // Will use the canvas to get the video image data, and pass it to jsQR, but will then clear the canvas to just draw the bounding box
       canvas2D.drawImage(video, 0, 0, canvas.width, canvas.height);
-      const imageData = canvas2D.getImageData(0, 0, canvas.width, canvas.height);
+      const imageData = canvas2D.getImageData(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
       const code = jsQR(imageData.data, imageData.width, imageData.height, {
         inversionAttempts: "dontInvert",
       });
-      canvas2D.clearRect(0, 0, canvas.width, canvas.height); 
+      canvas2D.clearRect(0, 0, canvas.width, canvas.height);
 
       if (code) {
-        const {topLeftCorner, topRightCorner, bottomLeftCorner, bottomRightCorner} = code.location;
+        const {
+          topLeftCorner,
+          topRightCorner,
+          bottomLeftCorner,
+          bottomRightCorner,
+        } = code.location;
 
         canvas2D.beginPath();
 
@@ -92,19 +119,25 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setSc
         canvas2D.strokeStyle = "#78f400";
         canvas2D.stroke();
 
-        if (!pauseScanRef.current) {
+        if (!isScanPaused.current) {
           const uuid = parseURL(code.data);
+          successReadingCode = true;
 
           if (uuid) {
-            pauseScanRef.current = true;
             handleQRCode(uuid);
+            isScanPaused.current = true;
+
+            // Unpause (so clear any message) after 700ms
+            unpauseTimeoutRef.current = setTimeout(() => {
+              isScanPaused.current = false;
+            }, unpauseTimeout);
           }
         }
       }
+    }
 
-      if (!pauseScanRef.current) {
-          setScanFeedback(FEEDBACK.SCANNING);
-      }
+    if (!successReadingCode && !isScanPaused.current) {
+      setScanFeedback(FEEDBACK.SCANNING);
     }
 
     animationFrameRef.current = requestAnimationFrame(drawQRBoundingBox);
@@ -117,7 +150,7 @@ const BarebonesQRScanner: React.FC<Props> = ({ handleQRCode, pauseScanRef, setSc
       if (url_obj.host !== process.env.NEXT_PUBLIC_QRCODE_HOST) {
         setScanFeedback(FEEDBACK.INVALID_QR);
         return null;
-      };
+      }
 
       return url_obj.pathname.split("/").at(-1);
     } catch {
