@@ -21,7 +21,7 @@ const BarebonesQRScanner: React.FC<Props> = ({
   setScanFeedback = (_) => {},
 }) => {
   const [successReadingCode, setSuccessReadingCode] = useState(false);
-  const [error, setError] = useState<string>("");
+  const [camMessage, setCamMessage] = useState<string>("");
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -44,11 +44,12 @@ const BarebonesQRScanner: React.FC<Props> = ({
     const video = videoRef.current;
 
     if (!video?.srcObject) {
+      setCamMessage("Grant camera permissions to be able to scan QR codes.");
       navigator.mediaDevices
         .getUserMedia(CAPTURE_OPTIONS)
         .then((stream) => {
           if (!video?.srcObject) {
-            setError("");
+            setCamMessage("");
             video.srcObject = stream;
             video.setAttribute("playsinline", "true"); // required to tell iOS safari we don't want fullscreen
             video.play();
@@ -58,8 +59,8 @@ const BarebonesQRScanner: React.FC<Props> = ({
         })
         .catch((err) => {
           if (!video?.srcObject && err instanceof DOMException) {
-            setError(
-              "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it or try to refresh the page."
+            setCamMessage(
+              "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
             );
           }
         });
@@ -157,17 +158,20 @@ const BarebonesQRScanner: React.FC<Props> = ({
   };
 
   return (
-    <div className="relative flex aspect-square w-full items-center justify-center">
+    <div className="relative flex aspect-square w-full items-center justify-center rounded-2xl overflow-hidden bg-primary">
+      <div className="absolute bg-white opacity-5 w-full h-full"/>
+
       <video
         ref={videoRef}
-        className="absolute h-full w-full rounded-2xl object-cover"
+        className="absolute h-full w-full object-cover"
       />
       <canvas
         ref={canvasRef}
         className="absolute h-full w-full rounded-2xl object-cover"
       />
+
       <div>
-        <p className="text-center">{error}</p>
+        <p className="text-center p-16 text-white">{camMessage}</p>
       </div>
     </div>
   );
