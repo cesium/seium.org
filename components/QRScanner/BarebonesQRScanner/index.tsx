@@ -20,12 +20,25 @@ const BarebonesQRScanner: React.FC<Props> = ({
   unpauseTimeout = 700,
   setScanFeedback = (_) => {},
 }) => {
+  const [successReadingCode, setSuccessReadingCode] = useState(false);
+  const [error, setError] = useState<string>("");
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number>();
-  const unpauseTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
-  const [error, setError] = useState<string>("");
+  useEffect(() => {
+    if (!successReadingCode) {
+      const timeoutId = setTimeout(() => {
+        setScanFeedback(FEEDBACK.SCANNING);
+        isScanPaused.current = false;
+      }, unpauseTimeout)
+
+      return () => {
+        clearTimeout(timeoutId)
+      }
+    }
+  }, [successReadingCode])
 
   useEffect(() => {
     const video = videoRef.current;
@@ -61,15 +74,6 @@ const BarebonesQRScanner: React.FC<Props> = ({
     };
   }, []);
 
-  useEffect(() => {
-    return () => {
-      if (unpauseTimeoutRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        clearTimeout(unpauseTimeoutRef.current);
-      }
-    };
-  }, []);
-
   const drawQRBoundingBox = () => {
     const video = videoRef?.current;
     const canvas = canvasRef?.current;
@@ -100,6 +104,8 @@ const BarebonesQRScanner: React.FC<Props> = ({
       canvas2D.clearRect(0, 0, canvas.width, canvas.height);
 
       if (code) {
+        successReadingCode = true;
+
         const {
           topLeftCorner,
           topRightCorner,
@@ -121,24 +127,16 @@ const BarebonesQRScanner: React.FC<Props> = ({
 
         if (!isScanPaused.current) {
           const uuid = parseURL(code.data);
-          successReadingCode = true;
 
           if (uuid) {
             handleQRCode(uuid);
             isScanPaused.current = true;
-
-            // Unpause (so clear any message) after 700ms
-            unpauseTimeoutRef.current = setTimeout(() => {
-              isScanPaused.current = false;
-            }, unpauseTimeout);
           }
         }
       }
     }
 
-    if (!successReadingCode && !isScanPaused.current) {
-      setScanFeedback(FEEDBACK.SCANNING);
-    }
+    setSuccessReadingCode(successReadingCode)
 
     animationFrameRef.current = requestAnimationFrame(drawQRBoundingBox);
   };
