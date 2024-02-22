@@ -22,7 +22,6 @@ const useQRScanner = ({
   handleQRCode,
   setSuccessReadingCode,
 }: useQRScannerProps) => {
-
   useEffect(() => {
     drawQRBoundingBox();
   }, [isCamReady]);

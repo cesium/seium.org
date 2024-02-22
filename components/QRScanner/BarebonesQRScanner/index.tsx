@@ -1,6 +1,12 @@
-import { useRef, useState, useEffect, MutableRefObject } from "react";
+import {
+  useRef,
+  useState,
+  useEffect,
+  MutableRefObject,
+  ReactNode,
+} from "react";
 import { FEEDBACK, FeedbackType } from "@components/QRScanner";
-import useWebcamPermissions from "./useWebcamPermissions";
+import useWebcamPermissions from "./useWebcam";
 import useQRScanner from "./useQRScanner";
 
 interface Props {
@@ -17,7 +23,7 @@ const BarebonesQRScanner: React.FC<Props> = ({
   setScanFeedback = (_) => {},
 }) => {
   const [successReadingCode, setSuccessReadingCode] = useState(false);
-  const [camMessage, setCamMessage] = useState<string>("");
+  const [camMessage, setCamMessage] = useState<ReactNode>("");
   const [isCamReady, setIsCamReady] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -81,8 +87,8 @@ const BarebonesQRScanner: React.FC<Props> = ({
         className="absolute h-full w-full rounded-2xl object-cover"
       />
 
-      <div>
-        <p className="p-16 text-center text-white">{camMessage}</p>
+      <div className="absolute flex h-full w-full items-center justify-center">
+        <div className="p-16 text-center text-white">{camMessage}</div>
       </div>
     </div>
   );
