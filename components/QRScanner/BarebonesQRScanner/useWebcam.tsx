@@ -13,13 +13,19 @@ interface useWebcamPermissionsRequestProps {
 }
 
 const checkWebcamPermissions = async () => {
-  const devices = await navigator.mediaDevices.enumerateDevices();
+  try {
+    const result = await navigator.permissions?.query({ name: "camera" });
+    return result.state === "granted";
+  } catch (e) {
+    // Firefox has not yet supported the permissions API for camera
+    const devices = await navigator.mediaDevices.enumerateDevices();
 
-  const permissions = devices
-    .filter(({ kind }) => kind === "videoinput")
-    .filter(({ label }) => label !== "");
+    const permissions = devices
+      .filter(({ kind }) => kind === "videoinput")
+      .filter(({ label }) => label !== "");
 
-  return permissions.length > 0;
+    return permissions.length > 0;
+  }
 };
 
 export const requestWebcam = ({
@@ -30,8 +36,6 @@ export const requestWebcam = ({
   const video = videoRef.current;
 
   if (!video?.srcObject) {
-    setCamMessage("Grant camera permissions to be able to scan QR codes.");
-
     navigator.mediaDevices
       .getUserMedia(CAPTURE_OPTIONS)
       .then((stream) => {
@@ -66,9 +70,12 @@ const useWebcam = ({
           setCamMessage(
             <Button
               title="Click me to open QRScanner!"
-              onClick={() =>
-                requestWebcam({ videoRef, setCamMessage, onPermissionGranted })
-              }
+              onClick={() => {
+                requestWebcam({ videoRef, setCamMessage, onPermissionGranted });
+                setCamMessage(
+                  "Grant camera permissions to be able to scan QR codes."
+                );
+              }}
             />
           );
         } else {
