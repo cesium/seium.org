@@ -8,6 +8,15 @@ import "../styles/globals.css";
 import { NotifyProvider } from "@context/Notification";
 
 function App({ Component, pageProps }) {
+  if (process.env.NEXT_PUBLIC_NOTIFICATIONS_FEATURE_FLAG === "false") {
+    return (
+      <AuthProvider>
+        <Header />
+        <Component {...pageProps} />
+      </AuthProvider>
+    );
+  }
+
   return (
     <AuthProvider>
       <NotifyProvider>
