@@ -79,7 +79,13 @@ const BarebonesQRScanner: React.FC<Props> = ({
   });
 
   return (
-    <div {...rest} className={"relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-primary " + rest.className}>
+    <div
+      {...rest}
+      className={
+        "relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-primary " +
+        rest.className
+      }
+    >
       <div className="absolute h-full w-full bg-white opacity-5" />
 
       <video ref={videoRef} className="absolute h-full w-full object-cover" />
