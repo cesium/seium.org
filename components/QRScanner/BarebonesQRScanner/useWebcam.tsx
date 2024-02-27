@@ -23,8 +23,11 @@ const checkWebcamPermissions = async () => {
     const permissions = devices
       .filter(({ kind }) => kind === "videoinput")
       .filter(({ label }) => label !== "");
+    
+    // if the permission is temporary label will be "", but we will have the session storage
+    const isPermGrantedSessionStorage = sessionStorage.getItem("isWebcamPermissionGranted");
 
-    return permissions.length > 0;
+    return permissions.length > 0 || isPermGrantedSessionStorage === "true";
   }
 };
 
@@ -44,11 +47,14 @@ export const requestWebcam = ({
           video.setAttribute("playsinline", "true"); // required to tell iOS safari we don't want fullscreen
           video.play();
 
+          sessionStorage.setItem("isWebcamPermissionGranted", "true");
+
           setCamMessage("");
           onPermissionGranted();
         }
       })
       .catch((err) => {
+        sessionStorage.setItem("isWebcamPermissionGranted", "false");
         if (!video?.srcObject && err instanceof DOMException) {
           setCamMessage(
             "We couldn't access your camera. Check if your camera is being used by another app and if you gave us permission to use it."
