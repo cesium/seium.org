@@ -61,7 +61,7 @@ const Badges: React.FC = () => {
   return (
     <Layout title="Badges" description="Award a badge">
       {showScanner ? (
-      <div className="mt-5 flex flex-grow select-none justify-center">
+        <div className="mt-5 flex flex-grow select-none justify-center">
           <QRScanner
             handleQRCode={handleUUID}
             isScanPaused={pauseRef}
