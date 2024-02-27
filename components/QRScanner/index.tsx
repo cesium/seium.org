@@ -60,18 +60,19 @@ const QRScanner: React.FC<Props> = ({
   }
 
   return (
-    <div className="m-auto grid max-w-lg grid-cols-1 gap-6">
-      <div className="m-auto flex h-16 w-full items-center justify-center rounded-2xl bg-quinary text-black">
+    <div className="m-auto w-full max-w-lg">
+      <div className="flex h-16 w-full items-center justify-center rounded-2xl bg-quinary text-black">
         <p className="font-ibold">{topText}</p>
       </div>
 
       <BarebonesQRScanner
+        className="my-6"
         handleQRCode={handleQRCode}
         isScanPaused={isScanPaused}
         setScanFeedback={setScanFeedback}
       />
 
-      <div className="w-auto">
+      <div className="w-full">
         <div
           className={`${scanFeedback.color} m-auto flex h-16 w-full items-center justify-center rounded-2xl`}
         >

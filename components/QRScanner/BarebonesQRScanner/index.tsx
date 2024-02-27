@@ -9,7 +9,7 @@ import { FEEDBACK, FeedbackType } from "@components/QRScanner";
 import useWebcamPermissions from "./useWebcam";
 import useQRScanner from "./useQRScanner";
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLDivElement> {
   handleQRCode: (uuid: string) => void;
   isScanPaused: MutableRefObject<boolean>;
   unpauseTimeout?: number;
@@ -21,6 +21,7 @@ const BarebonesQRScanner: React.FC<Props> = ({
   isScanPaused,
   unpauseTimeout = 700,
   setScanFeedback = (_) => {},
+  ...rest
 }) => {
   const [successReadingCode, setSuccessReadingCode] = useState(false);
   const [camMessage, setCamMessage] = useState<ReactNode>("");
@@ -78,7 +79,7 @@ const BarebonesQRScanner: React.FC<Props> = ({
   });
 
   return (
-    <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-primary">
+    <div {...rest} className={"relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-primary " + rest.className}>
       <div className="absolute h-full w-full bg-white opacity-5" />
 
       <video ref={videoRef} className="absolute h-full w-full object-cover" />
