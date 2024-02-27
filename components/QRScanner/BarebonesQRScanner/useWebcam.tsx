@@ -23,9 +23,11 @@ const checkWebcamPermissions = async () => {
     const permissions = devices
       .filter(({ kind }) => kind === "videoinput")
       .filter(({ label }) => label !== "");
-    
+
     // if the permission is temporary label will be "", but we will have the session storage
-    const isPermGrantedSessionStorage = sessionStorage.getItem("isWebcamPermissionGranted");
+    const isPermGrantedSessionStorage = sessionStorage.getItem(
+      "isWebcamPermissionGranted"
+    );
 
     return permissions.length > 0 || isPermGrantedSessionStorage === "true";
   }
