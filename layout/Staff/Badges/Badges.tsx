@@ -11,13 +11,13 @@ import QRScanner, { FEEDBACK } from "@components/QRScanner";
 import Badge from "@components/Badge";
 import GoToTop from "@components/GoToTop";
 
-function Badges() {
+const Badges: React.FC = () => {
   const [allBadges, updateAllBadges] = useState([]);
   const [filter, updateFilter] = useState(null);
   const [searchInput, setSearchInput] = useState("");
   const pauseRef = useRef(false);
   const badgeRef = useRef(null);
-  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
+  const [scanFeedback, setScanFeedback] = useState(FEEDBACK.SCANNING);
   const [showScanner, setScanner] = useState(false);
   const [error, updateError] = useState(false);
 
@@ -29,27 +29,14 @@ function Badges() {
       .catch((_) => updateError(true));
   }, []);
 
-  useEffect(() => {
-    if (feedback != FEEDBACK.SCANNING) {
-      const id = setTimeout(() => {
-        pauseRef.current = false;
-        setFeedback(FEEDBACK.SCANNING);
-      }, 700);
-
-      return () => {
-        clearTimeout(id);
-      };
-    }
-    return () => {};
-  }, [feedback]);
-
-  const handleBadgeSelected = (badge) => {
+  const handleBadgeSelected = (badge: string) => {
     badgeRef.current = badge;
     setScanner(true);
   };
 
-  const handleUUID = (uuid) => {
+  const handleUUID = (uuid: string) => {
     let feedback_var = FEEDBACK.FAILURE;
+
     giveBadge(uuid, badgeRef.current.id)
       .then((response) => {
         if (response.redeem) {
@@ -59,35 +46,36 @@ function Badges() {
         }
       })
       .catch((errors) => {
-        if (errors.response.data.errors?.unique_attendee_badge) {
-          feedback_var = FEEDBACK.ALREADY_HAS;
+        const error = errors.response.data.errors;
+        if (error?.unique_attendee_badge) {
+          feedback_var = FEEDBACK.ALREADY_HAS_BADGE;
+        } else if (error.end_badge) {
+          feedback_var = FEEDBACK.OUT_OF_PERIOD;
         } else {
           feedback_var = FEEDBACK.FAILURE;
         }
       })
-      .finally(() => {
-        setFeedback(feedback_var);
-      });
+      .finally(() => setScanFeedback(feedback_var));
   };
 
   return (
     <Layout title="Badges" description="Award a badge">
       {showScanner ? (
-        <div className="mt-5">
+        <div className="mt-5 flex flex-grow select-none justify-center">
           <QRScanner
-            handleCode={handleUUID}
-            pauseRef={pauseRef}
-            text={badgeRef?.current.name}
-            feedback={feedback}
+            handleQRCode={handleUUID}
+            isScanPaused={pauseRef}
+            topText={badgeRef?.current.name}
+            scanFeedback={scanFeedback}
+            setScanFeedback={setScanFeedback}
             showScanner={showScanner}
-            setScanner={setScanner}
-            removeClose={false}
+            setShowScanner={setScanner}
           />
         </div>
       ) : (
         <>
-          <div className="border-slate-400 pt-10 text-white xl:flex xl:flex-auto">
-            <div className="m-auto flex flex-auto select-none space-x-5">
+          <div className="border-slate-400 pt-10 text-white xl:flex xl:flex-auto xl:items-start">
+            <div className="flex flex-auto select-none space-x-5">
               <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
               <Filter onChange={updateFilter} />
             </div>
@@ -137,6 +125,6 @@ function Badges() {
       <GoToTop />
     </Layout>
   );
-}
+};
 
 export default withAuth(Badges);

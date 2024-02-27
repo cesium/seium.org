@@ -7,58 +7,51 @@ import { withAuth } from "@context/Auth";
 import Layout from "@components/Layout";
 import QRScanner, { FEEDBACK } from "@components/QRScanner";
 
+const defaultTopText = "No QR Code Found!";
+
 function Identifier() {
-  const pauseRef = useRef(false);
-  const [text, setText] = useState("None");
-  const [feedback, setFeedback] = useState(FEEDBACK.SCANNING);
-  const [showScanner, setScanner] = useState(true);
+  const [topText, setTopText] = useState(defaultTopText);
+  const [showQRScanner, setShowQRScanner] = useState(true);
 
-  const resetScannerState = () => {
-    new Promise((r) => setTimeout(r, 500)).then(() => {
-      pauseRef.current = false;
-      setFeedback(FEEDBACK.SCANNING);
-    });
-  };
+  const isScanPaused = useRef(false);
+  const [scanFeedback, setScanFeedback] = useState(FEEDBACK.SCANNING);
 
-  useEffect(() => {
-    if (feedback != FEEDBACK.SCANNING) {
-      const id = setTimeout(() => {
-        pauseRef.current = false;
-        setFeedback(FEEDBACK.SCANNING);
-      }, 700);
-
-      return () => {
-        clearTimeout(id);
-      };
-    }
-
-    return () => {};
-  }, [feedback]);
-
-  const handleUUID = (uuid) => {
+  const handleUUID = (uuid: string) => {
     getAttendeeByID(uuid)
       .then((response) => {
-        setText(`${response.data.name} | ${response.data.email}`);
-        setFeedback(FEEDBACK.SUCCESS);
+        setTopText(`${response.data.name} | ${response.data.email}`);
+        setScanFeedback(FEEDBACK.SUCCESS);
       })
       .catch((_) => {
-        setFeedback(FEEDBACK.FAILURE);
-        setText("None");
-        resetScannerState();
+        setScanFeedback(FEEDBACK.FAILURE);
+        setTopText(defaultTopText);
       });
   };
 
+  useEffect(() => {
+    if (scanFeedback == FEEDBACK.SCANNING) {
+      const timeoutID = setTimeout(() => {
+        setTopText(defaultTopText);
+      }, 3000);
+
+      return () => {
+        clearTimeout(timeoutID);
+      };
+    }
+  }, [scanFeedback]);
+
   return (
     <Layout title="Identifier" description="Identify an attendee">
-      <div className="mt-5 select-none">
+      <div className="mt-5 flex flex-grow select-none justify-center">
         <QRScanner
-          handleCode={handleUUID}
-          pauseRef={pauseRef}
-          text={text}
-          feedback={feedback}
-          showScanner={showScanner}
-          setScanner={setScanner}
-          removeClose={true}
+          topText={topText}
+          handleQRCode={handleUUID}
+          isScanPaused={isScanPaused}
+          scanFeedback={scanFeedback}
+          setScanFeedback={setScanFeedback}
+          showScanner={showQRScanner}
+          setShowScanner={setShowQRScanner}
+          removeCloseButton={true}
         />
       </div>
     </Layout>

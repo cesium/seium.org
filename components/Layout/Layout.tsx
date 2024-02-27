@@ -130,7 +130,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
         </button>
 
         {/* CONTENT */}
-        <main className="w-full px-4 pb-6 pt-20 lg:ml-72 lg:px-20">
+        <main className="flex min-h-screen w-full flex-col px-4 pb-6 pt-20 lg:ml-72 lg:px-20">
           <h2 className="select-none font-ibold text-4xl sm:text-5xl">
             {title}
           </h2>
