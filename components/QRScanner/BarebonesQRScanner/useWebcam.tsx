@@ -14,6 +14,7 @@ interface useWebcamPermissionsRequestProps {
 
 const checkWebcamPermissions = async () => {
   try {
+    // @ts-ignore - camera is not yet recognized as a permission, but is already available in most browsers
     const result = await navigator.permissions?.query({ name: "camera" });
     return result.state === "granted";
   } catch (e) {
