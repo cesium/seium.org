@@ -19,7 +19,7 @@ function Prizes() {
 
   return (
     <Layout title="Prizes" description="Mark a prize as redeemed">
-      <div className="mt-5 select-none">
+      <div className="mt-5 flex flex-grow select-none justify-center">
         <QRScanner
           topText={user.email}
           handleQRCode={handleUUID}

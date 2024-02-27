@@ -41,7 +41,7 @@ const SponsorBadges: React.FC = () => {
       title="Scanner"
       description="Recompensa os teus visitantes com o badge"
     >
-      <div className="mt-5 select-none">
+      <div className="mt-5 flex flex-grow select-none justify-center">
         <QRScanner
           handleQRCode={handleUUID}
           isScanPaused={pauseScanRef}

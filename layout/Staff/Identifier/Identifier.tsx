@@ -42,7 +42,7 @@ function Identifier() {
 
   return (
     <Layout title="Identifier" description="Identify an attendee">
-      <div className="mt-5 select-none">
+      <div className="mt-5 flex flex-grow select-none justify-center">
         <QRScanner
           topText={topText}
           handleQRCode={handleUUID}

@@ -61,7 +61,7 @@ const Badges: React.FC = () => {
   return (
     <Layout title="Badges" description="Award a badge">
       {showScanner ? (
-        <div className="mt-5">
+      <div className="mt-5 flex flex-grow select-none justify-center">
           <QRScanner
             handleQRCode={handleUUID}
             isScanPaused={pauseRef}
@@ -74,8 +74,8 @@ const Badges: React.FC = () => {
         </div>
       ) : (
         <>
-          <div className="border-slate-400 pt-10 text-white xl:flex xl:flex-auto">
-            <div className="m-auto flex flex-auto select-none space-x-5">
+          <div className="border-slate-400 pt-10 text-white xl:flex xl:flex-auto xl:items-start">
+            <div className="flex flex-auto select-none space-x-5">
               <p className="mb-10 text-2xl font-bold xl:mb-0">Filter by</p>
               <Filter onChange={updateFilter} />
             </div>
